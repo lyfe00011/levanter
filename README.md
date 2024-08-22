@@ -20,7 +20,7 @@ https://qr-hazel-alpha.vercel.app/ir
 2.<h1 align="center"> FORK THIS REPO   </h1>
 <p align="center">  
 
-   - (https://github.com/Marksimiyu/9ne11_md.
-
+ 
+https://github.com/lyfe00011/levanter/fork
 
 3. **Deploy koyeb :**
