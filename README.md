@@ -12,19 +12,13 @@ https://qr-hazel-alpha.vercel.app/
 https://qr-hazel-alpha.vercel.app/ir
 
 2. **Fork Repository:**
-   - [FORK](https://github.com/Marksimiyu/9ne11_md.
+   - (https://github.com/Marksimiyu/9ne11_md.
+
+
+3. **Deploy koyeb :**
 
 
 
-2. **Get Required Information:**
-   - Get the [DATABASE_URL](https://github.com/lyfe00011/levanter/wiki/DATABASE_URL). You'll need this while deploying.
-   - Get the [SESSION_ID](https://qr-hazel-alpha.vercel.app/md). Open Linked Devices in WhatsApp and [SCAN](https://qr-hazel-alpha.vercel.app/md) now.
-   - Get the Koyeb API key. [Let's Go](https://app.koyeb.com/account/api).
-
-3. **Deploy:**
-   - [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://qr-hazel-alpha.vercel.app/koyeb)
-   - Enter [Environment Variables](https://github.com/lyfe00011/levanter/wiki/Environment_Variables). [Read More](https://github.com/lyfe00011/levanter/wiki/Environment_Variables).
-   - Enter a name and click "Create Service."
 
 ### 3. Deploy on VPS or PC (Example here as in Ubuntu)
 
