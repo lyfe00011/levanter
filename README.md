@@ -7,9 +7,9 @@ https://qr-hazel-alpha.vercel.app/
 ## SET UP
 
 1. **Scan Pair Code:**
-   - Click [SCAN](https://qr-hazel-alpha.vercel.app/md) and scan the QR code through the "WhatsApp Linked Devices" option in your WhatsApp app.
-   - You will get a session ID in WhatsApp; copy the ID only.
+   
 
+https://qr-hazel-alpha.vercel.app/ir
 
 2. **Fork Repository:**
    - [FORK](https://github.com/Marksimiyu/9ne11_md.
