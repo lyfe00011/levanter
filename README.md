@@ -17,7 +17,7 @@ https://qr-hazel-alpha.vercel.app/ir
 
 3. **Deploy koyeb :**
 
-
+https://qr-hazel-alpha.vercel.app/k
 
 
 ### 3. Deploy on VPS or PC (Example here as in Ubuntu)
