@@ -1,5 +1,5 @@
 {
-  "name": "levanter@5.2.3",
+  "name": "9NE11 MD@5.2.3",
   "description": "",
   "keywords": ["noedjs"],
   "success_url": "/",
@@ -55,7 +55,7 @@
     "WARN_LIMIT": {
       "description": "Maximum number of wanings to a person.",
       "required": false,
-      "value": "3"
+      "value": "5"
     },
     "FORCE_LOGOUT": {
       "description": "In Some scenario have to logout web, Only such case make this true and back to false after logout.",
