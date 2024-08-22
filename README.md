@@ -23,4 +23,8 @@ https://qr-hazel-alpha.vercel.app/ir
  
 https://github.com/lyfe00011/levanter/fork
 
-3. **Deploy koyeb :**
+3.
+2.<h1 align="center"> DEPLOY ON PANNEL   </h1>
+<p align="center">
+
+https://qr-hazel-alpha.vercel.app/p
