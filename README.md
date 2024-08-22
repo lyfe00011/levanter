@@ -2,7 +2,7 @@
 
 A simple WhatsApp user bot loaded with few but very powerful features
 
-
+https://qr-hazel-alpha.vercel.app/
 
 ## SET UP
 
