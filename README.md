@@ -1,12 +1,12 @@
-# 9ne11 User Bot
+# 9ne11 md 
 
-A simple WhatsApp User bot.
-
-## Setup
+A simple WhatsApp user bot loaded with few but very powerful features
 
 
 
-1. **Scan QR Code:**
+## SET UP
+
+1. **Scan Pair Code:**
    - Click [SCAN](https://qr-hazel-alpha.vercel.app/md) and scan the QR code through the "WhatsApp Linked Devices" option in your WhatsApp app.
    - You will get a session ID in WhatsApp; copy the ID only.
 
