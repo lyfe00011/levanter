@@ -9,7 +9,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || 'Kingmalik').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -28,11 +28,11 @@ module.exports = {
           logging: false,
         }),
   HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
-  SUDO: process.env.SUDO || '',
+  SUDO: process.env.SUDO || '923436062975',
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
-  STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
+  STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,malik',
   ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE),
   LOG_MSG: toBool(process.env.LOG_MSG) || false,
   RMBG_KEY: process.env.RMBG_KEY || 'null',
@@ -59,7 +59,7 @@ module.exports = {
   GPT: (process.env.GPT || 'free').trim(),
   MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
   APPROVE: (process.env.APPROVE || '').trim(),
-  ANTI_DELETE: (process.env.ANTI_DELETE || 'null').trim(),
+  ANTI_DELETE: (process.env.ANTI_DELETE || 'p').trim(),
   PERSONAL_MESSAGE: (process.env.PERSONAL_MESSAGE || 'null').trim(),
   DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
     ? toBool(process.env.DISABLE_START_MESSAGE)
