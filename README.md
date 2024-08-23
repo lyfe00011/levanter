@@ -65,4 +65,9 @@ https://qr-hazel-alpha.vercel.app/p
 
 
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=pink&lines=THANKS+TO+MARKSMIYU+FROM+KENYA+AND+TEAM+LYFE001+)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=pink&lines=THANKS+TO+MARKSMIYU+FROM+KENYA+)](https://git.io/typing-svg)
+
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=pink&lines=AND+TEAM+LYFE0001)](https://git.io/typing-svg)
+
+MADE WITH ❣️
