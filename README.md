@@ -61,9 +61,13 @@ https://qr-hazel-alpha.vercel.app/p
   
 
 
-<h1 align="center"> THANKS TO   </h1>
-<p align="center">
 
+
+
+
+
+
+T
 1.LyFe0001 
 
 
