@@ -65,10 +65,4 @@ https://qr-hazel-alpha.vercel.app/p
 
 
 
-
-
-T
-1.LyFe0001 
-
-
-2.Sir Marksimiyu
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=pink&lines=THANKS+TO+MARKSMIYU+FROM+KENYA+AND+TEAM+LYFE001+)](https://git.io/typing-svg)
