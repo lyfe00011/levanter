@@ -54,7 +54,11 @@ https://qr-hazel-alpha.vercel.app/p
  <p align="centre">
   <a href="https://chat.whatsapp.com/J1vN8wjX52LJyUwPG6txgF">
     <img align="left" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
+
+
   
+
+
 
 2.<h1 align="center"> THANKS TO   </h1>
 <p align="center">
