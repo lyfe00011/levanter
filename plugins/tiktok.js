@@ -14,6 +14,6 @@ bot(
       return await message.send('*Not found*', {
         quoted: message.quoted,
       })
-    return await message.sendFromUrl(result.url2)
+    return await message.sendFromUrl(result.url2 || result.url1)
   }
 )

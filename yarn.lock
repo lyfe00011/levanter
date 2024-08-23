@@ -958,7 +958,7 @@ axios@^1.6.0:
 
 "baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git":
   version "6.7.7"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#04a923a11748def23e667c842df1ceb6bb6e717d"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#9d63f37a9dd305ab83f2b58837149dba49a6782e"
   dependencies:
     "@adiwajshing/keyed-db" "^0.2.4"
     "@hapi/boom" "^9.1.3"
@@ -3509,9 +3509,9 @@ protobufjs@6.8.8:
     long "^4.0.0"
 
 protobufjs@^7.2.4:
-  version "7.3.3"
-  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-7.3.3.tgz#7f386a0479c515f8274e16f64b8077219db1ef20"
-  integrity sha512-HaYi2CVjiPoBR1d2zTVKVHXr9IUnpJizCjUu19vxdD3B8o4z+vfOHpIEB1358w8nv8dfUNEfDHFvMsH7QlLt/Q==
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-7.4.0.tgz#7efe324ce9b3b61c82aae5de810d287bc08a248a"
+  integrity sha512-mRUWCc3KUU4w1jU8sGxICXH/gNS94DvI1gxqDvBzhj1JpcsimQkYiOJfwsPUykUI5ZaspFbSgmBLER8IrQ3tqw==
   dependencies:
     "@protobufjs/aspromise" "^1.1.2"
     "@protobufjs/base64" "^1.1.2"
