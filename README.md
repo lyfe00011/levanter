@@ -17,7 +17,7 @@
 1.<h1 align="center">SCAN PAIR CODE </h1>
 <p align="center">  
 
-   src="https://img.shields.io/badge/CHANNEL-black?style=for-the-badge&logo=whatsapp"></a> <a
+   
 
 https://qr-hazel-alpha.vercel.app/ir
 
