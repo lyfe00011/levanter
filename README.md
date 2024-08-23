@@ -38,7 +38,7 @@
 
 
  
-https://github.com/lyfe00011/levanter/fork
+
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 3.<h1 align="center"> DEPLOY ON PANNEL   </h1>
