@@ -30,7 +30,7 @@ https://github.com/lyfe00011/levanter/fork
 
 https://qr-hazel-alpha.vercel.app/p
 
- src="https://img.shields.io/badge/CHANNEL-black?style=for-the-badge&logo=whatsapp"></a> <a
+ 
 
 
 2.<h1 align="center"> SUPPORT GROUP   </h1>
