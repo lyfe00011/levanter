@@ -75,3 +75,5 @@ https://qr-hazel-alpha.vercel.app/p
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=pink&lines=AND+TEAM+LYFE0001)](https://git.io/typing-svg)
 
 MADE WITH ❣️
+
+<img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white
