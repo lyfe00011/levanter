@@ -24,7 +24,7 @@ bot.addCommand(
     })
     const [date, time] = getDate()
     let CMD_HELP = `╭────────────────╮
-						ʟᴇᴠᴀɴᴛᴇʀ
+						Rk-King
 ╰────────────────╯
 
 ╭────────────────
@@ -93,7 +93,7 @@ bot.addCommand(
       }
     })
     const [date, time] = getDate()
-    let msg = `\`\`\`╭═══ LEVANTER ═══⊷
+    let msg = `\`\`\`╭═══ Rk-King ═══⊷
 ┃❃╭──────────────
 ┃❃│ Prefix : ${PREFIX}
 ┃❃│ User : ${message.pushName}
@@ -104,7 +104,6 @@ bot.addCommand(
 ┃❃│ Plugins : ${PLUGINS.count}
 ┃❃│ Ram : ${getRam()}
 ┃❃│ Uptime : ${getUptime('t')}
-┃❃│ Platform : ${getPlatform()}
 ┃❃╰───────────────
 ╰═════════════════⊷\`\`\`\n`
 
