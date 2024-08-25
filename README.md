@@ -76,3 +76,4 @@ https://qr-hazel-alpha.vercel.app/p
 
 MADE WITH ❣️
 
+https://img.shields.io/badge/pannel-host">
