@@ -44,7 +44,11 @@
 3.<h1 align="center"> DEPLOY ON PANNEL   </h1>
 <p align="center">
 
-https://qr-hazel-alpha.vercel.app/p
+
+
+<a href="https://qr-hazel-alpha.vercel.app/p
+"><img src="https://img.shields.io/badge/DEPLOY%20NOW-red" alt="Pairing Code" width="150"></a>
+</details>
 
  
   
