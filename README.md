@@ -32,7 +32,7 @@ A simple WhatsApp User bot.
 
 3. **Deploy:**
    - [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://qr-hazel-alpha.vercel.app/koyeb)
-   - Enter [Environment Variables](https://github.com/lyfe00011/levanter/wiki/Environment_Variables). [Read More](https://github.com/lyfe00011/levanter/wiki/Environment_Variables).
+   - Enter [Environment Variables](https://levanter-plugins.vercel.app/env). [Read More](https://levanter-plugins.vercel.app/env).
    - Enter a name and click "Create Service."
 
 ### 3. Deploy on VPS or PC (Example here as in Ubuntu)
@@ -99,7 +99,7 @@ A simple WhatsApp User bot.
    PERSONAL_MESSAGE = null" > config.env
    ```
 
-   - [Read More](https://github.com/lyfe00011/levanter/wiki/Environment_Variables)
+   - [Read More](https://levanter-plugins.vercel.app/env)
 
 7. **Edit `config.env` Using Nano (if needed):**
    - To save, press `Ctrl + O`, then press `Enter`, and to exit, press `Ctrl + X`.
