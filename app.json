@@ -115,7 +115,7 @@
     "PERSONAL_MESSAGE": {
       "description": "Send a Welcome message on personal chat",
       "required": false,
-      "value": "null"
+      "value": "hey"
     },
     "DISABLE_START_MESSAGE": {
       "description": "Disable start Message",
