@@ -4442,10 +4442,10 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-youtubei.js@^10.3.0:
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-10.3.0.tgz#30a942e6b92ac8039a3d830563e383fdc9fd4772"
-  integrity sha512-tLmeJCECK2xF2hZZtF2nEqirdKVNLFSDpa0LhTaXY3tngtL7doQXyy7M2CLueramDTlmCnFaW+rctHirTPFaRQ==
+youtubei.js@^10.4.0:
+  version "10.4.0"
+  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-10.4.0.tgz#5c13ecdab7241960cb63533cb2bac274ddc3105a"
+  integrity sha512-FZahkkg5ROyH/FgJ4czy/xDNkqHbJTCUQzumQlnR+2Q7m6HaWghAFWWJUTcexemGuu7t/5EuyQz98eBgKQRMog==
   dependencies:
     jintr "^2.1.1"
     tslib "^2.5.0"
