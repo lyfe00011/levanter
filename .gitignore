@@ -12,3 +12,4 @@ word.txt
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+.cache
