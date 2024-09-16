@@ -9,27 +9,11 @@ bot(
   async (message, match) => {
     if (!config.BING_COOKIE)
       return await message.send(
-        `Please set a bing cookie, log in to bing.com/chat, use bing AI chat once, and then copy the cookie.`
+        `Please set a bing cookie, log in to bing.com/chat, use bing AI chat once, and then copy the cookie.\nRead More here => https://levanter-plugins.vercel.app/faq`
       )
     match = match || message.reply_message.text
-    if (!match) return await message.send('*Example :* bing Hi')
-    await message.send(
-      {
-        text: '⏳',
-        key: message.message.key,
-      },
-      {},
-      'react'
-    )
+    if (!match) return await message.send('*Example : bing Hi*')
     const res = await bing(match)
-    await message.send(
-      {
-        text: '✅',
-        key: message.message.key,
-      },
-      {},
-      'react'
-    )
     return await message.send(res, { quoted: message.data })
   }
 )
@@ -49,23 +33,7 @@ bot(
       return await message.send(
         '*Example :* dale Create a 3D illusion for a WhatsApp profile picture where a boy in a white shirt sits casually on a royal Sofa. Wearing White sneakers,a black T-shirt, and sunglasses, he looks ahead. The background features “Arjun ” in big and capital Yellow fonts on the black wall.'
       )
-    await message.send(
-      {
-        text: '⏳',
-        key: message.message.key,
-      },
-      {},
-      'react'
-    )
     const res = await dall3(match)
-    await message.send(
-      {
-        text: '✅',
-        key: message.message.key,
-      },
-      {},
-      'react'
-    )
     return await message.sendFromUrl(res.data)
   }
 )
