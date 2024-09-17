@@ -958,7 +958,7 @@ axios@^1.6.0:
 
 "baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git":
   version "6.7.7"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#9abe547eddad3b7b6a8c0bd00ea9c46d67f1c73e"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#d081f43924350b71e29dd80b0ae17a4b84edc003"
   dependencies:
     "@adiwajshing/keyed-db" "^0.2.4"
     "@hapi/boom" "^9.1.3"
