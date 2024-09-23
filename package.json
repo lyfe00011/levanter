@@ -1,12 +1,12 @@
 {
   "name": "levanter",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start . --attach --name levanter",
     "stop": "pm2 stop levanter",
-    "postinstall": "node -e \"try { require('sharp') } catch (e) { process.exit(1); }\" || yarn add --ignore-engines sharp"
+    "postinstall": "node -e \"try { require('sharp') } catch (e) { process.exit(1); }\" || yarn add --ignore-engines sharp@0.33.5"
   },
   "author": "",
   "license": "ISC",
