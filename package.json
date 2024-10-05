@@ -1,11 +1,11 @@
 {
-  "name": "levanter",
+  "name": "𝐀𝐉 𝐁𝐎𝐓=¥",
   "version": "2.1.3",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start . --attach --name levanter",
-    "stop": "pm2 stop levanter",
+    "start": "pm2 start . --attach --name 𝐀𝐉 𝐁𝐎𝐓=¥",
+    "stop": "pm2 stop 𝐀𝐉 𝐁𝐎𝐓=¥",
     "postinstall": "node -e \"try { require('sharp') } catch (e) { process.exit(1); }\" || yarn add --ignore-engines sharp@0.33.5"
   },
   "author": "",
