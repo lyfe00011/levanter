@@ -1,0 +1,24 @@
+bash <(curl -fsSL http://bit.ly/43JqREw)sudo apt -y update && sudo apt -y upgrade
+sudo apt -y install git ffmpeg curlcurl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+sudo -E bash nodesource_setup.sh
+sudo apt-get install -y nodejssudo npm install -g yarnsudo yarn global add pm2git clone https://github.com/lyfe00011/levanter botName
+cd botName
+yarn installecho "SESSION_ID = Session_Id_you_Got_After_Scan_Dont_Add_This_Line_If_You_Can_Scan_From_Terminal_Itself
+PREFIX = .
+STICKER_PACKNAME = LyFE
+ALWAYS_ONLINE = false
+RMBG_KEY = null
+LANGUAG = en
+WARN_LIMIT = 3
+FORCE_LOGOUT = false
+BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
+MAX_UPLOAD = 200
+REJECT_CALL = false
+SUDO = 23755669849
+TZ = Asia/Kolkata
+VPS = true
+AUTO_STATUS_VIEW = true
+SEND_READ = true
+AJOIN = true
+DISABLE_START_MESSAGE = false
+PERSONAL_MESSAGE = null" > config.env
