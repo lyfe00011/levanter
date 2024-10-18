@@ -80,7 +80,7 @@ module.exports = {
   ADMINS: process.env.GROUP_ADMINS || '',
   RENDER_NAME: (process.env.RENDER_NAME || '').trim(),
   RENDER_API_KEY: (process.env.RENDER_API_KEY || '').trim(),
-  TIMEZONE: process.env.TIMEZONE Asia/Kolkata,
+  TIMEZONE: process.env.TIMEZONE Asia,
   CMD_REACTION: process.env.CMD_REACTION || 'true',
   AUTO_UPDATE: process.env.AUTO_UPDATE || 'false',
 }
