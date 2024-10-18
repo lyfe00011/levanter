@@ -9,15 +9,15 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || 'levanter_1853509cb988a04e1a86c4728696780245').trim(),
+  SESSION_ID: (process.env.SESSION_ID || 'levanter_190a8ff7abf30847f7925d3e7eb64a7239').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
           dialect: 'sqlite',
-          storage: DATABASE_URL,
+          storage: 'DATABASE_URL',
           logging: false,
         })
-      : new Sequelize(DATABASE_URL, {
+      : new 'Sequelize(DATABASE_URL', {
           dialect: 'postgres',
           ssl: true,
           protocol: 'postgres',
@@ -33,13 +33,13 @@ module.exports = {
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
   STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
-  ALWAYS_ONLINE: process.env.ALWAYS_ONLINE false,
-  LOG_MSG: toBool(process.env.LOG_MSG) || false,
+  ALWAYS_ONLINE: process.env.ALWAYS_ONLINE 'false',
+  LOG_MSG: toBool(process.env.LOG_MSG) || 'false',
   RMBG_KEY: process.env.RMBG_KEY || 'null',
   BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
   LANG: (process.env.LANGUAG || 'en').toLowerCase(),
   WARN_LIMIT: process.env.WARN_LIMIT || 3,
-  FORCE_LOGOUT: toBool(process.env.FORCE_LOGOUT) false,
+  FORCE_LOGOUT: toBool(process.env.FORCE_LOGOUT) 'false',
   BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
   DIS_BOT: process.env.DISABLE_BOT || 'null',
   ANTILINK_MSG: process.env.ANTILINK_MSG || '_Antilink Detected &mention kicked_',
@@ -47,15 +47,15 @@ module.exports = {
   ANTIWORDS_MSG: process.env.ANTIWORDS_MSG || '_AntiWord Detected &mention kicked_',
   ANTIWORDS: process.env.ANTIWORDS || 'word',
   MENTION: process.env.MENTION || '',
-  MAX_UPLOAD: process.env.MAX_UPLOAD || 200,
-  REJECT_CALL: process.env.REJECT_CALL false,
-  VPS: toBool(process.env.VPS) true,
+  MAX_UPLOAD: process.env.MAX_UPLOAD || '200',
+  REJECT_CALL: process.env.REJECT_CALL 'false',
+  VPS: toBool(process.env.VPS) 'true',
   AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'false').trim(),
-  SEND_READ: process.env.SEND_READ true,
+  SEND_READ: process.env.SEND_READ 'true',
   KOYEB: toBool(process.env.KOYEB),
   KOYEB_NAME: (process.env.KOYEB_NAME || '').trim(),
   KOYEB_API: (process.env.KOYEB_API || '').trim(),
-  AJOIN: process.env.AJOIN true,
+  AJOIN: process.env.AJOIN 'true',
   GPT: (process.env.GPT || 'free').trim(),
   MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
   APPROVE: (process.env.APPROVE || '').trim(),
@@ -63,7 +63,7 @@ module.exports = {
   PERSONAL_MESSAGE: (process.env.PERSONAL_MESSAGE || 'null').config.env(),
   DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
     ? toBool(process.env.DISABLE_START_MESSAGE)
-    : false,
+    : 'false',
   ANTI_BOT: (process.env.ANTI_BOT || 'off').trim(),
   ANTI_BOT_MESSAGE: process.env.ANTI_BOT_MESSAGE || '&mention removed',
   WARN_MESSAGE:
@@ -77,10 +77,10 @@ module.exports = {
   LIST_TYPE: (process.env.LIST_TYPE || 'text').trim(),
   BING_COOKIE: (process.env.BING_COOKIE || '').trim(),
   GEMINI_API_KEY: (process.env.GEMINI_API_KEY || '').trim(),
-  ADMINS: process.env.GROUP_ADMINS || '',
+  ADMINS: process.env.GROUP_ADMINS || 'Active Admin,
   RENDER_NAME: (process.env.RENDER_NAME || '').trim(),
   RENDER_API_KEY: (process.env.RENDER_API_KEY || '').trim(),
-  TIMEZONE: process.env.TIMEZONE Asia,
+  TIMEZONE: process.env.TIMEZONE || 'Asia/Kolkata',
   CMD_REACTION: process.env.CMD_REACTION || 'true',
   AUTO_UPDATE: process.env.AUTO_UPDATE || 'false',
 }
