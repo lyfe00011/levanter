@@ -16,7 +16,7 @@ bot(
   },
   async (message, match) => {
     if (match == 'end') {
-      const end = await delTicTacToe()
+      const end = await delTicTacToe(message.id)
       if (end) return await message.send('*Game ended*')
     }
     let [restart, id] = match.split(' ')
@@ -41,13 +41,13 @@ bot(
     }
     if (restart == 'restart' && isUser(id)) {
       opponent = id
-      await delTicTacToe()
+      await delTicTacToe(message.id)
     }
     if (!opponent || opponent == me)
       return await message.send(
         '*Choose an Opponent*\n*Reply to a message or mention or tictactoe jid1 jid2*'
       )
-    const { text } = await ticTacToe(message.jid, me, opponent)
+    const { text } = await ticTacToe(message.jid, me, opponent, message.id)
     return await message.send(text, {
       contextInfo: { mentionedJid: [me, opponent] },
     })

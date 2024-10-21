@@ -1,12 +1,12 @@
-const toBool = (x) => x == 'true'
 const { Sequelize } = require('sequelize')
 const { existsSync } = require('fs')
 const path = require('path')
 const configPath = path.join(__dirname, './config.env')
 const databasePath = path.join(__dirname, './database.db')
 if (existsSync(configPath)) require('dotenv').config({ path: configPath })
+const toBool = (x) => x == 'true'
 const DATABASE_URL =
-  process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
+process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
   SESSION_ID: (process.env.SESSION_ID || '').trim(),
@@ -34,12 +34,12 @@ module.exports = {
   BRANCH: 'master',
   STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
   ALWAYS_ONLINE: process.env.ALWAYS_ONLINE,
-  LOG_MSG: toBool(process.env.LOG_MSG) || false,
+  LOG_MSG: process.env.LOG_MSG || 'false',
   RMBG_KEY: process.env.RMBG_KEY || 'null',
   BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
   LANG: (process.env.LANGUAG || 'en').toLowerCase(),
   WARN_LIMIT: process.env.WARN_LIMIT || 3,
-  FORCE_LOGOUT: toBool(process.env.FORCE_LOGOUT),
+  FORCE_LOGOUT: process.env.FORCE_LOGOUT || 'false',
   BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
   DIS_BOT: process.env.DISABLE_BOT || 'null',
   ANTILINK_MSG: process.env.ANTILINK_MSG || '_Antilink Detected &mention kicked_',
@@ -55,15 +55,13 @@ module.exports = {
   KOYEB: toBool(process.env.KOYEB),
   KOYEB_NAME: (process.env.KOYEB_NAME || '').trim(),
   KOYEB_API: (process.env.KOYEB_API || '').trim(),
-  AJOIN: process.env.AJOIN,
+  AJOIN: process.env.AJOIN || 'false',
   GPT: (process.env.GPT || 'free').trim(),
   MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
   APPROVE: (process.env.APPROVE || '').trim(),
   ANTI_DELETE: (process.env.ANTI_DELETE || 'null').trim(),
   PERSONAL_MESSAGE: (process.env.PERSONAL_MESSAGE || 'null').trim(),
-  DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
-    ? toBool(process.env.DISABLE_START_MESSAGE)
-    : false,
+  DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE || 'false',
   ANTI_BOT: (process.env.ANTI_BOT || 'off').trim(),
   ANTI_BOT_MESSAGE: process.env.ANTI_BOT_MESSAGE || '&mention removed',
   WARN_MESSAGE:

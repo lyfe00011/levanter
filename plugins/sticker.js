@@ -1,5 +1,4 @@
 const { sticker, webpToMp4, addExif, bot, addAudioMetaData, circleSticker } = require('../lib/')
-const fm = true
 
 bot(
   {
@@ -17,8 +16,9 @@ bot(
         message.reply_message.image
           ? 1
           : //: message.reply_message.seconds < 10 ?
-            2
+            2,
         //: 3
+        message.id
       ),
       { isAnimated: !!message.reply_message.video, quoted: message.quoted },
       'sticker'
@@ -38,7 +38,8 @@ bot(
     return await message.send(
       await circleSticker(
         await message.reply_message.downloadAndSaveMediaMessage('circleSticker'),
-        message.reply_message.video
+        message.reply_message.video,
+        message.id
       ),
       { isAnimated: false, quoted: message.quoted },
       'sticker'
@@ -57,7 +58,7 @@ bot(
       return await message.send('*Reply to sticker/audio*')
     if (message.reply_message.sticker)
       return await message.send(
-        await addExif(await message.reply_message.downloadMediaMessage('mp4'), match),
+        await addExif(await message.reply_message.downloadMediaMessage('mp4'), match, message.id),
         { quoted: message.quoted },
         'sticker'
       )

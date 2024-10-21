@@ -9,9 +9,12 @@ bot(
   async (message, match) => {
     if (!match)
       return await message.send(`*Example : setgreet Hi this is a bot, My boss will reply soon*`)
-    const vars = await setVar({
-      PERSONAL_MESSAGE: match,
-    })
+    const vars = await setVar(
+      {
+        PERSONAL_MESSAGE: match,
+      },
+      message.id
+    )
     return await message.send(`_Greet Message Updated_`)
   }
 )
@@ -23,7 +26,7 @@ bot(
     type: 'personal',
   },
   async (message, match) => {
-    const vars = await getVars()
+    const vars = await getVars(message.id)
     const msg = vars['PERSONAL_MESSAGE']
     if (!msg || msg == 'null') return await message.send(`*Greet Message not Set*`)
     return await message.send(msg)
@@ -37,7 +40,7 @@ bot(
     type: 'personal',
   },
   async (message, match) => {
-    await setVar({ PERSONAL_MESSAGE: 'null' })
+    await setVar({ PERSONAL_MESSAGE: 'null' }, message.id)
     return await message.send(`_Greet Message Deleted_`)
   }
 )

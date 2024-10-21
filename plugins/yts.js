@@ -70,7 +70,8 @@ bot(
       })),
       `Searched ${match} and Found ${result.length} results\nsend 🆔 to download song.\n`,
       message.jid,
-      message.participant
+      message.participant,
+      message.id
     )
     return await message.send(msg.message, { quoted: message.data }, msg.type)
     // return await message.send(
@@ -109,7 +110,8 @@ bot(
         })),
         `Searched ${match}\nFound ${result.length} results`,
         message.jid,
-        message.participant
+        message.participant,
+        message.id
       )
       return await message.send(msg.message, { quoted: message.data }, msg.type)
     }

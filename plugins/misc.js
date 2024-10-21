@@ -12,7 +12,7 @@ bot(
   async (message, match) => {
     if (!match) {
       return await message.send(
-        '*Auto View WhatsApp Status*\nstatus on\nstatus off\nstatus no-dl\nstatus expect-view jid,jid,...\nstatus only-view jid,jid,...\nstatus hide-view'
+        '*Auto View WhatsApp Status*\nstatus on\nstatus off\nstatus no-dl\nstatus expect-view jid,jid,...\nonly-view jid,jid,...'
       )
       // const msg = await genButtonMessage(
       // 	[
@@ -27,9 +27,12 @@ bot(
       // return await message.send(msg, {}, 'button')
     }
     try {
-      await setVar({
-        AUTO_STATUS_VIEW: match == 'on' ? 'true' : match == 'off' ? 'false' : match,
-      })
+      await setVar(
+        {
+          AUTO_STATUS_VIEW: match == 'on' ? 'true' : match == 'off' ? 'false' : match,
+        },
+        message.id
+      )
       await message.send(`_Auto Status View ${match == 'off' ? 'Disabled' : 'Enabled'}_`)
     } catch (error) {
       await message.send(`${error}`, {
@@ -62,9 +65,12 @@ bot(
     }
     if (match == 'on' || match == 'off') {
       try {
-        await setVar({
-          REJECT_CALL: match == 'on' ? 'true' : 'false',
-        })
+        await setVar(
+          {
+            REJECT_CALL: match == 'on' ? 'true' : 'false',
+          },
+          message.id
+        )
         await message.send(`_Auto Call Reject ${match == 'on' ? 'Enabled' : 'Disabled'}_`)
       } catch (error) {
         await message.send(`${error}`, {
@@ -98,9 +104,12 @@ bot(
     }
     if (match == 'on' || match == 'off') {
       try {
-        await setVar({
-          SEND_READ: match == 'on' ? 'true' : 'false',
-        })
+        await setVar(
+          {
+            SEND_READ: match == 'on' ? 'true' : 'false',
+          },
+          message.id
+        )
         await message.send(`_Auto Read ${match == 'on' ? 'Enabled' : 'Disabled'}_`)
       } catch (error) {
         await message.send(`${error}`, {
@@ -134,9 +143,12 @@ bot(
     }
     if (match == 'on' || match == 'off') {
       try {
-        await setVar({
-          ALWAYS_ONLINE: match == 'on' ? 'true' : 'false',
-        })
+        await setVar(
+          {
+            ALWAYS_ONLINE: match == 'on' ? 'true' : 'false',
+          },
+          message.id
+        )
         await message.send(`_Always Online ${match == 'on' ? 'Enabled' : 'Disabled'}_`)
       } catch (error) {
         await message.send(`${error}`, {

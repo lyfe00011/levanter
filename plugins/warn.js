@@ -1,68 +1,65 @@
-const config = require('../config')
-const {
-  bot,
-  setWarn,
-  jidToNum,
-  // genButtonMessage,
-  isAdmin,
-  deleteWarn,
-} = require('../lib/')
+const { bot, setVar, getVars, delVar } = require('../lib/index')
 
 bot(
   {
-    pattern: 'warn ?(.*)',
-    desc: 'warn users in chat',
-    type: 'group',
-    onlyGroup: true,
+    pattern: 'getvar ?(.*)',
+    desc: 'Show var',
+    type: 'vars',
   },
   async (message, match) => {
-    if (!match && !message.reply_message)
-      return await message.send('*Example :*\nwarn mention/reply\nwarn reset mention/reply')
-    let [m, u] = match.split(' ')
-    if (m && m.toLowerCase() == 'reset') {
-      u = u && u.endsWith('@s.whatsapp.net') ? u : message.mention[0] || message.reply_message.jid
-      if (!u) return await message.send('*Reply or Mention to a user*')
-      const count = await setWarn(u, message.jid, (!isNaN(u) && u) || -1)
-      const mention = `@${jidToNum(u)}`
-      const remaining = config.WARN_LIMIT - count
-      const resetMessage = config.WARN_RESET_MESSAGE.replace('&mention', mention)
-        .replace('&remaining', remaining)
-        .replace('&warn', config.WARN_LIMIT)
-      return await message.send(resetMessage, { contextInfo: { mentionedJid: [u] } })
+    if (!match) return await message.send(`*Example : getvar sudo*`)
+    const vars = await getVars(message.id)
+    match = match.toUpperCase()
+    if (vars[match]) return await message.send(`${match} = ${vars[match]}`)
+    return await message.send(`_${match} not found in vars_`)
+  }
+)
+
+bot(
+  {
+    pattern: 'delvar ?(.*)',
+    desc: 'delete var',
+    type: 'vars',
+  },
+  async (message, match) => {
+    if (!match) return await message.send(`*Example : delvar sudo*`)
+    const vars = await getVars(message.id)
+    match = match.toUpperCase()
+    if (!vars[match]) return await message.send(`_${match} not found in vars_`)
+    await delVar(match, message.id)
+    await message.send(`_${match} deleted_`)
+  }
+)
+
+bot(
+  {
+    pattern: 'setvar ?(.*)',
+    desc: 'set var',
+    type: 'vars',
+  },
+  async (message, match) => {
+    const keyValue = match.split('=')
+    if (!match || keyValue.length < 2)
+      return await message.send(`*Example : setvar sudo = 91987653210*`)
+    const key = keyValue[0].trim().toUpperCase()
+    const value = keyValue[1].trim()
+    await setVar({ [key]: value }, message.id)
+    await message.send(`_new var ${key} added as ${value}_`)
+  }
+)
+
+bot(
+  {
+    pattern: 'allvar ?(.*)',
+    desc: 'Show All var',
+    type: 'vars',
+  },
+  async (message, match) => {
+    const vars = await getVars(message.id)
+    let allVars = ''
+    for (const key in vars) {
+      allVars += `${key} = ${vars[key]}\n\n`
     }
-    const user = message.mention[0] || message.reply_message.jid
-    if (!user) return await message.send('*Reply or Mention to a user*')
-    const count = await setWarn(user, message.jid)
-    if (count > config.WARN_LIMIT) {
-      const participants = await message.groupMetadata(message.jid)
-      const isImAdmin = await isAdmin(participants, message.client.user.jid)
-      if (!isImAdmin) return await message.send(`_I'm not admin._`)
-      const isUserAdmin = await isAdmin(participants, user)
-      if (isUserAdmin) return await message.send(`_I can't Remove admin._`)
-      const mention = `@${jidToNum(user)}`
-      const kickMessage = config.WARN_KICK_MESSAGE.replace('&mention', mention)
-      await message.send(kickMessage, {
-        contextInfo: { mentionedJid: [user] },
-      })
-      await deleteWarn(user, message.jid)
-      return await message.Kick(user)
-    }
-    const mention = `@${jidToNum(user)}`
-    const remainWarnCount = config.WARN_LIMIT - count
-    const warnMessage = config.WARN_MESSAGE.replace('&mention', mention)
-      .replace('&remaining', remainWarnCount)
-      .replace('&reason', match)
-      .replace('&warn', config.WARN_LIMIT)
-    await message.send(warnMessage, { contextInfo: { mentionedJid: [user] } })
-    // return await message.send(
-    // 	await genButtonMessage(
-    // 		[{ id: `warn reset ${user}`, text: 'RESET' }],
-    // 		`⚠️WARNING⚠️\n*User :* @${jidToNum(
-    // 			user
-    // 		)}\n*Warn :* ${count}\n*Remaining :* ${config.WARN_LIMIT - count}`
-    // 	),
-    // 	{ contextInfo: { mentionedJid: [user] } },
-    // 	'button'
-    // )
+    return await message.send(allVars.trim())
   }
 )

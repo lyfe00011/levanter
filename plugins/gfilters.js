@@ -8,7 +8,7 @@ bot(
   },
   async (message, match) => {
     if (!match) return await message.send(`*Example : gstop hi*`)
-    const isDel = await deleteFilter('gfilter', match)
+    const isDel = await deleteFilter('gfilter', match, message.id)
     if (!isDel) return await message.send(`_${match} not found in gfilters_`)
     return await message.send(`_${match} deleted._`)
   }
@@ -22,7 +22,7 @@ bot(
   },
   async (message, match) => {
     if (!match) return await message.send(`*Example : pstop hi*`)
-    const isDel = await deleteFilter('pfilter', match)
+    const isDel = await deleteFilter('pfilter', match, message.id)
     if (!isDel) return await message.send(`_${match} not found in pfilters_`)
     return await message.send(`_${match} deleted._`)
   }
@@ -37,7 +37,7 @@ bot(
   async (message, match) => {
     match = match.match(/[\'\"](.*?)[\'\"]/gms)
     if (!match) {
-      const filters = await getFilter('gfilter')
+      const filters = await getFilter('gfilter', message.id)
       if (!filters)
         return await message.send(`_Not set any filter_\n*Example gfilter 'hi' 'hello'*`)
       let msg = ''
@@ -51,7 +51,7 @@ bot(
       }
       const k = match[0].replace(/['"]+/g, '')
       const v = match[1].replace(/['"]+/g, '')
-      await setFilter('gfilter', k, v, match[0][0] === "'" ? true : false)
+      await setFilter('gfilter', k, v, match[0][0] === "'" ? true : false, message.id)
       await message.send(`_${k}_ added to gfilters.`)
     }
   }
@@ -66,7 +66,7 @@ bot(
   async (message, match) => {
     match = match.match(/[\'\"](.*?)[\'\"]/gms)
     if (!match) {
-      const filters = await getFilter('pfilter')
+      const filters = await getFilter('pfilter', message.id)
       if (!filters)
         return await message.send(`_Not set any filter_\n*Example pfilter 'hi' 'hello'*`)
       let msg = ''
@@ -80,7 +80,7 @@ bot(
       }
       const k = match[0].replace(/['"]+/g, '')
       const v = match[1].replace(/['"]+/g, '')
-      await setFilter('pfilter', k, v, match[0][0] === "'" ? true : false)
+      await setFilter('pfilter', k, v, match[0][0] === "'" ? true : false, message.id)
       await message.send(`_${k}_ added to pfilters.`)
     }
   }
@@ -94,7 +94,7 @@ bot(
     onlyGroup: true,
   },
   async (message, match) => {
-    const filters = await getFilter('gfilter')
+    const filters = await getFilter('gfilter', message.id)
     if (filters)
       filters.map(async ({ pattern, regex, text }) => {
         pattern = new RegExp(`(?:^|\\W)${pattern}(?:$|\\W)`, 'i')
@@ -115,7 +115,7 @@ bot(
   },
   async (message, match) => {
     if (!message.isGroup) {
-      const filters = await getFilter('pfilter')
+      const filters = await getFilter('pfilter', message.id)
       if (filters)
         filters.map(async ({ pattern, regex, text }) => {
           pattern = new RegExp(`(?:^|\\W)${pattern}(?:$|\\W)`, 'i')

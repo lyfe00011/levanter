@@ -22,7 +22,7 @@ bot(
     let msg = message.reply_message.text || 'null'
     const [hour, min] = match.split(' ')
     if (hour == 'info') {
-      const task = await getMute(message.jid, 'mute')
+      const task = await getMute(message.jid, 'mute', message.id)
       if (!task) return await message.send('_Not Found AutoMute_')
       const { hour, minute, msg, enabled } = task
       return await message.send(
@@ -32,9 +32,9 @@ bot(
       )
     }
     if (hour == 'on' || hour == 'off') {
-      const isMute = await setMute(message.jid, 'mute', hour == 'on')
+      const isMute = await setMute(message.jid, 'mute', hour == 'on', message.id)
       if (!isMute) return await message.send('_Not Found AutoMute')
-      const task = await getMute(message.jid, 'mute')
+      const task = await getMute(message.jid, 'mute', message.id)
       if (!task || !task.hour) return await message.send('_Not Found AutoMute_')
       const isTask = addTask(
         message.jid,
@@ -62,7 +62,7 @@ bot(
     // 	{},
     // 	'button'
     // )
-    await setMute(message.jid, 'mute', true, hour, min, msg)
+    await setMute(message.jid, 'mute', true, message.id, hour, min, msg)
     addTask(message.jid, 'mute', hour, min, msg)
 
     return await message.send(
@@ -87,7 +87,7 @@ bot(
     let msg = message.reply_message.text || 'null'
     const [hour, min] = match.split(' ')
     if (hour == 'info') {
-      const task = await getMute(message.jid, 'unmute')
+      const task = await getMute(message.jid, 'unmute', message.id)
       if (!task || !task.hour) return await message.send('_Not Found AutoUnMute_')
       const { hour, minute, msg, enabled } = task
       return await message.send(
@@ -97,9 +97,9 @@ bot(
       )
     }
     if (hour == 'on' || hour == 'off') {
-      const isMute = await setMute(message.jid, 'unmute', hour == 'on')
+      const isMute = await setMute(message.jid, 'unmute', hour == 'on', message.id)
       if (!isMute) return await message.send('_Not Found AutoUnMute_')
-      const task = await getMute(message.jid, 'unmute')
+      const task = await getMute(message.jid, 'unmute', message.id)
       if (!task) return await message.send('_Not Found AutoUnMute_')
       const isTask = addTask(
         message.jid,
@@ -127,7 +127,7 @@ bot(
     // 	{},
     // 	'button'
     // )
-    await setMute(message.jid, 'unmute', true, hour, min, msg)
+    await setMute(message.jid, 'unmute', true, message.id, hour, min, msg)
     addTask(message.jid, 'unmute', hour, min, msg)
     return await message.send(
       `_Group will unMute at ${c24to12(`${hour}:${min}`)}_${

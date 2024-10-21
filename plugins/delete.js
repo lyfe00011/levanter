@@ -22,14 +22,14 @@ bot(
       const exist = await message.onWhatsapp(jid)
       if (!exist) return await message.send(`_${jid} is invalid_`)
     }
-    await setVar({ ANTI_DELETE: match })
+    await setVar({ ANTI_DELETE: match }, message.id)
     const msg = jid
-      ? `_Deleted Messages send to ${jid}_`
+      ? `_deleted messages send to ${jid}_`
       : match == 'off'
-      ? '_Anti delete Disabled_'
+      ? '_anti delete disabled_'
       : match == 'p'
-      ? '_Deleted Messages send to your chat or sudo_'
-      : '_Deleted Messages send to the chat itself_'
+      ? '_deleted messages send to your chat or sudo_'
+      : '_deleted messages send to the chat itself_'
     await message.send(msg)
   }
 )

@@ -25,7 +25,7 @@ bot(
     // 	'button'
     // )
     if (match == 'on' || match == 'off') {
-      await setPdm(message.jid, match)
+      await setPdm(message.jid, match, message.id)
       await message.send(`_pdm ${match == 'on' ? 'Activated' : 'Deactivated'}_`)
     }
   }

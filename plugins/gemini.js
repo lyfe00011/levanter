@@ -1,4 +1,3 @@
-const config = require('../config')
 const { bot, gemini } = require('../lib')
 
 bot(
@@ -7,8 +6,8 @@ bot(
     desc: 'google gemini',
     type: 'ai',
   },
-  async (message, match) => {
-    if (!config.GEMINI_API_KEY) {
+  async (message, match, ctx) => {
+    if (!ctx.GEMINI_API_KEY) {
       return await message.send(
         'Missing Gemini API key? Get one at https://aistudio.google.com/app/apikey.\nsetvar GEMINI_API_KEY = api_key'
       )
@@ -28,7 +27,7 @@ bot(
       }
     }
 
-    const res = await gemini(match, image)
+    const res = await gemini(match, message.id, image)
     await message.send(res.data, { quoted: message.data })
   }
 )

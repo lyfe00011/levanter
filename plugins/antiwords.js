@@ -16,7 +16,7 @@ bot(
   },
   async (message, match) => {
     if (!match || (match != 'on' && match != 'off' && !match.startsWith('action'))) {
-      const { enabled, action } = await getWord(message.jid)
+      const { enabled, action } = await getWord(message.jid, message.id)
       return await message.send(
         `_Antiword is ${
           enabled ? 'on' : 'off'
@@ -44,10 +44,10 @@ bot(
     if (match.startsWith('action/')) {
       const action = match.replace('action/', '')
       if (!actions.includes(action)) return await message.send(`${action} _is a invalid action_`)
-      await setWord(message.jid, action)
+      await setWord(message.jid, action, message.id)
       return await message.send(`_antiword action updated as ${action}_`)
     }
-    await setWord(message.jid, match == 'on')
+    await setWord(message.jid, match == 'on', message.id)
     await message.send(`_AntiWord ${match == 'on' ? 'activated' : 'deactivated.'}_`)
   }
 )

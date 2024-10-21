@@ -1,5 +1,5 @@
 const { Client, logger } = require('./lib/client')
-const { DATABASE, VERSION } = require('./config')
+const { VERSION } = require('./config')
 const { stopInstance } = require('./lib/pm2')
 
 const start = async () => {
@@ -12,10 +12,7 @@ const start = async () => {
     return stopInstance()
   }
   try {
-    logger.info('Database syncing...')
-    await DATABASE.sync()
     const bot = new Client()
-    await bot.init()
     await bot.connect()
   } catch (error) {
     logger.error(error)

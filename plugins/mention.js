@@ -15,10 +15,10 @@ bot(
   },
   async (message, match) => {
     if (!match) {
-      const mention = await getMention()
+      const mention = await getMention(message.id)
       const onOrOff = mention && mention.enabled ? 'on' : 'off'
       return await message.send(
-        `Mention is ${onOrOff}\n\nhttps://github.com/lyfe00011/levanter/wiki/mention_example`
+        `Mention is ${onOrOff}\n\nhttps://levanter-plugins.vercel.app/faq`
       )
 
       // const button = await genButtonMessage(
@@ -50,14 +50,14 @@ bot(
       // )
     }
     if (match == 'get') {
-      const msg = await mentionMessage()
+      const msg = await mentionMessage(message.id)
       if (!msg) return await message.send('_Reply to Mention not Activated._')
       return await message.send(msg)
     } else if (match == 'on' || match == 'off') {
-      await enableMention(match == 'on')
+      await enableMention(match == 'on', message.id)
       return await message.send(`_Reply to mention ${match == 'on' ? 'Activated' : 'Deactivated'}_`)
     }
-    await enableMention(match)
+    await enableMention(match, message.id)
     clearFiles()
     return await message.send('_Mention Updated_')
   }

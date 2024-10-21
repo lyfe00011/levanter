@@ -22,7 +22,8 @@ bot(
         })),
         `*Total ${result.length} stories*\n`,
         message.jid,
-        message.participant
+        message.participant,
+        message.id
       )
       return await message.send(list.message, {}, list.type)
       // const msg = genListMessage(

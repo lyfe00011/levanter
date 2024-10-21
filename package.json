@@ -1,6 +1,6 @@
 {
   "name": "levanter",
-  "version": "2.1.8",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "browser-id3-writer": "^4.4.0",
     "cheerio": "^1.0.0-rc.10",
     "cookie": "^0.5.0",
+    "cron": "^3.1.7",
     "dotenv": "^16.4.5",
     "file-type": "^18.2.1",
     "fluent-ffmpeg": "^2.1.2",
@@ -28,7 +29,6 @@
     "jimp": "^0.16.1",
     "link-preview-js": "^3.0.4",
     "moment": "^2.29.4",
-    "node-cron": "^3.0.2",
     "node-fetch": "3.2.2",
     "node-webpmux": "^3.1.4",
     "pdfkit": "^0.13.0",

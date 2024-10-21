@@ -1,4 +1,4 @@
-const { setLydia, bot, jidToNum } = require('../lib/')
+const { setLydia, bot } = require('../lib/')
 
 bot(
   {
@@ -15,7 +15,7 @@ bot(
     if (message.mention) {
       match = match.replace(`@${jidToNum(user)}`, '').trim()
     }
-    await setLydia(message.jid, match == 'on', user)
+    await setLydia(message.jid, match == 'on', user, message.id)
     await message.send(
       `_Lydia ${match == 'on' ? 'Activated' : 'Deactivated'}_\n*Only works from reply msg.`
     )

@@ -13,7 +13,7 @@ bot(
     onlyGroup: true,
   },
   async (message, match) => {
-    const antilink = await getAntiLink(message.jid)
+    const antilink = await getAntiLink(message.jid, message.id)
     if (!match) {
       const onOrOff = antilink.enabled ? 'on' : 'off'
       return await message.send(
@@ -53,7 +53,7 @@ bot(
     }
     if (match == 'on' || match == 'off') {
       if (match == 'off' && !antilink) return await message.send('_AntiLink is not enabled._')
-      await setAntiLink(message.jid, match == 'on')
+      await setAntiLink(message.jid, match == 'on', message.id)
       return await message.send(`_AntiLink ${match == 'on' ? 'Enabled' : 'Disabled.'}_`)
     }
     if (match == 'info')
@@ -63,7 +63,7 @@ bot(
         }\n*Action :* ${antilink.action}`
       )
     if (match.startsWith('action/')) {
-      await setAntiLink(message.jid, match)
+      await setAntiLink(message.jid, match, message.id)
       const action = match.replace('action/', '')
       if (!['warn', 'kick', 'null'].includes(action)) return await message.send('*Invalid action*')
       return await message.send(`_AntiLink action updated as ${action}_`)

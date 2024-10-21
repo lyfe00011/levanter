@@ -22,7 +22,8 @@ bot(
         list,
         `Matching Apps(${list.length})\n`,
         message.jid,
-        message.participant
+        message.participant,
+        message.id
       )
       return await message.send(lists.message, {}, lists.type)
 
@@ -47,7 +48,8 @@ bot(
         button,
         `Available architectures\n`,
         message.jid,
-        message.participant
+        message.participant,
+        message.id
       )
       return await message.send(list.message, { quoted: message.data }, list.type)
       // return await message.send(

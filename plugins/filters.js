@@ -9,7 +9,7 @@ bot(
   },
   async (message, match) => {
     if (!match) return await message.send(`*Example : .stop hi*`)
-    const isDel = await deleteFilter(message.jid, match)
+    const isDel = await deleteFilter(message.jid, match, message.id)
     if (!isDel) return await message.send(`_${match} not found in filters_`)
     return await message.send(`_${match} deleted._`)
   }
@@ -25,7 +25,7 @@ bot(
   async (message, match) => {
     match = match.match(/[\'\"](.*?)[\'\"]/gms)
     if (!match) {
-      const filters = await getFilter(message.jid)
+      const filters = await getFilter(message.jid, message.id)
       if (!filters) return await message.send(`_Not set any filter_\n*Example filter 'hi' 'hello'*`)
       let msg = ''
       filters.map(({ pattern }) => {
@@ -38,14 +38,14 @@ bot(
       }
       const k = match[0].replace(/['"]+/g, '')
       const v = match[1].replace(/['"]+/g, '')
-      if (k && v) await setFilter(message.jid, k, v, match[0][0] === "'" ? true : false)
+      if (k && v) await setFilter(message.jid, k, v, match[0][0] === "'" ? true : false, message.id)
       await message.send(`_${k}_ added to filters.`)
     }
   }
 )
 
-bot({ on: 'text', fromMe: false, type: 'filterOrLydia' }, async (message, match) => {
-  const filters = await getFilter(message.jid)
+bot({ on: 'text', fromMe: false, type: 'filterOrLydia' }, async (message, match, ctx) => {
+  const filters = await getFilter(message.jid, message.id)
   if (filters)
     filters.map(async ({ pattern, regex, text }) => {
       pattern = new RegExp(`(?:^|\\W)${pattern}(?:$|\\W)`, 'i')

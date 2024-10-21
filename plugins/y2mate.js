@@ -40,7 +40,13 @@ bot(
       return await message.send('*Not found*', {
         quoted: message.quoted,
       })
-    const list = generateList(buttons, title + `(${time})\n`, message.jid, message.participant)
+    const list = generateList(
+      buttons,
+      title + `(${time})\n`,
+      message.jid,
+      message.participant,
+      message.id
+    )
     if (list.type === 'text')
       return await message.sendFromUrl(thumbnail, {
         caption: '```' + list.message + '```',
