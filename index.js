@@ -1,5 +1,5 @@
 const { Client, logger } = require('./lib/client')
-const { VERSION } = require('./config')
+const { DATABASE, VERSION } = require('./config')
 const { stopInstance } = require('./lib/pm2')
 
 const start = async () => {
