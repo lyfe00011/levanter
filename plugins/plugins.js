@@ -1,5 +1,6 @@
 const axios = require('axios')
 const { writeFileSync, unlinkSync } = require('fs')
+const path = require('path')
 const {
   bot,
   parseGistUrls,
@@ -49,7 +50,7 @@ bot(
           // In axios, the status is 'res.status' instead of 'res.statusCode'
           let plugin_name = /pattern: ["'](.*)["'],/g.exec(res.data) // Access response data with 'res.data'
           plugin_name = plugin_name[1].split(' ')[0]
-          const pluginPath = './eplugins/' + message.id + plugin_name + '.js'
+          const pluginPath = path.join(__dirname, '../eplugins/' + message.id + plugin_name + '.js')
           writeFileSync(pluginPath, res.data)
 
           try {
