@@ -98,9 +98,9 @@ bot(
       try {
         const [res] = await message.fetchStatus(id)
         if (res.status) {
-          caption += `\n*Name :* ${await getName(gid, id)}\n*About :* ${res.status}\n*setAt :* ${
-            res.date
-          }`
+          caption += `\n*Name :* ${await getName(gid, id, message.id)}\n*About :* ${
+            res.status
+          }\n*setAt :* ${res.date}`
         }
       } catch (error) {}
     } else {
