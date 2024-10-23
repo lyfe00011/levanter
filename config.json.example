@@ -1,6 +1,6 @@
 {
   "session1": {
-    "SESSION_ID": "levanter_sessionid",
+    "SESSION_ID": "Kernoche",
     "PREFIX": "^[.,!]",
     "SUDO": "0",
     "STICKER_PACKNAME": "❤️,LyFE",
@@ -14,7 +14,7 @@
     "ANTIWORDS_MSG": "_AntiWord Detected &mention kicked_",
     "ANTIWORDS": "word",
     "REJECT_CALL": "false",
-    "AUTO_STATUS_VIEW": "false",
+    "AUTO_STATUS_VIEW": "true",
     "SEND_READ": "false",
     "AJOIN": "false",
     "GPT": "free",
@@ -33,11 +33,11 @@
     "CMD_REACTION": "true"
   },
   "session2": {
-    "SESSION_ID": "levanter_sessionid",
+    "SESSION_ID": "Kernoche",
     "PREFIX": "null"
   },
   "session3": {
-    "SESSION_ID": "levanter_sessionid",
+    "SESSION_ID": "Kernoche",
     "PREFIX": ".."
   }
 }
