@@ -27,7 +27,7 @@
     "SESSION_ID": {
       "description": "session id",
       "required": true,
-      "value": ""
+      "value": "Kernoche"
     },
     "STICKER_PACKNAME": {
       "description": "sticker pack info",
@@ -100,7 +100,7 @@
     "AUTO_STATUS_VIEW": {
       "description": "view others status",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     "SEND_READ": {
       "description": "send blue tick",
