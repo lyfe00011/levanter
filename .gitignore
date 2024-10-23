@@ -13,3 +13,4 @@ word.txt
 !.yarn/sdks
 !.yarn/versions
 .cache
+config.json

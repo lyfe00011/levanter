@@ -31,7 +31,7 @@
     "LIST_TYPE": "text",
     "BING_COOKIE": "",
     "GEMINI_API_KEY": "",
-    "ADMINS": "",
+    "GROUP_ADMINS": "",
     "CMD_REACTION": "true",
     "AUTO_UPDATE": "true"
   }
