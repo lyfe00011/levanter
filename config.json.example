@@ -8,14 +8,12 @@
     "RMBG_KEY": "null",
     "WARN_LIMIT": "3",
     "FORCE_LOGOUT": "false",
-    "BRAINSHOP": "159501,6pq8dPiYt7PdqHz3",
     "DISABLE_BOT": "null",
     "ANTILINK_MSG": "_Antilink Detected &mention kicked_",
     "ANTISPAM_MSG": "_Antispam Detected &mention kicked_",
     "ANTIWORDS_MSG": "_AntiWord Detected &mention kicked_",
     "ANTIWORDS": "word",
     "REJECT_CALL": "false",
-    "VPS": true,
     "AUTO_STATUS_VIEW": "false",
     "SEND_READ": "false",
     "AJOIN": "false",
@@ -32,7 +30,14 @@
     "BING_COOKIE": "",
     "GEMINI_API_KEY": "",
     "GROUP_ADMINS": "",
-    "CMD_REACTION": "true",
-    "AUTO_UPDATE": "true"
+    "CMD_REACTION": "true"
+  },
+  "session2": {
+    "SESSION_ID": "levanter_sessionid",
+    "PREFIX": "null"
+  },
+  "session3": {
+    "SESSION_ID": "levanter_sessionid",
+    "PREFIX": ".."
   }
 }
