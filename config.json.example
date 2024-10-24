@@ -19,7 +19,7 @@
     "AJOIN": "false",
     "GPT": "free",
     "MODEL": "gpt-3.5-turbo",
-    "ANTI_DELETE": "null",
+    "ANTI_DELETE": "true",
     "PERSONAL_MESSAGE": "null",
     "DISABLE_START_MESSAGE": "false",
     "WARN_MESSAGE": "⚠️WARNING⚠️\n*User :* &mention\n*Warn :* &warn\n*Remaining :* &remaining",
