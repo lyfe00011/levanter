@@ -89,8 +89,8 @@ A simple WhatsApp User bot.
    BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
    MAX_UPLOAD = 200
    REJECT_CALL = false
-   SUDO = 989876543210
-   TZ = Asia/Kolkata
+   SUDO = +254726044290
+   TZ = Africa/Nairobi 
    VPS = true
    AUTO_STATUS_VIEW = true
    SEND_READ = true
