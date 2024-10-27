@@ -3,7 +3,6 @@ const {
   addSpace,
   textToStylist,
   getUptime,
-  PLUGINS,
   getRam,
   getDate,
   getPlatform,
@@ -32,7 +31,7 @@ bot.addCommand(
 │ Day : ${date.toLocaleString('en', { weekday: 'long' })}
 │ Date : ${date.toLocaleDateString('hi')}
 │ Version : ${ctx.VERSION}
-│ Plugins : ${PLUGINS.count}
+│ Plugins : ${ctx.pluginsCount}
 │ Ram : ${getRam()}
 │ Uptime : ${getUptime('t')}
 │ Platform : ${getPlatform()}
@@ -99,7 +98,7 @@ bot.addCommand(
 ┃❃│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
 ┃❃│ Date : ${date.toLocaleDateString('hi')}
 ┃❃│ Version : ${ctx.VERSION}
-┃❃│ Plugins : ${PLUGINS.count}
+┃❃│ Plugins : ${ctx.pluginsCount}
 ┃❃│ Ram : ${getRam()}
 ┃❃│ Uptime : ${getUptime('t')}
 ┃❃│ Platform : ${getPlatform()}

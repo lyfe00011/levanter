@@ -1,4 +1,4 @@
-const { bot } = require('../lib/')
+const { bot, setAfk } = require('../lib/')
 
 bot(
   {
@@ -14,18 +14,14 @@ bot(
     if (!ctx.isAfk) {
       if (match) ctx.reason = match
       ctx.isAfk = true
-      ctx.lastseen = Math.round(new Date().getTime() / 1000)
-      ctx.p = message.participant
-      return await message.send(
-        match.replace('#lastseen', Math.round(new Date().getTime() / 1000) - ctx.lastseen)
-      )
+      const now = Math.round(new Date().getTime() / 1000)
+      setAfk(true, match, now, message.participant, message.id)
+
+      return await message.send(match.replace('#lastseen', now))
     }
     if (match === 'off') {
       await message.send('Your not afk anymore.', { quoted: message.data }, 'text', ctx.p)
-      ctx.isAfk = false
-      ctx.reason = false
-      ctx.lastseen = 0
-      ctx.p = ''
+      setAfk(false, '', 0, '', message.id)
     }
   }
 )
