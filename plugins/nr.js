@@ -50,7 +50,7 @@ bot(
   async (message, match) => {
     if (!match) return await message.send('> Example :\n- ope ping, sticker\n- ope all')
     const z = await ope(message.jid, match, message.id)
-    if (z === null) return await message.send(`not set *${match}*`)
+    if (!z) return await message.send(`not set *${match}*`)
     if (z === 'all') return await message.send(`_removed all allowed commands_`)
     await message.send(
       `*removed commands for @${message.isGroup ? message.jid : jidToNum(message.jid)}*\n${z
