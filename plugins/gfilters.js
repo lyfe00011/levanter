@@ -38,7 +38,7 @@ bot(
     match = match.match(/[\'\"](.*?)[\'\"]/gms)
     if (!match) {
       const filters = await getFilter('gfilter', message.id)
-      if (!filters)
+      if (!filters.length)
         return await message.send(`_Not set any filter_\n*Example gfilter 'hi' 'hello'*`)
       let msg = ''
       filters.map(({ pattern }) => {
@@ -67,7 +67,7 @@ bot(
     match = match.match(/[\'\"](.*?)[\'\"]/gms)
     if (!match) {
       const filters = await getFilter('pfilter', message.id)
-      if (!filters)
+      if (!filters.length)
         return await message.send(`_Not set any filter_\n*Example pfilter 'hi' 'hello'*`)
       let msg = ''
       filters.map(({ pattern }) => {

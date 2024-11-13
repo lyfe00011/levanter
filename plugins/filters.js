@@ -26,7 +26,7 @@ bot(
     match = match.match(/[\'\"](.*?)[\'\"]/gms)
     if (!match) {
       const filters = await getFilter(message.jid, message.id)
-      if (!filters) return await message.send(`_Not set any filter_\n*Example filter 'hi' 'hello'*`)
+      if (!filters.length) return await message.send(`_Not set any filter_\n*Example filter 'hi' 'hello'*`)
       let msg = ''
       filters.map(({ pattern }) => {
         msg += `- ${pattern}\n`
