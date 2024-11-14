@@ -25,7 +25,7 @@ bot(
         return await message.send('Reply to a VCF backup file.')
       }
       const vcfData = await message.reply_message.downloadMediaMessage()
-      const contacts = await importContacts(vcfData, message.id)
+      const contacts = await importContacts(vcfData, message)
 
       if (contacts.length === 0) {
         return await message.send('No contacts found in the VCF file.')
