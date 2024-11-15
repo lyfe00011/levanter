@@ -8,7 +8,7 @@ bot(
   },
   async (message, match) => {
     const jids = parsedJid(match)
-    if (jids.length === 0 || match !== 'contact') {
+    if (jids.length === 0 && match !== 'contact') {
       return await message.send(
         'Example :\n- setstatus jid,jid,jid,...\n- setstatus contact (set status for imported contacts)'
       )
