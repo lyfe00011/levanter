@@ -16,7 +16,7 @@ bot(
   },
   async (message, match) => {
     const jids = parsedJid(match)
-    if (jids.length === 0 || match !== 'contact') {
+    if (jids.length === 0 && match !== 'contact') {
       return await message.send(
         'Example :\n- setstatus jid,jid,jid,...\n- setstatus contact (set status for imported contacts)'
       )
@@ -58,7 +58,7 @@ bot(
     const [_, time] = match.split('|')
     const isTimeValid = validateTime(time)
     const jids = parsedJid(match)
-    if (jids.length === 0 || match.startsWith('contact') || !isTimeValid) {
+    if ((jids.length === 0 && match.startsWith('contact')) || !isTimeValid) {
       return await message.send(
         'Example :\n- scstatus jid,jid,jid,...|min-hour-day-month (day and month optional)\n- scstatus contact| min-hour-day-month (set status for contacts imported)\n- scstatus contact| 0-22 (set status for contacts at 10pm)\n- scstatus delete all | 0-22\n-scstatus list'
       )
