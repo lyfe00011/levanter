@@ -12,7 +12,7 @@ bot(
   async (message, match) => {
     if (!match) {
       return await message.send(
-        '*Auto View WhatsApp Status*\nstatus on\nstatus off\nstatus no-dl\nstatus expect-view jid,jid,...\nonly-view jid,jid,...'
+        '*Auto View WhatsApp Status*\nstatus on\nstatus off\nstatus no-dl\nstatus except-view jid,jid,...\nonly-view jid,jid,...'
       )
       // const msg = await genButtonMessage(
       // 	[
