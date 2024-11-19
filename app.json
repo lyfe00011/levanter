@@ -3,6 +3,7 @@
   "description": "",
   "keywords": ["noedjs"],
   "success_url": "/",
+  "stack": "container",
   "env": {
     "ALWAYS_ONLINE": {
       "description": "show bot number last seen as online",
@@ -129,11 +130,11 @@
     }
   ],
 
-  "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" }],
+  "buildpacks": [],
   "formation": {
     "web": {
       "quantity": 1,
       "size": "basic"
     }
-  },
+  }
 }
