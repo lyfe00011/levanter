@@ -12,8 +12,9 @@ bot(
         '> *Example :*\n- apk Mixplorer\n- apk whatsapp,apkm (includes bundle apk)'
       )
     }
-
-    const { result, status } = await apkMirror(match)
+    const [query, apkm] = match.split(',')
+    
+    const { result, status } = await apkMirror(query, !!apkm)
 
     if (status > 400) {
       if (!result.length) {
