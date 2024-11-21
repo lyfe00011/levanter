@@ -35,7 +35,7 @@
     "pdfkit": "^0.13.0",
     "pg": "^8.7.3",
     "pino-pretty": "^9.1.1",
-    "pm2": "^5.4.2",
+    "pm2": "^5.4.3",
     "qrcode-reader": "^1.0.4",
     "qrcode-terminal": "^0.12.0",
     "sequelize": "^6.21.4",
