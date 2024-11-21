@@ -33,12 +33,14 @@ bot(
     }
 
     if (status > 200) {
-      const button = result.map(({ url, title }) => ({
-        id: `apk ${status};;${url}`,
-        text: title,
-      }))
-
-      if (button.length === 1) {
+      const button = []
+      for (const apk in result) {
+        button.push({
+          id: `apk ${status};;${result[apk].url}`,
+          text: result[apk].title,
+        })
+      }
+      if (button.length == 1) {
         const res = await apkMirror(button[0].id.replace('apk ', ''))
         return await message.sendFromUrl(res.result)
       }
