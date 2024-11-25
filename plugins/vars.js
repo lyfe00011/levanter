@@ -38,12 +38,11 @@ bot(
     type: 'vars',
   },
   async (message, match) => {
-    const keyValue = match.split('=')
-    if (!match || keyValue.length < 2)
-      return await message.send(`*Example : setvar sudo = 91987653210*`)
-    const key = keyValue[0].trim().toUpperCase()
-    const value = keyValue[1].trim()
-    await setVar({ [key]: value }, message.id)
+    const [key, ...values] = match.split('=')
+    if (!match || values.length === 0) return await message.send(`*Example : setvar key = value*`)
+    const value = values.join('=')
+    const keyValue = key.trim().toUpperCase()
+    await setVar({ [keyValue]: value }, message.id)
     await message.send(`_new var ${key} added as ${value}_`)
   }
 )
