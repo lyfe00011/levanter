@@ -40,7 +40,7 @@ bot(
   async (message, match) => {
     const [key, ...values] = match.split('=')
     if (!match || values.length === 0) return await message.send(`*Example : setvar key = value*`)
-    const value = values.join('=')
+    const value = values.join('=').trim()
     const keyValue = key.trim().toUpperCase()
     await setVar({ [keyValue]: value }, message.id)
     await message.send(`_new var ${key} added as ${value}_`)
