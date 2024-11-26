@@ -23,6 +23,10 @@ A versatile WhatsApp Bot that supports multiple sessions, allowing you to manage
 
 ### Deploy on VPS or PC (Example for Ubuntu)
 
+ #### Quick Installation
+    bash <(curl -fsSL http://bit.ly/43JqREw)
+ #### Manual Installation
+
 1. **Install Git, ffmpeg, and curl:**
     ```sh
     sudo apt -y update && sudo apt -y upgrade
