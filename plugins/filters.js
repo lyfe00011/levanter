@@ -26,7 +26,8 @@ bot(
     match = match.match(/[\'\"](.*?)[\'\"]/gms)
     if (!match) {
       const filters = await getFilter(message.jid, message.id)
-      if (!filters.length) return await message.send(`_Not set any filter_\n*Example filter 'hi' 'hello'*`)
+      if (!filters.length)
+        return await message.send(`_Not set any filter_\n*Example filter 'hi' 'hello'*`)
       let msg = ''
       filters.map(({ pattern }) => {
         msg += `- ${pattern}\n`
@@ -46,15 +47,14 @@ bot(
 
 bot({ on: 'text', fromMe: false, type: 'filterOrLydia' }, async (message, match, ctx) => {
   const filters = await getFilter(message.jid, message.id)
-  if (filters)
-    filters.map(async ({ pattern, regex, text }) => {
-      pattern = new RegExp(`(?:^|\\W)${pattern}(?:$|\\W)`, 'i')
-      if (pattern.test(message.text)) {
-        await message.send(text, {
-          quoted: message.data,
-        })
-      }
-    })
+  for (const { pattern, text } of filters) {
+    const regexPattern = new RegExp(`(?:^|\\W)${pattern}(?:$|\\W)`, 'i')
+    if (regexPattern.test(message.text)) {
+      return await message.send(text, {
+        quoted: message.data,
+      })
+    }
+  }
 
   const isLydia = await lydia(message)
   if (isLydia) return await message.send(isLydia, { quoted: message.data })
