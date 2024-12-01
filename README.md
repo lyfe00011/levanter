@@ -11,6 +11,8 @@ A versatile WhatsApp Bot that supports multiple sessions, allowing you to manage
 
 ### Deploy on Koyeb
 
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/AMRITMISHRA01/mishramusic.git"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+
 - Open [Deploy](https://qr-hazel-alpha.vercel.app/) to get started with Koyeb.
 
 ### Deploy on Render
