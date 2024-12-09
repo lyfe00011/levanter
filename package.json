@@ -1,6 +1,6 @@
 {
   "name": "levanter",
-  "version": "3.4.1",
+  "version": "3.4.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "postinstall": "node -e \"try { require('sharp') } catch (e) { process.exit(1); }\" || yarn add --ignore-engines sharp@0.33.5"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.3.3",
     "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git",
