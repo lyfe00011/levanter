@@ -1,4 +1,4 @@
-const { getFilter, bot, setFilter, deleteFilter, lydia } = require('../lib/')
+const { getFilter, bot, setFilter, deleteFilter, chatBot } = require('../lib/')
 
 bot(
   {
@@ -56,11 +56,11 @@ bot({ on: 'text', fromMe: false, type: 'filterOrLydia' }, async (message, match,
     }
   }
 
-  const isLydia = await lydia(message)
+  const isLydia = await chatBot(message)
   if (isLydia) return await message.send(isLydia, { quoted: message.data })
 })
 
 bot({ on: 'text', fromMe: true, type: 'lydia' }, async (message, match) => {
-  const isLydia = await lydia(message)
+  const isLydia = await chatBot(message)
   if (isLydia) return await message.send(isLydia, { quoted: message.data })
 })
