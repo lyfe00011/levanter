@@ -1,11 +1,11 @@
 {
-  "name": "levanter",
+  "name": "That_boi_Glitch",
   "version": "3.4.6",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start . --attach --name levanter",
-    "docker": "pm2-runtime start . --name levanter",
+    "start": "pm2 start . --attach --name That_boi_Glitch",
+    "docker": "pm2-runtime start . --name That_boi_Glitch",
     "stop": "pm2 stop levanter",
     "postinstall": "node -e \"try { require('sharp') } catch (e) { process.exit(1); }\" || yarn add --ignore-engines sharp@0.33.5"
   },
