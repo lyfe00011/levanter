@@ -3,12 +3,27 @@ bot(
   {
     pattern: 'tag ?(.*)',
     onlyGroup: true,
-    desc: 'tag members or msg',
+    desc: 'tag members or msg (Admin only)',
     type: 'group',
   },
   async (message, match) => {
-    const participants = await message.groupMetadata(message.jid)
+    // Get group metadata to check admin status
+    const groupMetadata = await message.groupMetadata(message.jid)
+    const participants = groupMetadata
+    
+    // Check if the sender is an admin
+    const isAdmin = participants.find(
+      (user) => user.id === message.participant && user.admin
+    )
+    
+    // If sender is not an admin, return with error message
+    if (!isAdmin) {
+      return await message.send('❌ This command can only be used by group admins.')
+    }
+
+    // Continue with original functionality if user is admin
     const mentionedJid = participants.map(({ id }) => id)
+    
     if (match == 'all') {
       let mesaj = ''
       mentionedJid.forEach(
