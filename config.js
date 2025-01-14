@@ -6,7 +6,7 @@ const databasePath = path.join(__dirname, './database.db')
 if (existsSync(configPath)) require('dotenv').config({ path: configPath })
 const toBool = (x) => x == 'true'
 const DATABASE_URL =
-process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
+  process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
   SESSION_ID: (process.env.SESSION_ID || '').trim(),
@@ -81,4 +81,5 @@ module.exports = {
   TIMEZONE: process.env.TIMEZONE,
   CMD_REACTION: process.env.CMD_REACTION || 'true',
   AUTO_UPDATE: process.env.AUTO_UPDATE || 'true',
+  WHITE_LIST: process.env.WHITE_LIST || '',
 }
