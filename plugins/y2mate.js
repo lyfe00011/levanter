@@ -75,6 +75,9 @@ bot(
     const [video] = await yts(match, !!vid)
     const { title, thumbnail, id } = video
     const audio = await y2mate.get(id)
+
+    if (isUrl(audio)) return await message.sendFromUrl(audio, { quoted: message.data })
+
     const result = await y2mate.dl(id, 'audio')
 
     if (!result) return await message.send('_Audio not found._', { quoted: message.data })
