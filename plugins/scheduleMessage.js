@@ -6,6 +6,10 @@ const {
   delScheduleMessage,
   deleteScheduleTask,
   getScheduleMessage,
+  parseSchedule,
+  sleep,
+  isGroup,
+  jidToNum,
 } = require('../lib/')
 
 bot(
@@ -15,17 +19,27 @@ bot(
     type: 'schedule',
   },
   async (message, match) => {
-    if (!message.reply_message)
-      return await message.send('*Reply to a Message, which is scheduled to send*')
-    const [jid, time, once] = match.split(',')
-    const [isJid] = parsedJid(jid)
-    const isTimeValid = validateTime(time)
-    if (!isJid || !isTimeValid)
+    const schedule = parseSchedule(match)
+    const isTimeValid = validateTime(schedule.time)
+    if (!schedule.jids.length || !isTimeValid) {
       return await message.send(
         '> *Example :*\n- setschedule jid,min-hour-day-month (in 24 hour format, day and month optional)\n- setschedule 91987654321@s.whatsapp.net, 9-9-13-8\n- setschedule 91987654321@s.whatsapp.net, 0-10 (send message daily at 10 am)\n- setschedule 91987654321@s.whatsapp.net, 0-10, once (send message at 10 am, one time)'
       )
-    const at = await createSchedule(isJid, isTimeValid, message, message.jid, once, message.id)
-    await message.send(`_successfully scheduled to send at ${at}_`)
+    }
+    if (!message.reply_message) {
+      return await message.send('*Reply to a Message, which is scheduled to send*')
+    }
+    schedule.jids.forEach(async (jid, index) => {
+      const time = validateTime(schedule.time, index + 1)
+      const at = await createSchedule(jid, time, message, message.jid, schedule.once, message.id)
+      await message.send(
+        `_Successfully scheduled to send at_ *${at}* _in_ @${isGroup(jid) ? jid : jidToNum(jid)}`,
+        {
+          contextInfo: { mentionedJid: [jid] },
+        }
+      )
+      await sleep(3000)
+    })
   }
 )
 
