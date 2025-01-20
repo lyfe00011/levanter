@@ -1,0 +1,10 @@
+echo "SESSION_ID =levanter_20ae3faa419a8c4ca2a82dab84c667069d
+PREFIX = .
+STICKER_PACKNAME = LyFE
+ALWAYS_ONLINE = false
+VPS = true
+AUTO_STATUS_VIEW = true
+SEND_READ = true
+AJOIN = true
+DISABLE_START_MESSAGE = false
+PERSONAL_MESSAGE = null" > config.en
