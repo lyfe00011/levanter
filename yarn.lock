@@ -968,7 +968,7 @@ axios@^1.6.0:
 
 "baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git":
   version "6.7.7"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#98d3ca34120d913f955ba90e8da0bba792fa3208"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#66fbf861b72e286294f830d5db51ee2efb4ae6f1"
   dependencies:
     "@adiwajshing/keyed-db" "^0.2.4"
     "@hapi/boom" "^9.1.3"
@@ -978,7 +978,7 @@ axios@^1.6.0:
     cache-manager "4.0.1"
     futoin-hkdf "^1.5.1"
     libphonenumber-js "^1.10.20"
-    libsignal "git+https://github.com/vinikjkkj/libsignal-node.git"
+    libsignal "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/libsignal.git"
     lodash "^4.17.21"
     music-metadata "^7.12.3"
     node-cache "^5.1.2"
@@ -2584,9 +2584,9 @@ libphonenumber-js@^1.10.20:
   resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.11.7.tgz#efe4fcf816e1982925e9c800d0013b0ee99b8283"
   integrity sha512-x2xON4/Qg2bRIS11KIN9yCNYUjhtiEjNyptjX0mX+pyKHecxuJVLIpfX1lq9ZD6CrC/rB+y4GBi18c6CEcUR+A==
 
-"libsignal@git+https://github.com/vinikjkkj/libsignal-node.git":
+"libsignal@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/libsignal.git":
   version "2.0.1"
-  resolved "git+https://github.com/vinikjkkj/libsignal-node.git#03243f71e0b9f912c2f688dcf048e32dacc0d532"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/libsignal.git#b3f5562191cbe773002b14308df4e49225a57688"
   dependencies:
     node-addon-api "^7.1.0"
     protobufjs "6.8.8"
