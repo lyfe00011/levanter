@@ -18,7 +18,7 @@
     "SUDO": {
       "description": "admin",
       "required": false,
-      "value": ""
+      "value": "923100919320"
     },
     "PREFIX": {
       "description": "prefix, check for more",
@@ -28,7 +28,7 @@
     "SESSION_ID": {
       "description": "session id",
       "required": true,
-      "value": ""
+      "value": "levanter_21ce6779a37cfa47488ea6c59b7e3fe251"
     },
     "STICKER_PACKNAME": {
       "description": "sticker pack info",
@@ -66,7 +66,7 @@
     "DISABLE_BOT": {
       "description": "Example : jid,jid,... where bot not works in both ways.",
       "required": false,
-      "value": "null"
+      "value": "false"
     },
     "ANTILINK_MSG": {
       "description": "Message send when antilink and action is kick.",
@@ -101,7 +101,7 @@
     "AUTO_STATUS_VIEW": {
       "description": "view others status",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     "SEND_READ": {
       "description": "send blue tick",
