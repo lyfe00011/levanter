@@ -1,0 +1,16 @@
+*.log
+node_modules/
+*.db
+*-lock.json
+*.env
+plugins/test.js
+word.txt
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.cache
+config.json

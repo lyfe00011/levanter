@@ -1,0 +1,43 @@
+{
+  "session1": {
+    "SESSION_ID": "levanter_sessionid",
+    "PREFIX": "^[.,!]",
+    "SUDO": "0",
+    "STICKER_PACKNAME": "❤️,LyFE",
+    "ALWAYS_ONLINE": "false",
+    "RMBG_KEY": "null",
+    "WARN_LIMIT": "3",
+    "FORCE_LOGOUT": "false",
+    "DISABLE_BOT": "null",
+    "ANTILINK_MSG": "_Antilink Detected &mention kicked_",
+    "ANTISPAM_MSG": "_Antispam Detected &mention kicked_",
+    "ANTIWORDS_MSG": "_AntiWord Detected &mention kicked_",
+    "ANTIWORDS": "word",
+    "REJECT_CALL": "false",
+    "AUTO_STATUS_VIEW": "false",
+    "SEND_READ": "false",
+    "AJOIN": "false",
+    "GPT": "free",
+    "MODEL": "gpt-3.5-turbo",
+    "ANTI_DELETE": "null",
+    "PERSONAL_MESSAGE": "null",
+    "DISABLE_START_MESSAGE": "false",
+    "WARN_MESSAGE": "⚠️WARNING⚠️\n*User :* &mention\n*Warn :* &warn\n*Remaining :* &remaining",
+    "WARN_RESET_MESSAGE": "WARN RESET\nUser : &mention\nRemaining : &remaining\nWARN_KICK_MESSAGE=&mention kicked",
+    "WARN_KICK_MESSAGE": "&mention kicked",
+    "DELETE_TYPE": "all",
+    "LIST_TYPE": "text",
+    "BING_COOKIE": "",
+    "GEMINI_API_KEY": "",
+    "GROUP_ADMINS": "",
+    "CMD_REACTION": "true"
+  },
+  "session2": {
+    "SESSION_ID": "levanter_sessionid",
+    "PREFIX": "null"
+  },
+  "session3": {
+    "SESSION_ID": "levanter_sessionid",
+    "PREFIX": ".."
+  }
+}
