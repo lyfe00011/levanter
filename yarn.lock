@@ -943,7 +943,7 @@ axios@^1.3.3, axios@^1.6.0:
 
 "baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git":
   version "6.7.7"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#b2d5b8b33baf60e881942c116760951076b4ce0a"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#a31376dd59dba20a102b996548fd96d0a5eed925"
   dependencies:
     "@adiwajshing/keyed-db" "^0.2.4"
     "@hapi/boom" "^9.1.3"
@@ -953,7 +953,7 @@ axios@^1.3.3, axios@^1.6.0:
     cache-manager "4.0.1"
     futoin-hkdf "^1.5.1"
     libphonenumber-js "^1.10.20"
-    libsignal "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/libsignal.git"
+    libsignal "github:WhiskeySockets/libsignal-node"
     lodash "^4.17.21"
     music-metadata "^7.12.3"
     node-cache "^5.1.2"
@@ -1402,6 +1402,11 @@ culvert@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/culvert/-/culvert-0.1.2.tgz#9502f5f0154a2d5a22a023e79f71cc936fa6ef6f"
   integrity sha512-yi1x3EAWKjQTreYWeSd98431AV+IEE0qoDyOoaHJ7KJ21gv6HtBXHVLX74opVSGqcR8/AbjJBHAHpcOy2bj5Gg==
+
+curve25519-js@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/curve25519-js/-/curve25519-js-0.0.4.tgz#e6ad967e8cd284590d657bbfc90d8b50e49ba060"
+  integrity sha512-axn2UMEnkhyDUPWOwVKBMVIzSQy2ejH2xRGy1wq81dqRwApXfIzfbE3hIX0ZRFBIihf/KDqK158DLwESu4AK1w==
 
 data-uri-to-buffer@^4.0.0:
   version "4.0.1"
@@ -2637,11 +2642,11 @@ libphonenumber-js@^1.10.20:
   resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.11.18.tgz#0ce5188a76487fae01afdf318255783cde36501e"
   integrity sha512-okMm/MCoFrm1vByeVFLBdkFIXLSHy/AIK2AEGgY3eoicfWZeOZqv3GfhtQgICkzs/tqorAMm3a4GBg5qNCrqzg==
 
-"libsignal@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/libsignal.git":
+"libsignal@github:WhiskeySockets/libsignal-node":
   version "2.0.1"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/libsignal.git#76d9cc90a439237450fc49c0a352f266541f5f93"
+  resolved "https://codeload.github.com/WhiskeySockets/libsignal-node/tar.gz/1bd9275d9e621d2ba899087ebdf548b3a5a4f05e"
   dependencies:
-    node-addon-api "^7.1.0"
+    curve25519-js "^0.0.4"
     protobufjs "6.8.8"
 
 linebreak@^1.0.2:
@@ -2957,7 +2962,7 @@ node-abi@^3.3.0:
   dependencies:
     semver "^7.3.5"
 
-node-addon-api@^7.0.0, node-addon-api@^7.1.0:
+node-addon-api@^7.0.0:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-7.1.1.tgz#1aba6693b0f255258a049d621329329322aad558"
   integrity sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==
