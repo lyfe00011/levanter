@@ -5,6 +5,7 @@ const {
   // genButtonMessage,
   isAdmin,
   deleteWarn,
+  sleep,
 } = require('../lib/')
 
 bot(
@@ -59,6 +60,10 @@ bot(
       .replace('&reason', match)
       .replace('&warn', ctx.WARN_LIMIT)
     await message.send(warnMessage, { contextInfo: { mentionedJid: [user] } })
+    if (message.reply_message) {
+      await sleep(3000)
+      await message.send(message.reply_message.key, {}, 'delete')
+    }
     // return await message.send(
     // 	await genButtonMessage(
     // 		[{ id: `warn reset ${user}`, text: 'RESET' }],

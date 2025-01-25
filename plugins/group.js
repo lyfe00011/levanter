@@ -31,7 +31,11 @@ bot(
       await message.send(`_kicking everyone(${user.length})_\n*Restart bot if u wanna stop.*`)
       await sleep(10 * 1000)
     }
-    return await message.Kick(user)
+    await message.Kick(user)
+    if (message.reply_message) {
+      await sleep(3000)
+      await message.send(message.reply_message.key, {}, 'delete')
+    }
   }
 )
 
