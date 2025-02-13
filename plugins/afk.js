@@ -1,19 +1,19 @@
-const { bot, setAfk } = require('../lib/')
+const { bot, setAfk, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'afk ?(.*)',
-    desc: 'Set AFK (Away From Keyboard) status',
+    desc: lang.plugins.afk.desc,
     type: 'misc',
   },
   async (message, match, ctx) => {
     if (match === 'off') {
       setAfk(false, '', 0, '', message.id)
-      return message.send(ctx.plugins.afk.not_afk, { quoted: message.data }, 'text', ctx.p)
+      return message.send(lang.plugins.afk.not_afk, { quoted: message.data }, 'text', ctx.p)
     }
 
     if (!ctx.isAfk && !match) {
-      return message.send(ctx.plugins.afk.example)
+      return message.send(lang.plugins.afk.example)
     }
 
     if (!ctx.isAfk) {

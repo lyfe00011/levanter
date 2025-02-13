@@ -1,4 +1,13 @@
-const { addSpace, textToStylist, getUptime, getRam, getDate, getPlatform, bot } = require('../lib/')
+const {
+  addSpace,
+  textToStylist,
+  getUptime,
+  getRam,
+  getDate,
+  getPlatform,
+  bot,
+  lang,
+} = require('../lib/')
 bot(
   {
     pattern: 'help ?(.*)',
@@ -12,7 +21,7 @@ bot(
     const [date, time] = getDate()
 
     const CMD_HELP = [
-      ctx.plugins.menu.help.format(
+      lang.plugins.menu.help.format(
         ctx.PREFIX,
         message.pushName,
         time,
@@ -84,7 +93,7 @@ bot(
     const sortedCommandKeys = Object.keys(commands).sort()
 
     const [date, time] = getDate()
-    let msg = ctx.plugins.menu.menu.format(
+    let msg = lang.plugins.menu.menu.format(
       ctx.PREFIX,
       message.pushName,
       time,
