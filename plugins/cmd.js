@@ -1,4 +1,4 @@
-const { setCmd, bot, getCmd, delCmd } = require('../lib/index')
+const { setCmd, bot, getCmd, delCmd } = require('../lib')
 
 bot(
   {

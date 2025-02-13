@@ -1,13 +1,13 @@
-const { bot, PREFIX, getNumbers, jidToNum } = require('../lib')
+const { bot, getNumbers, jidToNum, lang } = require('../lib')
 
 bot(
   {
     pattern: 'ison ?(.*)',
-    desc: 'List number in whatsapp',
+    desc: lang.plugins.ison.desc,
     type: 'search',
   },
   async (message, match) => {
-    if (!match) return message.send(`*Example :* ${PREFIX}ison 9198765432x0`)
+    if (!match) return message.send(lang.plugins.ison.usage)
 
     const numbers = getNumbers(match.replace('+', ''))
 
@@ -15,7 +15,7 @@ bot(
 
     if (!ison.length) {
       let msg = ''
-      msg += `*Not Exist on Whatsapp* (${numbers.length})\n`
+      msg += lang.plugins.ison.not_exist.format(numbers.length)
       for (const num of numbers) msg += `+${num}\n`
       return await message.send(msg.trim())
     }
@@ -31,12 +31,12 @@ bot(
 
     let msg = ''
     if (not.length) {
-      msg += `*Not Exist on Whatsapp* (${not.length})\n`
+      msg += lang.plugins.ison.not_exist.format(not.length)
       for (const num of not) msg += `+${num}\n`
     }
 
     if (exist.length) {
-      msg += `\n*Exist on Whatsapp* (${exist.length})\n`
+      msg += lang.plugins.ison.exist.format(exist.length)
       for (const about of exist) {
         const num = jidToNum(about.id)
         msg += `@${num}\n*Number :* +${num}\n*About :* ${about.status}\n*Date :* ${about.date}\n\n`
@@ -44,7 +44,7 @@ bot(
     }
 
     if (x403.length) {
-      msg += `*Privacy Settings on* (${x403.length})\n`
+      msg += lang.plugins.ison.privacy.format(x403.length)
       for (const num of x403) msg += `+${num}\n`
     }
 

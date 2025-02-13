@@ -1,56 +1,56 @@
-const { bot, setVar, getVars, delVar, sortObject } = require('../lib/index')
+const { bot, setVar, getVars, delVar, sortObject, lang } = require('../lib')
 
 bot(
   {
     pattern: 'getvar ?(.*)',
-    desc: 'Show var',
+    desc: lang.plugins.getvar.desc,
     type: 'vars',
   },
   async (message, match) => {
-    if (!match) return await message.send(`*Example : getvar sudo*`)
+    if (!match) return await message.send(lang.plugins.getvar.usage)
     const vars = await getVars(message.id)
     match = match.toUpperCase()
     if (vars[match]) return await message.send(`${match} = ${vars[match]}`)
-    return await message.send(`_${match} not found in vars_`)
+    return await message.send(lang.plugins.getvar.not_found.format(match))
   }
 )
 
 bot(
   {
     pattern: 'delvar ?(.*)',
-    desc: 'delete var',
+    desc: lang.plugins.delvar.desc,
     type: 'vars',
   },
   async (message, match) => {
-    if (!match) return await message.send(`*Example : delvar sudo*`)
+    if (!match) return await message.send(lang.plugins.delvar.usage)
     const vars = await getVars(message.id)
     match = match.toUpperCase()
-    if (!vars[match]) return await message.send(`_${match} not found in vars_`)
+    if (!vars[match]) return await message.send(lang.plugins.delvar.not_found.format(match))
     await delVar(match, message.id)
-    await message.send(`_${match} deleted_`)
+    await message.send(lang.plugins.delvar.deleted.format(match))
   }
 )
 
 bot(
   {
     pattern: 'setvar ?(.*)',
-    desc: 'set var',
+    desc: lang.plugins.setvar.desc,
     type: 'vars',
   },
   async (message, match) => {
     const [key, ...values] = match.split('=')
-    if (!match || values.length === 0) return await message.send(`*Example : setvar key = value*`)
+    if (!match || values.length === 0) return await message.send(lang.plugins.setvar.usage)
     const value = values.join('=').trim()
     const keyValue = key.trim().toUpperCase()
     await setVar({ [keyValue]: value }, message.id)
-    await message.send(`_new var ${key} added as ${value}_`)
+    await message.send(lang.plugins.setvar.success.format(keyValue, value))
   }
 )
 
 bot(
   {
     pattern: 'allvar ?(.*)',
-    desc: 'Show All var',
+    desc: lang.plugins.allvar.desc,
     type: 'vars',
   },
   async (message, match) => {

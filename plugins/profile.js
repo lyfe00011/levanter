@@ -1,22 +1,12 @@
-const {
-  bot,
-  getName,
-  formatTime,
-  jidToNum,
-  getGids,
-  parsedJid,
-  isUser,
-  isGroup,
-} = require('../lib/')
-const fm = true
+const { bot, getName, formatTime, jidToNum, parsedJid, isUser, isGroup, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'jid',
-    desc: 'Give jid of chat/user',
+    desc: lang.plugins.jid.desc,
     type: 'user',
   },
-  async (message, match) => {
+  async (message) => {
     return await message.send(message.mention[0] || message.reply_message.jid || message.jid)
   }
 )
@@ -24,7 +14,7 @@ bot(
 bot(
   {
     pattern: 'left',
-    dec: 'To leave from group',
+    decs: lang.plugins.left.desc,
     type: 'user',
     onlyGroup: true,
   },
@@ -37,13 +27,13 @@ bot(
 bot(
   {
     pattern: 'block',
-    desc: 'Block a person',
+    desc: lang.plugins.block.desc,
     type: 'user',
   },
-  async (message, match) => {
+  async (message) => {
     const id = message.mention[0] || message.reply_message.jid || (!message.isGroup && message.jid)
-    if (!id) return await message.send('*Give me a person*')
-    await message.send('_Blocked_')
+    if (!id) return await message.send(lang.plugins.block.usage)
+    await message.send(lang.plugins.block.status)
     await message.Block(id)
   }
 )
@@ -51,35 +41,35 @@ bot(
 bot(
   {
     pattern: 'unblock',
-    desc: 'Unblock a person',
+    desc: lang.plugins.unblock.desc,
     type: 'user',
   },
-  async (message, match) => {
+  async (message) => {
     const id = message.mention[0] || message.reply_message.jid || (!message.isGroup && message.jid)
-    if (!id) return await message.send('*Give me a person*')
-    await message.send('_Unblocked_')
+    if (!id) return await message.send(lang.plugins.unblock.usage)
     await message.Unblock(id)
+    await message.send(lang.plugins.unblock.status)
   }
 )
 
 bot(
   {
     pattern: 'pp',
-    desc: 'Change Profile Picture',
+    desc: lang.plugins.pp.desc,
     type: 'user',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image*')
+      return await message.send(lang.plugins.pp.usage)
     await message.updateProfilePicture(await message.reply_message.downloadMediaMessage())
-    return await message.send('_Profile Picture Updated_')
+    return await message.send(lang.plugins.fullpp.updated)
   }
 )
 
 bot(
   {
     pattern: 'whois ?(.*)',
-    desc: 'To get PP and about',
+    desc: lang.plugins.whois.desc,
     type: 'misc',
   },
   async (message, match) => {
@@ -94,20 +84,24 @@ bot(
     }
     let caption = ''
     if (id) {
-      caption = `*Num :* +${jidToNum(id)}`
+      caption = lang.plugins.whois.number.format(jidToNum(id))
       try {
         const [res] = await message.fetchStatus(id)
         if (res.status) {
-          caption += `\n*Name :* ${await getName(gid, id, message.id)}\n*About :* ${
-            res.status
-          }\n*setAt :* ${res.date}`
+          caption += `\n${lang.plugins.whois.name.format(
+            await getName(gid, id, message.id)
+          )}\n${lang.plugins.whois.about.format(res.status)}\n${lang.plugins.whois.setAt.format(
+            res.date
+          )}`
         }
       } catch (error) {}
     } else {
       const { subject, size, creation, desc, owner } = await message.groupMetadata(gid, !!gid)
-      caption = `*Name :* ${subject}\n*Owner :* ${owner ? '+' : ''}${jidToNum(
-        owner
-      )}\n*Members :* ${size}\n*Created :* ${formatTime(creation)}\n*Desc :* ${desc}`
+      caption = `${lang.plugins.whois.name.format(subject)}\n${lang.plugins.whois.owner.format(
+        `${owner ? `+${jidToNum(owner)}` : ''}`
+      )}\n${lang.plugins.whois.members.format(size)}\n${lang.plugins.whois.created.format(
+        formatTime(creation)
+      )}\n${lang.plugins.whois.description.format(desc)}`
     }
     if (!pp) return await message.send(caption, { quoted: message.data })
     return await message.sendFromUrl(pp, { caption, quoted: message.data })
@@ -117,10 +111,10 @@ bot(
 bot(
   {
     pattern: 'gjid',
-    desc: 'List group jids',
+    desc: lang.plugins.gjid.desc,
     type: 'user',
   },
-  async (message, match) => {
+  async (message) => {
     const gids = await message.getGids()
     let msg = ''
     let i = 1

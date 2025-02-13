@@ -1,4 +1,4 @@
-const { bot, photoEditor } = require('../lib/')
+const { bot, photoEditor, lang } = require('../lib/')
 
 bot(
   {
@@ -6,9 +6,9 @@ bot(
     type: 'editor',
     desc: 'Skull Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'skull'
@@ -23,9 +23,9 @@ bot(
     type: 'editor',
     desc: 'Sketch Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'sketch'
@@ -41,9 +41,9 @@ bot(
     type: 'editor',
     desc: 'pencil Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'pencil'
@@ -59,9 +59,9 @@ bot(
     type: 'editor',
     desc: 'color Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'color'
@@ -77,9 +77,9 @@ bot(
     type: 'editor',
     desc: 'kiss Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'kiss'
@@ -95,9 +95,9 @@ bot(
     type: 'editor',
     desc: 'bokeh Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'bokeh'
@@ -113,9 +113,9 @@ bot(
     type: 'editor',
     desc: 'Wanted Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'wanted'
@@ -131,9 +131,9 @@ bot(
     type: 'editor',
     desc: 'Dramatic Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'look'
@@ -149,9 +149,9 @@ bot(
     type: 'editor',
     desc: 'Dramatic Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'gandm'
@@ -167,9 +167,9 @@ bot(
     type: 'editor',
     desc: 'Dramatic Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'dark'
@@ -185,9 +185,9 @@ bot(
     type: 'editor',
     desc: 'Dramatic Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'makeup'
@@ -203,9 +203,9 @@ bot(
     type: 'editor',
     desc: 'Dramatic Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'cartoon'
@@ -221,9 +221,9 @@ bot(
     type: 'editor',
     desc: 'demon Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'demon'
@@ -239,9 +239,9 @@ bot(
     type: 'editor',
     desc: 'bloody Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'bloody'
@@ -257,9 +257,9 @@ bot(
     type: 'editor',
     desc: 'zombie Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'zombie'
@@ -275,9 +275,9 @@ bot(
     type: 'editor',
     desc: 'horned Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'horned'
@@ -293,9 +293,9 @@ bot(
     type: 'editor',
     desc: 'horned Look Photo editor.',
   },
-  async (message, match) => {
+  async (message) => {
     if (!message.reply_message || !message.reply_message.image)
-      return await message.send('*Reply to a image.*')
+      return await message.send(lang.plugins.common.reply_to_image)
     const { status, result } = await photoEditor(
       await message.reply_message.downloadAndSaveMediaMessage(),
       'enhance'

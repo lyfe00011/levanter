@@ -1,160 +1,72 @@
-const {
-  bot,
-  // genButtonMessage,
-  setVar,
-} = require('../lib/')
+const { bot, setVar, lang } = require('../lib/')
+
+async function handleSetting(message, setting, match) {
+  if (match === 'on' || match === 'off') {
+    await setVar(
+      {
+        [setting]: match === 'on' ? 'true' : 'false',
+      },
+      message.id
+    )
+  }
+}
+
 bot(
   {
     pattern: 'status ?(.*)',
-    desc: 'Auto Status view',
+    desc: lang.plugins.status.desc,
     type: 'whatsapp',
   },
   async (message, match) => {
     if (!match) {
-      return await message.send(
-        '*Auto View WhatsApp Status*\nstatus on\nstatus off\nstatus no-dl\nstatus except-view jid,jid,...\nonly-view jid,jid,...'
-      )
-      // const msg = await genButtonMessage(
-      // 	[
-      // 		{
-      // 			id: `status ${config.AUTO_STATUS_VIEW ? 'off' : 'on'}`,
-      // 			text: config.AUTO_STATUS_VIEW ? 'DISABLE' : 'ENABLE',
-      // 		},
-      // 	],
-      // 	`𝗔𝘂𝘁𝗼 𝘀𝘁𝗮𝘁𝘂𝘀 𝘃𝗶𝗲𝘄 𝗺𝗮𝗻𝗮𝗴𝗲𝗿`,
-      // 	`Auto Status View ${config.AUTO_STATUS_VIEW ? 'Enabled' : 'Disabled'}`
-      // )
-      // return await message.send(msg, {}, 'button')
+      return await message.send(lang.plugins.status.usage)
     }
-    try {
-      await setVar(
-        {
-          AUTO_STATUS_VIEW: match == 'on' ? 'true' : match == 'off' ? 'false' : match,
-        },
-        message.id
-      )
-      await message.send(`_Auto Status View ${match == 'off' ? 'Disabled' : 'Enabled'}_`)
-    } catch (error) {
-      await message.send(`${error}`, {
-        quoted: message.data,
-      })
-    }
+    await handleSetting(message, 'AUTO_STATUS_VIEW', match)
+    await message.send(lang.plugins.common.update)
   }
 )
 
 bot(
   {
     pattern: 'call ?(.*)',
-    desc: 'Auto reject call Manager',
+    desc: lang.plugins.call.desc,
     type: 'whatsapp',
   },
   async (message, match) => {
     if (!match) {
-      return await message.send('*Auto Reject Calls*\ncall on | off')
-      // const msg = await genButtonMessage(
-      // 	[
-      // 		{
-      // 			id: `call ${config.REJECT_CALL ? 'off' : 'on'}`,
-      // 			text: config.REJECT_CALL ? 'DISABLE' : 'ENABLE',
-      // 		},
-      // 	],
-      // 	`Auto Reject Call Manager`,
-      // 	`Auto Reject ${config.REJECT_CALL ? 'Enabled' : 'Disabled'}`
-      // )
-      // return await message.send(msg, {}, 'button')
+      return await message.send(lang.plugins.call.usage)
     }
-    if (match == 'on' || match == 'off') {
-      try {
-        await setVar(
-          {
-            REJECT_CALL: match == 'on' ? 'true' : 'false',
-          },
-          message.id
-        )
-        await message.send(`_Auto Call Reject ${match == 'on' ? 'Enabled' : 'Disabled'}_`)
-      } catch (error) {
-        await message.send(`${error}`, {
-          quoted: message.data,
-        })
-      }
-    }
+    await handleSetting(message, 'REJECT_CALL', match)
+    await message.send(lang.plugins.common.update)
   }
 )
 
 bot(
   {
     pattern: 'read ?(.*)',
-    desc: 'Auto read Message',
+    desc: lang.plugins.read.desc,
     type: 'whatsapp',
   },
   async (message, match) => {
     if (!match) {
-      return await message.send('*Auto Read Messages*\nread on | off')
-      // const msg = await genButtonMessage(
-      // 	[
-      // 		{
-      // 			id: `call ${config.REJECT_CALL ? 'off' : 'on'}`,
-      // 			text: config.REJECT_CALL ? 'DISABLE' : 'ENABLE',
-      // 		},
-      // 	],
-      // 	`Auto Reject Call Manager`,
-      // 	`Auto Reject ${config.REJECT_CALL ? 'Enabled' : 'Disabled'}`
-      // )
-      // return await message.send(msg, {}, 'button')
+      return await message.send(lang.plugins.read.usage)
     }
-    if (match == 'on' || match == 'off') {
-      try {
-        await setVar(
-          {
-            SEND_READ: match == 'on' ? 'true' : 'false',
-          },
-          message.id
-        )
-        await message.send(`_Auto Read ${match == 'on' ? 'Enabled' : 'Disabled'}_`)
-      } catch (error) {
-        await message.send(`${error}`, {
-          quoted: message.data,
-        })
-      }
-    }
+    await handleSetting(message, 'SEND_READ', match)
+    await message.send(lang.plugins.common.update)
   }
 )
 
 bot(
   {
     pattern: 'online ?(.*)',
-    desc: 'Always Online',
+    desc: lang.plugins.online.desc,
     type: 'whatsapp',
   },
   async (message, match) => {
     if (!match) {
-      return await message.send('*Show always online*\nonline on | off')
-      // const msg = await genButtonMessage(
-      // 	[
-      // 		{
-      // 			id: `call ${config.REJECT_CALL ? 'off' : 'on'}`,
-      // 			text: config.REJECT_CALL ? 'DISABLE' : 'ENABLE',
-      // 		},
-      // 	],
-      // 	`Auto Reject Call Manager`,
-      // 	`Auto Reject ${config.REJECT_CALL ? 'Enabled' : 'Disabled'}`
-      // )
-      // return await message.send(msg, {}, 'button')
+      return await message.send(lang.plugins.online.usage)
     }
-    if (match == 'on' || match == 'off') {
-      try {
-        await setVar(
-          {
-            ALWAYS_ONLINE: match == 'on' ? 'true' : 'false',
-          },
-          message.id
-        )
-        await message.send(`_Always Online ${match == 'on' ? 'Enabled' : 'Disabled'}_`)
-      } catch (error) {
-        await message.send(`${error}`, {
-          quoted: message.data,
-        })
-      }
-    }
+    await handleSetting(message, 'ALWAYS_ONLINE', match)
+    await message.send(lang.plugins.common.update)
   }
 )

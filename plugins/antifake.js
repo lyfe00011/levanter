@@ -1,69 +1,40 @@
-const {
-  bot,
-  getFake,
-  antiList,
-  enableAntiFake,
-  // genButtonMessage,
-} = require('../lib/')
+const { bot, getFake, antiList, enableAntiFake, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'antifake ?(.*)',
-    desc: 'set antifake',
+    desc: lang.plugins.antifake.desc,
     type: 'group',
     onlyGroup: true,
   },
   async (message, match) => {
     if (!match) {
       const fake = await getFake(message.jid, message.id)
-      const onOrOff = fake && fake.enabled ? 'on' : 'off'
-      return await message.send(
-        `_Antifake is ${onOrOff}_\n*Example :*\nantifake list\nantifake !91,1\nantifake on | off`
-      )
-      // const button = await genButtonMessage(
-      // 	[
-      // 		{ id: 'antifake list', text: 'LIST' },
-      // 		{ id: `antifake ${onOrOff}`, text: onOrOff.toUpperCase() },
-      // 	],
-      // 	'Example\nhttps://github.com/lyfe00011/whatsapp-bot-md/wiki/antifake',
-      // 	'Antifake'
-      // )
-      // return await message.send(button, {}, 'button')
-      // return await message.send(
-      // 	await genHydratedButtons(
-      // 		[
-      // 			{
-      // 				urlButton: {
-      // 					text: 'Example',
-      // 					url: 'https://github.com/lyfe00011/whatsapp-bot-md/wiki/antifake',
-      // 				},
-      // 			},
-      // 			{ button: { id: 'antifake list', text: 'LIST' } },
-      // 			{ button: { id: 'antifake on', text: 'ON' } },
-      // 			{ button: { id: 'antifake off', text: 'OFF' } },
-      // 		],
-      // 		'Antifake'
-      // 	),
-      // 	{},
-      // 	'template'
-      // )
+      const status = fake && fake.enabled ? 'on' : 'off'
+
+      return message.send(lang.plugins.antifake.example.format(status))
     }
-    if (match == 'list') {
-      let list = ''
-      let codes = await antiList(message.jid, 'fake', message.id)
-      await message.send(codes.join(','))
-      codes.forEach((code, i) => {
-        list += `${i + 1}. ${code}\n`
-      })
-      return await message.send('```' + list + '```')
+
+    if (match === 'list') {
+      const codes = await antiList(message.jid, 'fake', message.id)
+      if (!codes.length) return message.send(lang.plugins.antifake.not)
+
+      return message.send('```' + codes.map((code, i) => `${i + 1}. ${code}`).join('\n') + '```')
     }
-    if (match == 'on' || match == 'off') {
+
+    if (match === 'on' || match === 'off') {
       await enableAntiFake(message.jid, match, message.id)
-      return await message.send(`_Antifake ${match == 'on' ? 'Activated' : 'Deactivated'}_`)
+      return message.send(
+        lang.plugins.antifake.status.format(match === 'on' ? 'enabled' : 'disabled')
+      )
     }
+
     const res = await enableAntiFake(message.jid, match, message.id)
-    return await message.send(
-      `_Antifake Updated_\nAllow - ${res.allow.join(', ')}\nNotAllow - ${res.notallow.join(', ')}`
+    return message.send(
+      lang.plugins.antifake.update.format(
+        res.allow.length ? res.allow.join(', ') : '',
+        res.notallow.length ? res.notallow.join(', ') : ''
+      )
     )
   }
 )

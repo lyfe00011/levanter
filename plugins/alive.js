@@ -1,9 +1,9 @@
-const { bot, aliveMessage } = require('../lib/')
+const { bot, aliveMessage, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'alive ?(.*)',
-    desc: 'bot alive message',
+    desc: lang.plugins.alive.desc,
     type: 'misc',
   },
   async (message, match) => {

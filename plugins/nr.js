@@ -1,23 +1,21 @@
-const { bot, zushi, yami, ope, jidToNum } = require('../lib/')
+const { bot, zushi, yami, ope, jidToNum, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'zushi ?(.*)',
-    desc: 'allow set commands to be used by others in chat',
+    desc: lang.plugins.zushi.desc,
     type: 'logia',
   },
   async (message, match) => {
-    if (!match)
-      return await message.send(
-        `> Example :\n- zushi ping, sticker\n\nwanna set all ? type list copy and paste the reply message\n- zushi copied_message`
-      )
+    if (!match) return await message.send(lang.plugins.zushi.usage)
     const z = await zushi(match, message.jid, message.id)
-    if (!z) return await message.send(`*${match}* already set`)
+    if (!z) return await message.send(lang.plugins.zushi.already_set)
 
     await message.send(
-      `*allowed commands for @${message.isGroup ? message.jid : jidToNum(message.jid)}*\n${z
-        .map((a) => `- ${a}`)
-        .join('\n')}`,
+      lang.plugins.zushi.allowed.format(
+        message.isGroup ? message.jid : jidToNum(message.jid),
+        z.map((a) => `- ${a}`).join('\n')
+      ),
       { contextInfo: { mentionedJid: [message.jid] } }
     )
   }
@@ -26,16 +24,17 @@ bot(
 bot(
   {
     pattern: 'yami ?(.*)',
-    desc: 'shows the commands',
+    desc: lang.plugins.yami.desc,
     type: 'logia',
   },
   async (message, match) => {
     const z = await yami(message.jid, message.id)
-    if (!z || !z.length) return await message.send(`not set any`)
+    if (!z || !z.length) return await message.send(lang.plugins.yami.not_set)
     await message.send(
-      `*allowed commands for @${message.isGroup ? message.jid : jidToNum(message.jid)}*\n${z
-        .map((a) => `- ${a}`)
-        .join('\n')}`,
+      lang.plugins.zushi.allowed.format(
+        message.isGroup ? message.jid : jidToNum(message.jid),
+        z.map((a) => `- ${a}`).join('\n')
+      ),
       { contextInfo: { mentionedJid: [message.jid] } }
     )
   }
@@ -44,18 +43,17 @@ bot(
 bot(
   {
     pattern: 'ope ?(.*)',
-    desc: 'delete or unset the command',
+    desc: lang.plugins.ope.desc,
     type: 'logia',
   },
   async (message, match) => {
-    if (!match) return await message.send('> Example :\n- ope ping, sticker\n- ope all')
+    if (!match) return await message.send(lang.plugins.ope.usage)
     const z = await ope(message.jid, match, message.id)
-    if (!z) return await message.send(`not set *${match}*`)
-    if (z === 'all') return await message.send(`_removed all allowed commands_`)
-    await message.send(
-      `*removed commands for @${message.isGroup ? message.jid : jidToNum(message.jid)}*\n${z
-        .map((a) => `- ${a}`)
-        .join('\n')}`,
+    if (z === null) return await message.send(lang.plugins.ope.not_found.format(match))
+    if (z === 'all') return await message.send(lang.plugins.ope.all_removed)
+    lang.plugins.ope.removed.format(
+      message.isGroup ? message.jid : jidToNum(message.jid),
+      z.map((a) => `- ${a}`).join('\n'),
       { contextInfo: { mentionedJid: [message.jid] } }
     )
   }

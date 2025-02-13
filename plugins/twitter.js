@@ -1,43 +1,41 @@
-const { twitter, bot, generateList, isUrl } = require('../lib/')
+const { twitter, bot, generateList, isUrl, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'twitter ?(.*)',
-    desc: 'Download twitter video',
+    desc: lang.plugins.twitter.desc,
     type: 'download',
   },
   async (message, match) => {
-    match = isUrl(match || message.reply_message.text)
-    if (!match) return await message.send('_Example : twitter url_')
-    const result = await twitter(match)
-    if (!result.length)
-      return await message.send('*Not found*', {
+    const url = isUrl(match || message.reply_message?.text)
+    if (!url) {
+      return await message.send(lang.plugins.twitter.usage)
+    }
+
+    const result = await twitter(url)
+    if (!result.length) {
+      return await message.send(lang.plugins.twitter.not_found, {
         quoted: message.quoted,
       })
+    }
+
     if (result.length > 1) {
+      const qualityOptions = result.map((video) => ({
+        id: `upload ${video.url}`,
+        text: video.quality.split('x')[0],
+      }))
+
       const list = generateList(
-        result.map((e) => ({
-          id: `upload ${e.url}`,
-          text: e.quality.split('x')[0],
-        })),
-        '*Choose Video Quality*\n',
+        qualityOptions,
+        lang.plugins.twitter.choose_quality,
         message.jid,
         message.participant,
         message.id
       )
+
       return await message.send(list.message, {}, list.type)
-      // return await message.send(
-      // 	await genButtonMessage(
-      // 		result.map((e) => ({
-      // 			id: `upload ${e.url}`,
-      // 			text: e.quality.split('x')[0],
-      // 		})),
-      // 		'Choose Video Quality'
-      // 	),
-      // 	{},
-      // 	'button'
-      // )
     }
+
     await message.sendFromUrl(result[0].url, { quoted: message.quoted })
   }
 )

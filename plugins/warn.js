@@ -1,27 +1,19 @@
-const {
-  bot,
-  setWarn,
-  jidToNum,
-  // genButtonMessage,
-  isAdmin,
-  deleteWarn,
-  sleep,
-} = require('../lib/')
+const { bot, setWarn, jidToNum, isAdmin, deleteWarn, sleep, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'warn ?(.*)',
-    desc: 'warn users in chat',
+    desc: lang.plugins.warn.desc,
     type: 'group',
     onlyGroup: true,
   },
   async (message, match, ctx) => {
     if (!match && !message.reply_message)
-      return await message.send('*Example :*\nwarn mention/reply\nwarn reset mention/reply')
+      return await message.send(lang.plugins.warn.usage)
     let [m, u] = match.split(' ')
     if (m && m.toLowerCase() == 'reset') {
       u = u && u.endsWith('@s.whatsapp.net') ? u : message.mention[0] || message.reply_message.jid
-      if (!u) return await message.send('*Reply or Mention to a user*')
+      if (!u) return await message.send(lang.plugins.warn.reset_usage)
       const count = await setWarn(
         u,
         message.jid,
@@ -37,14 +29,14 @@ bot(
       return await message.send(resetMessage, { contextInfo: { mentionedJid: [u] } })
     }
     const user = message.mention[0] || message.reply_message.jid
-    if (!user) return await message.send('*Reply or Mention to a user*')
+    if (!user) return await message.send(lang.plugins.warn.usage)
     const count = await setWarn(user, message.jid, message.id, ctx.WARN_LIMIT)
     if (count > ctx.WARN_LIMIT) {
       const participants = await message.groupMetadata(message.jid)
       const isImAdmin = await isAdmin(participants, message.client.user.jid)
-      if (!isImAdmin) return await message.send(`_I'm not admin._`)
+      if (!isImAdmin) return await message.send(lang.plugins.common.not_admin)
       const isUserAdmin = await isAdmin(participants, user)
-      if (isUserAdmin) return await message.send(`_I can't Remove admin._`)
+      if (isUserAdmin) return await message.send(lang.plugins.warn.cannot_remove_admin)
       const mention = `@${jidToNum(user)}`
       const kickMessage = ctx.WARN_KICK_MESSAGE.replace('&mention', mention)
       await message.send(kickMessage, {
@@ -64,15 +56,5 @@ bot(
       await sleep(3000)
       await message.send(message.reply_message.key, {}, 'delete')
     }
-    // return await message.send(
-    // 	await genButtonMessage(
-    // 		[{ id: `warn reset ${user}`, text: 'RESET' }],
-    // 		`⚠️WARNING⚠️\n*User :* @${jidToNum(
-    // 			user
-    // 		)}\n*Warn :* ${count}\n*Remaining :* ${ctx.WARN_LIMIT - count}`
-    // 	),
-    // 	{ contextInfo: { mentionedJid: [user] } },
-    // 	'button'
-    // )
   }
 )

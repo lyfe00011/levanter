@@ -1,4 +1,4 @@
-const { mediafire, bot, isUrl } = require('../lib/index')
+const { mediafire, bot, isUrl } = require('../lib')
 
 bot(
   {

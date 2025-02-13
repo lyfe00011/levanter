@@ -1,9 +1,9 @@
-const { bot, addSpace, forwardOrBroadCast } = require('../lib/')
+const { bot, addSpace, forwardOrBroadCast, lang } = require('../lib/')
 bot(
   {
     pattern: 'tag ?(.*)',
     onlyGroup: true,
-    desc: 'tag members or msg',
+    desc: lang.plugins.tag.desc,
     type: 'group',
   },
   async (message, match) => {
@@ -36,10 +36,7 @@ bot(
       return await message.send(match || message.reply_message.text, {
         contextInfo: { mentionedJid },
       })
-    if (!message.reply_message)
-      return await message.send(
-        '*Example :*\ntag all\ntag admin\ntag notadmin\ntag text\nReply to a message'
-      )
+    if (!message.reply_message) return await message.send(lang.plugins.tag.usage)
     forwardOrBroadCast(message.jid, message, { contextInfo: { mentionedJid } })
   }
 )

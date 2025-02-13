@@ -1,32 +1,20 @@
-const {
-  bot,
-  setPdm,
-  // genButtonMessage
-} = require('../lib/')
+const { bot, setPdm, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'pdm ?(.*)',
-    desc: 'To manage promote demote alert',
+    desc: lang.plugins.pdm.desc,
     type: 'group',
     onlyGroup: true,
   },
   async (message, match) => {
-    if (!match) return await message.send('*Promote demote message*\npdm on | off')
-    // await message.send(
-    // 	await genButtonMessage(
-    // 		[
-    // 			{ id: 'pdm on', text: 'ON' },
-    // 			{ id: 'pdm off', text: 'OFF' },
-    // 		],
-    // 		'Promote Demote Message'
-    // 	),
-    // 	{},
-    // 	'button'
-    // )
+    if (!match) return await message.send(lang.plugins.pdm.usage)
     if (match == 'on' || match == 'off') {
       await setPdm(message.jid, match, message.id)
-      await message.send(`_pdm ${match == 'on' ? 'Activated' : 'Deactivated'}_`)
+      return await message.send(
+        match == 'on' ? lang.plugins.pdm.activated : lang.plugins.pdm.deactivated
+      )
     }
+    await message.send(lang.plugins.pdm.not_found)
   }
 )

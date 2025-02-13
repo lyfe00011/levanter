@@ -1,8 +1,8 @@
-const { bot, wcg } = require('../lib/')
+const { bot, wcg, lang } = require('../lib/')
 bot(
   {
     pattern: 'wcg ?(.*)',
-    desc: 'word chain game\nwcg start to force start game',
+    desc: lang.plugins.wcg.desc,
     type: 'game',
   },
   async (message, match) => {
@@ -19,7 +19,7 @@ bot(
 bot(
   {
     pattern: 'wrg ?(.*)',
-    desc: 'random word game\nwrg start to force start game',
+    desc: lang.plugins.wrg.desc,
     type: 'game',
   },
   async (message, match) => {

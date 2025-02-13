@@ -10,25 +10,21 @@ const {
   delPlugin,
   removePlugin,
   installPlugin,
-  // genButtonMessage,
-  // PLATFORM,
+  lang,
 } = require('../lib/')
 
 bot(
   {
     pattern: 'plugin ?(.*)',
-    desc: 'Install External plugins',
+    desc: lang.plugins.plugin.desc,
     type: 'plugin',
   },
   async (message, match) => {
     match = match || message.reply_message.text
-    if (!match && match !== 'list')
-      return await message.send(
-        '> *Example :*\n- plugin url (_a gist url, which contain plugin code_)\n- plugin list (_list all plugins with the url_)'
-      )
+    if (!match) return await message.send(lang.plugins.plugin.usage)
     if (match == 'list') {
       const plugins = await getPlugin(message.id)
-      if (!plugins) return await message.send(`*Plugins not installed.*`)
+      if (!plugins) return await message.send(lang.plugins.plugin.not_installed)
       let msg = ''
       plugins.map(({ name, url }) => {
         msg += `${name} : ${url}\n`
@@ -40,15 +36,14 @@ bot(
       const { url } = await getPlugin(message.id, match)
       if (url) return await message.send(url, { quoted: message.data })
     }
-    if (!isValidUrl) return await message.send('*Give me valid plugin url | plugin_name*')
+    if (!isValidUrl) return await message.send(lang.plugins.plugin.invalid)
     let msg = ''
 
     for (const url of isValidUrl) {
       try {
-        const res = await axios.get(url) // Use axios.get for making the GET request
+        const res = await axios.get(url)
         if (res.status === 200) {
-          // In axios, the status is 'res.status' instead of 'res.statusCode'
-          let plugin_name = /pattern: ["'](.*)["'],/g.exec(res.data) // Access response data with 'res.data'
+          let plugin_name = /pattern: ["'](.*)["'],/g.exec(res.data)
           plugin_name = plugin_name[1].split(' ')[0]
           const pluginPath = path.join(__dirname, '../eplugins/' + message.id + plugin_name + '.js')
           writeFileSync(pluginPath, res.data)
@@ -68,23 +63,18 @@ bot(
       }
     }
 
-    await message.send(`_Newly installed plugins are : ${msg.trim()}_`)
+    await message.send(lang.plugins.plugin.installed.format(msg.trim()))
   }
 )
 
 bot(
   {
     pattern: 'remove ?(.*)',
-    desc: 'Delete External Plugins',
+    desc: lang.plugins.remove.desc,
     type: 'plugin',
   },
   async (message, match) => {
-    if (!match)
-      return await message.send(
-        '> *Example :*\n- remove mforward (_name of the plugin file, check plugin list_)\n- remove all (_removes all plugins in plugin list_)'
-      )
-    // const buttons = [{ text: 'REBOOT', id: 'reboot' }]
-    // if (PLATFORM == 'heroku') buttons.push({ text: 'RESTART', id: 'restart' })
+    if (!match) return await message.send(lang.plugins.remove.usage)
     if (match == 'all') {
       const plugins = await getPlugin(message.id)
       for (const plugin of plugins) {
@@ -95,14 +85,9 @@ bot(
       }
     } else {
       const isDeleted = await delPlugin(match, message.id)
-      if (!isDeleted) return await message.send(`*Plugin ${match} not found*`)
+      if (!isDeleted) return await message.send(lang.plugins.remove.not_found.format(match))
       removePlugin(match, message.id)
     }
-    return await message.send(`_removed plugins_`)
-    // return await message.send(
-    // 	await genButtonMessage(buttons, '_Plugin Deleted_'),
-    // 	{},
-    // 	'button'
-    // )
+    return await message.send(lang.plugins.remove.removed)
   }
 )

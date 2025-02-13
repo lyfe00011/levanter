@@ -1,35 +1,41 @@
-const { bot, setVar, parsedJid, isGroup } = require('../lib/index')
+const { bot, setVar, parsedJid, isGroup, lang } = require('../lib')
 
 bot(
   {
     pattern: 'delete ?(.*)',
-    desc: 'anti delete',
+    desc: lang.plugins.delete.desc,
     type: 'whatsapp',
   },
   async (message, match) => {
     const jid = parsedJid(match)[0]
-    if (!match || (match != 'p' && match != 'g' && match != 'off' && !jid))
-      return await message.send(
-        "*Anti delete Message*\n*Example :* delete p | g | off\n p - Send deleted messages to your chat or sudo\n g - Send deleted Message on chat where it delete\njid - Send deleted Message to jid\n off - Don't do anything with delete (off)"
-      )
-    if (isGroup(jid)) {
-      try {
-        await message.groupMetadata(jid)
-      } catch (error) {
-        return await message.send(`_${jid} is invalid_`)
-      }
-    } else if (jid) {
-      const exist = await message.onWhatsapp(jid)
-      if (!exist) return await message.send(`_${jid} is invalid_`)
+
+    if (!match || (!['p', 'g', 'off'].includes(match) && !jid)) {
+      return message.send(lang.plugins.delete.example)
     }
+
+    if (jid) {
+      if (isGroup(jid)) {
+        try {
+          await message.groupMetadata(jid)
+        } catch (error) {
+          return message.send(lang.plugins.delete.invalid_jid)
+        }
+      } else {
+        const exist = await message.onWhatsapp(jid)
+        if (!exist) return message.send(lang.plugins.delete.invalid_jid)
+      }
+    }
+
     await setVar({ ANTI_DELETE: match }, message.id)
-    const msg = jid
-      ? `_deleted messages send to ${jid}_`
-      : match == 'off'
-      ? '_anti delete disabled_'
-      : match == 'p'
-      ? '_deleted messages send to your chat or sudo_'
-      : '_deleted messages send to the chat itself_'
-    await message.send(msg)
+
+    const responseMessage = jid
+      ? lang.plugins.delete.dlt_msg_jid
+      : match === 'off'
+      ? lang.plugins.delete.dlt_msg_disable
+      : match === 'p'
+      ? lang.plugins.delete.dlt_msg_sudo
+      : lang.plugins.delete.dlt_msg_chat
+
+    await message.send(responseMessage)
   }
 )

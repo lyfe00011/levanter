@@ -1,16 +1,18 @@
-const { TogCmd, bot } = require('../lib/')
+const { TogCmd, bot, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'tog ?(.*)',
-    desc: 'Enable or Disable Cmd',
+    desc: lang.plugins.tog.desc,
     type: 'bot',
   },
   async (message, match) => {
     const [cmd, tog] = match.split(' ')
-    if (!cmd || (tog != 'off' && tog != 'on')) return await message.send('*Example :* tog ping off')
-    if (cmd == 'tog') return await message.send(`Did you really want to kill me?`)
+    if (!cmd || (tog != 'off' && tog != 'on')) return await message.send(lang.plugins.tog.usage)
+    if (cmd == 'tog') return await message.send(lang.plugins.tog.self_reference)
     await TogCmd(cmd, tog, message.id)
-    await message.send(`_${cmd} ${tog == 'on' ? 'Enabled' : 'Disabled'}._`)
+    await message.send(
+      tog == 'on' ? lang.plugins.tog.enabled.format(cmd) : lang.plugins.tog.disabled.format(cmd)
+    )
   }
 )

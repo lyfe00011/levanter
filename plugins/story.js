@@ -1,43 +1,35 @@
-const { story, bot, generateList } = require('../lib/')
+const { story, bot, generateList, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'story ?(.*)',
-    desc: 'Download Instagram stories',
+    desc: lang.plugins.story.desc,
     type: 'download',
   },
   async (message, match) => {
-    match = match || message.reply_message.text
-    if (!match) return await message.send('_Example : story username_')
+    match ||= message.reply_message?.text
+    if (!match) return await message.send(lang.plugins.story.usage)
+
     const result = await story(match)
-    if (!result.length)
-      return await message.send('*Not found*', {
-        quoted: message.quoted,
-      })
+    if (!result.length) {
+      return await message.send(lang.plugins.story.not_found, { quoted: message.quoted })
+    }
+
     if (result.length > 1) {
       const list = generateList(
         result.map((url, index) => ({
           id: `upload ${url}`,
           text: `${index + 1}/${result.length}`,
         })),
-        `*Total ${result.length} stories*\n`,
+        lang.plugins.story.list.format(result.length),
         message.jid,
         message.participant,
         message.id
       )
+
       return await message.send(list.message, {}, list.type)
-      // const msg = genListMessage(
-      // 	result.map((url, index) => ({
-      // 		id: `upload ${url}`,
-      // 		text: `${index + 1}/${result.length}`,
-      // 	})),
-      // 	`Total ${result.length} stories`,
-      // 	'Download'
-      // )
-      // return await message.send(msg, { quoted: message.data }, 'list')
     }
-    for (const url of result) {
-      await message.sendFromUrl(url)
-    }
+
+    await message.sendFromUrl(url)
   }
 )

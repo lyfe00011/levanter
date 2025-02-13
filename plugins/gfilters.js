@@ -1,88 +1,86 @@
-const { getFilter, bot, setFilter, deleteFilter } = require('../lib')
+const { getFilter, bot, setFilter, deleteFilter, lang } = require('../lib')
 
 bot(
   {
     pattern: 'gstop ?(.*)',
-    desc: 'Delete gfilters in all group',
+    desc: lang.plugins.gstop.desc,
     type: 'autoReply',
   },
   async (message, match) => {
-    if (!match) return await message.send(`*Example : gstop hi*`)
-    const isDel = await deleteFilter('gfilter', match, message.id)
-    if (!isDel) return await message.send(`_${match} not found in gfilters_`)
-    return await message.send(`_${match} deleted._`)
+    if (!match) return await message.send(lang.plugins.gstop.example)
+    const isDel = await deleteFilter('gfilter', match)
+    if (!isDel) return await message.send(lang.plugins.gstop.not_found.format(match))
+    return await message.send(lang.plugins.gstop.delete.format(match))
   }
 )
 
 bot(
   {
     pattern: 'pstop ?(.*)',
-    desc: 'Delete pfilters in all chat',
+    desc: lang.plugins.pstop.desc,
     type: 'autoReply',
   },
   async (message, match) => {
-    if (!match) return await message.send(`*Example : pstop hi*`)
+    if (!match) return await message.send(lang.plugins.pstop.example)
     const isDel = await deleteFilter('pfilter', match, message.id)
-    if (!isDel) return await message.send(`_${match} not found in pfilters_`)
-    return await message.send(`_${match} deleted._`)
+    if (!isDel) return await message.send(lang.plugins.pstop.not_found.format(match))
+    return await message.send(lang.plugins.pstop.delete.format(match))
   }
 )
 
 bot(
   {
     pattern: 'gfilter ?(.*)',
-    desc: 'gfilter in all groups',
+    desc: lang.plugins.gfilter.desc,
     type: 'autoReply',
   },
   async (message, match) => {
-    match = match.match(/[\'\"](.*?)[\'\"]/gms)
-    if (!match) {
-      const filters = await getFilter('gfilter', message.id)
-      if (!filters.length)
-        return await message.send(`_Not set any filter_\n*Example gfilter 'hi' 'hello'*`)
-      let msg = ''
-      filters.map(({ pattern }) => {
-        msg += `=> ${pattern} \n`
+    if (!match) return await message.send(lang.plugins.gfilter.example)
+
+    if (match === 'list' && !message.reply_message) {
+      const filters = await getFilter('gfilter')
+      if (!filters.length) return await message.send(lang.plugins.gfilter.example)
+
+      let msg = '> *Group Filters:* \n'
+      filters.forEach(({ pattern }) => {
+        msg += `- ${pattern}\n`
       })
       return await message.send(msg.trim())
-    } else {
-      if (match.length < 2) {
-        return await message.send(`Example gfilter 'hi' 'hello'`)
-      }
-      const k = match[0].replace(/['"]+/g, '')
-      const v = match[1].replace(/['"]+/g, '')
-      await setFilter('gfilter', k, v, match[0][0] === "'" ? true : false, message.id)
-      await message.send(`_${k}_ added to gfilters.`)
     }
+
+    if (!message.reply_message || !message.reply_message.txt) {
+      return await message.send(lang.plugins.common.reply_to_message)
+    }
+
+    await setFilter('gfilter', match, message.reply_message.text, true)
+    await message.send(lang.plugins.gfilter.add.format(match))
   }
 )
 
 bot(
   {
     pattern: 'pfilter ?(.*)',
-    desc: 'pfilter in all chat',
+    desc: lang.plugins.pfilter.desc,
     type: 'autoReply',
   },
   async (message, match) => {
     match = match.match(/[\'\"](.*?)[\'\"]/gms)
-    if (!match) {
+    if (!match) return await message.send(lang.plugins.pfilter.example)
+
+    if (match === 'list' && !message.reply_message) {
       const filters = await getFilter('pfilter', message.id)
-      if (!filters.length)
-        return await message.send(`_Not set any filter_\n*Example pfilter 'hi' 'hello'*`)
-      let msg = ''
-      filters.map(({ pattern }) => {
-        msg += `=> ${pattern} \n`
+      if (!filters.length) return await message.send(lang.plugins.pfilter.example)
+      let msg = '> *Personal Filters:* \n'
+      filters.forEach(({ pattern }) => {
+        msg += `- ${pattern}\n`
       })
       return await message.send(msg.trim())
-    } else {
-      if (match.length < 2) {
-        return await message.send(`Example pfilter 'hi' 'hello'`)
-      }
-      const k = match[0].replace(/['"]+/g, '')
-      const v = match[1].replace(/['"]+/g, '')
-      await setFilter('pfilter', k, v, match[0][0] === "'" ? true : false, message.id)
-      await message.send(`_${k}_ added to pfilters.`)
     }
+    if (!message.reply_message || !message.reply_message.txt) {
+      return await message.send(lang.plugins.common.reply_to_message)
+    }
+    await setFilter('pfilter', match, message.reply_message.text, true, message.id)
+    await message.send(lang.plugins.pfilter.add.format(match))
   }
 )
 
@@ -93,7 +91,7 @@ bot(
     type: 'gfilter',
     onlyGroup: true,
   },
-  async (message, match) => {
+  async (message) => {
     const filters = await getFilter('gfilter', message.id)
     for (const { pattern, text } of filters) {
       const regexPattern = new RegExp(`(?:^|\\W)${pattern}(?:$|\\W)`, 'i')
@@ -112,7 +110,7 @@ bot(
     fromMe: false,
     type: 'pfilter',
   },
-  async (message, match) => {
+  async (message) => {
     if (message.isGroup) return
     const filters = await getFilter('pfilter', message.id)
     for (const { pattern, text } of filters) {

@@ -1,4 +1,4 @@
-const { bot, newVote, participateInVote, sleep } = require('../lib/')
+const { bot, newVote, participateInVote, sleep, lang } = require('../lib/')
 
 bot({ on: 'text', fromMe: false, type: 'vote' }, async (message, match) => {
   const msg = await participateInVote(message)
@@ -8,7 +8,7 @@ bot({ on: 'text', fromMe: false, type: 'vote' }, async (message, match) => {
 bot(
   {
     pattern: 'vote ?(.*)',
-    desc: 'vote in whatsapp',
+    desc: lang.plugins.vote.desc,
     type: 'group',
   },
   async (message, match) => {

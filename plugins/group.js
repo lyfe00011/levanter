@@ -7,28 +7,27 @@ const {
   formatTime,
   parsedJid,
   getCommon,
-  numToJid,
-  // genButtonMessage,
+  lang,
 } = require('../lib/')
 
 bot(
   {
     pattern: 'kick ?(.*)',
-    desc: 'Remove members from Group.',
+    desc: lang.plugins.kick.desc,
     type: 'group',
     onlyGroup: true,
   },
   async (message, match) => {
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(`_I'm not admin._`)
+    if (!isImAdmin) return await message.send(lang.plugins.kick.not_admin)
     let user = message.mention[0] || message.reply_message.jid
-    if (!user && match != 'all') return await message.send(`_Give me a user_`)
+    if (!user && match != 'all') return await message.send(lang.plugins.kick.mention_user)
     const isUserAdmin = match != 'all' && (await isAdmin(participants, user))
-    if (isUserAdmin) return await message.send(`_User is admin._`)
+    if (isUserAdmin) return await message.send(lang.plugins.kick.admin)
     if (match == 'all') {
       user = participants.filter((member) => !member.admin == true).map(({ id }) => id)
-      await message.send(`_kicking everyone(${user.length})_\n*Restart bot if u wanna stop.*`)
+      await message.send(lang.plugins.kick.kicking_all.format(user.length))
       await sleep(10 * 1000)
     }
     await message.Kick(user)
@@ -42,37 +41,21 @@ bot(
 bot(
   {
     pattern: 'add ?(.*)',
-    desc: 'To add members',
+    desc: lang.plugins.add.desc,
     type: 'group',
     onlyGroup: true,
   },
   async (message, match) => {
-    await message.send('> dont add those not in contacts, chances of a ban is high.')
+    await message.send(lang.plugins.add.warning)
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(`_I'm not admin._`)
+    if (!isImAdmin) return await message.send(lang.plugins.add.not_admin)
     match = match || message.reply_message.jid
-    if (!match) return await message.send('Example : add 91987654321')
-    // if (!match.startsWith('@@')) {
-    // 	match = jidToNum(match)
-    // 	const button = await genButtonMessage(
-    // 		[
-    // 			{ id: `@@`, text: 'NO' },
-    // 			{ id: `add @@${match}`, text: 'YES' },
-    // 		],
-    // 		`Your Number maybe banned, Do you want add @${match}`,
-    // 		''
-    // 	)
-    // 	return await message.send(
-    // 		button,
-    // 		{ contextInfo: { mentionedJid: [numToJid(match)] } },
-    // 		'button'
-    // 	)
-    // }
+    if (!match) return await message.send(lang.plugins.add.invalid_number)
     await sleep(3000)
     match = jidToNum(match)
     const res = await message.Add(match)
-    if (res == '403') return await message.send('_Failed, Invite sent_')
+    if (res == '403') return await message.send(lang.plugins.add.failed)
     else if (res && res != '200') return await message.send(res, { quoted: message.data })
   }
 )
@@ -80,18 +63,18 @@ bot(
 bot(
   {
     pattern: 'promote ?(.*)',
-    desc: 'Give admin role.',
+    desc: lang.plugins.promote.desc,
     type: 'group',
     onlyGroup: true,
   },
-  async (message, match) => {
+  async (message) => {
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(`_I'm not admin._`)
+    if (!isImAdmin) return await message.send(lang.plugins.promote.not_admin)
     const user = message.mention[0] || message.reply_message.jid
-    if (!user) return await message.send(`_Give me a user._`)
+    if (!user) return await message.send(lang.plugins.promote.mention_user)
     const isUserAdmin = await isAdmin(participants, user)
-    if (isUserAdmin) return await message.send(`_User is already admin._`)
+    if (isUserAdmin) return await message.send(lang.plugins.promote.already_admin)
     return await message.Promote(user)
   }
 )
@@ -99,18 +82,18 @@ bot(
 bot(
   {
     pattern: 'demote ?(.*)',
-    desc: 'Remove admin role.',
+    desc: lang.plugins.demote.desc,
     type: 'group',
     onlyGroup: true,
   },
-  async (message, match) => {
+  async (message) => {
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(`_I'm not admin._`)
+    if (!isImAdmin) return await message.send(lang.plugins.demote.not_admin)
     const user = message.mention[0] || message.reply_message.jid
-    if (!user) return await message.send(`_Give me a user._`)
+    if (!user) return await message.send(lang.plugins.demote.mention_user)
     const isUserAdmin = await isAdmin(participants, user)
-    if (!isUserAdmin) return await message.send(`_User is not an admin._`)
+    if (!isUserAdmin) return await message.send(lang.plugins.demote.not_admin_user)
     return await message.Demote(user)
   }
 )
@@ -118,32 +101,34 @@ bot(
 bot(
   {
     pattern: 'invite ?(.*)',
-    desc: 'Get Group invite',
+    desc: lang.plugins.invite.desc,
     type: 'group',
     onlyGroup: true,
   },
-  async (message, match) => {
+  async (message) => {
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(`_I'm not admin._`)
-    return await message.send(await message.inviteCode(message.jid))
+    if (!isImAdmin) return await message.send(lang.plugins.invite.not_admin)
+    return await message.send(
+      lang.plugins.invite.success.format(await message.inviteCode(message.jid))
+    )
   }
 )
 
 bot(
   {
     pattern: 'mute ?(.*)',
-    desc: 'Makes Groups Admins Only.',
+    desc: lang.plugins.mute.desc,
     type: 'group',
     onlyGroup: true,
   },
   async (message, match) => {
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(`_I'm not admin._`)
+    if (!isImAdmin) return await message.send(lang.plugins.mute.not_admin)
     if (!match || isNaN(match)) return await message.GroupSettingsChange(message.jid, true)
     await message.GroupSettingsChange(message.jid, true)
-    await message.send(`_Muted for ${match} min._`)
+    await message.send(lang.plugins.mute.mute.format(match))
     await sleep(1000 * 60 * match)
     return await message.GroupSettingsChange(message.jid, false)
   }
@@ -152,14 +137,14 @@ bot(
 bot(
   {
     pattern: 'unmute ?(.*)',
-    desc: 'Makes Group All participants can send Message.',
+    desc: lang.plugins.unmute.desc,
     type: 'group',
     onlyGroup: true,
   },
-  async (message, match) => {
+  async (message) => {
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(`_I'm not admin._`)
+    if (!isImAdmin) return await message.send(lang.plugins.unmute.not_admin)
     return await message.GroupSettingsChange(message.jid, false)
   }
 )
@@ -168,19 +153,19 @@ bot(
   {
     pattern: 'join ?(.*)',
     type: 'group',
-    desc: 'Join invite link.',
+    desc: lang.plugins.join.desc,
   },
   async (message, match) => {
     match = match || message.reply_message.text
-    if (!match) return await message.send(`_Give me a Group invite link._`)
+    if (!match) return await message.send(lang.plugins.join.invalid_link)
     const wa = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/
     const [_, code] = match.match(wa) || []
-    if (!code) return await message.send(`_Give me a Group invite link._`)
+    if (!code) return await message.send(lang.plugins.join.invalid_link)
     const res = await message.infoInvite(code)
-    if (res.size > 1024) return await message.send('*Group full!*')
+    if (res.size > 1024) return await message.send(lang.plugins.join.group_full)
     const join = await message.acceptInvite(code)
-    if (!join) return await message.send(`_Join Request Sent_`)
-    return await message.send(`_Joined_`)
+    if (!join) return await message.send(lang.plugins.join.request_sent)
+    return await message.send(lang.plugins.join.success)
   }
 )
 
@@ -189,12 +174,12 @@ bot(
     pattern: 'revoke',
     onlyGroup: true,
     type: 'group',
-    desc: 'Revoke Group invite link.',
+    desc: lang.plugins.revoke.desc,
   },
   async (message, match) => {
     const participants = await message.groupMetadata(message.jid)
     const im = await isAdmin(participants, message.client.user.jid)
-    if (!im) return await message.send(`_I'm not admin._`)
+    if (!im) return await message.send(lang.plugins.revoke.not_admin)
     await message.revokeInvite(message.jid)
   }
 )
@@ -203,21 +188,23 @@ bot(
   {
     pattern: 'ginfo ?(.*)',
     type: 'group',
-    desc: 'Shows group invite info',
+    desc: lang.plugins.group_info.desc,
   },
   async (message, match) => {
     match = match || message.reply_message.text
     if (!match) return await message.send('*Example : info group_invte_link*')
     const linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
     const [_, code] = match.match(linkRegex) || []
-    if (!code) return await message.send('_Invalid invite link_')
+    if (!code) return await message.send(lang.plugins.group_info.invalid_link)
     const res = await message.infoInvite(code)
-    const caption = `*Name :* ${res.subject}
-*Jid :* ${res.id}@g.us
-*Owner :* ${jidToNum(res.creator)}
-*Members :* ${res.size}
-*Created :* ${formatTime(res.creation)}
-*Desc :* ${res.desc}`
+    const caption = lang.plugins.group_info.details.format(
+      res.subject,
+      res.id,
+      jidToNum(res.creator),
+      res.size,
+      res.creation,
+      res.desc
+    )
     if (res.url) return await message.sendFromUrl(res.url, { caption })
     return await message.send(caption)
   }
@@ -228,7 +215,7 @@ bot(
     pattern: 'common ?(.*)',
     onlyGroup: true,
     type: 'group',
-    desc: 'Show or kick common memebers in two groups.',
+    desc: lang.plugins.common_members.desc,
   },
   async (message, match) => {
     const example = `*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.`
@@ -249,7 +236,7 @@ bot(
     }
     if (Object.keys(metadata).length < 2) return await message.send(example)
     const common = getCommon(Object.values(metadata), isAny)
-    if (!common.length) return await message.send(`_Zero common members_`)
+    if (!common.length) return await message.send(lang.plugins.common_members.found)
     if (kickFromAll) {
       let gids = jids
       if (!anySkip) gids = jids.filter((id) => !toSkip.includes(id))
@@ -272,7 +259,7 @@ bot(
     if (kick) {
       const participants = await message.groupMetadata(message.jid)
       const im = await isAdmin(participants, message.client.user.jid)
-      if (!im) return await message.send(`_I'm not admin._`)
+      if (!im) return await message.send(lang.plugins.kick.not_admin)
       return await message.Kick(common)
     }
     let msg = ''

@@ -1,4 +1,4 @@
-const { bot, summary, setBudget, delBudget, isValidDate } = require('../lib/index')
+const { bot, summary, setBudget, delBudget, isValidDate } = require('../lib')
 
 bot(
   {

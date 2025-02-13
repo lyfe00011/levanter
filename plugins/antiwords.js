@@ -1,53 +1,32 @@
-const {
-  bot,
-  setWord,
-  getWord,
-  // genButtonMessage
-} = require('../lib')
+const { bot, setWord, getWord, lang } = require('../lib')
 
 const actions = ['null', 'warn', 'kick']
 
 bot(
   {
     pattern: 'antiword ?(.*)',
-    desc: 'filter the group chat',
+    desc: lang.plugins.antiword.desc,
     onlyGroup: true,
     type: 'group',
   },
   async (message, match) => {
-    if (!match || (match != 'on' && match != 'off' && !match.startsWith('action'))) {
-      const { enabled, action } = await getWord(message.jid, message.id)
-      return await message.send(
-        `_Antiword is ${
-          enabled ? 'on' : 'off'
-        } (${action})_\n*Example :*\nantiword action/(kick|warn|null)\nantiword on | off\nsetvar ANTIWORDS:word1,word2`
-      )
-      // const buttons = actions
-      // 	.filter((e) => e != action)
-      // 	.map((button) => ({
-      // 		text: button,
-      // 		id: `antiword action/${button}`,
-      // 	}))
-      // buttons.push({
-      // 	text: enabled ? 'OFF' : 'ON',
-      // 	id: `antiword ${enabled ? 'off' : 'on'}`,
-      // })
-      // return await message.send(
-      // 	await genButtonMessage(
-      // 		buttons,
-      // 		'AntiWord\nExample : antiword on/off\nantiword action/null or kick or warn\nsetvar ANTIWORDS:word1,word2,...'
-      // 	),
-      // 	{},
-      // 	'button'
-      // )
+    const { enabled } = await getWord(message.jid, message.id)
+
+    if (!match || (!['on', 'off'].includes(match) && !match.startsWith('action/'))) {
+      return message.send(lang.plugins.antiword.example.format(enabled ? 'on' : 'off'))
     }
+
     if (match.startsWith('action/')) {
-      const action = match.replace('action/', '')
-      if (!actions.includes(action)) return await message.send(`${action} _is a invalid action_`)
-      await setWord(message.jid, action, message.id)
-      return await message.send(`_antiword action updated as ${action}_`)
+      const newAction = match.replace('action/', '')
+      if (!actions.includes(newAction)) return message.send(lang.plugins.antilink.action_invalid)
+
+      await setWord(message.jid, newAction, message.id)
+      return message.send(lang.plugins.antiword.action_update.format(newAction))
     }
-    await setWord(message.jid, match == 'on', message.id)
-    await message.send(`_AntiWord ${match == 'on' ? 'activated' : 'deactivated.'}_`)
+
+    await setWord(message.jid, match === 'on', message.id)
+    return message.send(
+      lang.plugins.antiword.status.format(match === 'on' ? 'activated' : 'deactivated')
+    )
   }
 )

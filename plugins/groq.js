@@ -1,16 +1,16 @@
-const { bot, groqResponse } = require('../lib')
+const { bot, groqResponse, lang } = require('../lib')
 
 bot(
   {
     pattern: 'groq ?(.*)',
-    desc: 'groq ai',
+    desc: lang.plugins.groq.desc,
     type: 'AI',
   },
   async (message, match) => {
-    if (!match)
-      return await message.send(
-        '*Example :* groq Hi\n\nYou can set GROQ_API_KEY, GROQ_MODEL, and GROQ_SYSTEM_MSG, which are optional.\nhttps://console.groq.com/keys'
-      )
+    if (!match) {
+      return await message.send(lang.plugins.groq.example)
+    }
+
     const res = await groqResponse(match)
     await message.send(res, { quoted: message.data })
   }
