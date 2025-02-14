@@ -19,7 +19,7 @@
     "plugin_installed": "[{0}] Instalado {1}",
     "plugins_installed": "[{0}] Plugins Instalados",
     "plugin_install_error": "[{0}] Error Instalando {1}, Borrando Plugin",
-    "plugin_not_found": "[{0}] Plugin {1} No Encontrado (404), Borrando Plugin"
+    "plugin_not_found": "[{0}] Plugin {1} No Encontrado (404), Borrando Plugin",
 	"group_cmd": "Este Comando solo se puede utilizar en Grupos."
   },
   "plugins": {
