@@ -19,7 +19,8 @@
     "plugin_installed": "[{0}] Installed {1}",
     "plugins_installed": "[{0}] Plugins Installed",
     "plugin_install_error": "[{0}] Error installing {1}, deleting plugin",
-    "plugin_not_found": "[{0}] plugin {1} not found (404), deleting plugin"
+    "plugin_not_found": "[{0}] plugin {1} not found (404), deleting plugin",
+    "group_cmd": "This command is only available in group chats."
   },
   "plugins": {
     "common": {
@@ -706,6 +707,19 @@
       "usage": "Example: video <YouTube URL> (or reply to a message with the URL)",
       "desc": "Download a YouTube video. If a direct URL is provided, the video is downloaded; if a search query is provided, a list of results is generated for selection.",
       "not_found": "No video found for the provided query or URL."
+    },
+    "update": {
+      "usage": "Example: update",
+      "desc": "Check for new updates. Displays available updates or confirms that the bot is up-to-date.",
+      "up_to_date": "Bot is already up-to-date.",
+      "available": "{0} new updates available:\n{1}"
+    },
+    "update_now": {
+      "usage": "Example: update now",
+      "desc": "Update the bot to the latest version.",
+      "up_to_date": "Bot is already up-to-date. No updates available.",
+      "updating": "Updating bot...",
+      "updated": "Bot has been successfully updated!"
     }
   }
 }

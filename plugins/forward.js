@@ -30,6 +30,6 @@ bot(
     if (!message.reply_message) return message.send(lang.plugins.common.reply_to_message)
 
     await forwardOrBroadCast(message.participant, message)
-    return message.send(lang.plugins.save.save)
+    // return message.send(lang.plugins.save.save)
   }
 )

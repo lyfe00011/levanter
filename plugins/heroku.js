@@ -1,12 +1,6 @@
 const got = require('got')
 const Heroku = require('heroku-client')
-const {
-  secondsToHms,
-  isUpdate,
-  updateNow,
-  bot,
-  // genButtonMessage,
-} = require('../lib/')
+const { secondsToHms, isUpdate, updateNow, bot, lang } = require('../lib/')
 const Config = require('../config')
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY })
 const baseURI = '/apps/' + Config.HEROKU_APP_NAME
@@ -89,37 +83,28 @@ Remaning    : ${secondsToHms(remaining)}`
 bot(
   {
     pattern: 'update$',
-    desc: 'Check new updates.',
-    type: 'heroku',
+    desc: lang.plugins.update.desc,
+    type: 'bot',
   },
-  async (message, match) => {
+  async (message) => {
     const update = await isUpdate()
-    if (!update.length) return await message.send('*Bot is up-to-date.*')
-    await message.send(`${update.length} updates\n\n${update.join('\n').trim()}`)
-    // return await message.send(
-    // 	await genButtonMessage(
-    // 		[{ id: 'update now', text: 'UPDATE NOW' }],
-    // 		`*Updates*\n${update.join('\n').trim()}`,
-    // 		`${update.length} updates`
-    // 	),
-    // 	{},
-    // 	'button'
-    // )
+    if (!update.length) return await message.send(lang.plugins.update.up_to_date)
+    await message.send(lang.plugins.update.available.format(update.length, update.join('\n')))
   }
 )
 
 bot(
   {
     pattern: 'update now$',
-    desc: 'To-Up-Date bot.',
-    type: 'heroku',
+    desc: lang.plugins.update_now.desc,
+    type: 'bot',
   },
-  async (message, match) => {
+  async (message) => {
     const isupdate = await isUpdate()
-    if (!isupdate.length) return await message.send('*Bot is up-to-date.*\n*Nothing to Update.*')
-    await message.send('_Updating..._')
+    if (!isupdate.length) return await message.send(lang.plugins.update_now.up_to_date)
+    await message.send(lang.plugins.update_now.updating)
     const e = await updateNow()
     if (e) return await message.send(e)
-    return await message.send('_Updated_')
+    return await message.send(lang.plugins.update_now.updated)
   }
 )
