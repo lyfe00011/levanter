@@ -27,7 +27,7 @@
       "reply_to_message": "Reply to a message",
       "not_admin": "I'm not admin.",
       "reply_to_image": "Reply to a image",
-      "update": "_Updated_"
+      "update": "_Settings updated successfully! Your preferences have been saved and are now active._"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Time : {2}\n│ Day : {3}\n│ Date : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
@@ -342,7 +342,7 @@
       "usage": "Reply with both audio and video to merge them.",
       "desc": "Merge audio and video files into one.",
       "audio_add": "_Audio added!_",
-      "video_add": "_Audio added!_"
+      "video_add": "_Video added!_"
     },
     "black": {
       "usage": "Reply to an audio or video to generate a video with a black background.",
