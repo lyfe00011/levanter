@@ -20,7 +20,7 @@
     "plugins_installed": "[{0}] Plugins Instalados",
     "plugin_install_error": "[{0}] Error Instalando {1}, Borrando Plugin",
     "plugin_not_found": "[{0}] Plugin {1} No Encontrado (404), Borrando Plugin",
-	"group_cmd": "Este Comando solo se puede utilizar en Grupos."
+    "group_cmd": "Este Comando solo se puede utilizar en Grupos."
   },
   "plugins": {
     "common": {
@@ -52,6 +52,7 @@
     "antilink": {
       "desc": "Configurar el Borrado de Links",
       "disable": "_Antilink ya esta Desactivado._",
+      "antilink_notset": "Antilink has not been configured.",
       "status": "Antilink is now *{0}*.",
       "info": "`> Antilink Status: {0}\n*Enlaces Permitidos:* {1}\n *Accion :* {2}",
       "action_invalid": "*La accion especificada no es Valida.*",
@@ -464,7 +465,7 @@
       "desc": "Instala Plugins externos desde un link Gist que contenga el codigo del Plugin o enumere todos los Plugins instalados.",
       "invalid": "Proporcione un link Gist con Codigo Valido o un nombre de Plugin.",
       "not_installed": "No hay ningún Plugin Externo instalado actualmente.",
-      "installed": "Se han Instalado estos Nuevos Comandos: {plugin_names}"
+      "installed": "Se han Instalado estos Nuevos Comandos: {0}"
     },
     "remove": {
       "usage": "> Ejemplo:\b- `remove` <NombrePlugin>\n- `remove all`",

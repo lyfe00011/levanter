@@ -11,7 +11,6 @@ bot(
 
     const [query, apkm] = match.split(',')
     const { result, status } = await apkMirror(query, !!apkm)
-
     if (status > 400) {
       if (!result.length) return message.send(lang.plugins.apk.no_result)
 
@@ -31,19 +30,20 @@ bot(
     }
 
     if (status > 200) {
-      const buttons = result.map(({ title, url }) => ({
-        id: `apk ${status};;${url}`,
-        text: title,
-      }))
-
-      if (buttons.length === 1) {
-        const res = await apkMirror(buttons[0].id.replace('apk ', ''))
-        return message.sendFromUrl(res.result)
+      const button = []
+      for (const apk in result) {
+        button.push({
+          id: `apk ${status};;${result[apk].url}`,
+          text: result[apk].title,
+        })
       }
-
+      if (button.length == 1) {
+        const res = await apkMirror(button[0].id.replace('apk ', ''))
+        return await message.sendFromUrl(res.result)
+      }
       const list = generateList(
-        buttons,
-        'Available Architectures',
+        button,
+        'Available Architectures\n',
         message.jid,
         message.participant,
         message.id

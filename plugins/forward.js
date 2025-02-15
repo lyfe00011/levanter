@@ -16,7 +16,6 @@ bot(
       await forwardOrBroadCast(jid, message)
       await sleep(1234)
     }
-    return message.send(lang.plugins.forward.foward.format(jids.join(', ')))
   }
 )
 
@@ -30,6 +29,5 @@ bot(
     if (!message.reply_message) return message.send(lang.plugins.common.reply_to_message)
 
     await forwardOrBroadCast(message.participant, message)
-    // return message.send(lang.plugins.save.save)
   }
 )

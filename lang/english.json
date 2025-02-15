@@ -52,8 +52,9 @@
     "antilink": {
       "desc": "Enable or configure anti-link",
       "disable": "_Antilink is already disabled._",
+      "antilink_notset": "Antilink has not been configured.",
       "status": "Antilink is now *{0}*.",
-      "info": "`> Antilink Status: {0}\n*Allowed URLs:* {1}\n *Action :* {2}",
+      "info": "> Antilink Status: {0}\n*Allowed URLs:* {1}\n *Action :* {2}",
       "action_invalid": "*Invalid action specified.*",
       "action_update": "Antilink action updated to: *{0}*",
       "update": "> Antilink Updated\n*Allowed:* {0}\n*Not Allowed:* {1}",
@@ -61,7 +62,7 @@
     },
     "antiword": {
       "desc": "Filter specific words in the group chat",
-      "example": "`AntiWord Status: {0}\n> *Usage Examples:*\n- antiword action/<kick | warn | null>* - Set action for violations\n- antiword on | off - Enable/Disable word filtering\n- setvar ANTIWORDS:word1,word2,... - Define blocked words",
+      "example": "AntiWord Status: {0}\n> *Usage Examples:*\n- antiword action/<kick | warn | null>* - Set action for violations\n- antiword on | off - Enable/Disable word filtering\n- setvar ANTIWORDS:word1,word2,... - Define blocked words",
       "action_update": "AntiWord action updated to: *{0}*",
       "status": "AntiWord is now *{0}*."
     },
@@ -464,7 +465,7 @@
       "desc": "Install external plugins by providing a Gist URL containing the plugin code, or list all installed plugins.",
       "invalid": "Please provide a valid plugin URL or plugin name.",
       "not_installed": "No plugins are currently installed.",
-      "installed": "Newly installed plugins: {plugin_names}"
+      "installed": "Newly installed plugins: {0}"
     },
     "remove": {
       "usage": "> Example:\b- remove <plugin_name>\n- remove all",

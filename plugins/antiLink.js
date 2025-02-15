@@ -23,12 +23,11 @@ bot(
     }
 
     if (match === 'info') {
+      if (!antilink) {
+        return message.send(lang.plugins.antilink.antilink_notset)
+      }
       return message.send(
-        lang.plugins.antilink.info.format(
-          status,
-          antilink.allowedUrls.length ? antilink.allowedUrls.join(', ') : 'None',
-          antilink.action
-        )
+        lang.plugins.antilink.info.format(status, antilink.allowedUrls, antilink.action)
       )
     }
 
