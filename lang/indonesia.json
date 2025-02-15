@@ -52,7 +52,7 @@
     "antilink": {
       "desc": "Aktifkan atau konfigurasi anti-link",
       "disable": "_Antilink sudah dinonaktifkan._",
-      "antilink_notset": "Antilink has not been configured.",
+      "antilink_notset": "Antilink belum dikonfigurasi.",
       "status": "Antilink sekarang *{0}*.",
       "info": "`> Status Antilink: {0}\n*URL yang Diizinkan:* {1}\n *Aksi :* {2}",
       "action_invalid": "*Aksi yang dimasukkan tidak valid.*",
