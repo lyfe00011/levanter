@@ -52,6 +52,7 @@
     "antilink": {
       "desc": "Aktifkan atau konfigurasi anti-link",
       "disable": "_Antilink sudah dinonaktifkan._",
+      "antilink_notset": "Antilink has not been configured.",
       "status": "Antilink sekarang *{0}*.",
       "info": "`> Status Antilink: {0}\n*URL yang Diizinkan:* {1}\n *Aksi :* {2}",
       "action_invalid": "*Aksi yang dimasukkan tidak valid.*",
@@ -464,7 +465,7 @@
       "desc": "Instal plugin eksternal dengan memberikan URL Gist yang berisi kode plugin, atau daftar semua plugin yang terinstal.",
       "invalid": "Silakan berikan URL plugin atau nama plugin yang valid.",
       "not_installed": "Tidak ada plugin yang terinstal saat ini.",
-      "installed": "Plugin baru yang terinstal: {plugin_names}"
+      "installed": "Plugin baru yang terinstal: {0}"
     },
     "remove": {
       "usage": "> Contoh:\b- remove <nama_plugin>\n- remove all",
