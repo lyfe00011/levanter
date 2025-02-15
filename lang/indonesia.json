@@ -27,7 +27,7 @@
       "reply_to_message": "Balas ke pesan",
       "not_admin": "Saya bukan admin.",
       "reply_to_image": "Balas ke gambar",
-      "update": "_Diperbarui_"
+      "update": "_Pengaturan berhasil diperbarui! Preferensi Anda telah disimpan dan sekarang aktif._"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ Pengguna : {1}\n│ Waktu : {2}\n│ Hari : {3}\n│ Tanggal : {4}\n│ Versi : {5}\n│ Plugin : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
@@ -342,7 +342,7 @@
       "usage": "Balas dengan audio dan video untuk menggabungkannya.",
       "desc": "Gabungkan file audio dan video menjadi satu.",
       "audio_add": "_Audio ditambahkan!_",
-      "video_add": "_Audio ditambahkan!_"
+      "video_add": "_Video ditambahkan!_"
     },
     "black": {
       "usage": "Balas ke audio atau video untuk menghasilkan video dengan latar belakang hitam.",
