@@ -48,7 +48,7 @@ bot({ on: 'text', fromMe: false, type: 'filterOrLydia' }, async (message) => {
   const filters = await getFilter(message.jid, message.id)
 
   for (const { pattern, text } of filters) {
-    const regexPattern = new RegExp(`\\b${pattern}\\b`, 'i')
+    const regexPattern = new RegExp(`(?:^|\\W)${pattern}(?:$|\\W)`, 'i')
     if (regexPattern.test(message.text)) {
       return message.send(text, { quoted: message.data })
     }
