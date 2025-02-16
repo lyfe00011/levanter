@@ -8,7 +8,7 @@ bot(
   },
   async (message, match) => {
     if (!match) return await message.send(lang.plugins.gstop.example)
-    const isDel = await deleteFilter('gfilter', match)
+    const isDel = await deleteFilter('gfilter', match, message.id)
     if (!isDel) return await message.send(lang.plugins.gstop.not_found.format(match))
     return await message.send(lang.plugins.gstop.delete.format(match))
   }
@@ -38,7 +38,7 @@ bot(
     if (!match) return await message.send(lang.plugins.gfilter.example)
 
     if (match === 'list' && !message.reply_message) {
-      const filters = await getFilter('gfilter')
+      const filters = await getFilter('gfilter', message.id)
       if (!filters.length) return await message.send(lang.plugins.gfilter.example)
 
       let msg = '> *Group Filters:* \n'
@@ -52,7 +52,7 @@ bot(
       return await message.send(lang.plugins.common.reply_to_message)
     }
 
-    await setFilter('gfilter', match, message.reply_message.text, true)
+    await setFilter('gfilter', match, message.reply_message.text, true, message.id)
     await message.send(lang.plugins.gfilter.add.format(match))
   }
 )
@@ -64,7 +64,6 @@ bot(
     type: 'autoReply',
   },
   async (message, match) => {
-    match = match.match(/[\'\"](.*?)[\'\"]/gms)
     if (!match) return await message.send(lang.plugins.pfilter.example)
 
     if (match === 'list' && !message.reply_message) {

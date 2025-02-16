@@ -103,7 +103,7 @@
     },
     "filter": {
       "desc": "Respuestas Automaticas a Palabras en Grupo",
-      "example": "_Sin palabras Agregadas._\n> *Ejemplo:*\n- filter hola (citando un mensaje)\n- filter list (muestra lista de palabras)",
+      "example": "> *Ejemplo:*\n- filter hola (citando un mensaje)\n- filter list (muestra lista de palabras)",
       "list": "> *Palabras Actuales:*\n{0}",
       "filter_add": "✅ *{0}* Palabra Agregada"
     },
@@ -135,12 +135,12 @@
     },
     "gfilter": {
       "desc": "Respuestas Automaticas a Palabras en Grupos",
-      "example": "_No hay Palabras gfilter_\n> *Ejemplo :*\n- `gfilter` Hola (while replying to a text message)\n- `gfilter list` (Muestra Lista Actual gfilters)",
+      "example": "> *Ejemplo :*\n- `gfilter` Hola (while replying to a text message)\n- `gfilter list` (Muestra Lista Actual gfilters)",
       "add": "*{0}* gfilter Añadido"
     },
     "pfilter": {
       "desc": "Respuestas Automaticas a Palabras en TODOS los privados",
-      "example": "_No hay Palabras pfilter_\n> *Ejemplo :*\n- `pfilter` Hola (while replying to a text message)\n- `pfilter list` (Muestra Lista Actual pfilters)",
+      "example": "> *Ejemplo :*\n- `pfilter` Hola (while replying to a text message)\n- `pfilter list` (Muestra Lista Actual pfilters)",
       "add": "*{0}* pfilter Añadido"
     },
     "gpp": {
