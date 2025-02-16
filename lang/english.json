@@ -103,7 +103,7 @@
     },
     "filter": {
       "desc": "Manage filters in groups",
-      "example": "_No filters set._\n> *Example:*\n- filter hi (while replying a text message)\n- filter list (Shows current filters)",
+      "example": "> *Example:*\n- filter hi (while replying a text message)\n- filter list (Shows current filters)",
       "list": "> *Current Filters:*\n{0}",
       "filter_add": "*{0}* filter added"
     },
@@ -135,12 +135,12 @@
     },
     "gfilter": {
       "desc": "Manage global filters in groups",
-      "example": "_Not set any gfilter_\n> *Example :*\n- gfilter hi (while replying to a text message)\n- gfilter list (Shows current gfilters)",
+      "example": "> *Example :*\n- gfilter hi (while replying to a text message)\n- gfilter list (Shows current gfilters)",
       "add": "*{0}* gfilter added"
     },
     "pfilter": {
       "desc": "Manage global filters in personal chats",
-      "example": "_Not set any pfilter_\n> *Example :*\n- pfilter hi (while replying to a text message)\n- pfilter list (Shows current pfilters)",
+      "example": "> *Example :*\n- pfilter hi (while replying to a text message)\n- pfilter list (Shows current pfilters)",
       "add": "*{0}* pfilter added"
     },
     "gpp": {

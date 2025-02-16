@@ -4,7 +4,7 @@ bot(
   {
     pattern: 'stop ?(.*)',
     desc: lang.plugins.stop.desc,
-    type: 'group',
+    type: 'autoReply',
     onlyGroup: true,
   },
   async (message, match) => {
@@ -21,12 +21,12 @@ bot(
   {
     pattern: 'filter ?(.*)',
     desc: lang.plugins.filter.desc,
-    type: 'group',
+    type: 'autoReply',
     onlyGroup: true,
   },
   async (message, match) => {
     if (!match) {
-      if (!filters.length) return message.send(lang.plugins.filter.example)
+      return message.send(lang.plugins.filter.example)
     }
     if (match === 'list' && !message.reply_message) {
       const filters = await getFilter(message.jid, message.id)
@@ -39,7 +39,6 @@ bot(
     if (!message.reply_message || !message.reply_message.txt) {
       return message.send(lang.plugins.common.reply_to_message)
     }
-
     await setFilter(message.jid, match, message.reply_message.text, true, message.id)
     return message.send(lang.plugins.filter.filter_add.format(match, message.reply_message.text))
   }

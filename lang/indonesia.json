@@ -103,7 +103,7 @@
     },
     "filter": {
       "desc": "Kelola filter di grup",
-      "example": "_Tidak ada filter yang diatur._\n> *Contoh:*\n- filter hi (saat membalas pesan teks)\n- filter list (Tampilkan filter saat ini)",
+      "example": "> *Contoh:*\n- filter hi (saat membalas pesan teks)\n- filter list (Tampilkan filter saat ini)",
       "list": "> *Filter Saat Ini:*\n{0}",
       "filter_add": "*{0}* filter ditambahkan"
     },
@@ -135,12 +135,12 @@
     },
     "gfilter": {
       "desc": "Kelola filter global di grup",
-      "example": "_Tidak ada filter global yang diatur_\n> *Contoh :*\n- gfilter hi (saat membalas pesan teks)\n- gfilter list (Tampilkan filter global saat ini)",
+      "example": "> *Contoh :*\n- gfilter hi (saat membalas pesan teks)\n- gfilter list (Tampilkan filter global saat ini)",
       "add": "*{0}* filter global ditambahkan"
     },
     "pfilter": {
       "desc": "Kelola filter global di chat pribadi",
-      "example": "_Tidak ada filter pribadi yang diatur_\n> *Contoh :*\n- pfilter hi (saat membalas pesan teks)\n- pfilter list (Tampilkan filter pribadi saat ini)",
+      "example": "> *Contoh :*\n- pfilter hi (saat membalas pesan teks)\n- pfilter list (Tampilkan filter pribadi saat ini)",
       "add": "*{0}* filter pribadi ditambahkan"
     },
     "gpp": {
