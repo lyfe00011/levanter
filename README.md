@@ -62,14 +62,14 @@ A versatile WhatsApp Bot that supports multiple sessions, allowing you to manage
     echo "SESSION_ID = Session_Id_you_Got_After_Scan_Dont_Add_This_Line_If_You_Can_Scan_From_Terminal_Itself
     PREFIX = .
     STICKER_PACKNAME = LyFE
-    ALWAYS_ONLINE = false
+    ALWAYS_ONLINE = true
     RMBG_KEY = null
     LANGUAG = en
     WARN_LIMIT = 3
     FORCE_LOGOUT = false
     BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
     MAX_UPLOAD = 200
-    REJECT_CALL = false
+    REJECT_CALL = true
     SUDO = 989876543210
     TZ = Asia/Kolkata
     VPS = true
@@ -77,7 +77,7 @@ A versatile WhatsApp Bot that supports multiple sessions, allowing you to manage
     SEND_READ = true
     AJOIN = true
     DISABLE_START_MESSAGE = false
-    PERSONAL_MESSAGE = null" > config.env
+    PERSONAL_MESSAGE = i will be online soon this is his bot" > config.env
     ```
 
 7. **Edit `config.env` Using Nano (if needed):**
