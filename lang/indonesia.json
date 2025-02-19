@@ -384,7 +384,6 @@
       "not_found": "Film tidak ditemukan. Silakan verifikasi judul dan coba lagi.",
       "desc": "Ambil informasi detail film, termasuk plot lengkap, dari API OMDB."
     },
-
     "msgs": {
       "desc": "Tampilkan jumlah pesan grup untuk setiap anggota, termasuk total individu dan durasi terakhir terlihat.",
       "msg_init": "\n*Nomor :* {0}\n*Nama :* {1}\n*Total Pesan :* {2}\n",
@@ -459,7 +458,6 @@
       "not_found": "Tidak ada media yang ditemukan. Silakan periksa URL dan coba lagi.",
       "desc": "Unduh video atau gambar dari Pinterest."
     },
-
     "plugin": {
       "usage": "> Contoh:\n- plugin <URL Gist>\n- plugin list",
       "desc": "Instal plugin eksternal dengan memberikan URL Gist yang berisi kode plugin, atau daftar semua plugin yang terinstal.",
@@ -477,7 +475,6 @@
       "desc": "Mulai ulang instance bot menggunakan PM2.",
       "starting": "Memulai ulang..."
     },
-
     "fullpp": {
       "usage": "Contoh: fullpp (balas ke gambar)",
       "desc": "Atur foto profil ukuran penuh.",
@@ -552,7 +549,6 @@
       "not_found": "Jadwal tidak ditemukan.",
       "deleted": "_Jadwal dihapus._"
     },
-
     "setstatus": {
       "usage": "Contoh: setstatus jid,jid,jid,... ATAU setstatus kontak",
       "desc": "Atur status WhatsApp untuk kontak tertentu atau untuk kontak yang diimpor. Balas ke pesan (teks, gambar, atau video) untuk mengatur status.",
@@ -568,7 +564,6 @@
       "list": "Daftar status yang dijadwalkan:",
       "deleted": "Jadwal dihapus."
     },
-
     "antispam": {
       "usage": "Cara Pakai: antispam on | off",
       "desc": "Aktifkan atau nonaktifkan fitur AntiSpam untuk grup.",
@@ -647,7 +642,6 @@
       "usage": "Contoh: url ATAU url imgur (balas ke gambar atau video)",
       "desc": "Konversi gambar atau video ke URL. Opsional, tentukan parameter (misalnya, 'imgur') untuk mendapatkan URL dari layanan tertentu."
     },
-
     "getvar": {
       "usage": "Contoh: getvar sudo",
       "desc": "Tampilkan nilai variabel. Berikan kunci variabel (case-insensitive) untuk mengambil nilainya.",
@@ -680,7 +674,6 @@
       "vote_deleted": "_Voting dihapus._",
       "voted": "@{0} memilih {1}\n\n${2}"
     },
-
     "warn": {
       "usage": "Contoh: warn @user ATAU warn reset @user. Anda juga bisa membalas pesan pengguna dan ketik 'warn' atau 'warn reset'.",
       "desc": "Peringatkan pengguna di grup chat. Perintah ini meningkatkan jumlah peringatan pengguna. Jika jumlahnya melebihi batas, pengguna akan dikeluarkan dari grup. Gunakan 'warn reset' untuk menghapus peringatan pengguna.",

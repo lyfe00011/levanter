@@ -1,14 +1,12 @@
 const { bot, setVar, lang } = require('../lib/')
 
 async function handleSetting(message, setting, match) {
-  if (match === 'on' || match === 'off') {
-    await setVar(
-      {
-        [setting]: match === 'on' ? 'true' : match === 'off' ? 'false' : match,
-      },
-      message.id
-    )
-  }
+  await setVar(
+    {
+      [setting]: match === 'on' ? 'true' : match === 'off' ? 'false' : match,
+    },
+    message.id
+  )
 }
 
 bot(

@@ -384,7 +384,6 @@
       "not_found": "Película no encontrada. Verifique el título y vuelva a intentarlo.",
       "desc": "Obtenga información detallada de la película, incluida la trama completa. Utiliza la API de OMDB."
     },
-
     "msgs": {
       "desc": "Muestra la cantidad de mensajes enviados por cada cada miembro, tipo de mensaje, ultimo mensaje, ultima vez visto, etc.",
       "msg_init": "\n*Numero :* {0}\n*Nombre :* {1}\n*Total Msgs :* {2}\n",
@@ -459,7 +458,6 @@
       "not_found": "No se ha encontrado Multimedia, Prueba de Nuevo.",
       "desc": "Descarga Multimedia de Pinterest."
     },
-
     "plugin": {
       "usage": "> Ejemplo:\n- `plugin` <Gist URL>\n- `plugin list`",
       "desc": "Instala Plugins externos desde un link Gist que contenga el codigo del Plugin o enumere todos los Plugins instalados.",
@@ -477,7 +475,6 @@
       "desc": "Reinicia la instancia PM2 del Bot.",
       "starting": "Reiniciando..."
     },
-
     "fullpp": {
       "usage": "Ejemplo: `fullpp` (Citando una Imagen)",
       "desc": "Cambia la foto de perfil con Tamaño Total.",
@@ -552,7 +549,6 @@
       "not_found": "Mensaje Automatico no Encontrado.",
       "deleted": "_Mensaje Automatico Eliminado_"
     },
-
     "setstatus": {
       "usage": "Ejemplo: setstatus jid,jid,jid,... O setstatus contact",
       "desc": "Sube un estado para contactos especificos o para contactos importados. Cita un mensaje para subirlo como Estado de WhatsApp.",
@@ -568,7 +564,6 @@
       "list": "Lista de estados programados:",
       "deleted": "🗑 Estado programado borrado."
     },
-
     "antispam": {
       "usage": "Como Utilizar:antispam on | off",
       "desc": "Ajsutar AntiSpam en el Grupo.",
@@ -647,7 +642,6 @@
       "usage": "Ejemplo: `url` O `url imgur` (Cita una Imagen o video)",
       "desc": "Convierte una imagen o un vídeo en una URL. Opcionalmente, especifica un parámetro (Ejemplo:, 'imgur') para obtener la URL de un servicio específico."
     },
-
     "getvar": {
       "usage": "Ejemplo: `getvar` sudo",
       "desc": "Muestra el valor de una variable. Proporciona la clave de la variable (sin distinguir entre mayúsculas y minúsculas) para recuperar su valor.",
@@ -680,7 +674,6 @@
       "vote_deleted": "_El voto ha sido borrado._",
       "voted": "@{0} votó por {1}\n\n${2}"
     },
-
     "warn": {
       "usage": "Ejemplo: Cita o Menciona al Usuario que Recibira una Advertencia. `warn` @user o `warn reset` (para resetear).",
       "desc": "Advertir a un usuario en el chat grupal. Este comando aumenta advertencias de un usuario. Si el numero supera el límite, el usuario será expulsado del grupo.. Use 'warn reset' para Resetear Advertencias.",

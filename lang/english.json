@@ -384,7 +384,6 @@
       "not_found": "Movie not found. Please verify the title and try again.",
       "desc": "Fetch detailed movie information, including the full plot, from the OMDB API."
     },
-
     "msgs": {
       "desc": "Display the group's message count for each member, including individual totals and last seen duration.",
       "msg_init": "\n*Number :* {0}\n*Name :* {1}\n*Total Msgs :* {2}\n",
@@ -459,7 +458,6 @@
       "not_found": "No media found. Please check the URL and try again.",
       "desc": "Download Pinterest videos or images."
     },
-
     "plugin": {
       "usage": "> Example:\n- plugin <Gist URL>\n- plugin list",
       "desc": "Install external plugins by providing a Gist URL containing the plugin code, or list all installed plugins.",
@@ -477,7 +475,6 @@
       "desc": "Restart the bot instance using PM2.",
       "starting": "Restarting..."
     },
-
     "fullpp": {
       "usage": "Example: fullpp (reply to an image)",
       "desc": "Set full-size profile picture.",
@@ -552,7 +549,6 @@
       "not_found": "Schedule not found.",
       "deleted": "_Schedule deleted._"
     },
-
     "setstatus": {
       "usage": "Example: setstatus jid,jid,jid,... OR setstatus contact",
       "desc": "Set a WhatsApp status for specific contacts or for imported contacts. Reply to a message (text, image, or video) to set the status.",
@@ -568,7 +564,6 @@
       "list": "Scheduled status list:",
       "deleted": "Schedule deleted."
     },
-
     "antispam": {
       "usage": "Usage: antispam on | off",
       "desc": "Enable or disable the AntiSpam feature for the group.",
@@ -647,7 +642,6 @@
       "usage": "Example: url OR url imgur (reply to an image or video)",
       "desc": "Convert an image or video to a URL. Optionally, specify a parameter (e.g., 'imgur') to get the URL from a specific service."
     },
-
     "getvar": {
       "usage": "Example: getvar sudo",
       "desc": "Display the value of a variable. Provide the variable key (case-insensitive) to retrieve its value.",
@@ -680,7 +674,6 @@
       "vote_deleted": "_Vote deleted._",
       "voted": "@{0} voted for {1}\n\n${2}"
     },
-
     "warn": {
       "usage": "Example: warn @user OR warn reset @user. You can also reply to a user's message and type 'warn' or 'warn reset'.",
       "desc": "Warn a user in the group chat. This command increases a user's warning count. If the count exceeds the limit, the user will be kicked from the group. Use 'warn reset' to clear a user's warnings.",
