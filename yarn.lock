@@ -4577,10 +4577,10 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-youtubei.js@^12.2.0:
-  version "12.2.0"
-  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-12.2.0.tgz#54f058b5d0892b5c7e35019e2be6a2a7f7ba4447"
-  integrity sha512-G+50qrbJCToMYhu8jbaHiS3Vf+RRul+CcDbz3hEGwHkGPh+zLiWwD6SS+YhYF+2/op4ZU5zDYQJrGqJ+wKh7Gw==
+youtubei.js@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-13.0.0.tgz#f036bc6f5cb9ef8bd73da7e1079a2b70776bb2f7"
+  integrity sha512-b1QkN9bfgphK+5tI4qteSK54kNxmPhoedvMw0jl4uSn+L8gbDbJ4z52amNuYNcOdp4X/SI3JuUb+f5V0DPJ8Vw==
   dependencies:
     "@bufbuild/protobuf" "^2.0.0"
     jintr "^3.2.0"
