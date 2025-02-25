@@ -51,9 +51,11 @@ bot(
     const z = await ope(message.jid, match, message.id)
     if (z === null) return await message.send(lang.plugins.ope.not_found.format(match))
     if (z === 'all') return await message.send(lang.plugins.ope.all_removed)
-    lang.plugins.ope.removed.format(
-      message.isGroup ? message.jid : jidToNum(message.jid),
-      z.map((a) => `- ${a}`).join('\n'),
+    await message.send(
+      lang.plugins.ope.removed.format(
+        message.isGroup ? message.jid : jidToNum(message.jid),
+        z.map((a) => `- ${a}`).join('\n')
+      ),
       { contextInfo: { mentionedJid: [message.jid] } }
     )
   }
