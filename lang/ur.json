@@ -596,7 +596,7 @@
     },
     "tag": {
       "usage": "*Misaal:* _tag all | tag admin | tag notadmin | tag <custom message> (ya kisi message par 'tag' likh kar reply karein)._",
-      "desc": "_Group members ko tag karein apni pasand ke mutabiq. 'all' ka use sabhi members ko mention karne ke liye karein, 'admin' sirf group admins ko mention karega, 'notadmin' non-admin members ko mention karega, ya phir ek custom message bhejne ke liye apni message likhein_",
+      "desc": "_Group members ko tag karein apni pasand ke mutabiq. 'all' ka use sabhi members ko mention karne ke liye karein, 'admin' sirf group admins ko mention karega, 'notadmin' non-admin members ko mention karega, ya phir ek custom message bhejne ke liye apni message likhein_"
     },
     "tictactoe": {
       "usage": "*Misaal:* _tictactoe <opponent_jid> YA tictactoe restart <opponent_jid> YA tictactoe end_",
@@ -676,7 +676,7 @@
     },
     "warn": {
       "usage": "*Misaal:* _warn @user YA warn reset @user. Aap kisi user ke message par reply kar ke bhi 'warn' ya 'warn reset' likh sakte hain._",
-      "desc": "*_Group chat me kisi user ko warn karein. Yeh command user ki warning count ko badhati hai. Agar count limit se zyada ho jaye, to user ko group se nikal diya jayega. 'warn reset' ka use kisi user ki warnings clear karne ke liye karein._"",
+      "desc": "*_Group chat me kisi user ko warn karein. Yeh command user ki warning count ko badhati hai. Agar count limit se zyada ho jaye, to user ko group se nikal diya jayega. 'warn reset' ka use kisi user ki warnings clear karne ke liye karein._",
       "reset_usage": "*Misaal:* _warn reset @user (ya user ke message par reply karke 'warn reset' likhein)._",
       "cannot_remove_admin": "_Main kisi admin ko remove nahi kar sakta._"
     },
