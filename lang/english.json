@@ -7,7 +7,7 @@
     "connecting": "[{0}] Connecting...",
     "connected": "[{0}] Connected {1}",
     "instance_close": "[{0}] Connection closed",
-    "instance_restart": "[{0}] Instance Restarting...`",
+    "instance_restart": "[{0}] Instance Restarting...",
     "reconnect": "[{0}] reconnecting...({1})",
     "reconnect_after": "[{0}] reconnect after 1 minutes",
     "another_login": "[{0}] session logined on another device.",
