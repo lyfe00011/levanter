@@ -230,7 +230,7 @@
     },
     "common_members": {
       "desc": "Show or kick common memebers in two or more groups",
-      "found": "Found 0 common members."
+      "found": "Found {0} common members."
     },
     "insta": {
       "usage": "Ejemplo: `.insta` <Instagram URL>",
