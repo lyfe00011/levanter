@@ -230,7 +230,7 @@
     },
     "common_members": {
       "desc": "Tampilkan atau hapus anggota yang sama di dua grup atau lebih",
-      "found": "Ditemukan 0 anggota yang sama."
+      "found": "Ditemukan {0} anggota yang sama."
     },
     "insta": {
       "usage": "Contoh: insta <URL Instagram>",
