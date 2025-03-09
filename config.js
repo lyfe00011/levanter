@@ -9,7 +9,25 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID ||echo "SESSION_ID = Session_Id_you_Got_After_Scan_Dont_Add_This_Line_If_You_Can_Scan_From_Terminal_Itself
+PREFIX = .
+STICKER_PACKNAME = LyFE
+ALWAYS_ONLINE = yes
+RMBG_KEY = null
+LANGUAG = en
+WARN_LIMIT = 3
+FORCE_LOGOUT = false
+BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
+MAX_UPLOAD = 200
+REJECT_CALL = false
+SUDO = 989876543210
+TZ = Asia/Kolkata
+VPS = true
+AUTO_STATUS_VIEW = true
+SEND_READ = true
+AJOIN = true
+DISABLE_START_MESSAGE = false
+PERSONAL_MESSAGE = null" > config.env '').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
