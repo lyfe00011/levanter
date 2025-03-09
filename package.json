@@ -45,5 +45,8 @@
     "translate-google-api": "^1.0.4",
     "youtubei.js": "^13.1.0"
   },
-  "packageManager": "yarn@1.22.22"
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=20.0.0"
+  }
 }
