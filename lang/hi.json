@@ -1,0 +1,719 @@
+{
+  "extra": {
+    "init_session": "[{0}] Naya session shuru kar raha hoon",
+    "load_session": "[{0}] Session ka status check kar raha hoon",
+    "invalid_session": "[{0}] {1} YE SESSION ID GALAT HAI, FIR SE SCAN KARO!!!",
+    "success_session": "[{0}] Session safalta se verify ho gaya.",
+    "connecting": "[{0}] Connect kar raha hoon...",
+    "connected": "[{0}] Connected {1}",
+    "instance_close": "[{0}] Connection band ho gaya",
+    "instance_restart": "[{0}] Instance restart ho rahi hai...",
+    "reconnect": "[{0}] Dobara connect kar raha hoon...({1})",
+    "reconnect_after": "[{0}] 1 minute baad dobara connect karo",
+    "another_login": "[{0}] Ye session kisi aur device pe login hai.",
+    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *LyFE ne banaya hai, pyaar se ❣* ```-----```",
+    "deleted_message": "           ye message delete ho gaya",
+    "install_external_plugin": "[{0}] Bahari plugins install kar raha hoon...",
+    "installed_external_plugin": "[{0}] Bahari plugins install ho gaye",
+    "plugin_install": "[{0}] Plugins install kar raha hoon...",
+    "plugin_installed": "[{0}] {1} install ho gaya",
+    "plugins_installed": "[{0}] Sab plugins install ho gaye",
+    "plugin_install_error": "[{0}] {1} install karne mein error aaya, plugin delete kar raha hoon",
+    "plugin_not_found": "[{0}] plugin {1} nahi mila (404), plugin delete kar raha hoon",
+    "group_cmd": "Ye command sirf group chats mein kaam karti hai."
+  },
+  "plugins": {
+    "common": {
+      "reply_to_message": "Kisi message ka reply karo",
+      "not_admin": "Mein admin nahi hoon.",
+      "reply_to_image": "Kisi image ka reply karo",
+      "update": "_Settings update ho gaye! Aapki preferences save ho gayi hain aur ab active hain._"
+    },
+    "menu": {
+      "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Time : {2}\n│ Day : {3}\n│ Date : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ User : {1}\n┃❃│ Time : {2}\n┃❃│ Day : {3}\n┃❃│ Date : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+    },
+    "afk": {
+      "example": "> *AFK Ka Istemal:*\n- AFK set karo: *afk [reason]*\n- Example: *afk Mein busy hoon* Last seen #lastseen pehle\n- Message bhejne se AFK status khud hi hat jayega\n- AFK band karo: *afk off*",
+      "not_afk": "Ab tum AFK nahi ho.",
+      "desc": "AFK (Away From Keyboard) status set karo"
+    },
+    "alive": {
+      "default": "Mein zinda hoon\nUptime : #uptime",
+      "desc": "Bot ka alive status message dikhao, aur agar chahe to custom text add karo."
+    },
+    "antifake": {
+      "example": "*Antifake Status:* {0}\n\n> *Istemal Ka Tarika:*\n- *antifake list* - Country codes dekho\n- *antifake !91,1* - Khaas country codes ko allow/notallow karo\n- *antifake on | off* - Antifake ko enable/disable karo",
+      "desc": "Anti-fake number ko enable ya configure karo",
+      "not": "List karne ke liye koi country codes nahi hai.",
+      "status": "Antifake ab *{0}* hai.",
+      "update": "> Antifake Update ho gaya\n*Allowed:* {0}\n*Not Allowed:* {1}"
+    },
+    "antilink": {
+      "desc": "Anti-link ko enable ya configure karo",
+      "disable": "_Antilink pehle se hi band hai._",
+      "antilink_notset": "Antilink configure nahi hui hai.",
+      "status": "Antilink ab *{0}* hai.",
+      "info": "> Antilink Status: {0}\n*Allowed URLs:* {1}\n *Action :* {2}",
+      "action_invalid": "*Galat action diya gaya hai.*",
+      "action_update": "Antilink action update ho gaya: *{0}*",
+      "update": "> Antilink Update ho gaya\n*Allowed:* {0}\n*Not Allowed:* {1}",
+      "example": "Antilink Status: *{0}*\n\n> Istemal Ka Tarika:\n- antilink info - Current settings dekho\n- antilink whatsapp.com - Khaas URLs ko allow karo\n- antilink on | off - Antilink ko enable/disable karo\n- antilink action/<kick | warn | null> - Link ke liye action set karo"
+    },
+    "antiword": {
+      "desc": "Group chat mein khaas words ko filter karo",
+      "example": "AntiWord Status: {0}\n> *Istemal Ka Tarika:*\n- antiword action/<kick | warn | null>* - Violations ke liye action set karo\n- antiword on | off - Word filtering ko enable/disable karo\n- setvar ANTIWORDS:word1,word2,... - Blocked words define karo",
+      "action_update": "AntiWord action update ho gaya: *{0}*",
+      "status": "AntiWord ab *{0}* hai."
+    },
+    "apk": {
+      "desc": "APKMirror se APK download karo",
+      "example": "> *Istemal Ka Tarika:*\n- apk Mixplorer\n- apk whatsapp,apkm (bundle APKs include karo)",
+      "no_result": "_Aapke query ke liye koi result nahi mila._",
+      "apps_list": "Matching Apps ({0})"
+    },
+    "delete": {
+      "desc": "Anti-delete: Deleted messages ko recover karo",
+      "example": "> *Istemal Ka Tarika:*\n- delete p - Deleted messages apne chat/sudo pe bhejo\n- delete g - Deleted messages usi group mein bhejo\n- delete off - Anti-delete band karo\n- delete <jid> - Deleted messages kisi khaas JID pe bhejo",
+      "invalid_jid": "*Error:* _Galat JID_",
+      "dlt_msg_jid": " _Deleted messages is JID pe bheji jayengi: {0}_",
+      "dlt_msg_disable": "Anti-delete band ho gaya.",
+      "dlt_msg_sudo": "_Deleted messages apne chat ya sudo pe bheji jayengi._",
+      "dlt_msg_chat": "_Deleted messages usi chat mein bheji jayengi._"
+    },
+    "dlt": {
+      "desc": "Replied messages ko delete karo"
+    },
+    "fb": {
+      "desc": "Facebook video download karo",
+      "example": "",
+      "quality": "Video quality chuno",
+      "invalid": "*Error:* _Diye gaye URL ke liye koi video nahi mila._"
+    },
+    "fancy": {
+      "desc": "Diye gaye text se fancy text banayo",
+      "example": "> *Istemal Ka Tarika:*\nfancy <text>\nfancy <font_number> (kisi message ka reply karte hue)\n\n*Example:*\n- fancy Hello\n- fancy 7 (kisi message ka reply karte hue)",
+      "invalid": "*Galat Font Number!*\n1-47 ke beech mein number dalo."
+    },
+    "stop": {
+      "desc": "Chat ke filters ko delete karo",
+      "example": "> *Istemal Ka Tarika:*\n- stop <filter>\n- stop hi",
+      "delete": "{0} delete ho gaya",
+      "not_found": "_{0} filters mein nahi mila._"
+    },
+    "filter": {
+      "desc": "Group mein filters manage karo",
+      "example": "> *Example:*\n- filter hi (kisi text message ka reply karte hue)\n- filter list (Current filters dikhao)",
+      "list": "> *Current Filters:*\n{0}",
+      "filter_add": "*{0}* filter add ho gaya"
+    },
+    "forward": {
+      "desc": "Replied message ko specified JID(s) pe forward karo",
+      "foward": "Message forward ho gaya: {0}",
+      "example": "Galat JID!\n> *Istemal Ka Tarika:*\n- forward <jid>\n- forward 1234567890@s.whatsapp.net"
+    },
+    "save": {
+      "desc": "Replied message ko apne tak forward karo",
+      "save": "Message save ho gaya!"
+    },
+    "gemini": {
+      "desc": "Google Gemini AI - Kuch bhi poocho!",
+      "example": "> *Example :*\n- gemini hi\n- gemini ye picture mein kya hai (kisi image ka reply karte hue)",
+      "Key": "> Gemini API Key nahi mila!\nYahan se lein: https://aistudio.google.com/app/apikey\n\n*Set karo using:*\nsetvar GEMINI_API_KEY = your_api_key"
+    },
+    "gstop": {
+      "desc": "Sabhi groups ke gfilters ko delete karo",
+      "example": "> *Istemal Ka Tarika:*\n- gstop <filter>\n- gstop hi",
+      "delete": "{0} delete ho gaya",
+      "not_found": "_{0} gfilters mein nahi mila._"
+    },
+    "pstop": {
+      "desc": "Sabhi groups ke pfilter ko delete karo",
+      "example": "> *Istemal Ka Tarika:*\n- pstop <filter>\n- pstop hi",
+      "delete": "{0} delete ho gaya",
+      "not_found": "_{0} pfilter mein nahi mila._"
+    },
+    "gfilter": {
+      "desc": "Groups mein global filters manage karo",
+      "example": "> *Example :*\n- gfilter hi (kisi text message ka reply karte hue)\n- gfilter list (Current gfilters dikhao)",
+      "add": "*{0}* gfilter add ho gaya"
+    },
+    "pfilter": {
+      "desc": "Personal chats mein global filters manage karo",
+      "example": "> *Example :*\n- pfilter hi (kisi text message ka reply karte hue)\n- pfilter list (Current pfilters dikhao)",
+      "add": "*{0}* pfilter add ho gaya"
+    },
+    "gpp": {
+      "desc": "Group ka icon change karo",
+      "update": "_Group icon update ho gaya_"
+    },
+    "greet": {
+      "setdesc": "Personalized greeting message set karo",
+      "setexample": "> *Example:* setgreet Hi, ye ek bot hai. Mera boss jald reply karega.",
+      "setupdate": "_Greeting message update ho gaya._",
+      "getdesc": "Personalized greeting message retrieve karo",
+      "notsetgreet": "> Koi greeting message set nahi hui hai.",
+      "deldesc": "Personalized greeting message delete karo",
+      "delupdate": "Greeting message delete ho gaya."
+    },
+    "greetings": {
+      "welcome_desc": "New members ko welcome message bhejo",
+      "welcome_example": "Welcome abhi {0} hai\n\nZyada details ke liye, yahan jayein: https://levanter-plugins.vercel.app/faq",
+      "welcome_enable": "_Welcome ab enable ho gaya_",
+      "welcome_disable": "_Welcome ab disable ho gaya_",
+      "welcome_delete": "_Welcome message delete ho gaya_",
+      "goodbye_desc": "Members ko goodbye message bhejo",
+      "goodbye_example": "Goodbye abhi {0} hai\n\nZyada details ke liye, yahan jayein: https://levanter-plugins.vercel.app/faq",
+      "goodbye_enable": "_Goodbye ab enable ho gaya_",
+      "goodbye_disable": "_Goodbye ab disable ho gaya_",
+      "goodbye_delete": "_Goodbye message delete ho gaya_"
+    },
+    "groq": {
+      "example": "*Example:* groq Hi\n\nAap optionally ye environment variables set kar sakte hain:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nZyada details ke liye, yahan jayein: https://console.groq.com/keys",
+      "desc": "GROQ AI ke saath interact karo"
+    },
+    "kick": {
+      "desc": "Group se members ko remove karo.",
+      "not_admin": "Mein admin nahi hoon, isliye members ko remove nahi kar sakta.",
+      "mention_user": "Kisi user ko mention karo ya unke message ka reply karo.",
+      "admin": "Specified user ek admin hai, isliye unhe remove nahi kiya ja sakta.",
+      "kicking_all": "Sabhi non-admin members ko kick kiya ja raha hai... ({0} members). Bot ko restart karo agar aap rukna chahte hain."
+    },
+    "add": {
+      "desc": "Group mein members add karo",
+      "warning": "> Un numbers ko add karne se bach jo contacts mein save nahi hain; isse ban hone ka risk badh sakta hai.",
+      "not_admin": "Mein admin nahi hoon, isliye members add nahi kar sakta.",
+      "invalid_number": "Ek valid phone number provide karo. Example: add 91987654321",
+      "failed": "Add karne mein asafal. Ek invite bhej diya gaya hai."
+    },
+    "promote": {
+      "desc": "Admin role do",
+      "not_admin": "Mein admin nahi hoon, isliye roles modify nahi kar sakta.",
+      "mention_user": "Kisi user ko mention karo ya unke message ka reply karo.",
+      "already_admin": "User pehle se hi admin hai."
+    },
+    "demote": {
+      "desc": "Admin role hatao",
+      "not_admin": "Mein admin nahi hoon, isliye roles modify nahi kar sakta.",
+      "mention_user": "Kisi user ko mention karo ya unke message ka reply karo.",
+      "not_admin_user": "User admin nahi hai."
+    },
+    "invite": {
+      "desc": "Group ka invite link lo",
+      "not_admin": "Mein admin nahi hoon, isliye invite link generate nahi kar sakta.",
+      "success": "Yeh raha group ka invite link:\n{0}"
+    },
+    "mute": {
+      "desc": "Group ko admins only banata hai",
+      "not_admin": "Mein admin nahi hoon, isliye group settings change nahi kar sakta.",
+      "mute": "{0} minutes ke liye mute ho gaya."
+    },
+    "unmute": {
+      "desc": "Group main sare participants message bhej sakte hain",
+      "not_admin": "Mein admin nahi hoon, isliye group settings change nahi kar sakta."
+    },
+    "join": {
+      "desc": "Invite link se group join karo",
+      "invalid_link": "Ek valid WhatsApp group invite link provide karo.",
+      "group_full": "Group full hai aur new members accept nahi kar sakta.",
+      "success": "Group mein successfully join ho gaya.",
+      "request_sent": "Join request bhej di gayi hai."
+    },
+    "revoke": {
+      "desc": "Group invite link ko cancel karo",
+      "not_admin": "Main admin nahi hoon, isliye invite link cancel nahi kar sakta."
+    },
+    "group_info": {
+      "desc": "Group invite link ki details dikhao",
+      "invalid_link": "Kripya ek valid WhatsApp invite link provide karo.",
+      "details": "*Naam:* {0}\n*Group ID:* {1}@g.us\n*Malik:* {2}\n*Members:* {3}\n*Banaya gaya:* {4}\n*Description:* {5}"
+    },
+    "common_members": {
+      "desc": "Do ya zyada groups mein common members ko dikhao ya hatao",
+      "found": "0 common members mile."
+    },
+    "insta": {
+      "usage": "Example: insta <Instagram URL>",
+      "not_found": "Nahi mila.",
+      "desc": "Instagram posts, reels, aur videos download karo."
+    },
+    "ison": {
+      "usage": "Example: ison <phone number>",
+      "not_exist": "`*WhatsApp par nahi hai* ({0})\n`",
+      "exist": "\n*WhatsApp par hai* ({0})\n",
+      "privacy": "*Privacy settings on hai* ({0})\n",
+      "desc": "Check karo ki phone number WhatsApp par registered hai ya nahi."
+    },
+    "lydia": {
+      "usage": "Usage: lydia on | off\nKisi specific user ke liye reply ya mention karke activate karo.",
+      "activated": "Lydia activate ho gayi hai.",
+      "deactivated": "Lydia deactivate ho gayi hai.",
+      "note": "Ye sirf reply message se kaam karta hai.",
+      "desc": "Chatbot feature ko enable ya disable karo."
+    },
+    "rotate": {
+      "usage": "Example: rotate right|left|flip (video ko reply karo).",
+      "not_found": "Kripya ek video ko reply karo aur sahi rotation direction specify karo (right, left, ya flip).",
+      "desc": "Video ko right, left, ya flip karo.",
+      "convert": "_Convert ho raha hai..._"
+    },
+    "mp3": {
+      "usage": "Video ya audio ko reply karke MP3 mein convert karo.",
+      "not_found": "Kripya video ya audio message ko reply karo.",
+      "desc": "Video ko audio mein ya audio clip ko voice note mein convert karo."
+    },
+    "photo": {
+      "usage": "Photo sticker ko reply karke image mein convert karo.",
+      "desc": "Sticker ko image mein convert karo."
+    },
+    "reverse": {
+      "usage": "Video ya audio ko reply karke uska playback reverse karo.",
+      "not_found": "Kripya video ya audio message ko reply karo.",
+      "desc": "Video ya audio clip ka playback reverse karo."
+    },
+    "cut": {
+      "usage": "Example: cut 0;30 (start;duration) (video ya audio ko reply karo).",
+      "not_found": "Kripya video ya audio ko reply karo aur valid start aur duration values provide karo (e.g., 10;30).",
+      "desc": "Audio ya video file ka ek segment cut karo."
+    },
+    "trim": {
+      "usage": "Example: trim 10;30 (video ko reply karo).",
+      "not_found": "Kripya video ko reply karo aur valid start aur duration values provide karo (e.g., 60;30).",
+      "desc": "Video ko specified start aur duration ke beech mein trim karo."
+    },
+    "page": {
+      "usage": "Example: page 1 (image ko reply karo).",
+      "not_found": "Kripya image ko reply karo aur page number indicate karne ke liye ek numeric caption provide karo.",
+      "desc": "Image ko PDF document mein ek page ke roop mein add karo.",
+      "add": "Page {0} add ho gaya!"
+    },
+    "pdf": {
+      "usage": "Example: pdf note (PDF ke liye ek title provide karo).",
+      "not_found": "Kripya PDF document ke liye ek title provide karo.",
+      "desc": "Images ko PDF document mein convert karo."
+    },
+    "merge": {
+      "usage": "Example: merge 1 (video ko reply karke ek order number provide karo).",
+      "not_found": "Kripya video ko reply karo aur ek valid order number provide karo.",
+      "desc": "Multiple videos ko ek saath merge karo.",
+      "merge": "_ {0} videos ko merge kiya ja raha hai_",
+      "add": "_Video {0} add ho gaya_"
+    },
+    "compress": {
+      "usage": "Video ko reply karke compress karo.",
+      "desc": "Video file ka size kam karo."
+    },
+    "bass": {
+      "usage": "Example: bass 10 (audio ya video ko reply karo).",
+      "desc": "Audio file ke bass levels ko change karo."
+    },
+    "treble": {
+      "usage": "Example: treble 10 (audio ya video ko reply karo).",
+      "desc": "Audio file ke treble levels ko change karo."
+    },
+    "histo": {
+      "usage": "Audio ya video ko reply karke histogram video generate karo.",
+      "desc": "Audio ko visual video histogram mein convert karo."
+    },
+    "vector": {
+      "usage": "Audio ya video ko reply karke vector visualization video banayo.",
+      "desc": "Audio ko vector visualization video mein convert karo."
+    },
+    "crop": {
+      "usage": "Example: crop 512,512,0,512 (video ko reply karo).",
+      "not_found": "Kripya video ko reply karo aur crop dimensions ko sahi format mein provide karo: out_w,out_h,x,y.",
+      "desc": "Video ko specified dimensions mein crop karo.",
+      "xcrop": "Video width: *{0}*, height: *{1}*\nOutput size beech mein choose karo."
+    },
+    "low": {
+      "usage": "Audio ya video ko reply karke pitch ko low karo.",
+      "desc": "Audio pitch ko low tone mein change karo."
+    },
+    "pitch": {
+      "usage": "Audio ya video ko reply karke pitch adjust karo.",
+      "not_found": "Kripya kisi audio ya video message ko reply karein.",
+      "desc": "Audio file ki pitch adjust karo."
+    },
+    "avec": {
+      "usage": "Audio ya video ko reply karke use video format mein convert karo.",
+      "not_found": "Kripya kisi audio ya video message ko reply karein.",
+      "desc": "Audio clip ko video mein convert karo."
+    },
+    "avm": {
+      "usage": "Audio aur video dono ko reply karke merge karo.",
+      "desc": "Audio aur video files ko ek saath merge karo.",
+      "audio_add": "_Audio add ho gaya!_",
+      "video_add": "_Video add ho gaya!_"
+    },
+    "black": {
+      "usage": "Audio ya video ko reply karke black background ke saath video banaye.",
+      "desc": "Audio clip ko black background ke saath video mein convert karo."
+    },
+    "mediafire": {
+      "usage": "Example: mediafire <Mediafire URL>",
+      "not_found": "File nahi mili. Kripya URL check karke phir se try karein.",
+      "desc": "Mediafire se file download karo."
+    },
+    "mention": {
+      "usage": "Example: mention on | off | get\n(Kisi message ko reply karke specific user ko target karo.)",
+      "desc": "Automated replies ke liye mention feature ko configure aur manage karo.",
+      "not_activated": "Reply-to mention activate nahi hai.",
+      "current_status": "Mention {0} hai. Details ke liye, yahaan jaayein: https://levanter-plugins.vercel.app/faq",
+      "activated": "Reply-to mention activate ho gaya.",
+      "deactivated": "Reply-to mention deactivate ho gaya.",
+      "updated": "Mention settings update ho gayi."
+    },
+    "status": {
+      "usage": "Usage: status on | off | no-dl | except-view <jid,...> | only-view <jid,...>",
+      "desc": "WhatsApp statuses ko automatically manage karo."
+    },
+    "call": {
+      "usage": "Usage: call on | off",
+      "desc": "Aane waale calls ko automatically reject karo."
+    },
+    "read": {
+      "usage": "Usage: read on | off",
+      "desc": "Aane waale messages ko automatically read karo ya band karo."
+    },
+    "online": {
+      "usage": "Usage: online on | off",
+      "desc": "Apne account ko hamesha online rakho."
+    },
+    "movie": {
+      "usage": "Example: movie <movie title>",
+      "not_found": "Movie nahi mili. Kripya title check karke phir se try karein.",
+      "desc": "OMDB API se movie ki detailed information fetch karo, including full plot."
+    },
+    "msgs": {
+      "desc": "Group ke har member ka message count display karo, including individual totals aur last seen duration.",
+      "msg_init": "\n*Number :* {0}\n*Name :* {1}\n*Total Msgs :* {2}\n",
+      "msg_last": "*lastSeen :* {0} pehle\n"
+    },
+    "reset": {
+      "usage": "Example: reset all OR reset <reply/mention>",
+      "desc": "Pure group ya specific member ka message count reset karo.",
+      "reset_all": "Sabke message counts delete ho gaye",
+      "reset_one": "_@{0} ke message counts delete ho gaye._"
+    },
+    "inactive": {
+      "usage": "> Examples:\n-inactive day 10\n- inactive day 10 kick\n- inactive total 100\n- inactive total 100 kick\n- inactive day 7 total 150\n- inactive day 7 total 150 kick\n\nAgar kick nahi likha hai, toh sirf list karein.",
+      "desc": "Inactive members ko message count ya inactivity duration ke basis pe identify ya remove karo. 'Kick' likhne par members ko remove karo.",
+      "inactives": "_Total inactives hain : {0}_",
+      "removing": "_7 seconds mein {0} inactive members ko remove kiya ja raha hai_"
+    },
+    "amute": {
+      "usage": "Usage: amute <hour> <min>\n- amute on | off\n- amute info\n\nText ke saath reply karke mute message set karo.",
+      "desc": "Group ko specified time pe automatically mute karo, aur ek custom message set karo.",
+      "not_found": "AutoMute settings nahi mili.",
+      "already_disabled": "AutoMute pehle se hi disabled hai.",
+      "enabled": "AutoMute enable ho gaya.",
+      "disabled": "AutoMute disable ho gaya.",
+      "invalid_format": "> Example:\n- amute 6 0\n- amute on | off\n- amute info\n\nText ke saath reply karke mute message set karo.",
+      "scheduled": "Group {0} pe mute ho jayegi\n*message :* {1}",
+      "info": "Hour: {0}\nMinute: {1}\nTime: {2}\nMute: {3}\nMessage: {4}"
+    },
+    "aunmute": {
+      "usage": "Usage: aunmute <hour> <min>\n- aunmute on | off\n- aunmute info\nText ke saath reply karke unmute message set karo.",
+      "desc": "Group ko specified time pe automatically unmute karo, aur ek custom message set karo.",
+      "not_found": "AutoUnMute settings nahi mili.",
+      "already_disabled": "AutoUnMute pehle se hi disabled hai.",
+      "enabled": "AutoUnMute enable ho gaya.",
+      "disabled": "AutoUnMute disable ho gaya.",
+      "invalid_format": "> Example:\n- aunmute 16 30\n- aunmute on | off\n- aunmute info\n\nText ke saath reply karke unmute message set karo.",
+      "scheduled": "Group {0} pe unmute ho jayegi\n*message :* {1}",
+      "info": "Hour: {0}\nMinute: {1}\nTime: {2}\nMute: {3}\nMessage: {4}"
+    },
+    "zushi": {
+      "usage": "> Example:\n- zushi ping, sticker\n- Saare commands set karne ke liye, 'list' type karo aur phir copied message ke saath reply karo (e.g., zushi copied_message).",
+      "desc": "Chat mein doosron ke liye specific commands enable karo.",
+      "already_set": "{0} pehle se hi configure hai.",
+      "allowed": "*@{0} ke liye allowed commands*\n{1}"
+    },
+    "yami": {
+      "usage": "Bas use karo: yami",
+      "desc": "Chat mein allowed commands ki list display karo.",
+      "not_set": "Abhi tak koi allowed commands set nahi ki gayi hai."
+    },
+    "ope": {
+      "usage": "Example: ope ping, sticker OR ope all",
+      "desc": "Specified allowed commands ko delete ya unset karo.",
+      "not_found": "{0} ke liye koi allowed commands nahi mili.",
+      "all_removed": "Saare allowed commands remove ho gaye.",
+      "removed": "*@{0} ke liye removed commands*\n{1}"
+    },
+    "pdm": {
+      "usage": "Usage: pdm on | off",
+      "desc": "Group mein promote/demote events ke liye automatic notifications enable ya disable karo.",
+      "not_found": "Kripya 'on' ya 'off' specify karein. Example: pdm on",
+      "activated": "Promote/demote alert activate ho gaya.",
+      "deactivated": "Promote/demote alert deactivate ho gaya."
+    },
+    "ping": {
+      "desc": "Bot ka response time (latency) check karo.",
+      "ping_sent": "Ping!",
+      "pong": "Pong! Response time: {0} ms"
+    },
+    "pinterest": {
+      "usage": "Example: pinterest <Pinterest URL>",
+      "not_found": "Koi media nahi mili. Kripya URL check karke phir se try karein.",
+      "desc": "Pinterest videos ya images download karo."
+    },
+    "plugin": {
+      "usage": "> Example:\n- plugin <Gist URL>\n- plugin list",
+      "desc": "External plugins ko Gist URL provide karke install karo, ya installed plugins ki list dekho.",
+      "invalid": "Kripya valid plugin URL ya plugin name provide karein.",
+      "not_installed": "Abhi tak koi plugins install nahi ki gayi hai.",
+      "installed": "Naye installed plugins: {0}"
+    },
+    "remove": {
+      "usage": "> Example:\n- remove <plugin_name>\n- remove all",
+      "desc": "External plugins ko plugin name specify karke delete karo, ya saare installed plugins remove karo.",
+      "not_found": "Plugin *{0}* nahi mili.",
+      "removed": "Plugins successfully remove ho gaye."
+    },
+    "reboot": {
+      "desc": "Bot instance ko PM2 use karke restart karo.",
+      "starting": "Restart ho raha hai..."
+    },
+    "fullpp": {
+      "usage": "Example: fullpp (kisi image ko reply karein)",
+      "desc": "Full-size profile picture set karo.",
+      "updated": "Profile picture update ho gayi."
+    },
+    "jid": {
+      "desc": "User ya chat ka JID return karo. Mentioned user, reply message, ya current chat ke JID ko check karo."
+    },
+    "left": {
+      "desc": "Current group ko chhod do. Agar additional text diya gaya hai, toh woh bhejne ke baad chhodein."
+    },
+    "block": {
+      "usage": "Example: block (kisi user ko reply ya mention karein)",
+      "desc": "Specified user ko block karo.",
+      "status": "Blocked"
+    },
+    "unblock": {
+      "usage": "Example: unblock (kisi user ko reply ya mention karein)",
+      "desc": "Specified user ko unblock karo.",
+      "status": "_Unblocked_"
+    },
+    "pp": {
+      "usage": "Example: pp (kisi image ko reply karein)",
+      "desc": "Replied message ki image use karke apni profile picture update karo."
+    },
+    "whois": {
+      "number": "*Number :* {0}",
+      "name": "*Naam :* {0}",
+      "about": "*About :* {0}",
+      "setAt": "*setAt :* {0}",
+      "owner": "*Malik :* {0}",
+      "members": "*Members :* {0}",
+      "description": "*desc :* {0}",
+      "created": "*Banaya gaya :* {0}",
+      "usage": "Usage: whois <jid ya user identifier>",
+      "desc": "User ya group ka profile picture aur extra jaankari (jaise about, status) dikhata hai."
+    },
+    "gjid": {
+      "desc": "Sabhi group JIDs aur unke group names ki list dikhata hai."
+    },
+    "qr": {
+      "usage": "Usage: qr test  YA  QR image par reply karke qr",
+      "desc": "Diye gaye text se QR code banata hai ya replied image se QR code decode karta hai."
+    },
+    "reddit": {
+      "usage": "Usage: reddit <URL>",
+      "desc": "Diye gaye Reddit post ke URL se video download karta hai.",
+      "error": "Diye gaye URL ke liye koi video nahi mila."
+    },
+    "rmbg": {
+      "usage": "Usage: rmbg (kisi image par reply karke)",
+      "desc": "Replied image ka background remove.bg API se hata deta hai.",
+      "key": "Is command ka use karne ke liye, remove.bg par sign up karein, apna account verify karein, API key copy karein, aur .setvar RMBG_KEY:<your_api_key> se set karein (jaise: .setvar RMBG_KEY:GWQ6jVy9MBpfYF9SnyG8jz8P). SIGNUP: https://accounts.kaleido.ai/users/sign_up | API KEY: https://www.remove.bg/dashboard#api-key",
+      "error": "API key ya image nahi mila. API key set karein aur kisi image par reply karein."
+    },
+    "setschedule": {
+      "usage": "> *Usage :*\n- setschedule jid,min-hour-day-month (24 hour format mein, day aur month optional)\n- setschedule 91987654321@s.whatsapp.net, 9-9-13-8\n- setschedule 91987654321@s.whatsapp.net, 0-10 (roz 10 baje message bhejega)\n- setschedule 91987654321@s.whatsapp.net, 0-10, once (10 baje message bhejega, sirf ek baar)",
+      "desc": "Kisi specific time par message automatically bhejne ke liye schedule karein. Target JID(s) aur time (min-hour-day-month format mein; day aur month optional) provide karein. Us message par reply karein jo aap schedule karna chahte hain.",
+      "invalid": "Galat schedule format ya time. Diye gaye Usage ko follow karein.",
+      "no_reply": "Schedule karne ke liye message par reply karein.",
+      "scheduled": "_Message *{0}* par bhejne ke liye schedule ho gaya hai_ @{1}."
+    },
+    "getschedule": {
+      "desc": "Specified chat ke liye sabhi scheduled messages dikhata hai.",
+      "not_found": "Koi scheduled messages nahi hai.",
+      "time": "Time : {0}"
+    },
+    "delschedule": {
+      "usage": "> Usage:\n- delschedule 9198765431@s.whatsapp.net, 8-8-10-10\n- delschedule 9198765431@s.whatsapp.net\n- delschedule all",
+      "desc": "Target JID aur time specify karke scheduled message delete karein, ya sabhi scheduled messages hata dein.",
+      "invalid": "Galat format. Diye gaye Usage ko follow karein.",
+      "not_found": "Schedule nahi mila.",
+      "deleted": "_Schedule delete ho gaya._"
+    },
+    "setstatus": {
+      "usage": "Usage: setstatus jid,jid,jid,... YA setstatus contact",
+      "desc": "Specific contacts ya imported contacts ke liye WhatsApp status set karein. Status set karne ke liye kisi message (text, image, ya video) par reply karein.",
+      "reply_required": "Status set karne ke liye kisi message par reply karein.",
+      "sent": "_Status {0} contacts ko bhej diya gaya._"
+    },
+    "scstatus": {
+      "usage": "Usage:\n- scstatus jid,jid,jid,...|min-hour-day-month (day aur month optional)\n- scstatus contact|min-hour-day-month\n- scstatus delete all|min-hour-day-month\n- scstatus list",
+      "desc": "Kisi specific time par WhatsApp status bhejne ke liye schedule karein. Imported contacts ke liye 'contact' use karein ya specific JIDs provide karein.",
+      "reply_required": "Status schedule karne ke liye kisi message par reply karein.",
+      "invalid": "Galat format. Diye gaye Usage ko follow karein.",
+      "scheduled": "_Status {0} par bhejne ke liye schedule ho gaya._",
+      "list": "Scheduled status ki list:",
+      "deleted": "Schedule delete ho gaya."
+    },
+    "antispam": {
+      "usage": "Usage: antispam on | off",
+      "desc": "Group ke liye AntiSpam feature enable ya disable karein.",
+      "activated": "AntiSpam activate ho gaya.",
+      "deactivated": "AntiSpam deactivate ho gaya."
+    },
+    "sticker": {
+      "desc": "Image ya video ko sticker mein convert karein. Sticker banane ke liye kisi image ya video message par reply karein.",
+      "reply_required": "Kisi image ya video par reply karein."
+    },
+    "circle": {
+      "desc": "Image ko circular sticker mein convert karein.",
+      "reply_required": "Kisi image par reply karein."
+    },
+    "take": {
+      "usage": "Usage: take <title,artists,url> (sticker ya audio par reply karke). Audio ke liye title zaroori hai; artists aur URL optional hain.",
+      "desc": "Sticker pack ka metadata update karein. Agar sticker par reply karein, to uska pack metadata update hoga. Agar audio par reply karein, to file mein metadata (title, artists, URL) add hoga.",
+      "reply_required": "Kisi sticker ya audio message par reply karein.",
+      "additional_info": "Audio metadata ke liye, artists ya URL optional hain."
+    },
+    "mp4": {
+      "desc": "Animated sticker (WebP) ko MP4 video mein convert karein.",
+      "reply_required": "Kisi animated sticker par reply karein."
+    },
+    "story": {
+      "usage": "Usage: story <username> (ya username wale message par reply karke)",
+      "desc": "Diye gaye username ke Instagram stories download karein. Agar multiple stories hain, to download ke liye ek list provide ki jayegi.",
+      "not_found": "Diye gaye username ke liye koi stories nahi mili.",
+      "list": "Total {0} stories available. Download karne ke liye ek select karein.\n"
+    },
+    "tag": {
+      "usage": "Usage: tag all | tag admin | tag notadmin | tag <custom message> (ya 'tag' ke saath kisi message par reply karke)",
+      "desc": "Group ke members ko tag karein. 'all' use karein sabhi members ko mention karne ke liye, 'admin' sirf group admins ko mention karne ke liye, 'notadmin' non-admin members ko mention karne ke liye, ya custom message provide karein."
+    },
+    "tictactoe": {
+      "usage": "Usage: tictactoe <opponent_jid> YA tictactoe restart <opponent_jid> YA tictactoe end",
+      "desc": "Kisi opponent ke saath TicTacToe khelein. Kisi user ko challenge karne ke liye unhe mention karein, unke message par reply karein, ya unka JID specify karein. Game khatam karne ke liye 'tictactoe end' use karein aur naye opponent ke saath restart karne ke liye 'tictactoe restart <opponent_jid>' use karein.",
+      "choose_opponent": "Kisi message par reply karke ya user ko mention karke opponent choose karein. Apne aap ke saath nahi khel sakte.",
+      "game_ended": "Game khatam ho gayi.",
+      "game_restarted": "Naye opponent ke saath game restart ho gayi.",
+      "invalid_input": "Galat input. Sahi opponent provide karein ya 'end' ya 'restart' sahi tarah use karein.",
+      "players": "Players",
+      "already_occupied": "_Pehle se occupied hai_",
+      "current_player": "currentPlayer",
+      "game_finish": "Game Finish 🏁",
+      "winner": "Winner"
+    },
+    "tiktok": {
+      "usage": "Usage: tiktok <TikTok URL> (ya URL wale message par reply karke)",
+      "desc": "Diye gaye TikTok URL se video download karein.",
+      "not_found": "Video nahi mila. URL verify karein aur phir try karein."
+    },
+    "tog": {
+      "usage": "Usage: tog ping off",
+      "desc": "Bot command ko enable ya disable karo.",
+      "invalid": "Galat input. Use: tog <command> on|off (jaise, tog ping off)",
+      "self_reference": "Kya tumhe sach mein mujhe karna hai?",
+      "enabled": "{0} Enable ho gaya.",
+      "disabled": "{0} Disable ho gaya."
+    },
+    "trt": {
+      "usage": "Usage: trt ml hi YA trt ml (kisi text message ka reply karo)",
+      "desc": "Google Translate ka use karke text translate karo. Target language code (aur optional source language code) specify karo jab message ka reply kar rahe ho."
+    },
+    "twitter": {
+      "usage": "Usage: twitter <Twitter URL> (ya URL wale message ka reply karo)",
+      "desc": "Twitter video download karo. Agar multiple quality options hain, toh ek choose karne ko kaha jayega.",
+      "not_found": "Diye gaye Twitter URL ke liye koi video nahi mila.",
+      "choose_quality": "> Video Quality Choose Karo\n"
+    },
+    "upload": {
+      "usage": "Usage: upload <URL> (ya URL wale message ka reply karo)",
+      "desc": "Diye gaye URL se media download karo. Shortened Google Images URLs ke liye, direct image URL automatically retrieve ho jayegi."
+    },
+    "url": {
+      "usage": "Usage: url YA url imgur (image ya video ka reply karo)",
+      "desc": "Image ya video ko URL mein convert karo. Optional, kisi specific service se URL pane ke liye parameter specify karo (jaise, 'imgur')."
+    },
+    "getvar": {
+      "usage": "Usage: getvar sudo",
+      "desc": "Variable ka value display karo. Variable key (case-insensitive) provide karke uska value retrieve karo.",
+      "not_found": "{0} vars mein nahi mila."
+    },
+    "delvar": {
+      "usage": "Usage: delvar sudo",
+      "desc": "Variable key specify karke usse delete karo.",
+      "not_found": "{0} vars mein nahi mila.",
+      "deleted": "{0} delete ho gaya."
+    },
+    "setvar": {
+      "usage": "Usage: setvar key = value",
+      "desc": "Specific key aur value ke saath variable set karo. Key aur value ko alag karne ke liye '=' ka use karo.",
+      "success": "Naya var {0} add ho gaya, value hai {1}."
+    },
+    "allvar": {
+      "desc": "Sab stored variables ko sorted order mein display karo."
+    },
+    "vote": {
+      "usage": "> Usage :\nvote q|Tumhara favorite color kya hai?\no|😀|Blue\no|😊|Red",
+      "desc": "WhatsApp group mein vote shuru karo.",
+      "notes": "Agar koi recipients specify nahi kiye hain, toh vote message current group mein bhej diya jayega.",
+      "no_vote": "Koi vote nahi hai!",
+      "total_vote": "Total votes : *{0}*",
+      "delete_vote": "Naya vote set karne ke liye current vote delete karo.",
+      "option_required": "Do ya zyada options chahiye",
+      "question_required": "Question chahiye",
+      "vote": "React ya reply karke vote karo.",
+      "vote_deleted": "_Vote delete ho gaya._",
+      "voted": "@{0} ne {1} ke liye vote diya\n\n${2}"
+    },
+    "warn": {
+      "usage": "Usage: warn @user YA warn reset @user. User ke message ka reply karke 'warn' ya 'warn reset' type kar sakte ho.",
+      "desc": "Group chat mein user ko warn karo. Ye command user ke warning count ko badhata hai. Agar count limit se zyada ho jata hai, toh user ko group se kick kar diya jayega. 'warn reset' use karke user ke warnings clear karo.",
+      "reset_usage": "Usage: warn reset @user (ya user ke message ka reply karke 'warn reset' type karo).",
+      "cannot_remove_admin": "Main admin ko remove nahi kar sakta."
+    },
+    "wcg": {
+      "usage": "Usage:\n- wcg start (word chain game force start karo)\n- wcg end (current game khatam karo)\n- wcg <word> (word chain continue karke khelo)",
+      "desc": "Word Chain Game: Word chain continue karke khelo. 'wcg start' use karke naya game shuru karo ya 'wcg end' use karke current game khatam karo."
+    },
+    "wrg": {
+      "usage": "Usage:\n- wrg start (random word game force start karo)\n- wrg end (current game khatam karo)\n- wrg <word> (word submit karke khelo)",
+      "desc": "Random Word Game: Random prompt ke response mein word submit karke khelo. 'wrg start' use karke naya game shuru karo ya 'wrg end' use karke current game khatam karo."
+    },
+    "yts": {
+      "usage": "Usage: yts baymax",
+      "desc": "YouTube videos ko query ya URL se search karo. Agar valid YouTube URL diya gaya hai, toh pehle video ka detailed information return karo."
+    },
+    "song": {
+      "usage": "Usage: song indila love story YA song <YouTube URL> (message ka reply bhi supported hai)",
+      "desc": "YouTube se song download karo. Agar URL diya gaya hai, toh song directly download ho jayega; warna search kiya jayega aur results ki list generate ki jayegi selection ke liye.",
+      "not_found": "Diye gaye query ya URL ke liye koi song nahi mila."
+    },
+    "video": {
+      "usage": "Usage: video <YouTube URL> (ya URL wale message ka reply karo)",
+      "desc": "YouTube video download karo. Agar direct URL diya gaya hai, toh video download ho jayegi; agar search query diya gaya hai, toh results ki list generate ki jayegi selection ke liye.",
+      "not_found": "Diye gaye query ya URL ke liye koi video nahi mila."
+    },
+    "update": {
+      "usage": "Usage: update",
+      "desc": "Naye updates ke liye check karo. Available updates display karo ya confirm karo ki bot up-to-date hai.",
+      "up_to_date": "Bot already up-to-date hai.",
+      "available": "{0} naye updates available hain:\n{1}"
+    },
+    "update_now": {
+      "usage": "Usage: update now",
+      "desc": "Bot ko latest version mein update karo.",
+      "up_to_date": "Bot already up-to-date hai. Koi updates available nahi hain.",
+      "updating": "Bot ko update kar rahe hain...",
+      "updated": "Bot successfully update ho gaya!"
+    }
+  }
+}
