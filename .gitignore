@@ -14,3 +14,5 @@ word.txt
 !.yarn/versions
 .cache
 config.json
+credentials.json
+token.json
