@@ -1,107 +1,139 @@
 # WhatsApp MD User Bot
 
-A versatile WhatsApp Bot that supports multiple sessions, allowing you to manage more than one bot on the same deployment.
+A powerful and feature-rich WhatsApp bot supporting multiple sessions, designed for seamless automation and enhanced user experience.
 
-## Important Links
+### Features
 
-- [Bot Environment Variables](https://levanter-plugins.vercel.app/env)
-- [FAQ](https://levanter-plugins.vercel.app/faq)
+- **Multi-Session Support** – Manage multiple accounts effortlessly.
+- **Customizable Responses** – Configure responses in different languages.
+- **Automated Task Execution** – Perform actions without manual intervention.
+- **Easy Deployment** – Multiple hosting options for quick setup.
 
-## Setup
+### Supported Languages
 
-### Deploy on Koyeb
+This bot supports multiple languages for responses. Set your preferred language using the `BOT_LANG` variable in the `config.env` file.
 
-- Open [Deploy](https://qr-hazel-alpha.vercel.app/) to get started with Koyeb.
+**Available languages:**
 
-### Deploy on Render
+- **bn** – Bengali  
+- **en** – English  
+- **es** – Spanish  
+- **hi** – Hindi  
+- **id** – Indonesian  
+- **ur** – Urdu  
 
-- Open [Deploy](https://qr-hazel-alpha.vercel.app/) to get started with Render.
+To set the bot language to Spanish, add the following line to your `config.env` file:
 
-### Deploy on Panel
+```env
+BOT_LANG=es
+```
+---
 
-- Open [Deploy](https://qr-hazel-alpha.vercel.app/) to get started with the Panel.
+### Deployment Guide
 
-### Deploy on VPS or PC (Example for Ubuntu)
+### 1️⃣ Deploy on Koyeb
 
- #### Quick Installation
-    bash <(curl -fsSL http://bit.ly/43JqREw)
- #### Manual Installation
+[Deploy Now](https://qr-hazel-alpha.vercel.app/) to set up your bot on Koyeb.
 
-1. **Install Git, ffmpeg, and curl:**
-    ```sh
-    sudo apt -y update && sudo apt -y upgrade
-    sudo apt -y install git ffmpeg curl
-    ```
+### 2️⃣ Deploy on Render
 
-2. **Install Node.js:**
-    ```sh
-    curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
-    sudo -E bash nodesource_setup.sh
-    sudo apt-get install -y nodejs
-    ```
+[Deploy Now](https://qr-hazel-alpha.vercel.app/) to set up your bot on Render.
 
-3. **Install Yarn:**
-    ```sh
-    sudo npm install -g yarn
-    ```
+### 3️⃣ Deploy on a VPS or PC (Ubuntu Example)
 
-4. **Install pm2:**
-    ```sh
-    sudo yarn global add pm2
-    ```
+#### **Quick Installation**
 
-5. **Clone Repository and Install Packages:**
-    ```sh
-    git clone https://github.com/lyfe00011/levanter botName
-    cd botName
-    yarn install
-    ```
+Run the following command:
 
-6. **Enter Environment Variables:**
-    ```sh
-    echo "SESSION_ID = Session_Id_you_Got_After_Scan_Dont_Add_This_Line_If_You_Can_Scan_From_Terminal_Itself
-    PREFIX = .
-    STICKER_PACKNAME = LyFE
-    ALWAYS_ONLINE = false
-    RMBG_KEY = null
-    LANGUAG = en
-    WARN_LIMIT = 3
-    FORCE_LOGOUT = false
-    BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
-    MAX_UPLOAD = 200
-    REJECT_CALL = false
-    SUDO = 989876543210
-    TZ = Asia/Kolkata
-    VPS = true
-    AUTO_STATUS_VIEW = true
-    SEND_READ = true
-    AJOIN = true
-    DISABLE_START_MESSAGE = false
-    PERSONAL_MESSAGE = null" > config.env
-    ```
+```sh
+bash <(curl -fsSL http://bit.ly/43JqREw)
+```
 
-7. **Edit `config.env` Using Nano (if needed):**
-    - To save, press `Ctrl + O`, then press `Enter`, and to exit, press `Ctrl + X`.
+#### **Manual Installation**
 
-8. **Start and Stop the Bot:**
-    - To start the bot:
-      ```sh
-      pm2 start . --name botName --attach --time
-      ```
-    - To stop the bot:
-      ```sh
-      pm2 stop botName
-      ```
+1. **Update System and Install Dependencies:**
 
-### Deploy on Replit
+   ```sh
+   sudo apt update && sudo apt upgrade -y
+   sudo apt install git ffmpeg curl -y
+   ```
 
-[![Run on Replit](https://replit.com/badge/github/your-repo-owner/your-repo-name)](https://replit.com/@Nightbot2O/whatsapp-bot-md)
+2. **Install Node.js (Version 20.x Recommended):**
 
-1. Fork the repository.
-2. Edit `config.env`.
-3. Click run.
+   ```sh
+   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+   sudo apt install nodejs -y
+   ```
 
-### Thanks To
+3. **Install Yarn and PM2 for Process Management:**
 
-- [Yusuf Usta](https://github.com/Quiec) for [WhatsAsena](https://github.com/yusufusta/WhatsAsena)
-- [@adiwajshing](https://github.com/adiwajshing) for [Baileys](https://github.com/adiwajshing/Baileys)
+   ```sh
+   sudo npm install -g yarn
+   yarn global add pm2
+   ```
+
+4. **Clone the Repository and Install Dependencies:**
+
+   ```sh
+   git clone https://github.com/lyfe00011/levanter botName
+   cd botName
+   yarn install
+   ```
+
+5. **Configure Environment Variables:**
+
+   Create a `config.env` file and add the following lines:
+
+   ```sh
+   SESSION_ID=your_session_id_here
+   PREFIX=.
+   STICKER_PACKNAME=LyFE
+   ALWAYS_ONLINE=false
+   RMBG_KEY=null
+   LANGUAG=en
+   BOT_LANG=en
+   WARN_LIMIT=3
+   FORCE_LOGOUT=false
+   BRAINSHOP=159501,6pq8dPiYt7PdqHz3
+   MAX_UPLOAD=200
+   REJECT_CALL=false
+   SUDO=989876543210
+   TZ=Asia/Kolkata
+   VPS=true
+   AUTO_STATUS_VIEW=true
+   SEND_READ=true
+   AJOIN=true
+   DISABLE_START_MESSAGE=false
+   PERSONAL_MESSAGE=null
+   ```
+
+6. **Start the Bot Using PM2:**
+
+   To start the bot, run:
+
+   ```sh
+   pm2 start . --name botName --attach --time
+   ```
+
+   To stop the bot, run:
+
+   ```sh
+   pm2 stop botName
+   ```
+---
+
+### Credits & Acknowledgments
+
+A special thanks to:
+
+- **[Yusuf Usta](https://github.com/Quiec)** – Creator of [WhatsAsena](https://github.com/yusufusta/WhatsAsena).  
+- **[@adiwajshing](https://github.com/adiwajshing)** – Developer of [Baileys](https://github.com/adiwajshing/Baileys).
+
+---
+
+## 🛠 Need Help?
+
+For more information on setting up environment variables and FAQs, please visit:
+
+- [Bot Environment Variables](https://levanter-plugins.vercel.app/env)  
+- [Frequently Asked Questions](https://levanter-plugins.vercel.app/faq)
