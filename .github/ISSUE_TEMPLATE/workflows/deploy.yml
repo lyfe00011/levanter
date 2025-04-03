@@ -1,0 +1,62 @@
+name: Deploy Bot
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Update System and Install Dependencies
+      run: |
+        sudo apt update && sudo apt upgrade -y
+        sudo apt install git ffmpeg curl -y
+
+    - name: Install Node.js
+      run: |
+        curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+        sudo apt install nodejs -y
+
+    - name: Install Yarn and PM2
+      run: |
+        sudo npm install -g yarn
+        yarn global add pm2
+
+    - name: Clone Repository and Install Dependencies
+      run: |
+        git clone https://github.com/lyfe00011/levanter botName
+        cd botName
+        yarn install
+
+    - name: Configure Environment Variables
+      run: |
+        echo "SESSION_ID=your_session_id_here" > config.env
+        echo "PREFIX=." >> config.env
+        echo "STICKER_PACKNAME=LyFE" >> config.env
+        echo "ALWAYS_ONLINE=false" >> config.env
+        echo "RMBG_KEY=null" >> config.env
+        echo "LANGUAG=en" >> config.env
+        echo "BOT_LANG=en" >> config.env
+        echo "WARN_LIMIT=3" >> config.env
+        echo "FORCE_LOGOUT=false" >> config.env
+        echo "BRAINSHOP=159501,6pq8dPiYt7PdqHz3" >> config.env
+        echo "MAX_UPLOAD=200" >> config.env
+        echo "REJECT_CALL=false" >> config.env
+        echo "SUDO=989876543210" >> config.env
+        echo "TZ=Asia/Kolkata" >> config.env
+        echo "VPS=true" >> config.env
+        echo "AUTO_STATUS_VIEW=true" >> config.env
+        echo "SEND_READ=true" >> config.env
+        echo "AJOIN=true" >> config.env
+        echo "DISABLE_START_MESSAGE=false" >> config.env
+        echo "PERSONAL_MESSAGE=null" >> config.env
+      working-directory: ./botName
+
+    - name: Start Bot Using PM2
+      run: |
+        pm2 start . --name botName --attach --time
+      working-directory: ./botName
