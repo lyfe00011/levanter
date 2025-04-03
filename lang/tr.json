@@ -678,7 +678,7 @@
       "usage": "Örnek: warn @user VEYA warn reset @user. Bir kullanıcının mesajına cevap vererek 'warn' veya 'warn reset' yazabilirsiniz.",
       "desc": "Grup sohbetinde bir kullanıcıyı uyar. Bu komut bir kullanıcının uyarı sayısını artırır. Uyarı sayısı sınırı aşılırsa, kullanıcı grubdan atılır. 'warn reset' kullanarak bir kullanıcının uyarılarını sıfırla.",
       "reset_usage": "Örnek: warn reset @user (veya bir kullanıcının mesajına 'warn reset' yazarak)",
-      "cannot_remove_admin": "Bir yöneticiyi kaldıramam.",
+      "cannot_remove_admin": "Bir yöneticiyi kaldıramam."
     },
     "wcg": {
       "usage": "Örnekler:\n- wcg start (kelime zinciri oyununu zorla başlat)\n- wcg end (mevcut oyunu bitir)\n- wcg <kelime> (kelime zincirini devam ettirerek oyna)",
