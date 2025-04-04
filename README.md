@@ -22,6 +22,7 @@ This bot supports multiple languages for responses. Set your preferred language 
 - **id** – Indonesian  
 - **ur** – Urdu  
 - **tr** – Turkish  
+- **fr** – French  
 
 To set the bot language to Spanish, add the following line to your `config.env` file:
 
