@@ -41,7 +41,7 @@ BOT_LANG=es
 
 [Deploy Now](https://qr-hazel-alpha.vercel.app/) to set up your bot on Render.
 
-### 3️⃣ Deploy on a VPS or PC (Ubuntu Example)
+### 3️⃣ Deploy on a VPS or phone (Ubuntu Example)
 
 #### **Quick Installation**
 
