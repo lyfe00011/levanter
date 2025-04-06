@@ -1,4 +1,4 @@
-const got = require('got')
+const axios = require('axios')
 const Heroku = require('heroku-client')
 const { secondsToHms, isUpdate, updateNow, bot, lang } = require('../lib/')
 const Config = require('../config')
@@ -60,8 +60,8 @@ if (Config.HEROKU_API_KEY && Config.HEROKU_APP_NAME) {
               Authorization: 'Bearer ' + Config.HEROKU_API_KEY,
               Accept: 'application/vnd.heroku+json; version=3.account-quotas',
             }
-            const res = await got(url, { headers })
-            const resp = JSON.parse(res.body)
+            const res = await axios.get(url, { headers })
+            const resp = res.data
             const total_quota = Math.floor(resp.account_quota)
             const quota_used = Math.floor(resp.quota_used)
             const remaining = total_quota - quota_used

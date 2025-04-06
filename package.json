@@ -1,6 +1,6 @@
 {
   "name": "levanter",
-  "version": "3.7.7",
+  "version": "3.7.8",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,6 @@
     "fs-extra": "^11.1.0",
     "google-tts-api": "^2.0.2",
     "googleapis": "^126.0.1",
-    "got": "11.8.3",
     "heroku-client": "^3.1.0",
     "jimp": "^0.16.1",
     "link-preview-js": "^3.0.4",
