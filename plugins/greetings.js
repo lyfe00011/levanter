@@ -31,11 +31,9 @@ bot(
       }
       await enableGreetings(message.jid, 'welcome', match, message.id)
       return await message.send(
-        lang.plugins.greetings.update.format(
-          match === 'on'
-            ? lang.plugins.greetings.welcome_enable
-            : lang.plugins.greetings.welcome_disable
-        )
+        match === 'on'
+          ? lang.plugins.greetings.welcome_enable
+          : lang.plugins.greetings.welcome_disable
       )
     }
 
