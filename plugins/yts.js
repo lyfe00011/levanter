@@ -12,13 +12,13 @@ bot(
     if (!match) return await message.send(lang.plugins.yts.usage)
     const vid = ytIdRegex.exec(match)
     if (vid) {
-      const result = await yts(vid[1], true)
+      const result = await yts(vid[1], true, null, message.id)
       const { title, description, duration, view, published } = result[0]
       return await message.send(
         `*Title :* ${title}\n*Time :* ${duration}\n*Views :* ${view}\n*Publish :* ${published}\n*Desc :* ${description}`
       )
     }
-    const result = await yts(match)
+    const result = await yts(match, false, null, message.id)
     const msg = result
       .map(
         ({ title, id, view, duration, published, author }) =>
@@ -41,9 +41,9 @@ bot(
     if (!match) return await message.send(lang.plugins.song.usage)
     const vid = ytIdRegex.exec(match)
     if (vid) {
-      const _song = await song(vid[1])
+      const _song = await song(vid[1], message.id)
       if (!_song) return await message.send(lang.plugins.song.not_found)
-      const [result] = await yts(vid[1], true)
+      const [result] = await yts(vid[1], true, null, message.id)
       const { author, title, thumbnail } = result
       const meta = title ? await addAudioMetaData(_song, title, author, '', thumbnail.url) : _song
       return await message.send(
@@ -52,7 +52,7 @@ bot(
         'audio'
       )
     }
-    const result = await yts(match, 0, 1)
+    const result = await yts(match, 0, 1, message.id)
     if (!result.length) return await message.send(`_Not result for_ *${match}*`)
     const msg = generateList(
       result.map(({ title, id, duration, author, album }) => ({
@@ -80,7 +80,7 @@ bot(
     if (!match) return await message.send(lang.plugins.video.usage)
     const vid = ytIdRegex.exec(match)
     if (!vid) {
-      const result = await yts(match)
+      const result = await yts(match, false, null, message.id)
       if (!result.length) return await message.send(lang.plugins.video.not_found)
       const msg = generateList(
         result.map(({ title, id, duration, view }) => ({
@@ -95,7 +95,7 @@ bot(
       return await message.send(msg.message, { quoted: message.data }, msg.type)
     }
     return await message.send(
-      await video(vid[1]),
+      await video(vid[1], message.id),
       { quoted: message.data, fileName: `${vid[1]}.mp4` },
       'video'
     )
