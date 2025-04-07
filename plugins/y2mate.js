@@ -23,7 +23,7 @@ bot(
     }
 
     const vid = ytIdRegex.exec(match)
-    const res = await y2mate.get(vid[1], 'audio')
+    const res = await y2mate.get(vid[1], 'video')
     if (isUrl(res)) return await message.sendFromUrl(res, { quoted: message.data })
 
     const { title, video, thumbnail, time } = await y2mate.get(vid[1])
@@ -74,7 +74,7 @@ bot(
 
     const [video] = await yts(match, !!vid, null, message.id)
     const { title, thumbnail, id } = video
-    const audio = await y2mate.get(id)
+    const audio = await y2mate.get(id, 'audio')
 
     if (isUrl(audio)) return await message.sendFromUrl(audio, { quoted: message.data })
 
