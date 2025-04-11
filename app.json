@@ -1,5 +1,5 @@
 {
-  "name": "levanter@5.2.3",
+  "name": "Levanter",
   "description": "",
   "keywords": ["noedjs"],
   "success_url": "/",
@@ -88,10 +88,10 @@
       "required": false,
       "value": "word1,word2,word3"
     },
-    "SS_TOKEN": {
-      "description": "token from https://app.screenshotapi.net/dashboard",
+    "BOT_LANG": {
+      "description": "Bot language",
       "required": false,
-      "value": ""
+      "value": "en"
     },
     "REJECT_CALL": {
       "description": "auto reject call, if set as true",
@@ -129,10 +129,9 @@
       "plan": "heroku-postgresql:basic"
     }
   ],
-
   "buildpacks": [],
   "formation": {
-    "web": {
+    "worker": {
       "quantity": 1,
       "size": "basic"
     }
