@@ -3,7 +3,7 @@ const { DATABASE, VERSION } = require('./config')
 const { stopInstance } = require('./lib/pm2')
 
 const start = async () => {
-  logger.info(`levanter ${VERSION}`)
+  logger.info(`jackxx ${VERSION}`)
   try {
     await DATABASE.authenticate({ retry: { max: 3 } })
   } catch (error) {
