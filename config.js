@@ -9,7 +9,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || 'levanter_2420ced22b5ea0402292ec2d116d81b9ce').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -27,13 +27,13 @@ module.exports = {
           },
           logging: false,
         }),
-  PREFIX: (process.env.PREFIX || '^[.,!]').trim(),
+  PREFIX: (process.env.PREFIX || '^[.,!]').trim(.),
   SUDO: process.env.SUDO || '',
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
-  STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
-  ALWAYS_ONLINE: process.env.ALWAYS_ONLINE,
+  STICKER_PACKNAME: process.env.STICKER_PACKNAME || 'JON SNOW',
+  ALWAYS_ONLINE: process.env.False,
   LOG_MSG: process.env.LOG_MSG || 'false',
   RMBG_KEY: process.env.RMBG_KEY || 'null',
   BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
@@ -42,16 +42,16 @@ module.exports = {
   FORCE_LOGOUT: process.env.FORCE_LOGOUT || 'false',
   BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
   DISABLE_BOT: process.env.DISABLE_BOT || 'null',
-  ANTILINK_MSG: process.env.ANTILINK_MSG || '_Antilink Detected &mention kicked_',
-  ANTISPAM_MSG: process.env.ANTISPAM_MSG || '_Antispam Detected &mention kicked_',
+  ANTILINK_MSG: process.env.ANTILINK_MSG || '_Antilink Detected PA FOUT VOYE LIEN SOU GROUPE LAN TSSSS &mention kicked_',
+  ANTISPAM_MSG: process.env.ANTISPAM_MSG || '_Antispam Detected FOUT SISPANN ESEYE SPAM GROUPE LAN &mention kicked_',
   ANTIWORDS_MSG: process.env.ANTIWORDS_MSG || '_AntiWord Detected &mention kicked_',
   ANTIWORDS: process.env.ANTIWORDS || 'word',
-  MENTION: process.env.MENTION || '',
+  MENTION: process.env.MENTION || 'SALUT HUMAINS POURQUOI M'A TU TARGEUR?',
   MAX_UPLOAD: process.env.MAX_UPLOAD || 230,
-  REJECT_CALL: process.env.REJECT_CALL,
+  REJECT_CALL: process.env.Rprocess.env.REJECT_CALL,false
   VPS: toBool(process.env.VPS),
   AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'false').trim(),
-  SEND_READ: process.env.SEND_READ,
+  SEND_READ: process.env.SEND_READ,false
   KOYEB: toBool(process.env.KOYEB),
   KOYEB_NAME: (process.env.KOYEB_NAME || '').trim(),
   KOYEB_API: (process.env.KOYEB_API || '').trim(),
