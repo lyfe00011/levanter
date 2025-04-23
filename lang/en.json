@@ -30,8 +30,8 @@
       "update": "_Settings updated successfully! Your preferences have been saved and are now active._"
     },
     "menu": {
-      "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Time : {2}\n│ Day : {3}\n│ Date : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
-      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ User : {1}\n┃❃│ Time : {2}\n┃❃│ Day : {3}\n┃❃│ Date : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+      "help": "```╭────────────────╮\n      ꜱᴛɪᴀɴ xᴍᴅ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Time : {2}\n│ Day : {3}\n│ Date : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
+      "menu": "```╭═══ 𝚂𝚃𝙸𝙰𝙽-𝚇𝙼𝙳 ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ User : {1}\n┃❃│ Time : {2}\n┃❃│ Day : {3}\n┃❃│ Date : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
     },
     "afk": {
       "example": "> *AFK Usage:*\n- Set AFK: *afk [reason]*\n- Example: *afk I am busy* Last seen #lastseen ago\n- Sending a message automatically removes AFK status\n- Disable AFK: *afk off*",
@@ -158,12 +158,12 @@
     },
     "greetings": {
       "welcome_desc": "Send a welcome message to new members",
-      "welcome_example": "Welcome is currently {0}\n\nFor more details, visit: https://levanter-plugins.vercel.app/faq",
+      "welcome_example": "Welcome is currently {0}\n\nFor more details, visit: https://github.com/Stianstian258/Stian-MD",
       "welcome_enable": "_Welcome is now enabled_",
       "welcome_disable": "_Welcome is now disabled_",
       "welcome_delete": "_Welcome message deleted_",
       "goodbye_desc": "Send a goodbye message to members",
-      "goodbye_example": "Goodbye is currently {0}\n\nFor more details, visit: https://levanter-plugins.vercel.app/faq",
+      "goodbye_example": "Goodbye is currently {0}\n\nFor more details, visit: https://github.com/Stianstian258/Stian-MD",
       "goodbye_enable": "_Goodbye is now enabled_",
       "goodbye_disable": "_Goodbye is now disabled_",
       "goodbye_delete": "_Goodbye message deleted_"
