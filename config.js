@@ -9,7 +9,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || 'levanter_24450e05ffde3b48a4a125abcc7235f0ed').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -27,13 +27,13 @@ module.exports = {
           },
           logging: false,
         }),
-  PREFIX: (process.env.PREFIX || '^[.,!]').trim(),
-  SUDO: process.env.SUDO || '',
+  PREFIX: (process.env.PREFIX || '^[.,!]').trim(.),
+  SUDO: process.env.SUDO || '50949100359',
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
-  STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
-  ALWAYS_ONLINE: process.env.ALWAYS_ONLINE,
+  STICKER_PACKNAME: process.env.STICKER_PACKNAME || 'YOU',
+  ALWAYS_ONLINE: process.env.ALWAYS_ONLINE,false
   LOG_MSG: process.env.LOG_MSG || 'false',
   RMBG_KEY: process.env.RMBG_KEY || 'null',
   BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
@@ -42,13 +42,13 @@ module.exports = {
   FORCE_LOGOUT: process.env.FORCE_LOGOUT || 'false',
   BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
   DISABLE_BOT: process.env.DISABLE_BOT || 'null',
-  ANTILINK_MSG: process.env.ANTILINK_MSG || '_Antilink Detected &mention kicked_',
-  ANTISPAM_MSG: process.env.ANTISPAM_MSG || '_Antispam Detected &mention kicked_',
+  ANTILINK_MSG: process.env.ANTILINK_MSG || '_Antilink Detected yo the link is not fucking alowed on this groupe😡 &mention kicked_',
+  ANTISPAM_MSG: process.env.ANTISPAM_MSG || '_Antispam Detected gyèt manmanw pa eseye spam groupe lan &mention kicked_',
   ANTIWORDS_MSG: process.env.ANTIWORDS_MSG || '_AntiWord Detected &mention kicked_',
   ANTIWORDS: process.env.ANTIWORDS || 'word',
-  MENTION: process.env.MENTION || '',
+  MENTION: process.env.MENTION || 'salut HUMAINS POURQUOI M'A TU TARGUER?',
   MAX_UPLOAD: process.env.MAX_UPLOAD || 230,
-  REJECT_CALL: process.env.REJECT_CALL,
+  REJECT_CALL: process.env.REJECT_CALL,false
   VPS: toBool(process.env.VPS),
   AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'false').trim(),
   SEND_READ: process.env.SEND_READ,
