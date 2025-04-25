@@ -21,18 +21,32 @@ bot(
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
     if (!isImAdmin) return await message.send(lang.plugins.kick.not_admin)
-    let user = message.mention[0] || message.reply_message.jid
-    if (!user && match != 'all') return await message.send(lang.plugins.kick.mention_user)
-    const isUserAdmin = match != 'all' && (await isAdmin(participants, user))
-    if (isUserAdmin) return await message.send(lang.plugins.kick.admin)
-    if (match == 'all') {
-      user = participants.filter((member) => !member.admin == true).map(({ id }) => id)
+
+    let user = []
+    if (match === 'all') {
+      user = participants.filter((m) => !m.admin).map((m) => m.id)
+    } else if (message.mention.length) {
+      user = message.mention
+    } else if (message.reply_message) {
+      user = [message.reply_message.jid]
+    }
+
+    if (match !== 'all') {
+      const isAdminUser = await Promise.all(user.map((u) => isAdmin(participants, u)))
+      user = user.filter((_, i) => !isAdminUser[i])
+    }
+
+    if (user.length === 0) return await message.send(lang.plugins.kick.mention_user)
+
+    if (match === 'all') {
       await message.send(lang.plugins.kick.kicking_all.format(user.length))
       await sleep(10 * 1000)
     }
+
     await message.Kick(user)
+
     if (message.reply_message) {
-      await sleep(3000)
+      await sleep(3 * 1000)
       await message.send(message.reply_message.key, {}, 'delete')
     }
   }
@@ -71,10 +85,18 @@ bot(
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
     if (!isImAdmin) return await message.send(lang.plugins.promote.not_admin)
-    const user = message.mention[0] || message.reply_message.jid
-    if (!user) return await message.send(lang.plugins.promote.mention_user)
-    const isUserAdmin = await isAdmin(participants, user)
-    if (isUserAdmin) return await message.send(lang.plugins.promote.already_admin)
+
+    let user = []
+    if (message.mention.length) {
+      user = message.mention
+    } else if (message.reply_message) {
+      user = [message.reply_message.jid]
+    }
+
+    const isAdminUser = await Promise.all(user.map((u) => isAdmin(participants, u)))
+    user = user.filter((_, i) => !isAdminUser[i])
+    if (user.length === 0) return await message.send(lang.plugins.promote.already_admin)
+
     return await message.Promote(user)
   }
 )
@@ -90,10 +112,18 @@ bot(
     const participants = await message.groupMetadata(message.jid)
     const isImAdmin = await isAdmin(participants, message.client.user.jid)
     if (!isImAdmin) return await message.send(lang.plugins.demote.not_admin)
-    const user = message.mention[0] || message.reply_message.jid
-    if (!user) return await message.send(lang.plugins.demote.mention_user)
-    const isUserAdmin = await isAdmin(participants, user)
-    if (!isUserAdmin) return await message.send(lang.plugins.demote.not_admin_user)
+
+    let user = []
+    if (message.mention.length) {
+      user = message.mention
+    } else if (message.reply_message) {
+      user = [message.reply_message.jid]
+    }
+
+    const isAdminUser = await Promise.all(user.map((u) => isAdmin(participants, u)))
+    user = user.filter((_, i) => isAdminUser[i])
+    if (user.length === 0) return await message.send(lang.plugins.demote.not_admin_user)
+
     return await message.Demote(user)
   }
 )
