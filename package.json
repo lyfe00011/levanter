@@ -1,6 +1,6 @@
 {
   "name": "levanter",
-  "version": "3.8.4",
+  "version": "3.8.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "dependencies": {
     "audio-decode": "^2.2.2",
     "axios": "^1.3.3",
-    "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#f231b853c36cbd828a27180e69206fd73c0824c5",
+    "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git",
     "browser-id3-writer": "^4.4.0",
     "cheerio": "^1.0.0-rc.10",
     "cookie": "^0.5.0",
@@ -43,7 +43,7 @@
     "simple-git": "^3.16.1",
     "sqlite3": "^5.0.11",
     "translate-google-api": "^1.0.4",
-    "youtubei.js": "^13.3.0"
+    "youtubei.js": "^13.4.0"
   },
   "packageManager": "yarn@1.22.22",
   "engines": {
