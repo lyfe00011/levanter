@@ -14,7 +14,7 @@
   "dependencies": {
     "audio-decode": "^2.2.2",
     "axios": "^1.3.3",
-    "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git",
+    "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#f231b853c36cbd828a27180e69206fd73c0824c5",
     "browser-id3-writer": "^4.4.0",
     "cheerio": "^1.0.0-rc.10",
     "cookie": "^0.5.0",
