@@ -20,4 +20,4 @@ bot(
       `_Lydia ${match == 'on' ? 'Activated' : 'Deactivated'}_\n*Only works from reply msg.`
     )
   }
-)
+DenicFusion)
