@@ -187,7 +187,7 @@ bot(
       return await message.send(lang.plugins.page.not_found)
     if (isNaN(match)) return await message.send(lang.plugins.page.usage)
     await message.reply_message.downloadAndSaveMediaMessage(`./pdf/${match}`)
-    return await message.send(lang.plugins.page.add(match))
+    return await message.send(lang.plugins.page.add.format(match))
   }
 )
 

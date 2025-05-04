@@ -33,4 +33,21 @@ if (process.env.VPS) {
       }
     }
   )
+
+  bot(
+    {
+      pattern: 'gupload ?(.*)',
+      desc: 'Upload a file from URL directly to Google Drive.',
+      type: 'bot',
+    },
+    async (message, match) => {
+      const url = isUrl(match)
+      if (!url) {
+        return await message.send(
+          'please provide a valid URL.\nExample: `gupload https://example.com/file.zip`'
+        )
+      }
+      await backupFilesToDrive(url, message)
+    }
+  )
 }
