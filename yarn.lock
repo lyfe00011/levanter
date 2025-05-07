@@ -1041,7 +1041,7 @@ axios@^1.3.3, axios@^1.6.0:
 
 "baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git":
   version "6.7.9"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#a6ad22e87985b636e226badd7c6ad02f574190f2"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#0b43a48a18d449bd5f6b1f1feae9e0200b9a089b"
   dependencies:
     "@adiwajshing/keyed-db" "^0.2.4"
     "@cacheable/node-cache" "^1.4.0"
