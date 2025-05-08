@@ -30,6 +30,6 @@ bot(
       return await message.send(list.message, {}, list.type)
     }
 
-    await message.sendFromUrl(url)
+    await message.sendFromUrl(result)
   }
 )
