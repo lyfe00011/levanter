@@ -1,18 +1,20 @@
-name: Docker Image CI
-
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
-jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+SESSION_ID=levanter_8dd66215e021248719ba26175eb288180
+PREFIX=.
+STICKER_PACKNAME=LyFE
+ALWAYS_ONLINE=false
+RMBG_KEY=null
+LANGUAG=en
+BOT_LANG=en
+WARN_LIMIT=3
+FORCE_LOGOUT=false
+BRAINSHOP=159501,6pq8dPiYt7PdqHz3
+MAX_UPLOAD=200
+REJECT_CALL=false
+SUDO=989876543210
+TZ=Asia/Kolkata
+VPS=true
+AUTO_STATUS_VIEW=true
+SEND_READ=true
+AJOIN=true
+DISABLE_START_MESSAGE=false
+PERSONAL_MESSAGE=null
