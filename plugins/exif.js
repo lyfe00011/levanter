@@ -1,4 +1,4 @@
-const { bot, extractExif } = require('../lib/')
+iconst { bot, extractExif } = require('../lib/')
 
 bot(
   {
@@ -29,7 +29,7 @@ bot(
       `*Pack ID:* ${packId}\n` +
         `*Pack Name:* ${packname}\n` +
         `*Author:* ${author}\n` +
-        `*Emojis:* ${emojis}`,
+        `*Emojis:* ${💗}`,
       { quoted: message.quoted }
     )
   }
