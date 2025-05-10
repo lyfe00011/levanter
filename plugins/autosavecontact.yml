@@ -1,0 +1,14 @@
+```javascript
+module.exports = {
+  name: 'autosavecontact',
+  description: 'Automatically saves new contacts who message the bot',
+  event: 'message',
+  async run({ m, conn }) {
+    const sender = m.sender;
+    const contact = await conn.onWhatsApp(sender);
+    if (!contact || !contact.exists) {
+      await conn.sendMessage(sender, { text: 'ඔබේ අංකය සුරැකෙමින් පවතී...' });
+      await conn.sendContact(sender, sender);
+    }
+  }
+};
