@@ -1,0 +1,27 @@
+javascript
+module.exports = {
+  name: "setpublic",  // Plugin name
+  description: "Make bot public",  // Description of the plugin
+  execute(message, args) {
+    if (args[0] === "enable") {
+      // Command to make the bot public
+      setPublic(true);
+      message.channel.send("The bot is now public!");
+    } else if (args[0] === "disable") {
+      // Command to disable public access
+      setPublic(false);
+      message.channel.send("The bot is now private!");
+    } else {
+      message.channel.send("Please specify either 'enable' or 'disable' to toggle public access.");
+    }
+  }
+};
+
+function setPublic(status) {
+  // Logic to toggle the bot's public setting
+  if (status) {
+    console.log("Bot is now public!");
+  } else {
+    console.log("Bot is now private!");
+  }
+}
