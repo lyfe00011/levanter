@@ -1,9 +1,9 @@
 {
   "session1": {
-    "SESSION_ID": "levanter_sessionid",
+    "SESSION_ID": "levanter_19b6ff89a022c64b86b962349b7fbe3da6",
     "PREFIX": "^[.,!]",
-    "SUDO": "0",
-    "STICKER_PACKNAME": "❤️,LyFE",
+    "SUDO": "1",
+    "STICKER_PACKNAME": "❤️,",
     "ALWAYS_ONLINE": "false",
     "RMBG_KEY": "null",
     "WARN_LIMIT": "3",
@@ -14,13 +14,13 @@
     "ANTIWORDS_MSG": "_AntiWord Detected &mention kicked_",
     "ANTIWORDS": "word",
     "REJECT_CALL": "false",
-    "AUTO_STATUS_VIEW": "false",
+    "AUTO_STATUS_VIEW": "true",
     "SEND_READ": "false",
-    "AJOIN": "false",
+    "AJOIN": "true",
     "GPT": "free",
     "MODEL": "gpt-3.5-turbo",
     "ANTI_DELETE": "null",
-    "PERSONAL_MESSAGE": "null",
+    "PERSONAL_MESSAGE": "true",
     "DISABLE_START_MESSAGE": "false",
     "WARN_MESSAGE": "⚠️WARNING⚠️\n*User :* &mention\n*Warn :* &warn\n*Remaining :* &remaining",
     "WARN_RESET_MESSAGE": "WARN RESET\nUser : &mention\nRemaining : &remaining\nWARN_KICK_MESSAGE=&mention kicked",
@@ -33,11 +33,11 @@
     "CMD_REACTION": "true"
   },
   "session2": {
-    "SESSION_ID": "levanter_sessionid",
+    "SESSION_ID": "levanter_19b6ff89a022c64b86b962349b7fbe3da6",
     "PREFIX": "null"
   },
   "session3": {
-    "SESSION_ID": "levanter_sessionid",
-    "PREFIX": ".."
+    "SESSION_ID": "levanter_19b6ff89a022c64b86b962349b7fbe3da6",
+    "PREFIX": ".null."
   }
 }
