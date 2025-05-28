@@ -158,12 +158,12 @@
     },
     "greetings": {
       "welcome_desc": "Yeni üyelere hoş geldiniz mesajı gönder",
-      "welcome_example": "Hoş geldiniz şu anda {0}\n\nDaha fazla detay için: https://levanter-plugins.vercel.app/faq",
+      "welcome_example": "Hoş geldiniz şu anda {0}\n\nDaha fazla detay için: https://levanter-delta.vercel.app/",
       "welcome_enable": "_Hoş geldiniz şimdi etkin_",
       "welcome_disable": "_Hoş geldiniz şimdi devre dışı_",
       "welcome_delete": "_Hoş geldiniz mesajı silindi_",
       "goodbye_desc": "Üyelere elveda mesajı gönder",
-      "goodbye_example": "Elveda şu anda {0}\n\nDaha fazla detay için: https://levanter-plugins.vercel.app/faq",
+      "goodbye_example": "Elveda şu anda {0}\n\nDaha fazla detay için: https://levanter-delta.vercel.app/",
       "goodbye_enable": "_Elveda şimdi etkin_",
       "goodbye_disable": "_Elveda şimdi devre dışı_",
       "goodbye_delete": "_Elveda mesajı silindi_"
@@ -358,7 +358,7 @@
       "usage": "Örnek: mention on | off | get\n(Bir mesaja cevap vererek belirli bir kullanıcıyı hedefleyin.)",
       "desc": "Otomatik cevaplar için bahsetme özelliğini yapılandırın ve yönetin",
       "not_activated": "Cevap verme bahsetmesi etkinleştirilmedi.",
-      "current_status": "Bahsetme {0}. Daha fazla detay için: https://levanter-plugins.vercel.app/faq",
+      "current_status": "Bahsetme {0}. Daha fazla detay için: https://levanter-delta.vercel.app/",
       "activated": "Cevap verme bahsetmesi etkinleştirildi.",
       "deactivated": "Cevap verme bahsetmesi devre dışı bırakıldı.",
       "updated": "Bahsetme ayarları güncellendi."

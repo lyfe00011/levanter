@@ -158,12 +158,12 @@
     },
     "greetings": {
       "welcome_desc": "*_New members ko welcome message bhejein ✨_*",
-      "welcome_example": "_Welcome abhi tak hai {0}\n\nAbi ky liye, visit: https://levanter-plugins.vercel.app/faq_",
+      "welcome_example": "_Welcome abhi tak hai {0}\n\nAbi ky liye, visit: https://levanter-delta.vercel.app/_",
       "welcome_enable": "_Welcome abhi on hai_",
       "welcome_disable": "_Welcome abhi off hai_",
       "welcome_delete": "_Welcome message delete kar diya gaya hai_",
       "goodbye_desc": "*_Members ko goodbye message bhejein._*",
-      "goodbye_example": "*Goodbye abhi tak hai {0}\n\nAbhi ky liye, visit: https://levanter-plugins.vercel.app/faq*",
+      "goodbye_example": "*Goodbye abhi tak hai {0}\n\nAbhi ky liye, visit: https://levanter-delta.vercel.app/*",
       "goodbye_enable": "_Goodbye abhi on hai_",
       "goodbye_disable": "_Goodbye abhi off hai_",
       "goodbye_delete": "_Goodbye message delete kar diya gaya hai_"
@@ -358,7 +358,7 @@
       "usage": "*Misal:* _mention chalu | band | hasil karein (Kisi paighaam ka jawab dein taake aik khas shakhs ko nishana banaya ja sake.)_",
       "desc": "_Mention ka intizami aur moattali jawab ka nizam banayein_",
       "not_activated": "*_Reply-to mention band hai._*",
-      "current_status": "_Mention hai {0}. Tafseelat ke liye dekhein: https://levanter-plugins.vercel.app/faq_",
+      "current_status": "_Mention hai {0}. Tafseelat ke liye dekhein: https://levanter-delta.vercel.app/_",
       "activated": "*_Reply-to mention active kar diya gaya hai._*",
       "deactivated": "_Reply-to mention band kar diya gaya hai_",
       "updated": "*_mention ki settings update kar di gayi hain._*"

@@ -158,12 +158,12 @@
     },
     "greetings": {
       "welcome_desc": "Envoyer un message de bienvenue aux nouveaux membres",
-      "welcome_example": "Le bienvenue est actuellement {0}\n\nPour plus de détails, visitez : https://levanter-plugins.vercel.app/faq",
+      "welcome_example": "Le bienvenue est actuellement {0}\n\nPour plus de détails, visitez : https://levanter-delta.vercel.app/",
       "welcome_enable": "_Le bienvenue est maintenant activé_",
       "welcome_disable": "_Le bienvenue est maintenant désactivé_",
       "welcome_delete": "_Message de bienvenue supprimé_",
       "goodbye_desc": "Envoyer un message d'au revoir aux membres",
-      "goodbye_example": "L'au revoir est actuellement {0}\n\nPour plus de détails, visitez : https://levanter-plugins.vercel.app/faq",
+      "goodbye_example": "L'au revoir est actuellement {0}\n\nPour plus de détails, visitez : https://levanter-delta.vercel.app/",
       "goodbye_enable": "_L'au revoir est maintenant activé_",
       "goodbye_disable": "_L'au revoir est maintenant désactivé_",
       "goodbye_delete": "_Message d'au revoir supprimé_"
@@ -358,7 +358,7 @@
       "usage": "Exemple : mention on | off | get\n(Répondre à un message pour cibler un utilisateur spécifique.)",
       "desc": "Configurer et gérer la fonctionnalité de mention pour des réponses automatisées.",
       "not_activated": "Réponse à la mention non activée.",
-      "current_status": "La mention est {0}. Pour plus de détails, visitez : https://levanter-plugins.vercel.app/faq",
+      "current_status": "La mention est {0}. Pour plus de détails, visitez : https://levanter-delta.vercel.app/",
       "activated": "Réponse à la mention activée.",
       "deactivated": "Réponse à la mention désactivée.",
       "updated": "Paramètres de mention mis à jour."

@@ -158,12 +158,12 @@
     },
     "greetings": {
       "welcome_desc": "New members ko welcome message bhejo",
-      "welcome_example": "Welcome abhi {0} hai\n\nZyada details ke liye, yahan jayein: https://levanter-plugins.vercel.app/faq",
+      "welcome_example": "Welcome abhi {0} hai\n\nZyada details ke liye, yahan jayein: https://levanter-delta.vercel.app/",
       "welcome_enable": "_Welcome ab enable ho gaya_",
       "welcome_disable": "_Welcome ab disable ho gaya_",
       "welcome_delete": "_Welcome message delete ho gaya_",
       "goodbye_desc": "Members ko goodbye message bhejo",
-      "goodbye_example": "Goodbye abhi {0} hai\n\nZyada details ke liye, yahan jayein: https://levanter-plugins.vercel.app/faq",
+      "goodbye_example": "Goodbye abhi {0} hai\n\nZyada details ke liye, yahan jayein: https://levanter-delta.vercel.app/",
       "goodbye_enable": "_Goodbye ab enable ho gaya_",
       "goodbye_disable": "_Goodbye ab disable ho gaya_",
       "goodbye_delete": "_Goodbye message delete ho gaya_"
@@ -358,7 +358,7 @@
       "usage": "Example: mention on | off | get\n(Kisi message ko reply karke specific user ko target karo.)",
       "desc": "Automated replies ke liye mention feature ko configure aur manage karo.",
       "not_activated": "Reply-to mention activate nahi hai.",
-      "current_status": "Mention {0} hai. Details ke liye, yahaan jaayein: https://levanter-plugins.vercel.app/faq",
+      "current_status": "Mention {0} hai. Details ke liye, yahaan jaayein: https://levanter-delta.vercel.app/",
       "activated": "Reply-to mention activate ho gaya.",
       "deactivated": "Reply-to mention deactivate ho gaya.",
       "updated": "Mention settings update ho gayi."

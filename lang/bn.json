@@ -158,12 +158,12 @@
     },
     "greetings": {
       "welcome_desc": "নতুন মেম্বারদের জন্য ওয়েলকাম মেসেজ পাঠান",
-      "welcome_example": "ওয়েলকাম বর্তমানে {0}\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://levanter-plugins.vercel.app/faq",
+      "welcome_example": "ওয়েলকাম বর্তমানে {0}\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://levanter-delta.vercel.app/",
       "welcome_enable": "ওয়েলকাম এখন চালু করা হয়েছে",
       "welcome_disable": "ওয়েলকাম এখন বন্ধ করা হয়েছে",
       "welcome_delete": "ওয়েলকাম মেসেজ ডিলিট করা হয়েছে",
       "goodbye_desc": "মেম্বারদের জন্য গুডবাই মেসেজ পাঠান",
-      "goodbye_example": "গুডবাই বর্তমানে {0}\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://levanter-plugins.vercel.app/faq",
+      "goodbye_example": "গুডবাই বর্তমানে {0}\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://levanter-delta.vercel.app/",
       "goodbye_enable": "গুডবাই এখন চালু করা হয়েছে",
       "goodbye_disable": "গুডবাই এখন বন্ধ করা হয়েছে",
       "goodbye_delete": "গুডবাই মেসেজ ডিলিট করা হয়েছে"
@@ -358,7 +358,7 @@
       "usage": "উদাহরণ: mention on | off | get\n(একটি মেসেজ রিপ্লাই করে স্পেসিফিক ইউজার টার্গেট করুন।)",
       "desc": "অটোমেটেড রিপ্লাইয়ের জন্য মেনশন ফিচার কনফিগার করুন।",
       "not_activated": "মেনশন রিপ্লাই অ্যাক্টিভেট করা নেই।",
-      "current_status": "মেনশন {0}। বিস্তারিত জানতে ভিজিট করুন: https://levanter-plugins.vercel.app/faq",
+      "current_status": "মেনশন {0}। বিস্তারিত জানতে ভিজিট করুন: https://levanter-delta.vercel.app/",
       "activated": "মেনশন রিপ্লাই অ্যাক্টিভেট করা হয়েছে।",
       "deactivated": "মেনশন রিপ্লাই ডিএক্টিভেট করা হয়েছে।",
       "updated": "মেনশন সেটিংস আপডেট করা হয়েছে।"

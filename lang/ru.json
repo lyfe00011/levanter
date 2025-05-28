@@ -158,12 +158,12 @@
     },
     "greetings": {
       "welcome_desc": "Отправить приветственное сообщение новым участникам",
-      "welcome_example": "Приветствие сейчас {0}\n\nДля подробностей посетите: https://levanter-plugins.vercel.app/faq",
+      "welcome_example": "Приветствие сейчас {0}\n\nДля подробностей посетите: https://levanter-delta.vercel.app/",
       "welcome_enable": "_Приветствие теперь включено_",
       "welcome_disable": "_Приветствие теперь отключено_",
       "welcome_delete": "_Приветственное сообщение удалено_",
       "goodbye_desc": "Отправить прощальное сообщение участникам",
-      "goodbye_example": "Прощание сейчас {0}\n\nДля подробностей посетите: https://levanter-plugins.vercel.app/faq",
+      "goodbye_example": "Прощание сейчас {0}\n\nДля подробностей посетите: https://levanter-delta.vercel.app/",
       "goodbye_enable": "_Прощание теперь включено_",
       "goodbye_disable": "_Прощание теперь отключено_",
       "goodbye_delete": "_Прощальное сообщение удалено_"
@@ -358,7 +358,7 @@
       "usage": "Пример: mention on | off | get\n(Ответьте на сообщение, чтобы настроить для конкретного пользователя.)",
       "desc": "Настроить и управлять функцией упоминания для автоматических ответов.",
       "not_activated": "Ответ на упоминание не активирован.",
-      "current_status": "Упоминание сейчас {0}. Для подробностей посетите: https://levanter-plugins.vercel.app/faq",
+      "current_status": "Упоминание сейчас {0}. Для подробностей посетите: https://levanter-delta.vercel.app/",
       "activated": "Ответ на упоминание активирован.",
       "deactivated": "Ответ на упоминание деактивирован.",
       "updated": "Настройки упоминания обновлены."

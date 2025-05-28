@@ -158,12 +158,12 @@
     },
     "greetings": {
       "welcome_desc": "Kirim pesan selamat datang ke anggota baru",
-      "welcome_example": "Selamat datang saat ini {0}\n\nUntuk detail lebih lanjut, kunjungi: https://levanter-plugins.vercel.app/faq",
+      "welcome_example": "Selamat datang saat ini {0}\n\nUntuk detail lebih lanjut, kunjungi: https://levanter-delta.vercel.app/",
       "welcome_enable": "_Selamat datang sekarang diaktifkan_",
       "welcome_disable": "_Selamat datang sekarang dinonaktifkan_",
       "welcome_delete": "_Pesan selamat datang dihapus_",
       "goodbye_desc": "Kirim pesan selamat tinggal ke anggota",
-      "goodbye_example": "Selamat tinggal saat ini {0}\n\nUntuk detail lebih lanjut, kunjungi: https://levanter-plugins.vercel.app/faq",
+      "goodbye_example": "Selamat tinggal saat ini {0}\n\nUntuk detail lebih lanjut, kunjungi: https://levanter-delta.vercel.app/",
       "goodbye_enable": "_Selamat tinggal sekarang diaktifkan_",
       "goodbye_disable": "_Selamat tinggal sekarang dinonaktifkan_",
       "goodbye_delete": "_Pesan selamat tinggal dihapus_"
@@ -358,7 +358,7 @@
       "usage": "Contoh: mention on | off | get\n(Balas ke pesan untuk menargetkan pengguna tertentu.)",
       "desc": "Konfigurasi dan kelola fitur mention untuk balasan otomatis.",
       "not_activated": "Balasan ke mention tidak diaktifkan.",
-      "current_status": "Mention adalah {0}. Untuk detail, kunjungi: https://levanter-plugins.vercel.app/faq",
+      "current_status": "Mention adalah {0}. Untuk detail, kunjungi: https://levanter-delta.vercel.app/",
       "activated": "Balasan ke mention diaktifkan.",
       "deactivated": "Balasan ke mention dinonaktifkan.",
       "updated": "Pengaturan mention diperbarui."

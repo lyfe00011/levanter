@@ -158,12 +158,12 @@
     },
     "greetings": {
       "welcome_desc": "Envia Mensaje de Bienvenida a Nuevos Miembros",
-      "welcome_example": "Mensaje Actual: {0}\n\nPara mas detalles ve a: https://levanter-plugins.vercel.app/faq",
+      "welcome_example": "Mensaje Actual: {0}\n\nPara mas detalles ve a: https://levanter-delta.vercel.app/",
       "welcome_enable": "✅ _Bienvenida Activada_",
       "welcome_disable": "📴 _La Bienvenida Ahora esta Desactivada_",
       "welcome_delete": "_Mensaje de Bienvenida Borrada_",
       "goodbye_desc": "Envia Mensaje de Despedida a Miembros que Abandonan",
-      "goodbye_example": "El mensaje de despedida Actual es: {0}\n\nPara mas detalles ve a: https://levanter-plugins.vercel.app/faq",
+      "goodbye_example": "El mensaje de despedida Actual es: {0}\n\nPara mas detalles ve a: https://levanter-delta.vercel.app/",
       "goodbye_enable": "✅ _Despedida Activada_",
       "goodbye_disable": "📴 _La Despedida Ahora esta Desactivada_",
       "goodbye_delete": "_Mensaje de Despedida Borrado_"
@@ -358,7 +358,7 @@
       "usage": "Ejemplo: mention on | off | get\n(Reply to a message to target a specific user.)",
       "desc": "Configurar la función de mención para responder automaticamente cuando mencionan al bot.",
       "not_activated": "Responder a Mencion no esta Activado",
-      "current_status": "La mencion es {0}. Para mas detalles visita: https://levanter-plugins.vercel.app/faq",
+      "current_status": "La mencion es {0}. Para mas detalles visita: https://levanter-delta.vercel.app/",
       "activated": "Responder a Mencion ha sido Activado.",
       "deactivated": "Responder a Mencion ha sido Desactivado.",
       "updated": "Preferencias de Mencion Actualizados."

@@ -24,6 +24,7 @@ This bot supports multiple languages for responses. Set your preferred language 
 - **tr** – Turkish  
 - **fr** – French  
 - **ru** – Russian  
+- **ar** – Arabic  
 
 To set the bot language to Spanish, add the following line to your `config.env` file:
 
@@ -138,5 +139,5 @@ A special thanks to:
 
 For more information on setting up environment variables and FAQs, please visit:
 
-- [Bot Environment Variables](https://levanter-plugins.vercel.app/env)  
-- [Frequently Asked Questions](https://levanter-plugins.vercel.app/faq)
+- [Bot Environment Variables](https://levanter-delta.vercel.app/)  
+- [Frequently Asked Questions](https://levanter-delta.vercel.app/)
