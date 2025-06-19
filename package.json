@@ -1,6 +1,6 @@
 {
   "name": "levanter",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -43,7 +43,7 @@
     "simple-git": "^3.16.1",
     "sqlite3": "^5.0.11",
     "translate-google-api": "^1.0.4",
-    "youtubei.js": "^13.4.0"
+    "youtubei.js": "^14.0.0"
   },
   "packageManager": "yarn@1.22.22",
   "engines": {
