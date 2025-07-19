@@ -716,11 +716,11 @@
       "updated": "Bot berhasil diperbarui!"
     },
     "antigm": {
-      "usage": "> Usage:\n- antigm <on|off> — Enable or disable anti group mention\n- antigm <delete|warn|kick> — Set action when someone mentions the group\n- antigm ignore <jid,jid,jid,...> — Ignore anti group mention from specific groups",
-      "action": "Action updated: group mentions will now result in *{0}*.",
-      "filter": "Ignore JIDs updated for anti group mention.",
-      "enabled": "Anti group mention has been enabled.",
-      "disabled": "Anti group mention has been disabled."
+      "usage": "> Cara Pakai:\n- antigm <on|off> — Aktifkan atau nonaktifkan anti-sebutan grup\n- antigm <delete|warn|kick> — Atur tindakan ketika seseorang menyebut grup\n- antigm ignore <jid,jid,jid,...> — Abaikan anti-sebutan grup dari grup tertentu",
+      "action": "Tindakan diperbarui: sebutan grup sekarang akan menghasilkan *{0}*.",
+      "filter": "JID yang diabaikan diperbarui untuk anti-sebutan grup.",
+      "enabled": "Anti-sebutan grup telah diaktifkan.",
+      "disabled": "Anti-sebutan grup telah dinonaktifkan."
     }
   }
 }
