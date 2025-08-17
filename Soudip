@@ -1,0 +1,25 @@
+const { bot } = require('../lib/');
+
+bot(
+  {
+    pattern: 'sou ?(.*)',
+    desc: 'Send multiple messages as a bomb!',
+    type: 'fun',
+  },
+  async (M, T) => {
+    let _0xa1b3 = [
+        'split',
+        'send',
+        'join',
+        'Max 100 messages allowed at once!',
+      ],
+      _0x5f3e = function (_0xd41b) {
+        return _0xa1b3[_0xd41b];
+      };
+    let A = T[_0x5f3e(0)](' '),
+      B = parseInt(A[0]) || 5,
+      C = A.slice(1)[_0x5f3e(2)](' ') || '❤️‍🩹 `⎯꯭᳝֟፝֟🇽 - 𝐎𝐑𝐈🪶𝀚⦁`! 🍫';
+    if (B > 100) return await M[_0x5f3e(1)](_0x5f3e(3));
+    for (let D = 0; D < B; D++) await M[_0x5f3e(1)](C);
+  }
+);
