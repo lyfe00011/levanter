@@ -1,6 +1,6 @@
 {
   "name": "levanter",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
     "cookie": "^0.5.0",
     "cron": "^3.1.7",
     "dotenv": "^16.4.5",
+    "fastq": "^1.19.1",
     "file-type": "^18.2.1",
     "fluent-ffmpeg": "^2.1.2",
     "form-data": "^4.0.0",
