@@ -1,13 +1,10 @@
 {
   "name": "levanter",
   "version": "4.1.3",
-  "description": "",
+  "description": "Levanter WhatsApp userbot (Render-compatible)",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start . --attach --name levanter",
-    "docker": "pm2-runtime start . --name levanter",
-    "stop": "pm2 stop levanter",
-    "postinstall": "node -e \"try { require('sharp') } catch (e) { process.exit(1); }\" || yarn add --ignore-engines sharp@0.33.5"
+    "start": "node index.js"
   },
   "author": "",
   "license": "MIT",
@@ -36,7 +33,6 @@
     "pdfkit": "^0.13.0",
     "pg": "^8.7.3",
     "pino-pretty": "^9.1.1",
-    "pm2": "^6.0.8",
     "qrcode-reader": "^1.0.4",
     "qrcode-terminal": "^0.12.0",
     "sequelize": "^6.21.4",
