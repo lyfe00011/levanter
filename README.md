@@ -29,7 +29,7 @@ This bot supports multiple languages for responses. Set your preferred language 
 To set the bot language to Spanish, add the following line to your `config.env` file:
 
 ```env
-BOT_LANG=es
+BOT_LANG=fr
 ```
 ---
 
