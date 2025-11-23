@@ -43,11 +43,24 @@
       "desc": "Afficher le message de statut de vie du bot avec un texte personnalisé optionnel."
     },
     "antifake": {
-      "example": "*Statut Antifake :* {0}\n\n> *Exemples d'utilisation :*\n- *antifake list* - Voir les codes de pays\n- *antifake !91,1* - Autoriser/Interdire des codes de pays spécifiques\n- *antifake on | off* - Activer/Désactiver antifake",
+      "example": "*Statut Antifake :* {0}\n\n> *Exemples d'utilisation :*\n- *antifake list* - Voir les codes de pays\n- *antifake add 91,1* - Ajouter des codes de pays à la liste autorisée\n- *antifake remove 91,1* - Supprimer des codes de pays de la liste autorisée\n- *antifake on | off* - Activer/Désactiver antifake",
       "desc": "Activer ou configurer le numéro anti-faux",
       "not": "Aucun code de pays à lister.",
       "status": "Antifake est maintenant *{0}*.",
-      "update": "> Antifake mis à jour\n*Autorisé :* {0}\n*Non autorisé :* {1}"
+      "update": "> Antifake mis à jour\n*Autorisé :* {0}\n*Non autorisé :* {1}",
+      "allow_prompt": "*Please provide country codes to allow (whitelist mode)*\n_Example: antifake allow 1,91_",
+      "disallow_prompt": "*Please provide country codes to disallow (blacklist mode)*\n_Example: antifake disallow 92,93_",
+      "remove_prompt": "*Please provide country codes to remove*\n_Example: antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Blacklist Mode. Use `antifake clear` first to switch to Whitelist Mode._",
+      "mode_conflict_blacklist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Whitelist Mode. Use `antifake clear` first to switch to Blacklist Mode._",
+      "whitelist_success": "*✅ Allowed country codes (Whitelist Mode):*\n{0}\n\n_These codes will be allowed, all others will be blocked._",
+      "blacklist_success": "*🚫 Disallowed country codes (Blacklist Mode):*\n{0}\n\n_These codes will be blocked, all others will be allowed._",
+      "removed": "*Removed country codes:*\n{0}",
+      "cleared": "*🗑️ Antifake list cleared and disabled*",
+      "whitelist_mode": "🟢 Whitelist Mode (Allow Only)",
+      "blacklist_mode": "🔴 Blacklist Mode (Block Only)",
+      "enabled": "enabled",
+      "disabled": "disabled"
     },
     "antilink": {
       "desc": "Activer ou configurer l'anti-lien",
@@ -58,13 +71,20 @@
       "action_invalid": "*Action spécifiée invalide.*",
       "action_update": "Action de l'anti-lien mise à jour à : *{0}*",
       "update": "> Anti-lien mis à jour\n*Autorisé :* {0}\n*Non autorisé :* {1}",
-      "example": "Statut de l'anti-lien : *{0}*\n\n> Exemples d'utilisation :\n- antilink info - Voir les paramètres actuels\n- antilink whatsapp.com - Autoriser des URLs spécifiques\n- antilink on | off - Activer/Désactiver l'anti-lien\n- antilink action/<kick | warn | null> - Définir l'action pour les liens"
+      "example": "Statut de l'anti-lien : *{0}*\n\n> Exemples d'utilisation :\n- antilink list - Voir les paramètres actuels\n- antilink allow whatsapp.com - Autoriser des URLs spécifiques\n- antilink disallow facebook.com - Interdire des URLs spécifiques\n- antilink on | off - Activer/Désactiver l'anti-lien\n- antilink kick | warn | null - Définir l'action pour les liens"
     },
     "antiword": {
       "desc": "Filtrer des mots spécifiques dans le chat de groupe",
-      "example": "Statut AntiWord : {0}\n> *Exemples d'utilisation :*\n- antiword action/<kick | warn | null>* - Définir l'action pour les violations\n- antiword on | off - Activer/Désactiver le filtrage des mots\n- setvar ANTIWORDS:mot1,mot2,... - Définir les mots bloqués",
+      "example": "Statut AntiWord : {0}\n> *Exemples d'utilisation :*\n- antiword kick | warn | null - Définir l'action pour les violations\n- antiword on | off - Activer/Désactiver le filtrage des mots\n- antiword add mot1,mot2 - Ajouter des mots à la liste de blocage\n- antiword remove mot1,mot2 - Supprimer des mots de la liste de blocage\n- antiword list - Voir les mots bloqués",
       "action_update": "Action AntiWord mise à jour à : *{0}*",
-      "status": "AntiWord est maintenant *{0}*."
+      "status": "AntiWord est maintenant *{0}*.",
+      "add_prompt": "*Veuillez fournir des mots à ajouter.*",
+      "added": "*Mots ajoutés :*\n{0}",
+      "remove_prompt": "*Veuillez fournir des mots à supprimer.*",
+      "removed": "*Mots supprimés :*\n{0}",
+      "no_words": "*Aucun mot défini.*",
+      "info": "*Statut AntiWord :* {0}\n*Action :* {1}\n\n*Mots :* {2}",
+      "cleared": "*Liste AntiWord effacée.*"
     },
     "apk": {
       "desc": "Télécharger un APK depuis APKMirror",
@@ -565,10 +585,20 @@
       "deleted": "Programmation supprimée."
     },
     "antispam": {
-      "usage": "Utilisation : antispam on | off",
-      "desc": "Activer ou désactiver la fonctionnalité AntiSpam pour le groupe.",
-      "activated": "AntiSpam activé.",
-      "deactivated": "AntiSpam désactivé."
+      "desc": "Manage antispam protection with configurable levels",
+      "usage": "Use: antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *Antispam Status*\n\n🔴 Disabled\n\nUse `antispam on` to enable protection",
+      "info_status": "📊 *Antispam Status*\n\n{status}\nLevel: {level}\nAction: {action}",
+      "deactivated": "⚠️ *Antispam Protection Disabled*\n\nSpam detection is now OFF",
+      "activated": "✅ *Antispam Protection Enabled*\n\nLevel: {level} ({description})\nAction: {action}",
+      "level_set": "✅ *Level Changed*\n\nNew level: {level}",
+      "action_set": "✅ *Action Changed*\n\nSpammers will be: {action_desc}",
+      "invalid_level": "❌ Invalid level. Use: low, medium, high",
+      "help": "📖 *Antispam Help*\n\n*Commands:*\n• `antispam on` - Enable (default: medium)\n• `antispam off` - Disable\n• `antispam <low/medium/high>` - Change sensitivity\n• `antispam <warn/delete/kick>` - Change action\n• `antispam info` - View current settings\n\n*Levels:*\n• Low - Relaxed (active groups)\n• Medium - Balanced (recommended)\n• High - Strict (problem groups)",
+      "spam_warning": "⚠️ @{mention} Stop spamming!",
+      "action_warn": "warned (not kicked)",
+      "action_delete": "messages deleted only",
+      "action_kick": "kicked from group"
     },
     "sticker": {
       "desc": "Convertir une image ou une vidéo en autocollant. Répondez à un message image ou vidéo pour générer un autocollant.",
@@ -716,11 +746,11 @@
       "updated": "Le bot a été mis à jour avec succès !"
     },
     "antigm": {
-      "usage": "> Usage:\n- antigm <on|off> — Enable or disable anti group mention\n- antigm <delete|warn|kick> — Set action when someone mentions the group\n- antigm ignore <jid,jid,jid,...> — Ignore anti group mention from specific groups",
-      "action": "Action updated: group mentions will now result in *{0}*.",
-      "filter": "Ignore JIDs updated for anti group mention.",
-      "enabled": "Anti group mention has been enabled.",
-      "disabled": "Anti group mention has been disabled."
+      "usage": "> Utilisation :\n- antigm on | off — Activer ou désactiver l'anti mention de groupe\n- antigm delete | warn | kick — Définir l'action lorsque quelqu'un mentionne le groupe\n- antigm ignore jid,jid,... — Ignorer l'anti mention de groupe pour des groupes spécifiques",
+      "action": "Action mise à jour : les mentions de groupe entraîneront désormais *{0}*.",
+      "filter": "JIDs ignorés mis à jour pour l'anti mention de groupe.",
+      "enabled": "L'anti mention de groupe a été activé.",
+      "disabled": "L'anti mention de groupe a été désactivé."
     }
   }
 }

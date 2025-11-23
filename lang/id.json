@@ -43,28 +43,48 @@
       "desc": "Menampilkan pesan status hidup bot dengan teks kustom opsional."
     },
     "antifake": {
-      "example": "*Status Antifake:* {0}\n\n> *Contoh Penggunaan:*\n- *antifake list* - Lihat kode negara\n- *antifake !91,1* - Izinkan/Tidak izinkan kode negara tertentu\n- *antifake on | off* - Aktifkan/Nonaktifkan antifake",
+      "example": "*Status Antifake:* {0}\n\n> *Contoh Penggunaan:*\n- *antifake list* - Lihat kode negara\n- *antifake add 91,1* - Tambahkan kode negara ke daftar izin\n- *antifake remove 91,1* - Hapus kode negara dari daftar izin\n- *antifake on | off* - Aktifkan/Nonaktifkan antifake",
       "desc": "Aktifkan atau konfigurasi anti-nomor palsu",
       "not": "Tidak ada kode negara yang ditampilkan.",
       "status": "Antifake sekarang *{0}*.",
-      "update": "> Antifake Diperbarui\n*Diizinkan:* {0}\n*Tidak Diizinkan:* {1}"
+      "update": "> Antifake Diperbarui\n*Diizinkan:* {0}\n*Tidak Diizinkan:* {1}",
+      "allow_prompt": "*Please provide country codes to allow (whitelist mode)*\n_Example: antifake allow 1,91_",
+      "disallow_prompt": "*Please provide country codes to disallow (blacklist mode)*\n_Example: antifake disallow 92,93_",
+      "remove_prompt": "*Please provide country codes to remove*\n_Example: antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Blacklist Mode. Use `antifake clear` first to switch to Whitelist Mode._",
+      "mode_conflict_blacklist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Whitelist Mode. Use `antifake clear` first to switch to Blacklist Mode._",
+      "whitelist_success": "*✅ Allowed country codes (Whitelist Mode):*\n{0}\n\n_These codes will be allowed, all others will be blocked._",
+      "blacklist_success": "*🚫 Disallowed country codes (Blacklist Mode):*\n{0}\n\n_These codes will be blocked, all others will be allowed._",
+      "removed": "*Removed country codes:*\n{0}",
+      "cleared": "*🗑️ Antifake list cleared and disabled*",
+      "whitelist_mode": "🟢 Whitelist Mode (Allow Only)",
+      "blacklist_mode": "🔴 Blacklist Mode (Block Only)",
+      "enabled": "enabled",
+      "disabled": "disabled"
     },
     "antilink": {
       "desc": "Aktifkan atau konfigurasi anti-link",
       "disable": "_Antilink sudah dinonaktifkan._",
       "antilink_notset": "Antilink belum dikonfigurasi.",
       "status": "Antilink sekarang *{0}*.",
-      "info": "`> Status Antilink: {0}\n*URL yang Diizinkan:* {1}\n *Aksi :* {2}",
+      "info": "> Status Antilink: {0}\n*URL yang Diizinkan:* {1}\n *Aksi :* {2}",
       "action_invalid": "*Aksi yang dimasukkan tidak valid.*",
       "action_update": "Aksi Antilink diperbarui menjadi: *{0}*",
       "update": "> Antilink Diperbarui\n*Diizinkan:* {0}\n*Tidak Diizinkan:* {1}",
-      "example": "Status Antilink: *{0}*\n\n> Contoh Penggunaan:\n- antilink info - Lihat pengaturan saat ini\n- antilink whatsapp.com - Izinkan URL tertentu\n- antilink on | off - Aktifkan/Nonaktifkan antilink\n- antilink action/<kick | warn | null> - Atur aksi untuk link"
+      "example": "Status Antilink: *{0}*\n\n> Contoh Penggunaan:\n- antilink list - Lihat pengaturan saat ini\n- antilink allow whatsapp.com - Izinkan URL tertentu\n- antilink disallow facebook.com - Larang URL tertentu\n- antilink on | off - Aktifkan/Nonaktifkan antilink\n- antilink kick | warn | null - Atur aksi untuk link"
     },
     "antiword": {
       "desc": "Filter kata-kata tertentu di grup chat",
-      "example": "`Status AntiWord: {0}\n> *Contoh Penggunaan:*\n- antiword action/<kick | warn | null>* - Atur aksi untuk pelanggaran\n- antiword on | off - Aktifkan/Nonaktifkan filter kata\n- setvar ANTIWORDS:word1,word2,... - Tentukan kata yang diblokir",
+      "example": "Status AntiWord: {0}\n> *Contoh Penggunaan:*\n- antiword kick | warn | null - Atur aksi untuk pelanggaran\n- antiword on | off - Aktifkan/Nonaktifkan filter kata\n- antiword add word1,word2 - Tambahkan kata ke daftar blokir\n- antiword remove word1,word2 - Hapus kata dari daftar blokir\n- antiword list - Lihat kata yang diblokir",
       "action_update": "Aksi AntiWord diperbarui menjadi: *{0}*",
-      "status": "AntiWord sekarang *{0}*."
+      "status": "AntiWord sekarang *{0}*.",
+      "add_prompt": "*Silakan berikan kata-kata untuk ditambahkan.*",
+      "added": "*Kata-kata ditambahkan:*\n{0}",
+      "remove_prompt": "*Silakan berikan kata-kata untuk dihapus.*",
+      "removed": "*Kata-kata dihapus:*\n{0}",
+      "no_words": "*Tidak ada kata yang ditetapkan.*",
+      "info": "*Status AntiWord:* {0}\n*Aksi:* {1}\n\n*Kata:* {2}",
+      "cleared": "*Daftar AntiWord dibersihkan.*"
     },
     "apk": {
       "desc": "Unduh APK dari APKMirror",
@@ -565,10 +585,20 @@
       "deleted": "Jadwal dihapus."
     },
     "antispam": {
-      "usage": "Cara Pakai: antispam on | off",
-      "desc": "Aktifkan atau nonaktifkan fitur AntiSpam untuk grup.",
-      "activated": "AntiSpam diaktifkan.",
-      "deactivated": "AntiSpam dinonaktifkan."
+      "desc": "Manage antispam protection with configurable levels",
+      "usage": "Use: antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *Antispam Status*\n\n🔴 Disabled\n\nUse `antispam on` to enable protection",
+      "info_status": "📊 *Antispam Status*\n\n{status}\nLevel: {level}\nAction: {action}",
+      "deactivated": "⚠️ *Antispam Protection Disabled*\n\nSpam detection is now OFF",
+      "activated": "✅ *Antispam Protection Enabled*\n\nLevel: {level} ({description})\nAction: {action}",
+      "level_set": "✅ *Level Changed*\n\nNew level: {level}",
+      "action_set": "✅ *Action Changed*\n\nSpammers will be: {action_desc}",
+      "invalid_level": "❌ Invalid level. Use: low, medium, high",
+      "help": "📖 *Antispam Help*\n\n*Commands:*\n• `antispam on` - Enable (default: medium)\n• `antispam off` - Disable\n• `antispam <low/medium/high>` - Change sensitivity\n• `antispam <warn/delete/kick>` - Change action\n• `antispam info` - View current settings\n\n*Levels:*\n• Low - Relaxed (active groups)\n• Medium - Balanced (recommended)\n• High - Strict (problem groups)",
+      "spam_warning": "⚠️ @{mention} Stop spamming!",
+      "action_warn": "warned (not kicked)",
+      "action_delete": "messages deleted only",
+      "action_kick": "kicked from group"
     },
     "sticker": {
       "desc": "Konversi gambar atau video ke stiker. Balas ke pesan gambar atau video untuk membuat stiker.",
@@ -716,7 +746,7 @@
       "updated": "Bot berhasil diperbarui!"
     },
     "antigm": {
-      "usage": "> Cara Pakai:\n- antigm <on|off> — Aktifkan atau nonaktifkan anti-sebutan grup\n- antigm <delete|warn|kick> — Atur tindakan ketika seseorang menyebut grup\n- antigm ignore <jid,jid,jid,...> — Abaikan anti-sebutan grup dari grup tertentu",
+      "usage": "> Penggunaan:\n- antigm on | off — Aktifkan atau nonaktifkan anti-sebutan grup\n- antigm delete | warn | kick — Atur tindakan ketika seseorang menyebut grup\n- antigm ignore jid,jid,... — Abaikan anti-sebutan grup dari grup tertentu",
       "action": "Tindakan diperbarui: sebutan grup sekarang akan menghasilkan *{0}*.",
       "filter": "JID yang diabaikan diperbarui untuk anti-sebutan grup.",
       "enabled": "Anti-sebutan grup telah diaktifkan.",

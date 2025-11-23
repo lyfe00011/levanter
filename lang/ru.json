@@ -43,11 +43,24 @@
       "desc": "_Отобразить сообщение о статусе активности бота с необязательным пользовательским текстом._"
     },
     "antifake": {
-      "example": "*Статус Antifake:* {0}\n\n> *Примеры использования:*\n- *antifake list* - Просмотреть коды стран\n- *antifake !91,1* - Разрешить/Запретить определенные коды стран\n- *antifake on | off* - Включить/Отключить antifake",
+      "example": "*Статус Antifake:* {0}\n\n> *Примеры использования:*\n- *antifake list* - Просмотреть коды стран\n- *antifake add 91,1* - Добавить коды стран в разрешенный список\n- *antifake remove 91,1* - Удалить коды стран из разрешенного списка\n- *antifake on | off* - Включить/Отключить antifake",
       "desc": "_Включить или настроить защиту от фальшивых номеров_",
       "not": "_Нет кодов стран для отображения._",
       "status": "_Antifake теперь *{0}*._",
-      "update": "> Antifake обновлен\n*Разрешено:* {0}\n*Запрещено:* {1}"
+      "update": "> Antifake обновлен\n*Разрешено:* {0}\n*Запрещено:* {1}",
+      "allow_prompt": "*Please provide country codes to allow (whitelist mode)*\n_Example: antifake allow 1,91_",
+      "disallow_prompt": "*Please provide country codes to disallow (blacklist mode)*\n_Example: antifake disallow 92,93_",
+      "remove_prompt": "*Please provide country codes to remove*\n_Example: antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Blacklist Mode. Use `antifake clear` first to switch to Whitelist Mode._",
+      "mode_conflict_blacklist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Whitelist Mode. Use `antifake clear` first to switch to Blacklist Mode._",
+      "whitelist_success": "*✅ Allowed country codes (Whitelist Mode):*\n{0}\n\n_These codes will be allowed, all others will be blocked._",
+      "blacklist_success": "*🚫 Disallowed country codes (Blacklist Mode):*\n{0}\n\n_These codes will be blocked, all others will be allowed._",
+      "removed": "*Removed country codes:*\n{0}",
+      "cleared": "*🗑️ Antifake list cleared and disabled*",
+      "whitelist_mode": "🟢 Whitelist Mode (Allow Only)",
+      "blacklist_mode": "🔴 Blacklist Mode (Block Only)",
+      "enabled": "enabled",
+      "disabled": "disabled"
     },
     "antilink": {
       "desc": "_Включить или настроить защиту от ссылок_",
@@ -58,11 +71,11 @@
       "action_invalid": "*Указано недействительное действие.*",
       "action_update": "_Действие Antilink обновлено до: *{0}*_",
       "update": "> Antilink обновлен\n*Разрешено:* {0}\n*Запрещено:* {1}",
-      "example": "Статус Antilink: *{0}*\n\n> Примеры использования:\n- antilink info - Просмотреть текущие настройки\n- antilink whatsapp.com - Разрешить определенные URL\n- antilink on | off - Включить/Отключить antilink\n- antilink action/<kick | warn | null> - Установить действие для ссылки"
+      "example": "Статус Antilink: *{0}*\n\n> Примеры использования:\n- antilink list - Просмотреть текущие настройки\n- antilink allow whatsapp.com - Разрешить определенные URL\n- antilink disallow facebook.com - Запретить определенные URL\n- antilink on | off - Включить/Отключить antilink\n- antilink kick | warn | null - Установить действие для ссылки"
     },
     "antiword": {
       "desc": "_Фильтровать определенные слова в групповом чате_",
-      "example": "Статус AntiWord: {0}\n> *Примеры использования:*\n- antiword action/<kick | warn | null>* - Установить действие для нарушений\n- antiword on | off - Включить/Отключить фильтрацию слов\n- setvar ANTIWORDS:слово1,слово2,... - Определить запрещенные слова",
+      "example": "Статус AntiWord: {0}\n> *Примеры использования:*\n- antiword kick | warn | null - Установить действие для нарушений\n- antiword on | off - Включить/Отключить фильтрацию слов\n- antiword add word1,word2 - Добавить слова в список блокировки\n- antiword remove word1,word2 - Удалить слова из списка блокировки\n- antiword list - Просмотреть заблокированные слова",
       "action_update": "Действие AntiWord обновлено до: *{0}*",
       "status": "_AntiWord теперь *{0}*._"
     },
@@ -565,10 +578,20 @@
       "deleted": "Расписание удалено."
     },
     "antispam": {
-      "usage": "Использование: antispam on | off",
-      "desc": "Включить или отключить функцию AntiSpam для группы.",
-      "activated": "AntiSpam активирован.",
-      "deactivated": "AntiSpam деактивирован."
+      "desc": "Manage antispam protection with configurable levels",
+      "usage": "Use: antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *Antispam Status*\n\n🔴 Disabled\n\nUse `antispam on` to enable protection",
+      "info_status": "📊 *Antispam Status*\n\n{status}\nLevel: {level}\nAction: {action}",
+      "deactivated": "⚠️ *Antispam Protection Disabled*\n\nSpam detection is now OFF",
+      "activated": "✅ *Antispam Protection Enabled*\n\nLevel: {level} ({description})\nAction: {action}",
+      "level_set": "✅ *Level Changed*\n\nNew level: {level}",
+      "action_set": "✅ *Action Changed*\n\nSpammers will be: {action_desc}",
+      "invalid_level": "❌ Invalid level. Use: low, medium, high",
+      "help": "📖 *Antispam Help*\n\n*Commands:*\n• `antispam on` - Enable (default: medium)\n• `antispam off` - Disable\n• `antispam <low/medium/high>` - Change sensitivity\n• `antispam <warn/delete/kick>` - Change action\n• `antispam info` - View current settings\n\n*Levels:*\n• Low - Relaxed (active groups)\n• Medium - Balanced (recommended)\n• High - Strict (problem groups)",
+      "spam_warning": "⚠️ @{mention} Stop spamming!",
+      "action_warn": "warned (not kicked)",
+      "action_delete": "messages deleted only",
+      "action_kick": "kicked from group"
     },
     "sticker": {
       "desc": "Конвертировать изображение или видео в стикер. Ответьте на сообщение с изображением или видео, чтобы создать стикер.",
@@ -716,11 +739,11 @@
       "updated": "Бот успешно обновлен!"
     },
     "antigm": {
-      "usage": "> Usage:\n- antigm <on|off> — Enable or disable anti group mention\n- antigm <delete|warn|kick> — Set action when someone mentions the group\n- antigm ignore <jid,jid,jid,...> — Ignore anti group mention from specific groups",
-      "action": "Action updated: group mentions will now result in *{0}*.",
-      "filter": "Ignore JIDs updated for anti group mention.",
-      "enabled": "Anti group mention has been enabled.",
-      "disabled": "Anti group mention has been disabled."
+      "usage": "> Использование:\n- antigm on | off — Включить или отключить защиту от упоминания группы\n- antigm delete | warn | kick — Установить действие при упоминании группы\n- antigm ignore jid,jid,... — Игнорировать защиту от упоминания группы для определенных групп",
+      "action": "Действие обновлено: упоминания группы теперь приведут к *{0}*.",
+      "filter": "Игнорируемые JID обновлены для защиты от упоминания группы.",
+      "enabled": "Защита от упоминания группы включена.",
+      "disabled": "Защита от упоминания группы отключена."
     }
   }
 }

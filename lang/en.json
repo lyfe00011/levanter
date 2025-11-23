@@ -43,11 +43,24 @@
       "desc": "Display the bot's alive status message with optional custom text."
     },
     "antifake": {
-      "example": "*Antifake Status:* {0}\n\n> *Usage Examples:*\n- *antifake list* - View country codes\n- *antifake !91,1* - Allow/Notallow specific country codes\n- *antifake on | off* - Enable/Disable antifake",
-      "desc": "Enable or configure anti-fake number",
-      "not": "No country codes to list.",
+      "example": "*Antifake Status:* {0}\n\n> *Command Usage:*\n- *antifake list* - View current mode and codes\n- *antifake allow 1,91* - Whitelist Mode: Allow these codes, block all others\n- *antifake disallow 92,93* - Blacklist Mode: Block these codes, allow all others\n- *antifake remove 91* - Remove code from list\n- *antifake clear* - Clear all codes and disable\n- *antifake on | off* - Enable/Disable\n\n> *Note:* Cannot mix whitelist and blacklist modes. Use `clear` to switch modes.",
+      "desc": "Enable or configure anti-fake number (whitelist or blacklist mode)",
+      "not": "No country codes configured.",
       "status": "Antifake is now *{0}*.",
-      "update": "> Antifake Updated\n*Allowed:* {0}\n*Not Allowed:* {1}"
+      "update": "> Antifake Updated\n*Allowed:* {0}\n*Not Allowed:* {1}",
+      "allow_prompt": "*Please provide country codes to allow (whitelist mode)*\n_Example: antifake allow 1,91_",
+      "disallow_prompt": "*Please provide country codes to disallow (blacklist mode)*\n_Example: antifake disallow 92,93_",
+      "remove_prompt": "*Please provide country codes to remove*\n_Example: antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Blacklist Mode. Use `antifake clear` first to switch to Whitelist Mode._",
+      "mode_conflict_blacklist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Whitelist Mode. Use `antifake clear` first to switch to Blacklist Mode._",
+      "whitelist_success": "*✅ Allowed country codes (Whitelist Mode):*\n{0}\n\n_These codes will be allowed, all others will be blocked._",
+      "blacklist_success": "*🚫 Disallowed country codes (Blacklist Mode):*\n{0}\n\n_These codes will be blocked, all others will be allowed._",
+      "removed": "*Removed country codes:*\n{0}",
+      "cleared": "*🗑️ Antifake list cleared and disabled*",
+      "whitelist_mode": "🟢 Whitelist Mode (Allow Only)",
+      "blacklist_mode": "🔴 Blacklist Mode (Block Only)",
+      "enabled": "enabled",
+      "disabled": "disabled"
     },
     "antilink": {
       "desc": "Enable or configure anti-link",
@@ -58,13 +71,20 @@
       "action_invalid": "*Invalid action specified.*",
       "action_update": "Antilink action updated to: *{0}*",
       "update": "> Antilink Updated\n*Allowed:* {0}\n*Not Allowed:* {1}",
-      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink info - View current settings\n- antilink whatsapp.com - Allow specific URLs\n- antilink on | off - Enable/Disable antilink\n- antilink action/<kick | warn | null> - Set action for link"
+      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink list - View current settings\n- antilink allow whatsapp.com - Allow specific URLs\n- antilink disallow facebook.com - Disallow specific URLs\n- antilink on | off - Enable/Disable antilink\n- antilink kick | warn | null - Set action for link"
     },
     "antiword": {
       "desc": "Filter specific words in the group chat",
-      "example": "AntiWord Status: {0}\n> *Usage Examples:*\n- antiword action/<kick | warn | null>* - Set action for violations\n- antiword on | off - Enable/Disable word filtering\n- setvar ANTIWORDS:word1,word2,... - Define blocked words",
+      "example": "AntiWord Status: {0}\n> *Usage Examples:*\n- antiword kick | warn | null - Set action for violations\n- antiword on | off - Enable/Disable word filtering\n- antiword add word1,word2 - Add words to block list\n- antiword remove word1,word2 - Remove words from block list\n- antiword list - View blocked words",
       "action_update": "AntiWord action updated to: *{0}*",
-      "status": "AntiWord is now *{0}*."
+      "status": "AntiWord is now *{0}*.",
+      "add_prompt": "*Please provide words to add.*",
+      "added": "*Words added:*\n{0}",
+      "remove_prompt": "*Please provide words to remove.*",
+      "removed": "*Words removed:*\n{0}",
+      "no_words": "*No words set.*",
+      "info": "*AntiWord Status:* {0}\n*Action:* {1}\n\n*Words:* {2}",
+      "cleared": "*AntiWord list cleared.*"
     },
     "apk": {
       "desc": "Download APK from APKMirror",
@@ -427,19 +447,32 @@
       "usage": "> Example:\n- zushi ping, sticker\n- To set all commands, type 'list' and then reply with the copied message (e.g., zushi copied_message).",
       "desc": "Allows you to enable specific commands for use by others in the chat.",
       "already_set": "{0} is already configured.",
-      "allowed": "*allowed commands for* @{0}\n{1}"
+      "allowed": "*allowed commands for* @{0}\n{1}",
+      "no_input": "⚠️ Please provide command names\n\n📝 Examples:\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 Add multiple commands separated by spaces",
+      "duplicates": "❌ Commands already allowed: {0}\n\n📋 Current allowed commands ({1} total):\n{2}\n\n💡 Use .yami to see all allowed commands\n💡 Use .ope to remove commands",
+      "invalid": "⚠️ No valid commands found\n\nSkipped invalid: {0}\n\n💡 Use .help to see available commands",
+      "error": "❌ Error: {0}",
+      "success": "✅ Successfully added {0} command{1}:\n{2}\n\n📊 Total allowed: {0} command{1} for @{3}\n\n💡 Users can now use these commands"
     },
     "yami": {
       "usage": "Simply use: yami",
       "desc": "Displays the list of commands that are currently allowed in this chat.",
-      "not_set": "No allowed commands have been set yet."
+      "not_set": "No allowed commands have been set yet.",
+      "no_commands": "📋 No allowed commands found\n\n💡 Use .zushi to add commands\n📝 Example: .zushi song video sticker",
+      "list": "📋 Allowed commands for @{0}:\n\n{1}\n\n📊 Total: {2} command{3}\n\n💡 Remove with: .ope <command names>\n💡 Remove all: .ope all"
     },
     "ope": {
       "usage": "Example: ope ping, sticker OR ope all",
       "desc": "Deletes or unsets the specified allowed commands.",
       "not_found": "No allowed commands found for {0}.",
       "all_removed": "All allowed commands have been removed.",
-      "removed": "*removed commands for* @{0}\n{1}"
+      "removed": "*removed commands for* @{0}\n{1}",
+      "no_input": "⚠️ Please provide command names to remove\n\n📝 Examples:\n  • .ope song video\n  • .ope all (removes everything)\n\n💡 Use .yami to see allowed commands",
+      "not_found_list": "❌ Command{0} not found: {1}{2}\n\n💡 Use .yami to see all allowed commands\n📝 Example: .ope song video",
+      "error": "❌ Error: {0}",
+      "no_commands": "⚠️ No commands found for this user/group\n\n💡 Use .zushi to add commands first",
+      "all_success": "✅ All commands removed\n\n💡 Use .zushi to add new commands",
+      "success": "✅ Removed {0} command{1}:\n{2}\n\n📊 For: @{3}\n\n💡 Use .yami to see remaining commands\n💡 Use .ope all to remove everything"
     },
     "pdm": {
       "usage": "Usage: pdm on | off",
@@ -565,10 +598,20 @@
       "deleted": "Schedule deleted."
     },
     "antispam": {
-      "usage": "Usage: antispam on | off",
-      "desc": "Enable or disable the AntiSpam feature for the group.",
-      "activated": "AntiSpam activated.",
-      "deactivated": "AntiSpam deactivated."
+      "desc": "Manage antispam protection with configurable levels",
+      "usage": "Use: antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *Antispam Status*\n\n🔴 Disabled\n\nUse `antispam on` to enable protection",
+      "info_status": "📊 *Antispam Status*\n\n{status}\nLevel: {level}\nAction: {action}",
+      "deactivated": "⚠️ *Antispam Protection Disabled*\n\nSpam detection is now OFF",
+      "activated": "✅ *Antispam Protection Enabled*\n\nLevel: {level} ({description})\nAction: {action}",
+      "level_set": "✅ *Level Changed*\n\nNew level: {level}",
+      "action_set": "✅ *Action Changed*\n\nSpammers will be: {action_desc}",
+      "invalid_level": "❌ Invalid level. Use: low, medium, high",
+      "help": "📖 *Antispam Help*\n\n*Commands:*\n• `antispam on` - Enable (default: medium)\n• `antispam off` - Disable\n• `antispam <low/medium/high>` - Change sensitivity\n• `antispam <warn/delete/kick>` - Change action\n• `antispam info` - View current settings\n\n*Levels:*\n• Low - Relaxed (active groups)\n• Medium - Balanced (recommended)\n• High - Strict (problem groups)",
+      "spam_warning": "⚠️ @{mention} Stop spamming!",
+      "action_warn": "warned (not kicked)",
+      "action_delete": "messages deleted only",
+      "action_kick": "kicked from group"
     },
     "sticker": {
       "desc": "Convert an image or video to a sticker. Reply to an image or video message to generate a sticker.",
@@ -716,7 +759,7 @@
       "updated": "Bot has been successfully updated!"
     },
     "antigm": {
-      "usage": "> Usage:\n- antigm <on|off> — Enable or disable anti group mention\n- antigm <delete|warn|kick> — Set action when someone mentions the group\n- antigm ignore <jid,jid,jid,...> — Ignore anti group mention from specific groups",
+      "usage": "> Usage:\n- antigm on | off — Enable or disable anti group mention\n- antigm delete | warn | kick — Set action when someone mentions the group\n- antigm ignore jid,jid,... — Ignore anti group mention from specific groups",
       "action": "Action updated: group mentions will now result in *{0}*.",
       "filter": "Ignore JIDs updated for anti group mention.",
       "enabled": "Anti group mention has been enabled.",
