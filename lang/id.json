@@ -65,7 +65,7 @@
     "antilink": {
       "desc": "Aktifkan atau konfigurasi anti-link",
       "disable": "_Antilink sudah dinonaktifkan._",
-      "antilink_notset": "Antilink belum dikonfigurasi.",
+      "antilink_notset": "Antilink dikonfigurasi untuk memblokir semua tautan (tidak ada daftar URL yang disetel). Gunakan 'antilink allow' atau 'antilink disallow' untuk mengonfigurasi URL tertentu.",
       "status": "Antilink sekarang *{0}*.",
       "info": "> Status Antilink: {0}\n*URL yang Diizinkan:* {1}\n *Aksi :* {2}",
       "action_invalid": "*Aksi yang dimasukkan tidak valid.*",
@@ -178,15 +178,17 @@
     },
     "greetings": {
       "welcome_desc": "Kirim pesan selamat datang ke anggota baru",
-      "welcome_example": "Selamat datang saat ini {0}\n\nUntuk detail lebih lanjut, kunjungi: https://levanter-delta.vercel.app/",
+      "welcome_example": "Selamat datang saat ini *{0}*\n\n> *Contoh Penggunaan:*\n- welcome Hai &mention! Selamat datang di &name - Atur pesan\n- welcome on | off - Aktifkan/Nonaktifkan\n- welcome delete - Hapus pesan\n\n> *Placeholder:*\n- &mention - Sebut anggota baru\n- &name - Nama grup\n- &desc - Deskripsi grup\n- &size - Jumlah anggota\n- &pp - Foto profil anggota\n\n> *Media:* Balas ke gambar/video ATAU sertakan URL dalam pesan\n\nUntuk detail lebih lanjut: https://levanter-delta.vercel.app/",
       "welcome_enable": "_Selamat datang sekarang diaktifkan_",
       "welcome_disable": "_Selamat datang sekarang dinonaktifkan_",
       "welcome_delete": "_Pesan selamat datang dihapus_",
+      "welcome_not_set": "_Silakan atur pesan selamat datang terlebih dahulu!_\n\n> *Contoh:*\nwelcome Hai &mention! Selamat datang di &name\n\nKemudian gunakan: welcome on",
       "goodbye_desc": "Kirim pesan selamat tinggal ke anggota",
-      "goodbye_example": "Selamat tinggal saat ini {0}\n\nUntuk detail lebih lanjut, kunjungi: https://levanter-delta.vercel.app/",
+      "goodbye_example": "Selamat tinggal saat ini *{0}*\n\n> *Contoh Penggunaan:*\n- goodbye Sampai jumpa &mention! Terima kasih - Atur pesan\n- goodbye on | off - Aktifkan/Nonaktifkan\n- goodbye delete - Hapus pesan\n\n> *Placeholder:*\n- &mention - Sebut anggota yang pergi\n- &name - Nama grup\n- &desc - Deskripsi grup\n- &size - Jumlah anggota\n- &pp - Foto profil anggota\n\n> *Media:* Balas ke gambar/video ATAU sertakan URL dalam pesan\n\nUntuk detail lebih lanjut: https://levanter-delta.vercel.app/",
       "goodbye_enable": "_Selamat tinggal sekarang diaktifkan_",
       "goodbye_disable": "_Selamat tinggal sekarang dinonaktifkan_",
-      "goodbye_delete": "_Pesan selamat tinggal dihapus_"
+      "goodbye_delete": "_Pesan selamat tinggal dihapus_",
+      "goodbye_not_set": "_Silakan atur pesan selamat tinggal terlebih dahulu!_\n\n> *Contoh:*\ngoodbye Sampai jumpa &mention! Terima kasih telah bersama kami\n\nKemudian gunakan: goodbye on"
     },
     "groq": {
       "example": "*Contoh:* groq Hai\n\nAnda bisa mengatur variabel lingkungan berikut:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nUntuk detail lebih lanjut, kunjungi: https://console.groq.com/keys",

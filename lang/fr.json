@@ -65,7 +65,7 @@
     "antilink": {
       "desc": "Activer ou configurer l'anti-lien",
       "disable": "_L'anti-lien est déjà désactivé._",
-      "antilink_notset": "L'anti-lien n'a pas été configuré.",
+      "antilink_notset": "L'anti-lien est configuré pour bloquer tous les liens (aucune liste d'URL définie). Utilisez 'antilink allow' ou 'antilink disallow' pour configurer des URL spécifiques.",
       "status": "L'anti-lien est maintenant *{0}*.",
       "info": "> Statut de l'anti-lien : {0}\n*URLs autorisées :* {1}\n *Action :* {2}",
       "action_invalid": "*Action spécifiée invalide.*",
@@ -178,15 +178,17 @@
     },
     "greetings": {
       "welcome_desc": "Envoyer un message de bienvenue aux nouveaux membres",
-      "welcome_example": "Le bienvenue est actuellement {0}\n\nPour plus de détails, visitez : https://levanter-delta.vercel.app/",
-      "welcome_enable": "_Le bienvenue est maintenant activé_",
-      "welcome_disable": "_Le bienvenue est maintenant désactivé_",
+      "welcome_example": "Le bienvenue est actuellement *{0}*\n\n> *Exemples d'utilisation:*\n- welcome Salut &mention! Bienvenue à &name - Définir message\n- welcome on | off - Activer/Désactiver\n- welcome delete - Supprimer le message\n\n> *Marqueurs:*\n- &mention - Mentionner nouveau membre\n- &name - Nom du groupe\n- &desc - Description du groupe\n- &size - Nombre de membres\n- &pp - Photo de profil du membre\n\n> *Média:* Répondre à image/vidéo OU inclure URL dans le message\n\nPour plus de détails: https://levanter-delta.vercel.app/",
+      "welcome_enable": "_Bienvenue activé_",
+      "welcome_disable": "_Bienvenue désactivé_",
       "welcome_delete": "_Message de bienvenue supprimé_",
+      "welcome_not_set": "_Veuillez d'abord définir un message de bienvenue!_\n\n> *Exemple:*\nwelcome Salut &mention! Bienvenue à &name\n\nEnsuite utilisez: welcome on",
       "goodbye_desc": "Envoyer un message d'au revoir aux membres",
-      "goodbye_example": "L'au revoir est actuellement {0}\n\nPour plus de détails, visitez : https://levanter-delta.vercel.app/",
-      "goodbye_enable": "_L'au revoir est maintenant activé_",
-      "goodbye_disable": "_L'au revoir est maintenant désactivé_",
-      "goodbye_delete": "_Message d'au revoir supprimé_"
+      "goodbye_example": "L'au revoir est actuellement *{0}*\n\n> *Exemples d'utilisation:*\n- goodbye Au revoir &mention! À bientôt - Définir message\n- goodbye on | off - Activer/Désactiver\n- goodbye delete - Supprimer le message\n\n> *Marqueurs:*\n- &mention - Mentionner membre partant\n- &name - Nom du groupe\n- &desc - Description du groupe\n- &size - Nombre de membres\n- &pp - Photo de profil du membre\n\n> *Média:* Répondre à image/vidéo OU inclure URL dans le message\n\nPour plus de détails: https://levanter-delta.vercel.app/",
+      "goodbye_enable": "_Au revoir activé_",
+      "goodbye_disable": "_Au revoir désactivé_",
+      "goodbye_delete": "_Message d'au revoir supprimé_",
+      "goodbye_not_set": "_Veuillez d'abord définir un message d'au revoir!_\n\n> *Exemple:*\ngoodbye Au revoir &mention! Merci d'avoir été avec nous\n\nEnsuite utilisez: goodbye on"
     },
     "groq": {
       "example": "*Exemple :* groq Salut\n\nVous pouvez éventuellement définir les variables d'environnement suivantes :\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nPour plus de détails, visitez : https://console.groq.com/keys",

@@ -27,7 +27,7 @@ bot(
 
     if (match === 'on' || match === 'off') {
       if (!welcome) {
-        return await message.send(lang.plugins.greetings.welcome_example.format('off'))
+        return await message.send(lang.plugins.greetings.welcome_not_set)
       }
       await enableGreetings(message.jid, 'welcome', match, message.id)
       return await message.send(
@@ -66,7 +66,7 @@ bot(
 
     if (match === 'on' || match === 'off') {
       if (!goodbye) {
-        return await message.send(lang.plugins.greetings.goodbye_example.format('off'))
+        return await message.send(lang.plugins.greetings.goodbye_not_set)
       }
       await enableGreetings(message.jid, 'goodbye', match, message.id)
       return await message.send(

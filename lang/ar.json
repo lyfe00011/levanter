@@ -65,7 +65,7 @@
     "antilink": {
       "desc": "تمكين أو تكوين مكافحة الروابط",
       "disable": "_مكافحة الروابط معطلة بالفعل._",
-      "antilink_notset": "لم يتم تكوين مكافحة الروابط.",
+      "antilink_notset": "تم تكوين مكافحة الروابط لحظر جميع الروابط (لم يتم تعيين قائمة URL). استخدم 'antilink allow' أو 'antilink disallow' لتكوين عناوين URL محددة.",
       "status": "مكافحة الروابط الآن *{0}*.",
       "info": "> حالة مكافحة الروابط: {0}\n*عناوين URL المسموح بها:* {1}\n *الإجراء :* {2}",
       "action_invalid": "*تم تحديد إجراء غير صالح.*",
@@ -178,15 +178,17 @@
     },
     "greetings": {
       "welcome_desc": "إرسال رسالة ترحيب للأعضاء الجدد",
-      "welcome_example": "الترحيب حالياً {0}\n\nلمزيد من التفاصيل، قم بزيارة: https://levanter-delta.vercel.app/",
-      "welcome_enable": "_تم تمكين الترحيب الآن_",
-      "welcome_disable": "_تم تعطيل الترحيب الآن_",
+      "welcome_example": "الترحيب حالياً *{0}*\n\n> *أمثلة الاستخدام:*\n- welcome مرحباً &mention! أهلاً بك في &name - تعيين رسالة الترحيب\n- welcome on | off - تفعيل/تعطيل\n- welcome delete - حذف الرسالة\n\n> *العناصر المتغيرة:*\n- &mention - ذكر العضو الجديد\n- &name - اسم المجموعة\n- &desc - وصف المجموعة\n- &size - عدد الأعضاء\n- &pp - صورة العضو الشخصية\n\n> *الوسائط:* رد على صورة/فيديو أو أدخل رابط في الرسالة\n\nللمزيد: https://levanter-delta.vercel.app/",
+      "welcome_enable": "_تم تفعيل الترحيب_",
+      "welcome_disable": "_تم تعطيل الترحيب_",
       "welcome_delete": "_تم حذف رسالة الترحيب_",
+      "welcome_not_set": "_يرجى تعيين رسالة ترحيب أولاً!_\n\n> *مثال:*\nwelcome مرحباً &mention! أهلاً بك في &name\n\nثم استخدم: welcome on",
       "goodbye_desc": "إرسال رسالة وداع للأعضاء",
-      "goodbye_example": "الوداع حالياً {0}\n\nلمزيد من التفاصيل، قم بزيارة: https://levanter-delta.vercel.app/",
-      "goodbye_enable": "_تم تمكين الوداع الآن_",
-      "goodbye_disable": "_تم تعطيل الوداع الآن_",
-      "goodbye_delete": "_تم حذف رسالة الوداع_"
+      "goodbye_example": "الوداع حالياً *{0}*\n\n> *أمثلة الاستخدام:*\n- goodbye وداعاً &mention! نراك لاحقاً - تعيين رسالة الوداع\n- goodbye on | off - تفعيل/تعطيل\n- goodbye delete - حذف الرسالة\n\n> *العناصر المتغيرة:*\n- &mention - ذكر العضو المغادر\n- &name - اسم المجموعة\n- &desc - وصف المجموعة\n- &size - عدد الأعضاء\n- &pp - صورة العضو الشخصية\n\n> *الوسائط:* رد على صورة/فيديو أو أدخل رابط في الرسالة\n\nللمزيد: https://levanter-delta.vercel.app/",
+      "goodbye_enable": "_تم تفعيل الوداع_",
+      "goodbye_disable": "_تم تعطيل الوداع_",
+      "goodbye_delete": "_تم حذف رسالة الوداع_",
+      "goodbye_not_set": "_يرجى تعيين رسالة وداع أولاً!_\n\n> *مثال:*\ngoodbye وداعاً &mention! شكراً لوجودك معنا\n\nثم استخدم: goodbye on"
     },
     "groq": {
       "example": "*مثال:* groq مرحباً\n\nيمكنك اختياريًا تعيين متغيرات البيئة التالية:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nلمزيد من التفاصيل، قم بزيارة: https://console.groq.com/keys",

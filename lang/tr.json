@@ -65,7 +65,7 @@
     "antilink": {
       "desc": "Anti-link özelliğini etkinleştir veya yapılandır",
       "disable": "_Antilink zaten devre dışı._",
-      "antilink_notset": "Antilink yapılandırılmamış.",
+      "antilink_notset": "Antilink tüm bağlantıları engellemek üzere yapılandırılmış (URL listesi ayarlanmamış). Belirli URL'leri yapılandırmak için 'antilink allow' veya 'antilink disallow' kullanın.",
       "status": "Antilink şimdi *{0}*.",
       "info": "> Antilink Durumu: {0}\n*İzin Verilen URL'ler:* {1}\n *Eylem :* {2}",
       "action_invalid": "*Geçersiz eylem belirtildi.*",
@@ -171,15 +171,17 @@
     },
     "greetings": {
       "welcome_desc": "Yeni üyelere hoş geldiniz mesajı gönder",
-      "welcome_example": "Hoş geldiniz şu anda {0}\n\nDaha fazla detay için: https://levanter-delta.vercel.app/",
+      "welcome_example": "Hoş geldiniz şu anda *{0}*\n\n> *Kullanım Örnekleri:*\n- welcome Merhaba &mention! &name'e hoş geldiniz - Mesaj ayarla\n- welcome on | off - Etkinleştir/Devre Dışı Bırak\n- welcome delete - Mesajı sil\n\n> *Yer Tutucular:*\n- &mention - Yeni üyeyi etiketle\n- &name - Grup adı\n- &desc - Grup açıklaması\n- &size - Üye sayısı\n- &pp - Üyenin profil fotoğrafı\n\n> *Medya:* Resim/videoya cevap verin VEYA mesaja URL ekleyin\n\nDaha fazla detay için: https://levanter-delta.vercel.app/",
       "welcome_enable": "_Hoş geldiniz şimdi etkin_",
       "welcome_disable": "_Hoş geldiniz şimdi devre dışı_",
       "welcome_delete": "_Hoş geldiniz mesajı silindi_",
+      "welcome_not_set": "_Önce hoş geldiniz mesajı ayarlayın!_\n\n> *Örnek:*\nwelcome Merhaba &mention! &name'e hoş geldiniz\n\nSonra kullanın: welcome on",
       "goodbye_desc": "Üyelere elveda mesajı gönder",
-      "goodbye_example": "Elveda şu anda {0}\n\nDaha fazla detay için: https://levanter-delta.vercel.app/",
+      "goodbye_example": "Elveda şu anda *{0}*\n\n> *Kullanım Örnekleri:*\n- goodbye Hoşça kal &mention! Görüşürüz - Mesaj ayarla\n- goodbye on | off - Etkinleştir/Devre Dışı Bırak\n- goodbye delete - Mesajıl\n\n> *Yer Tutucular:*\n- &mention - Ayrılan üyeyi etiketle\n- &name - Grup adı\n- &desc - Grup açıklaması\n- &size - Üye sayısı\n- &pp - Üyenin profil fotoğrafı\n\n> *Medya:* Resim/videoya cevap verin VEYA mesaja URL ekleyin\n\nDaha fazla detay için: https://levanter-delta.vercel.app/",
       "goodbye_enable": "_Elveda şimdi etkin_",
       "goodbye_disable": "_Elveda şimdi devre dışı_",
-      "goodbye_delete": "_Elveda mesajı silindi_"
+      "goodbye_delete": "_Elveda mesajı silindi_",
+      "goodbye_not_set": "_Önce elveda mesajı ayarlayın!_\n\n> *Örnek:*\ngoodbye Hoşça kal &mention! Bizimle olduğunuz için teşekkürler\n\nSonra kullanın: goodbye on"
     },
     "groq": {
       "example": "*Örnek:* groq Merhaba\n\nİsteğe bağlı olarak aşağıdaki ortam değişkenlerini ayarlayabilirsiniz:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nDaha fazla detay için: https://console.groq.com/keys",

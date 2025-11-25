@@ -65,7 +65,7 @@
     "antilink": {
       "desc": "_Anti-link enable ya configure karain_",
       "disable": "_Antilink phaly se disabled hai._",
-      "antilink_notset": "_Antilink abhi tak configure nahi kiya gaya hai._",
+      "antilink_notset": "Antilink tamam links ko block karne ke liye configure hai (koi URL list set nahi hai). Mukhtasas URLs configure karne ke liye 'antilink allow' ya 'antilink disallow' istemal karein.",
       "status": "Antilink ab hai *{0}*.",
       "info": "> Antilink Status: {0}\n*Allowed URLs:* {1}\n *Action :* {2}",
       "action_invalid": "*Galat action specify kiya gaya hai*",
@@ -171,15 +171,17 @@
     },
     "greetings": {
       "welcome_desc": "*_New members ko welcome message bhejein ✨_*",
-      "welcome_example": "_Welcome abhi tak hai {0}\n\nAbi ky liye, visit: https://levanter-delta.vercel.app/_",
+      "welcome_example": "_Welcome abhi tak hai *{0}*_\n\n> *استعمال کی مثالیں:*\n- welcome ہیلو &mention! &name میں خوش آمدید - پیغام سیٹ کریں\n- welcome on | off - فعال/غیر فعال کریں\n- welcome delete - پیغام حذف کریں\n\n> *پلیس ہولڈرز:*\n- &mention - نئے ممبر کا تذکرہ کریں\n- &name - گروپ کا نام\n- &desc -  کی تفصیل\n- &size - ممبروں کی تعداد\n- &pp - ممبر کی پروفائل تصویر\n\n> *میڈیا:* تصویر/ویڈیو کا جواب دیں یا پیغام میں URL شامل کریں\n\nمزید تفصیلات: https://levanter-delta.vercel.app/",
       "welcome_enable": "_Welcome abhi on hai_",
       "welcome_disable": "_Welcome abhi off hai_",
       "welcome_delete": "_Welcome message delete kar diya gaya hai_",
+      "welcome_not_set": "_پہلے welcome پیغام سیٹ کریں!_\n\n> *مثال:*\nwelcome ہیلو &mention! &name میں خوش آمدید\n\nپھر استعمال کریں: welcome on",
       "goodbye_desc": "*_Members ko goodbye message bhejein._*",
-      "goodbye_example": "*Goodbye abhi tak hai {0}\n\nAbhi ky liye, visit: https://levanter-delta.vercel.app/*",
+      "goodbye_example": "*Goodbye abhi tak hai *{0}*\n\n> *استعمال کی مثالیں:*\n- goodbye الوداع &mention! پھر ملیں گے - پیغام سیٹ کریں\n- goodbye on | off - فعال/غیر فعال کریں\n- goodbye delete - پیغام حذف کریں\n\n> *پلیس ہولڈرز:*\n- &mention - رخصت ہونے والے ممبر کا تذکرہ کریں\n- &name - گروپ کا نام\n- &desc - گروپ کی تفصیل\n- &size - ممبروں کی تعداد\n- &pp - ممبر کی پروفائل تصویر\n\n> *میڈیا:* تصویر/ویڈیو کا جواب دیں یا پیغام میں URL شامل کریں\n\nمزید تفصیلات: https://levanter-delta.vercel.app/",
       "goodbye_enable": "_Goodbye abhi on hai_",
       "goodbye_disable": "_Goodbye abhi off hai_",
-      "goodbye_delete": "_Goodbye message delete kar diya gaya hai_"
+      "goodbye_delete": "_Goodbye message delete kar diya gaya hai_",
+      "goodbye_not_set": "_پہلے goodbye پیغام سیٹ کریں!_\n\n> *مثال:*\ngoodbye الوداع &mention! ہمارے ساتھ رہنے کے لیے شکریہ\n\nپھر استعمال کریں: goodbye on"
     },
     "groq": {
       "example": "*Misal:* groq Hi\n\nAap optional taur par neeche diye gaye environment variables set kar sakte hain:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nZyada maloomat ke liye, yeh link dekhein, visit: https://console.groq.com/keys",

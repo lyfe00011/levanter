@@ -65,7 +65,7 @@
     "antilink": {
       "desc": "Anti-link ko enable ya configure karo",
       "disable": "_Antilink pehle se hi band hai._",
-      "antilink_notset": "Antilink configure nahi hui hai.",
+      "antilink_notset": "Antilink sabhi links ko block karne ke liye configure hai (koi URL list set nahi hai). Specific URLs configure karne ke liye 'antilink allow' ya 'antilink disallow' use karein.",
       "status": "Antilink ab *{0}* hai.",
       "info": "> Antilink Status: {0}\n*Allowed URLs:* {1}\n *Action :* {2}",
       "action_invalid": "*Galat action diya gaya hai.*",
@@ -177,16 +177,18 @@
       "delupdate": "Greeting message delete ho gaya."
     },
     "greetings": {
-      "welcome_desc": "New members ko welcome message bhejo",
-      "welcome_example": "Welcome abhi {0} hai\n\nZyada details ke liye, yahan jayein: https://levanter-delta.vercel.app/",
-      "welcome_enable": "_Welcome ab enable ho gaya_",
-      "welcome_disable": "_Welcome ab disable ho gaya_",
-      "welcome_delete": "_Welcome message delete ho gaya_",
-      "goodbye_desc": "Members ko goodbye message bhejo",
-      "goodbye_example": "Goodbye abhi {0} hai\n\nZyada details ke liye, yahan jayein: https://levanter-delta.vercel.app/",
-      "goodbye_enable": "_Goodbye ab enable ho gaya_",
-      "goodbye_disable": "_Goodbye ab disable ho gaya_",
-      "goodbye_delete": "_Goodbye message delete ho gaya_"
+      "welcome_desc": "नए सदस्यों को स्वागत संदेश भेजें",
+      "welcome_example": "Welcome abhi *{0}* hai\n\n> *उदाहरण:*\n- welcome नमस्ते &mention! &name में आपका स्वागत है - संदेश सेट करें\n- welcome on | off - चालू/बंद करें\n- welcome delete - संदेश हटाएं\n\n> *प्लेसहोल्डर:*\n- &mention - नए सदस्य को मेंशन करें\n- &name - ग्रुप का नाम\n- &desc - ग्रुप विवरण\n- &size - सदस्यों की संख्या\n- &pp - सदस्य की प्रोफाइल फोटो\n\n> *मीडिया:* इमेज/वीडियो पर रिप्लाई करें या संदेश में URL शामिल करें\n\nज्यादा जानकारी: https://levanter-delta.vercel.app/",
+      "welcome_enable": "_Welcome चालू हो गया_",
+      "welcome_disable": "_Welcome बंद हो गया_",
+      "welcome_delete": "_Welcome संदेश हटा दिया गया_",
+      "welcome_not_set": "_पहले welcome संदेश सेट करें!_\n\n> *उदाहरण:*\nwelcome नमस्ते &mention! &name में आपका स्वागत है\n\nफिर उपयोग करें: welcome on",
+      "goodbye_desc": "सदस्यों को विदाई संदेश भेजें",
+      "goodbye_example": "Goodbye abhi *{0}* hai\n\n> *उदाहरण:*\n- goodbye अलविदा &mention! फिर मिलेंगे - संदेश सेट करें\n- goodbye on | off - चालू/बंद करें\n- goodbye delete - संदेश हटाएं\n\n> *प्लेसहोल्डर:*\n- &mention - जाने वाले सदस्य को मेंशन करें\n- &name - ग्रुप का नाम\n- &desc - ग्रुप विवरण\n- &size - सदस्यों की संख्या\n- &pp - सदस्य की प्रोफाइल फोटो\n\n> *मीडिया:* इमेज/वीडियो पर रिप्लाई करें या संदेश में URL शामिल करें\n\nज्यादा जानकारी: https://levanter-delta.vercel.app/",
+      "goodbye_enable": "_Goodbye चालू हो गया_",
+      "goodbye_disable": "_Goodbye बंद हो गया_",
+      "goodbye_delete": "_Goodbye संदेश हटा दिया गया_",
+      "goodbye_not_set": "_पहले goodbye संदेश सेट करें!_\n\n> *उदाहरण:*\ngoodbye अलविदा &mention! हमारे साथ रहने के लिए धन्यवाद\n\nफिर उपयोग करें: goodbye on"
     },
     "groq": {
       "example": "*Example:* groq Hi\n\nAap optionally ye environment variables set kar sakte hain:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nZyada details ke liye, yahan jayein: https://console.groq.com/keys",

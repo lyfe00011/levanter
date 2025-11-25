@@ -65,7 +65,7 @@
     "antilink": {
       "desc": "Configurar el Borrado de Links",
       "disable": "_Antilink ya esta Desactivado._",
-      "antilink_notset": "Antilink has not been configured.",
+      "antilink_notset": "Antilink está configurado para bloquear todos los enlaces (no hay lista de URL establecida). Use 'antilink allow' o 'antilink disallow' para configurar URLs específicas.",
       "status": "Antilink is now *{0}*.",
       "info": "`> Antilink Status: {0}\n*Enlaces Permitidos:* {1}\n *Accion :* {2}",
       "action_invalid": "*La accion especificada no es Valida.*",
@@ -177,16 +177,18 @@
       "delupdate": "🗑 El Saludo (mensaje privado de 1 vez) ha sido eliminado."
     },
     "greetings": {
-      "welcome_desc": "Envia Mensaje de Bienvenida a Nuevos Miembros",
-      "welcome_example": "Mensaje Actual: {0}\n\nPara mas detalles ve a: https://levanter-delta.vercel.app/",
-      "welcome_enable": "✅ _Bienvenida Activada_",
-      "welcome_disable": "📴 _La Bienvenida Ahora esta Desactivada_",
-      "welcome_delete": "_Mensaje de Bienvenida Borrada_",
-      "goodbye_desc": "Envia Mensaje de Despedida a Miembros que Abandonan",
-      "goodbye_example": "El mensaje de despedida Actual es: {0}\n\nPara mas detalles ve a: https://levanter-delta.vercel.app/",
-      "goodbye_enable": "✅ _Despedida Activada_",
-      "goodbye_disable": "📴 _La Despedida Ahora esta Desactivada_",
-      "goodbye_delete": "_Mensaje de Despedida Borrado_"
+      "welcome_desc": "Enviar un mensaje de bienvenida a nuevos miembros",
+      "welcome_example": "El mensaje de bienvenida está actualmente *{0}*\n\n> *Ejemplos de Uso:*\n- welcome ¡Hola &mention! Bienvenido a &name - Establecer mensaje\n- welcome on | off - Activar/Desactivar\n- welcome delete - Eliminar mensaje\n\n> *Marcadores:*\n- &mention - Mencionar nuevo miembro\n- &name - Nombre del grupo\n- &desc - Descripción del grupo\n- &size - Cantidad de miembros\n- &pp - Foto de perfil del miembro\n\n> *Multimedia:* Responde a imagen/video O incluye URL en mensaje\n\nPara más detalles: https://levanter-delta.vercel.app/",
+      "welcome_enable": "_Bienvenida activada_",
+      "welcome_disable": "_Bienvenida desactivada_",
+      "welcome_delete": "_Mensaje de bienvenida eliminado_",
+      "welcome_not_set": "_¡Por favor establece un mensaje de bienvenida primero!_\n\n> *Ejemplo:*\nwelcome ¡Hola &mention! Bienvenido a &name\n\nLuego usa: welcome on",
+      "goodbye_desc": "Enviar un mensaje de despedida a los miembros",
+      "goodbye_example": "El mensaje de despedida está actualmente *{0}*\n\n> *Ejemplos de Uso:*\n- goodbye ¡Adiós &mention! Hasta luego - Establecer mensaje\n- goodbye on | off - Activar/Desactivar\n- goodbye delete - Eliminar mensaje\n\n> *Marcadores:*\n- &mention - Mencionar miembro que se va\n- &name - Nombre del grupo\n- &desc - Descripción del grupo\n- &size - Cantidad de miembros\n- &pp - Foto de perfil del miembro\n\n> *Multimedia:* Responde a imagen/video O incluye URL en mensaje\n\nPara más detalles: https://levanter-delta.vercel.app/",
+      "goodbye_enable": "_Despedida activada_",
+      "goodbye_disable": "_Despedida desactivada_",
+      "goodbye_delete": "_Mensaje de despedida eliminado_",
+      "goodbye_not_set": "_¡Por favor establece un mensaje de despedida primero!_\n\n> *Ejemplo:*\ngoodbye ¡Adiós &mention! Gracias por estar con nosotros\n\nLuego usa: goodbye on"
     },
     "groq": {
       "example": "*Ejemplo:* groq Hola\n\nDebes Agregar ApiKey, Opcionalmente puedes ajustar las demas Variables:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\n Para mas detalles ve a https://console.groq.com/keys",
