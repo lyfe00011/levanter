@@ -50,20 +50,38 @@ bot(
     if (!message.reply_message || (!message.reply_message.video && !message.reply_message.audio)) {
       return await message.send(lang.plugins.mp3.usage)
     }
-    return await message.send(
-      await getFfmpegBuffer(
-        await message.reply_message.downloadAndSaveMediaMessage('mp3'),
-        'mp3.mp3',
-        'mp3'
-      ),
-      {
-        filename: 'mp3.mp3',
-        mimetype: 'audio/mpeg',
-        ptt: !message.reply_message.ptt,
-        quoted: message.data,
-      },
-      'audio'
-    )
+
+    try {
+      const filePath = await message.reply_message.downloadAndSaveMediaMessage('mp3')
+
+      const isPtt = !message.reply_message.ptt
+      const buffer = await getFfmpegBuffer(
+        filePath,
+        isPtt ? 'audio.opus' : 'audio.mp3',
+        isPtt ? 'opus' : 'mp3'
+      )
+
+      const result = await message.send(
+        buffer,
+        isPtt
+          ? {
+            ptt: true,
+            mimetype: 'audio/ogg; codecs=opus',
+            quoted: message.data,
+          }
+          : {
+            filename: 'audio.mp3',
+            mimetype: 'audio/mpeg',
+            ptt: false,
+            quoted: message.data,
+          },
+        'audio'
+      )
+
+      return result
+    } catch (error) {
+      throw error
+    }
   }
 )
 

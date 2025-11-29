@@ -1,4 +1,4 @@
-const { getAntiLink, bot, setAntiLink, setAllowedUrl, lang } = require('../lib/')
+const { getAntiLink, bot, setAntiLink, setAllowedUrl, lang, normalizeUrl } = require('../lib/')
 
 bot(
   {
@@ -35,21 +35,65 @@ bot(
 
     if (cmd === 'allow') {
       if (!args) return message.send('*Please provide a URL to allow.*')
-      const urlsToAdd = args.split(',').map(u => u.trim()).filter(u => u)
+
+      const urlsToAdd = args.split(',')
+        .map(u => u.trim())
+        .filter(u => u)
+        .map(u => normalizeUrl(u))
+
       const currentList = allowedUrls ? allowedUrls.split(',') : []
-      const newList = [...new Set([...currentList, ...urlsToAdd])].join(',')
+      const currentNormalized = currentList.map(u => normalizeUrl(u))
+
+      const newUrls = urlsToAdd.filter(u => !currentNormalized.includes(u))
+
+      if (newUrls.length === 0) {
+        return message.send('*No new URLs to add.* All URLs already exist in the list.')
+      }
+
+      const newList = [...currentList, ...newUrls].join(',')
       await setAllowedUrl(message.jid, newList, message.id)
-      return message.send(`*Allowed URLs updated:*\n${newList.replace(/,/g, ', ')}`)
+
+      return message.send(
+        `*Allowed URLs updated*\n\n` +
+        `Added: ${newUrls.join(', ')}\n` +
+        `Total: ${[...currentList, ...newUrls].length} URL(s)\n\n` +
+        `_Note: URLs are case-insensitive_`
+      )
     }
 
     if (cmd === 'disallow') {
       if (!args) return message.send('*Please provide a URL to disallow.*')
-      const urlsToDisallow = args.split(',').map(u => u.trim()).filter(u => u).map(u => `!${u}`)
+
+      const urlsToDisallow = args.split(',')
+        .map(u => u.trim())
+        .filter(u => u)
+        .map(u => `!${normalizeUrl(u)}`)
+
       const currentList = allowedUrls ? allowedUrls.split(',') : []
-      const cleanList = currentList.filter(u => !urlsToDisallow.includes(u) && !urlsToDisallow.includes(`!${u}`))
-      const newList = [...new Set([...cleanList, ...urlsToDisallow])].join(',')
+
+      const cleanList = currentList.filter(u => {
+        const normalized = normalizeUrl(u.replace(/^!/, ''))
+        return !urlsToDisallow.some(d => normalizeUrl(d.slice(1)) === normalized)
+      })
+
+      const existingDisallowed = cleanList
+        .filter(u => u.startsWith('!'))
+        .map(u => normalizeUrl(u.slice(1)))
+      const newUrls = urlsToDisallow.filter(u => !existingDisallowed.includes(normalizeUrl(u.slice(1))))
+
+      if (newUrls.length === 0) {
+        return message.send('*No new URLs to disallow.* All URLs are already disallowed.')
+      }
+
+      const newList = [...cleanList, ...newUrls].join(',')
       await setAllowedUrl(message.jid, newList, message.id)
-      return message.send(`*Disallowed URLs updated:*\n${newList.replace(/,/g, ', ')}`)
+
+      return message.send(
+        `*Disallowed URLs updated*\n\n` +
+        `Added to blocklist: ${newUrls.map(u => u.slice(1)).join(', ')}\n` +
+        `Total blocked: ${[...cleanList, ...newUrls].filter(u => u.startsWith('!')).length} URL(s)\n\n` +
+        `_Note: URLs are case-insensitive_`
+      )
     }
 
     if (cmd === 'list' || cmd === 'info') {
