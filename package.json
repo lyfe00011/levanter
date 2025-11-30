@@ -1,6 +1,6 @@
 {
   "name": "levanter",
-  "version": "4.1.6",
+  "version": "4.1.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,7 @@
     "audio-decode": "^2.2.2",
     "axios": "^1.3.3",
     "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git",
+    "bgutils-js": "^3.2.0",
     "browser-id3-writer": "^4.4.0",
     "cheerio": "^1.0.0-rc.10",
     "cookie": "^0.5.0",
@@ -27,8 +28,10 @@
     "fs-extra": "^11.1.0",
     "google-tts-api": "^2.0.2",
     "googleapis": "^126.0.1",
+    "googlevideo": "^4.0.4",
     "heroku-client": "^3.1.0",
     "jimp": "^0.16.1",
+    "jsdom": "^27.2.0",
     "link-preview-js": "^3.0.4",
     "moment": "^2.29.4",
     "node-fetch": "3.2.2",

@@ -31,7 +31,7 @@ bot(
 
     for (const q in video) {
       buttons.push({
-        text: `${q} (${video[q].fileSizeH || video[q].size})`,
+        text: `${q}`,
         id: `ytv y2mate;${q};${vid[1]}`,
       })
     }

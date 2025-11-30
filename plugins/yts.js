@@ -78,24 +78,38 @@ bot(
   async (message, match) => {
     match = match || message.reply_message.text
     if (!match) return await message.send(lang.plugins.video.usage)
-    const vid = ytIdRegex.exec(match)
+
+    let quality = null;
+    let urlMatch = match;
+
+    const qualityPattern = /^(1080p|720p|480p|360p|240p|144p)\s+(.+)$/i;
+    const qualityMatch = match.match(qualityPattern);
+
+    if (qualityMatch) {
+      quality = qualityMatch[1];
+      urlMatch = qualityMatch[2];
+    }
+
+    const vid = ytIdRegex.exec(urlMatch)
     if (!vid) {
-      const result = await yts(match, false, null, message.id)
+      const result = await yts(urlMatch, false, null, message.id)
       if (!result.length) return await message.send(lang.plugins.video.not_found)
       const msg = generateList(
         result.map(({ title, id, duration, view }) => ({
           text: `${title}\nduration : ${duration}\nviews : ${view}\n`,
-          id: `video https://www.youtube.com/watch?v=${id}`,
+          id: `video ${quality ? quality + ' ' : ''}https://www.youtube.com/watch?v=${id}`,
         })),
-        `Searched ${match}\nFound ${result.length} results`,
+        `Searched ${urlMatch}\nFound ${result.length} results`,
         message.jid,
         message.participant,
         message.id
       )
       return await message.send(msg.message, { quoted: message.data }, msg.type)
     }
+
+    const options = quality ? { videoQuality: quality } : {};
     return await message.send(
-      await video(vid[1], message.id),
+      await video(vid[1], message.id, options),
       { quoted: message.data, fileName: `${vid[1]}.mp4` },
       'video'
     )

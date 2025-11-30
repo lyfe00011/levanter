@@ -743,8 +743,8 @@
       "not_found": "No song found for the provided query or URL."
     },
     "video": {
-      "usage": "Example: video <YouTube URL> (or reply to a message with the URL)",
-      "desc": "Download a YouTube video. If a direct URL is provided, the video is downloaded; if a search query is provided, a list of results is generated for selection.",
+      "usage": "Example: video 720p <YouTube URL> OR video <YouTube URL>",
+      "desc": "Download a YouTube video. You can optionally specify quality (e.g., 720p, 1080p). Default is 480p.",
       "not_found": "No video found for the provided query or URL."
     },
     "update": {
