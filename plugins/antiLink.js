@@ -107,8 +107,29 @@ bot(
     }
 
     if (cmd === 'clear') {
-      await setAllowedUrl(message.jid, 'null', message.id)
-      return message.send('*Antilink settings cleared.*')
+      if (!args) {
+        await setAllowedUrl(message.jid, 'null', message.id)
+        return message.send('*Antilink settings cleared.*')
+      }
+
+      const type = args.toLowerCase()
+      const currentList = allowedUrls ? allowedUrls.split(',') : []
+
+      if (type === 'allow' || type === 'allowed') {
+        const disallowedOnly = currentList.filter(u => u.startsWith('!'))
+        const newList = disallowedOnly.length > 0 ? disallowedOnly.join(',') : 'null'
+        await setAllowedUrl(message.jid, newList, message.id)
+        return message.send('*Allowed URLs cleared.*')
+      }
+
+      if (type === 'disallow' || type === 'disallowed') {
+        const allowedOnly = currentList.filter(u => !u.startsWith('!'))
+        const newList = allowedOnly.length > 0 ? allowedOnly.join(',') : 'null'
+        await setAllowedUrl(message.jid, newList, message.id)
+        return message.send('*Disallowed URLs cleared.*')
+      }
+
+      return message.send(lang.plugins.antilink.example.format(status))
     }
 
     return message.send(lang.plugins.antilink.example.format(status))

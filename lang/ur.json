@@ -71,7 +71,7 @@
       "action_invalid": "*Galat action specify kiya gaya hai*",
       "action_update": "Antilink action updated to: *{0}*",
       "update": "> Antilink Updated\n*Allowed:* {0}\n*jo allowed nahi hain:* {1}",
-      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink list - dekahin current settings\n- antilink allow whatsapp.com - Allow specific URLs\n- antilink disallow facebook.com - Disallow specific URLs\n- antilink on | off - Enable/Disable antilink\n- antilink kick | warn | null - action set karain link ky liye"
+      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink list - dekahin current settings\n- antilink allow whatsapp.com - Allow specific URLs\n- antilink disallow facebook.com - Disallow specific URLs\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Enable/Disable antilink\n- antilink kick | warn | null - action set karain link ky liye"
     },
     "antiword": {
       "desc": "*Group chat mein kuch khaas alfaaz ko filter karain.*",

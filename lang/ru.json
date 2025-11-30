@@ -71,7 +71,7 @@
       "action_invalid": "*Указано недействительное действие.*",
       "action_update": "_Действие Antilink обновлено до: *{0}*_",
       "update": "> Antilink обновлен\n*Разрешено:* {0}\n*Запрещено:* {1}",
-      "example": "Статус Antilink: *{0}*\n\n> Примеры использования:\n- antilink list - Просмотреть текущие настройки\n- antilink allow whatsapp.com - Разрешить определенные URL\n- antilink disallow facebook.com - Запретить определенные URL\n- antilink on | off - Включить/Отключить antilink\n- antilink kick | warn | null - Установить действие для ссылки"
+      "example": "Статус Antilink: *{0}*\n\n> Примеры использования:\n- antilink list - Просмотреть текущие настройки\n- antilink allow whatsapp.com - Разрешить определенные URL\n- antilink disallow facebook.com - Запретить определенные URL\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Включить/Отключить antilink\n- antilink kick | warn | null - Установить действие для ссылки"
     },
     "antiword": {
       "desc": "_Фильтровать определенные слова в групповом чате_",

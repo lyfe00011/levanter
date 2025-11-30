@@ -71,7 +71,7 @@
       "action_invalid": "*Geçersiz eylem belirtildi.*",
       "action_update": "Antilink eylemi güncellendi: *{0}*",
       "update": "> Antilink Güncellendi\n*İzin Verilen:* {0}\n*İzin Verilmeyen:* {1}",
-      "example": "Antilink Durumu: *{0}*\n\n> Kullanım Örnekleri:\n- antilink list - Mevcut ayarları görüntüle\n- antilink allow whatsapp.com - Belirli URL'leri izin ver\n- antilink disallow facebook.com - Belirli URL'leri yasakla\n- antilink on | off - Antilink'i etkinleştir/devre dışı bırak\n- antilink kick | warn | null - Link için eylem belirle"
+      "example": "Antilink Durumu: *{0}*\n\n> Kullanım Örnekleri:\n- antilink list - Mevcut ayarları görüntüle\n- antilink allow whatsapp.com - Belirli URL'leri izin ver\n- antilink disallow facebook.com - Belirli URL'leri yasakla\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Antilink'i etkinleştir/devre dışı bırak\n- antilink kick | warn | null - Link için eylem belirle"
     },
     "antiword": {
       "desc": "Grup sohbetinde belirli kelimeleri filtrele",

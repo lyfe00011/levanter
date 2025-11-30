@@ -71,7 +71,7 @@
       "action_invalid": "*تم تحديد إجراء غير صالح.*",
       "action_update": "تم تحديث إجراء مكافحة الروابط إلى: *{0}*",
       "update": "> تم تحديث مكافحة الروابط\n*مسموح به:* {0}\n*غير مسموح به:* {1}",
-      "example": "حالة مكافحة الروابط: *{0}*\n\n> أمثلة الاستخدام:\n- antilink list - عرض الإعدادات الحالية\n- antilink allow whatsapp.com - السماح بعناوين URL محددة\n- antilink disallow facebook.com - عدم السماح بعناوين URL محددة\n- antilink on | off - تمكين/تعطيل مكافحة الروابط\n- antilink kick | warn | null - تعيين إجراء للرابط"
+      "example": "حالة مكافحة الروابط: *{0}*\n\n> أمثلة الاستخدام:\n- antilink list - عرض الإعدادات الحالية\n- antilink allow whatsapp.com - السماح بعناوين URL محددة\n- antilink disallow facebook.com - عدم السماح بعناوين URL محددة\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - تمكين/تعطيل مكافحة الروابط\n- antilink kick | warn | null - تعيين إجراء للرابط"
     },
     "antiword": {
       "desc": "تصفية كلمات محددة في دردشة المجموعة",

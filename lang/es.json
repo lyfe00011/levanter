@@ -71,7 +71,7 @@
       "action_invalid": "*La accion especificada no es Valida.*",
       "action_update": "La Accion del Antilink ha sido actualizada para: *{0}*",
       "update": "> Antilink Actualizado\n*Permitido:* {0}\n*No Permitido:* {1}",
-      "example": "Antilink Status: *{0}*\n\n> Ejemplos de Uso:\n- antilink info - Ver la configuracion Actual\n- antilink whatsapp.com - Permitir solo este Link\n- antilink on | off - Activar/Desactivar antilink\n- antilink action/<kick | warn | null> - Accion a Aplicar"
+      "example": "Antilink Status: *{0}*\n\n> Ejemplos de Uso:\n- antilink info - Ver la configuracion Actual\n- antilink whatsapp.com - Permitir solo este Link\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Activar/Desactivar antilink\n- antilink action/<kick | warn | null> - Accion a Aplicar"
     },
     "antiword": {
       "desc": "Borrar palabras Prohibidas",

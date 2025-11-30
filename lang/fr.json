@@ -71,7 +71,7 @@
       "action_invalid": "*Action spécifiée invalide.*",
       "action_update": "Action de l'anti-lien mise à jour à : *{0}*",
       "update": "> Anti-lien mis à jour\n*Autorisé :* {0}\n*Non autorisé :* {1}",
-      "example": "Statut de l'anti-lien : *{0}*\n\n> Exemples d'utilisation :\n- antilink list - Voir les paramètres actuels\n- antilink allow whatsapp.com - Autoriser des URLs spécifiques\n- antilink disallow facebook.com - Interdire des URLs spécifiques\n- antilink on | off - Activer/Désactiver l'anti-lien\n- antilink kick | warn | null - Définir l'action pour les liens"
+      "example": "Statut de l'anti-lien : *{0}*\n\n> Exemples d'utilisation :\n- antilink list - Voir les paramètres actuels\n- antilink allow whatsapp.com - Autoriser des URLs spécifiques\n- antilink disallow facebook.com - Interdire des URLs spécifiques\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Activer/Désactiver l'anti-lien\n- antilink kick | warn | null - Définir l'action pour les liens"
     },
     "antiword": {
       "desc": "Filtrer des mots spécifiques dans le chat de groupe",

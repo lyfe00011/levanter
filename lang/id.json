@@ -71,7 +71,7 @@
       "action_invalid": "*Aksi yang dimasukkan tidak valid.*",
       "action_update": "Aksi Antilink diperbarui menjadi: *{0}*",
       "update": "> Antilink Diperbarui\n*Diizinkan:* {0}\n*Tidak Diizinkan:* {1}",
-      "example": "Status Antilink: *{0}*\n\n> Contoh Penggunaan:\n- antilink list - Lihat pengaturan saat ini\n- antilink allow whatsapp.com - Izinkan URL tertentu\n- antilink disallow facebook.com - Larang URL tertentu\n- antilink on | off - Aktifkan/Nonaktifkan antilink\n- antilink kick | warn | null - Atur aksi untuk link"
+      "example": "Status Antilink: *{0}*\n\n> Contoh Penggunaan:\n- antilink list - Lihat pengaturan saat ini\n- antilink allow whatsapp.com - Izinkan URL tertentu\n- antilink disallow facebook.com - Larang URL tertentu\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Aktifkan/Nonaktifkan antilink\n- antilink kick | warn | null - Atur aksi untuk link"
     },
     "antiword": {
       "desc": "Filter kata-kata tertentu di grup chat",

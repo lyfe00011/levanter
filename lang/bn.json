@@ -71,7 +71,7 @@
       "action_invalid": "*অবৈধ অ্যাকশন নির্দিষ্ট করা হয়েছে।*",
       "action_update": "Antilink অ্যাকশন আপডেট করা হয়েছে: *{0}*",
       "update": "> Antilink আপডেট করা হয়েছে\n*অনুমতি দেওয়া:* {0}\n*অনুমতি দেওয়া হয়নি:* {1}",
-      "example": "Antilink স্ট্যাটাস: *{0}*\n\n> ব্যবহারের উদাহরণ:\n- antilink list - বর্তমান সেটিংস দেখুন\n- antilink allow whatsapp.com - নির্দিষ্ট URL অনুমতি দিন\n- antilink disallow facebook.com - নির্দিষ্ট URL নিষিদ্ধ করুন\n- antilink on | off - Antilink চালু/বন্ধ করুন\n- antilink kick | warn | null - লিঙ্কের জন্য অ্যাকশন সেট করুন"
+      "example": "Antilink স্ট্যাটাস: *{0}*\n\n> ব্যবহারের উদাহরণ:\n- antilink list - বর্তমান সেটিংস দেখুন\n- antilink allow whatsapp.com - নির্দিষ্ট URL অনুমতি দিন\n- antilink disallow facebook.com - নির্দিষ্ট URL নিষিদ্ধ করুন\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Antilink চালু/বন্ধ করুন\n- antilink kick | warn | null - লিঙ্কের জন্য অ্যাকশন সেট করুন"
     },
     "antiword": {
       "desc": "গ্রুপ চ্যাটে নির্দিষ্ট শব্দ ফিল্টার করুন",

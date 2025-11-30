@@ -71,7 +71,7 @@
       "action_invalid": "*Invalid action specified.*",
       "action_update": "Antilink action updated to: *{0}*",
       "update": "> Antilink Updated\n*Allowed:* {0}\n*Not Allowed:* {1}",
-      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink list - View current settings\n- antilink allow whatsapp.com - Allow specific URLs\n- antilink disallow facebook.com - Disallow specific URLs\n- antilink on | off - Enable/Disable antilink\n- antilink kick | warn | null - Set action for link"
+      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink list - View current settings\n- antilink allow whatsapp.com - Allow specific URLs\n- antilink disallow facebook.com - Disallow specific URLs\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Enable/Disable antilink\n- antilink kick | warn | null - Set action for link"
     },
     "antiword": {
       "desc": "Filter specific words in the group chat",
