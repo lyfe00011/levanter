@@ -1026,7 +1026,7 @@ axios@^1.3.3:
 
 "baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git":
   version "7.0.0-rc.9"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#9bf6e16da78d7d1bdbfc9bb7461b5827342924ef"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#ef12cff7e79d1edb07a15d4e7db98e905b6b2921"
   dependencies:
     "@cacheable/node-cache" "^1.4.0"
     "@hapi/boom" "^9.1.3"
