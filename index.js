@@ -11,15 +11,7 @@ const start = async () => {
     logger.error({ msg: 'Unable to connect to the database', error: error.message, databaseUrl })
     return stopInstance()
   }
-  if (DATABASE.getDialect() === 'sqlite') {
-    try {
-      await DATABASE.query('PRAGMA journal_mode = WAL;')
-      await DATABASE.query('PRAGMA synchronous = NORMAL;')
-      await DATABASE.query('PRAGMA busy_timeout = 3000;')
-    } catch (error) {
-      logger.warn({ error }, 'Failed to set SQLite PRAGMAs')
-    }
-  }
+
   try {
     const bot = new Client()
     await bot.connect()
