@@ -7,6 +7,7 @@ const {
   delScheduleStatus,
   deleteScheduleStatusTask,
   lang,
+  isGroup
 } = require('../lib/')
 
 bot(
@@ -42,9 +43,8 @@ bot(
       const statuses = await getScheduleStatus(message.id)
       let msg = lang.plugins.scstatus.list
       statuses.forEach((status) => {
-        msg += `\n\ntime : ${status.time}\njids: ${
-          status.jids.length > 1 ? status.jids : 'contact'
-        }`
+        msg += `\n\ntime : ${status.time}\njids: ${status.jids.length > 1 ? status.jids : 'contact'
+          }`
       })
       return await message.send(msg)
     }
@@ -68,5 +68,31 @@ bot(
     }
     const at = await createStatusSchedule(isTimeValid, message, jids, message.id)
     return await message.send(lang.plugins.scstatus.scheduled.format(at))
+  }
+)
+
+bot(
+  {
+    pattern: 'gstatus ?(.*)',
+    desc: 'Update group status (reply to image, video, or text)',
+    type: 'group'
+  },
+  async (message, match) => {
+    if (
+      !message.reply_message ||
+      (!message.reply_message.image && !message.reply_message.video && !message.reply_message.txt)
+    ) {
+      return await message.send('Reply to an image, video, or text with `.gstatus <jid>`')
+    }
+    const groupJid = parsedJid(match)
+    if (groupJid.length === 0) {
+      await message.groupStatus(message, message.jid)
+    } else {
+      for (const jid of groupJid) {
+        if (!isGroup(jid)) continue
+        await message.groupStatus(message, jid)
+      }
+    }
+    return await message.send('Group status updated.')
   }
 )
