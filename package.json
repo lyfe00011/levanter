@@ -1,6 +1,6 @@
 {
   "name": "levanter",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "dependencies": {
     "audio-decode": "^2.2.2",
     "axios": "^1.3.3",
-    "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git",
+    "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#master",
     "bgutils-js": "^3.2.0",
     "browser-id3-writer": "^4.4.0",
     "cheerio": "^1.0.0-rc.10",

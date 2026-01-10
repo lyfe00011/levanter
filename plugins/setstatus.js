@@ -7,7 +7,8 @@ const {
   delScheduleStatus,
   deleteScheduleStatusTask,
   lang,
-  isGroup
+  isGroup,
+  isAdmin
 } = require('../lib/')
 
 bot(
@@ -86,11 +87,20 @@ bot(
     }
     const groupJid = parsedJid(match)
     if (groupJid.length === 0) {
+      const participants = await message.groupMetadata(message.jid)
+      const isImAdmin = await isAdmin(participants, message.participant)
+      if (!isImAdmin) return await message.send(lang.plugins.kick.not_admin)
       await message.groupStatus(message, message.jid)
     } else {
       for (const jid of groupJid) {
         if (!isGroup(jid)) continue
-        await message.groupStatus(message, jid)
+        const participants = await message.groupMetadata(jid)
+        const isImAdmin = await isAdmin(participants, message.participant)
+        if (!isImAdmin) {
+          await message.send(lang.plugins.kick.not_admin)
+          continue
+        }
+        // await message.groupStatus(message, jid)
       }
     }
     return await message.send('Group status updated.')
