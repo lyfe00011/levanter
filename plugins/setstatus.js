@@ -89,7 +89,9 @@ bot(
     if (groupJid.length === 0) {
       const participants = await message.groupMetadata(message.jid)
       const isImAdmin = await isAdmin(participants, message.participant)
-      if (!isImAdmin) return await message.send(lang.plugins.kick.not_admin)
+      if (!isImAdmin) {
+        return await message.send('You are not admin')
+      }
       await message.groupStatus(message, message.jid)
     } else {
       for (const jid of groupJid) {
@@ -97,10 +99,10 @@ bot(
         const participants = await message.groupMetadata(jid)
         const isImAdmin = await isAdmin(participants, message.participant)
         if (!isImAdmin) {
-          await message.send(lang.plugins.kick.not_admin)
+          await message.send(`You are not admin at @${jid}`, { contextInfo: { mentionedJid: [jid] } })
           continue
         }
-        // await message.groupStatus(message, jid)
+        await message.groupStatus(message, jid)
       }
     }
     return await message.send('Group status updated.')
