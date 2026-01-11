@@ -4,19 +4,45 @@ const { stopInstance } = require('./lib/pm2')
 
 const start = async () => {
   logger.info(`levanter ${VERSION}`)
+
   try {
     await DATABASE.authenticate({ retry: { max: 3 } })
   } catch (error) {
-    const databaseUrl = process.env.DATABASE_URL
-    logger.error({ msg: 'Unable to connect to the database', error: error.message, databaseUrl })
+    logger.error({
+      msg: 'Database connection failed',
+      error: error.message,
+      url: process.env.DATABASE_URL,
+    })
     return stopInstance()
   }
 
+  const bot = new Client()
+
   try {
-    const bot = new Client()
     await bot.connect()
   } catch (error) {
-    logger.error(error)
+    logger.error({ msg: 'Bot client failed to start', error: error.message })
+  }
+
+  return bot
+}
+
+const shutdown = async (bot) => {
+  try {
+    if (bot) await bot.close()
+    await DATABASE.close()
+    process.exit(0)
+  } catch (error) {
+    logger.error({ msg: 'Error during shutdown', error: error.message })
+    process.exit(1)
   }
 }
-start()
+
+const init = async () => {
+  const bot = await start()
+
+  process.on('SIGINT', () => shutdown(bot))
+  process.on('SIGTERM', () => shutdown(bot))
+}
+
+init()
