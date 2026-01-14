@@ -746,6 +746,45 @@
       "filter": "Grup bahsetme koruması için yoksayılan JID'ler güncellendi.",
       "enabled": "Grup bahsetme koruması etkinleştirildi.",
       "disabled": "Grup bahsetme koruması devre dışı bırakıldı."
+    },
+    "reminder": {
+      "desc": "Google Takvim hatırlatıcılarını yönetin.",
+      "success": "✅ Hatırlatıcı eklendi: *{0}* {1} tarihinde",
+      "list": "*Hatırlatıcılarınız:*\n\n{0}",
+      "list_empty": "Hatırlatıcı bulunamadı.",
+      "deleted": "Hatırlatıcı başarıyla silindi!",
+      "invalid_id": "Lütfen geçerli bir etkinlik kimliği sağlayın.",
+      "error": "*Hata:* {0}",
+      "usage": "> *Hatırlatıcı Kullanımı:*\n- `reminder <metin>` - Yeni hatırlatıcı ekle (örn. 'yarın saat 10'da toplantı')\n- `reminder list` - Tüm hatırlatıcıları listele\n- `reminder del <id>` - Hatırlatıcıyı sil",
+      "auth_required": "*Kimlik Doğrulama Gerekli:*\n\nBotu yetkilendirmek için \"gauth\" kullanın.",
+      "time": "Saat",
+      "id": "ID",
+      "short_id_info": "\n\n*Not:* Silme komutu için ID'nin yalnızca ilk 2-4 karakterini girmeniz yeterlidir."
+    },
+    "gauth": {
+      "desc": "Google Kimlik Doğrulamasını Yönet (Doğrula, İçe Aktar, Çıkış Yap, Durum)",
+      "usage": "*Google Auth Komutları:*\n\n- `.gauth auth` — Kimlik doğrulama işlemini başlat.\n- `.gauth code <url_veya_kod>` — Kimlik doğrulama kodunu doğrula.\n- `.gauth import` — `credentials.json` dosyasını içe aktar (dosyayı yanıtlayın).\n- `.gauth status` — Mevcut kimlik doğrulama durumunu kontrol et.\n- `.gauth logout` — Bu oturum için kimlik bilgilerini ve belirteçleri temizle.",
+      "prompt": "*Google Kimlik Doğrulama Kurulum Kılavuzu:*\n\n1. *Proje Oluşturun:* https://console.cloud.google.com/ adresine gidin, \"Select a project\" > \"New Project\" seçeneğine tıklayın, adını \"Levanter\" koyun ve \"Create\" butonuna basın.\n2. *APIs Etkinleştirin:* \"APIs & Services\" > \"Library\" bölümüne gidin. Hem \"Google Drive API\" hem de \"Google Calendar API\" aratıp etkinleştirin.\n3. *OAuth İzin Ekranı:* \"APIs & Services\" > \"OAuth consent screen\" bölümüne gidin. \"External\" seçin, gerekli alanları doldurun ve \"Audience\" bölümünde e-postanızı \"Test users\" kısmına ekleyin (ZORUNLU).\n4. *Kimlik Bilgileri:* \"APIs & Services\" > \"Credentials\" bölümüne gidin. \"Create Credentials\" > \"OAuth client ID\" butonuna tıklayın. Uygulama türü olarak \"Desktop app\" seçin, bir ad verin ve \"Create\" butonuna basın.\n5. *İndir:* Yeni Client ID'nizin yanındaki İndir (JSON) simgesine tıklayın. Kaydedin ve dosyayı yanıtlayarak `.gauth import` komutunu kullanın.\n6. *Yetkilendir:* Şimdi yetkilendirmek için aşağıdaki bağlantıya tıklayın:\n{0}\n\n7. *Tamamla:* Giriş yapın, \"Unverified app\" uyarısını kabul edin (\"Advanced\" > \"Go to Levanter\" seçeneğine tıklayarak), yönlendirmeden sonra adres çubuğundaki tam URL'yi kopyalayın ve gönderin:\n`.gauth code <kopyalanan_url>`",
+      "success": "Kimlik doğrulama başarılı!",
+      "import_success": "`credentials.json` başarıyla içe aktarıldı! Şimdi yetkilendirmek için `.gauth auth` kullanın.",
+      "import_reply": "Lütfen bir `credentials.json` dosyasını yanıtlayın.",
+      "status_auth": "*Durum:* Oturum için kimlik doğrulaması yapıldı.",
+      "status_not_auth": "*Durum:* Oturum için kimlik doğrulaması yapılmadı. `.gauth auth` kullanın.",
+      "logout": "Oturum kapatıldı ve oturum için Google Auth verileri temizlendi.",
+      "failed": "*Başarısız:* {0}"
+    },
+    "gdrive": {
+      "desc": "Google Drive işlemleri (yükleme, listeleme, silme).",
+      "upload_success": "Yükleme tamamlandı!",
+      "uploading": "Medya Drive'a yükleniyor...",
+      "not_authorized": "Yetki yok. \"backup auth\" kullanın.",
+      "list": "*Google Drive Dosyaları:*\n\n{0}",
+      "list_empty": "Levanter klasöründe dosya bulunamadı.",
+      "deleted": "Dosya başarıyla silindi!",
+      "invalid_id": "Lütfen geçerli bir dosya kimliği sağlayın.",
+      "error": "*Hata:* {0}",
+      "url_prompt": "Lütfen geçerli bir URL sağlayın, bir medya mesajını etiketleyin veya alt komutları kullanın: list, del <id>, dl <id>.\nÖrnek: `gupload list`",
+      "short_id_info": "\n\n*Not:* İndirme veya silme komutları için ID'nin yalnızca ilk 2-4 karakterini girmeniz yeterlidir."
     }
   }
 }

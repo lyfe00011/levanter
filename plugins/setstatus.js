@@ -93,18 +93,31 @@ bot(
         return await message.send('You are not admin')
       }
       await message.groupStatus(message, message.jid)
+      return await message.send('Group status updated.')
     } else {
+      let successCount = 0
       for (const jid of groupJid) {
         if (!isGroup(jid)) continue
-        const participants = await message.groupMetadata(jid)
-        const isImAdmin = await isAdmin(participants, message.participant)
-        if (!isImAdmin) {
-          await message.send(`You are not admin at @${jid}`, { contextInfo: { mentionedJid: [jid] } })
-          continue
+        try {
+          const participants = await message.groupMetadata(jid)
+          const isImAdmin = await isAdmin(participants, message.participant)
+          if (!isImAdmin) {
+            await message.send(`You are not admin at @${jid}`, {
+              contextInfo: { mentionedJid: [message.participant] },
+            })
+            continue
+          }
+          await message.groupStatus(message, jid)
+          successCount++
+        } catch (e) {
+          await message.send(`Failed to update status at @${jid}`, {
+            contextInfo: { mentionedJid: [jid] },
+          })
         }
-        await message.groupStatus(message, jid)
+      }
+      if (successCount > 0) {
+        return await message.send(`Group status updated for ${successCount} group(s).`)
       }
     }
-    return await message.send('Group status updated.')
   }
 )

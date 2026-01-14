@@ -1,13 +1,13 @@
 {
   "name": "levanter",
-  "version": "5.1.3",
+  "version": "5.1.4",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start . --attach --name levanter",
     "docker": "pm2-runtime start . --name levanter",
     "stop": "pm2 stop levanter",
-    "postinstall": "node -e \"try { require('sharp') } catch (e) { process.exit(1); }\" || yarn add --ignore-engines sharp@0.33.5"
+    "postinstall": "node -e \"try { require('sharp') } catch (e) { process.exit(1); }\" || yarn add --ignore-engines sharp@0.34.5"
   },
   "author": "",
   "license": "MIT",
@@ -39,15 +39,15 @@
     "pdfkit": "^0.13.0",
     "pg": "^8.7.3",
     "pino-pretty": "^9.1.1",
-    "pm2": "^6.0.8",
+    "pm2": "^6.0.14",
     "qrcode-reader": "^1.0.4",
     "qrcode-terminal": "^0.12.0",
     "sequelize": "^6.21.4",
-    "sharp": "^0.33.5",
+    "sharp": "^0.34.5",
     "simple-git": "^3.16.1",
     "sqlite3": "^5.0.11",
     "translate-google-api": "^1.0.4",
-    "youtubei.js": "^16.0.0"
+    "youtubei.js": "^16.0.1"
   },
   "packageManager": "yarn@1.22.22",
   "engines": {

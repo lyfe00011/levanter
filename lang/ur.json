@@ -746,6 +746,45 @@
       "filter": "Group mention protection ke liye ignore JIDs update kar diye gaye hain.",
       "enabled": "Group mention protection enable kar diya gaya hai.",
       "disabled": "Group mention protection disable kar diya gaya hai."
+    },
+    "reminder": {
+      "desc": "Google Calendar reminders ko manage karein.",
+      "success": "✅ Reminder set kar diya gaya hai: *{0}* {1} ko",
+      "list": "*Aapke Reminders:*\n\n{0}",
+      "list_empty": "Koi reminder nahi mila.",
+      "deleted": "Reminder kamyabi se delete kar diya gaya!",
+      "invalid_id": "Baraye meharbani aik valid event ID fraham karein.",
+      "error": "*Ghalti:* {0}",
+      "usage": "> *Reminders ka Istimal:*\n- `reminder <text>` - Naya reminder set karein (maslan: 'meeting kal 10 baje')\n- `reminder list` - Tamam reminders ki list dekhein\n- `reminder del <id>` - Reminder delete karein",
+      "auth_required": "*Authentication Zaroori Hai:*\n\nBot authorize karne ke liye \"gauth\" istimal karein.",
+      "time": "Waqt",
+      "id": "ID",
+      "short_id_info": "\n\n*نوٹ:* ڈیلیٹ کمانڈ کے لیے آپ کو آئی ڈی کے صرف پہلے 2-4 حروف درج کرنے کی ضرورت ہے۔"
+    },
+    "gauth": {
+      "desc": "Google Authentication (Authenticate, Import, Logout, Status) ko manage karein",
+      "usage": "*Google Auth Commands:*\n\n- `.gauth auth` — Authentication shuru karein.\n- `.gauth code <url_or_code>` — Authentication code validate karein.\n- `.gauth import` — `credentials.json` import karein (file ko reply karein).\n- `.gauth status` — Current authentication status check karein.\n- `.gauth logout` — Is session ke liye credentials aur tokens clear karein.",
+      "prompt": "*Google Authentication Setup Guide:*\n\n1. *Project Banayein:* https://console.cloud.google.com/ par jayein, \"Select a project\" > \"New Project\" par click karein, naam \"Levanter\" rakhein aur \"Create\" karein.\n2. *APIs Enable Karein:* \"APIs & Services\" > \"Library\" par jayein. \"Google Drive API\" aur \"Google Calendar API\" dono search karke enable karein.\n3. *OAuth Consent:* \"APIs & Services\" > \"OAuth consent screen\" par jayein. \"External\" chunein, zaroori fields bharein, aur \"Audience\" section mein \"Test users\" mein apna email add karein (ZAROORI).\n4. *Credentials:* \"APIs & Services\" > \"Credentials\" par jayein. \"Create Credentials\" > \"OAuth client ID\" par click karein. \"Desktop app\" chunein, naam dein, aur \"Create\" karein.\n5. *Download:* Apne naye Client ID ke paas Download (JSON) icon par click karein. Isse save karein aur file ko reply karke `.gauth import` ka istemal karein.\n6. *Authorize:* Ab authorize karne ke liye neeche diye gaye link par click karein:\n{0}\n\n7. *Complete:* Login karein, \"Unverified app\" warning accept karein (\"Advanced\" > \"Go to Levanter\" par click karke), redirect ke baad address bar se pura URL copy karein, aur bhejein:\n`.gauth code <copied_url>`",
+      "success": "Authentication kamyab rahi!",
+      "import_success": "`credentials.json` kamyabi se import ho gaya! Ab authorize karne ke liye `.gauth auth` istimal karein.",
+      "import_reply": "Baraye meharbani `credentials.json` file ko reply karein.",
+      "status_auth": "*Status:* Session ke liye authenticated hai.",
+      "status_not_auth": "*Status:* Session ke liye authenticated nahi hai. `.gauth auth` istimal karein.",
+      "logout": "Session ke liye Google Auth data clear aur logout kar diya gaya.",
+      "failed": "*Nakam:* {0}"
+    },
+    "gdrive": {
+      "desc": "Google Drive operations (upload, list, delete).",
+      "upload_success": "Upload mukammal ho gaya!",
+      "uploading": "Media Drive par upload ho raha hai...",
+      "not_authorized": "Authorized nahi hai. \"backup auth\" istimal karein.",
+      "list": "*Google Drive Files:*\n\n{0}",
+      "list_empty": "Levanter folder me koi file nahi mili.",
+      "deleted": "File kamyabi se delete ho gayi!",
+      "invalid_id": "Baraye meharbani aik valid file ID fraham karein.",
+      "error": "*Ghalti:* {0}",
+      "url_prompt": "Baraye meharbani aik valid URL fraham karein, media message tag karein, ya subcommands istemal karein: list, del <id>, dl <id>.\nMisal: `gupload list`",
+      "short_id_info": "\n\n*نوٹ:* ڈاؤن لوڈ یا ڈیلیٹ کمانڈز کے لیے آپ کو آئی ڈی کے صرف پہلے 2-4 حروف درج کرنے کی ضرورت ہے۔"
     }
   }
 }

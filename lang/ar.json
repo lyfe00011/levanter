@@ -766,6 +766,44 @@
       "filter": "تم تحديث معرفات JID التي سيتم تجاهلها لمنع الإشارة إلى المجموعة.",
       "enabled": "تم تمكين منع الإشارة إلى المجموعة.",
       "disabled": "تم تعطيل منع الإشارة إلى المجموعة."
+    },
+    "reminder": {
+      "desc": "إضافة تذكير إلى تقويم Google (يدعم اللغة الطبيعية).",
+      "usage": "*طريقة استخدام أمر التذكير:*\n\n- reminder <النص> (إضافة موعد)\n- reminder list (عرض المواعيد القادمة)\n- reminder del <المعرف> (حذف موعد)\n- مثال: `reminder tomorrow at 10am meeting` ",
+      "success": "*تمت إضافة التذكير!*\n\n*الحدث:* {0}\n*الوقت:* {1}\n*الرابط:* {2}",
+      "list": "*التذكيرات القادمة:*\n\n{0}",
+      "list_empty": "لا توجد تذكيرات قادمة.",
+      "deleted": "تم حذف التذكير بنجاح!",
+      "invalid_id": "معرف تذكير غير صالح.",
+      "auth_required": "*مطلوب المصادقة:*\n\nاستخدم \"gauth\" لتفويض البوت.",
+      "time": "الوقت",
+      "id": "المعرف",
+      "short_id_info": "\n\n*ملاحظة:* تحتاج فقط إلى إدخال أول 2-4 أحرف من المعرف لأوامر الحذف."
+    },
+    "gauth": {
+      "desc": "إدارة مصادقة Google (المصادقة، الاستيراد، تسجيل الخروج، الحالة)",
+      "usage": "*أوامر Google Auth:*\n\n- `.gauth auth` — بدء عملية المصادقة.\n- `.gauth code <url_or_code>` — التحقق من رمز المصادقة.\n- `.gauth import` — استيراد `credentials.json` (رد على الملف).\n- `.gauth status` — التحقق من حالة المصادقة الحالية.\n- `.gauth logout` — مسح بيانات الاعتماد لهذه الجلسة.",
+      "prompt": "*دليل إعداد مصادقة Google:*\n\n1. *إنشاء مشروع:* انتقل إلى https://console.cloud.google.com/، وانقر فوق \"Select a project\" > \"New Project\"، وقم بتسميته \"Levanter\" وانقر فوق \"Create\".\n2. *تمكين واجهات برمجة التطبيقات:* انتقل إلى \"APIs & Services\" > \"Library\". ابحث وقم بتمكين كل من \"Google Drive API\" و \"Google Calendar API\".\n3. *شاشة موافقة OAuth:* انتقل إلى \"APIs & Services\" > \"OAuth consent screen\". اختر \"External\"، واملأ الحقول المطلوبة، وفي قسم \"Audience\"، أضف بريدك الإلكتروني إلى \"Test users\" (إلزامي).\n4. *بيانات الاعتماد:* انتقل إلى \"APIs & Services\" > \"Credentials\". انقر فوق \"Create Credentials\" > \"OAuth client ID\". حدد \"Desktop app\" كنواع التطبيق، وقم بتسميته، وانقر فوق \"Create\".\n5. *تنزيل:* بجانب معرف العميل الجديد، انقر فوق أيقونة التنزيل (JSON). احفظه واستخدم `.gauth import` بالرد على الملف.\n6. *التفويض:* الآن انقر فوق الرابط أدناه للتفويض:\n{0}\n\n7. *إكمال:* قم بتسجيل الدخول، واقبل تحذير \"Unverified app\" (انقر فوق \"Advanced\" > \"Go to Levanter\")، وانسخ عنوان URL الكامل من شريط العنوان بعد إعادة التوجيه، وأرسل:\n`.gauth code <copied_url>`",
+      "success": "تمت المصادقة بنجاح!",
+      "import_success": "تم استيراد ملف `credentials.json` بنجاح! الآن استخدم `.gauth auth` للمصادقة.",
+      "import_reply": "يرجى الرد على ملف `credentials.json`.",
+      "status_auth": "*الحالة:* تم تسجيل الدخول للجلسة.",
+      "status_not_auth": "*الحالة:* لم يتم تسجيل الدخول للجلسة. استخدم `.gauth auth`.",
+      "logout": "تم تسجيل الخروج ومسح بيانات Google Auth للجلسة.",
+      "failed": "*فشل:* {0}"
+    },
+    "gdrive": {
+      "desc": "عمليات Google Drive (تحميل، قائمة، حذف).",
+      "upload_success": "اكتمل التحميل!",
+      "uploading": "جاري تحميل الوسائط إلى Drive...",
+      "not_authorized": "غير مصرح به. استخدم \"backup auth\".",
+      "list": "*ملفات Google Drive:*\n\n{0}",
+      "list_empty": "لم يتم العثور على ملفات في مجلد Levanter.",
+      "deleted": "تم حذف الملف بنجاح!",
+      "invalid_id": "يرجى تقديم معرف ملف صالح.",
+      "error": "*خطأ:* {0}",
+      "url_prompt": "يرجى تقديم عنوان URL صالح أو الإشارة إلى رسالة وسائط، أو استخدام الأوامر الفرعية: list، del <id>، dl <id>.\nمثال: `gupload list`",
+      "short_id_info": "\n\n*ملاحظة:* تحتاج فقط إلى إدخال أول 2-4 أحرف من المعرف لأوامر التنزيل أو الحذف."
     }
   }
 }

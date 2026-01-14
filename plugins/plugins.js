@@ -1,5 +1,5 @@
 const axios = require('axios')
-const { writeFileSync, unlinkSync } = require('fs')
+const fs = require('fs-extra')
 const path = require('path')
 const {
   bot,
@@ -43,16 +43,23 @@ bot(
       try {
         const res = await axios.get(url)
         if (res.status === 200) {
-          let plugin_name = /pattern: ["'](.*)["'],/g.exec(res.data)
-          plugin_name = plugin_name[1].split(' ')[0]
-          const pluginPath = path.join(__dirname, '../eplugins/' + message.id + plugin_name + '.js')
-          writeFileSync(pluginPath, res.data)
+          const matchResult = /pattern: ["'](.*)["'],/g.exec(res.data)
+          if (!matchResult || !matchResult[1]) {
+            await message.send(lang.plugins.plugin.invalid)
+            continue
+          }
+          const plugin_name = matchResult[1].split(' ')[0].replace(/[^a-zA-Z0-9]/g, '')
+          const epluginDir = path.join(__dirname, '../eplugins/')
+          fs.ensureDirSync(epluginDir)
+          const pluginPath = path.join(epluginDir, `${message.id}${plugin_name}.js`)
+          fs.writeFileSync(pluginPath, res.data)
 
           try {
             installPlugin(pluginPath, message.id)
           } catch (e) {
             await message.send(e.stack, { quoted: message.quoted })
-            return unlinkSync(pluginPath)
+            fs.unlinkSync(pluginPath)
+            continue
           }
 
           await setPlugin(plugin_name, url, message.id)
@@ -81,7 +88,7 @@ bot(
         try {
           await delPlugin(plugin.name, message.id)
           removePlugin(plugin.name, message.id)
-        } catch (error) {}
+        } catch (error) { }
       }
     } else {
       const isDeleted = await delPlugin(match, message.id)

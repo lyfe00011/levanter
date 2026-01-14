@@ -753,6 +753,45 @@
       "filter": "Anti group mention ke liye ignored JIDs update ho gaye.",
       "enabled": "Anti group mention enable ho gaya hai.",
       "disabled": "Anti group mention disable ho gaya hai."
+    },
+    "reminder": {
+      "desc": "Google Calendar reminders manage karein.",
+      "success": "✅ Reminder set ho gaya: *{0}* {1} ko",
+      "list": "*Aapke Reminders:*\n\n{0}",
+      "list_empty": "Koi reminder nahi mila.",
+      "deleted": "Reminder successfully delete ho gaya!",
+      "invalid_id": "Kripya ek valid event ID dein.",
+      "error": "*Error:* {0}",
+      "usage": "> *Reminders Istemal:*\n- `reminder <text>` - Naya reminder set karein (ex: 'reunion demain à 10h')\n- `reminder list` - Saare reminders ki list dekhein\n- `reminder del <id>` - Reminder delete karein",
+      "auth_required": "*Authentication Zaroori Hai:*\n\nBot authorize karne ke liye \"gauth\" istemal karein.",
+      "time": "Waqt",
+      "id": "ID",
+      "short_id_info": "\n\n*नोट:* डिलीट कमांड के लिए आपको आईडी के पहले 2-4 अक्षर ही डालने होंगे।"
+    },
+    "gauth": {
+      "desc": "Google प्रमाणीकरण प्रबंधित करें (प्रमाणित करें, आयात करें, लॉगआउट, स्थिति)",
+      "usage": "*Google Auth कमांड:*\n\n- `.gauth auth` — प्रमाणीकरण प्रक्रिया शुरू करें।\n- `.gauth code <url_या_code>` — प्रमाणीकरण कोड मान्य करें।\n- `.gauth import` — `credentials.json` आयात करें (फ़ाइल का उत्तर दें)।\n- `.gauth status` — वर्तमान प्रमाणीकरण स्थिति जांचें।\n- `.gauth logout` — इस सत्र के लिए क्रेडेंशियल और टोकन साफ़ करें।",
+      "prompt": "*Google प्रमाणीकरण सेटअप गाइड:*\n\n1. *प्रोजेक्ट बनाएं:* https://console.cloud.google.com/ पर जाएं, \"Select a project\" > \"New Project\" पर क्लिक करें, इसका नाम \"Levanter\" रखें और \"Create\" पर क्लिक करें।\n2. *API सक्षम करें:* \"APIs & Services\" > \"Library\" पर जाएं। \"Google Drive API\" और \"Google Calendar API\" दोनों को खोजें और सक्षम करें।\n3. *OAuth सहमति:* \"APIs & Services\" > \"OAuth consent screen\" पर जाएं। \"External\" चुनें, आवश्यक फ़ील्ड भरें, और \"Audience\" अनुभाग में, अपना ईमेल \"Test users\" में जोड़ें (अनिवार्य)।\n4. *क्रेडेंशियल:* \"APIs & Services\" > \"Credentials\" पर जाएं। \"Create Credentials\" > \"OAuth client ID\" पर क्लिक करें। एप्लिकेशन प्रकार के रूप में \"Desktop app\" चुनें, इसे एक नाम दें और \"Create\" पर क्लिक करें।\n5. *डाउनलोड:* अपने नए क्लाइंट आईडी के बगल में, डाउनलोड (JSON) आइकन पर क्लिक करें। इसे सहेजें और फ़ाइल का उत्तर देकर `.gauth import` का उपयोग करें।\n6. *प्रमाणित करें:* अब प्रमाणित करने के लिए नीचे दिए गए लिंक पर क्लिक करें:\n{0}\n\n7. *पूरा करें:* लॉग इन करें, \"Unverified app\" चेतावनी स्वीकार करें (\"Advanced\" > \"Go to Levanter\" पर क्लिक करके), रीडायरेक्ट के बाद एड्रेस बार से पूरा URL कॉपी करें, और भेजें:\n`.gauth code <copied_url>`",
+      "success": "प्रमाणीकरण सफल रहा!",
+      "import_success": "`credentials.json` सफलतापूर्वक आयात किया गया! अब प्रमाणित करने के लिए `.gauth auth` का उपयोग करें।",
+      "import_reply": "कृपया `credentials.json` फ़ाइल का उत्तर दें।",
+      "status_auth": "*स्थिति:* सत्र के लिए प्रमाणित।",
+      "status_not_auth": "*स्थिति:* सत्र के लिए प्रमाणित नहीं है। `.gauth auth` का उपयोग करें।",
+      "logout": "सत्र के लिए लॉग आउट किया गया और Google Auth डेटा हटा दिया गया।",
+      "failed": "*विफल:* {0}"
+    },
+    "gdrive": {
+      "desc": "Google Drive operations (upload, list, delete).",
+      "upload_success": "Upload poora ho gaya!",
+      "uploading": "Media Drive par upload ho raha hai...",
+      "not_authorized": "Authorized nahi hai. \"backup auth\" istemal karein.",
+      "list": "*Google Drive Files:*\n\n{0}",
+      "list_empty": "Levanter folder mein koi file nahi mili.",
+      "deleted": "File successfully delete ho gayi!",
+      "invalid_id": "Kripya ek valid file ID dein.",
+      "error": "*Error:* {0}",
+      "url_prompt": "Kripya ek valid URL dein, media message tag karein, ya subcommands istemal karein: list, del <id>, dl <id>.\nExample: `gupload list`",
+      "short_id_info": "\n\n*नोट:* डाउनलोड या डिलीट कमांड के लिए आपको आईडी के पहले 2-4 अक्षर ही डालने होंगे।"
     }
   }
 }

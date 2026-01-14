@@ -766,6 +766,45 @@
       "filter": "JIDs ignorados actualizados para anti mención de grupo.",
       "enabled": "Anti mención de grupo ha sido activada.",
       "disabled": "Anti mención de grupo ha sido desactivada."
+    },
+    "reminder": {
+      "desc": "Administrar recordatorios de Google Calendar.",
+      "success": "✅ Recordatorio establecido: *{0}* el {1}",
+      "list": "*Tus Recordatorios:*\n\n{0}",
+      "list_empty": "No se encontraron recordatorios.",
+      "deleted": "Recordatorio eliminado correctamente!",
+      "invalid_id": "Por favor, proporciona un ID de evento válido.",
+      "error": "*Error:* {0}",
+      "usage": "> *Uso de Recordatorios:*\n- `reminder <texto>` - Establecer un nuevo recordatorio (ej. 'reunión mañana a las 10am')\n- `reminder list` - Listar todos los recordatorios\n- `reminder del <id>` - Eliminar un recordatorio",
+      "auth_required": "*Autenticación Requerida:*\n\nUsa \"gauth\" para autorizar el bot.",
+      "time": "Hora",
+      "id": "ID",
+      "short_id_info": "\n\n*Nota:* Solo necesitas ingresar los primeros 2-4 caracteres del ID para el comando de eliminación."
+    },
+    "gauth": {
+      "desc": "Administrar la autenticación de Google (Autenticar, Importar, Salir, Estado)",
+      "usage": "*Comandos de Google Auth:*\n\n- `.gauth auth` — Iniciar el proceso de autenticación.\n- `.gauth code <url_o_código>` — Validar el código de autenticación.\n- `.gauth import` — Importar `credentials.json` (Responder al archivo).\n- `.gauth status` — Verificar el estado actual de autenticación.\n- `.gauth logout` — Limpiar credenciales y tokens para esta sesión.",
+      "prompt": "*Guía de configuración de la autenticación de Google:*\n\n1. *Crear proyecto:* Vaya a https://console.cloud.google.com/, haga clic en \"Select a project\" > \"New Project\", asígnele el nombre \"Levanter\" y hace clic en \"Create\".\n2. *Habilitar APIs:* Vaya a \"APIs & Services\" > \"Library\". Busque y habilite tanto \"Google Drive API\" como \"Google Calendar API\".\n3. *Pantalla de consentimiento de OAuth:* Vaya a \"APIs & Services\" > \"OAuth consent screen\". Elija \"External\", complete los campos obligatorios y, en la sección \"Audience\", agregue su correo electrónico a \"Test users\" (OBLIGATORIO).\n4. *Credenciales:* Vaya a \"APIs & Services\" > \"Credentials\". Haga clic en \"Create Credentials\" > \"OAuth client ID\". Seleccione \"Desktop app\" como tipo de aplicación, asígnele un nombre y haga clic en \"Create\".\n5. *Descargar:* Junto a su nuevo Client ID, haga clic en el icono de descarga (JSON). Guárdelo y use `.gauth import` respondiendo al archivo.\n6. *Autorizar:* Ahora haga clic en el enlace de abajo para autorizar:\n{0}\n\n7. *Completar:* Inicie sesión, acepte la advertencia de \"Unverified app\" (Haga clic en \"Advanced\" > \"Go to Levanter\"), copie la URL completa de la barra de direcciones después de la redirección y envíe:\n`.gauth code <url_copiada>`",
+      "success": "¡Autenticación exitosa!",
+      "import_success": "¡Archivo `credentials.json` importado con éxito! Ahora use `.gauth auth` para autorizar.",
+      "import_reply": "Por favor, responda a un archivo `credentials.json`.",
+      "status_auth": "*Estado:* Autenticado para la sesión.",
+      "status_not_auth": "*Estado:* No autenticado para la sesión. Use `.gauth auth`.",
+      "logout": "Sesión cerrada y datos de Google Auth limpiados para la sesión.",
+      "failed": "*Error:* {0}"
+    },
+    "gdrive": {
+      "desc": "Operaciones de Google Drive (subir, listar, eliminar).",
+      "upload_success": "¡Carga completa!",
+      "uploading": "Subiendo multimedia a Drive...",
+      "not_authorized": "No autorizado. Usa \"backup auth\".",
+      "list": "*Archivos de Google Drive:*\n\n{0}",
+      "list_empty": "No se encontraron archivos en la carpeta Levanter.",
+      "deleted": "¡Archivo eliminado correctamente!",
+      "invalid_id": "Por favor, proporciona un ID de archivo válido.",
+      "error": "*Error:* {0}",
+      "url_prompt": "Proporcione una URL válida, etiquete un mensaje multimedia o use subcomandos: list, del <id>, dl <id>.\nEjemplo: `gupload list`",
+      "short_id_info": "\n\n*Nota:* Solo necesitas ingresar los primeros 2-4 caracteres del ID para los comandos de descarga o eliminación."
     }
   }
 }

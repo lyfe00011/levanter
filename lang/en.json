@@ -766,6 +766,44 @@
       "filter": "Ignore JIDs updated for anti group mention.",
       "enabled": "Anti group mention has been enabled.",
       "disabled": "Anti group mention has been disabled."
+    },
+    "reminder": {
+      "desc": "Add a reminder to Google Calendar (natural language supported).",
+      "usage": "*Reminder Command Usage:*\n\n- reminder <text> (add event)\n- reminder list (view upcoming)\n- reminder del <id> (delete event)\n- Example: `reminder tomorrow at 10am meeting`",
+      "success": "*Reminder Added!*\n\n*Event:* {0}\n*Time:* {1}\n*Link:* {2}",
+      "list": "*Upcoming Reminders:*\n\n{0}",
+      "list_empty": "No upcoming reminders found.",
+      "deleted": "Reminder deleted successfully!",
+      "invalid_id": "Invalid reminder ID.",
+      "auth_required": "*Authentication Required:*\n\nUse \"gauth\" to authorize the bot.",
+      "time": "Time",
+      "id": "ID",
+      "short_id_info": "\n\n*Note:* You only need to enter the first 2-4 characters of the ID for the delete command."
+    },
+    "gauth": {
+      "desc": "Manage Google Authentication (Authenticate, Import, Logout, Status)",
+      "usage": "*Google Auth Commands:*\n\n- `.gauth auth` — Start the authentication process.\n- `.gauth code <url_or_code>` — Validate the authentication code.\n- `.gauth import` — Import `credentials.json` (Reply to the file).\n- `.gauth status` — Check current authentication status.\n- `.gauth logout` — Clear credentials and tokens for this session.",
+      "prompt": "*Google Authentication Setup Guide:*\n\n1. *Create Project:* Go to https://console.cloud.google.com/, click \"Select a project\" > \"New Project\", name it \"Levanter\" and click \"Create\".\n2. *Enable APIs:* Go to \"APIs & Services\" > \"Library\". Search and enable both \"Google Drive API\" and \"Google Calendar API\".\n3. *OAuth Consent:* Go to \"APIs & Services\" > \"OAuth consent screen\". Choose \"External\", fill required fields, and in the \"Audience\" section, add your email to \"Test users\" (MANDATORY).\n4. *Credentials:* Go to \"APIs & Services\" > \"Credentials\". Click \"Create Credentials\" > \"OAuth client ID\". Select \"Desktop app\" as the application type, name it, and click \"Create\".\n5. *Download:* Beside your new Client ID, click the Download (JSON) icon. Save it and use `.gauth import` by replying to the file.\n6. *Authorize:* Now click the link below to authorize:\n{0}\n\n7. *Complete:* Log in, accept the \"Unverified app\" warning (Click \"Advanced\" > \"Go to Levanter\"), copy the full URL from the address bar after redirect, and send:\n`.gauth code <copied_url>`",
+      "success": "Authentication successful!",
+      "import_success": "`credentials.json` imported successfully! Now use `.gauth auth` to authorize.",
+      "import_reply": "Please reply to a `credentials.json` file.",
+      "status_auth": "*Status:* Authenticated for session.",
+      "status_not_auth": "*Status:* Not authenticated for session. Use `.gauth auth`.",
+      "logout": "Logged out and cleared Google Auth data for session.",
+      "failed": "*Failed:* {0}"
+    },
+    "gdrive": {
+      "desc": "Google Drive operations (upload, list, delete).",
+      "upload_success": "Upload complete!",
+      "uploading": "Uploading media to Drive...",
+      "not_authorized": "Not authorized. Use \"backup auth\".",
+      "list": "*Google Drive Files:*\n\n{0}",
+      "list_empty": "No files found in Levanter folder.",
+      "deleted": "File deleted successfully!",
+      "invalid_id": "Please provide a valid file ID.",
+      "error": "*Error:* {0}",
+      "url_prompt": "Please provide a valid URL, tag a media message, or use subcommands: list, del <id>, dl <id>.\nExample: `gupload list`",
+      "short_id_info": "\n\n*Note:* You only need to enter the first 2-4 characters of the ID for download or delete commands."
     }
   }
 }
