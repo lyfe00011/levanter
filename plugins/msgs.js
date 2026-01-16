@@ -9,6 +9,7 @@ const {
   isAdmin,
   addSpace,
   lang,
+  getJid
 } = require('../lib')
 
 bot(
@@ -87,9 +88,6 @@ bot(
     onlyGroup: true,
   },
   async (message, match) => {
-    const members = await message.groupMetadata(message.jid)
-    const membersJids = members.map(({ id }) => id)
-
     let [rawType, rawCount, rawKickOrType, rawCOUNT, rawKICK] = match.split(' ')
     if (!rawType || !rawCount) {
       return await message.send(lang.plugins.inactive.usage)
@@ -110,6 +108,10 @@ bot(
       return await message.send(lang.plugins.inactive.usage)
     }
 
+    const members = await message.groupMetadata(message.jid)
+    const membersJids = await Promise.all(
+      members.map(({ id }) => getJid(id, message.id))
+    )
     const participants = await getMsg(message.jid)
     const now = Date.now()
     const inactive = []

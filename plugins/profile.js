@@ -1,4 +1,4 @@
-const { bot, getName, formatTime, jidToNum, parsedJid, isUser, isGroup, lang } = require('../lib/')
+const { bot, getName, formatTime, jidToNum, parsedJid, isUser, isGroup, lang, getJid } = require('../lib/')
 
 bot(
   {
@@ -73,9 +73,9 @@ bot(
     type: 'misc',
   },
   async (message, match) => {
-    match = parsedJid(match)[0]
-    const gid = (isGroup(match) && match) || message.jid
-    const id = (isUser(match) && match) || message.mention[0] || message.reply_message.jid
+    match = parsedJid(match)[0] || message.jid
+    const gid = isGroup(match) ? match : null
+    const id = isUser(match) ? match : message.mention[0] || message.reply_message.jid
     let pp = ''
     try {
       pp = await message.profilePictureUrl(id || gid)
@@ -84,21 +84,22 @@ bot(
     }
     let caption = ''
     if (id) {
-      caption = lang.plugins.whois.number.format(jidToNum(id))
+      const jid = await getJid(id, message.id)
+      caption = lang.plugins.whois.number.format(jidToNum(jid))
       try {
         const [res] = await message.fetchStatus(id)
         if (res.status) {
           caption += `\n${lang.plugins.whois.name.format(
-            await getName(gid, id, message.id)
+            await getName(gid, jid, message.id)
           )}\n${lang.plugins.whois.about.format(res.status)}\n${lang.plugins.whois.setAt.format(
             res.date
           )}`
         }
-      } catch (error) {}
+      } catch (error) { }
     } else {
       const { subject, size, creation, desc, owner } = await message.groupMetadata(gid, !!gid)
       caption = `${lang.plugins.whois.name.format(subject)}\n${lang.plugins.whois.owner.format(
-        `${owner ? `+${jidToNum(owner)}` : ''}`
+        `${owner ? `+${jidToNum(await getJid(owner, message.id))}` : ''}`
       )}\n${lang.plugins.whois.members.format(size)}\n${lang.plugins.whois.created.format(
         formatTime(creation)
       )}\n${lang.plugins.whois.description.format(desc)}`
