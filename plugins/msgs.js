@@ -88,70 +88,74 @@ bot(
     onlyGroup: true,
   },
   async (message, match) => {
-    let [rawType, rawCount, rawKickOrType, rawCOUNT, rawKICK] = match.split(' ')
-    if (!rawType || !rawCount) {
+    const args = match.toLowerCase().split(' ')
+    if (args.length < 2 && !args.includes('kick')) {
       return await message.send(lang.plugins.inactive.usage)
     }
 
-    const type = rawType.toLowerCase()
-    const count = Number(rawCount)
-    const kickOrType = rawKickOrType ? rawKickOrType.toLowerCase() : null
-    const COUNT = rawCOUNT ? Number(rawCOUNT) : null
-    const KICK = rawKICK ? rawKICK.toLowerCase() : null
+    let inactiveDaysThreshold = null
+    let totalMsgsThreshold = null
+    const shouldKick = args.includes('kick')
 
-    if (
-      (type !== 'total' && type !== 'day') ||
-      isNaN(count) ||
-      (kickOrType && kickOrType !== 'total' && kickOrType !== 'kick') ||
-      (rawCOUNT && isNaN(COUNT))
-    ) {
+    for (let i = 0; i < args.length; i++) {
+      const val = Number(args[i + 1])
+      if (args[i] === 'day' && !isNaN(val)) {
+        inactiveDaysThreshold = val
+      } else if (args[i] === 'total' && !isNaN(val)) {
+        totalMsgsThreshold = val
+      }
+    }
+
+    if (inactiveDaysThreshold === null && totalMsgsThreshold === null) {
       return await message.send(lang.plugins.inactive.usage)
     }
 
     const members = await message.groupMetadata(message.jid)
-    const membersJids = await Promise.all(
-      members.map(({ id }) => getJid(id, message.id))
-    )
-    const participants = await getMsg(message.jid)
+    const botJid = message.client.user.jid
+
+    const participantsData = (await getMsg(message.jid)) || {}
     const now = Date.now()
-    const inactive = []
+    const day = 24 * 60 * 60 * 1000
+    const inactiveJids = []
 
-    for (const jid of membersJids) {
-      const data = participants[jid]
-      if (!data) {
-        inactive.push(jid)
-        continue
+    for (const m of members) {
+      const jid = await getJid(m.id, message.id)
+      if (jid === botJid || m.admin) continue
+
+      const data = participantsData[jid] || { total: 0, time: 0 }
+
+      let satisfiesDay = true
+      if (inactiveDaysThreshold !== null) {
+        const daysInactive = data.time === 0 ? Infinity : (now - data.time) / day
+        satisfiesDay = daysInactive >= inactiveDaysThreshold
       }
 
-      if (kickOrType === 'total') {
-        if (data.total <= COUNT && getFloor((now - data.time) / 1000) / 86400 >= count) {
-          inactive.push(jid)
-        }
-      } else if (type === 'total') {
-        if (data.total <= count) inactive.push(jid)
-      } else if (type === 'day') {
-        if (getFloor((now - data.time) / 1000) / 86400 >= count) {
-          inactive.push(jid)
-        }
+      let satisfiesTotal = true
+      if (totalMsgsThreshold !== null) {
+        satisfiesTotal = data.total <= totalMsgsThreshold
+      }
+
+      if (satisfiesDay && satisfiesTotal) {
+        inactiveJids.push(jid)
       }
     }
 
-    let msg = lang.plugins.inactive.inactives.format(inactive.length)
-    if (inactive.length < 1) return await message.send(msg)
+    let msg = lang.plugins.inactive.inactives.format(inactiveJids.length)
+    if (inactiveJids.length < 1) return await message.send(msg)
 
-    if (kickOrType === 'kick' || KICK === 'kick') {
-      const isImAdmin = await isAdmin(members, message.client.user.jid)
+    if (shouldKick) {
+      const isImAdmin = await isAdmin(members, botJid)
       if (!isImAdmin) return await message.send(lang.plugins.common.not_admin)
-      await message.send(lang.plugins.inactive.removing.format(inactive.length))
+      await message.send(lang.plugins.inactive.removing.format(inactiveJids.length))
       await sleep(7000)
-      return await message.Kick(inactive)
+      return await message.Kick(inactiveJids)
     }
 
-    for (let i = 0; i < inactive.length; i++) {
-      msg += `\n*${i + 1}.*${addSpace(i + 1, inactive.length)} @${jidToNum(inactive[i])}`
+    for (let i = 0; i < inactiveJids.length; i++) {
+      msg += `\n*${i + 1}.*${addSpace(i + 1, inactiveJids.length)} @${jidToNum(inactiveJids[i])}`
     }
     return await message.send(msg, {
-      contextInfo: { mentionedJid: inactive },
+      contextInfo: { mentionedJid: inactiveJids },
     })
   }
 )
