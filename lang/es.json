@@ -20,18 +20,38 @@
     "plugins_installed": "[{0}] Plugins Instalados",
     "plugin_install_error": "[{0}] Error Instalando {1}, Borrando Plugin",
     "plugin_not_found": "[{0}] Plugin {1} No Encontrado (404), Borrando Plugin",
-    "group_cmd": "Este Comando solo se puede utilizar en Grupos."
+    "group_cmd": "Este Comando solo se puede utilizar en Grupos.",
+    "labels": {
+      "sudo": "SUDO",
+      "auto_read": "AUTO READ MSG",
+      "auto_status": "AUTO STATUS VIEW",
+      "auto_reject": "AUTO REJECT CALL",
+      "always_online": "ALWAYS ONLINE",
+      "anti_delete": "ANTI DELETE MSG",
+      "auto_update": "AUTO UPDATE BOT"
+    },
+    "promoted": "promoted",
+    "demoted": "demoted",
+    "file_size_error": "Size is {0}\n\n{1}",
+    "missing_jid": "missing jids",
+    "no_contacts": "not found contacts, please add contacts",
+    "reaction_not_enabled": "Reaction not enabled",
+    "reaction_not_allowed": "this reaction not allowed",
+    "metadata_fetch_failed": "failed to fetch metadata",
+    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
+    "screenshot_error": "an error occured",
+    "id_missing": "id missing",
+    "not_on_whatsapp": "{0} is not on whatsapp."
   },
   "plugins": {
     "common": {
-      "reply_to_message": "Cita un Mensaje...",
-      "not_admin": "No soy Administrador...",
       "reply_to_image": "Cita una Imagen.",
       "update": "_Actualizado_"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefijo : {0}\n│ Usuario : {1}\n│ Hora : {2}\n│ Dia : {3}\n│ Fecha : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ RAM : {7}\n│ Encendido : {8}\n│ Plataforma : {9}\n╰────────────────```",
-      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefijo : {0}\n┃❃│ Usuario : {1}\n┃❃│ Hora : {2}\n┃❃│ Dia : {3}\n┃❃│ Fecha : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ RAM : {7}\n┃❃│ Encendido : {8}\n┃❃│ Plataforma : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefijo : {0}\n┃❃│ Usuario : {1}\n┃❃│ Hora : {2}\n┃❃│ Dia : {3}\n┃❃│ Fecha : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ RAM : {7}\n┃❃│ Encendido : {8}\n┃❃│ Plataforma : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
+      "disabled": "disabled"
     },
     "afk": {
       "example": "> *Como Usar AFK:*\n- Set AFK: *afk [razon]*\n- Ejemplo: *afk Estoy ocupado* Visto por ultima vez: #lastseen\n- Enviar un mensaje despues de haber Activado AFK lo desactivara Automaticamente.\n- Apagar AFK: *afk off*",
@@ -66,12 +86,23 @@
       "desc": "Configurar el Borrado de Links",
       "disable": "_Antilink ya esta Desactivado._",
       "antilink_notset": "Antilink está configurado para bloquear todos los enlaces (no hay lista de URL establecida). Use 'antilink allow' o 'antilink disallow' para configurar URLs específicas.",
-      "status": "Antilink is now *{0}*.",
-      "info": "`> Antilink Status: {0}\n*Enlaces Permitidos:* {1}\n *Accion :* {2}",
-      "action_invalid": "*La accion especificada no es Valida.*",
-      "action_update": "La Accion del Antilink ha sido actualizada para: *{0}*",
-      "update": "> Antilink Actualizado\n*Permitido:* {0}\n*No Permitido:* {1}",
-      "example": "Antilink Status: *{0}*\n\n> Ejemplos de Uso:\n- antilink info - Ver la configuracion Actual\n- antilink whatsapp.com - Permitir solo este Link\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Activar/Desactivar antilink\n- antilink action/<kick | warn | null> - Accion a Aplicar"
+      "status": "El Anti-enlace es ahora *{0}*.",
+      "info": "`> Estado del Anti-enlace: {0}\n*Enlaces Permitidos:* {1}\n *Acción:* {2}",
+      "action_invalid": "*La acción especificada no es válida.*",
+      "action_update": "La acción del Anti-enlace ha sido actualizada por: *{0}*",
+      "update": "> Anti-enlace Actualizado\n*Permitido:* {0}\n*No Permitido:* {1}",
+      "enabled": "activado",
+      "disabled": "desactivado",
+      "example": "Estado del Anti-enlace: *{0}*\n\n> Ejemplos de Uso:\n- antilink list - Ver la configuración actual\n- antilink allow whatsapp.com - Permitir solo este enlace\n- antilink disallow facebook.com - No permitir este enlace\n- antilink clear allow - Borrar URLs permitidas\n- antilink clear disallow - Borrar URLs no permitidas\n- antilink on | off - Activar/Desactivar anti-enlace\n- antilink kick | warn | null - Acción a aplicar",
+      "allow_prompt": "*Please provide a URL to allow.*",
+      "no_new_urls": "*No new URLs to add.* All URLs already exist in the list.",
+      "urls_updated": "*Allowed URLs updated*\n\nAdded: {0}\nTotal: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "disallow_prompt": "*Please provide a URL to disallow.*",
+      "no_disallowed_urls": "*No new URLs to disallow.* All URLs are already disallowed.",
+      "disallowed_updated": "*Disallowed URLs updated*\n\nAdded to blocklist: {0}\nTotal blocked: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "settings_cleared": "*Antilink settings cleared.*",
+      "allowed_cleared": "*Allowed URLs cleared.*",
+      "disallowed_cleared": "*Disallowed URLs cleared.*"
     },
     "antiword": {
       "desc": "Borrar palabras Prohibidas",
@@ -82,6 +113,8 @@
       "added": "*Palabras agregadas:*\n{0}",
       "remove_prompt": "*Por favor proporciona palabras para eliminar.*",
       "removed": "*Palabras eliminadas:*\n{0}",
+      "activated": "activado",
+      "deactivated": "desactivado",
       "no_words": "*No hay palabras configuradas.*",
       "info": "*Estado AntiWord:* {0}\n*Acción:* {1}\n\n*Palabras:* {2}",
       "cleared": "*Lista AntiWord limpiada.*"
@@ -178,13 +211,13 @@
     },
     "greetings": {
       "welcome_desc": "Enviar un mensaje de bienvenida a nuevos miembros",
-      "welcome_example": "El mensaje de bienvenida está actualmente *{0}*\n\n> *Ejemplos de Uso:*\n- welcome ¡Hola &mention! Bienvenido a &name - Establecer mensaje\n- welcome on | off - Activar/Desactivar\n- welcome delete - Eliminar mensaje\n\n> *Marcadores:*\n- &mention - Mencionar nuevo miembro\n- &name - Nombre del grupo\n- &desc - Descripción del grupo\n- &size - Cantidad de miembros\n- &pp - Foto de perfil del miembro\n\n> *Multimedia:* Responde a imagen/video O incluye URL en mensaje\n\nPara más detalles: https://levanter-delta.vercel.app/",
+      "welcome_example": "El mensaje de bienvenida está actualmente *{0}*\n\n> *Ejemplos de Uso:*\n- welcome ¡Hola &mention! Bienvenido a &name - Establecer mensaje\n- welcome on | off - Activar/Desactivar\n- welcome delete - Eliminar mensaje\n\n> *Marcadores:*\n- &mention - Mencionar nuevo miembro\n- &name - Nombre del grupo\n- &desc - Descripción del grupo\n- &size - Cantidad de miembros\n- &pp - Foto de perfil del miembro\n\n> *Multimedia:* Responde a imagen/video O incluye URL en mensaje\n\nPara más detalles: https://levanter.site/",
       "welcome_enable": "_Bienvenida activada_",
       "welcome_disable": "_Bienvenida desactivada_",
       "welcome_delete": "_Mensaje de bienvenida eliminado_",
       "welcome_not_set": "_¡Por favor establece un mensaje de bienvenida primero!_\n\n> *Ejemplo:*\nwelcome ¡Hola &mention! Bienvenido a &name\n\nLuego usa: welcome on",
       "goodbye_desc": "Enviar un mensaje de despedida a los miembros",
-      "goodbye_example": "El mensaje de despedida está actualmente *{0}*\n\n> *Ejemplos de Uso:*\n- goodbye ¡Adiós &mention! Hasta luego - Establecer mensaje\n- goodbye on | off - Activar/Desactivar\n- goodbye delete - Eliminar mensaje\n\n> *Marcadores:*\n- &mention - Mencionar miembro que se va\n- &name - Nombre del grupo\n- &desc - Descripción del grupo\n- &size - Cantidad de miembros\n- &pp - Foto de perfil del miembro\n\n> *Multimedia:* Responde a imagen/video O incluye URL en mensaje\n\nPara más detalles: https://levanter-delta.vercel.app/",
+      "goodbye_example": "El mensaje de despedida está actualmente *{0}*\n\n> *Ejemplos de Uso:*\n- goodbye ¡Adiós &mention! Hasta luego - Establecer mensaje\n- goodbye on | off - Activar/Desactivar\n- goodbye delete - Eliminar mensaje\n\n> *Marcadores:*\n- &mention - Mencionar miembro que se va\n- &name - Nombre del grupo\n- &desc - Descripción del grupo\n- &size - Cantidad de miembros\n- &pp - Foto de perfil del miembro\n\n> *Multimedia:* Responde a imagen/video O incluye URL en mensaje\n\nPara más detalles: https://levanter.site/",
       "goodbye_enable": "_Despedida activada_",
       "goodbye_disable": "_Despedida desactivada_",
       "goodbye_delete": "_Mensaje de despedida eliminado_",
@@ -252,7 +285,9 @@
     },
     "common_members": {
       "desc": "Show or kick common memebers in two or more groups",
-      "found": "Found 0 common members."
+      "found": "Found 0 common members.",
+      "common_usage": "*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.",
+      "ginfo_usage": "*Example : info group_invte_link*"
     },
     "insta": {
       "usage": "Ejemplo: `.insta` <Instagram URL>",
@@ -380,7 +415,7 @@
       "usage": "Ejemplo: mention on | off | get\n(Reply to a message to target a specific user.)",
       "desc": "Configurar la función de mención para responder automaticamente cuando mencionan al bot.",
       "not_activated": "Responder a Mencion no esta Activado",
-      "current_status": "La mencion es {0}. Para mas detalles visita: https://levanter-delta.vercel.app/",
+      "current_status": "La mencion es {0}. Para mas detalles visita: https://levanter.site/",
       "activated": "Responder a Mencion ha sido Activado.",
       "deactivated": "Responder a Mencion ha sido Desactivado.",
       "updated": "Preferencias de Mencion Actualizados."
@@ -409,7 +444,8 @@
     "msgs": {
       "desc": "Muestra la cantidad de mensajes enviados por cada cada miembro, tipo de mensaje, ultimo mensaje, ultima vez visto, etc.",
       "msg_init": "\n*Numero :* {0}\n*Nombre :* {1}\n*Total Msgs :* {2}\n",
-      "msg_last": "*VistoHace :* {0} \n"
+      "msg_last": "*VistoHace :* {0} \n",
+      "no_activity": "No activity recorded yet."
     },
     "reset": {
       "usage": "Ejemplo: `reset all` O `reset` <cita o mencion>",
@@ -422,6 +458,21 @@
       "desc": "Identifica y Remueve Participantes inactivos del Grupo.",
       "inactives": "_Total de Inactivos : {0}_",
       "removing": "⚠️_Eliminando a {0} Miembros Inactivos en 7 seconds_⚠️"
+    },
+    "weather": {
+      "desc": "weather info",
+      "usage": "*Example : weather delhi*",
+      "not_found": "_{0} not found_",
+      "report": "*Name :* {0}\n*Country :* {1}\n*Weather :* {2}\n*Temp :* {3}°\n*Feels Like :* {4}°\n*Humidity :* {5}%\n*Visibility  :* {6}m\n*Wind* : {7}m/s {8}\n*Sunrise :* {9}\n*Sunset :* {10}"
+    },
+    "y2mate": {
+      "ytv_desc": "Download YouTube video",
+      "ytv_usage": "_Example: ytv url_",
+      "yta_desc": "Download YouTube audio",
+      "yta_usage": "_Example: yta darari/yt url_",
+      "invalid_link": "*Provide a valid YouTube link!*",
+      "no_video": "*No video found*",
+      "no_audio": "_Audio not found._"
     },
     "amute": {
       "usage": "Como Utilizar:amute <hour> <min>\n- amute on | off\n- amute info\n\nCita texto que sera el mensaje Enviado al Activarse.",
@@ -654,7 +705,9 @@
       "already_occupied": "_Ya ocupado_",
       "current_player": "Jugador Actual",
       "game_finish": "Juego Terminado 🏁",
-      "winner": "Ganador"
+      "winner": "Ganador",
+      "restart": "Restart Game",
+      "header": "---Tic Tac Toe---"
     },
     "tiktok": {
       "usage": "Como Utilizar:tiktok <TikTok URL> (O Cita un mensaje)",
@@ -723,11 +776,26 @@
       "usage": "Ejemplo: Cita o Menciona al Usuario que Recibira una Advertencia. `warn` @user o `warn reset` (para resetear).",
       "desc": "Advertir a un usuario en el chat grupal. Este comando aumenta advertencias de un usuario. Si el numero supera el límite, el usuario será expulsado del grupo.. Use 'warn reset' para Resetear Advertencias.",
       "reset_usage": "Cita o menciona para Resetear. Ejemplo: warn reset @user.",
-      "cannot_remove_admin": "No puedo Eliminar a un Administrador..."
+      "cannot_remove_admin": "No puedo Eliminar a un Administrador...",
+      "kick_default": "{0} has been kicked for exceeding warn limit.",
+      "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
       "usage": "Ejemplo:\n- `wcg start` (Forzar el inicio del juego)\n- `wcg end` (termina el juego actual)\n- `wcg` <palabra> (Juega continuando la cadena de palabras)",
-      "desc": "Juego cadenas de palabras (cadáver exquisito texto): participa agregando una palabra que continúe la cadena. Utiliza `wcg start` para forzar el inicio de un nuevo juego o `wcg end` para detener el juego actual."
+      "desc": "Juego cadenas de palabras (cadáver exquisito texto): participa agregando una palabra que continúe la cadena. Utiliza `wcg start` para forzar el inicio de un nuevo juego o `wcg end` para detener el juego actual.",
+      "game_ends": "Game Ends",
+      "already_used": "_Already Used this Word!_",
+      "not_starting_with": "_Not Starting with {0}_",
+      "length_limit": "_This word length is less than {0}_",
+      "not_in_list": "_This word is not in my words list_",
+      "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Your word must start with *{2}* and include at least *{3}* letters\n🏆Players remaining : {4}/{5}\n⏳You have *{6}s* to answer\n📝Total words : {7}",
+      "timeout": "@{0} ran out of time! They're out! 🚫",
+      "winner": "@{0} Won 🏆\nWords : *{1}*\nLongest word : *{2} ({3})* by @{4} 📚\nTime : *{5}* ⏱️",
+      "joined": "@{0} Joined 👏",
+      "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
+      "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
+      "players_count": "\n\n👥 {0} players joined.",
+      "terminated": "_Not enough players. Game terminated._"
     },
     "wrg": {
       "usage": "Ejemplo:\n- `wrg start` (Forzar el inicio del juego)\n- `wrg end` (termina el juego actual)\n- `wrg` <palabra> (Juega enviando palabra)",
@@ -769,13 +837,12 @@
     },
     "reminder": {
       "desc": "Administrar recordatorios de Google Calendar.",
+      "usage": "> *Uso de Recordatorios:*\n- `reminder <texto>` - Establecer un nuevo recordatorio (ej. 'reunión mañana a las 10am')\n- `reminder list` - Listar todos los recordatorios\n- `reminder del <id>` - Eliminar un recordatorio",
       "success": "✅ Recordatorio establecido: *{0}* el {1}",
       "list": "*Tus Recordatorios:*\n\n{0}",
       "list_empty": "No se encontraron recordatorios.",
       "deleted": "Recordatorio eliminado correctamente!",
       "invalid_id": "Por favor, proporciona un ID de evento válido.",
-      "error": "*Error:* {0}",
-      "usage": "> *Uso de Recordatorios:*\n- `reminder <texto>` - Establecer un nuevo recordatorio (ej. 'reunión mañana a las 10am')\n- `reminder list` - Listar todos los recordatorios\n- `reminder del <id>` - Eliminar un recordatorio",
       "auth_required": "*Autenticación Requerida:*\n\nUsa \"gauth\" para autorizar el bot.",
       "time": "Hora",
       "id": "ID",

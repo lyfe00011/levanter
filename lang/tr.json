@@ -20,18 +20,38 @@
     "plugins_installed": "[{0}] Eklentiler Yüklendi",
     "plugin_install_error": "[{0}] {1} yüklenirken hata oluştu, eklenti siliniyor",
     "plugin_not_found": "[{0}] eklenti {1} bulunamadı (404), eklenti siliniyor",
-    "group_cmd": "Bu komut yalnızca grup sohbetlerinde kullanılabilir."
+    "group_cmd": "Bu komut yalnızca grup sohbetlerinde kullanılabilir.",
+    "labels": {
+      "sudo": "SUDO",
+      "auto_read": "AUTO READ MSG",
+      "auto_status": "AUTO STATUS VIEW",
+      "auto_reject": "AUTO REJECT CALL",
+      "always_online": "ALWAYS ONLINE",
+      "anti_delete": "ANTI DELETE MSG",
+      "auto_update": "AUTO UPDATE BOT"
+    },
+    "promoted": "terfi ettirildi",
+    "demoted": "rütbesi düşürüldü",
+    "file_size_error": "Boyut: {0}\n\n{1}",
+    "missing_jid": "JID'ler eksik",
+    "no_contacts": "kişi bulunamadı, lütfen kişi ekleyin",
+    "reaction_not_enabled": "Tepkiler etkin değil",
+    "reaction_not_allowed": "bu tepkiye izin verilmiyor",
+    "metadata_fetch_failed": "meta veriler alınamadı",
+    "lang_not_supported": "' {0} ' dili henüz desteklenmiyor, varsayılan dile geçiliyor.",
+    "screenshot_error": "bir hata oluştu",
+    "id_missing": "kimlik eksik",
+    "not_on_whatsapp": "{0} WhatsApp'ta değil."
   },
   "plugins": {
     "common": {
-      "reply_to_message": "Bir mesaja cevap verin",
-      "not_admin": "Yönetici değilim.",
       "reply_to_image": "Bir resme cevap verin",
       "update": "_Ayarlar başarıyla güncellendi! Tercihleriniz kaydedildi ve şimdi etkin._"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Önek : {0}\n│ Kullanıcı : {1}\n│ Zaman : {2}\n│ Gün : {3}\n│ Tarih : {4}\n│ Sürüm : {5}\n│ Eklentiler : {6}\n│ Ram : {7}\n│ Çalışma Süresi : {8}\n│ Platform : {9}\n╰────────────────```",
-      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Önek : {0}\n┃❃│ Kullanıcı : {1}\n┃❃│ Zaman : {2}\n┃❃│ Gün : {3}\n┃❃│ Tarih : {4}\n┃❃│ Sürüm : {5}\n┃❃│ Eklentiler : {6}\n┃❃│ Ram : {7}\n┃❃│ Çalışma Süresi : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Önek : {0}\n┃❃│ Kullanıcı : {1}\n┃❃│ Zaman : {2}\n┃❃│ Gün : {3}\n┃❃│ Tarih : {4}\n┃❃│ Sürüm : {5}\n┃❃│ Eklentiler : {6}\n┃❃│ Ram : {7}\n┃❃│ Çalışma Süresi : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
+      "disabled": "devre dışı"
     },
     "afk": {
       "example": "> *AFK Kullanımı:*\n- AFK Ayarla: *afk [sebep]*\n- Örnek: *afk meşgulüm* Son görülme #lastseen önce\n- Bir mesaj göndererek otomatik olarak AFK durumu kaldırılır\n- AFK'yı Devre Dışı Bırak: *afk off*",
@@ -59,8 +79,8 @@
       "cleared": "*🗑️ Antifake list cleared and disabled*",
       "whitelist_mode": "🟢 Whitelist Mode (Allow Only)",
       "blacklist_mode": "🔴 Blacklist Mode (Block Only)",
-      "enabled": "enabled",
-      "disabled": "disabled"
+      "enabled": "etkin",
+      "disabled": "devre dışı"
     },
     "antilink": {
       "desc": "Anti-link özelliğini etkinleştir veya yapılandır",
@@ -71,13 +91,33 @@
       "action_invalid": "*Geçersiz eylem belirtildi.*",
       "action_update": "Antilink eylemi güncellendi: *{0}*",
       "update": "> Antilink Güncellendi\n*İzin Verilen:* {0}\n*İzin Verilmeyen:* {1}",
-      "example": "Antilink Durumu: *{0}*\n\n> Kullanım Örnekleri:\n- antilink list - Mevcut ayarları görüntüle\n- antilink allow whatsapp.com - Belirli URL'leri izin ver\n- antilink disallow facebook.com - Belirli URL'leri yasakla\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Antilink'i etkinleştir/devre dışı bırak\n- antilink kick | warn | null - Link için eylem belirle"
+      "enabled": "etkin",
+      "disabled": "devre dışı",
+      "example": "Antilink Durumu: *{0}*\n\n> Kullanım Örnekleri:\n- antilink list - Mevcut ayarları görüntüle\n- antilink allow whatsapp.com - Belirli URL'leri izin ver\n- antilink disallow facebook.com - Belirli URL'leri yasakla\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Antilink'i etkinleştir/devre dışı bırak\n- antilink kick | warn | null - Link için eylem belirle",
+      "allow_prompt": "*Lütfen izin verilecek bir URL girin.*",
+      "no_new_urls": "*Eklenecek yeni URL yok.* Tüm URL'ler listede zaten mevcut.",
+      "urls_updated": "*İzin verilen URL'ler güncellendi*\n\nEklenen: {0}\nToplam: {1} URL\n\n_Not: URL'ler büyük/küçük harfe duyarlı değildir_",
+      "disallow_prompt": "*Lütfen engellenecek bir URL girin.*",
+      "no_disallowed_urls": "*Engellenecek yeni URL yok.* Tüm URL'ler zaten engellenmiş durumda.",
+      "disallowed_updated": "*Engellenen URL'ler güncellendi*\n\nEngelli listesine eklendi: {0}\nToplam engellenen: {1} URL\n\n_Not: URL'ler büyük/küçük harfe duyarlı değildir_",
+      "settings_cleared": "*Antilink ayarları temizlendi.*",
+      "allowed_cleared": "*İzin verilen URL'ler temizlendi.*",
+      "disallowed_cleared": "*Engellenen URL'ler temizlendi.*"
     },
     "antiword": {
       "desc": "Grup sohbetinde belirli kelimeleri filtrele",
       "example": "AntiWord Durumu: {0}\n> *Kullanım Örnekleri:*\n- antiword kick | warn | null - İhlaller için eylem belirle\n- antiword on | off - Kelime filtrelemeyi etkinleştir/devre dışı bırak\n- antiword add word1,word2 - Engellenen listeye kelime ekle\n- antiword remove word1,word2 - Engellenen listeden kelime kaldır\n- antiword list - Engellenen kelimeleri görüntüle",
       "action_update": "AntiWord eylemi güncellendi: *{0}*",
-      "status": "AntiWord şimdi *{0}*."
+      "status": "AntiWord şimdi *{0}*.",
+      "add_prompt": "*Lütfen eklemek için kelimeler girin.*",
+      "added": "*Kelimeler eklendi:*\n{0}",
+      "remove_prompt": "*Lütfen silmek için kelimeler girin.*",
+      "removed": "*Kelimeler silindi:*\n{0}",
+      "activated": "etkinleştirildi",
+      "deactivated": "devre dışı bırakıldı",
+      "no_words": "*Kelime ayarlanmadı.*",
+      "info": "*AntiWord Durumu:* {0}\n*Eylem:* {1}\n\n*Kelimeler:* {2}",
+      "cleared": "*AntiWord listesi temizlendi.*"
     },
     "apk": {
       "desc": "APKMirror'dan APK indir",
@@ -171,13 +211,13 @@
     },
     "greetings": {
       "welcome_desc": "Yeni üyelere hoş geldiniz mesajı gönder",
-      "welcome_example": "Hoş geldiniz şu anda *{0}*\n\n> *Kullanım Örnekleri:*\n- welcome Merhaba &mention! &name'e hoş geldiniz - Mesaj ayarla\n- welcome on | off - Etkinleştir/Devre Dışı Bırak\n- welcome delete - Mesajı sil\n\n> *Yer Tutucular:*\n- &mention - Yeni üyeyi etiketle\n- &name - Grup adı\n- &desc - Grup açıklaması\n- &size - Üye sayısı\n- &pp - Üyenin profil fotoğrafı\n\n> *Medya:* Resim/videoya cevap verin VEYA mesaja URL ekleyin\n\nDaha fazla detay için: https://levanter-delta.vercel.app/",
+      "welcome_example": "Hoş geldiniz şu anda *{0}*\n\n> *Kullanım Örnekleri:*\n- welcome Merhaba &mention! &name'e hoş geldiniz - Mesaj ayarla\n- welcome on | off - Etkinleştir/Devre Dışı Bırak\n- welcome delete - Mesajı sil\n\n> *Yer Tutucular:*\n- &mention - Yeni üyeyi etiketle\n- &name - Grup adı\n- &desc - Grup açıklaması\n- &size - Üye sayısı\n- &pp - Üyenin profil fotoğrafı\n\n> *Medya:* Resim/videoya cevap verin VEYA mesaja URL ekleyin\n\nDaha fazla detay için: https://levanter.site/",
       "welcome_enable": "_Hoş geldiniz şimdi etkin_",
       "welcome_disable": "_Hoş geldiniz şimdi devre dışı_",
       "welcome_delete": "_Hoş geldiniz mesajı silindi_",
       "welcome_not_set": "_Önce hoş geldiniz mesajı ayarlayın!_\n\n> *Örnek:*\nwelcome Merhaba &mention! &name'e hoş geldiniz\n\nSonra kullanın: welcome on",
       "goodbye_desc": "Üyelere elveda mesajı gönder",
-      "goodbye_example": "Elveda şu anda *{0}*\n\n> *Kullanım Örnekleri:*\n- goodbye Hoşça kal &mention! Görüşürüz - Mesaj ayarla\n- goodbye on | off - Etkinleştir/Devre Dışı Bırak\n- goodbye delete - Mesajıl\n\n> *Yer Tutucular:*\n- &mention - Ayrılan üyeyi etiketle\n- &name - Grup adı\n- &desc - Grup açıklaması\n- &size - Üye sayısı\n- &pp - Üyenin profil fotoğrafı\n\n> *Medya:* Resim/videoya cevap verin VEYA mesaja URL ekleyin\n\nDaha fazla detay için: https://levanter-delta.vercel.app/",
+      "goodbye_example": "Elveda şu anda *{0}*\n\n> *Kullanım Örnekleri:*\n- goodbye Hoşça kal &mention! Görüşürüz - Mesaj ayarla\n- goodbye on | off - Etkinleştir/Devre Dışı Bırak\n- goodbye delete - Mesajıl\n\n> *Yer Tutucular:*\n- &mention - Ayrılan üyeyi etiketle\n- &name - Grup adı\n- &desc - Grup açıklaması\n- &size - Üye sayısı\n- &pp - Üyenin profil fotoğrafı\n\n> *Medya:* Resim/videoya cevap verin VEYA mesaja URL ekleyin\n\nDaha fazla detay için: https://levanter.site/",
       "goodbye_enable": "_Elveda şimdi etkin_",
       "goodbye_disable": "_Elveda şimdi devre dışı_",
       "goodbye_delete": "_Elveda mesajı silindi_",
@@ -245,7 +285,9 @@
     },
     "common_members": {
       "desc": "İki veya daha fazla grubun ortak üyelerini göster veya çıkar",
-      "found": "0 ortak üye bulundu."
+      "found": "0 ortak üye bulundu.",
+      "common_usage": "*Örnek*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - sadece komutu verdiğiniz gruptan çıkarır\nkickall - tüm JID'lerden çıkarır\nany - iki veya daha fazla ortak grup üyesini dahil eder\nskip - tüm gruplardan çıkarmayı önlemek için, örneğin bir gruptan kaçınmak için skip veya belirli JID'lerden kaçınmak için skip jid1,jid2 kullanın.",
+      "ginfo_usage": "*Örnek : info grup_davet_linki*"
     },
     "insta": {
       "usage": "Örnek: insta <Instagram URL>",
@@ -373,7 +415,7 @@
       "usage": "Örnek: mention on | off | get\n(Bir mesaja cevap vererek belirli bir kullanıcıyı hedefleyin.)",
       "desc": "Otomatik cevaplar için bahsetme özelliğini yapılandırın ve yönetin",
       "not_activated": "Cevap verme bahsetmesi etkinleştirilmedi.",
-      "current_status": "Bahsetme {0}. Daha fazla detay için: https://levanter-delta.vercel.app/",
+      "current_status": "Bahsetme {0}. Daha fazla detay için: https://levanter.site/",
       "activated": "Cevap verme bahsetmesi etkinleştirildi.",
       "deactivated": "Cevap verme bahsetmesi devre dışı bırakıldı.",
       "updated": "Bahsetme ayarları güncellendi."
@@ -402,7 +444,8 @@
     "msgs": {
       "desc": "Her üyenin mesaj sayısını, toplam mesajları ve son görülme süresini göster",
       "msg_init": "\n*Numara :* {0}\n*İsim :* {1}\n*Toplam Mesajlar :* {2}\n",
-      "msg_last": "*sonGörülme :* {0} önce\n"
+      "msg_last": "*sonGörülme :* {0} önce\n",
+      "no_activity": "Henüz aktivite kaydedilmedi."
     },
     "reset": {
       "usage": "Örnek: reset all OR reset <yanıt/bahsetme>",
@@ -415,6 +458,21 @@
       "desc": "Mesaj sayısı veya etkin olmayan süreye göre etkin olmayan üyeleri tanımlayın veya çıkarın. 'kick' ekleyerek üyeleri çıkarın.",
       "inactives": "_Toplam etkin olmayanlar : {0}_",
       "removing": "_7 saniye içinde {0} etkin olmayan üye çıkarılıyor_"
+    },
+    "weather": {
+      "desc": "Herhangi bir şehrin hava durumu bilgisini gösterir",
+      "usage": "*Örnek : weather istanbul*",
+      "not_found": "_{0} bulunamadı_",
+      "report": "*Sokak :* {0}\n*Ülke :* {1}\n*Hava Durumu :* {2}\n*Sıcaklık :* {3}°\n*Hissedilen :* {4}°\n*Nem :* {5}%\n*Görüş :* {6}m\n*Rüzgar* : {7}m/s {8}\n*Gün Doğumu :* {9}\n*Gün Batımı :* {10}"
+    },
+    "y2mate": {
+      "ytv_desc": "YouTube videosu indir",
+      "ytv_usage": "_Örnek: ytv link_",
+      "yta_desc": "YouTube ses dosyası indir",
+      "yta_usage": "_Örnek: yta darari/yt link_",
+      "invalid_link": "*Geçerli bir YouTube linki girin!*",
+      "no_video": "*Video bulunamadı*",
+      "no_audio": "_Ses bulunamadı._"
     },
     "amute": {
       "usage": "Kullanım: amute <saat> <dakika>\n- amute on | off\n- amute info\n\nSusturma mesajını ayarlamak için bir metne cevap verin",
@@ -442,19 +500,32 @@
       "usage": "> Örnek:\n- zushi ping, sticker\n- Tüm komutları etkinleştirmek için 'list' yazın ve ardından kopyalanan mesaja cevap verin (örn. zushi copied_message).",
       "desc": "Sohbette başkalarının kullanmasına izin vermek için belirli komutları etkinleştir",
       "already_set": "{0} zaten yapılandırıldı.",
-      "allowed": "*izin verilen komutlar* @{0}\n{1}"
+      "allowed": "*izin verilen komutlar* @{0}\n{1}",
+      "no_input": "⚠️ Lütfen komut adlarını belirtin\n\n📝 Örnekler:\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 Birden fazla komutu boşlukla ayırarak ekleyin",
+      "duplicates": "❌ Komutlar zaten izin verilmiş: {0}\n\n📋 Mevcut izin verilen komutlar (toplam {1}):\n{2}\n\n💡 Tüm izin verilen komutları görmek için .yami kullanın\n💡 Komutları kaldırmak için .ope kullanın",
+      "invalid": "⚠️ Geçerli komut bulunamadı\n\nGeçersiz olanlar atlandı: {0}\n\n💡 Mevcut komutları görmek için .help kullanın",
+      "error": "❌ Hata: {0}",
+      "success": "✅ {0} komut{1} başarıyla eklendi:\n{2}\n\n📊 @{3} için toplam izin verilen: {0} komut{1}\n\n💡 Kullanıcılar artık bu komutları kullanabilir"
     },
     "yami": {
       "usage": "Sadece yazın: yami",
       "desc": "Şu anda bu sohbette izin verilen komutların listesini göster",
-      "not_set": "Henüz izin verilen komut ayarlanmadı."
+      "not_set": "Henüz izin verilen komut ayarlanmadı.",
+      "no_commands": "📋 İzin verilen komut bulunamadı\n\n💡 Komut eklemek için .zushi kullanın\n📝 Örnek: .zushi song video sticker",
+      "list": "📋 @{0} için izin verilen komutlar:\n\n{1}\n\n📊 Toplam: {2} komut{3}\n\n💡 Kaldır: .ope <komut adları>\n💡 Hepsini kaldır: .ope all"
     },
     "ope": {
       "usage": "Örnek: ope ping, sticker OR ope all",
       "desc": "Belirtilen izin verilen komutları sil veya iptal et",
       "not_found": "{0} için izin verilen komut bulunamadı.",
       "all_removed": "Tüm izin verilen komutlar kaldırıldı.",
-      "removed": "*silinen komutlar* @{0}\n{1}"
+      "removed": "*silinen komutlar* @{0}\n{1}",
+      "no_input": "⚠️ Lütfen kaldırmak için komut adlarını belirtin\n\n📝 Örnekler:\n  • .ope song video\n  • .ope all (her şeyi kaldırır)\n\n💡 İzin verilen komutları görmek için .yami kullanın",
+      "not_found_list": "❌ Komut{0} bulunamadı: {1}{2}\n\n💡 Tüm izin verilen komutları görmek için .yami kullanın\n📝 Örnek: .ope song video",
+      "error": "❌ Hata: {0}",
+      "no_commands": "⚠️ Bu kullanıcı/grup için komut bulunamadı\n\n💡 Önce komut eklemek için .zushi kullanın",
+      "all_success": "✅ Tüm komutlar kaldırıldı\n\n💡 Yeni komutlar eklemek için .zushi kullanın",
+      "success": "✅ {0} komut{1} kaldırıldı:\n{2}\n\n📊 Şunun için: @{3}\n\n💡 Kalan komutları görmek için .yami kullanın\n💡 Her şeyi kaldırmak için .ope all kullanın"
     },
     "pdm": {
       "usage": "Kullanım: pdm on | off",
@@ -465,8 +536,8 @@
     },
     "ping": {
       "desc": "Botun yanıt süresini (gecikme) kontrol et",
-      "ping_sent": "Ping!",
-      "pong": "Pong! Yanıt süresi: {0} ms"
+      "ping_sent": "Hız ölçülüyor...",
+      "pong": "Hazır! Tepki süresi: {0} ms 🏎️"
     },
     "pinterest": {
       "usage": "Örnek: pinterest <Pinterest URL>",
@@ -634,7 +705,9 @@
       "already_occupied": "_Zaten Dolu_",
       "current_player": "geçerliOyuncu",
       "game_finish": "Oyun Bitti 🏁",
-      "winner": "Kazanan"
+      "winner": "Kazanan",
+      "restart": "Oyunu Yeniden Başlat",
+      "header": "---Sos---"
     },
     "tiktok": {
       "usage": "Kullanım: tiktok <TikTok URL> (veya bir mesaja URL ile cevap olarak)",
@@ -703,11 +776,26 @@
       "usage": "Örnek: warn @user VEYA warn reset @user. Bir kullanıcının mesajına cevap vererek 'warn' veya 'warn reset' yazabilirsiniz.",
       "desc": "Grup sohbetinde bir kullanıcıyı uyar. Bu komut bir kullanıcının uyarı sayısını artırır. Uyarı sayısı sınırı aşılırsa, kullanıcı grubdan atılır. 'warn reset' kullanarak bir kullanıcının uyarılarını sıfırla.",
       "reset_usage": "Örnek: warn reset @user (veya bir kullanıcının mesajına 'warn reset' yazarak)",
-      "cannot_remove_admin": "Bir yöneticiyi kaldıramam."
+      "cannot_remove_admin": "Bir yöneticiyi kaldıramam.",
+      "kick_default": "{0} uyarı sınırını aştığı için çıkarıldı.",
+      "warn_default": "⚠️ Uyarı {0}! {1}/{2} uyarı hakkı kaldı."
     },
     "wcg": {
       "usage": "Örnekler:\n- wcg start (kelime zinciri oyununu zorla başlat)\n- wcg end (mevcut oyunu bitir)\n- wcg <kelime> (kelime zincirini devam ettirerek oyna)",
-      "desc": "Kelime Zinciri Oyunu: Zinciri devam ettirerek oyuna katılın. 'wcg start' yeni bir oyun başlatır veya 'wcg end' mevcut oyunu bitirir."
+      "desc": "Kelime Zinciri Oyunu: Zinciri devam ettirerek oyuna katılın. 'wcg start' yeni bir oyun başlatır veya 'wcg end' mevcut oyunu bitirir.",
+      "game_ends": "Oyun Bitti",
+      "already_used": "_Bu Kelime Zaten Kullanıldı!_",
+      "not_starting_with": "_{0} ile Başlamıyor_",
+      "length_limit": "_Bu kelime uzunluğu {0} karakterden az_",
+      "not_in_list": "_Bu kelime benim kelime listemde yok_",
+      "turn_info": "🎲Sıra : @{0}\n🙌Sıradaki : @{1}\n🆎Kelimeniz *{2}* ile başlamalı ve en az *{3}* harf içermelidir\n🏆Kalan oyuncular : {4}/{5}\n⏳Cevap vermek için *{6}* saniyeniz var\n📝Toplam kelime : {7}",
+      "timeout": "@{0} süresi doldu! Elendi! 🚫",
+      "winner": "@{0} Kazandı 🏆\nKelimeler : *{1}*\nEn uzun kelime : *{2} ({3})* @{4} tarafından 📚\nSüre : *{5}* ⏱️",
+      "joined": "@{0} Katıldı 👏",
+      "starting": "🎮 Oyun başlıyor...\n👥 2 veya daha fazla oyuncu gerekiyor 🙋‍♂️🙋‍♀️\n⏳ Katılmak için 60 saniye kaldı ⏳\n🧩 Mod {0}",
+      "starts_in": "🎮 Oyun {0} saniye içinde başlayacak ⏳\nOynamak için *join* yazın 🙋‍♂️🙋‍♀️\n🧩 Mod {1}{2}",
+      "players_count": "\n\n👥 {0} oyuncu katıldı.",
+      "terminated": "_Yeterli oyuncu yok. Oyun sonlandırıldı._"
     },
     "wrg": {
       "usage": "Örnekler:\n- wrg start (rastgele kelime oyununu zorla başlat)\n- wrg end (mevcut oyunu bitir)\n- wrg <kelime> (rastgele bir kelime göndererek oyna)",
@@ -749,13 +837,12 @@
     },
     "reminder": {
       "desc": "Google Takvim hatırlatıcılarını yönetin.",
+      "usage": "> *Hatırlatıcı Kullanımı:*\n- `reminder <metin>` - Yeni hatırlatıcı ekle (örn. 'yarın saat 10'da toplantı')\n- `reminder list` - Tüm hatırlatıcıları listele\n- `reminder del <id>` - Hatırlatıcıyı sil",
       "success": "✅ Hatırlatıcı eklendi: *{0}* {1} tarihinde",
       "list": "*Hatırlatıcılarınız:*\n\n{0}",
       "list_empty": "Hatırlatıcı bulunamadı.",
       "deleted": "Hatırlatıcı başarıyla silindi!",
       "invalid_id": "Lütfen geçerli bir etkinlik kimliği sağlayın.",
-      "error": "*Hata:* {0}",
-      "usage": "> *Hatırlatıcı Kullanımı:*\n- `reminder <metin>` - Yeni hatırlatıcı ekle (örn. 'yarın saat 10'da toplantı')\n- `reminder list` - Tüm hatırlatıcıları listele\n- `reminder del <id>` - Hatırlatıcıyı sil",
       "auth_required": "*Kimlik Doğrulama Gerekli:*\n\nBotu yetkilendirmek için \"gauth\" kullanın.",
       "time": "Saat",
       "id": "ID",

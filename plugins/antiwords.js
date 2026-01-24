@@ -23,7 +23,7 @@ bot(
     if (cmd === 'on' || cmd === 'off') {
       await setWord(message.jid, cmd === 'on', message.id)
       return message.send(
-        lang.plugins.antiword.status.format(cmd === 'on' ? 'activated' : 'deactivated')
+        lang.plugins.antiword.status.format(cmd === 'on' ? lang.plugins.antiword.activated : lang.plugins.antiword.deactivated)
       )
     }
 

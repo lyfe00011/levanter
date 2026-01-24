@@ -20,18 +20,38 @@
     "plugins_installed": "[{0}] Plugins Installed",
     "plugin_install_error": "[{0}] Error installing {1}, deleting plugin",
     "plugin_not_found": "[{0}] plugin {1} not found (404), deleting plugin",
-    "group_cmd": "This command is only available in group chats."
+    "group_cmd": "This command is only available in group chats.",
+    "labels": {
+      "sudo": "SUDO",
+      "auto_read": "AUTO READ MSG",
+      "auto_status": "AUTO STATUS VIEW",
+      "auto_reject": "AUTO REJECT CALL",
+      "always_online": "ALWAYS ONLINE",
+      "anti_delete": "ANTI DELETE MSG",
+      "auto_update": "AUTO UPDATE BOT"
+    },
+    "promoted": "promoted",
+    "demoted": "demoted",
+    "file_size_error": "Size is {0}\n\n{1}",
+    "missing_jid": "missing jids",
+    "no_contacts": "not found contacts, please add contacts",
+    "reaction_not_enabled": "Reaction not enabled",
+    "reaction_not_allowed": "this reaction not allowed",
+    "metadata_fetch_failed": "failed to fetch metadata",
+    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
+    "screenshot_error": "an error occured",
+    "id_missing": "id missing",
+    "not_on_whatsapp": "{0} is not on whatsapp."
   },
   "plugins": {
     "common": {
-      "reply_to_message": "Reply to a message",
-      "not_admin": "I'm not admin.",
       "reply_to_image": "Reply to a image",
       "update": "_Settings updated successfully! Your preferences have been saved and are now active._"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Time : {2}\n│ Day : {3}\n│ Date : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
-      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ User : {1}\n┃❃│ Time : {2}\n┃❃│ Day : {3}\n┃❃│ Date : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ User : {1}\n┃❃│ Time : {2}\n┃❃│ Day : {3}\n┃❃│ Date : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
+      "disabled": "disabled"
     },
     "afk": {
       "example": "> *AFK Usage:*\n- Set AFK: *afk [reason]*\n- Example: *afk I am busy* Last seen #lastseen ago\n- Sending a message automatically removes AFK status\n- Disable AFK: *afk off*",
@@ -71,7 +91,18 @@
       "action_invalid": "*Invalid action specified.*",
       "action_update": "Antilink action updated to: *{0}*",
       "update": "> Antilink Updated\n*Allowed:* {0}\n*Not Allowed:* {1}",
-      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink list - View current settings\n- antilink allow whatsapp.com - Allow specific URLs\n- antilink disallow facebook.com - Disallow specific URLs\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Enable/Disable antilink\n- antilink kick | warn | null - Set action for link"
+      "enabled": "enabled",
+      "disabled": "disabled",
+      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink list - View current settings\n- antilink allow whatsapp.com - Allow specific URLs\n- antilink disallow facebook.com - Disallow specific URLs\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Enable/Disable antilink\n- antilink kick | warn | null - Set action for link",
+      "allow_prompt": "*Please provide a URL to allow.*",
+      "no_new_urls": "*No new URLs to add.* All URLs already exist in the list.",
+      "urls_updated": "*Allowed URLs updated*\n\nAdded: {0}\nTotal: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "disallow_prompt": "*Please provide a URL to disallow.*",
+      "no_disallowed_urls": "*No new URLs to disallow.* All URLs are already disallowed.",
+      "disallowed_updated": "*Disallowed URLs updated*\n\nAdded to blocklist: {0}\nTotal blocked: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "settings_cleared": "*Antilink settings cleared.*",
+      "allowed_cleared": "*Allowed URLs cleared.*",
+      "disallowed_cleared": "*Disallowed URLs cleared.*"
     },
     "antiword": {
       "desc": "Filter specific words in the group chat",
@@ -82,6 +113,8 @@
       "added": "*Words added:*\n{0}",
       "remove_prompt": "*Please provide words to remove.*",
       "removed": "*Words removed:*\n{0}",
+      "activated": "activated",
+      "deactivated": "deactivated",
       "no_words": "*No words set.*",
       "info": "*AntiWord Status:* {0}\n*Action:* {1}\n\n*Words:* {2}",
       "cleared": "*AntiWord list cleared.*"
@@ -178,13 +211,13 @@
     },
     "greetings": {
       "welcome_desc": "Send a welcome message to new members",
-      "welcome_example": "Welcome is currently *{0}*\n\n> *Usage Examples:*\n- welcome Hi &mention! Welcome to &name - Set welcome message\n- welcome on | off - Enable/Disable\n- welcome delete - Delete message\n\n> *Placeholders:*\n- &mention - Mention new member\n- &name - Group name\n- &desc - Group description\n- &size - Member count\n- &pp - Member's profile picture\n\n> *Media:* Reply to image/video OR include URL in message\n\nFor more details: https://levanter-delta.vercel.app/",
+      "welcome_example": "Welcome is currently *{0}*\n\n> *Usage Examples:*\n- welcome Hi &mention! Welcome to &name - Set welcome message\n- welcome on | off - Enable/Disable\n- welcome delete - Delete message\n\n> *Placeholders:*\n- &mention - Mention new member\n- &name - Group name\n- &desc - Group description\n- &size - Member count\n- &pp - Member's profile picture\n\n> *Media:* Reply to image/video OR include URL in message\n\nFor more details: https://levanter.site/",
       "welcome_enable": "_Welcome is now enabled_",
       "welcome_disable": "_Welcome is now disabled_",
       "welcome_delete": "_Welcome message deleted_",
       "welcome_not_set": "_Please set a welcome message first!_\n\n> *Example:*\nwelcome Hi &mention! Welcome to &name\n\nThen use: welcome on",
       "goodbye_desc": "Send a goodbye message to members",
-      "goodbye_example": "Goodbye is currently *{0}*\n\n> *Usage Examples:*\n- goodbye Bye &mention! See you later - Set goodbye message\n- goodbye on | off - Enable/Disable\n- goodbye delete - Delete message\n\n> *Placeholders:*\n- &mention - Mention leaving member\n- &name - Group name\n- &desc - Group description\n- &size - Member count\n- &pp - Member's profile picture\n\n> *Media:* Reply to image/video OR include URL in message\n\nFor more details: https://levanter-delta.vercel.app/",
+      "goodbye_example": "Goodbye is currently *{0}*\n\n> *Usage Examples:*\n- goodbye Bye &mention! See you later - Set goodbye message\n- goodbye on | off - Enable/Disable\n- goodbye delete - Delete message\n\n> *Placeholders:*\n- &mention - Mention leaving member\n- &name - Group name\n- &desc - Group description\n- &size - Member count\n- &pp - Member's profile picture\n\n> *Media:* Reply to image/video OR include URL in message\n\nFor more details: https://levanter.site/",
       "goodbye_enable": "_Goodbye is now enabled_",
       "goodbye_disable": "_Goodbye is now disabled_",
       "goodbye_delete": "_Goodbye message deleted_",
@@ -252,7 +285,9 @@
     },
     "common_members": {
       "desc": "Show or kick common memebers in two or more groups",
-      "found": "Found 0 common members."
+      "found": "Found 0 common members.",
+      "common_usage": "*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.",
+      "ginfo_usage": "*Example : info group_invte_link*"
     },
     "insta": {
       "usage": "Example: insta <Instagram URL>",
@@ -380,7 +415,7 @@
       "usage": "Example: mention on | off | get\n(Reply to a message to target a specific user.)",
       "desc": "Configure and manage the mention feature for automated replies.",
       "not_activated": "Reply to mention not activated.",
-      "current_status": "Mention is {0}. For details, visit: https://levanter-delta.vercel.app/",
+      "current_status": "Mention is {0}. For details, visit: https://levanter.site/",
       "activated": "Reply-to mention activated.",
       "deactivated": "Reply-to mention deactivated.",
       "updated": "Mention settings updated."
@@ -409,7 +444,8 @@
     "msgs": {
       "desc": "Display the group's message count for each member, including individual totals and last seen duration.",
       "msg_init": "\n*Number :* {0}\n*Name :* {1}\n*Total Msgs :* {2}\n",
-      "msg_last": "*lastSeen :* {0} ago\n"
+      "msg_last": "*lastSeen :* {0} ago\n",
+      "no_activity": "No activity recorded yet."
     },
     "reset": {
       "usage": "Example: reset all OR reset <reply/mention>",
@@ -422,6 +458,21 @@
       "desc": "Identify or remove inactive members based on message count or inactivity duration. Append 'kick' to remove members.",
       "inactives": "_Total inactives are : {0}_",
       "removing": "_Removing {0} inactive members in 7 seconds_"
+    },
+    "weather": {
+      "desc": "weather info",
+      "usage": "*Example : weather delhi*",
+      "not_found": "_{0} not found_",
+      "report": "*Name :* {0}\n*Country :* {1}\n*Weather :* {2}\n*Temp :* {3}°\n*Feels Like :* {4}°\n*Humidity :* {5}%\n*Visibility  :* {6}m\n*Wind* : {7}m/s {8}\n*Sunrise :* {9}\n*Sunset :* {10}"
+    },
+    "y2mate": {
+      "ytv_desc": "Download YouTube video",
+      "ytv_usage": "_Example: ytv url_",
+      "yta_desc": "Download YouTube audio",
+      "yta_usage": "_Example: yta darari/yt url_",
+      "invalid_link": "*Provide a valid YouTube link!*",
+      "no_video": "*No video found*",
+      "no_audio": "_Audio not found._"
     },
     "amute": {
       "usage": "Usage: amute <hour> <min>\n- amute on | off\n- amute info\n\nReply with text to set a mute message",
@@ -654,7 +705,9 @@
       "already_occupied": "_Already Occupied_",
       "current_player": "currentPlayer",
       "game_finish": "Game Finish 🏁",
-      "winner": "Winner"
+      "winner": "Winner",
+      "restart": "Restart Game",
+      "header": "---Tic Tac Toe---"
     },
     "tiktok": {
       "usage": "Usage: tiktok <TikTok URL> (or reply to a message with the URL)",
@@ -723,11 +776,26 @@
       "usage": "Example: warn @user OR warn reset @user. You can also reply to a user's message and type 'warn' or 'warn reset'.",
       "desc": "Warn a user in the group chat. This command increases a user's warning count. If the count exceeds the limit, the user will be kicked from the group. Use 'warn reset' to clear a user's warnings.",
       "reset_usage": "Example: warn reset @user (or reply to a user's message and type 'warn reset').",
-      "cannot_remove_admin": "I cannot remove an admin."
+      "cannot_remove_admin": "I cannot remove an admin.",
+      "kick_default": "{0} has been kicked for exceeding warn limit.",
+      "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
       "usage": "Examples:\n- wcg start (force start the word chain game)\n- wcg end (end the current game)\n- wcg <word> (play by continuing the word chain)",
-      "desc": "Word Chain Game: Participate by providing a word that continues the chain. Use 'wcg start' to force start a new game or 'wcg end' to stop the current game."
+      "desc": "Word Chain Game: Participate by providing a word that continues the chain. Use 'wcg start' to force start a new game or 'wcg end' to stop the current game.",
+      "game_ends": "Game Ends",
+      "already_used": "_Already Used this Word!_",
+      "not_starting_with": "_Not Starting with {0}_",
+      "length_limit": "_This word length is less than {0}_",
+      "not_in_list": "_This word is not in my words list_",
+      "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Your word must start with *{2}* and include at least *{3}* letters\n🏆Players remaining : {4}/{5}\n⏳You have *{6}s* to answer\n📝Total words : {7}",
+      "timeout": "@{0} ran out of time! They're out! 🚫",
+      "winner": "@{0} Won 🏆\nWords : *{1}*\nLongest word : *{2} ({3})* by @{4} 📚\nTime : *{5}* ⏱️",
+      "joined": "@{0} Joined 👏",
+      "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
+      "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
+      "players_count": "\n\n👥 {0} players joined.",
+      "terminated": "_Not enough players. Game terminated._"
     },
     "wrg": {
       "usage": "Examples:\n- wrg start (force start the random word game)\n- wrg end (end the current game)\n- wrg <word> (play by submitting a word)",

@@ -1058,9 +1058,9 @@ axios@^1.3.3:
     form-data "^4.0.4"
     proxy-from-env "^1.1.0"
 
-"baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git":
+"baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#master":
   version "7.0.0-rc.9"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#fc24d5ba61e133f31dcf3b25fd5a28b3a709822e"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#b217ecafe42d9d1f36bda6f9798afe3bd74370fb"
   dependencies:
     "@cacheable/node-cache" "^1.4.0"
     "@hapi/boom" "^9.1.3"

@@ -20,18 +20,38 @@
     "plugins_installed": "[{0}] Plugins Installed ✅",
     "plugin_install_error": "[{0}] Error installing {1}, deleting plugin",
     "plugin_not_found": "[{0}] plugin {1} not found (404), deleting plugin",
-    "group_cmd": "_ye command sirf group ky liye hai_"
+    "group_cmd": "_ye command sirf group ky liye hai_",
+    "labels": {
+      "sudo": "SUDO",
+      "auto_read": "AUTO READ MSG",
+      "auto_status": "AUTO STATUS VIEW",
+      "auto_reject": "AUTO REJECT CALL",
+      "always_online": "ALWAYS ONLINE",
+      "anti_delete": "ANTI DELETE MSG",
+      "auto_update": "AUTO UPDATE BOT"
+    },
+    "promoted": "Promote kiya gaya",
+    "demoted": "Demote kiya gaya",
+    "file_size_error": "Size {0} hai\n\n{1}",
+    "missing_jid": "JIDs missing hain",
+    "no_contacts": "contacts nahi mile, kripya add karain",
+    "reaction_not_enabled": "Reaction enable nahi hai",
+    "reaction_not_allowed": "ye reaction allow nahi hai",
+    "metadata_fetch_failed": "metadata fetch karne mein nakami",
+    "lang_not_supported": "' {0} ' zuban abhi supported nahi hai, default zuban par switch kar rahay hain.",
+    "screenshot_error": "aik error aya",
+    "id_missing": "ID missing hai",
+    "not_on_whatsapp": "{0} WhatsApp par nahi hai."
   },
   "plugins": {
     "common": {
-      "reply_to_message": "_message ka reply dain_",
-      "not_admin": "_main admin nahi hoon !!_",
       "reply_to_image": "_photo ka reply dain_",
       "update": "_Settings update hogai hai ✅_"
     },
     "menu": {
-      "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Time : {2}\n│ Day : {3}\n│ Date : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
-      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ User : {1}\n┃❃│ Time : {2}\n┃❃│ Day : {3}\n┃❃│ Date : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+      "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Waqt : {2}\n│ Din : {3}\n│ Tareekh : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ User : {1}\n┃❃│ Waqt : {2}\n┃❃│ Din : {3}\n┃❃│ Tareekh : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
+      "disabled": "ghair fa'al"
     },
     "afk": {
       "example": "> *AFK Ka Istmal:*\n- Set AFK: *afk [reason]*\n- Example: *afk main busy hoon* Last seen #lastseen ago\n- Message bhejne se AFK status automatically hat jata hai\n- hatain AFK: *afk off*",
@@ -59,8 +79,8 @@
       "cleared": "*🗑️ Antifake list cleared and disabled*",
       "whitelist_mode": "🟢 Whitelist Mode (Allow Only)",
       "blacklist_mode": "🔴 Blacklist Mode (Block Only)",
-      "enabled": "enabled",
-      "disabled": "disabled"
+      "enabled": "فعال",
+      "disabled": "غیر فعال"
     },
     "antilink": {
       "desc": "_Anti-link enable ya configure karain_",
@@ -71,13 +91,33 @@
       "action_invalid": "*Galat action specify kiya gaya hai*",
       "action_update": "Antilink action updated to: *{0}*",
       "update": "> Antilink Updated\n*Allowed:* {0}\n*jo allowed nahi hain:* {1}",
-      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink list - dekahin current settings\n- antilink allow whatsapp.com - Allow specific URLs\n- antilink disallow facebook.com - Disallow specific URLs\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Enable/Disable antilink\n- antilink kick | warn | null - action set karain link ky liye"
+      "enabled": "فعال",
+      "disabled": "غیر فعال",
+      "example": "Antilink Status: *{0}*\n\n> Usage Examples:\n- antilink list - dekahin current settings\n- antilink allow whatsapp.com - Allow specific URLs\n- antilink disallow facebook.com - Disallow specific URLs\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Enable/Disable antilink\n- antilink kick | warn | null - action set karain link ky liye",
+      "allow_prompt": "*Kripya allow karne ke liye ek URL dain.*",
+      "no_new_urls": "*Koi naye URLs add karne ke liye nahi hain.* Saare URLs pehle se list mein hain.",
+      "urls_updated": "*Allowed URLs update ho gaye*\n\nAdded: {0}\nTotal: {1} URL(s)\n\n_Note: URLs case-insensitive hain_",
+      "disallow_prompt": "*Kripya disallow karne ke liye ek URL dain.*",
+      "no_disallowed_urls": "*Koi naye URLs disallow karne ke liye nahi hain.* Saare URLs pehle se disallowed hain.",
+      "disallowed_updated": "*Disallowed URLs update ho gaye*\n\nBlocklist mein add kiya gaya: {0}\nTotal blocked: {1} URL(s)\n\n_Note: URLs case-insensitive hain_",
+      "settings_cleared": "*Antilink settings saaf ho gayi hain.*",
+      "allowed_cleared": "*Allowed URLs saaf ho gaye hain.*",
+      "disallowed_cleared": "*Disallowed URLs saaf ho gaye hain.*"
     },
     "antiword": {
       "desc": "*Group chat mein kuch khaas alfaaz ko filter karain.*",
       "example": "AntiWord Status: {0}\n> *Usage Examples:*\n- antiword kick | warn | null - Violations ke liye action set karo\n- antiword on | off - Enable/Disable word filtering\n- antiword add word1,word2 - Block list mein alfaaz shamil karein\n- antiword remove word1,word2 - Block list se alfaaz hatayein\n- antiword list - Blocked alfaaz dekhein",
       "action_update": "*AntiWord update kar diya gaya hai*: *{0}*",
-      "status": "*AntiWord ab hai* *{0}*."
+      "status": "*AntiWord ab hai* *{0}*.",
+      "add_prompt": "*براہ کرم شامل کرنے کے لیے الفاظ فراہم کریں۔*",
+      "added": "*الفاظ شامل کر دیے گئے ہیں:*\n{0}",
+      "remove_prompt": "*براہ کرم ہٹانے کے لیے الفاظ فراہم کریں۔*",
+      "removed": "*الفاظ ہٹا دیے گئے ہیں:*\n{0}",
+      "activated": "متحرک",
+      "deactivated": "غیر متحرک",
+      "no_words": "*کوئی الفاظ سیٹ نہیں کیے گئے ہیں۔*",
+      "info": "*AntiWord Status:* {0}\n*Action:* {1}\n\n*الفاظ:* {2}",
+      "cleared": "*AntiWord لسٹ صاف کر دی گئی ہے۔*"
     },
     "apk": {
       "desc": "_APKMirror se APK download karo._",
@@ -111,7 +151,7 @@
     "stop": {
       "desc": "_Chat mein filters delete karain._",
       "example": "> *Usage:*\n- stop <filter>\n- stop hey",
-      "delete": "{0} deleted",
+      "delete": "{0} delete kar diya gaya",
       "not_found": "_{0} Filters mein nahi mila._"
     },
     "filter": {
@@ -137,13 +177,13 @@
     "gstop": {
       "desc": "_sary groups mein gfilters delete karein._",
       "example": "> *Usage:*\n- gstop <filter>\n- gstop hi",
-      "delete": "{0} deleted",
+      "delete": "{0} delete kar diya gaya",
       "not_found": "_{0} Gfilters mein nahi mila._"
     },
     "pstop": {
       "desc": "*_sary groups mein pfilter delete karein_*",
       "example": "> *Usage:*\n- pstop <filter>\n- pstop hi",
-      "delete": "{0} deleted",
+      "delete": "{0} delete kar diya gaya",
       "not_found": "_{0} Pfilter mein nahi mila._"
     },
     "gfilter": {
@@ -171,13 +211,13 @@
     },
     "greetings": {
       "welcome_desc": "*_New members ko welcome message bhejein ✨_*",
-      "welcome_example": "_Welcome abhi tak hai *{0}*_\n\n> *استعمال کی مثالیں:*\n- welcome ہیلو &mention! &name میں خوش آمدید - پیغام سیٹ کریں\n- welcome on | off - فعال/غیر فعال کریں\n- welcome delete - پیغام حذف کریں\n\n> *پلیس ہولڈرز:*\n- &mention - نئے ممبر کا تذکرہ کریں\n- &name - گروپ کا نام\n- &desc -  کی تفصیل\n- &size - ممبروں کی تعداد\n- &pp - ممبر کی پروفائل تصویر\n\n> *میڈیا:* تصویر/ویڈیو کا جواب دیں یا پیغام میں URL شامل کریں\n\nمزید تفصیلات: https://levanter-delta.vercel.app/",
+      "welcome_example": "_Welcome abhi tak hai *{0}*_\n\n> *استعمال کی مثالیں:*\n- welcome ہیلو &mention! &name میں خوش آمدید - پیغام سیٹ کریں\n- welcome on | off - فعال/غیر فعال کریں\n- welcome delete - پیغام حذف کریں\n\n> *پلیس ہولڈرز:*\n- &mention - نئے ممبر کا تذکرہ کریں\n- &name - گروپ کا نام\n- &desc -  کی تفصیل\n- &size - ممبروں کی تعداد\n- &pp - ممبر کی پروفائل تصویر\n\n> *میڈیا:* تصویر/ویڈیو کا جواب دیں یا پیغام میں URL شامل کریں\n\nمزید تفصیلات: https://levanter.site/",
       "welcome_enable": "_Welcome abhi on hai_",
       "welcome_disable": "_Welcome abhi off hai_",
       "welcome_delete": "_Welcome message delete kar diya gaya hai_",
       "welcome_not_set": "_پہلے welcome پیغام سیٹ کریں!_\n\n> *مثال:*\nwelcome ہیلو &mention! &name میں خوش آمدید\n\nپھر استعمال کریں: welcome on",
       "goodbye_desc": "*_Members ko goodbye message bhejein._*",
-      "goodbye_example": "*Goodbye abhi tak hai *{0}*\n\n> *استعمال کی مثالیں:*\n- goodbye الوداع &mention! پھر ملیں گے - پیغام سیٹ کریں\n- goodbye on | off - فعال/غیر فعال کریں\n- goodbye delete - پیغام حذف کریں\n\n> *پلیس ہولڈرز:*\n- &mention - رخصت ہونے والے ممبر کا تذکرہ کریں\n- &name - گروپ کا نام\n- &desc - گروپ کی تفصیل\n- &size - ممبروں کی تعداد\n- &pp - ممبر کی پروفائل تصویر\n\n> *میڈیا:* تصویر/ویڈیو کا جواب دیں یا پیغام میں URL شامل کریں\n\nمزید تفصیلات: https://levanter-delta.vercel.app/",
+      "goodbye_example": "*Goodbye abhi tak hai *{0}*\n\n> *استعمال کی مثالیں:*\n- goodbye الوداع &mention! پھر ملیں گے - پیغام سیٹ کریں\n- goodbye on | off - فعال/غیر فعال کریں\n- goodbye delete - پیغام حذف کریں\n\n> *پلیس ہولڈرز:*\n- &mention - رخصت ہونے والے ممبر کا تذکرہ کریں\n- &name - گروپ کا نام\n- &desc - گروپ کی تفصیل\n- &size - ممبروں کی تعداد\n- &pp - ممبر کی پروفائل تصویر\n\n> *میڈیا:* تصویر/ویڈیو کا جواب دیں یا پیغام میں URL شامل کریں\n\nمزید تفصیلات: https://levanter.site/",
       "goodbye_enable": "_Goodbye abhi on hai_",
       "goodbye_disable": "_Goodbye abhi off hai_",
       "goodbye_delete": "_Goodbye message delete kar diya gaya hai_",
@@ -245,11 +285,13 @@
     },
     "common_members": {
       "desc": "_Do ya zyada groups mein common members ko dikhayein ya kick karein._",
-      "found": "_Koi common members nahi mile._"
+      "found": "0 common members milay hain.",
+      "common_usage": "*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - sirf us group se hatane ke liye jispe apne command di hai\nkickall - saare groups se hatane ke liye\nany - do ya zyada common group members include karne ke liye\nskip - saare groups se hatane se bachne ke liye, example skip ek group se bachne ke liye ya skip jid1,jid2,jid3 in groups se bachne ke liye.",
+      "ginfo_usage": "*Example : info group_invte_link*"
     },
     "insta": {
       "usage": "Misal: insta <Instagram URL>",
-      "not_found": "_Nahi Mila._",
+      "not_found": "_Kuch nahi mil saka. ❌_",
       "desc": "_Instagram posts, reels, aur videos download karein._"
     },
     "ison": {
@@ -373,7 +415,7 @@
       "usage": "*Misal:* _mention chalu | band | hasil karein (Kisi paighaam ka jawab dein taake aik khas shakhs ko nishana banaya ja sake.)_",
       "desc": "_Mention ka intizami aur moattali jawab ka nizam banayein_",
       "not_activated": "*_Reply-to mention band hai._*",
-      "current_status": "_Mention hai {0}. Tafseelat ke liye dekhein: https://levanter-delta.vercel.app/_",
+      "current_status": "_Mention hai {0}. Tafseelat ke liye dekhein: https://levanter.site/_",
       "activated": "*_Reply-to mention active kar diya gaya hai._*",
       "deactivated": "_Reply-to mention band kar diya gaya hai_",
       "updated": "*_mention ki settings update kar di gayi hain._*"
@@ -402,7 +444,8 @@
     "msgs": {
       "desc": "_Group ke har member ka message count dikhayein, jin mein fard fard total aur aakhri dafa dekha jana shamil hai._",
       "msg_init": "\n*Number :* {0}\n*Name :* {1}\n*Total Msgs :* {2}\n",
-      "msg_last": "*lastSeen :* {0} ago\n"
+      "msg_last": "*lastSeen :* {0} pehle\n",
+      "no_activity": "Abhi tak koi activity record nahi hui hai."
     },
     "reset": {
       "usage": "*Misal*: _reset karain sary OR reset <reply/mention>_",
@@ -415,6 +458,21 @@
       "desc": "_Ghair fa'aal members ki shanakht ya inhe hataane ke liye. Agar 'kick' likhein, to members hata diye jayenge._",
       "inactives": "_Total ghair fa'aal members hain: {0}_",
       "removing": "_Removing {0} inactive members 7 seconds main remove kiye jainge_"
+    },
+    "weather": {
+      "desc": "Kisi bhi shehar ka mausam check karein",
+      "usage": "*Example : weather delhi*",
+      "not_found": "_{0} daryaft nahi hua ❌_",
+      "report": "*Naam :* {0}\n*Mulk :* {1}\n*Mausam :* {2}\n*Temp :* {3}°\n*Feels Like :* {4}°\n*Humidity :* {5}%\n*Visibility  :* {6}m\n*Hawa* : {7}m/s {8}\n*Sunrise :* {9}\n*Sunset :* {10}"
+    },
+    "y2mate": {
+      "ytv_desc": "YouTube video download karain",
+      "ytv_usage": "_Example: ytv url_",
+      "yta_desc": "YouTube audio download karain",
+      "yta_usage": "_Example: yta darari/yt url_",
+      "invalid_link": "*Aik sahi YouTube link dain!*",
+      "no_video": "*Koi video nahi mili*",
+      "no_audio": "_Audio nahi mila._"
     },
     "amute": {
       "usage": "*Istmaal:* _amute <hour> <min>\n- amute on | off\n- amute info\n\n reply text message ky sath mute message set karain._",
@@ -442,19 +500,32 @@
       "usage": "> Example:\n- zushi ping, sticker\n- Sab commands set karne ke liye ‘list’ type karein aur phir copied message ke sath reply karein (e.g., zushi copied_message)..",
       "desc": "_Ye feature chat mein dusre logon ke liye mukhtalif commands enable karne ki sahulat deta hai_",
       "already_set": "_{0} ye phaly configured hai._",
-      "allowed": "*Ijazat di gayi commands* @{0}\n{1}"
+      "allowed": "*Ijazat di gayi commands* @{0}\n{1}",
+      "no_input": "⚠️ براہ کرم کمانڈ کے نام فراہم کریں\n\n📝 مثالیں:\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 ایک ساتھ کئی کمانڈز شامل کرنے کے لیے اسپیس استعمال کریں",
+      "duplicates": "❌ یہ کمانڈز پہلے ہی اجازت یافتہ ہیں: {0}\n\n📋 موجودہ اجازت یافتہ کمانڈز (کل {1}):\n{2}\n\n💡 تمام اجازت یافتہ کمانڈز دیکھنے کے لیے .yami استعمال کریں\n💡 کمانڈز ہٹانے کے لیے .ope استعمال کریں",
+      "invalid": "⚠️ کوئی درست کمانڈ نہیں ملی\n\nغلط کمانڈز چھوڑ دیں: {0}\n\n💡 دستیاب کمانڈز دیکھنے کے لیے .help استعمال کریں",
+      "error": "❌ غلطی: {0}",
+      "success": "✅ {0} کمانڈ{1} کامیابی کے ساتھ شامل کر دی گئی ہیں:\n{2}\n\n📊 @{3} کے لیے کل اجازت یافتہ: {0} کمانڈ{1}\n\n💡 اب صارفین یہ کمانڈز استعمال کر سکتے ہیں"
     },
     "yami": {
       "usage": "*Istmaal:* _yami_",
       "desc": "_Ye feature is chat mein mojood allowed commands ki list dikhata hai._",
-      "not_set": "_Abhi tak koi bhi allowed commands set nahi hui hain._"
+      "not_set": "_Abhi tak koi bhi allowed commands set nahi hui hain._",
+      "no_commands": "📋 کوئی اجازت یافتہ کمانڈ نہیں ملی\n\n💡 کمانڈز شامل کرنے کے لیے .zushi استعمال کریں\n📝 مثال: .zushi song video sticker",
+      "list": "📋 @{0} کے لیے اجازت یافتہ کمانڈز:\n\n{1}\n\n📊 کل: {2} کمانڈ{3}\n\n💡 ہٹائیں: .ope <کمانڈز کے نام>\n💡 سب ہٹائیں: .ope all"
     },
     "ope": {
       "usage": "*Misaal:* _ope ping, sticker OR ope all_@",
       "desc": "_Ye feature mukhtalif allowed commands ko delete ya unset karne ke liye istemal hota hai._",
       "not_found": "_{0} ke liye koi bhi allowed commands nahi mili_",
       "all_removed": "_Sab allowed commands hata di gayi hain !!_",
-      "removed": "*remove ki gai commands* @{0}\n{1}"
+      "removed": "*remove ki gai commands* @{0}\n{1}",
+      "no_input": "⚠️ براہ کرم ہٹانے کے لیے کمانڈز کے نام فراہم کریں\n\n📝 مثالیں:\n  • .ope song video\n  • .ope all (سب کچھ ہٹا دے گا)\n\n💡 اجازت یافتہ کمانڈز دیکھنے کے لیے .yami استعمال کریں",
+      "not_found_list": "❌ کمانڈ{0} نہیں ملی: {1}{2}\n\n💡 تمام اجازت یافتہ کمانڈز دیکھنے کے لیے .yami استعمال کریں\n📝 مثال: .ope song video",
+      "error": "❌ غلطی: {0}",
+      "no_commands": "⚠️ اس صارف/گروپ کے لیے کوئی کمانڈز نہیں ملیں\n\n💡 پہلے کمانڈز شامل کرنے کے لیے .zushi استعمال کریں",
+      "all_success": "✅ تمام کمانڈز ہٹا دی گئی ہیں\n\n💡 نئی کمانڈز شامل کرنے کے لیے .zushi استعمال کریں",
+      "success": "✅ {0} کمانڈ{1} ہٹا دی گئی ہیں:\n{2}\n\n📊 صارف: @{3}\n\n💡 باقی کمانڈز دیکھنے کے لیے .yami استعمال کریں\n💡 سب کچھ ہٹانے کے لیے .ope all استعمال کریں"
     },
     "pdm": {
       "usage": "*Istmaal:* pdm on | off",
@@ -464,9 +535,9 @@
       "deactivated": "_Promote/demote alert deactivated hai_"
     },
     "ping": {
-      "desc": "_Bot ki response time (latency) check karein_",
-      "ping_sent": "_Ruko zara sabar karo !!_",
-      "pong": "*Pong! Response time: {0} ms*"
+      "desc": "_Bot ki speed check karein_",
+      "ping_sent": "Check kar raha hoon...",
+      "pong": "Zabardast! Speed: {0} ms 💥"
     },
     "pinterest": {
       "usage": "*Istmaal:* _pinterest <Pinterest URL>_",
@@ -483,7 +554,7 @@
     "remove": {
       "usage": "> Misaal:\b- remove <plugin_name>\n- remove all",
       "desc": "_External plugins ko unka naam likh kar delete karein ya sab plugins ek sath remove karein._",
-      "not_found": "Plugin *{0}* nahi mila ❗",
+      "not_found": "Plugin *{0}* daryaft nahi hua ❗",
       "removed": "_Plugins kamiyabi se remove kar diye gaye._"
     },
     "reboot": {
@@ -634,7 +705,9 @@
       "already_occupied": "*_Already Occupied_*",
       "current_player": "*currentPlayer",
       "game_finish": "_Game Finish 🏁_",
-      "winner": "_winner 🏆_"
+      "winner": "Winner 🏆",
+      "restart": "Game Restart",
+      "header": "---Tic Tac Toe---"
     },
     "tiktok": {
       "usage": "*Istmaal: _tiktok <TikTok URL> (ya kisi message par reply karein jo URL contain karta ho)_",
@@ -676,7 +749,7 @@
       "usage": "*Misaal:* _delvar sudo_",
       "desc": "_Variable ko delete karein uski key specify karke._",
       "not_found": "*{0} vars me nahi mila.*",
-      "deleted": "_{0} deleted ✅_"
+      "deleted": "_{0} delete kar diya gaya ✅_"
     },
     "setvar": {
       "usage": "*Misaal:* _setvar key = value_",
@@ -696,18 +769,33 @@
       "option_required": "_2 ya zyada options required hain._",
       "question_required": "*question required*",
       "vote": "*_React karein ya option ko reply karein vote dene ke liye._*",
-      "vote_deleted": "_Vote deleted._",
+      "vote_deleted": "_Vote delete kar diya gaya._",
       "voted": "@{0} ne {1} ke liye vote diya\n\n${2}"
     },
     "warn": {
       "usage": "*Misaal:* _warn @user YA warn reset @user. Aap kisi user ke message par reply kar ke bhi 'warn' ya 'warn reset' likh sakte hain._",
       "desc": "*_Group chat me kisi user ko warn karein. Yeh command user ki warning count ko badhati hai. Agar count limit se zyada ho jaye, to user ko group se nikal diya jayega. 'warn reset' ka use kisi user ki warnings clear karne ke liye karein._",
       "reset_usage": "*Misaal:* _warn reset @user (ya user ke message par reply karke 'warn reset' likhein)._",
-      "cannot_remove_admin": "_Main kisi admin ko remove nahi kar sakta._"
+      "cannot_remove_admin": "_Main kisi admin ko remove nahi kar sakta._",
+      "kick_default": "{0} ko warn limit se barhne par kick kar diya gaya hai.",
+      "warn_default": "⚠️ Warning {0}! {1}/{2} warnings baqi hain."
     },
     "wcg": {
       "usage": "*Misaal:* \n- wcg start (force start the word chain game)\n- wcg end (end the current game)\n- wcg <word> (play by continuing the word chain)",
-      "desc": "*_Word Chain Game: Ek word provide karein jo chain continue kare. 'wcg start' ka use naye game ko force start karne ke liye karein ya 'wcg end' ka use game stop karne ke liye._*"
+      "desc": "*_Word Chain Game: Ek word provide karein jo chain continue kare. 'wcg start' ka use naye game ko force start karne ke liye karein ya 'wcg end' ka use game stop karne ke liye._*",
+      "game_ends": "Game Khatam",
+      "already_used": "_Ye word pehle hi use ho chuka hai!_",
+      "not_starting_with": "_{0} se shuru nahi ho raha_",
+      "length_limit": "_Is word ki length {0} se kam hai_",
+      "not_in_list": "_Ye word meri word list mein nahi hai_",
+      "turn_info": "🎲Bari : @{0}\n🙌Agla : @{1}\n🆎Aapka word *{2}* se shuru hona chahiye aur kam se kam *{3}* letters hone chahiyain\n🏆Baqi players : {4}/{5}\n⏳Aapke paas answer dene ke liye *{6}s* hain\n📝Total words : {7}",
+      "timeout": "إنتهى وقت @{0}! Wo game se bahar hain! 🚫",
+      "winner": "@{0} ne Jeeta 🏆\nWords : *{1}*\nSabse lamba word : *{2} ({3})* @{4} ki taraf se 📚\nWaqt : *{5}* ⏱️",
+      "joined": "@{0} ne Join kiya 👏",
+      "starting": "🎮 Game shuru ho rahi hai...\n👥 2 ya zyada players chahiyain 🙋‍♂️🙋‍♀️\n⏳ Join karne ke liye 60 seconds hain ⏳\n🧩 Mode {0}",
+      "starts_in": "🎮 Game {0} seconds mein shuru hogi ⏳\nKhelne ke liye *join* type karain 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
+      "players_count": "\n\n👥 {0} players ne join kiya.",
+      "terminated": "_Zyada players nahi milay. Game band ho gaya._"
     },
     "wrg": {
       "usage": "Misaal:\n- wrg start (Random Word Game ko force start karein)\n- wrg end (Current game ko end karein)\n- wrg <word> (Random prompt ka jawab ek word se dein)",
@@ -749,13 +837,12 @@
     },
     "reminder": {
       "desc": "Google Calendar reminders ko manage karein.",
+      "usage": "> *Reminders ka Istimal:*\n- `reminder <text>` - Naya reminder set karein (maslan: 'meeting kal 10 baje')\n- `reminder list` - Tamam reminders ki list dekhein\n- `reminder del <id>` - Reminder delete karein",
       "success": "✅ Reminder set kar diya gaya hai: *{0}* {1} ko",
       "list": "*Aapke Reminders:*\n\n{0}",
       "list_empty": "Koi reminder nahi mila.",
-      "deleted": "Reminder kamyabi se delete kar diya gaya!",
+      "deleted": "ریمنڈر کامیابی سے حذف کر دیا گیا!",
       "invalid_id": "Baraye meharbani aik valid event ID fraham karein.",
-      "error": "*Ghalti:* {0}",
-      "usage": "> *Reminders ka Istimal:*\n- `reminder <text>` - Naya reminder set karein (maslan: 'meeting kal 10 baje')\n- `reminder list` - Tamam reminders ki list dekhein\n- `reminder del <id>` - Reminder delete karein",
       "auth_required": "*Authentication Zaroori Hai:*\n\nBot authorize karne ke liye \"gauth\" istimal karein.",
       "time": "Waqt",
       "id": "ID",
@@ -780,7 +867,7 @@
       "not_authorized": "Authorized nahi hai. \"backup auth\" istimal karein.",
       "list": "*Google Drive Files:*\n\n{0}",
       "list_empty": "Levanter folder me koi file nahi mili.",
-      "deleted": "File kamyabi se delete ho gayi!",
+      "deleted": "فائل کامیابی سے حذف کر دی گئی!",
       "invalid_id": "Baraye meharbani aik valid file ID fraham karein.",
       "error": "*Ghalti:* {0}",
       "url_prompt": "Baraye meharbani aik valid URL fraham karein, media message tag karein, ya subcommands istemal karein: list, del <id>, dl <id>.\nMisal: `gupload list`",

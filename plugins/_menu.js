@@ -86,7 +86,7 @@ bot(
 
         let isDisabled = command.active === false
         let cmd = command.name.trim()
-        commands[cmdType].push(isDisabled ? `${cmd} [disabled]` : cmd)
+        commands[cmdType].push(isDisabled ? `${cmd} [${lang.plugins.menu.disabled}]` : cmd)
       }
     })
 

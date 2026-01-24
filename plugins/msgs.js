@@ -42,6 +42,10 @@ bot(
       return out
     }
 
+    if (!participants) {
+      return await message.send(lang.plugins.msgs.no_activity)
+    }
+
     if (user) {
       msg += generateParticipantMsg(participants, user)
     } else {

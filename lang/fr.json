@@ -20,18 +20,38 @@
     "plugins_installed": "[{0}] Plugins installés",
     "plugin_install_error": "[{0}] Erreur lors de l'installation de {1}, suppression du plugin",
     "plugin_not_found": "[{0}] Plugin {1} non trouvé (404), suppression du plugin",
-    "group_cmd": "Cette commande est uniquement disponible dans les discussions de groupe."
+    "group_cmd": "Cette commande est uniquement disponible dans les discussions de groupe.",
+    "labels": {
+      "sudo": "SUDO",
+      "auto_read": "AUTO READ MSG",
+      "auto_status": "AUTO STATUS VIEW",
+      "auto_reject": "AUTO REJECT CALL",
+      "always_online": "ALWAYS ONLINE",
+      "anti_delete": "ANTI DELETE MSG",
+      "auto_update": "AUTO UPDATE BOT"
+    },
+    "promoted": "promoted",
+    "demoted": "demoted",
+    "file_size_error": "Size is {0}\n\n{1}",
+    "missing_jid": "missing jids",
+    "no_contacts": "not found contacts, please add contacts",
+    "reaction_not_enabled": "Reaction not enabled",
+    "reaction_not_allowed": "this reaction not allowed",
+    "metadata_fetch_failed": "failed to fetch metadata",
+    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
+    "screenshot_error": "an error occured",
+    "id_missing": "id missing",
+    "not_on_whatsapp": "{0} is not on whatsapp."
   },
   "plugins": {
     "common": {
-      "reply_to_message": "Répondre à un message",
-      "not_admin": "Je ne suis pas administrateur.",
       "reply_to_image": "Répondre à une image",
       "update": "_Paramètres mis à jour avec succès ! Vos préférences ont été enregistrées et sont maintenant actives._"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Préfixe : {0}\n│ Utilisateur : {1}\n│ Heure : {2}\n│ Jour : {3}\n│ Date : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ RAM : {7}\n│ Temps d'activité : {8}\n│ Plateforme : {9}\n╰────────────────```",
-      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Préfixe : {0}\n┃❃│ Utilisateur : {1}\n┃❃│ Heure : {2}\n┃❃│ Jour : {3}\n┃❃│ Date : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ RAM : {7}\n┃❃│ Temps d'activité : {8}\n┃❃│ Plateforme : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Préfixe : {0}\n┃❃│ Utilisateur : {1}\n┃❃│ Heure : {2}\n┃❃│ Jour : {3}\n┃❃│ Date : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ RAM : {7}\n┃❃│ Temps d'activité : {8}\n┃❃│ Plateforme : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
+      "disabled": "disabled"
     },
     "afk": {
       "example": "> *Utilisation de AFK :*\n- Définir AFK : *afk [raison]*\n- Exemple : *afk Je suis occupé* Dernière vue il y a #lastseen\n- L'envoi d'un message supprime automatiquement le statut AFK\n- Désactiver AFK : *afk off*",
@@ -59,8 +79,8 @@
       "cleared": "*🗑️ Antifake list cleared and disabled*",
       "whitelist_mode": "🟢 Whitelist Mode (Allow Only)",
       "blacklist_mode": "🔴 Blacklist Mode (Block Only)",
-      "enabled": "enabled",
-      "disabled": "disabled"
+      "enabled": "activé",
+      "disabled": "désactivé"
     },
     "antilink": {
       "desc": "Activer ou configurer l'anti-lien",
@@ -71,7 +91,18 @@
       "action_invalid": "*Action spécifiée invalide.*",
       "action_update": "Action de l'anti-lien mise à jour à : *{0}*",
       "update": "> Anti-lien mis à jour\n*Autorisé :* {0}\n*Non autorisé :* {1}",
-      "example": "Statut de l'anti-lien : *{0}*\n\n> Exemples d'utilisation :\n- antilink list - Voir les paramètres actuels\n- antilink allow whatsapp.com - Autoriser des URLs spécifiques\n- antilink disallow facebook.com - Interdire des URLs spécifiques\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Activer/Désactiver l'anti-lien\n- antilink kick | warn | null - Définir l'action pour les liens"
+      "enabled": "activé",
+      "disabled": "désactivé",
+      "example": "Statut de l'anti-lien : *{0}*\n\n> Exemples d'utilisation :\n- antilink list - Voir les paramètres actuels\n- antilink allow whatsapp.com - Autoriser des URLs spécifiques\n- antilink disallow facebook.com - Interdire des URLs spécifiques\n- antilink clear allow - Effacer les URLs autorisées\n- antilink clear disallow - Effacer les URLs non autorisées\n- antilink on | off - Activer/Désactiver l'anti-lien\n- antilink kick | warn | null - Définir l'action pour les liens",
+      "allow_prompt": "*Please provide a URL to allow.*",
+      "no_new_urls": "*No new URLs to add.* All URLs already exist in the list.",
+      "urls_updated": "*Allowed URLs updated*\n\nAdded: {0}\nTotal: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "disallow_prompt": "*Please provide a URL to disallow.*",
+      "no_disallowed_urls": "*No new URLs to disallow.* All URLs are already disallowed.",
+      "disallowed_updated": "*Disallowed URLs updated*\n\nAdded to blocklist: {0}\nTotal blocked: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "settings_cleared": "*Antilink settings cleared.*",
+      "allowed_cleared": "*Allowed URLs cleared.*",
+      "disallowed_cleared": "*Disallowed URLs cleared.*"
     },
     "antiword": {
       "desc": "Filtrer des mots spécifiques dans le chat de groupe",
@@ -82,6 +113,8 @@
       "added": "*Mots ajoutés :*\n{0}",
       "remove_prompt": "*Veuillez fournir des mots à supprimer.*",
       "removed": "*Mots supprimés :*\n{0}",
+      "activated": "activé",
+      "deactivated": "désactivé",
       "no_words": "*Aucun mot défini.*",
       "info": "*Statut AntiWord :* {0}\n*Action :* {1}\n\n*Mots :* {2}",
       "cleared": "*Liste AntiWord effacée.*"
@@ -178,13 +211,13 @@
     },
     "greetings": {
       "welcome_desc": "Envoyer un message de bienvenue aux nouveaux membres",
-      "welcome_example": "Le bienvenue est actuellement *{0}*\n\n> *Exemples d'utilisation:*\n- welcome Salut &mention! Bienvenue à &name - Définir message\n- welcome on | off - Activer/Désactiver\n- welcome delete - Supprimer le message\n\n> *Marqueurs:*\n- &mention - Mentionner nouveau membre\n- &name - Nom du groupe\n- &desc - Description du groupe\n- &size - Nombre de membres\n- &pp - Photo de profil du membre\n\n> *Média:* Répondre à image/vidéo OU inclure URL dans le message\n\nPour plus de détails: https://levanter-delta.vercel.app/",
+      "welcome_example": "Le bienvenue est actuellement *{0}*\n\n> *Exemples d'utilisation:*\n- welcome Salut &mention! Bienvenue à &name - Définir message\n- welcome on | off - Activer/Désactiver\n- welcome delete - Supprimer le message\n\n> *Marqueurs:*\n- &mention - Mentionner nouveau membre\n- &name - Nom du groupe\n- &desc - Description du groupe\n- &size - Nombre de membres\n- &pp - Photo de profil du membre\n\n> *Média:* Répondre à image/vidéo OU inclure URL dans le message\n\nPour plus de détails: https://levanter.site/",
       "welcome_enable": "_Bienvenue activé_",
       "welcome_disable": "_Bienvenue désactivé_",
       "welcome_delete": "_Message de bienvenue supprimé_",
       "welcome_not_set": "_Veuillez d'abord définir un message de bienvenue!_\n\n> *Exemple:*\nwelcome Salut &mention! Bienvenue à &name\n\nEnsuite utilisez: welcome on",
       "goodbye_desc": "Envoyer un message d'au revoir aux membres",
-      "goodbye_example": "L'au revoir est actuellement *{0}*\n\n> *Exemples d'utilisation:*\n- goodbye Au revoir &mention! À bientôt - Définir message\n- goodbye on | off - Activer/Désactiver\n- goodbye delete - Supprimer le message\n\n> *Marqueurs:*\n- &mention - Mentionner membre partant\n- &name - Nom du groupe\n- &desc - Description du groupe\n- &size - Nombre de membres\n- &pp - Photo de profil du membre\n\n> *Média:* Répondre à image/vidéo OU inclure URL dans le message\n\nPour plus de détails: https://levanter-delta.vercel.app/",
+      "goodbye_example": "L'au revoir est actuellement *{0}*\n\n> *Exemples d'utilisation:*\n- goodbye Au revoir &mention! À bientôt - Définir message\n- goodbye on | off - Activer/Désactiver\n- goodbye delete - Supprimer le message\n\n> *Marqueurs:*\n- &mention - Mentionner membre partant\n- &name - Nom du groupe\n- &desc - Description du groupe\n- &size - Nombre de membres\n- &pp - Photo de profil du membre\n\n> *Média:* Répondre à image/vidéo OU inclure URL dans le message\n\nPour plus de détails: https://levanter.site/",
       "goodbye_enable": "_Au revoir activé_",
       "goodbye_disable": "_Au revoir désactivé_",
       "goodbye_delete": "_Message d'au revoir supprimé_",
@@ -252,7 +285,9 @@
     },
     "common_members": {
       "desc": "Afficher ou expulser les membres communs dans deux groupes ou plus",
-      "found": "0 membres communs trouvés."
+      "found": "0 membres communs trouvés.",
+      "common_usage": "*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.",
+      "ginfo_usage": "*Example : info group_invte_link*"
     },
     "insta": {
       "usage": "Exemple : insta <URL Instagram>",
@@ -380,7 +415,7 @@
       "usage": "Exemple : mention on | off | get\n(Répondre à un message pour cibler un utilisateur spécifique.)",
       "desc": "Configurer et gérer la fonctionnalité de mention pour des réponses automatisées.",
       "not_activated": "Réponse à la mention non activée.",
-      "current_status": "La mention est {0}. Pour plus de détails, visitez : https://levanter-delta.vercel.app/",
+      "current_status": "La mention est {0}. Pour plus de détails, visitez : https://levanter.site/",
       "activated": "Réponse à la mention activée.",
       "deactivated": "Réponse à la mention désactivée.",
       "updated": "Paramètres de mention mis à jour."
@@ -409,7 +444,8 @@
     "msgs": {
       "desc": "Afficher le nombre de messages du groupe pour chaque membre, y compris les totaux individuels et la durée depuis la dernière vue.",
       "msg_init": "\n*Numéro :* {0}\n*Nom :* {1}\n*Total des messages :* {2}\n",
-      "msg_last": "*Dernière vue :* il y a {0}\n"
+      "msg_last": "*Dernière vue :* il y a {0}\n",
+      "no_activity": "No activity recorded yet."
     },
     "reset": {
       "usage": "Exemple : reset all OU reset <répondre/mentionner>",
@@ -422,6 +458,21 @@
       "desc": "Identifier ou supprimer les membres inactifs en fonction du nombre de messages ou de la durée d'inactivité. Ajoutez 'kick' pour supprimer les membres.",
       "inactives": "_Total des inactifs : {0}_",
       "removing": "_Suppression de {0} membres inactifs dans 7 secondes_"
+    },
+    "weather": {
+      "desc": "weather info",
+      "usage": "*Example : weather delhi*",
+      "not_found": "_{0} not found_",
+      "report": "*Name :* {0}\n*Country :* {1}\n*Weather :* {2}\n*Temp :* {3}°\n*Feels Like :* {4}°\n*Humidity :* {5}%\n*Visibility  :* {6}m\n*Wind* : {7}m/s {8}\n*Sunrise :* {9}\n*Sunset :* {10}"
+    },
+    "y2mate": {
+      "ytv_desc": "Download YouTube video",
+      "ytv_usage": "_Example: ytv url_",
+      "yta_desc": "Download YouTube audio",
+      "yta_usage": "_Example: yta darari/yt url_",
+      "invalid_link": "*Provide a valid YouTube link!*",
+      "no_video": "*No video found*",
+      "no_audio": "_Audio not found._"
     },
     "amute": {
       "usage": "Utilisation : amute <heure> <min>\n- amute on | off\n- amute info\n\nRépondre avec un texte pour définir un message de mise en sourdine",
@@ -449,19 +500,32 @@
       "usage": "> Exemple :\n- zushi ping, sticker\n- Pour définir toutes les commandes, tapez 'list' puis répondez avec le message copié (par ex., zushi message_copié).",
       "desc": "Permet d'activer des commandes spécifiques pour une utilisation par d'autres dans le chat.",
       "already_set": "{0} est déjà configuré.",
-      "allowed": "*commandes autorisées pour* @{0}\n{1}"
+      "allowed": "*commandes autorisées pour* @{0}\n{1}",
+      "no_input": "⚠️ Veuillez fournir des noms de commandes\n\n📝 Exemples :\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 Ajoutez plusieurs commandes séparées par des espaces",
+      "duplicates": "❌ Commandes déjà autorisées : {0}\n\n📋 Commandes actuellement autorisées ({1} au total) :\n{2}\n\n💡 Utilisez .yami pour voir toutes les commandes autorisées\n💡 Utilisez .ope pour supprimer des commandes",
+      "invalid": "⚠️ Aucune commande valide trouvée\n\nIgnoré(s) car invalide(s) : {0}\n\n💡 Utilisez .help pour voir les commandes disponibles",
+      "error": "❌ Erreur : {0}",
+      "success": "✅ Ajout réussi de {0} commande{1} :\n{2}\n\n📊 Total autorisé : {0} commande{1} pour @{3}\n\n💡 Les utilisateurs peuvent maintenant utiliser ces commandes"
     },
     "yami": {
       "usage": "Utilisez simplement : yami",
       "desc": "Affiche la liste des commandes actuellement autorisées dans ce chat.",
-      "not_set": "Aucune commande autorisée n'a encore été définie."
+      "not_set": "Aucune commande autorisée n'a encore été définie.",
+      "no_commands": "📋 Aucune commande autorisée trouvée\n\n💡 Utilisez .zushi pour ajouter des commandes\n📝 Exemple : .zushi song video sticker",
+      "list": "📋 Commandes autorisées pour @{0} :\n\n{1}\n\n📊 Total : {2} commande{3}\n\n💡 Supprimer avec : .ope <noms de commandes>\n💡 Tout supprimer : .ope all"
     },
     "ope": {
       "usage": "Exemple : ope ping, sticker OU ope all",
       "desc": "Supprime ou désactive les commandes autorisées spécifiées.",
       "not_found": "Aucune commande autorisée trouvée pour {0}.",
       "all_removed": "Toutes les commandes autorisées ont été supprimées.",
-      "removed": "*commandes supprimées pour* @{0}\n{1}"
+      "removed": "*commandes supprimées pour* @{0}\n{1}",
+      "no_input": "⚠️ Veuillez fournir les noms des commandes à supprimer\n\n📝 Exemples :\n  • .ope song video\n  • .ope all (supprime tout)\n\n💡 Utilisez .yami pour voir les commandes autorisées",
+      "not_found_list": "❌ Commande{0} non trouvée : {1}{2}\n\n💡 Utilisez .yami pour voir toutes les commandes autorisées\n📝 Exemple : .ope song video",
+      "error": "❌ Erreur : {0}",
+      "no_commands": "⚠️ Aucune commande trouvée pour cet utilisateur/groupe\n\n💡 Utilisez d'abord .zushi pour ajouter des commandes",
+      "all_success": "✅ Toutes les commandes ont été supprimées\n\n💡 Utilisez .zushi pour ajouter de nouvelles commandes",
+      "success": "✅ {0} commande{1} supprimée(s) :\n{2}\n\n📊 Pour : @{3}\n\n💡 Utilisez .yami pour voir les commandes restantes\n💡 Utilisez .ope all pour tout supprimer"
     },
     "pdm": {
       "usage": "Utilisation : pdm on | off",
@@ -641,7 +705,9 @@
       "already_occupied": "_Déjà occupé_",
       "current_player": "Joueur actuel",
       "game_finish": "Fin du jeu 🏁",
-      "winner": "Gagnant"
+      "winner": "Gagnant",
+      "restart": "Restart Game",
+      "header": "---Tic Tac Toe---"
     },
     "tiktok": {
       "usage": "Utilisation : tiktok <URL TikTok> (ou répondre à un message avec l'URL)",
@@ -710,11 +776,26 @@
       "usage": "Exemple : warn @utilisateur OU warn reset @utilisateur. Vous pouvez également répondre au message d'un utilisateur et taper 'warn' ou 'warn reset'.",
       "desc": "Avertir un utilisateur dans le chat de groupe. Cette commande augmente le compteur d'avertissements d'un utilisateur. Si le compteur dépasse la limite, l'utilisateur sera expulsé du groupe. Utilisez 'warn reset' pour effacer les avertissements d'un utilisateur.",
       "reset_usage": "Exemple : warn reset @utilisateur (ou répondre au message d'un utilisateur et taper 'warn reset').",
-      "cannot_remove_admin": "Je ne peux pas retirer un administrateur."
+      "cannot_remove_admin": "Je ne peux pas retirer un administrateur.",
+      "kick_default": "{0} has been kicked for exceeding warn limit.",
+      "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
       "usage": "Exemples :\n- wcg start (forcer le démarrage du jeu de chaîne de mots)\n- wcg end (terminer le jeu actuel)\n- wcg <mot> (jouer en continuant la chaîne de mots)",
-      "desc": "Jeu de chaîne de mots : Participez en fournissant un mot qui continue la chaîne. Utilisez 'wcg start' pour forcer le démarrage d'un nouveau jeu ou 'wcg end' pour arrêter le jeu actuel."
+      "desc": "Jeu de chaîne de mots : Participez en fournissant un mot qui continue la chaîne. Utilisez 'wcg start' pour forcer le démarrage d'un nouveau jeu ou 'wcg end' pour arrêter le jeu actuel.",
+      "game_ends": "Game Ends",
+      "already_used": "_Already Used this Word!_",
+      "not_starting_with": "_Not Starting with {0}_",
+      "length_limit": "_This word length is less than {0}_",
+      "not_in_list": "_This word is not in my words list_",
+      "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Your word must start with *{2}* and include at least *{3}* letters\n🏆Players remaining : {4}/{5}\n⏳You have *{6}s* to answer\n📝Total words : {7}",
+      "timeout": "@{0} ran out of time! They're out! 🚫",
+      "winner": "@{0} Won 🏆\nWords : *{1}*\nLongest word : *{2} ({3})* by @{4} 📚\nTime : *{5}* ⏱️",
+      "joined": "@{0} Joined 👏",
+      "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
+      "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
+      "players_count": "\n\n👥 {0} players joined.",
+      "terminated": "_Not enough players. Game terminated._"
     },
     "wrg": {
       "usage": "Exemples :\n- wrg start (forcer le démarrage du jeu de mots aléatoires)\n- wrg end (terminer le jeu actuel)\n- wrg <mot> (jouer en soumettant un mot)",
@@ -756,13 +837,12 @@
     },
     "reminder": {
       "desc": "Gérer les rappels Google Calendar.",
+      "usage": "> *Utilisation des Rappels :*\n- `reminder <texte>` - Définir un nouveau rappel (ex: 'réunion demain à 10h')\n- `reminder list` - Lister tous les rappels\n- `reminder del <id>` - Supprimer un rappel",
       "success": "✅ Rappel défini : *{0}* le {1}",
       "list": "*Vos Rappels :*\n\n{0}",
       "list_empty": "Aucun rappel trouvé.",
       "deleted": "Rappel supprimé avec succès !",
       "invalid_id": "Veuillez fournir un ID d'événement valide.",
-      "error": "*Erreur :* {0}",
-      "usage": "> *Utilisation des Rappels :*\n- `reminder <texte>` - Définir un nouveau rappel (ex: 'réunion demain à 10h')\n- `reminder list` - Lister tous les rappels\n- `reminder del <id>` - Supprimer un rappel",
       "auth_required": "*Authentification Requise :*\n\nUtilisez \"gauth\" pour autoriser le bot.",
       "time": "Heure",
       "id": "ID",

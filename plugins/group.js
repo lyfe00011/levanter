@@ -115,7 +115,7 @@ bot(
 
     let user = []
     if (message.mention.length) {
-      user = message.mention
+      user = message.mention.slice()
     } else if (message.reply_message) {
       user = [message.reply_message.jid]
     }
@@ -222,7 +222,7 @@ bot(
   },
   async (message, match) => {
     match = match || message.reply_message.text
-    if (!match) return await message.send('*Example : info group_invte_link*')
+    if (!match) return await message.send(lang.plugins.group_info.ginfo_usage)
     const linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
     const [_, code] = match.match(linkRegex) || []
     if (!code) return await message.send(lang.plugins.group_info.invalid_link)
@@ -248,7 +248,7 @@ bot(
     desc: lang.plugins.common_members.desc,
   },
   async (message, match) => {
-    const example = `*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.`
+    const example = lang.plugins.common_members.common_usage
     const kick = match.includes('kick')
     const kickFromAll = match.includes('kickall')
     const isAny = match.includes('any')

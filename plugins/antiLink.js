@@ -24,7 +24,7 @@ bot(
       if (cmd === 'off' && status === 'off') return message.send(lang.plugins.antilink.disable)
       await setAntiLink(message.jid, cmd === 'on', message.id)
       return message.send(
-        lang.plugins.antilink.status.format(cmd === 'on' ? 'enabled' : 'disabled')
+        lang.plugins.antilink.status.format(cmd === 'on' ? lang.plugins.antilink.enabled : lang.plugins.antilink.disabled)
       )
     }
 
@@ -34,7 +34,7 @@ bot(
     }
 
     if (cmd === 'allow') {
-      if (!args) return message.send('*Please provide a URL to allow.*')
+      if (!args) return message.send(lang.plugins.antilink.allow_prompt)
 
       const urlsToAdd = args.split(',')
         .map(u => u.trim())
@@ -47,22 +47,19 @@ bot(
       const newUrls = urlsToAdd.filter(u => !currentNormalized.includes(u))
 
       if (newUrls.length === 0) {
-        return message.send('*No new URLs to add.* All URLs already exist in the list.')
+        return message.send(lang.plugins.antilink.no_new_urls)
       }
 
       const newList = [...currentList, ...newUrls].join(',')
       await setAllowedUrl(message.jid, newList, message.id)
 
       return message.send(
-        `*Allowed URLs updated*\n\n` +
-        `Added: ${newUrls.join(', ')}\n` +
-        `Total: ${[...currentList, ...newUrls].length} URL(s)\n\n` +
-        `_Note: URLs are case-insensitive_`
+        lang.plugins.antilink.urls_updated.format(newUrls.join(', '), [...currentList, ...newUrls].length)
       )
     }
 
     if (cmd === 'disallow') {
-      if (!args) return message.send('*Please provide a URL to disallow.*')
+      if (!args) return message.send(lang.plugins.antilink.disallow_prompt)
 
       const urlsToDisallow = args.split(',')
         .map(u => u.trim())
@@ -82,17 +79,14 @@ bot(
       const newUrls = urlsToDisallow.filter(u => !existingDisallowed.includes(normalizeUrl(u.slice(1))))
 
       if (newUrls.length === 0) {
-        return message.send('*No new URLs to disallow.* All URLs are already disallowed.')
+        return message.send(lang.plugins.antilink.no_disallowed_urls)
       }
 
       const newList = [...cleanList, ...newUrls].join(',')
       await setAllowedUrl(message.jid, newList, message.id)
 
       return message.send(
-        `*Disallowed URLs updated*\n\n` +
-        `Added to blocklist: ${newUrls.map(u => u.slice(1)).join(', ')}\n` +
-        `Total blocked: ${[...cleanList, ...newUrls].filter(u => u.startsWith('!')).length} URL(s)\n\n` +
-        `_Note: URLs are case-insensitive_`
+        lang.plugins.antilink.disallowed_updated.format(newUrls.map(u => u.slice(1)).join(', '), [...cleanList, ...newUrls].filter(u => u.startsWith('!')).length)
       )
     }
 
@@ -102,14 +96,14 @@ bot(
       const allowed = list.filter(u => !u.startsWith('!')).join(', ')
       const disallowed = list.filter(u => u.startsWith('!')).map(u => u.slice(1)).join(', ')
       return message.send(
-        `*Antilink Status:* ${status}\n*Action:* ${action}\n\n*Allowed:* ${allowed || 'None'}\n*Disallowed:* ${disallowed || 'None'}`
+        lang.plugins.antilink.info.format(status, allowed || 'None', action) // Utilizing existing info key or updating it
       )
     }
 
     if (cmd === 'clear') {
       if (!args) {
         await setAllowedUrl(message.jid, 'null', message.id)
-        return message.send('*Antilink settings cleared.*')
+        return message.send(lang.plugins.antilink.settings_cleared)
       }
 
       const type = args.toLowerCase()
@@ -119,14 +113,14 @@ bot(
         const disallowedOnly = currentList.filter(u => u.startsWith('!'))
         const newList = disallowedOnly.length > 0 ? disallowedOnly.join(',') : 'null'
         await setAllowedUrl(message.jid, newList, message.id)
-        return message.send('*Allowed URLs cleared.*')
+        return message.send(lang.plugins.antilink.allowed_cleared)
       }
 
       if (type === 'disallow' || type === 'disallowed') {
         const allowedOnly = currentList.filter(u => !u.startsWith('!'))
         const newList = allowedOnly.length > 0 ? allowedOnly.join(',') : 'null'
         await setAllowedUrl(message.jid, newList, message.id)
-        return message.send('*Disallowed URLs cleared.*')
+        return message.send(lang.plugins.antilink.disallowed_cleared)
       }
 
       return message.send(lang.plugins.antilink.example.format(status))

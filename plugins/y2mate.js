@@ -1,16 +1,16 @@
-const { y2mate, bot, getBuffer, addAudioMetaData, yts, generateList, isUrl } = require('../lib/')
+const { y2mate, bot, getBuffer, addAudioMetaData, yts, generateList, isUrl, lang } = require('../lib/')
 const ytIdRegex =
   /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
 
 bot(
   {
     pattern: 'ytv ?(.*)',
-    desc: 'Download YouTube video',
+    desc: lang.plugins.y2mate.ytv_desc,
     type: 'download',
   },
   async (message, match) => {
     match = match || message.reply_message.text
-    if (!match) return await message.send('_Example: ytv url_')
+    if (!match) return await message.send(lang.plugins.y2mate.ytv_usage)
 
     if (match.startsWith('y2mate;')) {
       const [_, q, id] = match.split(';')
@@ -19,7 +19,7 @@ bot(
     }
 
     if (!ytIdRegex.test(match)) {
-      return await message.send('*Provide a valid YouTube link!*', { quoted: message.data })
+      return await message.send(lang.plugins.y2mate.invalid_link, { quoted: message.data })
     }
 
     const vid = ytIdRegex.exec(match)
@@ -37,7 +37,7 @@ bot(
     }
 
     if (!buttons.length) {
-      return await message.send('*No video found*', { quoted: message.quoted })
+      return await message.send(lang.plugins.y2mate.no_video, { quoted: message.quoted })
     }
 
     const list = generateList(
@@ -62,12 +62,12 @@ bot(
 bot(
   {
     pattern: 'yta ?(.*)',
-    desc: 'Download YouTube audio',
+    desc: lang.plugins.y2mate.yta_desc,
     type: 'download',
   },
   async (message, match) => {
     match = match || message.reply_message.text
-    if (!match) return await message.send('_Example: yta darari/yt url_')
+    if (!match) return await message.send(lang.plugins.y2mate.yta_usage)
 
     const vid = ytIdRegex.exec(match)
     if (vid) match = vid[1]
@@ -80,7 +80,7 @@ bot(
 
     const result = await y2mate.dl(id, 'audio')
 
-    if (!result) return await message.send('_Audio not found._', { quoted: message.data })
+    if (!result) return await message.send(lang.plugins.y2mate.no_audio, { quoted: message.data })
 
     const { buffer } = await getBuffer(result)
     if (!buffer) return await message.send(result, { quoted: message.data })
