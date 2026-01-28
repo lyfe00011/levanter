@@ -695,8 +695,8 @@
       "desc": "_Group members ko tag karein apni pasand ke mutabiq. 'all' ka use sabhi members ko mention karne ke liye karein, 'admin' sirf group admins ko mention karega, 'notadmin' non-admin members ko mention karega, ya phir ek custom message bhejne ke liye apni message likhein_"
     },
     "tictactoe": {
-      "usage": "*Misaal:* _tictactoe <opponent_jid> YA tictactoe restart <opponent_jid> YA tictactoe end_",
-      "desc": "> TicTacToe game khelein kisi opponent ke against. Kisi user ko challenge karne ke liye unka mention karein, unke message par reply karein, ya unka JID specify karein. 'tictactoe end' game khatam karne ke liye use karein aur 'tictactoe restart <opponent_jid>' naye opponent ke sath game restart karne ke liye.",
+      "usage": "*Misaal:* _tictactoe <opponent_jid> YA tictactoe normal <opponent_jid> YA tictactoe restart <opponent_jid> YA tictactoe end_",
+      "desc": "> TicTacToe game khelein kisi opponent ke against. Kisi user ko challenge karne ke liye unka mention karein, unke message par reply karein, ya unka JID specify karein. 'tictactoe end' game khatam karne ke liye use karein aur 'tictactoe restart <opponent_jid>' naye opponent ke sath game restart karne ke liye. Default mode infinite hai, normal mode ke liye 'tictactoe normal' use karein.",
       "choose_opponent": "_Kisi opponent ko choose karein message par reply karke ya user ko mention karke. Aap khud se nahi khel sakte._",
       "game_ended": "_Game khatam._",
       "game_restarted": "_Game naye opponent ke sath restart ho gaya hai._",
@@ -781,25 +781,26 @@
       "warn_default": "⚠️ Warning {0}! {1}/{2} warnings baqi hain."
     },
     "wcg": {
-      "usage": "*Misaal:* \n- wcg start (force start the word chain game)\n- wcg end (end the current game)\n- wcg <word> (play by continuing the word chain)",
-      "desc": "*_Word Chain Game: Ek word provide karein jo chain continue kare. 'wcg start' ka use naye game ko force start karne ke liye karein ya 'wcg end' ka use game stop karne ke liye._*",
-      "game_ends": "Game Khatam",
-      "already_used": "_Ye word pehle hi use ho chuka hai!_",
-      "not_starting_with": "_{0} se shuru nahi ho raha_",
+      "usage": "*Misaal:* \n- wcg start (force start the word chain game)\n- wcg end (end the current game)",
+      "desc": "Word Chain Game: continue the word chain by submitting a word. use 'wcg start' to force start and 'wcg end' to stop.",
+      "game_ends": "Game Khatm!",
+      "already_used": "_Ye word pehle use ho gaya hai!_",
+      "not_starting_with": "_{0} se shuru nahi ho raha_ {1}",
       "length_limit": "_Is word ki length {0} se kam hai_",
-      "not_in_list": "_Ye word meri word list mein nahi hai_",
-      "turn_info": "🎲Bari : @{0}\n🙌Agla : @{1}\n🆎Aapka word *{2}* se shuru hona chahiye aur kam se kam *{3}* letters hone chahiyain\n🏆Baqi players : {4}/{5}\n⏳Aapke paas answer dene ke liye *{6}s* hain\n📝Total words : {7}",
-      "timeout": "إنتهى وقت @{0}! Wo game se bahar hain! 🚫",
-      "winner": "@{0} ne Jeeta 🏆\nWords : *{1}*\nSabse lamba word : *{2} ({3})* @{4} ki taraf se 📚\nWaqt : *{5}* ⏱️",
-      "joined": "@{0} ne Join kiya 👏",
-      "starting": "🎮 Game shuru ho rahi hai...\n👥 2 ya zyada players chahiyain 🙋‍♂️🙋‍♀️\n⏳ Join karne ke liye 60 seconds hain ⏳\n🧩 Mode {0}",
-      "starts_in": "🎮 Game {0} seconds mein shuru hogi ⏳\nKhelne ke liye *join* type karain 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
-      "players_count": "\n\n👥 {0} players ne join kiya.",
-      "terminated": "_Zyada players nahi milay. Game band ho gaya._"
+      "not_in_list": "_Ye word meri list mein nahi hai_",
+      "turn_info": "🎲Baari : @{0}\n🙌Agla : @{1}\n🆎{2} se shuru hone wala word bolen (kam se kam {3} letters)\n🏆Players baki hain : {4}/{5}\n⏳ Jawab dene ke liye aapke paas *{6}* seconds hain\n📝Total words : {7}",
+      "timeout": "Time khatm @{0}! Aap game se bahar hain! 🚫",
+      "winner": "@{0} game jeet gaya 🏆\nWords : *{1}*\nSabse lamba word : *{2} ({3})* by @{4} 📚\nTime : *{5}* ⏱️",
+      "joined": "@{0} shamil ho gaya 👏",
+      "starting": "🎮 Game shuru ho rahi hai...\n👥 2 ya usse zyada players ki zaroorat hai\n⏳ Shamil hone ke liye 60 seconds hain ⏳\n🧩 Mode {0}",
+      "starts_in": "🎮 Game {0} seconds mein shuru ho jayegi ⏳\nKhelne ke liye *join* likhen 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
+      "players_count": "\n\n👥 {0} کھلاڑی شامل ہو گئے۔",
+      "terminated": "_شروع کرنے کے لیے کافی کھلاڑی نہیں ہیں۔ گیم ختم کر دی گئی۔_",
+      "mode_update": "_WCG موڈ {0} پر اپ ڈیٹ کر دیا گیا ہے_"
     },
     "wrg": {
-      "usage": "Misaal:\n- wrg start (Random Word Game ko force start karein)\n- wrg end (Current game ko end karein)\n- wrg <word> (Random prompt ka jawab ek word se dein)",
-      "desc": "_Random Word Game: Aik game jisme aap ek random prompt ka jawab ek word se dete hain. 'wrg start' ka use naye game ko shuru karne ke liye karein ya 'wrg end' ka use game khatam karne ke liye._"
+      "usage": "Misaal:\n- wrg start (Random Word Game ko force start karein)\n- wrg hard (Hard mode mein shuru karein)\n- wrg easy (Easy mode mein shuru karein)\n- wrg end (Current game ko end karein)",
+      "desc": "Random Word Game: Random prompt ke response mein word submit karke khelo. 'wrg start' use karke naya game shuru karo ya 'wrg end' use karke current game khatam karo."
     },
     "yts": {
       "usage": "*Misaal:* yts khaab",

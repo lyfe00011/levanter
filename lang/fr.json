@@ -695,8 +695,8 @@
       "desc": "Mentionner les membres du groupe selon votre choix. Utilisez 'all' pour mentionner tous les membres, 'admin' pour mentionner uniquement les administrateurs du groupe, 'notadmin' pour mentionner les membres non-administrateurs, ou fournissez un message personnalisé à envoyer avec les mentions."
     },
     "tictactoe": {
-      "usage": "Exemple : tictactoe <jid_opposant> OU tictactoe restart <jid_opposant> OU tictactoe end",
-      "desc": "Jouer à un jeu de morpion contre un adversaire. Défiez un utilisateur en le mentionnant, en répondant à son message ou en spécifiant son JID. Utilisez 'tictactoe end' pour terminer le jeu et 'tictactoe restart <jid_opposant>' pour recommencer avec un nouvel adversaire.",
+      "usage": "Exemple : tictactoe <jid_opposant> OU tictactoe normal <jid_opposant> OU tictactoe restart <jid_opposant> OU tictactoe end",
+      "desc": "Jouer à un jeu de morpion contre un adversaire. Défiez un utilisateur en le mentionnant, en répondant à son message ou en spécifiant son JID. Utilisez 'tictactoe end' pour terminer le jeu et 'tictactoe restart <jid_opposant>' pour recommencer avec un nouvel adversaire. Le mode par défaut est infini, utilisez 'tictactoe normal' pour le mode normal.",
       "choose_opponent": "Veuillez choisir un adversaire en répondant à un message ou en mentionnant un utilisateur. Vous ne pouvez pas jouer contre vous-même.",
       "game_ended": "Jeu terminé.",
       "game_restarted": "Jeu redémarré avec le nouvel adversaire.",
@@ -781,7 +781,7 @@
       "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
-      "usage": "Exemples :\n- wcg start (forcer le démarrage du jeu de chaîne de mots)\n- wcg end (terminer le jeu actuel)\n- wcg <mot> (jouer en continuant la chaîne de mots)",
+      "usage": "Exemples :\n- wcg start (forcer le démarrage du jeu de chaîne de mots)\n- wcg end (terminer le jeu actuel)",
       "desc": "Jeu de chaîne de mots : Participez en fournissant un mot qui continue la chaîne. Utilisez 'wcg start' pour forcer le démarrage d'un nouveau jeu ou 'wcg end' pour arrêter le jeu actuel.",
       "game_ends": "Game Ends",
       "already_used": "_Already Used this Word!_",
@@ -794,16 +794,13 @@
       "joined": "@{0} Joined 👏",
       "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
       "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
-      "players_count": "\n\n👥 {0} players joined.",
-      "terminated": "_Not enough players. Game terminated._"
+      "players_count": "\n\n👥 {0} joueurs ont rejoint.",
+      "terminated": "_Pas assez de joueurs pour commencer. Jeu terminé._",
+      "mode_update": "_Mode WCG mis à jour en {0}_"
     },
     "wrg": {
-      "usage": "Exemples :\n- wrg start (forcer le démarrage du jeu de mots aléatoires)\n- wrg end (terminer le jeu actuel)\n- wrg <mot> (jouer en soumettant un mot)",
-      "desc": "Jeu de mots aléatoires : Participez à un jeu où vous soumettez des mots en réponse à une invite aléatoire. Utilisez 'wrg start' pour commencer un nouveau jeu ou 'wrg end' pour terminer le jeu."
-    },
-    "yts": {
-      "usage": "Exemple : yts baymax",
-      "desc": "Rechercher des vidéos YouTube par requête ou URL. Si une URL YouTube valide est fournie, des informations détaillées pour la première vidéo sont retournées."
+      "usage": "Exemples :\n- wrg start (forcer le démarrage du jeu de mots aléatoires)\n- wrg hard (démarrer en mode difficile)\n- wrg easy (démarrer en mode facile)\n- wrg end (terminer le jeu actuel)",
+      "desc": "Jeu de mots aléatoires : participez à un jeu où vous soumettez des mots en réponse à une invite aléatoire. Utilisez 'wrg start' pour commencer un nouveau jeu ou 'wrg end' pour terminer le jeu."
     },
     "song": {
       "usage": "Exemple : song indila love story OU song <URL YouTube> (répondre à un message est également pris en charge)",

@@ -1,8 +1,8 @@
 {
     "extra": {
-        "init_session": "[{0}] Puthiya session thudangunnu",
+        "init_session": "[{0}] New session start cheyyunnu",
         "load_session": "[{0}] Session status check cheyyunnu",
-        "invalid_session": "[{0}] {1} SESSION ID THETTAANU, VEENDUM SCAN CHEYYU!!!",
+        "invalid_session": "[{0}] {1} SESSION ID WRONG AANU, VEENDUM SCAN CHEYYU!!!",
         "success_session": "[{0}] Session ok aayi.",
         "connecting": "[{0}] Connect cheyyunnu...",
         "connected": "[{0}] Connect aayitto {1}",
@@ -695,10 +695,10 @@
             "desc": "Group members-e mention cheyyaan. 'all' ellaavarkkum, 'admin' admins-inu, 'notadmin' baakki ullavarkkum."
         },
         "tictactoe": {
-            "usage": "Example: tictactoe <opponent_jid> ATHALLENGIL tictactoe restart <opponent_jid> ATHALLENGIL tictactoe end",
-            "desc": "TicTacToe game-inu. Challenge cheyyaan mention cheyyukka, reply kodukkuka athallengil JID para. End cheyyaan 'tictactoe end' restart cheyyaan 'tictactoe restart <opponent_jid>' use cheyyu.",
+            "usage": "Example: tictactoe <opponent_jid> ATHALLENGIL tictactoe normal <opponent_jid> ATHALLENGIL tictactoe restart <opponent_jid> ATHALLENGIL tictactoe end",
+            "desc": "TicTacToe game-inu. Challenge cheyyaan mention cheyyukka, reply kodukkuka athallengil JID para. End cheyyaan 'tictactoe end' restart cheyyaan 'tictactoe restart <opponent_jid>' use cheyyu. Default infinite mode aayirikkum, normal mode venel 'tictactoe normal' use cheyyu.",
             "choose_opponent": "Reply cheythittulla aale thiranjedukko mention cheyyu. Nee swanthamaayi game kalikkaan pattiilla.",
-            "game_ended": "Game kazhinju.",
+            "game_ended": "Game Over.",
             "game_restarted": "Puthiya opponent-u-maayi game restart aayi.",
             "invalid_input": "Input thettaanu. Sariyaya aale para.",
             "players": "Players",
@@ -781,25 +781,26 @@
             "warn_default": "⚠️ Warning {0}! {1}/{2} warnings baakkiyund."
         },
         "wcg": {
-            "usage": "Examples:\n- wcg start (word chain game thudangaan)\n- wcg end (ippozhathe game nirthan)\n- wcg <word> (game thudaru)",
-            "desc": "Word Chain Game: Oru vaakku paranju game thudaru. 'wcg start' upayogichu game thudangaam, 'wcg end' upayogichu nirthan.",
-            "game_ends": "Game Kazhinju",
-            "already_used": "_Ee vaakku munbe upayogichu!_",
-            "not_starting_with": "_{0} vechu thudangunilla_",
-            "length_limit": "_Ee vaakkinu {0}-il thazhae length mathramae ullu_",
-            "not_in_list": "_Ee vaakku ente list-il illa_",
-            "turn_info": "🎲Turn : @{0}\n🙌Aguthe : @{1}\n🆎{2} vechu thudangunna vaakku para (kam se kam {3} aksharam venam)\n🏆Members baakki : {4}/{5}\n⏳ മറുപടി നൽകാൻ *{6}* സെക്കൻ്റ്സ് ഉണ്ട്\n📝Total words : {7}",
-            "timeout": "Samayan kazhinju @{0}! Ayal purath! 🚫",
-            "winner": "@{0} Jayichu 🏆\nWords : *{1}*\nEttavum valiya vaakku : *{2} ({3})* ezhuthiyath @{4} 📚\nSamayam : *{5}* ⏱️",
-            "joined": "@{0} Keriitto 👏",
-            "starting": "🎮 Game thudangunnu...\n👥 2-o athillengil kooduthal members venam 🙋‍♂️🙋‍♀️\n⏳ Join cheyyaan 60 second-um koodi ⏳\n🧩 Mode {0}",
-            "starts_in": "🎮 Game {0} second-il thudangum ⏳\nKalikkaan *join* ennu ezhuthoo 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
-            "players_count": "\n\n👥 {0} members keriitto.",
-            "terminated": "_Members thikanilla. Game nirthunnu._"
+            "usage": "Examples:\n- wcg start (game start cheyyaan)\n- wcg hard (hard mode-il start cheyyaan)\n- wcg easy (easy mode-il start cheyyaan)\n- wcg end (game stop cheyyaan)",
+            "desc": "Word Chain Game: Oru word paranju game continue cheyyaan. 'wcg start' upayogichu game start cheyyaam, 'wcg end' upayogichu stop cheyyaam.",
+            "game_ends": "Game Over",
+            "already_used": "_Ee word munbe use cheythittund!_",
+            "not_starting_with": "_{0} vechu start cheyyunnilla_",
+            "length_limit": "_Ee word-inu {0}-il thazhe length mathrame ullu_",
+            "not_in_list": "_Ee word ente list-il illa_",
+            "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎{2} vechu start cheyyunna word para (kuranjath {3} letters venam)\n🏆Players baakki : {4}/{5}\n⏳ Reply kodukkaan *{6}* seconds und\n📝Total words : {7}",
+            "timeout": "Time kazhinju @{0}! Ayal purath! 🚫",
+            "winner": "@{0} Jayichu 🏆\nWords : *{1}*\nEttavum valiya word : *{2} ({3})* ezhuthiyath @{4} 📚\nTime : *{5}* ⏱️",
+            "joined": "@{0} Join cheythu 👏",
+            "starting": "🎮 Game start cheyyunnu...\n👥 2-o athil kooduthal per venam 🙋‍♂️🙋‍♀️\n⏳ Join cheyyaan 60 seconds koodi ⏳\n🧩 Mode {0}",
+            "starts_in": "🎮 Game {0} seconds-il start aavum ⏳\nPlay cheyyaan *join* adikkaam 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
+            "players_count": "\n\n👥 {0} per join cheythu.",
+            "terminated": "_Players thikanjilla. Game stop cheyyunnu._",
+            "mode_update": "_WCG mode {0}-ilekk maattiitto_"
         },
         "wrg": {
-            "usage": "Examples:\n- wrg start (game thudangaan)\n- wrg end (ippozhathe game nirthan)\n- wrg <vaakku> (vaakku paranju game kalikkaan)",
-            "desc": "Random Word Game: Oru random prompt-inu vaakku paranju game kalikkaam."
+            "usage": "Examples:\n- wrg start (game start cheyyaan)\n- wrg hard (hard mode-il start cheyyaan)\n- wrg easy (easy mode-il start cheyyaan)\n- wrg end (game stop cheyyaan)",
+            "desc": "Random Word Game: Oru random prompt-inu word paranju play cheyyaam."
         },
         "yts": {
             "usage": "Example: yts baymax",

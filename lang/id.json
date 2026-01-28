@@ -695,8 +695,8 @@
       "desc": "Tag anggota di grup berdasarkan pilihan Anda. Gunakan 'all' untuk menyebut semua anggota, 'admin' untuk menyebut hanya admin grup, 'notadmin' untuk menyebut anggota non-admin, atau berikan pesan kustom untuk dikirim bersama mention."
     },
     "tictactoe": {
-      "usage": "Contoh: tictactoe <jid_lawan> ATAU tictactoe restart <jid_lawan> ATAU tictactoe end",
-      "desc": "Mainkan game TicTacToe melawan lawan. Tantang pengguna dengan menyebutkan mereka, membalas pesan mereka, atau menentukan JID mereka. Gunakan 'tictactoe end' untuk mengakhiri game dan 'tictactoe restart <jid_lawan>' untuk memulai ulang dengan lawan baru.",
+      "usage": "Contoh: tictactoe <jid_lawan> ATAU tictactoe normal <jid_lawan> ATAU tictactoe restart <jid_lawan> ATAU tictactoe end",
+      "desc": "Mainkan game TicTacToe melawan lawan. Tantang pengguna dengan menyebutkan mereka, membalas pesan mereka, atau menentukan JID mereka. Gunakan 'tictactoe end' untuk mengakhiri game dan 'tictactoe restart <jid_lawan>' untuk memulai ulang dengan lawan baru. Mode default adalah infinite, gunakan 'tictactoe normal' untuk mode normal.",
       "choose_opponent": "Silakan pilih lawan dengan membalas pesan atau menyebutkan pengguna. Anda tidak bisa bermain melawan diri sendiri.",
       "game_ended": "Game berakhir.",
       "game_restarted": "Game dimulai ulang dengan lawan baru.",
@@ -781,7 +781,7 @@
       "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
-      "usage": "Contoh:\n- wcg start (mulai paksa game rantai kata)\n- wcg end (akhiri game saat ini)\n- wcg <kata> (main dengan melanjutkan rantai kata)",
+      "usage": "Contoh:\n- wcg start (mulai paksa game rantai kata)\n- wcg end (akhiri game saat ini)",
       "desc": "Game Rantai Kata: Berpartisipasi dengan memberikan kata yang melanjutkan rantai. Gunakan 'wcg start' untuk memulai game baru atau 'wcg end' untuk menghentikan game saat ini.",
       "game_ends": "Game Ends",
       "already_used": "_Already Used this Word!_",
@@ -794,12 +794,13 @@
       "joined": "@{0} Joined 👏",
       "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
       "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
-      "players_count": "\n\n👥 {0} players joined.",
-      "terminated": "_Not enough players. Game terminated._"
+      "players_count": "\n\n👥 {0} pemain bergabung.",
+      "terminated": "_Tidak cukup pemain untuk memulai. Game dihentikan._",
+      "mode_update": "_Mode WCG diperbarui ke {0}_"
     },
     "wrg": {
-      "usage": "Contoh:\n- wrg start (mulai paksa game kata acak)\n- wrg end (akhiri game saat ini)\n- wrg <kata> (main dengan mengirimkan kata)",
-      "desc": "Game Kata Acak: Ikuti game di mana Anda mengirimkan kata sebagai respons terhadap prompt acak. Gunakan 'wrg start' untuk memulai game baru atau 'wrg end' untuk mengakhiri game."
+      "usage": "Contoh:\n- wrg start (mulai paksa game kata acak)\n- wrg hard (mulai dalam mode sulit)\n- wrg easy (mulai dalam mode mudah)\n- wrg end (akhiri game saat ini)",
+      "desc": "Game Kata Acak: Terlibat dalam permainan di mana Anda mengirimkan kata-kata sebagai tanggapan terhadap prompt acak. Gunakan 'wrg start' untuk memulai permainan baru atau 'wrg end' untuk menyelesaikan permainan."
     },
     "yts": {
       "usage": "Contoh: yts baymax",

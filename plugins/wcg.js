@@ -6,8 +6,9 @@ bot(
     type: 'game',
   },
   async (message, match) => {
-    if (match == 'start') {
-      return await wcg.start(message.jid, message.participant, message.id)
+    if (!match) return await message.send(lang.plugins.wcg.usage)
+    if (match == 'start' || match == 'hard' || match == 'easy') {
+      return await wcg.start_game(message.jid, message.participant, 'chain', message.id, match == 'start' ? 'easy' : match)
     }
     if (match == 'end') {
       return await wcg.end(message.jid, message.participant, message.id)
@@ -23,8 +24,9 @@ bot(
     type: 'game',
   },
   async (message, match) => {
-    if (match == 'start') {
-      return await wcg.start(message.jid, message.participant, message.id)
+    if (!match) return await message.send(lang.plugins.wrg.usage)
+    if (match == 'start' || match == 'hard' || match == 'easy') {
+      return await wcg.start_game(message.jid, message.participant, 'random', message.id, match == 'start' ? 'easy' : match)
     }
     if (match == 'end') {
       return await wcg.end(message.jid, message.participant, message.id)

@@ -695,8 +695,8 @@
       "desc": "Gruptaki üyeleri seçiminize göre etiketle. 'all' tüm üyeleri, 'admin' yalnızca yöneticileri, 'notadmin' yönetici olmayan üyeleri etiketler. Özel bir mesaj ekleyerek etiketleme yapın."
     },
     "tictactoe": {
-      "usage": "Örnek: tictactoe <rakip_jid> VEYA tictactoe restart <rakip_jid> VEYA tictactoe end",
-      "desc": "Bir rakiple XOX oyunu oyna. Bir kullanıcıyı bahsederek, mesajına cevap vererek veya JID'yi belirterek meydan okuyun. 'tictactoe end' oyunu bitirir ve 'tictactoe restart <rakip_jid>' yeni bir rakiple oyunu yeniden başlatır.",
+      "usage": "Örnek: tictactoe <rakip_jid> VEYA tictactoe normal <rakip_jid> VEYA tictactoe restart <rakip_jid> VEYA tictactoe end",
+      "desc": "Bir rakiple XOX oyunu oyna. Bir kullanıcıyı bahsederek, mesajına cevap vererek veya JID'yi belirterek meydan okuyun. 'tictactoe end' oyunu bitirir ve 'tictactoe restart <rakip_jid>' yeni bir rakiple oyunu yeniden başlatır. Varsayılan mod sonsuzdur, normal mod için 'tictactoe normal' kullanın.",
       "choose_opponent": "Lütfen bir rakip seçin, bir mesaja cevap vererek veya bir kullanıcıyı bahsederek. Kendinizle oynayamazsınız.",
       "game_ended": "Oyun bitti.",
       "game_restarted": "Yeni bir rakiple oyun yeniden başlatıldı.",
@@ -781,7 +781,7 @@
       "warn_default": "⚠️ Uyarı {0}! {1}/{2} uyarı hakkı kaldı."
     },
     "wcg": {
-      "usage": "Örnekler:\n- wcg start (kelime zinciri oyununu zorla başlat)\n- wcg end (mevcut oyunu bitir)\n- wcg <kelime> (kelime zincirini devam ettirerek oyna)",
+      "usage": "Örnekler:\n- wcg start (kelime zinciri oyununu zorla başlat)\n- wcg end (mevcut oyunu bitir)",
       "desc": "Kelime Zinciri Oyunu: Zinciri devam ettirerek oyuna katılın. 'wcg start' yeni bir oyun başlatır veya 'wcg end' mevcut oyunu bitirir.",
       "game_ends": "Oyun Bitti",
       "already_used": "_Bu Kelime Zaten Kullanıldı!_",
@@ -795,11 +795,12 @@
       "starting": "🎮 Oyun başlıyor...\n👥 2 veya daha fazla oyuncu gerekiyor 🙋‍♂️🙋‍♀️\n⏳ Katılmak için 60 saniye kaldı ⏳\n🧩 Mod {0}",
       "starts_in": "🎮 Oyun {0} saniye içinde başlayacak ⏳\nOynamak için *join* yazın 🙋‍♂️🙋‍♀️\n🧩 Mod {1}{2}",
       "players_count": "\n\n👥 {0} oyuncu katıldı.",
-      "terminated": "_Yeterli oyuncu yok. Oyun sonlandırıldı._"
+      "terminated": "_Başlamak için yeterli oyuncu yok. Oyun sonlandırıldı._",
+      "mode_update": "_WCG modu {0} olarak güncellendi_"
     },
     "wrg": {
-      "usage": "Örnekler:\n- wrg start (rastgele kelime oyununu zorla başlat)\n- wrg end (mevcut oyunu bitir)\n- wrg <kelime> (rastgele bir kelime göndererek oyna)",
-      "desc": "Rastgele Kelime Oyunu: Rastgele bir kelimeye cevap vererek oyuna katılın. 'wrg start' yeni bir oyun başlatır ve 'wrg end' mevcut oyunu bitirir."
+      "usage": "Örnekler:\n- wrg start (rastgele kelime oyununu zorla başlat)\n- wrg hard (zor modda başlat)\n- wrg easy (kolay modda başlat)\n- wrg end (mevcut oyunu bitir)",
+      "desc": "Rastgele Kelime Oyunu: Rastgele bir isteme yanıt olarak kelimeler gönderdiğiniz bir oyuna katılın. Yeni bir oyun başlatmak için 'wrg start', bitirmek için 'wrg end' kullanın."
     },
     "yts": {
       "usage": "Örnek: yts baymax",

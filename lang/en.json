@@ -695,8 +695,8 @@
       "desc": "Tag members in the group based on your choice. Use 'all' to mention every member, 'admin' to mention only group admins, 'notadmin' to mention non-admin members, or provide a custom message to be sent along with the mentions."
     },
     "tictactoe": {
-      "usage": "Example: tictactoe <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end",
-      "desc": "Play a TicTacToe game against an opponent. Challenge a user by mentioning them, replying to their message, or specifying their JID. Use 'tictactoe end' to finish the game and 'tictactoe restart <opponent_jid>' to restart with a new opponent.",
+      "usage": "Example: tictactoe <opponent_jid> OR tictactoe normal <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end",
+      "desc": "Play a TicTacToe game against an opponent. Challenge a user by mentioning them, replying to their message, or specifying their JID. Use 'tictactoe end' to finish the game and 'tictactoe restart <opponent_jid>' to restart with a new opponent. Default mode is infinite, use 'tictactoe normal' for normal mode.",
       "choose_opponent": "Please choose an opponent by replying to a message or mentioning a user. You cannot play against yourself.",
       "game_ended": "Game ended.",
       "game_restarted": "Game restarted with the new opponent.",
@@ -781,24 +781,25 @@
       "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
-      "usage": "Examples:\n- wcg start (force start the word chain game)\n- wcg end (end the current game)\n- wcg <word> (play by continuing the word chain)",
-      "desc": "Word Chain Game: Participate by providing a word that continues the chain. Use 'wcg start' to force start a new game or 'wcg end' to stop the current game.",
+      "usage": "Examples:\n- wcg start (force start the word chain game)\n- wcg end (end the current game)",
+      "desc": "Word Chain Game: continue the word chain by submitting a word. use 'wcg start' to force start and 'wcg end' to stop.",
       "game_ends": "Game Ends",
-      "already_used": "_Already Used this Word!_",
-      "not_starting_with": "_Not Starting with {0}_",
-      "length_limit": "_This word length is less than {0}_",
-      "not_in_list": "_This word is not in my words list_",
-      "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Your word must start with *{2}* and include at least *{3}* letters\n🏆Players remaining : {4}/{5}\n⏳You have *{6}s* to answer\n📝Total words : {7}",
-      "timeout": "@{0} ran out of time! They're out! 🚫",
-      "winner": "@{0} Won 🏆\nWords : *{1}*\nLongest word : *{2} ({3})* by @{4} 📚\nTime : *{5}* ⏱️",
-      "joined": "@{0} Joined 👏",
-      "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
+      "already_used": "_This word is already used!_",
+      "not_starting_with": "_{0} is not starting with_ {1}",
+      "length_limit": "_This word is below {0} length_",
+      "not_in_list": "_This word is not in my list_",
+      "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Starts with {2} (at least {3} letters)\n🏆Players left : {4}/{5}\n⏳ You have *{6}* seconds to reply\n📝Total words : {7}",
+      "timeout": "Time out @{0}! You are out! 🚫",
+      "winner": "@{0} won the game 🏆\nWords : *{1}*\nLongest word : *{2} ({3})* by @{4} 📚\nTime : *{5}* ⏱️",
+      "joined": "@{0} joined 👏",
+      "starting": "🎮 Game starting...\n👥 Need 2 or more players\n⏳ You have 60 seconds to join ⏳\n🧩 Mode {0}",
       "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
       "players_count": "\n\n👥 {0} players joined.",
-      "terminated": "_Not enough players. Game terminated._"
+      "terminated": "_Not enough players to start. Game terminated._",
+      "mode_update": "_WCG mode updated to {0}_"
     },
     "wrg": {
-      "usage": "Examples:\n- wrg start (force start the random word game)\n- wrg end (end the current game)\n- wrg <word> (play by submitting a word)",
+      "usage": "Examples:\n- wrg start (force start the random word game)\n- wrg hard (start in hard mode)\n- wrg easy (start in easy mode)\n- wrg end (end the current game)",
       "desc": "Random Word Game: Engage in a game where you submit words in response to a random prompt. Use 'wrg start' to begin a new game or 'wrg end' to finish the game."
     },
     "yts": {

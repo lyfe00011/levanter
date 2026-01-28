@@ -17,14 +17,19 @@ bot(
     let opponent = message.mention?.[0] || message.reply_message?.jid
     let me = message.participant
 
-    const [_me, _opponent] = parsedJid(match)
-    if (isUser(_me) && isUser(_opponent)) {
-      me = _me
-      opponent = _opponent
+    const jids = parsedJid(match)
+    if (jids.length >= 2) {
+      me = jids[0]
+      opponent = jids[1]
+    } else if (jids.length === 1 && !opponent) {
+      opponent = jids[0]
     }
 
-    if (action === 'restart' && isUser(id)) {
+    if ((action === 'restart' || action === 'normal') && isUser(id)) {
       opponent = id
+    }
+
+    if (action === 'restart') {
       await delTicTacToe(message.id)
     }
 
@@ -32,7 +37,7 @@ bot(
       return await message.send(lang.plugins.tictactoe.choose_opponent)
     }
 
-    const { text } = await ticTacToe(message.jid, me, opponent, message.id)
+    const { text } = await ticTacToe(message.jid, me, opponent, message.id, action === 'normal' ? 'normal' : 'infinite')
     return await message.send(text, {
       contextInfo: { mentionedJid: [me, opponent] },
     })

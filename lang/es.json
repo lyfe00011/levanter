@@ -695,8 +695,8 @@
       "desc": "Menciona a miembros del grupo. Utiliza `tag all` para mencionar a todos los miembros, `tag admin` para mencionar solo a los administradores del grupo, `tag notadmin` para mencionar a los miembros que no sean administradores o proporciona un mensaje personalizado para enviar como mencion"
     },
     "tictactoe": {
-      "usage": "Ejemplo: `tictactoe` <jid_DeOponente> O `tictactoe` restart <jid_DeOponente> O `tictactoe` end",
-      "desc": "Juega «3 en Raya» contra Alguien. Desafía a alguien mencionándolo, respondiendo a su mensaje o especificando su JID. Usa `tictactoe end` para terminar el juego y `tictactoe restart` <jid_DeOponente> para reiniciar con un nuevo oponente.",
+      "usage": "Ejemplo: `tictactoe` <jid_DeOponente> O `tictactoe` normal <jid_DeOponente> O `tictactoe` restart <jid_DeOponente> O `tictactoe` end",
+      "desc": "Juega «3 en Raya» contra Alguien. Desafía a alguien mencionándolo, respondiendo a su mensaje o especificando su JID. Usa `tictactoe end` para terminar el juego y `tictactoe restart` <jid_DeOponente> para reiniciar con un nuevo oponente. El modo predeterminado es infinito, use `tictactoe normal` para el modo normal.",
       "choose_opponent": "Elige con quien jugar citando su mensaje o mencionandolo. No puedes jugar contra ti mismo.",
       "game_ended": "Juego Terminado.",
       "game_restarted": "El juego se reinició con nuevo Jugador..",
@@ -781,7 +781,7 @@
       "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
-      "usage": "Ejemplo:\n- `wcg start` (Forzar el inicio del juego)\n- `wcg end` (termina el juego actual)\n- `wcg` <palabra> (Juega continuando la cadena de palabras)",
+      "usage": "Ejemplo:\n- `wcg start` (Forzar el inicio del juego)\n- `wcg end` (termina el juego actual)",
       "desc": "Juego cadenas de palabras (cadáver exquisito texto): participa agregando una palabra que continúe la cadena. Utiliza `wcg start` para forzar el inicio de un nuevo juego o `wcg end` para detener el juego actual.",
       "game_ends": "Game Ends",
       "already_used": "_Already Used this Word!_",
@@ -795,10 +795,11 @@
       "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
       "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
       "players_count": "\n\n👥 {0} players joined.",
-      "terminated": "_Not enough players. Game terminated._"
+      "terminated": "_Not enough players. Game terminated._",
+      "mode_update": "_Modo WCG actualizado a {0}_"
     },
     "wrg": {
-      "usage": "Ejemplo:\n- `wrg start` (Forzar el inicio del juego)\n- `wrg end` (termina el juego actual)\n- `wrg` <palabra> (Juega enviando palabra)",
+      "usage": "Ejemplos:\n- wrg start (forzar el inicio del juego de palabras aleatorias)\n- wrg hard (iniciar en modo difícil)\n- wrg easy (iniciar en modo fácil)\n- wrg end (terminar el juego actual)",
       "desc": "Juego de palabras al azar: participa en un juego en el que debes enviar palabras en respuesta a una pregunta aleatoria. Usa `wrg start` para comenzar un nuevo juego o `wrg end` para terminar."
     },
     "yts": {
