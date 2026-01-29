@@ -695,7 +695,7 @@
       "desc": "Tag members in the group based on your choice. Use 'all' to mention every member, 'admin' to mention only group admins, 'notadmin' to mention non-admin members, or provide a custom message to be sent along with the mentions."
     },
     "tictactoe": {
-      "usage": "Example: tictactoe <opponent_jid> OR tictactoe normal <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end",
+      "usage": "Example: tictactoe <opponent_jid> OR tictactoe normal <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end\nDefault mode is infinite, use 'tictactoe normal' for normal mode.",
       "desc": "Play a TicTacToe game against an opponent. Challenge a user by mentioning them, replying to their message, or specifying their JID. Use 'tictactoe end' to finish the game and 'tictactoe restart <opponent_jid>' to restart with a new opponent. Default mode is infinite, use 'tictactoe normal' for normal mode.",
       "choose_opponent": "Please choose an opponent by replying to a message or mentioning a user. You cannot play against yourself.",
       "game_ended": "Game ended.",
@@ -781,7 +781,7 @@
       "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
-      "usage": "Examples:\n- wcg start (force start the word chain game)\n- wcg end (end the current game)",
+      "usage": "Examples:\n- wcg start (force start the word chain game)\n- wcg end (end the current game)\nDefault mode is easy.",
       "desc": "Word Chain Game: continue the word chain by submitting a word. use 'wcg start' to force start and 'wcg end' to stop.",
       "game_ends": "Game Ends",
       "already_used": "_This word is already used!_",

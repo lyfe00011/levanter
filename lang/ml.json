@@ -695,7 +695,7 @@
             "desc": "Group members-e mention cheyyaan. 'all' ellaavarkkum, 'admin' admins-inu, 'notadmin' baakki ullavarkkum."
         },
         "tictactoe": {
-            "usage": "Example: tictactoe <opponent_jid> ATHALLENGIL tictactoe normal <opponent_jid> ATHALLENGIL tictactoe restart <opponent_jid> ATHALLENGIL tictactoe end",
+            "usage": "Example: tictactoe <opponent_jid> ATHALLENGIL tictactoe normal <opponent_jid> ATHALLENGIL tictactoe restart <opponent_jid> ATHALLENGIL tictactoe end\nDefault infinite mode aanu, normal mode venel 'tictactoe normal' use cheyyu.",
             "desc": "TicTacToe game-inu. Challenge cheyyaan mention cheyyukka, reply kodukkuka athallengil JID para. End cheyyaan 'tictactoe end' restart cheyyaan 'tictactoe restart <opponent_jid>' use cheyyu. Default infinite mode aayirikkum, normal mode venel 'tictactoe normal' use cheyyu.",
             "choose_opponent": "Reply cheythittulla aale thiranjedukko mention cheyyu. Nee swanthamaayi game kalikkaan pattiilla.",
             "game_ended": "Game Over.",
@@ -781,7 +781,7 @@
             "warn_default": "⚠️ Warning {0}! {1}/{2} warnings baakkiyund."
         },
         "wcg": {
-            "usage": "Examples:\n- wcg start (game start cheyyaan)\n- wcg hard (hard mode-il start cheyyaan)\n- wcg easy (easy mode-il start cheyyaan)\n- wcg end (game stop cheyyaan)",
+            "usage": "Examples:\n- wcg start (game start cheyyaan)\n- wcg hard (hard mode-il start cheyyaan)\n- wcg easy (easy mode-il start cheyyaan)\n- wcg end (game stop cheyyaan)\nDefault easy mode aanu.",
             "desc": "Word Chain Game: Oru word paranju game continue cheyyaan. 'wcg start' upayogichu game start cheyyaam, 'wcg end' upayogichu stop cheyyaam.",
             "game_ends": "Game Over",
             "already_used": "_Ee word munbe use cheythittund!_",

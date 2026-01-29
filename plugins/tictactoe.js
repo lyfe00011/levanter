@@ -34,7 +34,7 @@ bot(
     }
 
     if (!opponent || opponent === me) {
-      return await message.send(lang.plugins.tictactoe.choose_opponent)
+      return await message.send(lang.plugins.tictactoe.usage)
     }
 
     const { text } = await ticTacToe(message.jid, me, opponent, message.id, action === 'normal' ? 'normal' : 'infinite')

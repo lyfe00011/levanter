@@ -695,7 +695,7 @@
       "desc": "Mentionner les membres du groupe selon votre choix. Utilisez 'all' pour mentionner tous les membres, 'admin' pour mentionner uniquement les administrateurs du groupe, 'notadmin' pour mentionner les membres non-administrateurs, ou fournissez un message personnalisé à envoyer avec les mentions."
     },
     "tictactoe": {
-      "usage": "Exemple : tictactoe <jid_opposant> OU tictactoe normal <jid_opposant> OU tictactoe restart <jid_opposant> OU tictactoe end",
+      "usage": "Exemple : tictactoe <jid_adversaire> OU tictactoe normal <jid_adversaire> OU tictactoe restart <jid_adversaire> OU tictactoe end\nLe mode par défaut est infini, utilisez 'tictactoe normal' pour le mode normal.",
       "desc": "Jouer à un jeu de morpion contre un adversaire. Défiez un utilisateur en le mentionnant, en répondant à son message ou en spécifiant son JID. Utilisez 'tictactoe end' pour terminer le jeu et 'tictactoe restart <jid_opposant>' pour recommencer avec un nouvel adversaire. Le mode par défaut est infini, utilisez 'tictactoe normal' pour le mode normal.",
       "choose_opponent": "Veuillez choisir un adversaire en répondant à un message ou en mentionnant un utilisateur. Vous ne pouvez pas jouer contre vous-même.",
       "game_ended": "Jeu terminé.",
@@ -781,7 +781,7 @@
       "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
-      "usage": "Exemples :\n- wcg start (forcer le démarrage du jeu de chaîne de mots)\n- wcg end (terminer le jeu actuel)",
+      "usage": "Exemples :\n- wcg start (forcer le démarrage du jeu de chaîne de mots)\n- wcg end (terminer le jeu actuel)\nLe mode par défaut est facile.",
       "desc": "Jeu de chaîne de mots : Participez en fournissant un mot qui continue la chaîne. Utilisez 'wcg start' pour forcer le démarrage d'un nouveau jeu ou 'wcg end' pour arrêter le jeu actuel.",
       "game_ends": "Game Ends",
       "already_used": "_Already Used this Word!_",

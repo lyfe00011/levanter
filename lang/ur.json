@@ -695,7 +695,7 @@
       "desc": "_Group members ko tag karein apni pasand ke mutabiq. 'all' ka use sabhi members ko mention karne ke liye karein, 'admin' sirf group admins ko mention karega, 'notadmin' non-admin members ko mention karega, ya phir ek custom message bhejne ke liye apni message likhein_"
     },
     "tictactoe": {
-      "usage": "*Misaal:* _tictactoe <opponent_jid> YA tictactoe normal <opponent_jid> YA tictactoe restart <opponent_jid> YA tictactoe end_",
+      "usage": "*Misaal:* _tictactoe <opponent_jid> YA tictactoe normal <opponent_jid> YA tictactoe restart <opponent_jid> YA tictactoe end_\nDefault mode infinite hai, normal mode ke liye 'tictactoe normal' use karein.",
       "desc": "> TicTacToe game khelein kisi opponent ke against. Kisi user ko challenge karne ke liye unka mention karein, unke message par reply karein, ya unka JID specify karein. 'tictactoe end' game khatam karne ke liye use karein aur 'tictactoe restart <opponent_jid>' naye opponent ke sath game restart karne ke liye. Default mode infinite hai, normal mode ke liye 'tictactoe normal' use karein.",
       "choose_opponent": "_Kisi opponent ko choose karein message par reply karke ya user ko mention karke. Aap khud se nahi khel sakte._",
       "game_ended": "_Game khatam._",
@@ -781,7 +781,7 @@
       "warn_default": "⚠️ Warning {0}! {1}/{2} warnings baqi hain."
     },
     "wcg": {
-      "usage": "*Misaal:* \n- wcg start (force start the word chain game)\n- wcg end (end the current game)",
+      "usage": "*Misaal:* \n- wcg start (force start the word chain game)\n- wcg end (end the current game)\nDefault mode easy hai.",
       "desc": "Word Chain Game: continue the word chain by submitting a word. use 'wcg start' to force start and 'wcg end' to stop.",
       "game_ends": "Game Khatm!",
       "already_used": "_Ye word pehle use ho gaya hai!_",

@@ -695,7 +695,7 @@
       "desc": "Gruptaki üyeleri seçiminize göre etiketle. 'all' tüm üyeleri, 'admin' yalnızca yöneticileri, 'notadmin' yönetici olmayan üyeleri etiketler. Özel bir mesaj ekleyerek etiketleme yapın."
     },
     "tictactoe": {
-      "usage": "Örnek: tictactoe <rakip_jid> VEYA tictactoe normal <rakip_jid> VEYA tictactoe restart <rakip_jid> VEYA tictactoe end",
+      "usage": "Example: tictactoe <opponent_jid> OR tictactoe normal <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end\nVarsayılan mod sonsuzdur, normal mod için 'tictactoe normal' kullanın.",
       "desc": "Bir rakiple XOX oyunu oyna. Bir kullanıcıyı bahsederek, mesajına cevap vererek veya JID'yi belirterek meydan okuyun. 'tictactoe end' oyunu bitirir ve 'tictactoe restart <rakip_jid>' yeni bir rakiple oyunu yeniden başlatır. Varsayılan mod sonsuzdur, normal mod için 'tictactoe normal' kullanın.",
       "choose_opponent": "Lütfen bir rakip seçin, bir mesaja cevap vererek veya bir kullanıcıyı bahsederek. Kendinizle oynayamazsınız.",
       "game_ended": "Oyun bitti.",
@@ -781,7 +781,7 @@
       "warn_default": "⚠️ Uyarı {0}! {1}/{2} uyarı hakkı kaldı."
     },
     "wcg": {
-      "usage": "Örnekler:\n- wcg start (kelime zinciri oyununu zorla başlat)\n- wcg end (mevcut oyunu bitir)",
+      "usage": "Örnekler:\n- wcg start (kelime zinciri oyununu zorla başlat)\n- wcg end (mevcut oyunu bitir)\nVarsayılan mod kolaydır.",
       "desc": "Kelime Zinciri Oyunu: Zinciri devam ettirerek oyuna katılın. 'wcg start' yeni bir oyun başlatır veya 'wcg end' mevcut oyunu bitirir.",
       "game_ends": "Oyun Bitti",
       "already_used": "_Bu Kelime Zaten Kullanıldı!_",
