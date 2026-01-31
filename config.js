@@ -16,6 +16,24 @@ module.exports = {
         dialect: 'sqlite',
         storage: DATABASE_URL,
         logging: false,
+        retry: {
+          max: 10,
+        },
+        pool: {
+          max: 5,
+          min: 0,
+          acquire: 30000,
+          idle: 10000,
+        },
+        dialectOptions: {
+          busyTimeout: 10000,
+        },
+        hooks: {
+          afterConnect: (conn) => {
+            conn.run('PRAGMA synchronous = NORMAL;')
+            conn.run('PRAGMA busy_timeout = 10000;')
+          },
+        },
       })
       : new Sequelize(DATABASE_URL, {
         dialect: 'postgres',
