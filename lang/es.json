@@ -852,7 +852,7 @@
     "gauth": {
       "desc": "Administrar la autenticación de Google (Autenticar, Importar, Salir, Estado)",
       "usage": "*Comandos de Google Auth:*\n\n- `.gauth auth` — Iniciar el proceso de autenticación.\n- `.gauth code <url_o_código>` — Validar el código de autenticación.\n- `.gauth import` — Importar `credentials.json` (Responder al archivo).\n- `.gauth status` — Verificar el estado actual de autenticación.\n- `.gauth logout` — Limpiar credenciales y tokens para esta sesión.",
-      "prompt": "*Guía de configuración de la autenticación de Google:*\n\n1. *Crear proyecto:* Vaya a https://console.cloud.google.com/, haga clic en \"Select a project\" > \"New Project\", asígnele el nombre \"Levanter\" y hace clic en \"Create\".\n2. *Habilitar APIs:* Vaya a \"APIs & Services\" > \"Library\". Busque y habilite tanto \"Google Drive API\" como \"Google Calendar API\".\n3. *Pantalla de consentimiento de OAuth:* Vaya a \"APIs & Services\" > \"OAuth consent screen\". Elija \"External\", complete los campos obligatorios y, en la sección \"Audience\", agregue su correo electrónico a \"Test users\" (OBLIGATORIO).\n4. *Credenciales:* Vaya a \"APIs & Services\" > \"Credentials\". Haga clic en \"Create Credentials\" > \"OAuth client ID\". Seleccione \"Desktop app\" como tipo de aplicación, asígnele un nombre y haga clic en \"Create\".\n5. *Descargar:* Junto a su nuevo Client ID, haga clic en el icono de descarga (JSON). Guárdelo y use `.gauth import` respondiendo al archivo.\n6. *Autorizar:* Ahora haga clic en el enlace de abajo para autorizar:\n{0}\n\n7. *Completar:* Inicie sesión, acepte la advertencia de \"Unverified app\" (Haga clic en \"Advanced\" > \"Go to Levanter\"), copie la URL completa de la barra de direcciones después de la redirección y envíe:\n`.gauth code <url_copiada>`",
+      "prompt": "*Guía de configuración de la autenticación de Google:*\n\n1. *Crear proyecto:* Vaya a https://console.cloud.google.com/, haga clic en \"Select a project\" > \"New Project\", asígnele el nombre \"Levanter\" y hace clic en \"Create\".\n2. *Habilitar APIs:* Vaya a \"APIs & Services\" > \"Library\". Busque y habilite \"Google Drive API\", \"Google Calendar API\" y \"Google Tasks API\".\n3. *Pantalla de consentimiento de OAuth:* Vaya a \"APIs & Services\" > \"OAuth consent screen\". Elija \"External\", complete los campos obligatorios y, en la sección \"Audience\", agregue su correo electrónico a \"Test users\" (OBLIGATORIO).\n4. *Credenciales:* Vaya a \"APIs & Services\" > \"Credentials\". Haga clic en \"Create Credentials\" > \"OAuth client ID\". Seleccione \"Desktop app\" como tipo de aplicación, asígnele un nombre y haga clic en \"Create\".\n5. *Descargar:* Junto a su nuevo Client ID, haga clic en el icono de descarga (JSON). Guárdelo y use `.gauth import` respondiendo al archivo.\n6. *Autorizar:* Ahora haga clic en el enlace de abajo para autorizar:\n{0}\n\n7. *Completar:* Inicie sesión, acepte la advertencia de \"Unverified app\" (Haga clic en \"Advanced\" > \"Go to Levanter\"), copie la URL completa de la barra de direcciones después de la redirección y envíe:\n`.gauth code <url_copiada>`",
       "success": "¡Autenticación exitosa!",
       "import_success": "¡Archivo `credentials.json` importado con éxito! Ahora use `.gauth auth` para autorizar.",
       "import_reply": "Por favor, responda a un archivo `credentials.json`.",
@@ -873,6 +873,19 @@
       "error": "*Error:* {0}",
       "url_prompt": "Proporcione una URL válida, etiquete un mensaje multimedia o use subcomandos: list, del <id>, dl <id>.\nEjemplo: `gupload list`",
       "short_id_info": "\n\n*Nota:* Solo necesitas ingresar los primeros 2-4 caracteres del ID para los comandos de descarga o eliminación."
+    },
+    "task": {
+      "desc": "Administra tus Google Tasks",
+      "usage": "Uso: task <list | lists | switch <nombre> | add <texto> | del <id> | done <id> | update <id> <texto> | <texto>>",
+      "added": "Tarea añadida: *{0}*\nVence: {1}",
+      "deleted": "Tarea eliminada.",
+      "updated": "Tarea *{0}* marcada como *{1}*",
+      "list_empty": "No se encontraron tareas.",
+      "list_header": "📝 *Tareas ({0})*:\n",
+      "not_found": "Tarea no encontrada.",
+      "auth_required": "Por favor, autentícate usando *.gauth auth* y habilita los permisos de Google Tasks.",
+      "list_lists": "📝 *Listas de Tareas*:\n",
+      "switched": "Se cambió la lista de tareas predeterminada a *{0}*."
     }
   }
 }

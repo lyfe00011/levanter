@@ -617,8 +617,8 @@
       "error": "Missing API key or image. Please set your API key and reply to an image."
     },
     "setschedule": {
-      "usage": "> *Example :*\n- setschedule jid,min-hour-day-month (in 24 hour format, day and month optional)\n- setschedule 91987654321@s.whatsapp.net, 9-9-13-8\n- setschedule 91987654321@s.whatsapp.net, 0-10 (send message daily at 10 am)\n- setschedule 91987654321@s.whatsapp.net, 0-10, once (send message at 10 am, one time)",
-      "desc": "Schedule a message to be sent automatically at a specified time. Provide the target JID(s) and time (in minutes-hour-day-month format; day and month are optional). Reply to the message you want to schedule.",
+      "usage": "> *Example :*\n- setschedule jid,min-hour-day-month (in 24 hour format, day and month optional)\n- setschedule tomorrow at 10am (Natural Language Support)\n- setschedule every day at 10am (Repeating)\n- setschedule 0-10 (Defaults to 'once' for current chat)",
+      "desc": "Schedule a message using natural language (e.g., 'tomorrow at 10am') or cron-like format. Defaults to 'once' for the current chat.",
       "invalid": "Invalid schedule format or time. Please follow one of the examples provided.",
       "no_reply": "Please reply to the message that you want to schedule for sending.",
       "scheduled": "_Successfully scheduled to send at_ *{0}* _in_ @{1}."
@@ -852,7 +852,7 @@
     "gauth": {
       "desc": "Manage Google Authentication (Authenticate, Import, Logout, Status)",
       "usage": "*Google Auth Commands:*\n\n- `.gauth auth` — Start the authentication process.\n- `.gauth code <url_or_code>` — Validate the authentication code.\n- `.gauth import` — Import `credentials.json` (Reply to the file).\n- `.gauth status` — Check current authentication status.\n- `.gauth logout` — Clear credentials and tokens for this session.",
-      "prompt": "*Google Authentication Setup Guide:*\n\n1. *Create Project:* Go to https://console.cloud.google.com/, click \"Select a project\" > \"New Project\", name it \"Levanter\" and click \"Create\".\n2. *Enable APIs:* Go to \"APIs & Services\" > \"Library\". Search and enable both \"Google Drive API\" and \"Google Calendar API\".\n3. *OAuth Consent:* Go to \"APIs & Services\" > \"OAuth consent screen\". Choose \"External\", fill required fields, and in the \"Audience\" section, add your email to \"Test users\" (MANDATORY).\n4. *Credentials:* Go to \"APIs & Services\" > \"Credentials\". Click \"Create Credentials\" > \"OAuth client ID\". Select \"Desktop app\" as the application type, name it, and click \"Create\".\n5. *Download:* Beside your new Client ID, click the Download (JSON) icon. Save it and use `.gauth import` by replying to the file.\n6. *Authorize:* Now click the link below to authorize:\n{0}\n\n7. *Complete:* Log in, accept the \"Unverified app\" warning (Click \"Advanced\" > \"Go to Levanter\"), copy the full URL from the address bar after redirect, and send:\n`.gauth code <copied_url>`",
+      "prompt": "*Google Authentication Setup Guide:*\n\n1. *Create Project:* Go to https://console.cloud.google.com/, click \"Select a project\" > \"New Project\", name it \"Levanter\" and click \"Create\".\n2. *Enable APIs:* Go to \"APIs & Services\" > \"Library\". Search and enable \"Google Drive API\", \"Google Calendar API\" and \"Google Tasks API\".\n3. *OAuth Consent:* Go to \"APIs & Services\" > \"OAuth consent screen\". Choose \"External\", fill required fields, and in the \"Audience\" section, add your email to \"Test users\" (MANDATORY).\n4. *Credentials:* Go to \"APIs & Services\" > \"Credentials\". Click \"Create Credentials\" > \"OAuth client ID\". Select \"Desktop app\" as the application type, name it, and click \"Create\".\n5. *Download:* Beside your new Client ID, click the Download (JSON) icon. Save it and use `.gauth import` by replying to the file.\n6. *Authorize:* Now click the link below to authorize:\n{0}\n\n7. *Complete:* Log in, accept the \"Unverified app\" warning (Click \"Advanced\" > \"Go to Levanter\"), copy the full URL from the bar after redirect, and send:\n`.gauth code <copied_url>`",
       "success": "Authentication successful!",
       "import_success": "`credentials.json` imported successfully! Now use `.gauth auth` to authorize.",
       "import_reply": "Please reply to a `credentials.json` file.",
@@ -873,6 +873,19 @@
       "error": "*Error:* {0}",
       "url_prompt": "Please provide a valid URL, tag a media message, or use subcommands: list, del <id>, dl <id>.\nExample: `gupload list`",
       "short_id_info": "\n\n*Note:* You only need to enter the first 2-4 characters of the ID for download or delete commands."
+    },
+    "task": {
+      "desc": "Manage your Google Tasks",
+      "usage": "Usage: task <list | list-lists | list-switch <name> | add <text> | del <id> | done <id> | update <id> <text> | <text>>",
+      "added": "Task added: *{0}*\nDue: {1}",
+      "deleted": "Task deleted.",
+      "updated": "Task *{0}* marked as *{1}*",
+      "list_empty": "No tasks found.",
+      "list_header": "📝 *Tasks ({0})*:\n",
+      "not_found": "Task not found.",
+      "auth_required": "Please authenticate using *.gauth auth* and enable Google Tasks permissions.",
+      "list_lists": "📝 *Task Lists*:\n",
+      "switched": "Switched default task list to *{0}*."
     }
   }
 }

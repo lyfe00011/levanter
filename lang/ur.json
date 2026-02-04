@@ -852,7 +852,7 @@
     "gauth": {
       "desc": "Google Authentication (Authenticate, Import, Logout, Status) ko manage karein",
       "usage": "*Google Auth Commands:*\n\n- `.gauth auth` — Authentication shuru karein.\n- `.gauth code <url_or_code>` — Authentication code validate karein.\n- `.gauth import` — `credentials.json` import karein (file ko reply karein).\n- `.gauth status` — Current authentication status check karein.\n- `.gauth logout` — Is session ke liye credentials aur tokens clear karein.",
-      "prompt": "*Google Authentication Setup Guide:*\n\n1. *Project Banayein:* https://console.cloud.google.com/ par jayein, \"Select a project\" > \"New Project\" par click karein, naam \"Levanter\" rakhein aur \"Create\" karein.\n2. *APIs Enable Karein:* \"APIs & Services\" > \"Library\" par jayein. \"Google Drive API\" aur \"Google Calendar API\" dono search karke enable karein.\n3. *OAuth Consent:* \"APIs & Services\" > \"OAuth consent screen\" par jayein. \"External\" chunein, zaroori fields bharein, aur \"Audience\" section mein \"Test users\" mein apna email add karein (ZAROORI).\n4. *Credentials:* \"APIs & Services\" > \"Credentials\" par jayein. \"Create Credentials\" > \"OAuth client ID\" par click karein. \"Desktop app\" chunein, naam dein, aur \"Create\" karein.\n5. *Download:* Apne naye Client ID ke paas Download (JSON) icon par click karein. Isse save karein aur file ko reply karke `.gauth import` ka istemal karein.\n6. *Authorize:* Ab authorize karne ke liye neeche diye gaye link par click karein:\n{0}\n\n7. *Complete:* Login karein, \"Unverified app\" warning accept karein (\"Advanced\" > \"Go to Levanter\" par click karke), redirect ke baad address bar se pura URL copy karein, aur bhejein:\n`.gauth code <copied_url>`",
+      "prompt": "*Google Authentication Setup Guide:*\n\n1. *Project Banayein:* https://console.cloud.google.com/ par jayein, \"Select a project\" > \"New Project\" par click karein, naam \"Levanter\" rakhein aur \"Create\" karein.\n2. *APIs Enable Karein:* \"APIs & Services\" > \"Library\" par jayein. \"Google Drive API\", \"Google Calendar API\" aur \"Google Tasks API\" search karke enable karein.\n3. *OAuth Consent:* \"APIs & Services\" > \"OAuth consent screen\" par jayein. \"External\" chunein, zaroori fields bharein, aur \"Audience\" section mein \"Test users\" mein apna email add karein (ZAROORI).\n4. *Credentials:* \"APIs & Services\" > \"Credentials\" par jayein. \"Create Credentials\" > \"OAuth client ID\" par click karein. \"Desktop app\" chunein, naam dein, aur \"Create\" karein.\n5. *Download:* Apne naye Client ID ke paas Download (JSON) icon par click karein. Isse save karein aur file ko reply karke `.gauth import` ka istemal karein.\n6. *Authorize:* Ab authorize karne ke liye neeche diye gaye link par click karein:\n{0}\n\n7. *Complete:* Login karein, \"Unverified app\" warning accept karein (\"Advanced\" > \"Go to Levanter\" par click karke), redirect ke baad address bar se pura URL copy karein, aur bhejein:\n`.gauth code <copied_url>`",
       "success": "Authentication kamyab rahi!",
       "import_success": "`credentials.json` kamyabi se import ho gaya! Ab authorize karne ke liye `.gauth auth` istimal karein.",
       "import_reply": "Baraye meharbani `credentials.json` file ko reply karein.",
@@ -873,6 +873,19 @@
       "error": "*Ghalti:* {0}",
       "url_prompt": "Baraye meharbani aik valid URL fraham karein, media message tag karein, ya subcommands istemal karein: list, del <id>, dl <id>.\nMisal: `gupload list`",
       "short_id_info": "\n\n*نوٹ:* ڈاؤن لوڈ یا ڈیلیٹ کمانڈز کے لیے آپ کو آئی ڈی کے صرف پہلے 2-4 حروف درج کرنے کی ضرورت ہے۔"
+    },
+    "task": {
+      "desc": "اپنے گوگل ٹاسکس کا انتظام کریں",
+      "usage": "استعمال: task <list | lists | switch <نام> | add <متن> | دئے گئے <آئی ڈی> | done <آئی ڈی> | update <آئی ڈی> <متن> | <متن>>",
+      "added": "ٹاسک شامل کر دیا گیا: *{0}*\nتاریخ: {1}",
+      "deleted": "ٹاسک حذف کر دیا گیا۔",
+      "updated": "ٹاسک *{0}* کو *{1}* قرار دیا گیا ہے",
+      "list_empty": "کوئی ٹاسک نہیں ملا۔",
+      "list_header": "📝 *ٹاسکس ({0})*:\n",
+      "not_found": "ٹاسک نہیں ملا۔",
+      "auth_required": "براہ کرم *.gauth auth* استعمال کر کے تصدیق کریں اور گوگل ٹاسک کی اجازتیں فعال کریں۔",
+      "list_lists": "📝 *ٹاسک لسٹس*:\n",
+      "switched": "ڈیفالٹ ٹاسک لسٹ *{0}* پر تبدیل کر دی گئی۔"
     }
   }
 }

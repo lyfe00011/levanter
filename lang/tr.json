@@ -852,7 +852,7 @@
     "gauth": {
       "desc": "Google Kimlik Doğrulamasını Yönet (Doğrula, İçe Aktar, Çıkış Yap, Durum)",
       "usage": "*Google Auth Komutları:*\n\n- `.gauth auth` — Kimlik doğrulama işlemini başlat.\n- `.gauth code <url_veya_kod>` — Kimlik doğrulama kodunu doğrula.\n- `.gauth import` — `credentials.json` dosyasını içe aktar (dosyayı yanıtlayın).\n- `.gauth status` — Mevcut kimlik doğrulama durumunu kontrol et.\n- `.gauth logout` — Bu oturum için kimlik bilgilerini ve belirteçleri temizle.",
-      "prompt": "*Google Kimlik Doğrulama Kurulum Kılavuzu:*\n\n1. *Proje Oluşturun:* https://console.cloud.google.com/ adresine gidin, \"Select a project\" > \"New Project\" seçeneğine tıklayın, adını \"Levanter\" koyun ve \"Create\" butonuna basın.\n2. *APIs Etkinleştirin:* \"APIs & Services\" > \"Library\" bölümüne gidin. Hem \"Google Drive API\" hem de \"Google Calendar API\" aratıp etkinleştirin.\n3. *OAuth İzin Ekranı:* \"APIs & Services\" > \"OAuth consent screen\" bölümüne gidin. \"External\" seçin, gerekli alanları doldurun ve \"Audience\" bölümünde e-postanızı \"Test users\" kısmına ekleyin (ZORUNLU).\n4. *Kimlik Bilgileri:* \"APIs & Services\" > \"Credentials\" bölümüne gidin. \"Create Credentials\" > \"OAuth client ID\" butonuna tıklayın. Uygulama türü olarak \"Desktop app\" seçin, bir ad verin ve \"Create\" butonuna basın.\n5. *İndir:* Yeni Client ID'nizin yanındaki İndir (JSON) simgesine tıklayın. Kaydedin ve dosyayı yanıtlayarak `.gauth import` komutunu kullanın.\n6. *Yetkilendir:* Şimdi yetkilendirmek için aşağıdaki bağlantıya tıklayın:\n{0}\n\n7. *Tamamla:* Giriş yapın, \"Unverified app\" uyarısını kabul edin (\"Advanced\" > \"Go to Levanter\" seçeneğine tıklayarak), yönlendirmeden sonra adres çubuğundaki tam URL'yi kopyalayın ve gönderin:\n`.gauth code <kopyalanan_url>`",
+      "prompt": "*Google Kimlik Doğrulama Kurulum Kılavuzu:*\n\n1. *Proje Oluşturun:* https://console.cloud.google.com/ adresine gidin, \"Select a project\" > \"New Project\" seçeneğine tıklayın, adını \"Levanter\" koyun ve \"Create\" butonuna basın.\n2. *APIs Etkinleştirin:* \"APIs & Services\" > \"Library\" bölümüne gidin. \"Google Drive API\", \"Google Calendar API\" ve \"Google Tasks API\" aratıp etkinleştirin.\n3. *OAuth İzin Ekranı:* \"APIs & Services\" > \"OAuth consent screen\" bölümüne gidin. \"External\" seçin, gerekli alanları doldurun ve \"Audience\" bölümünde e-postanızı \"Test users\" kısmına ekleyin (ZORUNLU).\n4. *Kimlik Bilgileri:* \"APIs & Services\" > \"Credentials\" bölümüne gidin. \"Create Credentials\" > \"OAuth client ID\" butonuna tıklayın. Uygulama türü olarak \"Desktop app\" seçin, bir ad verin ve \"Create\" butonuna basın.\n5. *İndir:* Yeni Client ID'nizin yanındaki İndir (JSON) simgesine tıklayın. Kaydedin ve dosyayı yanıtlayarak `.gauth import` komutunu kullanın.\n6. *Yetkilendir:* Şimdi yetkilendirmek için aşağıdaki bağlantıya tıklayın:\n{0}\n\n7. *Tamamla:* Giriş yapın, \"Unverified app\" uyarısını kabul edin (\"Advanced\" > \"Go to Levanter\" seçeneğine tıklayarak), yönlendirmeden sonra adres çubuğundaki tam URL'yi kopyalayın ve gönderin:\n`.gauth code <kopyalanan_url>`",
       "success": "Kimlik doğrulama başarılı!",
       "import_success": "`credentials.json` başarıyla içe aktarıldı! Şimdi yetkilendirmek için `.gauth auth` kullanın.",
       "import_reply": "Lütfen bir `credentials.json` dosyasını yanıtlayın.",
@@ -873,6 +873,19 @@
       "error": "*Hata:* {0}",
       "url_prompt": "Lütfen geçerli bir URL sağlayın, bir medya mesajını etiketleyin veya alt komutları kullanın: list, del <id>, dl <id>.\nÖrnek: `gupload list`",
       "short_id_info": "\n\n*Not:* İndirme veya silme komutları için ID'nin yalnızca ilk 2-4 karakterini girmeniz yeterlidir."
+    },
+    "task": {
+      "desc": "Google Görevlerinizi Yönetin",
+      "usage": "Kullanım: task <list | lists | switch <isim> | add <metin> | del <id> | done <id> | update <id> <metin> | <metin>>",
+      "added": "Görev eklendi: *{0}*\nBitiş: {1}",
+      "deleted": "Görev silindi.",
+      "updated": "Görev *{0}* şu şekilde işaretlendi: *{1}*",
+      "list_empty": "Görev bulunamadı.",
+      "list_header": "📝 *Görevler ({0})*:\n",
+      "not_found": "Görev bulunamadı.",
+      "auth_required": "Lütfen *.gauth auth* kullanarak kimlik doğrulaması yapın ve Google Görevler izinlerini etkinleştirin.",
+      "list_lists": "📝 *Görev Listeleri*:\n",
+      "switched": "Varsayılan görev listesi *{0}* olarak değiştirildi."
     }
   }
 }

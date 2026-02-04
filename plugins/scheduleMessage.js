@@ -7,6 +7,7 @@ const {
   deleteScheduleTask,
   getScheduleMessage,
   parseSchedule,
+  nlpSchedule,
   sleep,
   isGroup,
   jidToNum,
@@ -20,25 +21,44 @@ bot(
     type: 'schedule',
   },
   async (message, match) => {
-    const schedule = parseSchedule(match)
+    if (!match && !message.reply_message) {
+      return await message.send(lang.plugins.setschedule.usage)
+    }
+
+    if (!message.reply_message) {
+      return await message.send(lang.plugins.setschedule.no_reply)
+    }
+
+    let schedule = parseSchedule(match)
+
+    if (!schedule.jids.length || !validateTime(schedule.time)) {
+      const nlp = await nlpSchedule(match, message.id)
+      if (nlp && nlp.time && validateTime(nlp.time)) {
+        schedule = nlp
+      }
+    }
+
+    if (!schedule.jids.length) {
+      schedule.jids = [message.jid]
+    }
+
     const isTimeValid = validateTime(schedule.time)
     if (!schedule.jids.length || !isTimeValid) {
       return await message.send(lang.plugins.setschedule.usage)
     }
-    if (!message.reply_message) {
-      return await message.send(lang.plugins.setschedule.no_reply)
-    }
-    schedule.jids.forEach(async (jid, index) => {
+
+    for (let index = 0; index < schedule.jids.length; index++) {
+      const jid = schedule.jids[index]
       const time = validateTime(schedule.time, index + 1)
-      const at = await createSchedule(jid, time, message, message.jid, schedule.once, message.id)
+      const at = await createSchedule(jid, time, message, true, schedule.once, message.id)
       await message.send(
         lang.plugins.setschedule.scheduled.format(at, isGroup(jid) ? jid : jidToNum(jid)),
         {
           contextInfo: { mentionedJid: [jid] },
         }
       )
-      await sleep(3000)
-    })
+      if (schedule.jids.length > 1) await sleep(3000)
+    }
   }
 )
 

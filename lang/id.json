@@ -852,7 +852,7 @@
     "gauth": {
       "desc": "Kelola Autentikasi Google (Autentikasi, Impor, Logout, Status)",
       "usage": "*Perintah Google Auth:*\n\n- `.gauth auth` — Mulai proses autentikasi.\n- `.gauth code <url_atau_kode>` — Validasi kode autentikasi.\n- `.gauth import` — Impor `credentials.json` (Balas ke file).\n- `.gauth status` — Periksa status autentikasi saat ini.\n- `.gauth logout` — Hapus kredensial dan token untuk sesi ini.",
-      "prompt": "*Panduan Penyiapan Autentikasi Google:*\n\n1. *Buat Proyek:* Buka https://console.cloud.google.com/, klik \"Select a project\" > \"New Project\", beri nama \"Levanter\" dan klik \"Create\".\n2. *Aktifkan API:* Buka \"APIs & Services\" > \"Library\". Cari dan aktifkan \"Google Drive API\" dan \"Google Calendar API\".\n3. *Persetujuan OAuth:* Buka \"APIs & Services\" > \"OAuth consent screen\". Pilih \"External\", isi kolom yang diperlukan, dan di bagian \"Audience\", tambahkan email Anda ke \"Test users\" (WAJIB).\n4. *Kredensial:* Buka \"APIs & Services\" > \"Credentials\". Klik \"Create Credentials\" > \"OAuth client ID\". Pilih \"Desktop app\" sebagai jenis aplikasi, beri nama, dan klik \"Create\".\n5. *Unduh:* Di samping ID Klien baru Anda, klik ikon Unduh (JSON). Simpan dan gunakan `.gauth import` dengan membalas file tersebut.\n6. *Otorisasi:* Sekarang klik tautan di bawah ini untuk mengotorisasi:\n{0}\n\n7. *Selesai:* Login, terima peringatan \"Aplikasi tidak diverifikasi\" (Klik \"Advanced\" > \"Go to Levanter\"), salin URL lengkap dari bilah alamat setelah pengalihan, dan kirim:\n`.gauth code <url_yang_disalin>`",
+      "prompt": "*Panduan Penyiapan Autentikasi Google:*\n\n1. *Buat Proyek:* Buka https://console.cloud.google.com/, klik \"Select a project\" > \"New Project\", beri nama \"Levanter\" dan klik \"Create\".\n2. *Aktifkan API:* Buka \"APIs & Services\" > \"Library\". Cari dan aktifkan \"Google Drive API\" , \"Google Calendar API\", dan \"Google Tasks API\".\n3. *Persetujuan OAuth:* Buka \"APIs & Services\" > \"OAuth consent screen\". Pilih \"External\", isi kolom yang diperlukan, dan di bagian \"Audience\", tambahkan email Anda ke \"Test users\" (WAJIB).\n4. *Kredensial:* Buka \"APIs & Services\" > \"Credentials\". Klik \"Create Credentials\" > \"OAuth client ID\". Pilih \"Desktop app\" sebagai jenis aplikasi, beri nama, dan klik \"Create\".\n5. *Unduh:* Di samping ID Klien baru Anda, klik ikon Unduh (JSON). Simpan dan gunakan `.gauth import` dengan membalas file tersebut.\n6. *Otorisasi:* Sekarang klik tautan di bawah ini untuk mengotorisasi:\n{0}\n\n7. *Selesai:* Login, terima peringatan \"Aplikasi tidak diverifikasi\" (Klik \"Advanced\" > \"Go to Levanter\"), salin URL lengkap dari bilah alamat setelah pengalihan, dan kirim:\n`.gauth code <url_yang_disalin>`",
       "success": "Autentikasi berhasil!",
       "import_success": "`credentials.json` berhasil diimpor! Sekarang gunakan `.gauth auth` untuk mengotorisasi.",
       "import_reply": "Harap balas ke file `credentials.json`.",
@@ -873,6 +873,19 @@
       "error": "*Kesalahan:* {0}",
       "url_prompt": "Harap berikan URL yang valid, tandai pesan media, atau gunakan subperintah: list, del <id>, dl <id>.\nContoh: `gupload list`",
       "short_id_info": "\n\n*Catatan:* Anda hanya perlu memasukkan 2-4 karakter pertama dari ID untuk perintah unduh atau hapus."
+    },
+    "task": {
+      "desc": "Kelola Google Tasks Anda",
+      "usage": "Penggunaan: task <list | lists | switch <nama> | add <teks> | del <id> | done <id> | update <id> <teks> | <teks>>",
+      "added": "Tugas ditambahkan: *{0}*\nTempo: {1}",
+      "deleted": "Tugas dihapus.",
+      "updated": "Tugas *{0}* ditandai sebagai *{1}*",
+      "list_empty": "Tidak ada tugas ditemukan.",
+      "list_header": "📝 *Tugas ({0})*:\n",
+      "not_found": "Tugas tidak ditemukan.",
+      "auth_required": "Harap autentikasi menggunakan *.gauth auth* dan aktifkan izin Google Tasks.",
+      "list_lists": "📝 *Daftar Tugas*:\n",
+      "switched": "Beralih daftar tugas default ke *{0}*."
     }
   }
 }
