@@ -11,7 +11,8 @@
     "reconnect": "[{0}] reconnecting...({1})",
     "reconnect_after": "[{0}] reconnect after 1 minutes",
     "another_login": "[{0}] session logined on another device.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "yt_auth_required": "Failed to download: YouTube requires authentication.\\n\\n*Solutions:*\\n1. *Google Auth (Recommended):* Use `.gauth auth` to link your Google account.\\n2. *YT_COOKIE:* Set the `YT_COOKIE` environment variable.\\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}",
     "deleted_message": "           deletedMessage",
     "install_external_plugin": "[{0}] Installing External plugins...",
     "installed_external_plugin": "[{0}] External Plugins Installed",
@@ -599,7 +600,8 @@
       "desc": "Displays the profile picture and additional information (e.g., about, status) of a user or group."
     },
     "gjid": {
-      "desc": "Lists all group JIDs along with their group names."
+      "desc": "Lists all group JIDs along with their group names.",
+      "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
       "usage": "Example: qr test  OR  reply to a QR image with qr",
@@ -850,8 +852,8 @@
       "short_id_info": "\n\n*Note:* You only need to enter the first 2-4 characters of the ID for the delete command."
     },
     "gauth": {
-      "desc": "Manage Google Authentication (Authenticate, Import, Logout, Status)",
-      "usage": "*Google Auth Commands:*\n\n- `.gauth auth` — Start the authentication process.\n- `.gauth code <url_or_code>` — Validate the authentication code.\n- `.gauth import` — Import `credentials.json` (Reply to the file).\n- `.gauth status` — Check current authentication status.\n- `.gauth logout` — Clear credentials and tokens for this session.",
+      "desc": "Manage Google Authentication (Authenticate, Import, Logout, Status). Optional for YouTube but required for premium features.",
+      "usage": "*Google Auth Commands:*\n\n- `.gauth auth` — Start the authentication process.\n- `.gauth code <url_or_code>` — Validate the authentication code.\n- `.gauth import` — Import `credentials.json` (Reply to the file).\n- `.gauth status` — Check current authentication status.\n- `.gauth logout` — Clear credentials and tokens for this session.\n\n*Note:* Google Auth is optional for general YouTube features but required for age-restricted videos and Google Drive/Calendar/Tasks integrations.",
       "prompt": "*Google Authentication Setup Guide:*\n\n1. *Create Project:* Go to https://console.cloud.google.com/, click \"Select a project\" > \"New Project\", name it \"Levanter\" and click \"Create\".\n2. *Enable APIs:* Go to \"APIs & Services\" > \"Library\". Search and enable \"Google Drive API\", \"Google Calendar API\" and \"Google Tasks API\".\n3. *OAuth Consent:* Go to \"APIs & Services\" > \"OAuth consent screen\". Choose \"External\", fill required fields, and in the \"Audience\" section, add your email to \"Test users\" (MANDATORY).\n4. *Credentials:* Go to \"APIs & Services\" > \"Credentials\". Click \"Create Credentials\" > \"OAuth client ID\". Select \"Desktop app\" as the application type, name it, and click \"Create\".\n5. *Download:* Beside your new Client ID, click the Download (JSON) icon. Save it and use `.gauth import` by replying to the file.\n6. *Authorize:* Now click the link below to authorize:\n{0}\n\n7. *Complete:* Log in, accept the \"Unverified app\" warning (Click \"Advanced\" > \"Go to Levanter\"), copy the full URL from the bar after redirect, and send:\n`.gauth code <copied_url>`",
       "success": "Authentication successful!",
       "import_success": "`credentials.json` imported successfully! Now use `.gauth auth` to authorize.",

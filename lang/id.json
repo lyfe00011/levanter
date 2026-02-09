@@ -11,7 +11,7 @@
     "reconnect": "[{0}] Menghubungkan ulang...({1})",
     "reconnect_after": "[{0}] Menghubungkan ulang setelah 1 menit",
     "another_login": "[{0}] Sesi login di perangkat lain.",
-    "error_message": "```---LAPORAN ERROR---\n\nVersi : {0}\nPesan : {1}\nError   : {2}\nJid     : {3}\nPerintah : {4}\nPlatform : {5}```\n\n```-----``` *Dibuat oleh LyFE dengan ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           Pesan dihapus",
     "install_external_plugin": "[{0}] Menginstal plugin eksternal...",
     "installed_external_plugin": "[{0}] Plugin Eksternal Terinstal",
@@ -41,7 +41,8 @@
     "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
     "screenshot_error": "an error occured",
     "id_missing": "id missing",
-    "not_on_whatsapp": "{0} is not on whatsapp."
+    "not_on_whatsapp": "{0} is not on whatsapp.",
+    "yt_auth_required": "Gagal mengunduh: YouTube memerlukan autentikasi.\\n\\n*Solusi:*\\n1. *Google Auth (Direkomendasikan):* Gunakan `.gauth auth` untuk menautkan akun Google Anda.\\n2. *YT_COOKIE:* Atur variabel lingkungan `YT_COOKIE`.\\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -599,7 +600,8 @@
       "desc": "Tampilkan foto profil dan informasi tambahan (misalnya, tentang, status) dari pengguna atau grup."
     },
     "gjid": {
-      "desc": "Daftar semua JID grup beserta nama grupnya."
+      "desc": "Daftar semua JID grup beserta nama grupnya.",
+      "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
       "usage": "Contoh: qr test  ATAU  balas ke gambar QR dengan qr",
@@ -850,8 +852,8 @@
       "short_id_info": "\n\n*Catatan:* Anda hanya perlu memasukkan 2-4 karakter pertama dari ID untuk perintah penghapusan."
     },
     "gauth": {
-      "desc": "Kelola Autentikasi Google (Autentikasi, Impor, Logout, Status)",
-      "usage": "*Perintah Google Auth:*\n\n- `.gauth auth` — Mulai proses autentikasi.\n- `.gauth code <url_atau_kode>` — Validasi kode autentikasi.\n- `.gauth import` — Impor `credentials.json` (Balas ke file).\n- `.gauth status` — Periksa status autentikasi saat ini.\n- `.gauth logout` — Hapus kredensial dan token untuk sesi ini.",
+      "desc": "Kelola autentikasi Google API untuk fitur-fitur seperti Pembatasan Usia YouTube, Google Drive, Kalender, dan Tugas.",
+      "usage": "*Perintah Google Auth:*\\n\\n- `.gauth auth` — Mulai proses autentikasi.\\n- `.gauth code <url_or_code>` — Validasi kode autentikasi.\\n- `.gauth import` — Impor `credentials.json` (Balas file tersebut).\\n- `.gauth status` — Periksa status autentikasi saat ini.\\n- `.gauth logout` — Hapus kredensial dan token untuk sesi ini.\\n\\n*Catatan:* Google Auth bersifat opsional untuk fitur YouTube umum tetapi diperlukan untuk video yang dibatasi usia dan integrasi Google Drive/Kalender/Tugas.",
       "prompt": "*Panduan Penyiapan Autentikasi Google:*\n\n1. *Buat Proyek:* Buka https://console.cloud.google.com/, klik \"Select a project\" > \"New Project\", beri nama \"Levanter\" dan klik \"Create\".\n2. *Aktifkan API:* Buka \"APIs & Services\" > \"Library\". Cari dan aktifkan \"Google Drive API\" , \"Google Calendar API\", dan \"Google Tasks API\".\n3. *Persetujuan OAuth:* Buka \"APIs & Services\" > \"OAuth consent screen\". Pilih \"External\", isi kolom yang diperlukan, dan di bagian \"Audience\", tambahkan email Anda ke \"Test users\" (WAJIB).\n4. *Kredensial:* Buka \"APIs & Services\" > \"Credentials\". Klik \"Create Credentials\" > \"OAuth client ID\". Pilih \"Desktop app\" sebagai jenis aplikasi, beri nama, dan klik \"Create\".\n5. *Unduh:* Di samping ID Klien baru Anda, klik ikon Unduh (JSON). Simpan dan gunakan `.gauth import` dengan membalas file tersebut.\n6. *Otorisasi:* Sekarang klik tautan di bawah ini untuk mengotorisasi:\n{0}\n\n7. *Selesai:* Login, terima peringatan \"Aplikasi tidak diverifikasi\" (Klik \"Advanced\" > \"Go to Levanter\"), salin URL lengkap dari bilah alamat setelah pengalihan, dan kirim:\n`.gauth code <url_yang_disalin>`",
       "success": "Autentikasi berhasil!",
       "import_success": "`credentials.json` berhasil diimpor! Sekarang gunakan `.gauth auth` untuk mengotorisasi.",

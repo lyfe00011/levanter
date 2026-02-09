@@ -11,7 +11,7 @@
     "reconnect": "[{0}] Reconnexion...({1})",
     "reconnect_after": "[{0}] Reconnexion après 1 minute",
     "another_login": "[{0}] Session connectée sur un autre appareil.",
-    "error_message": "```---RAPPORT D'ERREUR---\n\nVersion : {0}\nMessage : {1}\nErreur   : {2}\nJid     : {3}\nCommande : {4}\nPlateforme : {5}```\n\n```-----``` *Créé par LyFE avec ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           messageSupprimé",
     "install_external_plugin": "[{0}] Installation des plugins externes...",
     "installed_external_plugin": "[{0}] Plugins externes installés",
@@ -41,7 +41,8 @@
     "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
     "screenshot_error": "an error occured",
     "id_missing": "id missing",
-    "not_on_whatsapp": "{0} is not on whatsapp."
+    "not_on_whatsapp": "{0} is not on whatsapp.",
+    "yt_auth_required": "Échec du téléchargement : YouTube nécessite une authentification.\\n\\n*Solutions :*\\n1. *Google Auth (Recommandé) :* Utilisez `.gauth auth` pour lier votre compte Google.\\n2. *YT_COOKIE :* Définissez la variable d'environnement `YT_COOKIE`.\\nGuide : https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Erreur :* {0}"
   },
   "plugins": {
     "common": {
@@ -599,7 +600,8 @@
       "desc": "Affiche la photo de profil et des informations supplémentaires (par ex., à propos, statut) d'un utilisateur ou d'un groupe."
     },
     "gjid": {
-      "desc": "Liste tous les JIDs des groupes avec leurs noms de groupe."
+      "desc": "Liste tous les JIDs des groupes avec leurs noms de groupe.",
+      "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
       "usage": "Exemple : qr test OU répondre à une image QR avec qr",
@@ -846,8 +848,8 @@
       "short_id_info": "\n\n*Note :* Vous n'avez qu'à saisir les 2-4 premiers caractères de l'ID pour le commande de suppression."
     },
     "gauth": {
-      "desc": "Gérer l'authentification Google (Authentifier, Importer, Déconnexion, Statut)",
-      "usage": "*Commandes Google Auth :*\n\n- `.gauth auth` — Lancer le processus d'authentification.\n- `.gauth code <url_ou_code>` — Valider le code d'authentification.\n- `.gauth import` — Importer `credentials.json` (Répondre au fichier).\n- `.gauth status` — Vérifier le statut d'authentification actuel.\n- `.gauth logout` — Effacer les identifiants et les jetons pour cette session.",
+      "desc": "Gérez l'authentification de l'API Google pour des fonctionnalités telles que la restriction d'âge YouTube, Google Drive, Calendar et Tasks.",
+      "usage": "*Commandes Google Auth :*\\n\\n- `.gauth auth` — Démarre le processus d'authentification.\\n- `.gauth code <url_or_code>` — Valide le code d'authentification.\\n- `.gauth import` — Importe `credentials.json` (répondez au fichier).\\n- `.gauth status` — Vérifie le statut d'authentification actuel.\\n- `.gauth logout` — Efface les informations d'identification et les jetons pour cette session.\\n\\n*Note :* Google Auth est facultatif pour les fonctionnalités YouTube générales mais requis pour les vidéos soumises à une limite d'âge et les intégrations Google Drive/Calendar/Tasks.",
       "prompt": "*Google Authentication Setup Guide:*\n\n1. *Créer un projet :* Allez sur https://console.cloud.google.com/, cliquez sur \"Select a project\" > \"New Project\", nommez-le \"Levanter\" et cliquez sur \"Create\".\n2. *Activer les API :* Allez dans \"APIs & Services\" > \"Library\". Recherchez et activez \"Google Drive API\" , \"Google Calendar API\" et \"Google Tasks API\".\n3. *Consentement OAuth :* Allez dans \"APIs & Services\" > \"OAuth consent screen\". Choisissez \"External\", remplissez les champs obligatoires, et dans la section \"Audience\", ajoutez votre e-mail aux \"Test users\" (OBLIGATOIRE).\n4. *Identifiants :* Allez dans \"APIs & Services\" > \"Credentials\". Cliquez sur \"Create Credentials\" > \"OAuth client ID\". Sélectionnez \"Desktop app\" comme type d'application, nommez-la et cliquez sur \"Create\".\n5. *Télécharger :* À côté de votre nouvel identifiant client, cliquez sur l'icône de téléchargement (JSON). Enregistrez-le et utilisez `.gauth import` en répondant au fichier.\n6. *Autoriser :* Maintenant, cliquez sur le lien ci-dessous pour autoriser :\n{0}\n\n7. *Terminer :* Connectez-vous, acceptez l'avertissement \"Unverified app\" (Cliquez sur \"Advanced\" > \"Go to Levanter\"), copiez l'URL complète de la barre d'adresse après la redirection, et envoyez :\n`.gauth code <url_copiée>`",
       "success": "Authentification réussie !",
       "import_success": "`credentials.json` importé avec succès ! Utilisez maintenant `.gauth auth` pour autoriser.",
@@ -882,6 +884,10 @@
       "auth_required": "Veuillez vous authentifier avec *.gauth auth* et activer les autorisations Google Tasks.",
       "list_lists": "📝 *Listes de tâches* :\n",
       "switched": "Liste de tâches par défaut changée en *{0}*."
+    },
+    "yts": {
+      "usage": "Example: yts baymax",
+      "desc": "Search for YouTube videos by query or URL. If a valid YouTube URL is provided, detailed information for the first video is returned."
     }
   }
 }

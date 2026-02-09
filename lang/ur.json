@@ -11,7 +11,7 @@
     "reconnect": "[{0}] Dobara connect horha...({1})",
     "reconnect_after": "[{0}] Ik mint ky baad dobara start hoga",
     "another_login": "[{0}] Ye session kisi doosray device par login hai.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           deletedMessage",
     "install_external_plugin": "[{0}] Installing External plugins...",
     "installed_external_plugin": "[{0}] External Plugins Install ho rhe",
@@ -41,7 +41,8 @@
     "lang_not_supported": "' {0} ' zuban abhi supported nahi hai, default zuban par switch kar rahay hain.",
     "screenshot_error": "aik error aya",
     "id_missing": "ID missing hai",
-    "not_on_whatsapp": "{0} WhatsApp par nahi hai."
+    "not_on_whatsapp": "{0} WhatsApp par nahi hai.",
+    "yt_auth_required": "ڈاؤن لوڈ ناکام رہا: YouTube کو تصدیق (Authentication) کی ضرورت ہے۔\\n\\n*حل:*\\n1. *Google Auth (تجویز کردہ):* اپنا Google اکاؤنٹ منسلک کرنے کے لیے `.gauth auth` استعمال کریں۔\\n2. *YT_COOKIE:* `YT_COOKIE` انوائرمنٹ ویری ایبل سیٹ کریں۔\\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -599,7 +600,8 @@
       "desc": "*_User ya group ka profile picture aur additional maloomat (e.g., about, status) dikhata hai._*"
     },
     "gjid": {
-      "desc": "*Sabhi groups ke JIDs aur unke names ki list dikhata hai.*"
+      "desc": "*Sabhi groups ke JIDs aur unke names ki list dikhata hai.*",
+      "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
       "usage": "*Misaal:* *_qr test YA reply karein kisi QR image par qr likh kar_*",
@@ -850,8 +852,8 @@
       "short_id_info": "\n\n*نوٹ:* ڈیلیٹ کمانڈ کے لیے آپ کو آئی ڈی کے صرف پہلے 2-4 حروف درج کرنے کی ضرورت ہے۔"
     },
     "gauth": {
-      "desc": "Google Authentication (Authenticate, Import, Logout, Status) ko manage karein",
-      "usage": "*Google Auth Commands:*\n\n- `.gauth auth` — Authentication shuru karein.\n- `.gauth code <url_or_code>` — Authentication code validate karein.\n- `.gauth import` — `credentials.json` import karein (file ko reply karein).\n- `.gauth status` — Current authentication status check karein.\n- `.gauth logout` — Is session ke liye credentials aur tokens clear karein.",
+      "desc": "Google API کی تصدیق کا نظم کریں (جیسے YouTube کی عمر کی پابندی، Google Drive، کیلنڈر، اور ٹاسکس)۔",
+      "usage": "*Google Auth کمانڈز:*\\n\\n- `.gauth auth` — تصدیق کا عمل شروع کریں۔\\n- `.gauth code <url_or_code>` — تصدیقی کوڈ کی توثیق کریں۔\\n- `.gauth import` — `credentials.json` امپورٹ کریں (فائل کو جواب دیں)۔\\n- `.gauth status` — موجودہ تصدیقی حیثیت چیک کریں۔\\n- `.gauth logout` — اس سیشن کے لیے اسناد اور ٹوکن صاف کریں۔\\n\\n*نوٹ:* عام YouTube فیچرز کے لیے Google Auth اختیاری ہے لیکن عمر کی پابندی والی ویڈیوز اور Google Drive/کیلنڈر/ٹاسکس کے لیے ضروری ہے۔",
       "prompt": "*Google Authentication Setup Guide:*\n\n1. *Project Banayein:* https://console.cloud.google.com/ par jayein, \"Select a project\" > \"New Project\" par click karein, naam \"Levanter\" rakhein aur \"Create\" karein.\n2. *APIs Enable Karein:* \"APIs & Services\" > \"Library\" par jayein. \"Google Drive API\", \"Google Calendar API\" aur \"Google Tasks API\" search karke enable karein.\n3. *OAuth Consent:* \"APIs & Services\" > \"OAuth consent screen\" par jayein. \"External\" chunein, zaroori fields bharein, aur \"Audience\" section mein \"Test users\" mein apna email add karein (ZAROORI).\n4. *Credentials:* \"APIs & Services\" > \"Credentials\" par jayein. \"Create Credentials\" > \"OAuth client ID\" par click karein. \"Desktop app\" chunein, naam dein, aur \"Create\" karein.\n5. *Download:* Apne naye Client ID ke paas Download (JSON) icon par click karein. Isse save karein aur file ko reply karke `.gauth import` ka istemal karein.\n6. *Authorize:* Ab authorize karne ke liye neeche diye gaye link par click karein:\n{0}\n\n7. *Complete:* Login karein, \"Unverified app\" warning accept karein (\"Advanced\" > \"Go to Levanter\" par click karke), redirect ke baad address bar se pura URL copy karein, aur bhejein:\n`.gauth code <copied_url>`",
       "success": "Authentication kamyab rahi!",
       "import_success": "`credentials.json` kamyabi se import ho gaya! Ab authorize karne ke liye `.gauth auth` istimal karein.",

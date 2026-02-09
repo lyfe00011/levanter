@@ -11,7 +11,7 @@
     "reconnect": "[{0}] جاري إعادة الاتصال...({1})",
     "reconnect_after": "[{0}] إعادة الاتصال بعد دقيقة واحدة",
     "another_login": "[{0}] تم تسجيل الدخول إلى الجلسة على جهاز آخر.",
-    "error_message": "```---تقرير خطأ---\n\nالإصدار : {0}\nالرسالة : {1}\nالخطأ   : {2}\nالمعرف     : {3}\nالأمر : {4}\nالنظام الأساسي : {5}```\n\n```-----``` *صنع بواسطة LyFE بـ ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           رسالة محذوفة",
     "install_external_plugin": "[{0}] جاري تثبيت المكونات الإضافية الخارجية...",
     "installed_external_plugin": "[{0}] تم تثبيت المكونات الإضافية الخارجية",
@@ -41,7 +41,8 @@
     "lang_not_supported": "اللغة ' {0} ' غير مدعومة بعد، يتم التبديل إلى اللغة الافتراضية.",
     "screenshot_error": "حدث خطأ",
     "id_missing": "المعرف مفقود",
-    "not_on_whatsapp": "{0} ليس على واتساب."
+    "not_on_whatsapp": "{0} ليس على واتساب.",
+    "yt_auth_required": "فشل التنزيل: يتطلب YouTube مصادقة.\\n\\n*الحلول:*\\n1. *Google Auth (موصى به):* استخدم `.gauth auth` لربط حساب Google الخاص بك.\\n2. *YT_COOKIE:* قم بتعيين متغير البيئة `YT_COOKIE`.\\nالدليل: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*خطأ:* {0}"
   },
   "plugins": {
     "common": {
@@ -599,7 +600,8 @@
       "desc": "يعرض صورة الملف الشخصي ومعلومات إضافية (مثل: حول، الحالة) لمستخدم أو مجموعة."
     },
     "gjid": {
-      "desc": "يسرد جميع معرفات JID للمجموعات مع أسماء مجموعاتها."
+      "desc": "يسرد جميع معرفات JID للمجموعات مع أسماء مجموعاتها.",
+      "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
       "usage": "مثال: qr test OR الرد على صورة QR بـ qr",
@@ -850,8 +852,8 @@
       "short_id_info": "\n\n*ملاحظة:* تحتاج فقط إلى إدخال أول 2-4 أحرف من المعرف لأوامر الحذف."
     },
     "gauth": {
-      "desc": "إدارة مصادقة Google (المصادقة، الاستيراد، تسجيل الخروج، الحالة)",
-      "usage": "*أوامر Google Auth:*\n\n- `.gauth auth` — بدء عملية المصادقة.\n- `.gauth code <url_or_code>` — التحقق من رمز المصادقة.\n- `.gauth import` — استيراد `credentials.json` (رد على الملف).\n- `.gauth status` — التحقق من حالة المصادقة الحالية.\n- `.gauth logout` — مسح بيانات الاعتماد لهذه الجلسة.",
+      "desc": "إدارة مصادقة Google API لميزات مثل قيود العمر في YouTube، وGoogle Drive، والتقويم، والمهام.",
+      "usage": "*أوامر Google Auth:*\\n\\n- `.gauth auth` — بدء عملية المصادقة.\\n- `.gauth code <url_or_code>` — التحقق من رمز المصادقة.\\n- `.gauth import` — استيراد `credentials.json` (الرد على الملف).\\n- `.gauth status` — التحقق من حالة المصادقة الحالية.\\n- `.gauth logout` — مسح بيانات الاعتماد والرموز لهذه الجلسة.\\n\\n*ملاحظة:* يعد Google Auth اختيارياً لميزات YouTube العامة ولكنه مطلوب لمقاطع الفيديو المقيدة حسب العمر وتكامل Google Drive/Calendar/Tasks",
       "prompt": "*دليل إعداد مصادقة Google:*\n\n1. *إنشاء مشروع:* انتقل إلى https://console.cloud.google.com/، وانقر فوق \"Select a project\" > \"New Project\"، وقم بتسميته \"Levanter\" وانقر فوق \"Create\".\n2. *تمكين واجهات برمجة التطبيقات:* انتقل إلى \"APIs & Services\" > \"Library\". ابحث وقم بتمكين كل من \"Google Drive API\" , \"Google Calendar API\" و \"Google Tasks API\".\n3. *شاشة موافقة OAuth:* انتقل إلى \"APIs & Services\" > \"OAuth consent screen\". اختر \"External\"، واملأ الحقول المطلوبة، وفي قسم \"Audience\"، أضف بريدك الإلكتروني إلى \"Test users\" (إلزامي).\n4. *بيانات الاعتماد:* انتقل إلى \"APIs & Services\" > \"Credentials\". انقر فوق \"Create Credentials\" > \"OAuth client ID\". حدد \"Desktop app\" كنواع التطبيق، وقم بتسميته، وانقر فوق \"Create\".\n5. *تنزيل:* بجانب معرف العميل الجديد، انقر فوق أيقونة التنزيل (JSON). احفظه واستخدم `.gauth import` بالرد على الملف.\n6. *التفويض:* الآن انقر فوق الرابط أدناه للتفويض:\n{0}\n\n7. *إكمال:* قم بتسجيل الدخول، واقبل تحذير \"Unverified app\" (انقر فوق \"Advanced\" > \"Go to Levanter\")، وانسخ عنوان URL الكامل من شريط العنوان بعد إعادة التوجيه، وأرسل:\n`.gauth code <copied_url>`",
       "success": "تمت المصادقة بنجاح!",
       "import_success": "تم استيراد ملف `credentials.json` بنجاح! الآن استخدم `.gauth auth` للمصادقة.",

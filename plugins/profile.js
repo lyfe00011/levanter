@@ -121,7 +121,7 @@ bot(
     let i = 1
     for (const gid in gids) {
       const name = gids[gid].subject
-      msg += lang.plugins.profile.gjid_item.format(i, name, gid) + '\n'
+      msg += lang.plugins.gjid.item.format(i, name, gid)
       i++
     }
     await message.send(msg.trim())

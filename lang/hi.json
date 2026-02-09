@@ -11,7 +11,7 @@
     "reconnect": "[{0}] Dobara connect kar raha hoon...({1})",
     "reconnect_after": "[{0}] 1 minute baad dobara connect karo",
     "another_login": "[{0}] Ye session kisi aur device pe login hai.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *LyFE ne banaya hai, pyaar se ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           ye message delete ho gaya",
     "install_external_plugin": "[{0}] Bahari plugins install kar raha hoon...",
     "installed_external_plugin": "[{0}] Bahari plugins install ho gaye",
@@ -41,7 +41,8 @@
     "lang_not_supported": "' {0} ' भाषा अभी सपोर्टेड नहीं है, डिफॉल्ट भाषा पर स्विच कर रहे हैं।",
     "screenshot_error": "एरर आया",
     "id_missing": "ID गायब है",
-    "not_on_whatsapp": "{0} व्हाट्सएप पर नहीं है।"
+    "not_on_whatsapp": "{0} व्हाट्सएप पर नहीं है।",
+    "yt_auth_required": "डाउनलोड विफल: YouTube को प्रमाणीकरण (Authentication) की आवश्यकता है।\\n\\n*समाधान:*\\n1. *Google Auth (अनुशंसित):* अपने Google खाते को लिंक करने के लिए `.gauth auth` का उपयोग करें।\\n2. *YT_COOKIE:* `YT_COOKIE` एनवायरनमेंट वेरिएबल सेट करें।\\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -599,7 +600,8 @@
       "desc": "User ya group ka profile picture aur extra jaankari (jaise about, status) dikhata hai."
     },
     "gjid": {
-      "desc": "Sabhi group JIDs aur unke group names ki list dikhata hai."
+      "desc": "Sabhi group JIDs aur unke group names ki list dikhata hai.",
+      "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
       "usage": "Usage: qr test  YA  QR image par reply karke qr",
@@ -850,8 +852,8 @@
       "short_id_info": "\n\n*नोट:* डिलीट कमांड के लिए आपको आईडी के पहले 2-4 अक्षर ही डालने होंगे।"
     },
     "gauth": {
-      "desc": "Google प्रमाणीकरण प्रबंधित करें (प्रमाणित करें, आयात करें, लॉगआउट, स्थिति)",
-      "usage": "*Google Auth कमांड:*\n\n- `.gauth auth` — प्रमाणीकरण प्रक्रिया शुरू करें।\n- `.gauth code <url_या_code>` — प्रमाणीकरण कोड मान्य करें।\n- `.gauth import` — `credentials.json` आयात करें (फ़ाइल का उत्तर दें)।\n- `.gauth status` — वर्तमान प्रमाणीकरण स्थिति जांचें।\n- `.gauth logout` — इस सत्र के लिए क्रेडेंशियल और टोकन साफ़ करें।",
+      "desc": "YouTube आयु-प्रतिबंध, Google Drive, Calendar और Tasks जैसी सुविधाओं के लिए Google API प्रमाणीकरण प्रबंधित करें।",
+      "usage": "*Google Auth Commands:*\\n\\n- `.gauth auth` — प्रमाणीकरण प्रक्रिया शुरू करें।\\n- `.gauth code <url_or_code>` — प्रमाणीकरण कोड सत्यापित करें।\\n- `.gauth import` — `credentials.json` आयात करें (फ़ाइल को उत्तर दें)।\\n- `.gauth status` — वर्तमान प्रमाणीकरण स्थिति जांचें।\\n- `.gauth logout` — इस सत्र के लिए क्रेडेंशियल्स और टोकन साफ़ करें।\\n\\n*नोट:* Google Auth सामान्य YouTube सुविधाओं के लिए वैकल्पिक है, लेकिन आयु-प्रतिबंधित वीडियो और Google Drive/Calendar/Tasks एकीकरण के लिए आवश्यक है।",
       "prompt": "*Google प्रमाणीकरण सेटअप गाइड:*\n\n1. *प्रोजेक्ट बनाएं:* https://console.cloud.google.com/ पर जाएं, \"Select a project\" > \"New Project\" पर क्लिक करें, इसका नाम \"Levanter\" रखें और \"Create\" पर क्लिक करें।\n2. *API सक्षम करें:* \"APIs & Services\" > \"Library\" पर जाएं। \"Google Drive API\" , \"Google Calendar API\" और \"Google Tasks API\" दोनों को खोजें और सक्षम करें।\n3. *OAuth सहमति:* \"APIs & Services\" > \"OAuth consent screen\" पर जाएं। \"External\" चुनें, आवश्यक फ़ील्ड भरें, और \"Audience\" अनुभाग में, अपना ईमेल \"Test users\" में जोड़ें (अनिवार्य)।\n4. *क्रेडेंशियल:* \"APIs & Services\" > \"Credentials\" पर जाएं। \"Create Credentials\" > \"OAuth client ID\" पर क्लिक करें। एप्लिकेशन प्रकार के रूप में \"Desktop app\" चुनें, इसे एक नाम दें और \"Create\" पर क्लिक करें।\n5. *डाउनलोड:* अपने नए क्लाइंट आईडी के बगल में, डाउनलोड (JSON) आइकन पर क्लिक करें। इसे सहेजें और फ़ाइल का उत्तर देकर `.gauth import` का उपयोग करें।\n6. *प्रमाणित करें:* अब प्रमाणित करने के लिए नीचे दिए गए लिंक पर क्लिक करें:\n{0}\n\n7. *पूра करें:* लॉग इन करें, \"Unverified app\" चेतावनी स्वीकार करें (\"Advanced\" > \"Go to Levanter\" पर क्लिक करके), रीडायरेक्ट के बाद एडرس बार से पूरा URL कॉपी करें, और भेजें:\n`.gauth code <copied_url>`",
       "success": "प्रमाणीकरण सफल रहा!",
       "import_success": "`credentials.json` सफलतापूर्वक आयात किया गया! अब प्रमाणित करने के लिए `.gauth auth` का उपयोग करें।",
