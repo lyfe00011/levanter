@@ -42,7 +42,7 @@
     "screenshot_error": "Error aayitto",
     "id_missing": "ID kittiilla",
     "not_on_whatsapp": "{0} WhatsApp-il illa.",
-    "yt_auth_required": "ഡൗൺലോഡ് പരാജയപ്പെട്ടു: YouTube-ന് ഓതന്റിക്കേഷൻ ആവശ്യമാണ്.\\n\\n*പരിഹാരങ്ങൾ:*\\n1. *Google Auth (ശുപാർശ ചെയ്യുന്നത്):* നിങ്ങളുടെ Google അക്കൗണ്ട് ലിങ്ക് ചെയ്യുന്നതിന് `.gauth auth` ഉപയോഗിക്കുക.\\n2. *YT_COOKIE:* `YT_COOKIE` എൻവയോൺമെന്റ് വേരിയബിൾ സജ്ജീകരിക്കുക.\\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}"
+    "yt_auth_required": "Download fail aayi: YouTube-nu authentication venam.\\n\\n*Solutions:*\\n1. *Google Auth (Recommended):* Ninte Google account link cheyyaan `.gauth auth` use cheyyu.\\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set cheyyuka.\\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -852,8 +852,8 @@
       "short_id_info": "\n\n*Note:* Delete command-u-maayi ID-yude adyam randu moonu aksharam mathram ezhuthiyaal madhi."
     },
     "gauth": {
-      "desc": "YouTube പ്രായപരിധി ഒഴിവാക്കൽ, Google Drive, Calendar, Tasks തുടങ്ങിയവയ്ക്കായി Google API ഓതന്റിക്കേഷൻ നിയന്ത്രിക്കുക.",
-      "usage": "*Google Auth ഉപയോഗക്രമം:*\\n\\n- `.gauth auth` — ഓതന്റിക്കേഷൻ നടപടികൾ ആരംഭിക്കാൻ.\\n- `.gauth code <url_or_code>` — ഓതന്റിക്കേഷൻ കോഡ് ടൈപ്പ് ചെയ്യാൻ.\\n- `.gauth import` — `credentials.json` ഫയൽ ഇമ്പോർട്ട് ചെയ്യാൻ (ഫയലിന് മറുപടിയായി നൽകുക).\\n- `.gauth status` — നിലവിലെ അവസ്ഥ പരിശോധിക്കാൻ.\\n- `.gauth logout` — ഡാറ്റ ക്ലിയർ ചെയ്യാൻ.\\n\\n*ശ്രദ്ധിക്കുക:* സാധാരണ നിലയിലുള്ള YouTube ഫീച്ചറുകൾക്കായി ഇത് നിർബന്ധമല്ല. പ്രായപരിധിയുള്ള വീഡിയോകൾ, Google Drive തുടങ്ങിയവയ്ക്കു മാത്രമാണ് ഇത് വേണ്ടത്.",
+      "desc": "YouTube Age Restriction, Google Drive, Calendar, pinne Tasks settings manage cheyyaan Google Auth upayogikkuka.",
+      "usage": "*Google Auth Commands:*\\n\\n- `.gauth auth` — Auth start cheyyaan.\\n- `.gauth code <url_or_code>` — Auth code/URL validate cheyyaan.\\n- `.gauth import` — `credentials.json` import cheyyaan (file-inu reply kodukkuka).\\n- `.gauth status` — Ippozhathe status check cheyyaan.\\n- `.gauth logout` — Credentials-um tokens-um clear cheyyaan.\\n\\n*Note:* YouTube-ile normal features-inu Google Auth nirbandhamalla. Pakshe Age-restricted videos, Google Drive/Calendar/Tasks integration ennivaykku ithu venam.",
       "prompt": "*Google Authentication Setup Guide:*\n\n1. *Project undakku:* https://console.cloud.google.com/-il poyittu \"Select a project\" > \"New Project\" klikku cheyyu, peru \"Levanter\" ennidu pinne \"Create\" kuttu.\n2. *Enable APIs:* \"APIs & Services\" > \"Library\"-il poyi \"Google Drive API\", \"Google Calendar API\" pinne \"Google Tasks API\" enniva search cheythittu enable cheyyu.\n3. *OAuth Consent:* \"APIs & Services\" > \"OAuth consent screen\"-il poyi \"External\" thiranjedukku. Ella details-um filla cheyyu, pinne \"Audience\"-il ninte email-u-maayaa \"Test users\"-il add cheyyu (MANDATORY).\n4. *Credentials:* \"APIs & Services\" > \"Credentials\"-il poyi \"Create Credentials\" > \"OAuth client ID\" klikku cheyyu. \"Desktop app\" thiranjedukku, peru idu, \"Create\" kuttu.\n5. *Download:* Client ID-yude thottu aduthe Download (JSON) icon klikku cheyyu. Athu save cheythittu `.gauth import` upayogichu aa file-inu reply kodukku.\n6. *Authorize:* Ennitt ee link klikku cheyyu:\n{0}\n\n7. *Theerthu:* Login cheyyu, \"Unverified app\" warning vannaal \"Advanced\" > \"Go to Levanter\" klikku cheyyu. Redirect aaya shesham full URL address bar-il ninnu copy cheythittu ayaykkuka:\n`.gauth code <copied_url>`",
       "success": "Authentication ok aayi!",
       "import_success": "`credentials.json` kittiitto! Ippo `.gauth auth` upayogikkam.",
