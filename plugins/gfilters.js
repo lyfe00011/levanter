@@ -1,4 +1,4 @@
-const { getFilter, bot, setFilter, deleteFilter, lang } = require('../lib')
+const { getFilter, bot, setFilter, deleteFilter, lang, escapeRegExp } = require('../lib')
 
 bot(
   {
@@ -93,7 +93,8 @@ bot(
   async (message) => {
     const filters = await getFilter('gfilter', message.id)
     for (const { pattern, text } of filters) {
-      const regexPattern = new RegExp(`(?:^|\\W)${pattern}(?:$|\\W)`, 'i')
+      const escapedPattern = escapeRegExp(pattern)
+      const regexPattern = new RegExp(`(?:^|\\W)${escapedPattern}(?:$|\\W)`, 'i')
       if (regexPattern.test(message.text)) {
         return await message.send(text, {
           quoted: message.data,
@@ -113,7 +114,8 @@ bot(
     if (message.isGroup) return
     const filters = await getFilter('pfilter', message.id)
     for (const { pattern, text } of filters) {
-      const regexPattern = new RegExp(`(?:^|\\W)${pattern}(?:$|\\W)`, 'i')
+      const escapedPattern = escapeRegExp(pattern)
+      const regexPattern = new RegExp(`(?:^|\\W)${escapedPattern}(?:$|\\W)`, 'i')
       if (regexPattern.test(message.text)) {
         return await message.send(text, {
           quoted: message.data,

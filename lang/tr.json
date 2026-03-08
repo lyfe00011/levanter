@@ -11,7 +11,7 @@
     "reconnect": "[{0}] yeniden bağlanıyor...({1})",
     "reconnect_after": "[{0}] 1 dakika sonra yeniden bağlan",
     "another_login": "[{0}] oturum başka bir cihazda açıldı.",
-    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           silinenMesaj",
     "install_external_plugin": "[{0}] Harici eklentiler yükleniyor...",
     "installed_external_plugin": "[{0}] Harici Eklentiler Yüklendi",
@@ -42,7 +42,7 @@
     "screenshot_error": "bir hata oluştu",
     "id_missing": "kimlik eksik",
     "not_on_whatsapp": "{0} WhatsApp'ta değil.",
-    "yt_auth_required": "İndirme başarısız: YouTube kimlik doğrulaması gerektiriyor.\\n\\n*Çözümler:*\\n1. *Google Auth (Önerilen):* Google hesabınızı bağlamak için `.gauth auth` komutunu kullanın.\\n2. *YT_COOKIE:* `YT_COOKIE` ortam değişkenini ayarlayın.\\nRehber: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Hata:* {0}"
+    "yt_auth_required": "İndirme başarısız: YouTube kimlik doğrulaması gerektiriyor.\n\n*Çözümler:*\n1. *Google Auth (Önerilen):* Google hesabınızı bağlamak için `.gauth auth` komutunu kullanın.\n2. *YT_COOKIE:* `YT_COOKIE` ortam değişkenini ayarlayın.\nRehber: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Hata:* {0}"
   },
   "plugins": {
     "common": {
@@ -853,7 +853,7 @@
     },
     "gauth": {
       "desc": "YouTube Yaş Kısıtlaması, Google Drive, Takvim ve Görevler gibi özellikler için Google API kimlik doğrulamasını yönetin.",
-      "usage": "*Google Auth Komutları:*\\n\\n- `.gauth auth` — Kimlik doğrulama sürecini başlatır.\\n- `.gauth code <url_or_code>` — Doğrulama kodunu onaylar.\\n- `.gauth import` — `credentials.json` dosyasını içe aktarır (Dosyayı yanıtlayın).\\n- `.gauth status` — Mevcut kimlik doğrulama durumunu kontrol eder.\\n- `.gauth logout` — Bu oturum için kimlik bilgilerini temizler.\\n\\n*Not:* Google Auth genel YouTube özellikleri için isteğe bağlıdır ancak yaş kısıtlamalı videolar ve Google Drive/Takvim/Görevler entegrasyonları için gereklidir.",
+      "usage": "*Google Auth Komutları:*\n\n- `.gauth auth` — Kimlik doğrulama sürecini başlatır.\n- `.gauth code <url_or_code>` — Doğrulama kodunu onaylar.\n- `.gauth import` — `credentials.json` dosyasını içe aktarır (Dosyayı yanıtlayın).\n- `.gauth status` — Mevcut kimlik doğrulama durumunu kontrol eder.\n- `.gauth logout` — Bu oturum için kimlik bilgilerini temizler.\n\n*Not:* Google Auth genel YouTube özellikleri için isteğe bağlıdır ancak yaş kısıtlamalı videolar ve Google Drive/Takvim/Görevler entegrasyonları için gereklidir.",
       "prompt": "*Google Kimlik Doğrulama Kurulum Kılavuzu:*\n\n1. *Proje Oluşturun:* https://console.cloud.google.com/ adresine gidin, \"Select a project\" > \"New Project\" seçeneğine tıklayın, adını \"Levanter\" koyun ve \"Create\" butonuna basın.\n2. *APIs Etkinleştirin:* \"APIs & Services\" > \"Library\" bölümüne gidin. \"Google Drive API\", \"Google Calendar API\" ve \"Google Tasks API\" aratıp etkinleştirin.\n3. *OAuth İzin Ekranı:* \"APIs & Services\" > \"OAuth consent screen\" bölümüne gidin. \"External\" seçin, gerekli alanları doldurun ve \"Audience\" bölümünde e-postanızı \"Test users\" kısmına ekleyin (ZORUNLU).\n4. *Kimlik Bilgileri:* \"APIs & Services\" > \"Credentials\" bölümüne gidin. \"Create Credentials\" > \"OAuth client ID\" butonuna tıklayın. Uygulama türü olarak \"Desktop app\" seçin, bir ad verin ve \"Create\" butonuna basın.\n5. *İndir:* Yeni Client ID'nizin yanındaki İndir (JSON) simgesine tıklayın. Kaydedin ve dosyayı yanıtlayarak `.gauth import` komutunu kullanın.\n6. *Yetkilendir:* Şimdi yetkilendirmek için aşağıdaki bağlantıya tıklayın:\n{0}\n\n7. *Tamamla:* Giriş yapın, \"Unverified app\" uyarısını kabul edin (\"Advanced\" > \"Go to Levanter\" seçeneğine tıklayarak), yönlendirmeden sonra adres çubuğundaki tam URL'yi kopyalayın ve gönderin:\n`.gauth code <kopyalanan_url>`",
       "success": "Kimlik doğrulama başarılı!",
       "import_success": "`credentials.json` başarıyla içe aktarıldı! Şimdi yetkilendirmek için `.gauth auth` kullanın.",

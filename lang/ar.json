@@ -11,7 +11,7 @@
     "reconnect": "[{0}] جاري إعادة الاتصال...({1})",
     "reconnect_after": "[{0}] إعادة الاتصال بعد دقيقة واحدة",
     "another_login": "[{0}] تم تسجيل الدخول إلى الجلسة على جهاز آخر.",
-    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           رسالة محذوفة",
     "install_external_plugin": "[{0}] جاري تثبيت المكونات الإضافية الخارجية...",
     "installed_external_plugin": "[{0}] تم تثبيت المكونات الإضافية الخارجية",

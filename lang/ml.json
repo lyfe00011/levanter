@@ -11,7 +11,7 @@
     "reconnect": "[{0}] Veendum connect cheyyunnu...({1})",
     "reconnect_after": "[{0}] 1 minutinu shesham connect aavum",
     "another_login": "[{0}] Verae device-il login aayi.",
-    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           Message delete aayi",
     "install_external_plugin": "[{0}] External plugins install cheyyunnu...",
     "installed_external_plugin": "[{0}] External Plugins install aayi",
@@ -42,7 +42,7 @@
     "screenshot_error": "Error aayitto",
     "id_missing": "ID kittiilla",
     "not_on_whatsapp": "{0} WhatsApp-il illa.",
-    "yt_auth_required": "Download fail aayi: YouTube-nu authentication venam.\\n\\n*Solutions:*\\n1. *Google Auth (Recommended):* Ninte Google account link cheyyaan `.gauth auth` use cheyyu.\\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set cheyyuka.\\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}"
+    "yt_auth_required": "Download fail aayi: YouTube-nu authentication venam.\n\n*Solutions:*\n1. *Google Auth (Recommended):* Ninte Google account link cheyyaan `.gauth auth` use cheyyu.\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set cheyyuka.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -72,8 +72,8 @@
       "allow_prompt": "*Allow cheyyaanulla country codes parayu (whitelist mode)*\n_Example: antifake allow 1,91_",
       "disallow_prompt": "*Block cheyyaanulla country codes parayu (blacklist mode)*\n_Example: antifake disallow 92,93_",
       "remove_prompt": "*Maattaanulla country codes parayu*\n_Example: antifake remove 91_",
-      "mode_conflict_whitelist": "*⚠️ Rendum kootti kalarutha!*\\n\\n_Nee ippo Blacklist Mode-ilaanu. Whitelist-ilekk maaraan adyam `antifake clear` use cheyyu._",
-      "mode_conflict_blacklist": "*⚠️ Rendum kootti kalarutha!*\\n\\n_Nee ippo Whitelist Mode-ilaanu. Blacklist-ilekk maaraan adyam `antifake clear` use cheyyu._",
+      "mode_conflict_whitelist": "*⚠️ Rendum kootti kalarutha!*\n\n_Nee ippo Blacklist Mode-ilaanu. Whitelist-ilekk maaraan adyam `antifake clear` use cheyyu._",
+      "mode_conflict_blacklist": "*⚠️ Rendum kootti kalarutha!*\n\n_Nee ippo Whitelist Mode-ilaanu. Blacklist-ilekk maaraan adyam `antifake clear` use cheyyu._",
       "whitelist_success": "*✅ Allowed country codes (Whitelist Mode):*\n{0}\n\n_Ee codes mathrame allow aavu, baakki ellaam block aavum._",
       "blacklist_success": "*🚫 Disallowed country codes (Blacklist Mode):*\n{0}\n\n_Ee codes block aavum, baakki ellaam allow aavum._",
       "removed": "*Maattiya country codes:*\n{0}",
@@ -853,7 +853,7 @@
     },
     "gauth": {
       "desc": "YouTube Age Restriction, Google Drive, Calendar, pinne Tasks settings manage cheyyaan Google Auth upayogikkuka.",
-      "usage": "*Google Auth Commands:*\\n\\n- `.gauth auth` — Auth start cheyyaan.\\n- `.gauth code <url_or_code>` — Auth code/URL validate cheyyaan.\\n- `.gauth import` — `credentials.json` import cheyyaan (file-inu reply kodukkuka).\\n- `.gauth status` — Ippozhathe status check cheyyaan.\\n- `.gauth logout` — Credentials-um tokens-um clear cheyyaan.\\n\\n*Note:* YouTube-ile normal features-inu Google Auth nirbandhamalla. Pakshe Age-restricted videos, Google Drive/Calendar/Tasks integration ennivaykku ithu venam.",
+      "usage": "*Google Auth Commands:*\n\n- `.gauth auth` — Auth start cheyyaan.\n- `.gauth code <url_or_code>` — Auth code/URL validate cheyyaan.\n- `.gauth import` — `credentials.json` import cheyyaan (file-inu reply kodukkuka).\n- `.gauth status` — Ippozhathe status check cheyyaan.\n- `.gauth logout` — Credentials-um tokens-um clear cheyyaan.\n\n*Note:* YouTube-ile normal features-inu Google Auth nirbandhamalla. Pakshe Age-restricted videos, Google Drive/Calendar/Tasks integration ennivaykku ithu venam.",
       "prompt": "*Google Authentication Setup Guide:*\n\n1. *Project undakku:* https://console.cloud.google.com/-il poyittu \"Select a project\" > \"New Project\" klikku cheyyu, peru \"Levanter\" ennidu pinne \"Create\" kuttu.\n2. *Enable APIs:* \"APIs & Services\" > \"Library\"-il poyi \"Google Drive API\", \"Google Calendar API\" pinne \"Google Tasks API\" enniva search cheythittu enable cheyyu.\n3. *OAuth Consent:* \"APIs & Services\" > \"OAuth consent screen\"-il poyi \"External\" thiranjedukku. Ella details-um filla cheyyu, pinne \"Audience\"-il ninte email-u-maayaa \"Test users\"-il add cheyyu (MANDATORY).\n4. *Credentials:* \"APIs & Services\" > \"Credentials\"-il poyi \"Create Credentials\" > \"OAuth client ID\" klikku cheyyu. \"Desktop app\" thiranjedukku, peru idu, \"Create\" kuttu.\n5. *Download:* Client ID-yude thottu aduthe Download (JSON) icon klikku cheyyu. Athu save cheythittu `.gauth import` upayogichu aa file-inu reply kodukku.\n6. *Authorize:* Ennitt ee link klikku cheyyu:\n{0}\n\n7. *Theerthu:* Login cheyyu, \"Unverified app\" warning vannaal \"Advanced\" > \"Go to Levanter\" klikku cheyyu. Redirect aaya shesham full URL address bar-il ninnu copy cheythittu ayaykkuka:\n`.gauth code <copied_url>`",
       "success": "Authentication ok aayi!",
       "import_success": "`credentials.json` kittiitto! Ippo `.gauth auth` upayogikkam.",
