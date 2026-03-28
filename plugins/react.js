@@ -1,10 +1,9 @@
-const { bot, parseNewsLetterJId } = require('../lib/')
+const { bot, parseNewsLetterJId, lang, formatDate } = require('../lib/')
 bot(
 	{
 		pattern: 'react ?(.*)',
-		fromMe: true,
 		desc: 'React to msg',
-		type: 'misc',
+		type: 'whatsapp',
 	},
 	async (message, match) => {
 		if (!match || !message.reply_message)
@@ -23,9 +22,8 @@ bot(
 bot(
 	{
 		pattern: 'creact ?(.*)',
-		fromMe: true,
 		desc: 'React to channel',
-		type: 'misc',
+		type: 'whatsapp',
 	},
 	async (message, match) => {
 		const [url, react] = match.split(',')
@@ -35,5 +33,37 @@ bot(
 		const { channelId, serverId } = parseNewsLetterJId(url)
 		console.log(channelId, serverId)
 		await message.newsletterReactMessage(channelId, serverId, react)
+	}
+)
+
+bot(
+	{
+		pattern: 'cinfo ?(.*)',
+		desc: 'Get channel info',
+		type: 'whatsapp',
+	},
+	async (message, match) => {
+		const url = match || (message.reply_message && message.reply_message.text)
+		if (!url) return await message.send('_Example : cinfo https://whatsapp.com/channel/xxx')
+		const res = parseNewsLetterJId(url)
+		if (!res) return await message.send('_Invalid channel URL_')
+		const { channelId } = res
+		const metadata = await message.getChannelMetadata(channelId)
+		if (!metadata) return await message.send('_Could not fetch channel metadata_')
+		const { id, thread_metadata } = metadata
+		const name = thread_metadata?.name?.text
+		const subscribers = thread_metadata?.subscribers_count
+		const verification = thread_metadata?.verification
+		const creation_time = thread_metadata?.creation_time
+		const description = thread_metadata?.description?.text
+
+		let msg = `*Name :* ${name}\n`
+		msg += `*Jid :* ${id}\n`
+		if (subscribers) msg += `*Subscribers :* ${subscribers}\n`
+		if (verification) msg += `*Verification :* ${verification}\n`
+		if (creation_time)
+			msg += `*Creation :* ${formatDate(creation_time * 1000)}\n`
+		if (description) msg += `*Description :* ${description}`
+		return await message.send(msg)
 	}
 )

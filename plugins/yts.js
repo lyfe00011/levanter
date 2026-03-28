@@ -1,4 +1,4 @@
-const { bot, yts, song, video, addAudioMetaData, generateList, lang, MUSIC_URL_REGEX, YT_URL_REGEX } = require('../lib/')
+const { bot, yts, song, video, addAudioMetaData, generateList, lang, MUSIC_URL_REGEX, YT_URL_REGEX, searchMusic, downloadMusic, getMusicInfo } = require('../lib/')
 
 bot(
   {
@@ -113,5 +113,72 @@ bot(
       { quoted: message.data, fileName: `${vid[1]}.mp4` },
       'video'
     )
+  }
+)
+
+bot(
+  {
+    pattern: 'lofi ?(.*)',
+    desc: 'Download lofi audio',
+    type: 'download',
+  },
+  async (message, match) => {
+    match = match || message?.reply_message?.text
+    if (!match) return await message.send('_Provide a song name_')
+
+    let trackId = null
+    if (/^\d+$/.test(match.trim())) {
+      trackId = match.trim()
+    }
+    if (trackId) {
+      try {
+        const trackInfo = await getMusicInfo(trackId)
+        let m4aBuffer = await downloadMusic(trackId, 'lofi')
+        if (trackInfo.title) {
+          m4aBuffer = await addAudioMetaData(
+            m4aBuffer,
+            trackInfo.title,
+            trackInfo.artist,
+            '',
+            trackInfo.thumbnail
+          )
+        }
+        const ext = trackInfo.isLossless ? 'flac' : 'm4a'
+        const mime = trackInfo.isLossless ? 'audio/flac' : 'audio/mp4'
+
+        return await message.send(
+          m4aBuffer,
+          {
+            quoted: message.data,
+            mimetype: mime,
+            fileName: `${trackInfo?.title || 'lofi'}.${ext}`,
+          },
+          trackInfo.isLossless ? 'document' : 'audio'
+        )
+      } catch (error) {
+        return await message.send(`_Error downloading lofi audio: ${error.message}_`)
+      }
+    }
+
+    try {
+      const result = await searchMusic(match, 5)
+      if (!result || !result.length) return await message.send(`_Not result for_ *${match}*`)
+
+      const msg = generateList(
+        result.map(({ title, id, artist, duration }) => ({
+          _id: `🆔&id\n`,
+          text: `🎵${title} [${duration}]\n👤${artist}\n\n`,
+          id: `lofi ${id}`,
+        })),
+        `Searched ${match} and Found ${result.length} results\nsend 🆔 to download lofi.\n`,
+        message.jid,
+        message.participant,
+        message.id
+      )
+
+      return await message.send(msg.message, { quoted: message.data }, msg.type)
+    } catch (error) {
+      return await message.send(`_Error searching lofi: ${error.message}_`)
+    }
   }
 )
