@@ -47,6 +47,9 @@
   "plugins": {
     "common": {
       "reply_to_image": "Répondre à une image",
+      "reply_to_message": "Répondre à un message",
+      "not_admin": "Je ne suis pas administrateur.",
+      "not_found": "Non trouvé.",
       "update": "_Paramètres mis à jour avec succès ! Vos préférences ont été enregistrées et sont maintenant actives._"
     },
     "menu": {
@@ -140,7 +143,7 @@
     },
     "fb": {
       "desc": "Télécharger une vidéo Facebook",
-      "example": "",
+      "example": "*Exemple :* fb https://www.facebook.com/...",
       "quality": "Choisir la qualité de la vidéo",
       "invalid": "*Erreur :* _Aucune vidéo trouvée pour l'URL donnée._"
     },
@@ -281,6 +284,7 @@
     },
     "group_info": {
       "desc": "Afficher les informations du lien d'invitation du groupe",
+      "ginfo_usage": "*Usage :* ginfo <lien_du_groue>",
       "invalid_link": "Veuillez fournir un lien d'invitation WhatsApp valide.",
       "details": "*Nom :* {0}\n*ID du groupe :* {1}@g.us\n*Propriétaire :* {2}\n*Membres :* {3}\n*Créé le :* {4}\n*Description :* {5}"
     },

@@ -47,6 +47,9 @@
   "plugins": {
     "common": {
       "reply_to_image": "Balas ke gambar",
+      "reply_to_message": "Balas pesan",
+      "not_admin": "Saya bukan admin.",
+      "not_found": "Tidak ditemukan.",
       "update": "_Pengaturan berhasil diperbarui! Preferensi Anda telah disimpan dan sekarang aktif._"
     },
     "menu": {
@@ -140,7 +143,7 @@
     },
     "fb": {
       "desc": "Unduh video Facebook",
-      "example": "",
+      "example": "*Contoh:* fb https://www.facebook.com/...",
       "quality": "Pilih Kualitas Video",
       "invalid": "*Error:* _Tidak ada video yang ditemukan untuk URL yang diberikan._"
     },
@@ -281,6 +284,7 @@
     },
     "group_info": {
       "desc": "Tampilkan info tautan undangan grup",
+      "ginfo_usage": "*Penggunaan:* ginfo <tautan_grup>",
       "invalid_link": "Silakan berikan tautan undangan WhatsApp yang valid.",
       "details": "*Nama:* {0}\n*ID Grup:* {1}@g.us\n*Pemilik:* {2}\n*Anggota:* {3}\n*Dibuat pada:* {4}\n*Deskripsi:* {5}"
     },

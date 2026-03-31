@@ -47,6 +47,9 @@
   "plugins": {
     "common": {
       "reply_to_image": "Bir resme cevap verin",
+      "reply_to_message": "Bir mesaja cevap verin",
+      "not_admin": "Yönetici değilim.",
+      "not_found": "Bulunamadı.",
       "update": "_Ayarlar başarıyla güncellendi! Tercihleriniz kaydedildi ve şimdi etkin._"
     },
     "menu": {
@@ -140,7 +143,7 @@
     },
     "fb": {
       "desc": "Facebook videolarını indir",
-      "example": "",
+      "example": "*Örnek:* fb https://www.facebook.com/...",
       "quality": "Video Kalitesini Seçin",
       "invalid": "*Hata:* _Verilen URL için video bulunamadı._"
     },
@@ -281,6 +284,7 @@
     },
     "group_info": {
       "desc": "Grup davet bağlantısı bilgisini göster",
+      "ginfo_usage": "*Kullanım:* ginfo <grup_bağlantısı>",
       "invalid_link": "Lütfen geçerli bir WhatsApp davet bağlantısı girin.",
       "details": "*İsim:* {0}\n*Grup Kimliği:* {1}@g.us\n*Sahip:* {2}\n*Üyeler:* {3}\n*Oluşturulma tarihi:* {4}\n*Açıklama:* {5}"
     },

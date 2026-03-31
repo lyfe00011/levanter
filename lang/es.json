@@ -47,6 +47,9 @@
   "plugins": {
     "common": {
       "reply_to_image": "Cita una Imagen.",
+      "reply_to_message": "Responder a un mensaje",
+      "not_admin": "No soy administrador.",
+      "not_found": "No encontrado.",
       "update": "_Actualizado_"
     },
     "menu": {
@@ -140,7 +143,7 @@
     },
     "fb": {
       "desc": "Descarga Facebook video",
-      "example": "",
+      "example": "*Ejemplo:* fb https://www.facebook.com/...",
       "quality": "Elige la Calidad del Video",
       "invalid": "*Error:* _No se ha encontrado Videos en el Link._"
     },
@@ -281,6 +284,7 @@
     },
     "group_info": {
       "desc": "Muestra Informacion del Grupo desde su Enlace",
+      "ginfo_usage": "*Uso:* ginfo <enlace_del_grupo>",
       "invalid_link": "El Enlace a Grupo no parece ser Valido.",
       "details": "*Nombre:* {0}\n*ID:* {1}@g.us\n*Dueño:* {2}\n*Miembros:* {3}\n*Creado:* {4}\n*Descripcion:* {5}"
     },

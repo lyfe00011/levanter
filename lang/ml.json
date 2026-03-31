@@ -47,6 +47,9 @@
   "plugins": {
     "common": {
       "reply_to_image": "Photo-kku reply kodukku",
+      "reply_to_message": "Oru message-inu reply kodukkuka",
+      "not_admin": "Njan admin alla.",
+      "not_found": "Kandethaan kazhinjilla.",
       "update": "_Settings ellaam update aayi! Ellaam save cheythittund._"
     },
     "menu": {
@@ -140,7 +143,7 @@
     },
     "fb": {
       "desc": "Facebook video download cheyyaan",
-      "example": "",
+      "example": "*ഉദാഹരണം:* fb https://www.facebook.com/...",
       "quality": "Ethe quality venam ?",
       "invalid": "*Error:* _Aa URL-il video onnumilla._"
     },
@@ -281,6 +284,7 @@
     },
     "group_info": {
       "desc": "Invite link-inte info kaanaan",
+      "ginfo_usage": "*ഉപയോഗം:* ginfo <ഗ്രൂപ്പ്_ലിങ്ക്>",
       "invalid_link": "Sariyaya WhatsApp invite link para.",
       "details": "*Name:* {0}\n*Group ID:* {1}@g.us\n*Owner:* {2}\n*Members:* {3}\n*Undakkiyath:* {4}\n*Description:* {5}"
     },

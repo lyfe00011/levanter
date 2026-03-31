@@ -47,6 +47,9 @@
   "plugins": {
     "common": {
       "reply_to_image": "_photo ka reply dain_",
+      "reply_to_message": "_paigham ka reply dain_",
+      "not_admin": "_Main admin nahi hoon._",
+      "not_found": "_Nahi mila._",
       "update": "_Settings update hogai hai ✅_"
     },
     "menu": {
@@ -140,7 +143,7 @@
     },
     "fb": {
       "desc": "_Download karain Facebook ki video_",
-      "example": "",
+      "example": "*Misal:* fb https://www.facebook.com/...",
       "quality": "_Video quality choose karain_",
       "invalid": "*Error:* _Koi video nahi mili di gayi URL ke liye_"
     },
@@ -281,6 +284,7 @@
     },
     "group_info": {
       "desc": "_Group invite link ki maloomat dikhaye._",
+      "ginfo_usage": "*Istmaal:* ginfo <group_link>",
       "invalid_link": "_ik valid invite link dain_",
       "details": "*Name:* {0}\n*Group ID:* {1}@g.us\n*Owner:* {2}\n*Members:* {3}\n*Created on:* {4}\n*Description:* {5}"
     },

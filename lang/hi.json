@@ -47,6 +47,9 @@
   "plugins": {
     "common": {
       "reply_to_image": "Kisi image ka reply karo",
+      "reply_to_message": "Ek message ka reply karein",
+      "not_admin": "Main admin nahi hoon.",
+      "not_found": "Nahi mila.",
       "update": "_Settings update ho gaye! Aapki preferences save ho gayi hain aur ab active hain._"
     },
     "menu": {
@@ -140,7 +143,7 @@
     },
     "fb": {
       "desc": "Facebook video download karo",
-      "example": "",
+      "example": "*Example:* fb https://www.facebook.com/...",
       "quality": "Video quality chuno",
       "invalid": "*Error:* _Diye gaye URL ke liye koi video nahi mila._"
     },
@@ -281,6 +284,7 @@
     },
     "group_info": {
       "desc": "Group invite link ki details dikhao",
+      "ginfo_usage": "*Usage:* ginfo <group_link>",
       "invalid_link": "Kripya ek valid WhatsApp invite link provide karo.",
       "details": "*Naam:* {0}\n*Group ID:* {1}@g.us\n*Malik:* {2}\n*Members:* {3}\n*Banaya gaya:* {4}\n*Description:* {5}"
     },
