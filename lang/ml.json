@@ -46,11 +46,11 @@
   },
   "plugins": {
     "common": {
-      "reply_to_image": "Photo-kku reply kodukku",
-      "reply_to_message": "Oru message-inu reply kodukkuka",
+      "reply_to_image": "Ee photokku reply adi",
+      "reply_to_message": "Messaginu reply adi",
       "not_admin": "Njan admin alla.",
-      "not_found": "Kandethaan kazhinjilla.",
-      "update": "_Settings ellaam update aayi! Ellaam save cheythittund._"
+      "not_found": "Kittiyilla.",
+      "update": "_Settings ellam set aayi! Save cheythittund._"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Samayam : {2}\n│ Divasam : {3}\n│ Thiyathi : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
@@ -142,10 +142,10 @@
       "desc": "Nee reply koduthallo, aa message delete aakkaan"
     },
     "fb": {
-      "desc": "Facebook video download cheyyaan",
-      "example": "*ഉദാഹരണം:* fb https://www.facebook.com/...",
+      "desc": "Facebook video download cheyyu",
+      "example": "*Udaharanam:* fb https://www.facebook.com/...",
       "quality": "Ethe quality venam ?",
-      "invalid": "*Error:* _Aa URL-il video onnumilla._"
+      "invalid": "*Error:* _Aa link-il video onnumilla._"
     },
     "fancy": {
       "desc": "Nice font-il text aakkaan",
@@ -283,9 +283,9 @@
       "not_admin": "Njan admin alla, so settings maattaan pattiilla."
     },
     "group_info": {
-      "desc": "Invite link-inte info kaanaan",
-      "ginfo_usage": "*ഉപയോഗം:* ginfo <ഗ്രൂപ്പ്_ലിങ്ക്>",
-      "invalid_link": "Sariyaya WhatsApp invite link para.",
+      "desc": "Invite link details ariyan",
+      "ginfo_usage": "*Usage:* ginfo <group_link>",
+      "invalid_link": "Sariyaya link kodu.",
       "details": "*Name:* {0}\n*Group ID:* {1}@g.us\n*Owner:* {2}\n*Members:* {3}\n*Undakkiyath:* {4}\n*Description:* {5}"
     },
     "common_members": {
