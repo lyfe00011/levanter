@@ -11,7 +11,7 @@
     "reconnect": "[{0}] Reconectando...({1})",
     "reconnect_after": "[{0}] Reconectar despues de 1 minuto",
     "another_login": "[{0}] La Sesion se ha iniciado en otro dispositivo.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "error_message": "```---REPORTE DE ERROR---\n\nVersion : {0}\nMensaje : {1}\nError   : {2}\nJid     : {3}\ncomando : {4}\nPlataforma : {5}```\n\n```-----``` *Hecho por LyFE con ❣* ```-----```",
     "deleted_message": "MensajeBorrado",
     "install_external_plugin": "[{0}] Instalando Plugins Externos...",
     "installed_external_plugin": "[{0}] Plugins Externos Instalados.",
@@ -23,25 +23,25 @@
     "group_cmd": "Este Comando solo se puede utilizar en Grupos.",
     "labels": {
       "sudo": "SUDO",
-      "auto_read": "AUTO READ MSG",
-      "auto_status": "AUTO STATUS VIEW",
-      "auto_reject": "AUTO REJECT CALL",
-      "always_online": "ALWAYS ONLINE",
-      "anti_delete": "ANTI DELETE MSG",
-      "auto_update": "AUTO UPDATE BOT"
+      "auto_read": "AUTO LEER MSGS",
+      "auto_status": "AUTO VISTO ESTADOS",
+      "auto_reject": "AUTO RECHAZAR LLAMADAS",
+      "always_online": "SIEMPRE EN LINEA",
+      "anti_delete": "ANTI BORRAR MSGS",
+      "auto_update": "AUTO ACTUALIZAR BOT"
     },
-    "promoted": "promoted",
-    "demoted": "demoted",
-    "file_size_error": "Size is {0}\n\n{1}",
-    "missing_jid": "missing jids",
-    "no_contacts": "not found contacts, please add contacts",
-    "reaction_not_enabled": "Reaction not enabled",
-    "reaction_not_allowed": "this reaction not allowed",
-    "metadata_fetch_failed": "failed to fetch metadata",
-    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
-    "screenshot_error": "an error occured",
-    "id_missing": "id missing",
-    "not_on_whatsapp": "{0} is not on whatsapp.",
+    "promoted": "promovido",
+    "demoted": "degradado",
+    "file_size_error": "El tamaño es {0}\n\n{1}",
+    "missing_jid": "faltan jids",
+    "no_contacts": "no se encontraron contactos, por favor agrega contactos",
+    "reaction_not_enabled": "Reacción no habilitada",
+    "reaction_not_allowed": "esta reacción no está permitida",
+    "metadata_fetch_failed": "fallo al obtener metadatos",
+    "lang_not_supported": "' {0} ' el idioma aún no es compatible, cambiando al idioma por defecto.",
+    "screenshot_error": "ocurrió un error",
+    "id_missing": "falta id",
+    "not_on_whatsapp": "{0} no está en WhatsApp.",
     "yt_auth_required": "Error al descargar: YouTube requiere autenticación.\n\n*Soluciones:*\n1. *Google Auth (Recomendado):* Usa `.gauth auth` para vincular tu cuenta de Google.\n2. *YT_COOKIE:* Configura la variable de entorno `YT_COOKIE`.\nGuía: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
@@ -55,10 +55,10 @@
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefijo : {0}\n│ Usuario : {1}\n│ Hora : {2}\n│ Dia : {3}\n│ Fecha : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ RAM : {7}\n│ Encendido : {8}\n│ Plataforma : {9}\n╰────────────────```",
       "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefijo : {0}\n┃❃│ Usuario : {1}\n┃❃│ Hora : {2}\n┃❃│ Dia : {3}\n┃❃│ Fecha : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ RAM : {7}\n┃❃│ Encendido : {8}\n┃❃│ Plataforma : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
-      "disabled": "disabled"
+      "disabled": "desactivado"
     },
     "afk": {
-      "example": "> *Como Usar AFK:*\n- Set AFK: *afk [razon]*\n- Ejemplo: *afk Estoy ocupado* Visto por ultima vez: #lastseen\n- Enviar un mensaje despues de haber Activado AFK lo desactivara Automaticamente.\n- Apagar AFK: *afk off*",
+      "example": "> *Como Usar AFK:*\n- Activar AFK: *afk [razon]*\n- Ejemplo: *afk Estoy ocupado* Visto por ultima vez: #lastseen\n- Enviar un mensaje despues de haber Activado AFK lo desactivara Automaticamente.\n- Apagar AFK: *afk off*",
       "not_afk": "Ya no estas AFK.",
       "desc": "Modo AFK (Usuario Ocupado)"
     },
@@ -98,21 +98,21 @@
       "enabled": "activado",
       "disabled": "desactivado",
       "example": "Estado del Anti-enlace: *{0}*\n\n> Ejemplos de Uso:\n- antilink list - Ver la configuración actual\n- antilink allow whatsapp.com - Permitir solo este enlace\n- antilink disallow facebook.com - No permitir este enlace\n- antilink clear allow - Borrar URLs permitidas\n- antilink clear disallow - Borrar URLs no permitidas\n- antilink on | off - Activar/Desactivar anti-enlace\n- antilink kick | warn | null - Acción a aplicar",
-      "allow_prompt": "*Please provide a URL to allow.*",
-      "no_new_urls": "*No new URLs to add.* All URLs already exist in the list.",
-      "urls_updated": "*Allowed URLs updated*\n\nAdded: {0}\nTotal: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
-      "disallow_prompt": "*Please provide a URL to disallow.*",
-      "no_disallowed_urls": "*No new URLs to disallow.* All URLs are already disallowed.",
-      "disallowed_updated": "*Disallowed URLs updated*\n\nAdded to blocklist: {0}\nTotal blocked: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
-      "settings_cleared": "*Antilink settings cleared.*",
-      "allowed_cleared": "*Allowed URLs cleared.*",
-      "disallowed_cleared": "*Disallowed URLs cleared.*"
+      "allow_prompt": "*Por favor proporciona una URL para permitir.*",
+      "no_new_urls": "*No hay URLs nuevas para añadir.* Todas las URLs ya existen en la lista.",
+      "urls_updated": "*URLs permitidas actualizadas*\n\nAñadidas: {0}\nTotal: {1} URL(s)\n\n_Nota: Las URLs no distinguen entre mayúsculas y minúsculas_",
+      "disallow_prompt": "*Por favor proporciona una URL para bloquear.*",
+      "no_disallowed_urls": "*No hay URLs nuevas para bloquear.* Todas las URLs ya están bloqueadas.",
+      "disallowed_updated": "*URLs bloqueadas actualizadas*\n\nAñadido a lista de bloqueo: {0}\nBloqueadas totales: {1} URL(s)\n\n_Nota: Las URLs no distinguen entre mayúsculas y minúsculas_",
+      "settings_cleared": "*Ajustes de Antilink borrados.*",
+      "allowed_cleared": "*URLs permitidas borradas.*",
+      "disallowed_cleared": "*URLs bloqueadas borradas.*"
     },
     "antiword": {
       "desc": "Borrar palabras Prohibidas",
-      "example": "`AntiWord Status: {0}\n> *Ejemplos de Uso:*\n- antiword action/<kick | warn | null>* - Accion a Tomar cuando se detecte la palabra\n- antiword on | off - Activar/Desactivar El Bloqueo de Palabras\n- `setvar` ANTIWORDS:palabra1,palabra2,... - Define palabras a Bloquear",
+      "example": "`Estado AntiWord: {0}\n> *Ejemplos de Uso:*\n- antiword action/<kick | warn | null>* - Accion a Tomar cuando se detecte la palabra\n- antiword on | off - Activar/Desactivar El Bloqueo de Palabras\n- `setvar` ANTIWORDS:palabra1,palabra2,... - Define palabras a Bloquear",
       "action_update": "La Accion del antiword ha sido Actualizada para: *{0}*",
-      "status": "AntiWord is now *{0}*.",
+      "status": "AntiWord es ahora *{0}*.",
       "add_prompt": "*Por favor proporciona palabras para agregar.*",
       "added": "*Palabras agregadas:*\n{0}",
       "remove_prompt": "*Por favor proporciona palabras para eliminar.*",
@@ -142,7 +142,7 @@
       "desc": "Borra mensajes Citados"
     },
     "fb": {
-      "desc": "Descarga Facebook video",
+      "desc": "Descarga video de Facebook",
       "example": "*Ejemplo:* fb https://www.facebook.com/...",
       "quality": "Elige la Calidad del Video",
       "invalid": "*Error:* _No se ha encontrado Videos en el Link._"
@@ -192,12 +192,12 @@
     },
     "gfilter": {
       "desc": "Respuestas Automaticas a Palabras en Grupos",
-      "example": "> *Ejemplo :*\n- `gfilter` Hola (while replying to a text message)\n- `gfilter list` (Muestra Lista Actual gfilters)",
+      "example": "> *Ejemplo :*\n- `gfilter` Hola (respondiendo a un mensaje de texto)\n- `gfilter list` (Muestra Lista Actual gfilters)",
       "add": "*{0}* gfilter Añadido"
     },
     "pfilter": {
       "desc": "Respuestas Automaticas a Palabras en TODOS los privados",
-      "example": "> *Ejemplo :*\n- `pfilter` Hola (while replying to a text message)\n- `pfilter list` (Muestra Lista Actual pfilters)",
+      "example": "> *Ejemplo :*\n- `pfilter` Hola (respondiendo a un mensaje de texto)\n- `pfilter list` (Muestra Lista Actual pfilters)",
       "add": "*{0}* pfilter Añadido"
     },
     "gpp": {
@@ -289,10 +289,10 @@
       "details": "*Nombre:* {0}\n*ID:* {1}@g.us\n*Dueño:* {2}\n*Miembros:* {3}\n*Creado:* {4}\n*Descripcion:* {5}"
     },
     "common_members": {
-      "desc": "Show or kick common memebers in two or more groups",
-      "found": "Found 0 common members.",
-      "common_usage": "*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.",
-      "ginfo_usage": "*Example : info group_invte_link*"
+      "desc": "Muestra o elimina miembros comunes en dos o más grupos",
+      "found": "Se encontraron 0 miembros comunes.",
+      "common_usage": "*Ejemplo*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - para eliminar solo del grupo donde ejecutas el comando\nkickall - para eliminar de todos los jids\nany - para incluir dos o más miembros de grupos comunes\nskip - para evitar eliminar de todos, ejemplo skip para evitar de un grupo o skip jid1,jid2,jid3 para omitirlo.",
+      "ginfo_usage": "*Ejemplo : info group_invte_link*"
     },
     "insta": {
       "usage": "Ejemplo: `.insta` <Instagram URL>",
@@ -302,7 +302,7 @@
     "ison": {
       "usage": "Ejemplo: ison <phone number>",
       "not_exist": "`*No Existe en Whatsapp* ({0})\n`",
-      "exist": "\n*Exist en Whatsapp* ({0})\n",
+      "exist": "\n*Existe en Whatsapp* ({0})\n",
       "privacy": "*Privacidad Activada* ({0})\n",
       "desc": "Comprueba si existen Numeros Registrados en WhatsApp."
     },
@@ -317,7 +317,7 @@
       "usage": "Ejemplo: rotate right|left|flip (Citando un Video).",
       "not_found": "Responda a un video y especifique la rotacion (right, left, or flip).",
       "desc": "Girar un vídeo hacia la derecha, izquierda o voltearlo.",
-      "convert": "_Converting..._"
+      "convert": "_Convirtiendo..._"
     },
     "mp3": {
       "usage": "Cita un Video para Convertirlo en MP3.",
@@ -367,19 +367,19 @@
     },
     "bass": {
       "usage": "Ejemplo: bass 10 (Cita Audio/Video).",
-      "desc": "Aumenta el BASS del Audio"
+      "desc": "Aumenta los bajos del Audio"
     },
     "treble": {
       "usage": "Ejemplo: treble 10 (Cita Audio/Video).",
       "desc": "Aumenta agudos de un archivo de audio."
     },
     "histo": {
-      "usage": "Cita Audio/Video para generar un histogram.",
-      "desc": "Convierte el audio a una representacion visual histogram."
+      "usage": "Cita Audio/Video para generar un histograma.",
+      "desc": "Convierte el audio a una representación visual de histograma."
     },
     "vector": {
-      "usage": "Cita Audio/Video para crear una visualizacion vector.",
-      "desc": "Convierte un Audio en una visualizacion vector"
+      "usage": "Cita Audio/Video para crear una visualización vectorial.",
+      "desc": "Convierte un Audio en una visualización vectorial."
     },
     "crop": {
       "usage": "Ejemplo: crop 512,512,0,512 (Citando Video).",
@@ -417,7 +417,7 @@
       "desc": "Descarga el archivo de Mediafire."
     },
     "mention": {
-      "usage": "Ejemplo: mention on | off | get\n(Reply to a message to target a specific user.)",
+      "usage": "Ejemplo: mention on | off | get\n(Responde a un mensaje para dirigirte a un usuario en específico.)",
       "desc": "Configurar la función de mención para responder automaticamente cuando mencionan al bot.",
       "not_activated": "Responder a Mencion no esta Activado",
       "current_status": "La mencion es {0}. Para mas detalles visita: https://levanter.site/",
@@ -450,7 +450,7 @@
       "desc": "Muestra la cantidad de mensajes enviados por cada cada miembro, tipo de mensaje, ultimo mensaje, ultima vez visto, etc.",
       "msg_init": "\n*Numero :* {0}\n*Nombre :* {1}\n*Total Msgs :* {2}\n",
       "msg_last": "*VistoHace :* {0} \n",
-      "no_activity": "No activity recorded yet."
+      "no_activity": "Aún no hay actividad registrada."
     },
     "reset": {
       "usage": "Ejemplo: `reset all` O `reset` <cita o mencion>",
@@ -459,25 +459,25 @@
       "reset_one": "✅ _@{0} Contador Reseteado._"
     },
     "inactive": {
-      "usage": "> Ejemplo:\n-inactive day 10\n- inactive day 10 kick\n- inactive total 100\n- inactive total 100 kick\n- inactive day 7 total 150\n- inactive day 7 total 150 kick\n\nif kick not mentioned, Just list",
+      "usage": "> Ejemplo:\n-inactive day 10\n- inactive day 10 kick\n- inactive total 100\n- inactive total 100 kick\n- inactive day 7 total 150\n- inactive day 7 total 150 kick\n\nSi no se menciona kick, solo hace una lista",
       "desc": "Identifica y Remueve Participantes inactivos del Grupo.",
       "inactives": "_Total de Inactivos : {0}_",
-      "removing": "⚠️_Eliminando a {0} Miembros Inactivos en 7 seconds_⚠️"
+      "removing": "⚠️_Eliminando a {0} Miembros Inactivos en 7 segundos_⚠️"
     },
     "weather": {
-      "desc": "weather info",
-      "usage": "*Example : weather delhi*",
-      "not_found": "_{0} not found_",
-      "report": "*Name :* {0}\n*Country :* {1}\n*Weather :* {2}\n*Temp :* {3}°\n*Feels Like :* {4}°\n*Humidity :* {5}%\n*Visibility  :* {6}m\n*Wind* : {7}m/s {8}\n*Sunrise :* {9}\n*Sunset :* {10}"
+      "desc": "Información del clima",
+      "usage": "*Ejemplo : weather madrid*",
+      "not_found": "_{0} no encontrado_",
+      "report": "*Nombre :* {0}\n*País :* {1}\n*Clima :* {2}\n*Temp :* {3}°\n*Sensación Térmica :* {4}°\n*Humedad :* {5}%\n*Visibilidad :* {6}m\n*Viento* : {7}m/s {8}\n*Amanecer :* {9}\n*Atardecer :* {10}"
     },
     "y2mate": {
-      "ytv_desc": "Download YouTube video",
-      "ytv_usage": "_Example: ytv url_",
-      "yta_desc": "Download YouTube audio",
-      "yta_usage": "_Example: yta darari/yt url_",
-      "invalid_link": "*Provide a valid YouTube link!*",
-      "no_video": "*No video found*",
-      "no_audio": "_Audio not found._"
+      "ytv_desc": "Descarga video de YouTube",
+      "ytv_usage": "_Ejemplo: ytv url_",
+      "yta_desc": "Descarga audio de YouTube",
+      "yta_usage": "_Ejemplo: yta darari/yt url_",
+      "invalid_link": "*¡Proporciona un enlace válido de YouTube!*",
+      "no_video": "*No se encontró ningún video*",
+      "no_audio": "_No se encontró el audio._"
     },
     "amute": {
       "usage": "Como Utilizar:amute <hour> <min>\n- amute on | off\n- amute info\n\nCita texto que sera el mensaje Enviado al Activarse.",
@@ -491,14 +491,14 @@
       "info": "Hora: {0}\nMinuto: {1}\nFecha: {2}\nMute: {3}\nMensaje: {4}"
     },
     "aunmute": {
-      "usage": "Como Utilizar:aunmute <hour> <min>\n- aunmute on | off\n- aunmute info\nReply with text to set an unmute message",
+      "usage": "Como Utilizar:aunmute <hour> <min>\n- aunmute on | off\n- aunmute info\nResponde con texto para establecer un mensaje de desmutear",
       "desc": "Programe la activación del grupo a una hora específica con un mensaje personalizado opcional.",
       "not_found": "Configuración de AutoUnMute no encontrada.",
       "already_disabled": "AutoUnMute actualmente desactivado.",
       "enabled": "✅ AutoUnMute Activado.",
       "disabled": "📴 AutoUnMute Desactivado.",
-      "invalid_format": "> Ejemplo:\n- aunmute 16 30\n- aunmute on | off\n- aunmute info\n\nReply with text to set an unmute message.",
-      "scheduled": "Group will unmute at {0}\n*message :* {1}",
+      "invalid_format": "> Ejemplo:\n- aunmute 16 30\n- aunmute on | off\n- aunmute info\n\nResponde con texto para establecer un mensaje de desmutear.",
+      "scheduled": "El grupo se desmuteará a las {0}\n*Mensaje :* {1}",
       "info": "Hora: {0}\nMinuto: {1}\nFecha: {2}\nMute: {3}\nMensaje: {4}"
     },
     "zushi": {
@@ -535,7 +535,7 @@
     "pdm": {
       "usage": "Como Utilizar: `pdm` on | off",
       "desc": "Activa Notificaciones sobre quien es Degradadado o Promovido a Administrador en el Grupo.",
-      "not_found": "specify 'on' or 'off'. For Ejemplo: pdm on",
+      "not_found": "Especifica 'on' u 'off'. Por Ejemplo: pdm on",
       "activated": "✅ Promote/demote Alerta Activada.",
       "deactivated": "📴 Promote/demote Alerta Desactivada."
     },
@@ -677,7 +677,7 @@
       "reply_required": "Cita una Imagen o video."
     },
     "circle": {
-      "desc": "Convert an image into a circular sticker.",
+      "desc": "Convierte una imagen en un sticker circular.",
       "reply_required": "Cita una Imagen."
     },
     "take": {
@@ -691,7 +691,7 @@
       "reply_required": "Cita un Sticker Animado."
     },
     "story": {
-      "usage": "Ejemplo: story <username> (O Cita un mensaje contenga the username)",
+      "usage": "Ejemplo: story <username> (O Cita un mensaje que contenga el nombre de usuario)",
       "desc": "Descarga Historias de Instagram con el usuario especificado. Si hay varias historias disponibles, se mostrara una lista para seleccionar.",
       "not_found": "No encontre Historias en este Usuario.",
       "list": "Total {0} Historias disponibles. Seleccione una para descargar.\n"
@@ -701,7 +701,7 @@
       "desc": "Menciona a miembros del grupo. Utiliza `tag all` para mencionar a todos los miembros, `tag admin` para mencionar solo a los administradores del grupo, `tag notadmin` para mencionar a los miembros que no sean administradores o proporciona un mensaje personalizado para enviar como mencion"
     },
     "tictactoe": {
-      "usage": "Example: tictactoe <opponent_jid> OR tictactoe normal <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end\nEl modo predeterminado es infinito, use 'tictactoe normal' para el modo normal.",
+      "usage": "Ejemplo: tictactoe <opponent_jid> O tictactoe normal <opponent_jid> O tictactoe restart <opponent_jid> O tictactoe end\nEl modo predeterminado es infinito, use 'tictactoe normal' para el modo normal.",
       "desc": "Juega «3 en Raya» contra Alguien. Desafía a alguien mencionándolo, respondiendo a su mensaje o especificando su JID. Usa `tictactoe end` para terminar el juego y `tictactoe restart` <jid_DeOponente> para reiniciar con un nuevo oponente. El modo predeterminado es infinito, use `tictactoe normal` para el modo normal.",
       "choose_opponent": "Elige con quien jugar citando su mensaje o mencionandolo. No puedes jugar contra ti mismo.",
       "game_ended": "Juego Terminado.",
@@ -712,8 +712,8 @@
       "current_player": "Jugador Actual",
       "game_finish": "Juego Terminado 🏁",
       "winner": "Ganador",
-      "restart": "Restart Game",
-      "header": "---Tic Tac Toe---"
+      "restart": "Reiniciar Juego",
+      "header": "---Tres en Raya---"
     },
     "tiktok": {
       "usage": "Como Utilizar:tiktok <TikTok URL> (O Cita un mensaje)",
@@ -733,13 +733,13 @@
       "desc": "Traducir texto con Google Translate. Especificar el código del idioma de destino (y opcionalmente el código del idioma de origen) al citar un mensaje."
     },
     "twitter": {
-      "usage": "Ejemplo: twitter <Twitter URL> (O Cita un mensaje contenga URL)",
-      "desc": "Descarga a Twitter video. Si hay varias opciones de calidad disponibles, se le pedirá que elija una.",
+      "usage": "Ejemplo: twitter <Twitter URL> (O Cita un mensaje que contenga URL)",
+      "desc": "Descarga video de Twitter. Si hay varias opciones de calidad disponibles, se le pedirá que elija una.",
       "not_found": "No se encontro Multimedia.",
       "choose_quality": "> Elige la Calidad del Video\n"
     },
     "upload": {
-      "usage": "Ejemplo: upload <URL> (O Cita un mensaje contenga URL)",
+      "usage": "Ejemplo: upload <URL> (O Cita un mensaje que contenga URL)",
       "desc": "Descarga archivos multimedia desde una URL proporcionada. En el caso de las URL abreviadas de Google Images, la URL directa de la imagen se recupera automáticamente."
     },
     "url": {
@@ -783,25 +783,25 @@
       "desc": "Advertir a un usuario en el chat grupal. Este comando aumenta advertencias de un usuario. Si el numero supera el límite, el usuario será expulsado del grupo.. Use 'warn reset' para Resetear Advertencias.",
       "reset_usage": "Cita o menciona para Resetear. Ejemplo: warn reset @user.",
       "cannot_remove_admin": "No puedo Eliminar a un Administrador...",
-      "kick_default": "{0} has been kicked for exceeding warn limit.",
-      "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
+      "kick_default": "{0} ha sido expulsado por exceder el límite de advertencias.",
+      "warn_default": "⚠️ ¡Advertencia {0}! Quedan {1}/{2} advertencias."
     },
     "wcg": {
       "usage": "Ejemplo:\n- `wcg start` (Forzar el inicio del juego)\n- `wcg end` (termina el juego actual)\nEl modo predeterminado es fácil.",
       "desc": "Juego cadenas de palabras (cadáver exquisito texto): participa agregando una palabra que continúe la cadena. Utiliza `wcg start` para forzar el inicio de un nuevo juego o `wcg end` para detener el juego actual.",
-      "game_ends": "Game Ends",
-      "already_used": "_Already Used this Word!_",
-      "not_starting_with": "_Not Starting with {0}_",
-      "length_limit": "_This word length is less than {0}_",
-      "not_in_list": "_This word is not in my words list_",
-      "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Your word must start with *{2}* and include at least *{3}* letters\n🏆Players remaining : {4}/{5}\n⏳You have *{6}s* to answer\n📝Total words : {7}",
-      "timeout": "@{0} ran out of time! They're out! 🚫",
-      "winner": "@{0} Won 🏆\nWords : *{1}*\nLongest word : *{2} ({3})* by @{4} 📚\nTime : *{5}* ⏱️",
-      "joined": "@{0} Joined 👏",
-      "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
-      "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
-      "players_count": "\n\n👥 {0} players joined.",
-      "terminated": "_Not enough players. Game terminated._",
+      "game_ends": "Termina el Juego",
+      "already_used": "_¡Esta Palabra ya ha sido Usada!_",
+      "not_starting_with": "_No empieza con {0}_",
+      "length_limit": "_Esta palabra tiene menos de {0} letras_",
+      "not_in_list": "_Esta palabra no está en mi lista de palabras_",
+      "turn_info": "🎲Turno : @{0}\n🙌Siguiente : @{1}\n🆎Tu palabra debe empezar con *{2}* e incluir al menos *{3}* letras\n🏆Jugadores restantes : {4}/{5}\n⏳Tienes *{6}s* para responder\n📝Total de palabras : {7}",
+      "timeout": "¡A @{0} se le acabó el tiempo! ¡Está fuera! 🚫",
+      "winner": "@{0} Ganó 🏆\nPalabras : *{1}*\nPalabra más larga : *{2} ({3})* por @{4} 📚\nTiempo : *{5}* ⏱️",
+      "joined": "@{0} se unió 👏",
+      "starting": "🎮 El juego está empezando...\n👥 Necesita 2 o más jugadores 🙋‍♂️🙋‍♀️\n⏳ Faltan 60 segundos para unirse ⏳\n🧩 Modo {0}",
+      "starts_in": "🎮 El juego empieza en {0} segundos ⏳\nEscribe *join* para jugar 🙋‍♂️🙋‍♀️\n🧩 Modo {1}{2}",
+      "players_count": "\n\n👥 {0} jugadores se unieron.",
+      "terminated": "_No hay suficientes jugadores. Juego terminado._",
       "mode_update": "_Modo WCG actualizado a {0}_"
     },
     "wrg": {
