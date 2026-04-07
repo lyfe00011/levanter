@@ -3,7 +3,7 @@ const { bot, lang, setGroupMention } = require('../lib/')
 bot(
   {
     pattern: 'antigm ?(.*)',
-    desc: 'Manage anti group mention configuration',
+    desc: lang.plugins.antigm.desc,
     type: 'group',
   },
   async (message, match) => {
@@ -26,7 +26,7 @@ bot(
     }
 
     if (cmd === 'ignore') {
-      if (!args) return await message.send('*Please provide a JID to ignore.*')
+      if (!args) return await message.send(lang.plugins.antigm.ignore_prompt)
       await setGroupMention({ filter: args })
       return await message.send(lang.plugins.antigm.filter)
     }

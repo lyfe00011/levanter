@@ -1,29 +1,29 @@
-const { setCmd, bot, getCmd, delCmd } = require('../lib')
+const { setCmd, bot, getCmd, delCmd, lang } = require('../lib/index')
 
 bot(
   {
     pattern: 'setcmd ?(.*)',
-    desc: 'to set cmd',
+    desc: lang.plugins.cmd.desc_set,
     type: 'misc',
   },
   async (message, match) => {
     if (!message.reply_message || !message.reply_message.sticker)
-      return await message.send('*Reply to a sticker*')
-    if (!match) return await message.send('*Example : setcmd ping*')
+      return await message.send(lang.plugins.cmd.reply_to_sticker)
+    if (!match) return await message.send(lang.plugins.cmd.example_set)
     const res = await setCmd(match, message.reply_message, message.id)
-    return await message.send(res < 1 ? '_Failed_' : '_Success_')
+    return await message.send(res < 1 ? lang.plugins.cmd.failed : lang.plugins.cmd.success)
   }
 )
 
 bot(
   {
     pattern: 'getcmd ?(.*)',
-    desc: 'to get cmd',
+    desc: lang.plugins.cmd.desc_get,
     type: 'misc',
   },
   async (message, match) => {
     const res = await getCmd(message.id)
-    if (!res.length) return await message.send('*Not set any cmds*')
+    if (!res.length) return await message.send(lang.plugins.cmd.not_set)
     return await message.send('```' + res.join('\n') + '```')
   }
 )
@@ -31,13 +31,13 @@ bot(
 bot(
   {
     pattern: 'delcmd ?(.*)',
-    desc: 'to del cmd',
+    desc: lang.plugins.cmd.desc_del,
     type: 'misc',
   },
   async (message, match) => {
     if (!match && (!message.reply_message || !message.reply_message.sticker))
-      return await message.send('*Example :*\ndelcmd cmdName\nReply to a sticker')
+      return await message.send(lang.plugins.cmd.example_del)
     const res = await delCmd(match || message.reply_message, message.id)
-    return await message.send(res < 1 ? '_Failed_' : '_Success_')
+    return await message.send(res < 1 ? lang.plugins.cmd.failed : lang.plugins.cmd.success)
   }
 )

@@ -1,15 +1,16 @@
-const { bot, IsSpotify, isUrl, dowloadTrack, getSpotifyPlaylist } = require('../lib/')
+const { bot, IsSpotify, isUrl, dowloadTrack, getSpotifyPlaylist, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'spotify ?(.*)',
-    desc: 'download track or playlist',
+    fromMe: true,
+    desc: lang.plugins.spotify.desc,
     type: 'download',
   },
   async (message, match) => {
     match = match || message.reply_message.text || ''
     const spotify = IsSpotify(match)
-    if (!spotify) return await message.send('*Example :* spotify track url | playlist url')
+    if (!spotify) return await message.send(lang.plugins.spotify.example)
     match = isUrl(match)
     if (spotify === 'track') {
       const track = await dowloadTrack(match)
@@ -20,7 +21,7 @@ bot(
       )
     }
     const playlist = await getSpotifyPlaylist(match)
-    await message.send(`_downloading ${playlist.length} tracks..._`)
+    await message.send(lang.plugins.spotify.downloading.format(playlist.length))
     for (const song of playlist) {
       try {
         const track = await dowloadTrack(song.title)

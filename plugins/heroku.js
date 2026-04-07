@@ -1,7 +1,7 @@
-const axios = require('axios')
 const Heroku = require('heroku-client')
 const { secondsToHms, isUpdate, updateNow, bot, lang } = require('../lib/')
 const Config = require('../config')
+const { default: axios } = require('axios')
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY })
 const baseURI = '/apps/' + Config.HEROKU_APP_NAME
 
@@ -9,13 +9,14 @@ if (Config.HEROKU_API_KEY && Config.HEROKU_APP_NAME) {
   bot(
     {
       pattern: 'restart',
-      desc: 'Restart Dyno',
+      fromMe: true,
+      desc: lang.plugins.heroku.restart_desc,
       type: 'heroku',
     },
     async (message, match) => {
-      await message.send(`_Restarting_`)
+      await message.send(lang.plugins.heroku.restart_msg)
       await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-        await message.send(`HEROKU : ${error.body.message}`)
+        await message.send(lang.plugins.heroku.error_prefix.format(error.body.message))
       })
     }
   )
@@ -23,14 +24,15 @@ if (Config.HEROKU_API_KEY && Config.HEROKU_APP_NAME) {
   bot(
     {
       pattern: 'shutdown',
-      desc: 'Dyno off',
+      fromMe: true,
+      desc: lang.plugins.heroku.shutdown_desc,
       type: 'heroku',
     },
     async (message, match) => {
       await heroku
         .get(baseURI + '/formation')
         .then(async (formation) => {
-          await message.send(`_Shuttind down._`)
+          await message.send(lang.plugins.heroku.shutdown_msg)
           await heroku.patch(baseURI + '/formation/' + formation[0].id, {
             body: {
               quantity: 0,
@@ -38,7 +40,7 @@ if (Config.HEROKU_API_KEY && Config.HEROKU_APP_NAME) {
           })
         })
         .catch(async (error) => {
-          await message.send(`HEROKU : ${error.body.message}`)
+          await message.send(lang.plugins.heroku.error_prefix.format(error.body.message))
         })
     }
   )
@@ -46,7 +48,8 @@ if (Config.HEROKU_API_KEY && Config.HEROKU_APP_NAME) {
   bot(
     {
       pattern: 'dyno',
-      desc: 'Show Quota info',
+      fromMe: true,
+      desc: lang.plugins.heroku.quota_desc,
       type: 'heroku',
     },
     async (message, match) => {
@@ -65,16 +68,16 @@ if (Config.HEROKU_API_KEY && Config.HEROKU_APP_NAME) {
             const total_quota = Math.floor(resp.account_quota)
             const quota_used = Math.floor(resp.quota_used)
             const remaining = total_quota - quota_used
-            const quota = `Total Quota : ${secondsToHms(total_quota)}
-Used  Quota : ${secondsToHms(quota_used)}
-Remaning    : ${secondsToHms(remaining)}`
+            const quota = `${lang.plugins.heroku.quota_total} ${secondsToHms(total_quota)}
+${lang.plugins.heroku.quota_used}  ${secondsToHms(quota_used)}
+${lang.plugins.heroku.remaining}    ${secondsToHms(remaining)}`
             await message.send('```' + quota + '```')
           })
           .catch(async (error) => {
-            return await message.send(`HEROKU : ${error.body.message}`)
+            return await message.send(lang.plugins.heroku.error_prefix.format(error.body.message))
           })
       } catch (error) {
-        await message.send(error)
+        await message.send(lang.plugins.heroku.error_prefix.format(error.message || error))
       }
     }
   )

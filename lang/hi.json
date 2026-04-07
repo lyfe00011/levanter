@@ -1,48 +1,49 @@
 {
   "extra": {
-    "init_session": "[{0}] Naya session shuru kar raha hoon",
-    "load_session": "[{0}] Session ka status check kar raha hoon",
-    "invalid_session": "[{0}] {1} YE SESSION ID GALAT HAI, FIR SE SCAN KARO!!!",
-    "success_session": "[{0}] Session safalta se verify ho gaya.",
-    "connecting": "[{0}] Connect kar raha hoon...",
-    "connected": "[{0}] Connected {1}",
-    "instance_close": "[{0}] Connection band ho gaya",
-    "instance_restart": "[{0}] Instance restart ho rahi hai...",
-    "reconnect": "[{0}] Dobara connect kar raha hoon...({1})",
-    "reconnect_after": "[{0}] 1 minute baad dobara connect karo",
-    "another_login": "[{0}] Ye session kisi aur device pe login hai.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
-    "deleted_message": "           ye message delete ho gaya",
-    "install_external_plugin": "[{0}] Bahari plugins install kar raha hoon...",
-    "installed_external_plugin": "[{0}] Bahari plugins install ho gaye",
-    "plugin_install": "[{0}] Plugins install kar raha hoon...",
-    "plugin_installed": "[{0}] {1} install ho gaya",
-    "plugins_installed": "[{0}] Sab plugins install ho gaye",
-    "plugin_install_error": "[{0}] {1} install karne mein error aaya, plugin delete kar raha hoon",
-    "plugin_not_found": "[{0}] plugin {1} nahi mila (404), plugin delete kar raha hoon",
-    "group_cmd": "Ye command sirf group chats mein kaam karti hai.",
+    "init_session": "[{0}] Nayi session set up kar raha hoon... 🚀",
+    "load_session": "[{0}] Session data download kar raha hoon... 📥",
+    "invalid_session": "[{0}] {1} Session ID galat hai, phir se scan karo! 📸",
+    "success_session": "[{0}] Session verify ho gaya, ready! ✅",
+    "connecting": "[{0}] Connect ho raha hoon... 📡",
+    "connected": "[{0}] Connected, ready to help! ⚡ {1}",
+    "instance_close": "[{0}] Connection band ho gaya. 👋",
+    "instance_restart": "[{0}] Instance restart ho raha hai... 🔄",
+    "reconnect": "[{0}] Dobara connect kar raha hoon... ({1}) 🔄",
+    "reconnect_after": "[{0}] 1 minute baad phir try karunga. ☕",
+    "another_login": "[{0}] Ye session kisi aur device par login hai. 🤨",
+    "error_message": "```--- ⚠️ ERROR REPORT ⚠️ ---\n\nVersion  : {0}\nMessage  : {1}\nError    : {2}\nJid      : {3}\nCommand  : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "deleted_message": "🗑️ Delete kiya gaya message",
+    "edited_message": "✏️ Edit kiya gaya message #{0}",
+    "install_external_plugin": "[{0}] External plugins install kar raha hoon... 📦",
+    "installed_external_plugin": "[{0}] External plugins install ho gaye! 🎒",
+    "plugin_install": "[{0}] Plugins install kar raha hoon... 📚",
+    "plugin_installed": "[{0}] {1} install ho gaya! ✅",
+    "plugins_installed": "[{0}] Sab plugins ready hain! 🎓",
+    "plugin_install_error": "[{0}] {1} install karne mein error, delete kar raha hoon. 🗑️",
+    "plugin_not_found": "[{0}] Plugin {1} nahi mila (404), delete kar raha hoon. 🔍",
+    "group_cmd": "Ye command sirf group chats mein kaam karti hai. 👨‍👩‍👧‍👦",
     "labels": {
-      "sudo": "SUDO",
-      "auto_read": "AUTO READ MSG",
-      "auto_status": "AUTO STATUS VIEW",
-      "auto_reject": "AUTO REJECT CALL",
-      "always_online": "ALWAYS ONLINE",
-      "anti_delete": "ANTI DELETE MSG",
-      "auto_update": "AUTO UPDATE BOT"
+      "sudo": "🛡️ SUDO",
+      "auto_read": "📖 AUTO READ MSG",
+      "auto_status": "👀 AUTO STATUS VIEW",
+      "auto_reject": "🚫 AUTO REJECT CALL",
+      "always_online": "🔋 ALWAYS ONLINE",
+      "anti_delete": "🛡️ ANTI DELETE MSG",
+      "auto_update": "🔄 AUTO UPDATE BOT"
     },
-    "promoted": "प्रमोट (Promoted)",
-    "demoted": "डेमोट (Demoted)",
-    "file_size_error": "साइज़ {0} है\n\n{1}",
-    "missing_jid": "JIDs नहीं मिले",
-    "no_contacts": "कॉन्टैक्ट्स नहीं मिले, कृपया जोड़ें",
-    "reaction_not_enabled": "Reaction चालू नहीं है",
-    "reaction_not_allowed": "ये reaction अलाउड नहीं है",
-    "metadata_fetch_failed": "Metadata नहीं मिला",
-    "lang_not_supported": "' {0} ' भाषा अभी सपोर्टेड नहीं है, डिफॉल्ट भाषा पर स्विच कर रहे हैं।",
-    "screenshot_error": "एरर आया",
-    "id_missing": "ID गायब है",
-    "not_on_whatsapp": "{0} व्हाट्सएप पर नहीं है।",
-    "yt_auth_required": "डाउनलोड विफल: YouTube को प्रमाणीकरण (Authentication) की आवश्यकता है।\n\n*समाधान:*\n1. *Google Auth (अनुशंसित):* अपने Google खाते को लिंक करने के लिए `.gauth auth` का उपयोग करें।\n2. *YT_COOKIE:* `YT_COOKIE` एनवायरनमेंट वेरिएबल सेट करें।\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "promoted": "ne promote kiya",
+    "demoted": "ne demote kiya",
+    "file_size_error": "File size bahut bada hai! 📂\nSize: {0}\n\n{1}",
+    "missing_jid": "JIDs missing hain. 🗺️",
+    "no_contacts": "Contacts nahi mile, pehle add karo. 👥",
+    "reaction_not_enabled": "Is channel par reactions disabled hain.",
+    "reaction_not_allowed": "Yeh reaction is channel par allowed nahi hai.",
+    "metadata_fetch_failed": "Metadata fetch nahi ho paya. 🧩",
+    "lang_not_supported": "' {0} ' language support nahi hai, default par switch kar raha hoon. 🌐",
+    "screenshot_error": "Screenshot lene mein error. 📸❌",
+    "id_missing": "ID missing hai. 🕵️",
+    "not_on_whatsapp": "{0} WhatsApp par nahi hai. 👻",
+    "yt_auth_required": "Download fail: YouTube authentication maangta hai. 🗝️\n\n*Solutions:*\n1. *Google Auth:* Apna Google account link karne ke liye `.gauth auth` use karo.\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set karo.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -50,7 +51,36 @@
       "reply_to_message": "Ek message ka reply karein",
       "not_admin": "Main admin nahi hoon.",
       "not_found": "Nahi mila.",
-      "update": "_Settings update ho gaye! Aapki preferences save ho gayi hain aur ab active hain._"
+      "update": "_Settings update ho gaye! Aapki preferences save ho gayi hain aur ab active hain._",
+      "spotify_download_failed": "Spotify track download nahi ho saka",
+      "spotify_playlist_failed": "Spotify playlist nahi mil saki",
+      "truecaller_login_prompt": "Aap login nahi hain.\n\nTruecaller mein login karne ke liye apna number bhejein.\n\nExample : truecaller your_number",
+      "truecaller_sent": "Code aapke number par bhej diya gaya hai\n\nExample : truecaller 653084",
+      "truecaller_invalid_number": "Number ghalat hai",
+      "truecaller_invalid_code": "Code ghalat hai",
+      "truecaller_invalid_mobile": "Mobile number ghalat hai",
+      "group_not_found": "{0} group mein nahi hai. Pehle 3 members: {1}",
+      "import_contacts_first": "Pehle contacts import karein",
+      "video_not_supported": "Is bot mein music engine video downloads support nahi karta.",
+      "audio_disabled": "Music engine download fail ho gaya aur YouTube audio disabled hai.",
+      "gemini_missing_api_key": "GEMINI_API_KEY nahi hai",
+      "gemini_error": "error",
+      "upscale_upload_failed": "Image upload nahi ho saki",
+      "upscale_invalid_response": "Upscale service se invalid response",
+      "upscale_failed": "Image upscale nahi ho saki. Baad mein try karein.",
+      "invalid_file_type": "Error: {0}-file process nahi ho sakti",
+      "upload_failed": "File upload error: {0}",
+      "yt_login_prompt": "Apne YouTube account mein login karein ya YT_COOKIE set karein.\n\nYahan login karein => https://levanter-plugins.vercel.app/yt\n",
+      "yt_cookie_needed": "YT Cookie set karein\nhttps://t.me/c/2479057503/378/2550",
+      "yt_not_found": "{0} nahi mila",
+      "time_day": " din ",
+      "time_days": " din ",
+      "time_hour": " ghanta ",
+      "time_hours": " ghante ",
+      "time_minute": " minute ",
+      "time_minutes": " minute ",
+      "time_second": " second",
+      "time_seconds": " seconds"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ प्रीफिक्स : {0}\n│ उपयोगकर्ता : {1}\n│ समय : {2}\n│ दिन : {3}\n│ तारीख : {4}\n│ वर्जन : {5}\n│ प्लगइन्स : {6}\n│ रैम : {7}\n│ अपटाइम : {8}\n│ प्लेटफॉर्म : {9}\n╰────────────────```",
@@ -709,7 +739,7 @@
       "invalid_input": "Galat input. Sahi opponent provide karein ya 'end' ya 'restart' sahi tarah use karein.",
       "players": "Players",
       "already_occupied": "_Pehle se occupied hai_",
-      "current_player": "currentPlayer",
+      "current_player": "Current Player",
       "game_finish": "Game Finish 🏁",
       "winner": "Winner (विजेता)",
       "restart": "Game Restart (दोबारा शुरू करें)",
@@ -810,17 +840,28 @@
     },
     "yts": {
       "usage": "Usage: yts baymax",
-      "desc": "YouTube videos ko query ya URL se search karo. Agar valid YouTube URL diya gaya hai, toh pehle video ka detailed information return karo."
+      "desc": "YouTube videos ko query ya URL se search karo. Agar valid YouTube URL diya gaya hai, toh pehle video ka detailed information return karo.",
+      "title": "*Title :* ",
+      "time": "*Time :* ",
+      "views": "*Views :* ",
+      "publish": "*Publish :* ",
+      "desc_label": "*Desc :* ",
+      "author": "*Channel :* ",
+      "url": "*Url :* "
     },
     "song": {
       "usage": "Usage: song indila love story YA song <YouTube URL> (message ka reply bhi supported hai)",
       "desc": "YouTube se song download karo. Agar URL diya gaya hai, toh song directly download ho jayega; warna search kiya jayega aur results ki list generate ki jayegi selection ke liye.",
-      "not_found": "Diye gaye query ya URL ke liye koi song nahi mila."
+      "not_found": "Diye gaye query ya URL ke liye koi song nahi mila.",
+      "no_result": "_Koi result nahi mila_ *{0}*",
+      "id_label": "🆔&id\n",
+      "list_header": "{0} search karke {1} results mile\nSong download karne ke liye 🆔 bhejein.\n"
     },
     "video": {
       "usage": "Usage: video <YouTube URL> (ya URL wale message ka reply karo)",
       "desc": "YouTube video download karo. Agar direct URL diya gaya hai, toh video download ho jayegi; agar search query diya gaya hai, toh results ki list generate ki jayegi selection ke liye.",
-      "not_found": "Diye gaye query ya URL ke liye koi video nahi mila."
+      "not_found": "Diye gaye query ya URL ke liye koi video nahi mila.",
+      "list_header": "{0} search kiya\n{1} results mile"
     },
     "update": {
       "usage": "Usage: update",
@@ -840,12 +881,14 @@
       "action": "Action update ho gaya: group mentions ab *{0}* karenge.",
       "filter": "Anti group mention ke liye ignored JIDs update ho gaye.",
       "enabled": "Anti group mention enable ho gaya hai.",
-      "disabled": "Anti group mention disable ho gaya hai."
+      "disabled": "Anti group mention disable ho gaya hai.",
+      "desc": "Anti group mention settings manage karein 🛡️",
+      "ignore_prompt": "*Boss, ignore karne ke liye ek JID dein.* 🕵️‍♂️"
     },
     "reminder": {
       "desc": "Google Calendar reminders manage karein.",
       "usage": "> *Reminders Istemal:*\n- `reminder <text>` - Naya reminder set karein (ex: 'reunion demain à 10h')\n- `reminder list` - Saare reminders ki list dekhein\n- `reminder del <id>` - Reminder delete karein",
-      "success": "✅ Reminder set ho gaya: *{0}* {1} ko",
+      "success": "*Reminder Added!*\n\n*Event:* {0}\n*Time:* {1}\n*Link:* {2}",
       "list": "*Aapke Reminders:*\n\n{0}",
       "list_empty": "Koi reminder nahi mila.",
       "deleted": "रिमाइंडर सफलतापूर्वक हटा दिया गया!",
@@ -892,6 +935,132 @@
       "auth_required": "कृपया *.gauth auth* का उपयोग करके प्रमाणित करें और Google Tasks अनुमतियां सक्षम करें।",
       "list_lists": "📝 *कार्य सूचियां*:\n",
       "switched": "डिफ़ॉल्ट कार्य सूची *{0}* पर स्विच की गई।"
+    },
+    "antiedit": {
+      "desc": "Anti-edit: edit kiye gaye messages track karke unki history dikhata hai",
+      "example": "> *Usage Examples:*\n- antiedit p - Edit history ko aapke chat/sudo par bhejein\n- antiedit g - Edit history same group mein bhejein\n- antiedit off - Anti-edit disable karein\n- antiedit <jid> - Edit history specific JID par bhejein",
+      "invalid_jid": "*Error:* _Invalid JID_",
+      "edit_msg_jid": " _Edit history yahan bheji jaegi: {0}_",
+      "edit_msg_disable": "Anti-edit disable kar diya gaya hai.",
+      "edit_msg_sudo": "_Edit history aapke chat ya sudo par bheji jaegi._",
+      "edit_msg_chat": "_Edit history isi chat mein bheji jaegi._"
+    },
+    "screenshot": {
+      "usage": "Example: screenshot levanter.site",
+      "desc": "Kisi bhi website ka screenshot lein! 📸"
+    },
+    "lyrics": {
+      "usage": "Example: lyrics heat waves",
+      "desc": "Apne favorite gaano ke lyrics dhundein! 🎤",
+      "not_found": "Wo lyrics nahi mile. Spelling galat hai? 🧐"
+    },
+    "google": {
+      "usage": "Example: google how to make coffee",
+      "desc": "Google par kuch bhi search karein! 🌐"
+    },
+    "lofi": {
+      "desc": "Tidal se lofi audio download karein",
+      "usage": "_Ek song ka naam dein_",
+      "no_result": "_Koi result nahi mila_ *{0}*",
+      "error_download": "_Lofi audio download error: {0}_",
+      "error_search": "_Lofi search error: {0}_",
+      "list_header": "{0} search karke {1} results mile\nLofi download karne ke liye 🆔 bhejein.\n"
+    },
+    "spotify": {
+      "desc": "Apne favourite tracks ya playlists download karein 🎧",
+      "example": "*Example :* spotify <url>",
+      "downloading": "_Aapke liye {0} tracks download kar raha hoon! Vibe ke liye taiyar ho jao!_ 🎧🎶"
+    },
+    "audio": {
+      "desc": "audio mod",
+      "reply_to_audio": "*Ek audio message ka reply karein*"
+    },
+    "img": {
+      "desc": "Pinterest image search",
+      "example": "*Example :  img cats*\n*img 10 cats*",
+      "no_result": "_{0} ke liye koi Pinterest image nahi mili_",
+      "downloading": "_{1} ki {0} Pinterest images download kar raha hoon_"
+    },
+    "react": {
+      "desc": "Message par react karein",
+      "example": "_Example : react ❣_",
+      "channel_desc": "Channel par react karein",
+      "channel_example": "_Example : creact https://whatsapp.com/channel/xxx/xxx, ❣_",
+      "info_desc": "Channel info dekhein",
+      "info_example": "_Example : cinfo https://whatsapp.com/channel/xxx",
+      "invalid_url": "_Invalid channel URL_",
+      "metadata_failed": "_Channel metadata fetch nahi ho saki_",
+      "name": "*Name :* ",
+      "jid": "*Jid :* ",
+      "subscribers": "*Subscribers :* ",
+      "verification": "*Verification :* ",
+      "creation": "*Banaya gaya :* ",
+      "description": "*Description :* "
+    },
+    "budget": {
+      "income_desc": "income set karne ke liye",
+      "income_example": "*Type missing*\n*Example : income type,amount,remark*\n*income salary, 500*\n\n*remark optional hai*",
+      "income_success": "*Is mahine ka income {0} hai*",
+      "expense_desc": "expense set karne ke liye",
+      "expense_example": "*Type missing*\n*Example : expense type,amount,remark*\n*expense movie, 200, movie_name*\n\n*remark optional hai*",
+      "expense_success": "*Is mahine ka expense {0} hai*",
+      "del_desc": "income | expense delete karne ke liye",
+      "del_example": "*Example : delbudget id*\n\n*ID summary se*\n*Amount update karne ke liye delete na karein, dobara enter karein*",
+      "del_not_found": "_{0} list mein nahi hai._",
+      "del_success": "_{0} list se hata diya gaya._",
+      "summary_desc": "Budget summary lene ke liye",
+      "summary_example": "*Example : summary 1 May 2023, 3 May 2023*"
+    },
+    "exif": {
+      "desc": "Sticker se Exif metadata nikalein",
+      "reply_to_sticker": "*Sticker ka reply karein.*",
+      "failed": "*Sticker download nahi ho saka.*",
+      "not_found": "*Is sticker mein koi Exif metadata nahi hai.*",
+      "pack_id": "*Pack ID:* ",
+      "pack_name": "*Pack Name:* ",
+      "author": "*Author:* ",
+      "emojis": "*Emojis:* "
+    },
+    "bing": {
+      "desc": "bing ai",
+      "example": "*Example : bing Hi*",
+      "dale_desc": "bing image creator",
+      "dale_cookie_prompt": "Bing cookie set karein, https://bing.com/images/create par login karein, bing Image Creator ek baar use karein, phir cookie copy karein.",
+      "dale_example": "*Example :* dale Create a 3D illusion for a WhatsApp profile picture where a boy in a white shirt sits casually on a royal Sofa. Wearing White sneakers,a black T-shirt, and sunglasses, he looks ahead. The background features \"Arjun \" in big and capital Yellow fonts on the black wall."
+    },
+    "backup": {
+      "desc": "Backup operations manage karein: authenticate, validate, ya backup karein.",
+      "usage": "*Backup Command Usage:*\n\n- .gauth auth — Google Drive access ke liye apna account authenticate karein.\n- backup now — Abhi backup karein.",
+      "success": "Backup successfully complete ho gaya!",
+      "auth_prompt": "Authentication shuru karne ke liye `.gauth auth` use karein.",
+      "code_prompt": "Apna code validate karne ke liye `.gauth code <url_or_code>` use karein.",
+      "downloading": "_File download ho rahi hai..._"
+    },
+    "poll": {
+      "desc": "Multiple options ke saath ek poll banaein.",
+      "example": "*Example : question,option1,option2,...*"
+    },
+    "cmd": {
+      "desc_set": "cmd set karne ke liye",
+      "desc_get": "cmd get karne ke liye",
+      "desc_del": "cmd delete karne ke liye",
+      "reply_to_sticker": "*Sticker ka reply karein*",
+      "example_set": "*Example : setcmd ping*",
+      "not_set": "*Koi cmd set nahi hai*",
+      "example_del": "*Example :*\ndelcmd cmdName\nSticker ka reply karein",
+      "success": "_Success_",
+      "failed": "_Failed_"
+    },
+    "heroku": {
+      "restart_desc": "Dyno restart karein",
+      "restart_msg": "_Restart ho raha hai..._",
+      "shutdown_desc": "Dyno band karein",
+      "shutdown_msg": "_Band ho raha hai..._",
+      "quota_desc": "Quota info dikhayein",
+      "quota_total": "Total Quota :",
+      "quota_used": "Used Quota :",
+      "remaining": "Remaining :",
+      "error_prefix": "HEROKU : {0}"
     }
   }
 }

@@ -1,4 +1,4 @@
-const { tiktok, bot, isUrl, lang } = require('../lib')
+const { tiktok, bot, generateList, isUrl, lang } = require('../lib/index')
 
 bot(
   {
@@ -7,13 +7,32 @@ bot(
     type: 'download',
   },
   async (message, match) => {
-    match = isUrl(match || message.reply_message.text)
+    match = isUrl(match || message.reply_message?.text)
     if (!match) return await message.send(lang.plugins.tiktok.usage)
+
     const result = await tiktok(match)
-    if (!result)
+
+    if (!result || !result.length) {
       return await message.send(lang.plugins.tiktok.not_found, {
         quoted: message.quoted,
       })
-    return await message.sendFromUrl(result.url2 || result.url1)
+    }
+
+    if (result.length === 1) {
+      return await message.sendFromUrl(result[0].url, { quoted: message.data })
+    }
+
+    const list = generateList(
+      result.map((e) => ({
+        id: `upload ${e.url}`,
+        text: e.quality,
+      })),
+      lang.plugins.fb.quality,
+      message.jid,
+      message.participant,
+      message.id
+    )
+
+    return message.send(list.message, {}, list.type)
   }
 )

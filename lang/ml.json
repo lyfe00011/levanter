@@ -1,48 +1,49 @@
 {
   "extra": {
-    "init_session": "[{0}] New session start cheyyunnu",
-    "load_session": "[{0}] Session status check cheyyunnu",
-    "invalid_session": "[{0}] {1} SESSION ID WRONG AANU, VEENDUM SCAN CHEYYU!!!",
-    "success_session": "[{0}] Session ok aayi.",
-    "connecting": "[{0}] Connect cheyyunnu...",
-    "connected": "[{0}] Connect aayitto {1}",
-    "instance_close": "[{0}] Connection cut aayi",
-    "instance_restart": "[{0}] Bot restart aavunnu...",
-    "reconnect": "[{0}] Veendum connect cheyyunnu...({1})",
-    "reconnect_after": "[{0}] 1 minutinu shesham connect aavum",
-    "another_login": "[{0}] Verae device-il login aayi.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
-    "deleted_message": "           Message delete aayi",
-    "install_external_plugin": "[{0}] External plugins install cheyyunnu...",
-    "installed_external_plugin": "[{0}] External Plugins install aayi",
-    "plugin_install": "[{0}] Plugins install cheyyunnu...",
-    "plugin_installed": "[{0}] {1} install aayi",
-    "plugins_installed": "[{0}] Ella plugins-um install aayi",
-    "plugin_install_error": "[{0}] {1} install cheyyan pattiilla, delete cheyyunnu",
-    "plugin_not_found": "[{0}] [{1}] ee plugin kittiilla (404), delete cheyyunnu",
-    "group_cmd": "Ee command groups-il mathrame work aavu.",
+    "init_session": "[{0}] Puthiya session set up cheyyukayaanu... 🚀",
+    "load_session": "[{0}] Session data download cheyyunnu... 📥",
+    "invalid_session": "[{0}] {1} Session key expire aayi. Veendum scan cheyyu! 📸",
+    "success_session": "[{0}] Session valid aanu, ready! ✅",
+    "connecting": "[{0}] WhatsApp-il connect cheyyunnu... 📡",
+    "connected": "[{0}] Online aayi, ready to help! ⚡ {1}",
+    "instance_close": "[{0}] Offline aavunnu. Pinne kaanaam! 👋",
+    "instance_restart": "[{0}] Restart aavunnu... Ippo varaam! 🔄",
+    "reconnect": "[{0}] Connection poyi. Veendum try cheyyunnu... ({1}) 🔄",
+    "reconnect_after": "[{0}] 1 minute kazhinju veendum try cheyyaam. ☕",
+    "another_login": "[{0}] Vere oru device-il login aayittund! 🤨",
+    "error_message": "```--- ⚠️ ERROR REPORT ⚠️ ---\n\nVersion  : {0}\nMessage  : {1}\nError    : {2}\nJid      : {3}\nCommand  : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "deleted_message": "🗑️ Delete cheytha message",
+    "edited_message": "✏️ Edit cheytha message #{0}",
+    "install_external_plugin": "[{0}] External plugins install cheyyunnu... 📦",
+    "installed_external_plugin": "[{0}] External plugins install aayi! 🎒",
+    "plugin_install": "[{0}] Plugins install cheyyunnu... 📚",
+    "plugin_installed": "[{0}] {1} install aayi! ✅",
+    "plugins_installed": "[{0}] Ella plugins-um ready! 🎓",
+    "plugin_install_error": "[{0}] {1} install cheyyaan pattiyilla, delete cheyyunnu. 🗑️",
+    "plugin_not_found": "[{0}] Plugin {1} kittiyilla (404), delete cheyyunnu. 🔍",
+    "group_cmd": "Ee command groups-il mathrame work aavu. 👨‍👩‍👧‍👦",
     "labels": {
-      "sudo": "SUDO",
-      "auto_read": "AUTO READ MSG",
-      "auto_status": "AUTO STATUS VIEW",
-      "auto_reject": "AUTO REJECT CALL",
-      "always_online": "ALWAYS ONLINE",
-      "anti_delete": "ANTI DELETE MSG",
-      "auto_update": "AUTO UPDATE BOT"
+      "sudo": "🛡️ SUDO",
+      "auto_read": "📖 AUTO READ MSG",
+      "auto_status": "👀 AUTO STATUS VIEW",
+      "auto_reject": "🚫 AUTO REJECT CALL",
+      "always_online": "🔋 ALWAYS ONLINE",
+      "anti_delete": "🛡️ ANTI DELETE MSG",
+      "auto_update": "🔄 AUTO UPDATE BOT"
     },
-    "promoted": "Promote aayi",
-    "demoted": "Demote aayi",
-    "file_size_error": "Size {0} aanu\n\n{1}",
-    "missing_jid": "JIDs kittiilla",
-    "no_contacts": "Contact-ukkal onnumilla, please add cheyyu",
-    "reaction_not_enabled": "Reaction on alla",
-    "reaction_not_allowed": "Ee reaction allow cheyyilla",
-    "metadata_fetch_failed": "Metadata kittunnilla",
-    "lang_not_supported": "' {0} ' ee bhasha ippo pattiilla, default-ilekk maarunnu.",
-    "screenshot_error": "Error aayitto",
-    "id_missing": "ID kittiilla",
-    "not_on_whatsapp": "{0} WhatsApp-il illa.",
-    "yt_auth_required": "Download fail aayi: YouTube-nu authentication venam.\n\n*Solutions:*\n1. *Google Auth (Recommended):* Ninte Google account link cheyyaan `.gauth auth` use cheyyu.\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set cheyyuka.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "promoted": "promote cheythu",
+    "demoted": "demote cheythu",
+    "file_size_error": "File size valuthaanu! 📂\nSize: {0}\n\n{1}",
+    "missing_jid": "JIDs venam adyam! 🗺️",
+    "no_contacts": "Contacts onnumilla, add cheyyu! 👥",
+    "reaction_not_enabled": "Ee channel-il reactions disabled aanu.",
+    "reaction_not_allowed": "Ee channel-il ee reaction allowed alla.",
+    "metadata_fetch_failed": "Metadata fetch cheyyaan pattiyilla. 🧩",
+    "lang_not_supported": "' {0} ' support cheyyilla, default-ilekk maarunnu. 🌐",
+    "screenshot_error": "Screenshot edukkaan pattiyilla. 📸❌",
+    "id_missing": "ID kittiyilla. 🕵️",
+    "not_on_whatsapp": "{0} WhatsApp-il illa. 👻",
+    "yt_auth_required": "Download fail aayi! YouTube authentication venam. 🗝️\n\n*Solutions:*\n1. *Google Auth:* `.gauth auth` use cheyyu.\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set cheyyu.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -50,7 +51,36 @@
       "reply_to_message": "Messaginu reply adi",
       "not_admin": "Njan admin alla.",
       "not_found": "Kittiyilla.",
-      "update": "_Settings ellam set aayi! Save cheythittund._"
+      "update": "_Settings ellam set aayi! Save cheythittund._",
+      "spotify_download_failed": "Spotify track download cheyyaan pattiyilla",
+      "spotify_playlist_failed": "Spotify playlist edukkaan pattiyilla",
+      "truecaller_login_prompt": "Login cheytittilla.\n\nTruecaller-il login cheyyaan ninte number ayachoode.\n\nExample : truecaller your_number",
+      "truecaller_sent": "Code ninte number-ilekku ayachu\n\nExample : truecaller 653084",
+      "truecaller_invalid_number": "Number theerinjittilla",
+      "truecaller_invalid_code": "Code theerinjittilla",
+      "truecaller_invalid_mobile": "Mobile number theerinjittilla",
+      "group_not_found": "{0} group-il illa. Aadya 3 members: {1}",
+      "import_contacts_first": "Adyam contacts import cheyyu",
+      "video_not_supported": "Ee bot-il music engine video downloads support cheyyilla.",
+      "audio_disabled": "Music engine download fail aayi, YouTube audio off aanu.",
+      "gemini_missing_api_key": "GEMINI_API_KEY illa",
+      "gemini_error": "error",
+      "upscale_upload_failed": "Image upload aayilla",
+      "upscale_invalid_response": "Upscale service-il ninnu invalid response",
+      "upscale_failed": "Image upscale cheyyaan pattiyilla. Kure kazhinju try cheyyu.",
+      "invalid_file_type": "Error: {0}-file process cheyyaan pattilla",
+      "upload_failed": "File upload error: {0}",
+      "yt_login_prompt": "Ninte YouTube account-il login cheyyu allenkil YT_COOKIE variable set cheyyu.\n\nIvide login cheyyu => https://levanter-plugins.vercel.app/yt\n",
+      "yt_cookie_needed": "YT Cookie set cheyyu\nhttps://t.me/c/2479057503/378/2550",
+      "yt_not_found": "{0} kittiyilla",
+      "time_day": " divasam ",
+      "time_days": " divasangal ",
+      "time_hour": " manikkur ",
+      "time_hours": " manikkurukal ",
+      "time_minute": " minute ",
+      "time_minutes": " minutes ",
+      "time_second": " second",
+      "time_seconds": " seconds"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Samayam : {2}\n│ Divasam : {3}\n│ Thiyathi : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
@@ -791,7 +821,7 @@
       "desc": "Word Chain Game: Oru word paranju game continue cheyyaan. 'wcg start' upayogichu game start cheyyaam, 'wcg end' upayogichu stop cheyyaam.",
       "game_ends": "Game Over",
       "already_used": "_Ee word munbe use cheythittund!_",
-      "not_starting_with": "_{0} vechu start cheyyunnilla_",
+      "not_starting_with": "_{0} {1} vechu start cheyyunnilla_",
       "length_limit": "_Ee word-inu {0}-il thazhe length mathrame ullu_",
       "not_in_list": "_Ee word ente list-il illa_",
       "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎{2} vechu start cheyyunna word para (kuranjath {3} letters venam)\n🏆Players baakki : {4}/{5}\n⏳ Reply kodukkaan *{6}* seconds und\n📝Total words : {7}",
@@ -810,17 +840,28 @@
     },
     "yts": {
       "usage": "Example: yts baymax",
-      "desc": "YouTube videos search cheyyaan peru athallennkil URL para."
+      "desc": "YouTube videos search cheyyaan peru athallennkil URL para.",
+      "title": "*Title :* ",
+      "time": "*Samayam :* ",
+      "views": "*Views :* ",
+      "publish": "*Publish :* ",
+      "desc_label": "*Desc :* ",
+      "author": "*Channel :* ",
+      "url": "*Url :* "
     },
     "song": {
       "usage": "Example: song indila love story ATHALLENGIL song <YouTube URL> (reply-um work aavum)",
       "desc": "YouTube-il ninnu paattu download cheyyaan. URL koduthaal direct download aavum.",
-      "not_found": "Aa paattu kandethaan kazhinjilla. 🎵"
+      "not_found": "Aa paattu kandethaan kazhinjilla. 🎵",
+      "no_result": "_No results for_ *{0}*",
+      "id_label": "🆔&id\n",
+      "list_header": "{0} thiranju {1} results kitti\nPaattu download cheyyaan 🆔 ayachoode.\n"
     },
     "video": {
       "usage": "Example: video 720p <YouTube URL> ATHALLENGIL video <YouTube URL>",
       "desc": "YouTube video download cheyyaan. Quality-um venel mathram para (e.g., 720p, 1080p). Default 480p aanu.",
-      "not_found": "Aa video kandethaan kazhinjilla. 🎥"
+      "not_found": "Aa video kandethaan kazhinjilla. 🎥",
+      "list_header": "{0} thiranju\n{1} results kitti"
     },
     "update": {
       "usage": "Example: update",
@@ -840,7 +881,9 @@
       "action": "Action update aayi: Group mention vannaal ippo *{0}* aavum.",
       "filter": "Anti group mention skip list update aayitto.",
       "enabled": "Anti group mention on aayi.",
-      "disabled": "Anti group mention off aayi."
+      "disabled": "Anti group mention off aayi.",
+      "desc": "Anti group mention settings manage cheyyaan 🛡️",
+      "ignore_prompt": "*Boss, ignore cheyyaanulla oru JID kodukku.* 🕵️‍♂️"
     },
     "reminder": {
       "desc": "Google Calendar-il reminder add cheyyaan.",
@@ -892,6 +935,132 @@
       "auth_required": "Adyam *.gauth auth* use cheythittu Google Tasks permissions kuttu.",
       "list_lists": "📝 *Task Lists*:\n",
       "switched": "Default task list ippo *{0}* aayi."
+    },
+    "antiedit": {
+      "desc": "Anti-edit: Edit cheytha messages track cheythu history kaanikkaan",
+      "example": "> *Usage Examples:*\n- antiedit p - Edit history ninte chat/sudo-ilekku ayaykkaan\n- antiedit g - Edit history aa group-il thanne ayaykkaan\n- antiedit off - Anti-edit off aakkaan\n- antiedit <jid> - Specific JID-ilekk ayaykkaan",
+      "invalid_jid": "*Error:* _JID thettaanu_",
+      "edit_msg_jid": " _Edit history ivide ayaykkum: {0}_",
+      "edit_msg_disable": "Anti-edit off aayi.",
+      "edit_msg_sudo": "_Edit history ninte chat allenkil sudo-ilekk ayaykkum._",
+      "edit_msg_chat": "_Edit history aa chat-il thanne ayaykkum._"
+    },
+    "screenshot": {
+      "usage": "Example: screenshot levanter.site",
+      "desc": "Ethu website-inteyum screenshot edukku! 📸"
+    },
+    "lyrics": {
+      "usage": "Example: lyrics heat waves",
+      "desc": "Ninte favourite paattukalude lyrics kandethu! 🎤",
+      "not_found": "Aa lyrics kittiyilla. Spelling thettaano? 🧐"
+    },
+    "google": {
+      "usage": "Example: google how to make coffee",
+      "desc": "Ethu vivaravum Google cheyyu! 🌐"
+    },
+    "lofi": {
+      "desc": "Tidal-il ninnu lofi audio download cheyyu",
+      "usage": "_Oru paattinte peru kodukku_",
+      "no_result": "_No results for_ *{0}*",
+      "error_download": "_Error downloading lofi audio: {0}_",
+      "error_search": "_Error searching lofi: {0}_",
+      "list_header": "{0} thiranju {1} results kitti\nLofi download cheyyaan 🆔 ayachoode.\n"
+    },
+    "spotify": {
+      "desc": "Ninte favourite tracks-um playlists-um download cheyyu 🎧",
+      "example": "*Example :* spotify <url>",
+      "downloading": "_Ningalkku vendi {0} tracks download cheyyukayaanu! Vibe cheyyaan ready aavu!_ 🎧🎶"
+    },
+    "audio": {
+      "desc": "audio mod",
+      "reply_to_audio": "*Oru audio message-inu reply cheyyu*"
+    },
+    "img": {
+      "desc": "Pinterest image search",
+      "example": "*Example :  img cats*\n*img 10 cats*",
+      "no_result": "_{0}-inu Pinterest images onnum kittiyilla_",
+      "downloading": "_{1}-inte {0} Pinterest images download cheyyukayaanu_"
+    },
+    "react": {
+      "desc": "Message-inu react cheyyaan",
+      "example": "_Example : react ❣_",
+      "channel_desc": "Channel-inu react cheyyaan",
+      "channel_example": "_Example : creact https://whatsapp.com/channel/xxx/xxx, ❣_",
+      "info_desc": "Channel info edukkaan",
+      "info_example": "_Example : cinfo https://whatsapp.com/channel/xxx",
+      "invalid_url": "_Invalid channel URL_",
+      "metadata_failed": "_Channel metadata fetch cheyyaan kazhinjilla_",
+      "name": "*Peru :* ",
+      "jid": "*Jid :* ",
+      "subscribers": "*Subscribers :* ",
+      "verification": "*Verification :* ",
+      "creation": "*Undakkiyathu :* ",
+      "description": "*Description :* "
+    },
+    "budget": {
+      "income_desc": "income set cheyyaan",
+      "income_example": "*Type missing*\n*Example : income type,amount,remark*\n*income salary, 500*\n\n*remark optional aanu*",
+      "income_success": "*Ee maasathe income {0} aanu*",
+      "expense_desc": "expense set cheyyaan",
+      "expense_example": "*Type missing*\n*Example : expense type,amount,remark*\n*expense movie, 200, movie_name*\n\n*remark optional aanu*",
+      "expense_success": "*Ee maasathe expense {0} aanu*",
+      "del_desc": "income | expense delete cheyyaan",
+      "del_example": "*Example : delbudget id*\n\n*Id summary-il ninnu edukku*\n*Amount update cheyyaan delete cheyyathe veendum enter cheyyu*",
+      "del_not_found": "_{0} list-il illa._",
+      "del_success": "_{0} list-il ninnu maatti._",
+      "summary_desc": "Budget-inte summary edukkaan",
+      "summary_example": "*Example : summary 1 May 2023, 3 May 2023*"
+    },
+    "exif": {
+      "desc": "Sticker-il ninnu Exif metadata extract cheyyaan",
+      "reply_to_sticker": "*Oru sticker-inu reply cheyyu.*",
+      "failed": "*Sticker download cheyyaan kazhinjilla.*",
+      "not_found": "*Ee sticker-il Exif metadata onnumilla.*",
+      "pack_id": "*Pack ID:* ",
+      "pack_name": "*Pack Name:* ",
+      "author": "*Author:* ",
+      "emojis": "*Emojis:* "
+    },
+    "bing": {
+      "desc": "bing ai",
+      "example": "*Example : bing Hi*",
+      "dale_desc": "bing image creator",
+      "dale_cookie_prompt": "Bing cookie set cheyyu, https://bing.com/images/create-il login cheythu Bing Image Creator oru pravashyam use cheyyu, ennitt cookie copy cheyyu.",
+      "dale_example": "*Example :* dale Create a 3D illusion for a WhatsApp profile picture where a boy in a white shirt sits casually on a royal Sofa. Wearing White sneakers,a black T-shirt, and sunglasses, he looks ahead. The background features \"Arjun \" in big and capital Yellow fonts on the black wall."
+    },
+    "backup": {
+      "desc": "Backup operations manage cheyyaan: authenticate, validate, allenkil backup edukkaan.",
+      "usage": "*Backup Command Usage:*\n\n- .gauth auth — Google Drive access-inu account authenticate cheyyu.\n- backup now — Ippol thanne backup edukku.",
+      "success": "Backup successfully complete aayi!",
+      "auth_prompt": "Authentication thudangaan `.gauth auth` use cheyyu.",
+      "code_prompt": "Code validate cheyyaan `.gauth code <url_or_code>` use cheyyu.",
+      "downloading": "_File download cheyyukayaanu..._"
+    },
+    "poll": {
+      "desc": "Pala options koodi vechu oru poll undakkaan.",
+      "example": "*Example : question,option1,option2,...*"
+    },
+    "cmd": {
+      "desc_set": "cmd set cheyyaan",
+      "desc_get": "cmd edukkaan",
+      "desc_del": "cmd delete cheyyaan",
+      "reply_to_sticker": "*Oru sticker-inu reply cheyyu*",
+      "example_set": "*Example : setcmd ping*",
+      "not_set": "*Cmds onnum set cheythittilla*",
+      "example_del": "*Example :*\ndelcmd cmdName\nOru sticker-inu reply cheyyu",
+      "success": "_Success_",
+      "failed": "_Failed_"
+    },
+    "heroku": {
+      "restart_desc": "Dyno restart cheyyaan",
+      "restart_msg": "_Restarting..._",
+      "shutdown_desc": "Dyno off cheyyaan",
+      "shutdown_msg": "_Shutting down..._",
+      "quota_desc": "Quota info kaanikkaan",
+      "quota_total": "Total Quota :",
+      "quota_used": "Used Quota :",
+      "remaining": "Baki :",
+      "error_prefix": "HEROKU : {0}"
     }
   }
 }

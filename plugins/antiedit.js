@@ -2,8 +2,8 @@ const { bot, setVar, parsedJid, isGroup, lang } = require('../lib')
 
 bot(
   {
-    pattern: 'delete ?(.*)',
-    desc: lang.plugins.delete.desc,
+    pattern: 'antiedit ?(.*)',
+    desc: lang.plugins.antiedit.desc,
     type: 'whatsapp',
   },
   async (message, match) => {
@@ -11,7 +11,7 @@ bot(
     const isDisable = match === 'off' || match === 'false'
 
     if (!match || (!['p', 'g', 'off', 'false'].includes(match) && !jid)) {
-      return message.send(lang.plugins.delete.example)
+      return message.send(lang.plugins.antiedit.example)
     }
 
     if (jid) {
@@ -19,23 +19,23 @@ bot(
         try {
           await message.groupMetadata(jid)
         } catch (error) {
-          return message.send(lang.plugins.delete.invalid_jid)
+          return message.send(lang.plugins.antiedit.invalid_jid)
         }
       } else {
         const exist = await message.onWhatsapp(jid)
-        if (!exist) return message.send(lang.plugins.delete.invalid_jid)
+        if (!exist) return message.send(lang.plugins.antiedit.invalid_jid)
       }
     }
 
-    await setVar({ ANTI_DELETE: match }, message.id)
+    await setVar({ ANTI_EDIT: match }, message.id)
 
     const responseMessage = jid
-      ? lang.plugins.delete.dlt_msg_jid
+      ? lang.plugins.antiedit.edit_msg_jid
       : isDisable
-      ? lang.plugins.delete.dlt_msg_disable
-      : match === 'p'
-      ? lang.plugins.delete.dlt_msg_sudo
-      : lang.plugins.delete.dlt_msg_chat
+        ? lang.plugins.antiedit.edit_msg_disable
+        : match === 'p'
+          ? lang.plugins.antiedit.edit_msg_sudo
+          : lang.plugins.antiedit.edit_msg_chat
 
     await message.send(responseMessage)
   }

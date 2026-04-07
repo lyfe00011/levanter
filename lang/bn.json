@@ -1,48 +1,49 @@
 {
   "extra": {
-    "init_session": "[{0}] নতুন সেশন শুরু করা হচ্ছে",
-    "load_session": "[{0}] সেশন স্ট্যাটাস চেক করা হচ্ছে",
-    "invalid_session": "[{0}] {1} সেশন আইডি ভুল, আবার স্ক্যান করুন!!!",
-    "success_session": "[{0}] সেশন সফলভাবে ভ্যালিডেট করা হয়েছে।",
-    "connecting": "[{0}] কানেক্ট হচ্ছে...",
-    "connected": "[{0}] কানেক্টেড {1}",
-    "instance_close": "[{0}] কানেকশন বন্ধ করা হয়েছে",
-    "instance_restart": "[{0}] ইন্সট্যান্স রিস্টার্ট হচ্ছে...",
-    "reconnect": "[{0}] রিকানেক্ট হচ্ছে...({1})",
-    "reconnect_after": "[{0}] ১ মিনিট পরে রিকানেক্ট হবে",
-    "another_login": "[{0}] সেশন অন্য ডিভাইসে লগইন হয়েছে।",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
-    "deleted_message": "           মেসেজ ডিলিট করা হয়েছে",
-    "install_external_plugin": "[{0}] এক্সটার্নাল প্লাগইন ইন্সটল করা হচ্ছে...",
-    "installed_external_plugin": "[{0}] এক্সটার্নাল প্লাগইন ইন্সটল করা হয়েছে",
-    "plugin_install": "[{0}] প্লাগইন ইন্সটল করা হচ্ছে...",
-    "plugin_installed": "[{0}] {1} ইন্সটল করা হয়েছে",
-    "plugins_installed": "[{0}] প্লাগইন ইন্সটল করা হয়েছে",
-    "plugin_install_error": "[{0}] {1} ইন্সটল করতে এরর, প্লাগইন ডিলিট করা হচ্ছে",
-    "plugin_not_found": "[{0}] প্লাগইন {1} পাওয়া যায়নি (404), প্লাগইন ডিলিট করা হচ্ছে",
-    "group_cmd": "এই কমান্ড শুধুমাত্র গ্রুপ চ্যাটে ব্যবহার করা যায়।",
+    "init_session": "[{0}] নতুন সেশন সেট আপ করছি... 🚀",
+    "load_session": "[{0}] সেশন ডেটা ডাউনলোড করছি... 📥",
+    "invalid_session": "[{0}] {1} সেশন আইডি ভুল, আবার স্ক্যান করো! 📸",
+    "success_session": "[{0}] সেশন ভ্যালিডেট হয়ে গেছে, রেডি! ✅",
+    "connecting": "[{0}] কানেক্ট হচ্ছি... 📡",
+    "connected": "[{0}] অনলাইনে আছি, হেল্প করতে রেডি! ⚡ {1}",
+    "instance_close": "[{0}] কানেকশন বন্ধ হয়ে গেছে। 👋",
+    "instance_restart": "[{0}] ইন্সট্যান্স রিস্টার্ট হচ্ছে... 🔄",
+    "reconnect": "[{0}] আবার কানেক্ট করার চেষ্টা করছি... ({1}) 🔄",
+    "reconnect_after": "[{0}] ১ মিনিট পরে আবার ট্রাই করব। ☕",
+    "another_login": "[{0}] সেশন অন্য ডিভাইসে লগইন আছে। 🤨",
+    "error_message": "```--- ⚠️ ERROR REPORT ⚠️ ---\n\nVersion  : {0}\nMessage  : {1}\nError    : {2}\nJid      : {3}\nCommand  : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "deleted_message": "🗑️ ডিলিট করা মেসেজ",
+    "edited_message": "✏️ এডিট করা মেসেজ #{0}",
+    "install_external_plugin": "[{0}] এক্সটার্নাল প্লাগইন ইন্সটল করছি... 📦",
+    "installed_external_plugin": "[{0}] এক্সটার্নাল প্লাগইন ইন্সটল হয়ে গেছে! 🎒",
+    "plugin_install": "[{0}] প্লাগইন ইন্সটল করছি... 📚",
+    "plugin_installed": "[{0}] {1} ইন্সটল হয়ে গেছে! ✅",
+    "plugins_installed": "[{0}] সব প্লাগইন রেডি! 🎓",
+    "plugin_install_error": "[{0}] {1} ইন্সটল করতে এরর, ডিলিট করছি। 🗑️",
+    "plugin_not_found": "[{0}] প্লাগইন {1} পাওয়া যায়নি (404), ডিলিট করছি। 🔍",
+    "group_cmd": "এই কমান্ড শুধু গ্রুপ চ্যাটে কাজ করে। 👨‍👩‍👧‍👦",
     "labels": {
-      "sudo": "SUDO",
-      "auto_read": "AUTO READ MSG",
-      "auto_status": "AUTO STATUS VIEW",
-      "auto_reject": "AUTO REJECT CALL",
-      "always_online": "ALWAYS ONLINE",
-      "anti_delete": "ANTI DELETE MSG",
-      "auto_update": "AUTO UPDATE BOT"
+      "sudo": "🛡️ SUDO",
+      "auto_read": "📖 AUTO READ MSG",
+      "auto_status": "👀 AUTO STATUS VIEW",
+      "auto_reject": "🚫 AUTO REJECT CALL",
+      "always_online": "🔋 ALWAYS ONLINE",
+      "anti_delete": "🛡️ ANTI DELETE MSG",
+      "auto_update": "🔄 AUTO UPDATE BOT"
     },
-    "promoted": "promoted",
-    "demoted": "demoted",
-    "file_size_error": "Size is {0}\n\n{1}",
-    "missing_jid": "missing jids",
-    "no_contacts": "not found contacts, please add contacts",
-    "reaction_not_enabled": "Reaction not enabled",
-    "reaction_not_allowed": "this reaction not allowed",
-    "metadata_fetch_failed": "failed to fetch metadata",
-    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
-    "screenshot_error": "an error occured",
-    "id_missing": "id missing",
-    "not_on_whatsapp": "{0} is not on whatsapp.",
-    "yt_auth_required": "ডাউনলোড ব্যর্থ: YouTube-এর জন্য প্রমাণীকরণ (Authentication) প্রয়োজন।\n\n*সমাধান:*\n1. *Google Auth (সুপারিশকৃত):* আপনার Google অ্যাকাউন্ট লিঙ্ক করতে `.gauth auth` ব্যবহার করুন।\n2. *YT_COOKIE:* `YT_COOKIE` এনভায়রনমেন্ট ভেরিয়েবল সেট করুন।\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "promoted": "প্রমোট করেছে",
+    "demoted": "ডিমোট করেছে",
+    "file_size_error": "ফাইলের সাইজ অনেক বড়! 📂\nসাইজ: {0}\n\n{1}",
+    "missing_jid": "JID পাওয়া যায়নি। 🗺️",
+    "no_contacts": "কন্ট্যাক্ট নেই, আগে অ্যাড করো। 👥",
+    "reaction_not_enabled": "এই চ্যানেলে রিঅ্যাকশন বন্ধ।",
+    "reaction_not_allowed": "এই চ্যানেলে এই রিঅ্যাকশন অনুমোদিত নয়।",
+    "metadata_fetch_failed": "মেটাডেটা আনতে পারলাম না। 🧩",
+    "lang_not_supported": "' {0} ' ভাষা সাপোর্টেড না, ডিফল্টে সুইচ করছি। 🌐",
+    "screenshot_error": "স্ক্রিনশট নিতে এরর। 📸❌",
+    "id_missing": "ID পাওয়া যায়নি। 🕵️",
+    "not_on_whatsapp": "{0} হোয়াটসঅ্যাপে নেই। 👻",
+    "yt_auth_required": "ডাউনলোড ব্যর্থ: YouTube-এর জন্য অথেন্টিকেশন লাগবে। 🗝️\n\n*সমাধান:*\n1. *Google Auth:* তোমার Google অ্যাকাউন্ট লিঙ্ক করতে `.gauth auth` ব্যবহার করো।\n2. *YT_COOKIE:* `YT_COOKIE` এনভায়রনমেন্ট ভেরিয়েবল সেট করো।\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -50,7 +51,36 @@
       "reply_to_message": "একটি বার্তায় উত্তর দিন",
       "not_admin": "আমি অ্যাডমিন নই।",
       "not_found": "পাওয়া যায়নি।",
-      "update": "সেটিংস সফলভাবে আপডেট করা হয়েছে! আপনার পছন্দগুলি সেভ করা হয়েছে এবং এখন সক্রিয়।"
+      "update": "সেটিংস সফলভাবে আপডেট করা হয়েছে! আপনার পছন্দগুলি সেভ করা হয়েছে এবং এখন সক্রিয়।",
+      "spotify_download_failed": "Spotify ট্র্যাক ডাউনলোড করতে পারলাম না",
+      "spotify_playlist_failed": "Spotify প্লেলিস্ট আনতে পারলাম না",
+      "truecaller_login_prompt": "আপনি লগইন করেননি।\n\nTruecaller-এ লগইন করতে আপনার নম্বর পাঠান।\n\nউদাহরণ : truecaller your_number",
+      "truecaller_sent": "আপনার নম্বরে কোড পাঠানো হয়েছে\n\nউদাহরণ : truecaller 653084",
+      "truecaller_invalid_number": "ভুল নম্বর",
+      "truecaller_invalid_code": "ভুল কোড",
+      "truecaller_invalid_mobile": "ভুল মোবাইল নম্বর",
+      "group_not_found": "{0} গ্রুপে নেই। প্রথম ৩ জন সদস্য: {1}",
+      "import_contacts_first": "প্রথমে কন্ট্যাক্ট ইম্পোর্ট করুন",
+      "video_not_supported": "এই বটে music engine ভিডিও ডাউনলোড সাপোর্ট করে না।",
+      "audio_disabled": "Music engine ডাউনলোড ব্যর্থ এবং YouTube audio বন্ধ।",
+      "gemini_missing_api_key": "GEMINI_API_KEY নেই",
+      "gemini_error": "এরর",
+      "upscale_upload_failed": "ছবি আপলোড করতে পারলাম না",
+      "upscale_invalid_response": "Upscale সার্ভিস থেকে ভুল রেসপন্স",
+      "upscale_failed": "ছবি upscale করতে পারলাম না। পরে আবার চেষ্টা করুন।",
+      "invalid_file_type": "এরর: {0}-ফাইল প্রসেস করা যাচ্ছে না",
+      "upload_failed": "ফাইল আপলোড করতে এরর: {0}",
+      "yt_login_prompt": "আপনার YouTube অ্যাকাউন্টে লগইন করুন অথবা YT_COOKIE সেট করুন।\n\nএখানে লগইন করুন => https://levanter-plugins.vercel.app/yt\n",
+      "yt_cookie_needed": "YT Cookie সেট করুন\nhttps://t.me/c/2479057503/378/2550",
+      "yt_not_found": "{0} পাওয়া যায়নি",
+      "time_day": " দিন ",
+      "time_days": " দিন ",
+      "time_hour": " ঘণ্টা ",
+      "time_hours": " ঘণ্টা ",
+      "time_minute": " মিনিট ",
+      "time_minutes": " মিনিট ",
+      "time_second": " সেকেন্ড",
+      "time_seconds": " সেকেন্ড"
     },
     "menu": {
       "help": "╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ প্রিফিক্স : {0}\n│ ইউজার : {1}\n│ সময় : {2}\n│ দিন : {3}\n│ তারিখ : {4}\n│ ভার্সন : {5}\n│ প্লাগইন : {6}\n│ র‍্যাম : {7}\n│ আপটাইম : {8}\n│ প্ল্যাটফর্ম : {9}\n╰────────────────",
@@ -709,7 +739,7 @@
       "invalid_input": "অবৈধ ইনপুট। দয়া করে একটি বৈধ প্রতিপক্ষ প্রদান করুন বা 'end' বা 'restart' সঠিকভাবে ব্যবহার করুন।",
       "players": "খেলোয়াড়রা",
       "already_occupied": "_ইতিমধ্যে দখলকৃত_",
-      "current_player": "বর্তমান খেলোয়াড়",
+      "current_player": "বর্তমান প্লেয়ার",
       "game_finish": "খেলা শেষ 🏁",
       "winner": "বিজয়ী",
       "restart": "Restart Game",
@@ -810,17 +840,28 @@
     },
     "yts": {
       "usage": "উদাহরণ: yts baymax",
-      "desc": "কোয়েরি বা URL দ্বারা YouTube ভিডিও অনুসন্ধান করুন। যদি একটি বৈধ YouTube URL প্রদান করা হয়, তাহলে প্রথম ভিডিওর বিস্তারিত তথ্য ফেরত দেওয়া হয়।"
+      "desc": "কোয়েরি বা URL দ্বারা YouTube ভিডিও অনুসন্ধান করুন। যদি একটি বৈধ YouTube URL প্রদান করা হয়, তাহলে প্রথম ভিডিওর বিস্তারিত তথ্য ফেরত দেওয়া হয়।",
+      "title": "*টাইটেল :* ",
+      "time": "*সময় :* ",
+      "views": "*ভিউ :* ",
+      "publish": "*প্রকাশিত :* ",
+      "desc_label": "*বিবরণ :* ",
+      "author": "*চ্যানেল :* ",
+      "url": "*লিংক :* "
     },
     "song": {
       "usage": "উদাহরণ: song indila love story OR song <YouTube URL> (একটি বার্তার উত্তরও সমর্থিত)",
       "desc": "YouTube থেকে একটি গান ডাউনলোড করুন। যদি একটি URL প্রদান করা হয়, তাহলে গানটি সরাসরি ডাউনলোড করা হয়; অন্যথায়, একটি অনুসন্ধান করা হয় এবং নির্বাচনের জন্য ফলাফলের তালিকা তৈরি করা হয়।",
-      "not_found": "প্রদত্ত কোয়েরি বা URL এর জন্য কোন গান পাওয়া যায়নি।"
+      "not_found": "প্রদত্ত কোয়েরি বা URL এর জন্য কোন গান পাওয়া যায়নি।",
+      "no_result": "_কোনো ফলাফল নেই_ *{0}*",
+      "id_label": "🆔&id\n",
+      "list_header": "{0} সার্চ করে {1} ফলাফল পেলাম\nগান ডাউনলোড করতে 🆔 পাঠান।\n"
     },
     "video": {
       "usage": "উদাহরণ: video <YouTube URL> (বা URL সহ একটি বার্তার উত্তর দিন)",
       "desc": "একটি YouTube ভিডিও ডাউনলোড করুন। যদি একটি সরাসরি URL প্রদান করা হয়, তাহলে ভিডিওটি ডাউনলোড করা হয়; যদি একটি অনুসন্ধান কোয়েরি প্রদান করা হয়, তাহলে নির্বাচনের জন্য ফলাফলের তালিকা তৈরি করা হয়।",
-      "not_found": "প্রদত্ত কোয়েরি বা URL এর জন্য কোন ভিডিও পাওয়া যায়নি।"
+      "not_found": "প্রদত্ত কোয়েরি বা URL এর জন্য কোন ভিডিও পাওয়া যায়নি।",
+      "list_header": "{0} সার্চ করলাম\n{1} ফলাফল পেলাম"
     },
     "update": {
       "usage": "উদাহরণ: update",
@@ -840,7 +881,9 @@
       "action": "অ্যাকশন আপডেট করা হয়েছে: গ্রুপ মেনশন এখন *{0}* হবে।",
       "filter": "গ্রুপ মেনশন বিরোধীর জন্য উপেক্ষা করা JID আপডেট করা হয়েছে।",
       "enabled": "গ্রুপ মেনশন বিরোধী চালু করা হয়েছে।",
-      "disabled": "গ্রুপ মেনশন বিরোধী বন্ধ করা হয়েছে।"
+      "disabled": "গ্রুপ মেনশন বিরোধী বন্ধ করা হয়েছে।",
+      "desc": "Anti group mention settings ম্যানেজ করুন 🛡️",
+      "ignore_prompt": "*একটি JID দিন যেটা ignore করতে হবে।* 🕵️‍♂️"
     },
     "reminder": {
       "desc": "Google ক্যালেন্ডারে একটি অনুস্মারক যোগ করুন (প্রাকৃতিক ভাষা সমর্থিত)।",
@@ -892,6 +935,132 @@
       "auth_required": "দয়া করে *.gauth auth* ব্যবহার করে প্রমাণীকরণ করুন এবং Google Tasks অনুমতি দিন।",
       "list_lists": "📝 *কাজের তালিকা*:\n",
       "switched": "ডিফল্ট কাজের তালিকা এখন *{0}*।"
+    },
+    "antiedit": {
+      "desc": "Anti-edit: এডিট হওয়া মেসেজ ট্র্যাক করে হিস্টরি দেখাবে",
+      "example": "> *ব্যবহারের উদাহরণ:*\n- antiedit p - এডিট হিস্টরি আপনার chat/sudo-তে পাঠান\n- antiedit g - একই গ্রুপে এডিট হিস্টরি পাঠান\n- antiedit off - anti-edit বন্ধ করুন\n- antiedit <jid> - নির্দিষ্ট JID-তে এডিট হিস্টরি পাঠান",
+      "invalid_jid": "*এরর:* _ভুল JID_",
+      "edit_msg_jid": " _এডিট হিস্টরি পাঠানো হবে: {0}_",
+      "edit_msg_disable": "Anti-edit বন্ধ করা হয়েছে।",
+      "edit_msg_sudo": "_এডিট হিস্টরি আপনার chat বা sudo-তে পাঠানো হবে।_",
+      "edit_msg_chat": "_এডিট হিস্টরি একই chat-এ পাঠানো হবে।_"
+    },
+    "screenshot": {
+      "usage": "উদাহরণ: screenshot levanter.site",
+      "desc": "যেকোনো ওয়েবসাইটের স্ক্রিনশট নিন! 📸"
+    },
+    "lyrics": {
+      "usage": "উদাহরণ: lyrics heat waves",
+      "desc": "আপনার প্রিয় গানের লিরিক্স খুঁজুন! 🎤",
+      "not_found": "এই লিরিক্স খুঁজে পেলাম না। বানান ভুল? 🧐"
+    },
+    "google": {
+      "usage": "উদাহরণ: google how to make coffee",
+      "desc": "Google-এ যেকোনো কিছু খুঁজুন! 🌐"
+    },
+    "lofi": {
+      "desc": "Tidal থেকে lofi অডিও ডাউনলোড করুন",
+      "usage": "_একটি গানের নাম দিন_",
+      "no_result": "_কোনো ফলাফল নেই_ *{0}*",
+      "error_download": "_lofi audio ডাউনলোড করতে এরর: {0}_",
+      "error_search": "_lofi সার্চ করতে এরর: {0}_",
+      "list_header": "{0} সার্চ করে {1} ফলাফল পেলাম\nlofi ডাউনলোড করতে 🆔 পাঠান।\n"
+    },
+    "spotify": {
+      "desc": "আপনার প্রিয় ট্র্যাক বা প্লেলিস্ট ডাউনলোড করুন 🎧",
+      "example": "*উদাহরণ :* spotify <url>",
+      "downloading": "_আপনার জন্য {0} টি track ডাউনলোড করছি! Vibe-এর জন্য প্রস্তুত হন!_ 🎧🎶"
+    },
+    "audio": {
+      "desc": "audio mod",
+      "reply_to_audio": "*একটি অডিও মেসেজে রিপ্লাই দিন*"
+    },
+    "img": {
+      "desc": "Pinterest ছবি সার্চ",
+      "example": "*উদাহরণ :  img cats*\n*img 10 cats*",
+      "no_result": "_{0}-এর জন্য কোনো Pinterest ছবি পাওয়া যায়নি_",
+      "downloading": "_{1}-এর {0} টি Pinterest ছবি ডাউনলোড করছি_"
+    },
+    "react": {
+      "desc": "মেসেজে রিঅ্যাক্ট করুন",
+      "example": "_উদাহরণ : react ❣_",
+      "channel_desc": "চ্যানেলে রিঅ্যাক্ট করুন",
+      "channel_example": "_উদাহরণ : creact https://whatsapp.com/channel/xxx/xxx, ❣_",
+      "info_desc": "চ্যানেল ইনফো নিন",
+      "info_example": "_উদাহরণ : cinfo https://whatsapp.com/channel/xxx",
+      "invalid_url": "_ভুল চ্যানেল URL_",
+      "metadata_failed": "_চ্যানেল মেটাডেটা আনা যায়নি_",
+      "name": "*নাম :* ",
+      "jid": "*Jid :* ",
+      "subscribers": "*সাবস্ক্রাইবার :* ",
+      "verification": "*ভেরিফিকেশন :* ",
+      "creation": "*তৈরি :* ",
+      "description": "*বিবরণ :* "
+    },
+    "budget": {
+      "income_desc": "income সেট করতে",
+      "income_example": "*Type missing*\n*উদাহরণ : income type,amount,remark*\n*income salary, 500*\n\n*remark optional*",
+      "income_success": "*চলতি মাসের income {0}*",
+      "expense_desc": "expense সেট করতে",
+      "expense_example": "*Type missing*\n*উদাহরণ : expense type,amount,remark*\n*expense movie, 200, movie_name*\n\n*remark optional*",
+      "expense_success": "*চলতি মাসের expense {0}*",
+      "del_desc": "income | expense ডিলিট করতে",
+      "del_example": "*উদাহরণ : delbudget id*\n\n*Summary থেকে ID*\n*Amount update করতে delete না করে আবার এন্টার করুন*",
+      "del_not_found": "_{0} তালিকায় নেই।_",
+      "del_success": "_{0} তালিকা থেকে সরানো হয়েছে।_",
+      "summary_desc": "budget-এর সারাংশ পেতে",
+      "summary_example": "*উদাহরণ : summary 1 May 2023, 3 May 2023*"
+    },
+    "exif": {
+      "desc": "Sticker থেকে Exif metadata বের করুন",
+      "reply_to_sticker": "*একটি sticker-এ রিপ্লাই দিন।*",
+      "failed": "*Sticker ডাউনলোড করতে পারলাম না।*",
+      "not_found": "*এই sticker-এ কোনো Exif metadata নেই।*",
+      "pack_id": "*Pack ID:* ",
+      "pack_name": "*Pack Name:* ",
+      "author": "*লেখক:* ",
+      "emojis": "*Emoji:* "
+    },
+    "bing": {
+      "desc": "bing ai",
+      "example": "*উদাহরণ : bing Hi*",
+      "dale_desc": "bing image creator",
+      "dale_cookie_prompt": "Bing cookie সেট করুন, https://bing.com/images/create-এ লগইন করুন, একবার Image Creator ব্যবহার করুন, এরপর cookie কপি করুন।",
+      "dale_example": "*উদাহরণ :* dale Create a 3D illusion for a WhatsApp profile picture where a boy in a white shirt sits casually on a royal Sofa. Wearing White sneakers,a black T-shirt, and sunglasses, he looks ahead. The background features \"Arjun \" in big and capital Yellow fonts on the black wall."
+    },
+    "backup": {
+      "desc": "Backup অপারেশন ম্যানেজ করুন: authenticate, validate, বা backup নিন।",
+      "usage": "*Backup Command Usage:*\n\n- .gauth auth — Google Drive access-এর জন্য আপনার অ্যাকাউন্ট authenticate করুন।\n- backup now — এখনই backup নিন।",
+      "success": "backup সফলভাবে সম্পন্ন হয়েছে!",
+      "auth_prompt": "Authentication শুরু করতে `.gauth auth` ব্যবহার করুন।",
+      "code_prompt": "আপনার কোড validate করতে `.gauth code <url_or_code>` ব্যবহার করুন।",
+      "downloading": "_ফাইল ডাউনলোড হচ্ছে..._"
+    },
+    "poll": {
+      "desc": "একাধিক অপশন সহ একটি poll তৈরি করুন।",
+      "example": "*উদাহরণ : question,option1,option2,...*"
+    },
+    "cmd": {
+      "desc_set": "cmd সেট করতে",
+      "desc_get": "cmd দেখতে",
+      "desc_del": "cmd ডিলিট করতে",
+      "reply_to_sticker": "*একটি sticker-এ রিপ্লাই দিন*",
+      "example_set": "*উদাহরণ : setcmd ping*",
+      "not_set": "*কোনো cmd সেট নেই*",
+      "example_del": "*উদাহরণ :*\ndelcmd cmdName\nএকটি sticker-এ রিপ্লাই দিন",
+      "success": "_সফল_",
+      "failed": "_ব্যর্থ_"
+    },
+    "heroku": {
+      "restart_desc": "Dyno রিস্টার্ট",
+      "restart_msg": "_রিস্টার্ট হচ্ছে..._",
+      "shutdown_desc": "Dyno বন্ধ",
+      "shutdown_msg": "_বন্ধ হচ্ছে..._",
+      "quota_desc": "Quota তথ্য দেখুন",
+      "quota_total": "Total Quota :",
+      "quota_used": "Used Quota :",
+      "remaining": "Remaining :",
+      "error_prefix": "HEROKU : {0}"
     }
   }
 }

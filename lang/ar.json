@@ -1,48 +1,49 @@
 {
   "extra": {
-    "init_session": "[{0}] بدء جلسة جديدة",
-    "load_session": "[{0}] التحقق من حالة الجلسة",
-    "invalid_session": "[{0}] {1} معرف الجلسة غير صالح، امسح مرة أخرى!!!",
-    "success_session": "[{0}] تم التحقق من الجلسة بنجاح.",
-    "connecting": "[{0}] جاري الاتصال...",
-    "connected": "[{0}] متصل {1}",
-    "instance_close": "[{0}] تم إغلاق الاتصال",
-    "instance_restart": "[{0}] جاري إعادة تشغيل المثيل...",
-    "reconnect": "[{0}] جاري إعادة الاتصال...({1})",
-    "reconnect_after": "[{0}] إعادة الاتصال بعد دقيقة واحدة",
-    "another_login": "[{0}] تم تسجيل الدخول إلى الجلسة على جهاز آخر.",
-    "error_message": "```---ERROR REPORT---\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
-    "deleted_message": "           رسالة محذوفة",
-    "install_external_plugin": "[{0}] جاري تثبيت المكونات الإضافية الخارجية...",
-    "installed_external_plugin": "[{0}] تم تثبيت المكونات الإضافية الخارجية",
-    "plugin_install": "[{0}] جاري تثبيت المكونات الإضافية...",
-    "plugin_installed": "[{0}] تم تثبيت {1}",
-    "plugins_installed": "[{0}] تم تثبيت المكونات الإضافية",
-    "plugin_install_error": "[{0}] خطأ في تثبيت {1}، جاري حذف المكون الإضافي",
-    "plugin_not_found": "[{0}] لم يتم العثور على المكون الإضافي {1} (404)، جاري حذف المكون الإضافي",
-    "group_cmd": "هذا الأمر متاح فقط في دردشات المجموعة.",
+    "init_session": "[{0}] بجهز جلسة جديدة... 🚀",
+    "load_session": "[{0}] بنزّل بيانات الجلسة... 📥",
+    "invalid_session": "[{0}] {1} الجلسة منتهية، امسح الكيو آر تاني! 📸",
+    "success_session": "[{0}] الجلسة شغالة تمام! ✅",
+    "connecting": "[{0}] بتصل... 📡",
+    "connected": "[{0}] أنا أونلاين، جاهز للمساعدة! ⚡ {1}",
+    "instance_close": "[{0}] الاتصال اتقفل. 👋",
+    "instance_restart": "[{0}] برستارت... 🔄",
+    "reconnect": "[{0}] بحاول أتصل تاني... ({1}) 🔄",
+    "reconnect_after": "[{0}] هحاول كمان دقيقة. ☕",
+    "another_login": "[{0}] الجلسة مفتوحة في جهاز تاني. 🤨",
+    "error_message": "```--- ⚠️ ERROR REPORT ⚠️ ---\n\nVersion  : {0}\nMessage  : {1}\nError    : {2}\nJid      : {3}\nCommand  : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "deleted_message": "🗑️ رسالة متمسحة",
+    "edited_message": "✏️ رسالة متعدلة #{0}",
+    "install_external_plugin": "[{0}] بثبت إضافات خارجية... 📦",
+    "installed_external_plugin": "[{0}] الإضافات الخارجية اتثبتت! 🎒",
+    "plugin_install": "[{0}] بثبت البلجنز... 📚",
+    "plugin_installed": "[{0}] {1} اتثبت! ✅",
+    "plugins_installed": "[{0}] كل البلجنز جاهزة! 🎓",
+    "plugin_install_error": "[{0}] في مشكلة في تثبيت {1}، بمسحه. 🗑️",
+    "plugin_not_found": "[{0}] البلجن {1} مش موجود (404)، بمسحه. 🔍",
+    "group_cmd": "الأمر ده يشتغل بس في الجروبات. 👨‍👩‍👧‍👦",
     "labels": {
-      "sudo": "SUDO",
-      "auto_read": "AUTO READ MSG",
-      "auto_status": "AUTO STATUS VIEW",
-      "auto_reject": "AUTO REJECT CALL",
-      "always_online": "ALWAYS ONLINE",
-      "anti_delete": "ANTI DELETE MSG",
-      "auto_update": "AUTO UPDATE BOT"
+      "sudo": "🛡️ SUDO",
+      "auto_read": "📖 AUTO READ MSG",
+      "auto_status": "👀 AUTO STATUS VIEW",
+      "auto_reject": "🚫 AUTO REJECT CALL",
+      "always_online": "🔋 ALWAYS ONLINE",
+      "anti_delete": "🛡️ ANTI DELETE MSG",
+      "auto_update": "🔄 AUTO UPDATE BOT"
     },
-    "promoted": "تمت ترقيته",
-    "demoted": "تم تنزيل رتبته",
-    "file_size_error": "الحجم هو {0}\n\n{1}",
-    "missing_jid": "معرفات JID مفقودة",
-    "no_contacts": "لم يتم العثور على جهات اتصال، يرجى إضافة جهات اتصال",
-    "reaction_not_enabled": "التفاعل غير مفعل",
-    "reaction_not_allowed": "هذا التفاعل غير مسموح به",
-    "metadata_fetch_failed": "فشل جلب البيانات الوصفية",
-    "lang_not_supported": "اللغة ' {0} ' غير مدعومة بعد، يتم التبديل إلى اللغة الافتراضية.",
-    "screenshot_error": "حدث خطأ",
-    "id_missing": "المعرف مفقود",
-    "not_on_whatsapp": "{0} ليس على واتساب.",
-    "yt_auth_required": "فشل التنزيل: يتطلب YouTube مصادقة.\\n\\n*الحلول:*\\n1. *Google Auth (موصى به):* استخدم `.gauth auth` لربط حساب Google الخاص بك.\\n2. *YT_COOKIE:* قم بتعيين متغير البيئة `YT_COOKIE`.\\nالدليل: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*خطأ:* {0}"
+    "promoted": "رقّى",
+    "demoted": "خفّض رتبة",
+    "file_size_error": "الحجم كبير قوي! 📂\nالحجم: {0}\n\n{1}",
+    "missing_jid": "الـ JIDs ناقصة. 🗺️",
+    "no_contacts": "مفيش جهات اتصال، ضيف الأول. 👥",
+    "reaction_not_enabled": "التفاعلات معطّلة على القناة دي.",
+    "reaction_not_allowed": "التفاعل ده مش مسموح في القناة دي.",
+    "metadata_fetch_failed": "مقدرتش أجيب البيانات. 🧩",
+    "lang_not_supported": "اللغة ' {0} ' مش مدعومة، بحوّل للافتراضية. 🌐",
+    "screenshot_error": "حصل خطأ في السكرين شوت. 📸❌",
+    "id_missing": "الـ ID ناقص. 🕵️",
+    "not_on_whatsapp": "{0} مش على واتساب. 👻",
+    "yt_auth_required": "التنزيل فشل: يوتيوب محتاج تسجيل دخول. 🗝️\n\n*الحلول:*\n1. *Google Auth:* استخدم `.gauth auth` عشان تربط حسابك.\n2. *YT_COOKIE:* عيّن متغير البيئة `YT_COOKIE`.\nالدليل: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*خطأ:* {0}"
   },
   "plugins": {
     "common": {
@@ -50,7 +51,36 @@
       "reply_to_message": "الرد على رسالة",
       "not_admin": "أنا لست مشرفًا.",
       "not_found": "لم يتم العثور عليه.",
-      "update": "_تم تحديث الإعدادات بنجاح! تم حفظ تفضيلاتك وهي نشطة الآن._"
+      "update": "_تم تحديث الإعدادات بنجاح! تم حفظ تفضيلاتك وهي نشطة الآن._",
+      "spotify_download_failed": "فشل تنزيل تراك سبوتيفاي",
+      "spotify_playlist_failed": "فشل جلب قائمة سبوتيفاي",
+      "truecaller_login_prompt": "لسه ما سجلتش الدخول.\n\nابعت رقمك عشان تسجل دخول في Truecaller.\n\nمثال : truecaller your_number",
+      "truecaller_sent": "الكود اتبعت لرقمك\n\nمثال : truecaller 653084",
+      "truecaller_invalid_number": "رقم غير صالح",
+      "truecaller_invalid_code": "كود غير صالح",
+      "truecaller_invalid_mobile": "رقم موبايل غير صالح",
+      "group_not_found": "{0} مش موجود في الجروب. أول 3 أعضاء: {1}",
+      "import_contacts_first": "استورد جهات الاتصال الأول",
+      "video_not_supported": "محرك الموسيقى مش بيدعم تنزيل الفيديو في البوت ده.",
+      "audio_disabled": "تنزيل محرك الموسيقى فشل وصوت يوتيوب متعطل.",
+      "gemini_missing_api_key": "ناقص GEMINI_API_KEY",
+      "gemini_error": "خطأ",
+      "upscale_upload_failed": "فشل رفع الصورة",
+      "upscale_invalid_response": "رد غير صالح من خدمة الترقية",
+      "upscale_failed": "فشل ترقية الصورة. حاول تاني بعدين.",
+      "invalid_file_type": "خطأ: ملف {0} مش هيتعالج",
+      "upload_failed": "خطأ في رفع الملف: {0}",
+      "yt_login_prompt": "سجل دخول لحساب يوتيوب بتاعك أو عيّن YT_COOKIE.\n\nسجل دخول هنا => https://levanter-plugins.vercel.app/yt\n",
+      "yt_cookie_needed": "عيّن YT Cookie\nhttps://t.me/c/2479057503/378/2550",
+      "yt_not_found": "{0} مش موجود",
+      "time_day": " يوم ",
+      "time_days": " أيام ",
+      "time_hour": " ساعة ",
+      "time_hours": " ساعات ",
+      "time_minute": " دقيقة ",
+      "time_minutes": " دقايق ",
+      "time_second": " ثانية",
+      "time_seconds": " ثواني"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ بادئة : {0}\n│ المستخدم : {1}\n│ الوقت : {2}\n│ اليوم : {3}\n│ التاريخ : {4}\n│ الإصدار : {5}\n│ الإضافات : {6}\n│ ذاكرة الوصول العشوائي : {7}\n│ وقت التشغيل : {8}\n│ النظام الأساسي : {9}\n╰────────────────```",
@@ -776,7 +806,7 @@
       "question_required": "السؤال مطلوب",
       "vote": "الرد أو خيار الرد للتصويت.",
       "vote_deleted": "_تم حذف التصويت._",
-      "voted": "@{} صوت لـ {}\n\n$2}"
+      "voted": "@{0} صوت لـ {1}\n\n${2}"
     },
     "warn": {
       "usage": "مثال: warn @user OR warn reset @user. يمكنك أيضًا الرد على رسالة مستخدم وكتابة 'warn' أو 'warn reset'.",
@@ -791,7 +821,7 @@
       "desc": "لعبة سلسلة الكلمات: شارك بتقديم كلمة تكمل السلسلة. استخدم 'wcg start' لبدء لعبة جديدة بالقوة أو 'wcg end' لإيقاف اللعبة الحالية.",
       "game_ends": "انتهت اللعبة",
       "already_used": "_تم استخدام هذه الكلمة بالفعل!_",
-      "not_starting_with": "_لا تبدأ بـ {0}_",
+      "not_starting_with": "_{0} لا يبدأ بـ_ {1}",
       "length_limit": "_طول هذه الكلمة أقل من {0}_",
       "not_in_list": "_هذه الكلمة ليست في قائمة الكلمات الخاصة بي_",
       "turn_info": "🎲الدور : @{0}\n🙌التالي : @{1}\n🆎يجب أن تبدأ كلمتك بـ *{2}* وتتضمن *{3}* أحرف على الأقل\n🏆اللاعبون المتبقون : {4}/{5}\n⏳لديك *{6} ثانية* للرد\n📝إجمالي الكلمات : {7}",
@@ -810,17 +840,28 @@
     },
     "yts": {
       "usage": "مثال: yts baymax",
-      "desc": "البحث عن مقاطع فيديو YouTube بالاستعلام أو URL. إذا تم توفير URL صالح لـ YouTube، فسيتم إرجاع معلومات مفصلة للفيديو الأول."
+      "desc": "البحث عن مقاطع فيديو YouTube بالاستعلام أو URL. إذا تم توفير URL صالح لـ YouTube، فسيتم إرجاع معلومات مفصلة للفيديو الأول.",
+      "title": "*العنوان :* ",
+      "time": "*المدة :* ",
+      "views": "*المشاهدات :* ",
+      "publish": "*النشر :* ",
+      "desc_label": "*الوصف :* ",
+      "author": "*القناة :* ",
+      "url": "*الرابط :* "
     },
     "song": {
       "usage": "مثال: song indila love story OR song <رابط YouTube> (الرد على رسالة مدعوم أيضًا)",
       "desc": "تنزيل أغنية من YouTube. إذا تم توفير رابط URL، فسيتم تنزيل الأغنية مباشرة؛ وإلا، فسيتم إجراء بحث وإنشاء قائمة بالنتائج للاختيار منها.",
-      "not_found": "لم يتم العثور على أغنية للاستعلام أو URL المقدم."
+      "not_found": "لم يتم العثور على أغنية للاستعلام أو URL المقدم.",
+      "no_result": "_مفيش نتايج لـ_ *{0}*",
+      "id_label": "🆔&id\n",
+      "list_header": "بحثت عن {0} ولقيت {1} نتيجة\nابعت 🆔 عشان تنزل الأغنية.\n"
     },
     "video": {
       "usage": "مثال: video <رابط YouTube> (أو الرد على رسالة تحتوي على الرابط)",
       "desc": "تنزيل فيديو YouTube. إذا تم توفير رابط URL مباشر، فسيتم تنزيل الفيديو؛ إذا تم توفير استعلام بحث، فسيتم إنشاء قائمة بالنتائج للاختيار منها.",
-      "not_found": "لم يتم العثور على فيديو للاستعلام أو URL المقدم."
+      "not_found": "لم يتم العثور على فيديو للاستعلام أو URL المقدم.",
+      "list_header": "بحثت عن {0}\nلقيت {1} نتيجة"
     },
     "update": {
       "usage": "مثال: update",
@@ -840,7 +881,9 @@
       "action": "تم تحديث الإجراء: ستؤدي إشارات المجموعة الآن إلى *{0}*.",
       "filter": "تم تحديث معرفات JID التي سيتم تجاهلها لمنع الإشارة إلى المجموعة.",
       "enabled": "تم تمكين منع الإشارة إلى المجموعة.",
-      "disabled": "تم تعطيل منع الإشارة إلى المجموعة."
+      "disabled": "تم تعطيل منع الإشارة إلى المجموعة.",
+      "desc": "إدارة إعدادات منع منشن الجروبات 🛡️",
+      "ignore_prompt": "*يا باشا، ابعت JID عشان أتجاهله.* 🕵️‍♂️"
     },
     "reminder": {
       "desc": "إضافة تذكير إلى تقويم Google (يدعم اللغة الطبيعية).",
@@ -892,6 +935,132 @@
       "auth_required": "يرجى المصادقة باستخدام *.gauth auth* وتمكين أذونات مهام جوجل.",
       "list_lists": "📝 *قوائم المهام*:\n",
       "switched": "تم تبديل قائمة المهام الافتراضية إلى *{0}*."
+    },
+    "antiedit": {
+      "desc": "Anti-edit: تتبع الرسايل اللي اتعدلت وعرض تاريخها",
+      "example": "> *أمثلة الاستخدام:*\n- antiedit p - ابعت سجل التعديلات للشات/sudo بتاعك\n- antiedit g - ابعت سجل التعديلات في نفس الجروب\n- antiedit off - تعطيل anti-edit\n- antiedit <jid> - ابعت سجل التعديلات لـ JID معين",
+      "invalid_jid": "*خطأ:* _JID غير صالح_",
+      "edit_msg_jid": " _سجل التعديلات هيتبعت لـ: {0}_",
+      "edit_msg_disable": "اتعطل anti-edit.",
+      "edit_msg_sudo": "_سجل التعديلات هيتبعت للشات بتاعك أو لـ sudo._",
+      "edit_msg_chat": "_سجل التعديلات هيتبعت في الشات نفسه._"
+    },
+    "screenshot": {
+      "usage": "مثال: screenshot levanter.site",
+      "desc": "خد سكرين شوت لأي موقع! 📸"
+    },
+    "lyrics": {
+      "usage": "مثال: lyrics heat waves",
+      "desc": "لاقي كلمات أغانيك المفضلة! 🎤",
+      "not_found": "ملقتش الكلمات دي. غلط في الكتابة؟ 🧐"
+    },
+    "google": {
+      "usage": "مثال: google how to make coffee",
+      "desc": "ابحث في جوجل عن أي حاجة! 🌐"
+    },
+    "lofi": {
+      "desc": "نزّل لوفي من Tidal",
+      "usage": "_اكتب اسم أغنية_",
+      "no_result": "_مفيش نتايج لـ_ *{0}*",
+      "error_download": "_خطأ في تنزيل اللوفي: {0}_",
+      "error_search": "_خطأ في البحث عن اللوفي: {0}_",
+      "list_header": "بحثت عن {0} ولقيت {1} نتيجة\nابعت 🆔 عشان تنزل اللوفي.\n"
+    },
+    "spotify": {
+      "desc": "نزّل تراكاتك أو قوائمك المفضلة 🎧",
+      "example": "*مثال :* spotify <url>",
+      "downloading": "_بنزل {0} تراك علشانكم! استعدوا!_ 🎧🎶"
+    },
+    "audio": {
+      "desc": "تعديل الصوت",
+      "reply_to_audio": "*رد على رسالة صوتية*"
+    },
+    "img": {
+      "desc": "بحث صور Pinterest",
+      "example": "*مثال :  img cats*\n*img 10 cats*",
+      "no_result": "_مفيش صور Pinterest لـ {0}_",
+      "downloading": "_بنزل {0} صورة Pinterest لـ {1}_"
+    },
+    "react": {
+      "desc": "تفاعل مع رسالة",
+      "example": "_مثال : react ❣_",
+      "channel_desc": "تفاعل مع قناة",
+      "channel_example": "_مثال : creact https://whatsapp.com/channel/xxx/xxx, ❣_",
+      "info_desc": "احصل على معلومات القناة",
+      "info_example": "_مثال : cinfo https://whatsapp.com/channel/xxx",
+      "invalid_url": "_رابط القناة غير صالح_",
+      "metadata_failed": "_مقدرتش أجيب بيانات القناة_",
+      "name": "*الاسم :* ",
+      "jid": "*Jid :* ",
+      "subscribers": "*المشتركين :* ",
+      "verification": "*التحقق :* ",
+      "creation": "*الإنشاء :* ",
+      "description": "*الوصف :* "
+    },
+    "budget": {
+      "income_desc": "لتعيين الدخل",
+      "income_example": "*النوع ناقص*\n*مثال : income type,amount,remark*\n*income salary, 500*\n\n*remark اختياري*",
+      "income_success": "*دخل الشهر الحالي هو {0}*",
+      "expense_desc": "لتعيين المصروفات",
+      "expense_example": "*النوع ناقص*\n*مثال : expense type,amount,remark*\n*expense movie, 200, movie_name*\n\n*remark اختياري*",
+      "expense_success": "*مصروفات الشهر الحالي هي {0}*",
+      "del_desc": "لحذف الدخل | المصروفات",
+      "del_example": "*مثال : delbudget id*\n\n*ID من الملخص*\n*لتحديث المبلغ أدخل تاني بدل الحذف*",
+      "del_not_found": "_{0} مش في القايمة._",
+      "del_success": "_{0} اتشال من القايمة._",
+      "summary_desc": "للحصول على ملخص الميزانية",
+      "summary_example": "*مثال : summary 1 May 2023, 3 May 2023*"
+    },
+    "exif": {
+      "desc": "استخراج بيانات Exif من ستيكر",
+      "reply_to_sticker": "*رد على ستيكر.*",
+      "failed": "*فشل تنزيل الستيكر.*",
+      "not_found": "*مفيش بيانات Exif في الستيكر ده.*",
+      "pack_id": "*Pack ID:* ",
+      "pack_name": "*اسم الباك:* ",
+      "author": "*المؤلف:* ",
+      "emojis": "*الإيموجي:* "
+    },
+    "bing": {
+      "desc": "bing ai",
+      "example": "*مثال : bing Hi*",
+      "dale_desc": "منشئ صور bing",
+      "dale_cookie_prompt": "عيّن bing cookie، سجل دخول في https://bing.com/images/create، استخدم Image Creator مرة، وبعدين انسخ الكوكي.",
+      "dale_example": "*مثال :* dale Create a 3D illusion for a WhatsApp profile picture where a boy in a white shirt sits casually on a royal Sofa. Wearing White sneakers,a black T-shirt, and sunglasses, he looks ahead. The background features \"Arjun \" in big and capital Yellow fonts on the black wall."
+    },
+    "backup": {
+      "desc": "إدارة عمليات النسخ الاحتياطي: المصادقة، التحقق، أو عمل نسخة احتياطية.",
+      "usage": "*استخدام أوامر Backup:*\n\n- .gauth auth — صادق على حسابك للوصول لـ Google Drive.\n- backup now — اعمل backup حالاً.",
+      "success": "تم النسخ الاحتياطي بنجاح!",
+      "auth_prompt": "استخدم `.gauth auth` لبدء المصادقة.",
+      "code_prompt": "استخدم `.gauth code <url_or_code>` للتحقق من الكود.",
+      "downloading": "_جاري تنزيل الملف..._"
+    },
+    "poll": {
+      "desc": "اعمل استفتاء بأكتر من اختيار.",
+      "example": "*مثال : question,option1,option2,...*"
+    },
+    "cmd": {
+      "desc_set": "لتعيين أمر",
+      "desc_get": "لجلب الأمر",
+      "desc_del": "لحذف الأمر",
+      "reply_to_sticker": "*رد على ستيكر*",
+      "example_set": "*مثال : setcmd ping*",
+      "not_set": "*مفيش أوامر معيّنة*",
+      "example_del": "*مثال :*\ndelcmd cmdName\nرد على ستيكر",
+      "success": "_تم_",
+      "failed": "_فشل_"
+    },
+    "heroku": {
+      "restart_desc": "إعادة تشغيل Dyno",
+      "restart_msg": "_جاري إعادة التشغيل..._",
+      "shutdown_desc": "إيقاف Dyno",
+      "shutdown_msg": "_جاري الإيقاف..._",
+      "quota_desc": "عرض معلومات الكوتا",
+      "quota_total": "إجمالي الكوتا :",
+      "quota_used": "الكوتا المستخدمة :",
+      "remaining": "المتبقي :",
+      "error_prefix": "HEROKU : {0}"
     }
   }
 }

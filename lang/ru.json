@@ -1,48 +1,49 @@
 {
   "extra": {
-    "init_session": "[{0}] Инициируется новая сессия",
-    "load_session": "[{0}] Проверка статуса сессии",
-    "invalid_session": "[{0}] {1} НЕДЕЙСТВИТЕЛЬНЫЙ ID СЕССИИ, СКАНИРУЙТЕ СНОВА!!!",
-    "success_session": "[{0}] Сессия успешно подтверждена.",
-    "connecting": "[{0}] Подключение...",
-    "connected": "[{0}] Подключено {1}",
-    "instance_close": "[{0}] Соединение закрыто",
-    "instance_restart": "[{0}] Перезапуск экземпляра...",
-    "reconnect": "[{0}] Переподключение...({1})",
-    "reconnect_after": "[{0}] Переподключение через 1 минуту",
-    "another_login": "[{0}] Сессия вошла в систему на другом устройстве.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
-    "deleted_message": "           удаленноеСообщение",
-    "install_external_plugin": "[{0}] Установка внешних плагинов...",
-    "installed_external_plugin": "[{0}] Внешние плагины установлены",
-    "plugin_install": "[{0}] Установка плагинов...",
-    "plugin_installed": "[{0}] Установлено {1}",
-    "plugins_installed": "[{0}] Плагины установлены",
-    "plugin_install_error": "[{0}] Ошибка установки {1}, удаление плагина",
-    "plugin_not_found": "[{0}] плагин {1} не найден (404), удаление плагина",
-    "group_cmd": "Эта команда доступна только в групповых чатах.",
+    "init_session": "[{0}] Инициализирую новую сессию... 🚀",
+    "load_session": "[{0}] Загружаю данные сессии... 📥",
+    "invalid_session": "[{0}] {1} ID сессии недействителен, отсканируй ещё раз! 📸",
+    "success_session": "[{0}] Сессия подтверждена, готов к работе! ✅",
+    "connecting": "[{0}] Подключаюсь... 📡",
+    "connected": "[{0}] На связи, готов помочь! ⚡ {1}",
+    "instance_close": "[{0}] Соединение закрыто. 👋",
+    "instance_restart": "[{0}] Перезапуск... 🔄",
+    "reconnect": "[{0}] Переподключаюсь... ({1}) 🔄",
+    "reconnect_after": "[{0}] Попробую снова через минуту. ☕",
+    "another_login": "[{0}] Сессия открыта на другом устройстве. 🤨",
+    "error_message": "```--- ⚠️ ERROR REPORT ⚠️ ---\n\nVersion  : {0}\nMessage  : {1}\nError    : {2}\nJid      : {3}\nCommand  : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "deleted_message": "🗑️ Удалённое сообщение",
+    "edited_message": "✏️ Изменённое сообщение #{0}",
+    "install_external_plugin": "[{0}] Устанавливаю внешние плагины... 📦",
+    "installed_external_plugin": "[{0}] Внешние плагины установлены! 🎒",
+    "plugin_install": "[{0}] Устанавливаю плагины... 📚",
+    "plugin_installed": "[{0}] {1} установлен! ✅",
+    "plugins_installed": "[{0}] Все плагины готовы! 🎓",
+    "plugin_install_error": "[{0}] Ошибка установки {1}, удаляю. 🗑️",
+    "plugin_not_found": "[{0}] Плагин {1} не найден (404), удаляю. 🔍",
+    "group_cmd": "Эта команда работает только в групповых чатах. 👨‍👩‍👧‍👦",
     "labels": {
-      "sudo": "SUDO",
-      "auto_read": "AUTO READ MSG",
-      "auto_status": "AUTO STATUS VIEW",
-      "auto_reject": "AUTO REJECT CALL",
-      "always_online": "ALWAYS ONLINE",
-      "anti_delete": "ANTI DELETE MSG",
-      "auto_update": "AUTO UPDATE BOT"
+      "sudo": "🛡️ SUDO",
+      "auto_read": "📖 AUTO READ MSG",
+      "auto_status": "👀 AUTO STATUS VIEW",
+      "auto_reject": "🚫 AUTO REJECT CALL",
+      "always_online": "🔋 ALWAYS ONLINE",
+      "anti_delete": "🛡️ ANTI DELETE MSG",
+      "auto_update": "🔄 AUTO UPDATE BOT"
     },
-    "promoted": "повышен",
-    "demoted": "понижен",
-    "file_size_error": "Размер: {0}\n\n{1}",
-    "missing_jid": "отсутствуют JID",
-    "no_contacts": "контакты не найдены, добавьте контакты",
-    "reaction_not_enabled": "Реакции не включены",
-    "reaction_not_allowed": "эта реакция не разрешена",
-    "metadata_fetch_failed": "не удалось получить метаданные",
-    "lang_not_supported": "' {0} ' язык еще не поддерживается, переключение на язык по умолчанию.",
-    "screenshot_error": "произошла ошибка",
-    "id_missing": "отсутствует ID",
-    "not_on_whatsapp": "{0} нет в WhatsApp.",
-    "yt_auth_required": "Ошибка загрузки: YouTube требуется аутентификация.\n\n*Решения:*\n1. *Google Auth (Рекомендуется):* Используйте `.gauth auth` для привязки вашего аккаунта Google.\n2. *YT_COOKIE:* Установите переменную окружения `YT_COOKIE`.\nИнструкция: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Ошибка:* {0}"
+    "promoted": "повысил",
+    "demoted": "понизил",
+    "file_size_error": "Файл слишком большой! 📂\nРазмер: {0}\n\n{1}",
+    "missing_jid": "JID отсутствуют. 🗺️",
+    "no_contacts": "Контактов нет, сначала добавь. 👥",
+    "reaction_not_enabled": "Реакции отключены для этого канала.",
+    "reaction_not_allowed": "Эта реакция не разрешена для этого канала.",
+    "metadata_fetch_failed": "Не удалось получить метаданные. 🧩",
+    "lang_not_supported": "' {0} ' язык не поддерживается, переключаюсь на язык по умолчанию. 🌐",
+    "screenshot_error": "Не получилось сделать скриншот. 📸❌",
+    "id_missing": "ID отсутствует. 🕵️",
+    "not_on_whatsapp": "{0} нет в WhatsApp. 👻",
+    "yt_auth_required": "Ошибка загрузки: YouTube требует аутентификацию. 🗝️\n\n*Решения:*\n1. *Google Auth:* Используй `.gauth auth` чтобы привязать Google-аккаунт.\n2. *YT_COOKIE:* Задай переменную окружения `YT_COOKIE`.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -50,7 +51,36 @@
       "reply_to_message": "_Ответьте на сообщение_",
       "not_admin": "Я не администратор.",
       "not_found": "Не найдено.",
-      "update": "_Настройки успешно обновлены! Ваши предпочтения сохранены и теперь активны._"
+      "update": "_Настройки успешно обновлены! Ваши предпочтения сохранены и теперь активны._",
+      "spotify_download_failed": "не удалось скачать трек Spotify",
+      "spotify_playlist_failed": "не удалось получить плейлист Spotify",
+      "truecaller_login_prompt": "Вы не вошли в систему.\n\nОтправьте ваш номер для входа в Truecaller.\n\nПример : truecaller your_number",
+      "truecaller_sent": "Код отправлен на ваш номер\n\nПример : truecaller 653084",
+      "truecaller_invalid_number": "неверный номер",
+      "truecaller_invalid_code": "неверный код",
+      "truecaller_invalid_mobile": "неверный номер мобильного",
+      "group_not_found": "{0} нет в группе. Первые 3 участника: {1}",
+      "import_contacts_first": "сначала импортируйте контакты",
+      "video_not_supported": "Музыкальный движок не поддерживает загрузку видео в этом боте.",
+      "audio_disabled": "Загрузка через музыкальный движок не удалась, а аудио YouTube отключено.",
+      "gemini_missing_api_key": "отсутствует GEMINI_API_KEY",
+      "gemini_error": "ошибка",
+      "upscale_upload_failed": "Не удалось загрузить изображение",
+      "upscale_invalid_response": "Неверный ответ от сервиса увеличения",
+      "upscale_failed": "Не удалось увеличить изображение. Попробуйте позже.",
+      "invalid_file_type": "Ошибка: файл {0} не может быть обработан",
+      "upload_failed": "Ошибка загрузки файла: {0}",
+      "yt_login_prompt": "Войдите в ваш аккаунт YouTube или установите переменную YT_COOKIE.\n\nВойдите здесь => https://levanter-plugins.vercel.app/yt\n",
+      "yt_cookie_needed": "Установите YT Cookie\nhttps://t.me/c/2479057503/378/2550",
+      "yt_not_found": "{0} не найдено",
+      "time_day": " д ",
+      "time_days": " д ",
+      "time_hour": " ч ",
+      "time_hours": " ч ",
+      "time_minute": " м ",
+      "time_minutes": " м ",
+      "time_second": " с",
+      "time_seconds": " с"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Префикс : {0}\n│ Пользователь : {1}\n│ Время : {2}\n│ День : {3}\n│ Дата : {4}\n│ Версия : {5}\n│ Плагины : {6}\n│ ОЗУ : {7}\n│ Время работы : {8}\n│ Платформа : {9}\n╰────────────────```",
@@ -709,7 +739,7 @@
       "invalid_input": "Недействительный ввод. Пожалуйста, укажите действительного противника или используйте 'end' или 'restart' соответствующим образом.",
       "players": "Игроки",
       "already_occupied": "_Уже занято_",
-      "current_player": "текущийИгрок",
+      "current_player": "Текущий игрок",
       "game_finish": "Игра завершена 🏁",
       "winner": "Победитель",
       "restart": "Перезапустить игру",
@@ -791,7 +821,7 @@
       "desc": "Игра в цепочку слов: Участвуйте, предоставляя слово, продолжающее цепочку. Используйте 'wcg start' для принудительного начала новой игры или 'wcg end' для завершения текущей игры.",
       "game_ends": "Игра окончена",
       "already_used": "_Это слово уже использовалось!_",
-      "not_starting_with": "_Не начинается на {0}_",
+      "not_starting_with": "_{0} не начинается на_ {1}",
       "length_limit": "_Длина слова меньше {0}_",
       "not_in_list": "_Этого слова нет в моем списке слов_",
       "turn_info": "🎲Очередь : @{0}\n🙌Следующий : @{1}\n🆎Ваше слово должно начинаться на *{2}* и содержать не менее *{3}* букв\n🏆Осталось игроков : {4}/{5}\n⏳У вас есть *{6}с* на ответ\n📝Всего слов : {7}",
@@ -810,17 +840,28 @@
     },
     "yts": {
       "usage": "Пример: yts baymax",
-      "desc": "Искать видео на YouTube по запросу или URL. Если предоставлен действительный URL YouTube, возвращается подробная информация о первом видео."
+      "desc": "Искать видео на YouTube по запросу или URL. Если предоставлен действительный URL YouTube, возвращается подробная информация о первом видео.",
+      "title": "*Название :* ",
+      "time": "*Длительность :* ",
+      "views": "*Просмотры :* ",
+      "publish": "*Опубликовано :* ",
+      "desc_label": "*Описание :* ",
+      "author": "*Канал :* ",
+      "url": "*Ссылка :* "
     },
     "song": {
       "usage": "Пример: song indila love story ИЛИ song <URL YouTube> (поддерживается ответ на сообщение)",
       "desc": "Скачать песню с YouTube. Если предоставлен URL, песня скачивается напрямую; в противном случае выполняется поиск, и генерируется список результатов для выбора.",
-      "not_found": "Песня по указанному запросу или URL не найдена."
+      "not_found": "Песня по указанному запросу или URL не найдена.",
+      "no_result": "_Нет результатов для_ *{0}*",
+      "id_label": "🆔&id\n",
+      "list_header": "Найдено {1} результатов для {0}\nотправьте 🆔, чтобы скачать песню.\n"
     },
     "video": {
       "usage": "Пример: video <URL YouTube> (или ответьте на сообщение с URL)",
       "desc": "Скачать видео с YouTube. Если предоставлен прямой URL, видео скачивается; если указан поисковый запрос, генерируется список результатов для выбора.",
-      "not_found": "Видео по указанному запросу или URL не найдено."
+      "not_found": "Видео по указанному запросу или URL не найдено.",
+      "list_header": "Поиск {0}\nНайдено {1} результатов"
     },
     "update": {
       "usage": "Пример: update",
@@ -840,12 +881,14 @@
       "action": "Действие обновлено: упоминания группы теперь приведут к *{0}*.",
       "filter": "Игнорируемые JID обновлены для защиты от упоминания группы.",
       "enabled": "Защита от упоминания группы включена.",
-      "disabled": "Защита от упоминания группы отключена."
+      "disabled": "Защита от упоминания группы отключена.",
+      "desc": "Управление настройками анти-упоминаний группы 🛡️",
+      "ignore_prompt": "*Босс, укажите JID для игнорирования.* 🕵️‍♂️"
     },
     "reminder": {
       "desc": "Управление напоминаниями Google Календаря.",
       "usage": "> *Использование Напоминаний:*\n- `reminder <текст>` - Установить новое напоминание (напр. 'встреча завтра в 10 утра')\n- `reminder list` - Список всех напоминаний\n- `reminder del <id>` - Удалить напоминание",
-      "success": "✅ Напоминание установлено: *{0}* на {1}",
+      "success": "*Напоминание добавлено!*\n\n*Событие:* {0}\n*Время:* {1}\n*Ссылка:* {2}",
       "list": "*Ваши Напоминания:*\n\n{0}",
       "list_empty": "Напоминаний не найдено.",
       "deleted": "Напоминание успешно удалено!",
@@ -892,6 +935,132 @@
       "auth_required": "Пожалуйста, авторизуйтесь с помощью *.gauth auth* и включите разрешения Google Tasks.",
       "list_lists": "📝 *Списки задач*:\n",
       "switched": "Список задач по умолчанию изменен на *{0}*."
+    },
+    "antiedit": {
+      "desc": "Anti-edit: отслеживание отредактированных сообщений и показ истории",
+      "example": "> *Примеры использования:*\n- antiedit p - Отправлять историю правок в ваш чат/sudo\n- antiedit g - Отправлять историю правок в той же группе\n- antiedit off - Отключить anti-edit\n- antiedit <jid> - Отправлять историю правок на конкретный JID",
+      "invalid_jid": "*Ошибка:* _Неверный JID_",
+      "edit_msg_jid": " _История правок будет отправлена на: {0}_",
+      "edit_msg_disable": "Anti-edit отключён.",
+      "edit_msg_sudo": "_История правок будет отправлена в ваш чат или sudo._",
+      "edit_msg_chat": "_История правок будет отправлена в тот же чат._"
+    },
+    "screenshot": {
+      "usage": "Пример: screenshot levanter.site",
+      "desc": "Сделайте скриншот любого сайта! 📸"
+    },
+    "lyrics": {
+      "usage": "Пример: lyrics heat waves",
+      "desc": "Найдите тексты ваших любимых песен! 🎤",
+      "not_found": "Не найдены эти тексты. Опечатка? 🧐"
+    },
+    "google": {
+      "usage": "Пример: google how to make coffee",
+      "desc": "Ищите в Google что угодно! 🌐"
+    },
+    "lofi": {
+      "desc": "Скачайте lofi-аудио с Tidal",
+      "usage": "_Укажите название песни_",
+      "no_result": "_Нет результатов для_ *{0}*",
+      "error_download": "_Ошибка загрузки lofi-аудио: {0}_",
+      "error_search": "_Ошибка поиска lofi: {0}_",
+      "list_header": "Найдено {1} результатов для {0}\nотправьте 🆔, чтобы скачать lofi.\n"
+    },
+    "spotify": {
+      "desc": "Скачайте ваши любимые треки или плейлисты 🎧",
+      "example": "*Пример :* spotify <url>",
+      "downloading": "_Скачиваю для вас {0} треков! Готовьтесь к настроению!_ 🎧🎶"
+    },
+    "audio": {
+      "desc": "аудио-мод",
+      "reply_to_audio": "*Ответьте на голосовое сообщение*"
+    },
+    "img": {
+      "desc": "Поиск изображений Pinterest",
+      "example": "*Пример :  img cats*\n*img 10 cats*",
+      "no_result": "_Не найдено изображений Pinterest для {0}_",
+      "downloading": "_Скачиваю {0} изображений Pinterest из {1}_"
+    },
+    "react": {
+      "desc": "Реакция на сообщение",
+      "example": "_Пример : react ❣_",
+      "channel_desc": "Реакция на канал",
+      "channel_example": "_Пример : creact https://whatsapp.com/channel/xxx/xxx, ❣_",
+      "info_desc": "Получить информацию о канале",
+      "info_example": "_Пример : cinfo https://whatsapp.com/channel/xxx",
+      "invalid_url": "_Неверный URL канала_",
+      "metadata_failed": "_Не удалось получить метаданные канала_",
+      "name": "*Имя :* ",
+      "jid": "*Jid :* ",
+      "subscribers": "*Подписчики :* ",
+      "verification": "*Верификация :* ",
+      "creation": "*Создан :* ",
+      "description": "*Описание :* "
+    },
+    "budget": {
+      "income_desc": "для установки дохода",
+      "income_example": "*Отсутствует тип*\n*Пример : income type,amount,remark*\n*income salary, 500*\n\n*remark необязательно*",
+      "income_success": "*Доход за текущий месяц: {0}*",
+      "expense_desc": "для установки расхода",
+      "expense_example": "*Отсутствует тип*\n*Пример : expense type,amount,remark*\n*expense movie, 200, movie_name*\n\n*remark необязательно*",
+      "expense_success": "*Расход за текущий месяц: {0}*",
+      "del_desc": "для удаления дохода | расхода",
+      "del_example": "*Пример : delbudget id*\n\n*ID из сводки*\n*Чтобы обновить сумму, введите заново вместо удаления*",
+      "del_not_found": "_{0} нет в списке._",
+      "del_success": "_{0} удалён из списка._",
+      "summary_desc": "для получения сводки бюджета",
+      "summary_example": "*Пример : summary 1 May 2023, 3 May 2023*"
+    },
+    "exif": {
+      "desc": "Извлечь Exif-метаданные из стикера",
+      "reply_to_sticker": "*Ответьте на стикер.*",
+      "failed": "*Не удалось скачать стикер.*",
+      "not_found": "*В этом стикере нет Exif-метаданных.*",
+      "pack_id": "*Pack ID:* ",
+      "pack_name": "*Название пака:* ",
+      "author": "*Автор:* ",
+      "emojis": "*Эмодзи:* "
+    },
+    "bing": {
+      "desc": "bing ai",
+      "example": "*Пример : bing Hi*",
+      "dale_desc": "создатель изображений bing",
+      "dale_cookie_prompt": "Установите bing cookie, войдите на https://bing.com/images/create, используйте bing Image Creator один раз, затем скопируйте cookie.",
+      "dale_example": "*Пример :* dale Create a 3D illusion for a WhatsApp profile picture where a boy in a white shirt sits casually on a royal Sofa. Wearing White sneakers,a black T-shirt, and sunglasses, he looks ahead. The background features \"Arjun \" in big and capital Yellow fonts on the black wall."
+    },
+    "backup": {
+      "desc": "Управление операциями резервного копирования: аутентификация, проверка или создание резервной копии.",
+      "usage": "*Использование команды Backup:*\n\n- .gauth auth — Аутентифицируйте ваш аккаунт для доступа к Google Drive.\n- backup now — Сделайте резервную копию немедленно.",
+      "success": "резервное копирование завершено успешно!",
+      "auth_prompt": "Используйте `.gauth auth` для начала аутентификации.",
+      "code_prompt": "Используйте `.gauth code <url_or_code>` для проверки кода.",
+      "downloading": "_Загрузка файла..._"
+    },
+    "poll": {
+      "desc": "Создать опрос с несколькими вариантами.",
+      "example": "*Пример : question,option1,option2,...*"
+    },
+    "cmd": {
+      "desc_set": "для установки cmd",
+      "desc_get": "для получения cmd",
+      "desc_del": "для удаления cmd",
+      "reply_to_sticker": "*Ответьте на стикер*",
+      "example_set": "*Пример : setcmd ping*",
+      "not_set": "*Cmd не установлены*",
+      "example_del": "*Пример :*\ndelcmd cmdName\nОтветьте на стикер",
+      "success": "_Успех_",
+      "failed": "_Не удалось_"
+    },
+    "heroku": {
+      "restart_desc": "Перезапустить Dyno",
+      "restart_msg": "_Перезапуск..._",
+      "shutdown_desc": "Отключить Dyno",
+      "shutdown_msg": "_Выключение..._",
+      "quota_desc": "Показать информацию о квоте",
+      "quota_total": "Всего квоты :",
+      "quota_used": "Использовано квоты :",
+      "remaining": "Осталось :",
+      "error_prefix": "HEROKU : {0}"
     }
   }
 }

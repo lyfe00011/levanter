@@ -13,26 +13,24 @@ if (process.env.VPS) {
   bot(
     {
       pattern: 'backup ?(.*)',
-      desc: 'Manage backup operations: authenticate, validate, or perform a backup.',
+      desc: lang.plugins.backup.desc,
       type: 'bot',
     },
     async (message, match) => {
       if (!match) {
-        return await message.send(
-          '*Backup Command Usage:*\n\n- .gauth auth — Authenticate your account for Google Drive access.\n- backup now — Perform a backup immediately.'
-        )
+        return await message.send(lang.plugins.backup.usage)
       }
       if (match === 'now') {
         await backupFilesToDrive(undefined, undefined, message.id)
-        return await message.send('backup completed successfully!')
+        return await message.send(lang.plugins.backup.success)
       }
 
       if (match === 'auth') {
-        return await message.send('Please use `.gauth auth` to initiate authentication.')
+        return await message.send(lang.plugins.backup.auth_prompt)
       }
 
       if (match.startsWith('code')) {
-        return await message.send('Please use `.gauth code <url_or_code>` to validate your code.')
+        return await message.send(lang.plugins.backup.code_prompt)
       }
     }
   )
@@ -76,7 +74,7 @@ bot(
     if (cmd === 'dl' || cmd === 'download') {
       if (!arg) return await message.send(lang.plugins.gdrive.invalid_id)
       try {
-        await message.send('_Downloading file..._')
+        await message.send(lang.plugins.backup.downloading)
         const { file, options, type } = await downloadDriveFile(arg, message.id)
         options.quoted = message.data
         return await message.send(file.stream, options, type)

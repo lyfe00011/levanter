@@ -1,48 +1,49 @@
 {
   "extra": {
-    "init_session": "[{0}] Initialisation d'une nouvelle session",
-    "load_session": "[{0}] Vérification de l'état de la session",
-    "invalid_session": "[{0}] {1} ID DE SESSION INVALIDE, SCANNER À NOUVEAU !!!",
-    "success_session": "[{0}] Session validée avec succès.",
-    "connecting": "[{0}] Connexion en cours...",
-    "connected": "[{0}] Connecté {1}",
-    "instance_close": "[{0}] Connexion fermée",
-    "instance_restart": "[{0}] Redémarrage de l'instance...",
-    "reconnect": "[{0}] Reconnexion...({1})",
-    "reconnect_after": "[{0}] Reconnexion après 1 minute",
-    "another_login": "[{0}] Session connectée sur un autre appareil.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
-    "deleted_message": "           messageSupprimé",
-    "install_external_plugin": "[{0}] Installation des plugins externes...",
-    "installed_external_plugin": "[{0}] Plugins externes installés",
-    "plugin_install": "[{0}] Installation des plugins...",
-    "plugin_installed": "[{0}] Installé {1}",
-    "plugins_installed": "[{0}] Plugins installés",
-    "plugin_install_error": "[{0}] Erreur lors de l'installation de {1}, suppression du plugin",
-    "plugin_not_found": "[{0}] Plugin {1} non trouvé (404), suppression du plugin",
-    "group_cmd": "Cette commande est uniquement disponible dans les discussions de groupe.",
+    "init_session": "[{0}] Initialisation d'une nouvelle session... 🚀",
+    "load_session": "[{0}] Téléchargement des données de session... 📥",
+    "invalid_session": "[{0}] {1} ID de session invalide, scanne à nouveau ! 📸",
+    "success_session": "[{0}] Session validée, prêt ! ✅",
+    "connecting": "[{0}] Connexion en cours... 📡",
+    "connected": "[{0}] En ligne, prêt à aider ! ⚡ {1}",
+    "instance_close": "[{0}] Connexion fermée. 👋",
+    "instance_restart": "[{0}] Redémarrage de l'instance... 🔄",
+    "reconnect": "[{0}] Reconnexion en cours... ({1}) 🔄",
+    "reconnect_after": "[{0}] Je réessaie dans 1 minute. ☕",
+    "another_login": "[{0}] La session est ouverte sur un autre appareil. 🤨",
+    "error_message": "```--- ⚠️ ERROR REPORT ⚠️ ---\n\nVersion  : {0}\nMessage  : {1}\nError    : {2}\nJid      : {3}\nCommand  : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "deleted_message": "🗑️ Message supprimé",
+    "edited_message": "✏️ Message modifié #{0}",
+    "install_external_plugin": "[{0}] Installation des plugins externes... 📦",
+    "installed_external_plugin": "[{0}] Plugins externes installés ! 🎒",
+    "plugin_install": "[{0}] Installation des plugins... 📚",
+    "plugin_installed": "[{0}] {1} installé ! ✅",
+    "plugins_installed": "[{0}] Tous les plugins sont prêts ! 🎓",
+    "plugin_install_error": "[{0}] Erreur d'installation de {1}, suppression. 🗑️",
+    "plugin_not_found": "[{0}] Plugin {1} introuvable (404), suppression. 🔍",
+    "group_cmd": "Cette commande ne fonctionne que dans les discussions de groupe. 👨‍👩‍👧‍👦",
     "labels": {
-      "sudo": "SUDO",
-      "auto_read": "AUTO READ MSG",
-      "auto_status": "AUTO STATUS VIEW",
-      "auto_reject": "AUTO REJECT CALL",
-      "always_online": "ALWAYS ONLINE",
-      "anti_delete": "ANTI DELETE MSG",
-      "auto_update": "AUTO UPDATE BOT"
+      "sudo": "🛡️ SUDO",
+      "auto_read": "📖 AUTO READ MSG",
+      "auto_status": "👀 AUTO STATUS VIEW",
+      "auto_reject": "🚫 AUTO REJECT CALL",
+      "always_online": "🔋 ALWAYS ONLINE",
+      "anti_delete": "🛡️ ANTI DELETE MSG",
+      "auto_update": "🔄 AUTO UPDATE BOT"
     },
-    "promoted": "promoted",
-    "demoted": "demoted",
-    "file_size_error": "Size is {0}\n\n{1}",
-    "missing_jid": "missing jids",
-    "no_contacts": "not found contacts, please add contacts",
-    "reaction_not_enabled": "Reaction not enabled",
-    "reaction_not_allowed": "this reaction not allowed",
-    "metadata_fetch_failed": "failed to fetch metadata",
-    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
-    "screenshot_error": "an error occured",
-    "id_missing": "id missing",
-    "not_on_whatsapp": "{0} is not on whatsapp.",
-    "yt_auth_required": "Échec du téléchargement : YouTube nécessite une authentification.\n\n*Solutions :*\n1. *Google Auth (Recommandé) :* Utilisez `.gauth auth` pour lier votre compte Google.\n2. *YT_COOKIE :* Définissez la variable d'environnement `YT_COOKIE`.\nGuide : https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Erreur :* {0}"
+    "promoted": "a promu",
+    "demoted": "a rétrogradé",
+    "file_size_error": "Le fichier est trop volumineux ! 📂\nTaille : {0}\n\n{1}",
+    "missing_jid": "JIDs manquants. 🗺️",
+    "no_contacts": "Aucun contact, ajoutes-en d'abord. 👥",
+    "reaction_not_enabled": "Les réactions sont désactivées pour cette chaîne.",
+    "reaction_not_allowed": "Cette réaction n'est pas autorisée pour cette chaîne.",
+    "metadata_fetch_failed": "Impossible de récupérer les métadonnées. 🧩",
+    "lang_not_supported": "La langue ' {0} ' n'est pas prise en charge, passage à celle par défaut. 🌐",
+    "screenshot_error": "Erreur lors de la capture d'écran. 📸❌",
+    "id_missing": "ID manquant. 🕵️",
+    "not_on_whatsapp": "{0} n'est pas sur WhatsApp. 👻",
+    "yt_auth_required": "Échec du téléchargement : YouTube requiert une authentification. 🗝️\n\n*Solutions :*\n1. *Google Auth :* Utilise `.gauth auth` pour lier ton compte Google.\n2. *YT_COOKIE :* Définis la variable d'environnement `YT_COOKIE`.\nWiki : https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Erreur :* {0}"
   },
   "plugins": {
     "common": {
@@ -50,7 +51,36 @@
       "reply_to_message": "Répondre à un message",
       "not_admin": "Je ne suis pas administrateur.",
       "not_found": "Non trouvé.",
-      "update": "_Paramètres mis à jour avec succès ! Vos préférences ont été enregistrées et sont maintenant actives._"
+      "update": "_Paramètres mis à jour avec succès ! Vos préférences ont été enregistrées et sont maintenant actives._",
+      "spotify_download_failed": "échec du téléchargement de la piste Spotify",
+      "spotify_playlist_failed": "échec de la récupération de la playlist Spotify",
+      "truecaller_login_prompt": "Tu n'es pas connecté.\n\nEnvoie ton numéro pour te connecter à Truecaller.\n\nExemple : truecaller your_number",
+      "truecaller_sent": "Le code a été envoyé à ton numéro\n\nExemple : truecaller 653084",
+      "truecaller_invalid_number": "numéro invalide",
+      "truecaller_invalid_code": "code invalide",
+      "truecaller_invalid_mobile": "numéro de mobile invalide",
+      "group_not_found": "{0} n'existe pas dans le groupe. 3 premiers participants : {1}",
+      "import_contacts_first": "importe les contacts d'abord",
+      "video_not_supported": "Le moteur musical ne supporte pas le téléchargement de vidéos dans ce bot.",
+      "audio_disabled": "Le téléchargement du moteur musical a échoué et l'audio YouTube est désactivé.",
+      "gemini_missing_api_key": "GEMINI_API_KEY manquante",
+      "gemini_error": "erreur",
+      "upscale_upload_failed": "Échec du téléversement de l'image",
+      "upscale_invalid_response": "Réponse invalide du service d'amélioration",
+      "upscale_failed": "Impossible d'améliorer l'image. Réessaie plus tard.",
+      "invalid_file_type": "Erreur : le fichier {0} ne peut pas être traité",
+      "upload_failed": "Erreur lors du téléversement du fichier : {0}",
+      "yt_login_prompt": "Connecte-toi à ton compte YouTube ou configure YT_COOKIE.\n\nConnecte-toi ici => https://levanter-plugins.vercel.app/yt\n",
+      "yt_cookie_needed": "Configure YT Cookie\nhttps://t.me/c/2479057503/378/2550",
+      "yt_not_found": "{0} introuvable",
+      "time_day": " jour ",
+      "time_days": " jours ",
+      "time_hour": " h ",
+      "time_hours": " h ",
+      "time_minute": " min ",
+      "time_minutes": " min ",
+      "time_second": " s",
+      "time_seconds": " s"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Préfixe : {0}\n│ Utilisateur : {1}\n│ Heure : {2}\n│ Jour : {3}\n│ Date : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ RAM : {7}\n│ Temps d'activité : {8}\n│ Plateforme : {9}\n╰────────────────```",
@@ -791,7 +821,7 @@
       "desc": "Jeu de chaîne de mots : Participez en fournissant un mot qui continue la chaîne. Utilisez 'wcg start' pour forcer le démarrage d'un nouveau jeu ou 'wcg end' pour arrêter le jeu actuel.",
       "game_ends": "Game Ends",
       "already_used": "_Already Used this Word!_",
-      "not_starting_with": "_Not Starting with {0}_",
+      "not_starting_with": "_{0} ne commence pas par_ {1}",
       "length_limit": "_This word length is less than {0}_",
       "not_in_list": "_This word is not in my words list_",
       "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Your word must start with *{2}* and include at least *{3}* letters\n🏆Players remaining : {4}/{5}\n⏳You have *{6}s* to answer\n📝Total words : {7}",
@@ -811,12 +841,16 @@
     "song": {
       "usage": "Exemple : song indila love story OU song <URL YouTube> (répondre à un message est également pris en charge)",
       "desc": "Télécharger une chanson depuis YouTube. Si une URL est fournie, la chanson est téléchargée directement ; sinon, une recherche est effectuée et une liste de résultats est générée pour la sélection.",
-      "not_found": "Aucune chanson trouvée pour la requête ou l'URL fournie."
+      "not_found": "Aucune chanson trouvée pour la requête ou l'URL fournie.",
+      "no_result": "_Aucun résultat pour_ *{0}*",
+      "id_label": "🆔&id\n",
+      "list_header": "Recherché {0} et trouvé {1} résultats\nenvoie 🆔 pour télécharger la chanson.\n"
     },
     "video": {
       "usage": "Exemple : video <URL YouTube> (ou répondre à un message avec l'URL)",
       "desc": "Télécharger une vidéo YouTube. Si une URL directe est fournie, la vidéo est téléchargée ; si une requête de recherche est fournie, une liste de résultats est générée pour la sélection.",
-      "not_found": "Aucune vidéo trouvée pour la requête ou l'URL fournie."
+      "not_found": "Aucune vidéo trouvée pour la requête ou l'URL fournie.",
+      "list_header": "Recherché {0}\nTrouvé {1} résultats"
     },
     "update": {
       "usage": "Exemple : update",
@@ -836,12 +870,14 @@
       "action": "Action mise à jour : les mentions de groupe entraîneront désormais *{0}*.",
       "filter": "JIDs ignorés mis à jour pour l'anti mention de groupe.",
       "enabled": "L'anti mention de groupe a été activé.",
-      "disabled": "L'anti mention de groupe a été désactivé."
+      "disabled": "L'anti mention de groupe a été désactivé.",
+      "desc": "Gérer les paramètres anti-mention de groupe 🛡️",
+      "ignore_prompt": "*Boss, fournis un JID à ignorer.* 🕵️‍♂️"
     },
     "reminder": {
       "desc": "Gérer les rappels Google Calendar.",
       "usage": "> *Utilisation des Rappels :*\n- `reminder <texte>` - Définir un nouveau rappel (ex: 'réunion demain à 10h')\n- `reminder list` - Lister tous les rappels\n- `reminder del <id>` - Supprimer un rappel",
-      "success": "✅ Rappel défini : *{0}* le {1}",
+      "success": "*Rappel Ajouté !*\n\n*Événement :* {0}\n*Heure :* {1}\n*Lien :* {2}",
       "list": "*Vos Rappels :*\n\n{0}",
       "list_empty": "Aucun rappel trouvé.",
       "deleted": "Rappel supprimé avec succès !",
@@ -891,7 +927,140 @@
     },
     "yts": {
       "usage": "Example: yts baymax",
-      "desc": "Search for YouTube videos by query or URL. If a valid YouTube URL is provided, detailed information for the first video is returned."
+      "desc": "Search for YouTube videos by query or URL. If a valid YouTube URL is provided, detailed information for the first video is returned.",
+      "title": "*Titre :* ",
+      "time": "*Durée :* ",
+      "views": "*Vues :* ",
+      "publish": "*Publié :* ",
+      "desc_label": "*Desc :* ",
+      "author": "*Auteur :* ",
+      "url": "*Url :* "
+    },
+    "antiedit": {
+      "desc": "Anti-edit : suit les messages modifiés et affiche leur historique",
+      "example": "> *Exemples d'utilisation :*\n- antiedit p - Envoyer l'historique des modifications à ton chat/sudo\n- antiedit g - Envoyer l'historique des modifications dans le même groupe\n- antiedit off - Désactiver anti-edit\n- antiedit <jid> - Envoyer l'historique des modifications à un JID spécifique",
+      "invalid_jid": "*Erreur :* _JID invalide_",
+      "edit_msg_jid": " _L'historique des modifications sera envoyé à : {0}_",
+      "edit_msg_disable": "Anti-edit a été désactivé.",
+      "edit_msg_sudo": "_L'historique des modifications sera envoyé à ton chat ou sudo._",
+      "edit_msg_chat": "_L'historique des modifications sera envoyé dans le chat lui-même._"
+    },
+    "screenshot": {
+      "usage": "Exemple : screenshot levanter.site",
+      "desc": "Prends une capture d'écran de n'importe quel site web ! 📸"
+    },
+    "lyrics": {
+      "usage": "Exemple : lyrics heat waves",
+      "desc": "Trouve les paroles de tes chansons préférées ! 🎤",
+      "not_found": "Impossible de trouver ces paroles. Erreur de saisie ? 🧐"
+    },
+    "google": {
+      "usage": "Exemple : google how to make coffee",
+      "desc": "Cherche n'importe quoi sur Google ! 🌐"
+    },
+    "lofi": {
+      "desc": "Télécharge de l'audio lofi depuis Tidal",
+      "usage": "_Donne un nom de chanson_",
+      "no_result": "_Aucun résultat pour_ *{0}*",
+      "error_download": "_Erreur lors du téléchargement de l'audio lofi : {0}_",
+      "error_search": "_Erreur lors de la recherche lofi : {0}_",
+      "list_header": "Recherché {0} et trouvé {1} résultats\nenvoie 🆔 pour télécharger le lofi.\n"
+    },
+    "spotify": {
+      "desc": "Télécharge tes morceaux ou playlists préférés 🎧",
+      "example": "*Exemple :* spotify <url>",
+      "downloading": "_Téléchargement de {0} morceaux pour vous ! Préparez-vous à vibrer !_ 🎧🎶"
+    },
+    "audio": {
+      "desc": "mod audio",
+      "reply_to_audio": "*Réponds à un message audio*"
+    },
+    "img": {
+      "desc": "Recherche d'images Pinterest",
+      "example": "*Exemple :  img cats*\n*img 10 cats*",
+      "no_result": "_Aucune image Pinterest trouvée pour {0}_",
+      "downloading": "_Téléchargement de {0} images Pinterest de {1}_"
+    },
+    "react": {
+      "desc": "Réagir à un message",
+      "example": "_Exemple : react ❣_",
+      "channel_desc": "Réagir à une chaîne",
+      "channel_example": "_Exemple : creact https://whatsapp.com/channel/xxx/xxx, ❣_",
+      "info_desc": "Obtenir les infos du canal",
+      "info_example": "_Exemple : cinfo https://whatsapp.com/channel/xxx",
+      "invalid_url": "_URL de chaîne invalide_",
+      "metadata_failed": "_Impossible de récupérer les métadonnées de la chaîne_",
+      "name": "*Nom :* ",
+      "jid": "*Jid :* ",
+      "subscribers": "*Abonnés :* ",
+      "verification": "*Vérification :* ",
+      "creation": "*Création :* ",
+      "description": "*Description :* "
+    },
+    "budget": {
+      "income_desc": "pour définir le revenu",
+      "income_example": "*Type manquant*\n*Exemple : income type,amount,remark*\n*income salary, 500*\n\n*remark est optionnel*",
+      "income_success": "*Le revenu du mois en cours est {0}*",
+      "expense_desc": "pour définir la dépense",
+      "expense_example": "*Type manquant*\n*Exemple : expense type,amount,remark*\n*expense movie, 200, movie_name*\n\n*remark est optionnel*",
+      "expense_success": "*La dépense du mois en cours est {0}*",
+      "del_desc": "pour supprimer revenu | dépense",
+      "del_example": "*Exemple : delbudget id*\n\n*Id du résumé*\n*Pour mettre à jour le montant ré-entre au lieu de supprimer*",
+      "del_not_found": "_{0} n'est pas dans la liste._",
+      "del_success": "_{0} supprimé de la liste._",
+      "summary_desc": "pour obtenir le résumé du budget",
+      "summary_example": "*Exemple : summary 1 May 2023, 3 May 2023*"
+    },
+    "exif": {
+      "desc": "Extraire les métadonnées Exif d'un sticker",
+      "reply_to_sticker": "*Réponds à un sticker.*",
+      "failed": "*Échec du téléchargement du sticker.*",
+      "not_found": "*Aucune métadonnée Exif trouvée dans ce sticker.*",
+      "pack_id": "*Pack ID :* ",
+      "pack_name": "*Nom du Pack :* ",
+      "author": "*Auteur :* ",
+      "emojis": "*Emojis :* "
+    },
+    "bing": {
+      "desc": "bing ai",
+      "example": "*Exemple : bing Hi*",
+      "dale_desc": "créateur d'images bing",
+      "dale_cookie_prompt": "Configure un cookie bing, connecte-toi à https://bing.com/images/create, utilise bing Image Creator une fois, puis copie le cookie.",
+      "dale_example": "*Exemple :* dale Create a 3D illusion for a WhatsApp profile picture where a boy in a white shirt sits casually on a royal Sofa. Wearing White sneakers,a black T-shirt, and sunglasses, he looks ahead. The background features \"Arjun \" in big and capital Yellow fonts on the black wall."
+    },
+    "backup": {
+      "desc": "Gérer les opérations de backup : authentifier, valider ou effectuer un backup.",
+      "usage": "*Utilisation de la commande Backup :*\n\n- .gauth auth — Authentifie ton compte pour accéder à Google Drive.\n- backup now — Effectue un backup immédiatement.",
+      "success": "backup terminé avec succès !",
+      "auth_prompt": "Utilise `.gauth auth` pour démarrer l'authentification.",
+      "code_prompt": "Utilise `.gauth code <url_or_code>` pour valider ton code.",
+      "downloading": "_Téléchargement du fichier..._"
+    },
+    "poll": {
+      "desc": "Crée un sondage avec plusieurs options.",
+      "example": "*Exemple : question,option1,option2,...*"
+    },
+    "cmd": {
+      "desc_set": "pour définir cmd",
+      "desc_get": "pour obtenir cmd",
+      "desc_del": "pour supprimer cmd",
+      "reply_to_sticker": "*Réponds à un sticker*",
+      "example_set": "*Exemple : setcmd ping*",
+      "not_set": "*Aucun cmd défini*",
+      "example_del": "*Exemple :*\ndelcmd cmdName\nRéponds à un sticker",
+      "success": "_Succès_",
+      "failed": "_Échec_"
+    },
+    "heroku": {
+      "restart_desc": "Redémarrer Dyno",
+      "restart_msg": "_Redémarrage..._",
+      "shutdown_desc": "Éteindre Dyno",
+      "shutdown_msg": "_Arrêt..._",
+      "quota_desc": "Afficher les infos de Quota",
+      "quota_total": "Quota Total :",
+      "quota_used": "Quota Utilisé :",
+      "remaining": "Restant :",
+      "error_prefix": "HEROKU : {0}"
     }
   }
 }

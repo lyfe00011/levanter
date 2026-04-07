@@ -1,35 +1,35 @@
-const { bot, extractExif } = require('../lib/')
+const { bot, extractExif, lang } = require('../lib/')
 
 bot(
   {
     pattern: 'exif',
-    desc: 'Extract Exif metadata from a sticker',
+    desc: lang.plugins.exif.desc,
     type: 'sticker',
   },
   async (message) => {
     if (!message.reply_message?.sticker) {
-      return await message.send('*Reply to a sticker.*')
+      return await message.send(lang.plugins.exif.reply_to_sticker)
     }
 
     const media = await message.reply_message.downloadMediaMessage()
 
     if (!media) {
-      return await message.send('*Failed to download sticker.*')
+      return await message.send(lang.plugins.exif.failed)
     }
 
     const exifData = await extractExif(media)
 
     if (!exifData) {
-      return await message.send('*No Exif metadata found in this sticker.*')
+      return await message.send(lang.plugins.exif.not_found)
     }
 
     const { packId = 'N/A', packname = 'N/A', author = 'N/A', emojis = 'N/A' } = exifData
 
     return await message.send(
-      `*Pack ID:* ${packId}\n` +
-        `*Pack Name:* ${packname}\n` +
-        `*Author:* ${author}\n` +
-        `*Emojis:* ${emojis}`,
+      `${lang.plugins.exif.pack_id}${packId}\n` +
+        `${lang.plugins.exif.pack_name}${packname}\n` +
+        `${lang.plugins.exif.author}${author}\n` +
+        `${lang.plugins.exif.emojis}${emojis}`,
       { quoted: message.quoted }
     )
   }

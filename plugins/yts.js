@@ -13,14 +13,14 @@ bot(
       const result = await yts(vid[1], true, null, message.id)
       const { title, description, duration, view, published } = result[0]
       return await message.send(
-        `*Title :* ${title}\n*Time :* ${duration}\n*Views :* ${view}\n*Publish :* ${published}\n*Desc :* ${description}`
+        `${lang.plugins.yts.title}${title}\n${lang.plugins.yts.time}${duration}\n${lang.plugins.yts.views}${view}\n${lang.plugins.yts.publish}${published}\n${lang.plugins.yts.desc_label}${description}`
       )
     }
     const result = await yts(match, false, null, message.id)
     const msg = result
       .map(
         ({ title, id, view, duration, published, author }) =>
-          `• *${title.trim()}*\n${view ? `*Views :* ${view}\n` : ''}*Time :* ${duration}\n*Author :* ${author}\n${published ? `*Published :* ${published}\n` : ''}*Url :* ${id.startsWith('http') ? id : `https://www.youtube.com/watch?v=${id}`}\n\n`
+          `• *${title.trim()}*\n${view ? `${lang.plugins.yts.views}${view}\n` : ''}${lang.plugins.yts.time}${duration}\n${lang.plugins.yts.author}${author}\n${published ? `${lang.plugins.yts.publish}${published}\n` : ''}${lang.plugins.yts.url}${id.startsWith('http') ? id : `https://www.youtube.com/watch?v=${id}`}\n\n`
       )
       .join('')
 
@@ -53,14 +53,14 @@ bot(
       )
     }
     const result = await yts(match, 0, 1, message.id)
-    if (!result.length) return await message.send(`_Not result for_ *${match}*`)
+    if (!result.length) return await message.send(lang.plugins.song.no_result.format(match))
     const msg = generateList(
       result.map(({ title, id, duration, author, album }) => ({
-        _id: `🆔&id\n`,
+        _id: lang.plugins.song.id_label,
         text: `🎵${title}\n🕒${duration}\n👤${author}\n📀${album}\n\n`,
         id: `song ${id.startsWith('http') ? id : `https://www.youtube.com/watch?v=${id}`}`,
       })),
-      `Searched ${match} and Found ${result.length} results\nsend 🆔 to download song.\n`,
+      lang.plugins.song.list_header.format(match, result.length),
       message.jid,
       message.participant,
       message.id
@@ -99,7 +99,7 @@ bot(
           text: `${title}\nduration : ${duration}\nviews : ${view}\n`,
           id: `video ${quality ? quality + ' ' : ''}https://www.youtube.com/watch?v=${id}`,
         })),
-        `Searched ${urlMatch}\nFound ${result.length} results`,
+        lang.plugins.video.list_header.format(urlMatch, result.length),
         message.jid,
         message.participant,
         message.id
@@ -119,12 +119,12 @@ bot(
 bot(
   {
     pattern: 'lofi ?(.*)',
-    desc: 'Download lofi audio',
+    desc: lang.plugins.lofi.desc,
     type: 'download',
   },
   async (message, match) => {
     match = match || message?.reply_message?.text
-    if (!match) return await message.send('_Provide a song name_')
+    if (!match) return await message.send(lang.plugins.lofi.usage)
 
     let trackId = null
     if (/^\d+$/.test(match.trim())) {
@@ -156,21 +156,21 @@ bot(
           trackInfo.isLossless ? 'document' : 'audio'
         )
       } catch (error) {
-        return await message.send(`_Error downloading lofi audio: ${error.message}_`)
+        return await message.send(lang.plugins.lofi.error_download.format(error.message))
       }
     }
 
     try {
       const result = await searchMusic(match, 5)
-      if (!result || !result.length) return await message.send(`_Not result for_ *${match}*`)
+      if (!result || !result.length) return await message.send(lang.plugins.lofi.no_result.format(match))
 
       const msg = generateList(
         result.map(({ title, id, artist, duration }) => ({
-          _id: `🆔&id\n`,
+          _id: lang.plugins.song.id_label,
           text: `🎵${title} [${duration}]\n👤${artist}\n\n`,
           id: `lofi ${id}`,
         })),
-        `Searched ${match} and Found ${result.length} results\nsend 🆔 to download lofi.\n`,
+        lang.plugins.lofi.list_header.format(match, result.length),
         message.jid,
         message.participant,
         message.id
@@ -178,7 +178,7 @@ bot(
 
       return await message.send(msg.message, { quoted: message.data }, msg.type)
     } catch (error) {
-      return await message.send(`_Error searching lofi: ${error.message}_`)
+      return await message.send(lang.plugins.lofi.error_search.format(error.message))
     }
   }
 )

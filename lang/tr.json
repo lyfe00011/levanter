@@ -1,48 +1,49 @@
 {
   "extra": {
-    "init_session": "[{0}] Yeni oturum başlatılıyor",
-    "load_session": "[{0}] Oturum durumu kontrol ediliyor",
-    "invalid_session": "[{0}] {1} GEÇERSİZ OTURUM KİMLİĞİ, TEKRAR TARAYIN!!!",
-    "success_session": "[{0}] Oturum başarıyla doğrulandı.",
-    "connecting": "[{0}] Bağlanılıyor...",
-    "connected": "[{0}] Bağlandı {1}",
-    "instance_close": "[{0}] Bağlantı kesildi",
-    "instance_restart": "[{0}] Örnek Yeniden Başlatılıyor...",
-    "reconnect": "[{0}] yeniden bağlanıyor...({1})",
-    "reconnect_after": "[{0}] 1 dakika sonra yeniden bağlan",
-    "another_login": "[{0}] oturum başka bir cihazda açıldı.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
-    "deleted_message": "           silinenMesaj",
-    "install_external_plugin": "[{0}] Harici eklentiler yükleniyor...",
-    "installed_external_plugin": "[{0}] Harici Eklentiler Yüklendi",
-    "plugin_install": "[{0}] Eklentiler Yükleniyor...",
-    "plugin_installed": "[{0}] {1} Yüklendi",
-    "plugins_installed": "[{0}] Eklentiler Yüklendi",
-    "plugin_install_error": "[{0}] {1} yüklenirken hata oluştu, eklenti siliniyor",
-    "plugin_not_found": "[{0}] eklenti {1} bulunamadı (404), eklenti siliniyor",
-    "group_cmd": "Bu komut yalnızca grup sohbetlerinde kullanılabilir.",
+    "init_session": "[{0}] Yeni oturum hazırlanıyor... 🚀",
+    "load_session": "[{0}] Oturum verisi indiriliyor... 📥",
+    "invalid_session": "[{0}] {1} Oturum kimliği geçersiz, tekrar tara! 📸",
+    "success_session": "[{0}] Oturum doğrulandı, hazırım! ✅",
+    "connecting": "[{0}] Bağlanıyorum... 📡",
+    "connected": "[{0}] Çevrimiçiyim, yardıma hazırım! ⚡ {1}",
+    "instance_close": "[{0}] Bağlantı kesildi. 👋",
+    "instance_restart": "[{0}] Yeniden başlatılıyor... 🔄",
+    "reconnect": "[{0}] Yeniden bağlanıyorum... ({1}) 🔄",
+    "reconnect_after": "[{0}] 1 dakika sonra tekrar deneyeceğim. ☕",
+    "another_login": "[{0}] Oturum başka bir cihazda açık. 🤨",
+    "error_message": "```--- ⚠️ ERROR REPORT ⚠️ ---\n\nVersion  : {0}\nMessage  : {1}\nError    : {2}\nJid      : {3}\nCommand  : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "deleted_message": "🗑️ Silinen mesaj",
+    "edited_message": "✏️ Düzenlenen mesaj #{0}",
+    "install_external_plugin": "[{0}] Harici eklentiler yükleniyor... 📦",
+    "installed_external_plugin": "[{0}] Harici eklentiler yüklendi! 🎒",
+    "plugin_install": "[{0}] Eklentiler yükleniyor... 📚",
+    "plugin_installed": "[{0}] {1} yüklendi! ✅",
+    "plugins_installed": "[{0}] Tüm eklentiler hazır! 🎓",
+    "plugin_install_error": "[{0}] {1} yüklenirken hata, siliniyor. 🗑️",
+    "plugin_not_found": "[{0}] Eklenti {1} bulunamadı (404), siliniyor. 🔍",
+    "group_cmd": "Bu komut yalnızca grup sohbetlerinde çalışır. 👨‍👩‍👧‍👦",
     "labels": {
-      "sudo": "SUDO",
-      "auto_read": "AUTO READ MSG",
-      "auto_status": "AUTO STATUS VIEW",
-      "auto_reject": "AUTO REJECT CALL",
-      "always_online": "ALWAYS ONLINE",
-      "anti_delete": "ANTI DELETE MSG",
-      "auto_update": "AUTO UPDATE BOT"
+      "sudo": "🛡️ SUDO",
+      "auto_read": "📖 AUTO READ MSG",
+      "auto_status": "👀 AUTO STATUS VIEW",
+      "auto_reject": "🚫 AUTO REJECT CALL",
+      "always_online": "🔋 ALWAYS ONLINE",
+      "anti_delete": "🛡️ ANTI DELETE MSG",
+      "auto_update": "🔄 AUTO UPDATE BOT"
     },
-    "promoted": "terfi ettirildi",
-    "demoted": "rütbesi düşürüldü",
-    "file_size_error": "Boyut: {0}\n\n{1}",
-    "missing_jid": "JID'ler eksik",
-    "no_contacts": "kişi bulunamadı, lütfen kişi ekleyin",
-    "reaction_not_enabled": "Tepkiler etkin değil",
-    "reaction_not_allowed": "bu tepkiye izin verilmiyor",
-    "metadata_fetch_failed": "meta veriler alınamadı",
-    "lang_not_supported": "' {0} ' dili henüz desteklenmiyor, varsayılan dile geçiliyor.",
-    "screenshot_error": "bir hata oluştu",
-    "id_missing": "kimlik eksik",
-    "not_on_whatsapp": "{0} WhatsApp'ta değil.",
-    "yt_auth_required": "İndirme başarısız: YouTube kimlik doğrulaması gerektiriyor.\n\n*Çözümler:*\n1. *Google Auth (Önerilen):* Google hesabınızı bağlamak için `.gauth auth` komutunu kullanın.\n2. *YT_COOKIE:* `YT_COOKIE` ortam değişkenini ayarlayın.\nRehber: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Hata:* {0}"
+    "promoted": "→ terfi ettirdi",
+    "demoted": "→ rütbesini düşürdü",
+    "file_size_error": "Dosya boyutu çok büyük! 📂\nBoyut: {0}\n\n{1}",
+    "missing_jid": "JID'ler eksik. 🗺️",
+    "no_contacts": "Kişi yok, önce ekle. 👥",
+    "reaction_not_enabled": "Bu kanal için tepkiler devre dışı.",
+    "reaction_not_allowed": "Bu tepki bu kanal için izin verilmiyor.",
+    "metadata_fetch_failed": "Meta veriler alınamadı. 🧩",
+    "lang_not_supported": "' {0} ' dili desteklenmiyor, varsayılana geçiyorum. 🌐",
+    "screenshot_error": "Ekran görüntüsü alınırken hata. 📸❌",
+    "id_missing": "ID eksik. 🕵️",
+    "not_on_whatsapp": "{0} WhatsApp'ta değil. 👻",
+    "yt_auth_required": "İndirme başarısız: YouTube kimlik doğrulama istiyor. 🗝️\n\n*Çözümler:*\n1. *Google Auth:* Google hesabını bağlamak için `.gauth auth` kullan.\n2. *YT_COOKIE:* `YT_COOKIE` ortam değişkenini ayarla.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Hata:* {0}"
   },
   "plugins": {
     "common": {
@@ -50,7 +51,36 @@
       "reply_to_message": "Bir mesaja cevap verin",
       "not_admin": "Yönetici değilim.",
       "not_found": "Bulunamadı.",
-      "update": "_Ayarlar başarıyla güncellendi! Tercihleriniz kaydedildi ve şimdi etkin._"
+      "update": "_Ayarlar başarıyla güncellendi! Tercihleriniz kaydedildi ve şimdi etkin._",
+      "spotify_download_failed": "Spotify parçası indirilemedi",
+      "spotify_playlist_failed": "Spotify çalma listesi alınamadı",
+      "truecaller_login_prompt": "Giriş yapmadın.\n\nTruecaller'a giriş yapmak için numaranı gönder.\n\nÖrnek : truecaller your_number",
+      "truecaller_sent": "Kod numarana gönderildi\n\nÖrnek : truecaller 653084",
+      "truecaller_invalid_number": "geçersiz numara",
+      "truecaller_invalid_code": "geçersiz kod",
+      "truecaller_invalid_mobile": "geçersiz cep numarası",
+      "group_not_found": "{0} grupta yok. İlk 3 üye: {1}",
+      "import_contacts_first": "önce kişileri içe aktar",
+      "video_not_supported": "Müzik motoru bu botta video indirmeyi desteklemiyor.",
+      "audio_disabled": "Müzik motoru indirmesi başarısız oldu ve YouTube sesi devre dışı.",
+      "gemini_missing_api_key": "GEMINI_API_KEY eksik",
+      "gemini_error": "hata",
+      "upscale_upload_failed": "Resim yüklenemedi",
+      "upscale_invalid_response": "Upscale servisinden geçersiz yanıt",
+      "upscale_failed": "Resim yükseltilemedi. Lütfen daha sonra tekrar deneyin.",
+      "invalid_file_type": "Hata: {0} dosyası işlenemez",
+      "upload_failed": "Dosya yükleme hatası: {0}",
+      "yt_login_prompt": "YouTube hesabına giriş yap veya YT_COOKIE değişkenini ayarla.\n\nBuradan giriş yap => https://levanter-plugins.vercel.app/yt\n",
+      "yt_cookie_needed": "YT Cookie ayarla\nhttps://t.me/c/2479057503/378/2550",
+      "yt_not_found": "{0} bulunamadı",
+      "time_day": " gün ",
+      "time_days": " gün ",
+      "time_hour": " saat ",
+      "time_hours": " saat ",
+      "time_minute": " dk ",
+      "time_minutes": " dk ",
+      "time_second": " sn",
+      "time_seconds": " sn"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Önek : {0}\n│ Kullanıcı : {1}\n│ Zaman : {2}\n│ Gün : {3}\n│ Tarih : {4}\n│ Sürüm : {5}\n│ Eklentiler : {6}\n│ Ram : {7}\n│ Çalışma Süresi : {8}\n│ Platform : {9}\n╰────────────────```",
@@ -709,7 +739,7 @@
       "invalid_input": "Geçersiz giriş. Lütfen geçerli bir rakip belirtin veya 'end' veya 'restart' kullanın.",
       "players": "Oyuncular",
       "already_occupied": "_Zaten Dolu_",
-      "current_player": "geçerliOyuncu",
+      "current_player": "Şu Anki Oyuncu",
       "game_finish": "Oyun Bitti 🏁",
       "winner": "Kazanan",
       "restart": "Oyunu Yeniden Başlat",
@@ -791,7 +821,7 @@
       "desc": "Kelime Zinciri Oyunu: Zinciri devam ettirerek oyuna katılın. 'wcg start' yeni bir oyun başlatır veya 'wcg end' mevcut oyunu bitirir.",
       "game_ends": "Oyun Bitti",
       "already_used": "_Bu Kelime Zaten Kullanıldı!_",
-      "not_starting_with": "_{0} ile Başlamıyor_",
+      "not_starting_with": "_{0} {1} ile başlamıyor_",
       "length_limit": "_Bu kelime uzunluğu {0} karakterden az_",
       "not_in_list": "_Bu kelime benim kelime listemde yok_",
       "turn_info": "🎲Sıra : @{0}\n🙌Sıradaki : @{1}\n🆎Kelimeniz *{2}* ile başlamalı ve en az *{3}* harf içermelidir\n🏆Kalan oyuncular : {4}/{5}\n⏳Cevap vermek için *{6}* saniyeniz var\n📝Toplam kelime : {7}",
@@ -810,17 +840,28 @@
     },
     "yts": {
       "usage": "Örnek: yts baymax",
-      "desc": "Sorgu veya URL ile YouTube videolarını ara. Geçerli bir YouTube URL'si sağlanırsa, ilk videonun ayrıntılı bilgileri döndürülür."
+      "desc": "Sorgu veya URL ile YouTube videolarını ara. Geçerli bir YouTube URL'si sağlanırsa, ilk videonun ayrıntılı bilgileri döndürülür.",
+      "title": "*Başlık :* ",
+      "time": "*Süre :* ",
+      "views": "*İzlenme :* ",
+      "publish": "*Yayın :* ",
+      "desc_label": "*Açıklama :* ",
+      "author": "*Kanal :* ",
+      "url": "*Url :* "
     },
     "song": {
       "usage": "Örnek: song indila love story VEYA song <YouTube URL> (bir mesaja cevap olarak da kullanılabilir)",
       "desc": "YouTube'dan bir şarkı indir. Bir URL sağlanırsa şarkı doğrudan indirilir; aksi halde bir arama yapılır ve sonuçlar listelenir.",
-      "not_found": "Sağlanan sorgu veya URL için şarkı bulunamadı."
+      "not_found": "Sağlanan sorgu veya URL için şarkı bulunamadı.",
+      "no_result": "_Sonuç yok_ *{0}*",
+      "id_label": "🆔&id\n",
+      "list_header": "{0} arandı ve {1} sonuç bulundu\nşarkıyı indirmek için 🆔 gönder.\n"
     },
     "video": {
       "usage": "Örnek: video <YouTube URL> (veya bir mesaja URL ile cevap olarak)",
       "desc": "YouTube'dan bir video indir. Doğrudan bir URL sağlanırsa video indirilir; bir arama sorgusu sağlanırsa sonuçlar listelenir.",
-      "not_found": "Sağlanan sorgu veya URL için video bulunamadı."
+      "not_found": "Sağlanan sorgu veya URL için video bulunamadı.",
+      "list_header": "{0} arandı\n{1} sonuç bulundu"
     },
     "update": {
       "usage": "Örnek: update",
@@ -840,12 +881,14 @@
       "action": "Eylem güncellendi: grup bahsetmeleri artık *{0}* ile sonuçlanacak.",
       "filter": "Grup bahsetme koruması için yoksayılan JID'ler güncellendi.",
       "enabled": "Grup bahsetme koruması etkinleştirildi.",
-      "disabled": "Grup bahsetme koruması devre dışı bırakıldı."
+      "disabled": "Grup bahsetme koruması devre dışı bırakıldı.",
+      "desc": "Anti grup mention ayarlarını yönet 🛡️",
+      "ignore_prompt": "*Patron, yok sayılacak bir JID gir.* 🕵️‍♂️"
     },
     "reminder": {
       "desc": "Google Takvim hatırlatıcılarını yönetin.",
       "usage": "> *Hatırlatıcı Kullanımı:*\n- `reminder <metin>` - Yeni hatırlatıcı ekle (örn. 'yarın saat 10'da toplantı')\n- `reminder list` - Tüm hatırlatıcıları listele\n- `reminder del <id>` - Hatırlatıcıyı sil",
-      "success": "✅ Hatırlatıcı eklendi: *{0}* {1} tarihinde",
+      "success": "*Hatırlatıcı Eklendi!*\n\n*Etkinlik:* {0}\n*Saat:* {1}\n*Bağlantı:* {2}",
       "list": "*Hatırlatıcılarınız:*\n\n{0}",
       "list_empty": "Hatırlatıcı bulunamadı.",
       "deleted": "Hatırlatıcı başarıyla silindi!",
@@ -892,6 +935,132 @@
       "auth_required": "Lütfen *.gauth auth* kullanarak kimlik doğrulaması yapın ve Google Görevler izinlerini etkinleştirin.",
       "list_lists": "📝 *Görev Listeleri*:\n",
       "switched": "Varsayılan görev listesi *{0}* olarak değiştirildi."
+    },
+    "antiedit": {
+      "desc": "Anti-edit: düzenlenen mesajları takip eder ve geçmişini gösterir",
+      "example": "> *Kullanım Örnekleri:*\n- antiedit p - Düzenleme geçmişini sohbetine/sudo gönder\n- antiedit g - Düzenleme geçmişini aynı grupta gönder\n- antiedit off - Anti-edit özelliğini kapat\n- antiedit <jid> - Düzenleme geçmişini belirli bir JID'e gönder",
+      "invalid_jid": "*Hata:* _Geçersiz JID_",
+      "edit_msg_jid": " _Düzenleme geçmişi şuraya gönderilecek: {0}_",
+      "edit_msg_disable": "Anti-edit devre dışı bırakıldı.",
+      "edit_msg_sudo": "_Düzenleme geçmişi sohbetine veya sudo'ya gönderilecek._",
+      "edit_msg_chat": "_Düzenleme geçmişi sohbetin kendisine gönderilecek._"
+    },
+    "screenshot": {
+      "usage": "Örnek: screenshot levanter.site",
+      "desc": "Herhangi bir web sitesinin ekran görüntüsünü al! 📸"
+    },
+    "lyrics": {
+      "usage": "Örnek: lyrics heat waves",
+      "desc": "Favori şarkılarının sözlerini bul! 🎤",
+      "not_found": "Bu sözler bulunamadı. Yazım hatası mı? 🧐"
+    },
+    "google": {
+      "usage": "Örnek: google how to make coffee",
+      "desc": "Google'da her şeyi ara! 🌐"
+    },
+    "lofi": {
+      "desc": "Tidal'dan lofi ses indir",
+      "usage": "_Bir şarkı adı ver_",
+      "no_result": "_Sonuç yok_ *{0}*",
+      "error_download": "_Lofi ses indirilirken hata: {0}_",
+      "error_search": "_Lofi aranırken hata: {0}_",
+      "list_header": "{0} arandı ve {1} sonuç bulundu\nlofi indirmek için 🆔 gönder.\n"
+    },
+    "spotify": {
+      "desc": "Favori parçalarını veya çalma listelerini indir 🎧",
+      "example": "*Örnek :* spotify <url>",
+      "downloading": "_Sizin için {0} parça indiriyorum! Vibe için hazır olun!_ 🎧🎶"
+    },
+    "audio": {
+      "desc": "ses modu",
+      "reply_to_audio": "*Bir ses mesajına yanıt ver*"
+    },
+    "img": {
+      "desc": "Pinterest resim arama",
+      "example": "*Örnek :  img cats*\n*img 10 cats*",
+      "no_result": "_{0} için Pinterest resmi bulunamadı_",
+      "downloading": "_{1} için {0} Pinterest resmi indiriliyor_"
+    },
+    "react": {
+      "desc": "Mesaja tepki ver",
+      "example": "_Örnek : react ❣_",
+      "channel_desc": "Kanala tepki ver",
+      "channel_example": "_Örnek : creact https://whatsapp.com/channel/xxx/xxx, ❣_",
+      "info_desc": "Kanal bilgilerini al",
+      "info_example": "_Örnek : cinfo https://whatsapp.com/channel/xxx",
+      "invalid_url": "_Geçersiz kanal URL'si_",
+      "metadata_failed": "_Kanal meta verisi alınamadı_",
+      "name": "*İsim :* ",
+      "jid": "*Jid :* ",
+      "subscribers": "*Aboneler :* ",
+      "verification": "*Doğrulama :* ",
+      "creation": "*Oluşturma :* ",
+      "description": "*Açıklama :* "
+    },
+    "budget": {
+      "income_desc": "gelir ayarlamak için",
+      "income_example": "*Tür eksik*\n*Örnek : income type,amount,remark*\n*income salary, 500*\n\n*remark isteğe bağlı*",
+      "income_success": "*Bu ayın geliri {0}*",
+      "expense_desc": "gider ayarlamak için",
+      "expense_example": "*Tür eksik*\n*Örnek : expense type,amount,remark*\n*expense movie, 200, movie_name*\n\n*remark isteğe bağlı*",
+      "expense_success": "*Bu ayın gideri {0}*",
+      "del_desc": "gelir | gider silmek için",
+      "del_example": "*Örnek : delbudget id*\n\n*Özetten ID*\n*Tutarı güncellemek için silmek yerine tekrar girin*",
+      "del_not_found": "_{0} listede yok._",
+      "del_success": "_{0} listeden kaldırıldı._",
+      "summary_desc": "bütçenin özetini almak için",
+      "summary_example": "*Örnek : summary 1 May 2023, 3 May 2023*"
+    },
+    "exif": {
+      "desc": "Bir çıkartmadan Exif meta verisini çıkar",
+      "reply_to_sticker": "*Bir çıkartmaya yanıt ver.*",
+      "failed": "*Çıkartma indirilemedi.*",
+      "not_found": "*Bu çıkartmada Exif meta verisi yok.*",
+      "pack_id": "*Pack ID:* ",
+      "pack_name": "*Paket Adı:* ",
+      "author": "*Yazar:* ",
+      "emojis": "*Emojiler:* "
+    },
+    "bing": {
+      "desc": "bing ai",
+      "example": "*Örnek : bing Hi*",
+      "dale_desc": "bing resim oluşturucu",
+      "dale_cookie_prompt": "Bing cookie ayarla, https://bing.com/images/create adresine giriş yap, bing Image Creator'ı bir kez kullan, sonra cookie'yi kopyala.",
+      "dale_example": "*Örnek :* dale Create a 3D illusion for a WhatsApp profile picture where a boy in a white shirt sits casually on a royal Sofa. Wearing White sneakers,a black T-shirt, and sunglasses, he looks ahead. The background features \"Arjun \" in big and capital Yellow fonts on the black wall."
+    },
+    "backup": {
+      "desc": "Yedekleme işlemlerini yönet: kimlik doğrula, doğrula veya yedekleme yap.",
+      "usage": "*Backup Komut Kullanımı:*\n\n- .gauth auth — Google Drive erişimi için hesabını doğrula.\n- backup now — Hemen yedekleme yap.",
+      "success": "yedekleme başarıyla tamamlandı!",
+      "auth_prompt": "Kimlik doğrulamayı başlatmak için `.gauth auth` kullan.",
+      "code_prompt": "Kodunu doğrulamak için `.gauth code <url_or_code>` kullan.",
+      "downloading": "_Dosya indiriliyor..._"
+    },
+    "poll": {
+      "desc": "Birden çok seçenekli bir anket oluştur.",
+      "example": "*Örnek : question,option1,option2,...*"
+    },
+    "cmd": {
+      "desc_set": "cmd ayarlamak için",
+      "desc_get": "cmd almak için",
+      "desc_del": "cmd silmek için",
+      "reply_to_sticker": "*Bir çıkartmaya yanıt ver*",
+      "example_set": "*Örnek : setcmd ping*",
+      "not_set": "*Herhangi bir cmd ayarlanmamış*",
+      "example_del": "*Örnek :*\ndelcmd cmdName\nBir çıkartmaya yanıt ver",
+      "success": "_Başarılı_",
+      "failed": "_Başarısız_"
+    },
+    "heroku": {
+      "restart_desc": "Dyno'yu yeniden başlat",
+      "restart_msg": "_Yeniden başlatılıyor..._",
+      "shutdown_desc": "Dyno'yu kapat",
+      "shutdown_msg": "_Kapatılıyor..._",
+      "quota_desc": "Quota bilgisini göster",
+      "quota_total": "Toplam Quota :",
+      "quota_used": "Kullanılan Quota :",
+      "remaining": "Kalan :",
+      "error_prefix": "HEROKU : {0}"
     }
   }
 }

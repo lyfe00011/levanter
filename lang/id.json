@@ -1,48 +1,49 @@
 {
   "extra": {
-    "init_session": "[{0}] Memulai sesi baru",
-    "load_session": "[{0}] Memeriksa status sesi",
-    "invalid_session": "[{0}] {1} ID SESI TIDAK VALID, SILAKAN SCAN LAGI!!!",
-    "success_session": "[{0}] Sesi berhasil divalidasi.",
-    "connecting": "[{0}] Menghubungkan...",
-    "connected": "[{0}] Terhubung {1}",
-    "instance_close": "[{0}] Koneksi ditutup",
-    "instance_restart": "[{0}] Instance sedang dimulai ulang...",
-    "reconnect": "[{0}] Menghubungkan ulang...({1})",
-    "reconnect_after": "[{0}] Menghubungkan ulang setelah 1 menit",
-    "another_login": "[{0}] Sesi login di perangkat lain.",
-    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
-    "deleted_message": "           Pesan dihapus",
-    "install_external_plugin": "[{0}] Menginstal plugin eksternal...",
-    "installed_external_plugin": "[{0}] Plugin Eksternal Terinstal",
-    "plugin_install": "[{0}] Menginstal Plugin...",
-    "plugin_installed": "[{0}] {1} Terinstal",
-    "plugins_installed": "[{0}] Plugin Terinstal",
-    "plugin_install_error": "[{0}] Error saat menginstal {1}, menghapus plugin",
-    "plugin_not_found": "[{0}] plugin {1} tidak ditemukan (404), menghapus plugin",
-    "group_cmd": "Perintah ini hanya tersedia di grup.",
+    "init_session": "[{0}] Menyiapkan sesi baru... 🚀",
+    "load_session": "[{0}] Mengunduh data sesi... 📥",
+    "invalid_session": "[{0}] {1} ID sesi tidak valid, silakan scan lagi! 📸",
+    "success_session": "[{0}] Sesi tervalidasi, siap! ✅",
+    "connecting": "[{0}] Menghubungkan... 📡",
+    "connected": "[{0}] Online, siap membantu! ⚡ {1}",
+    "instance_close": "[{0}] Koneksi ditutup. 👋",
+    "instance_restart": "[{0}] Memulai ulang instance... 🔄",
+    "reconnect": "[{0}] Menghubungkan ulang... ({1}) 🔄",
+    "reconnect_after": "[{0}] Akan dicoba lagi dalam 1 menit. ☕",
+    "another_login": "[{0}] Sesi sedang login di perangkat lain. 🤨",
+    "error_message": "```--- ⚠️ ERROR REPORT ⚠️ ---\n\nVersion  : {0}\nMessage  : {1}\nError    : {2}\nJid      : {3}\nCommand  : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "deleted_message": "🗑️ Pesan yang dihapus",
+    "edited_message": "✏️ Pesan yang diedit #{0}",
+    "install_external_plugin": "[{0}] Menginstal plugin eksternal... 📦",
+    "installed_external_plugin": "[{0}] Plugin eksternal terinstal! 🎒",
+    "plugin_install": "[{0}] Menginstal plugin... 📚",
+    "plugin_installed": "[{0}] {1} terinstal! ✅",
+    "plugins_installed": "[{0}] Semua plugin siap! 🎓",
+    "plugin_install_error": "[{0}] Error saat menginstal {1}, menghapusnya. 🗑️",
+    "plugin_not_found": "[{0}] Plugin {1} tidak ditemukan (404), menghapusnya. 🔍",
+    "group_cmd": "Perintah ini hanya bisa digunakan di grup. 👨‍👩‍👧‍👦",
     "labels": {
-      "sudo": "SUDO",
-      "auto_read": "AUTO READ MSG",
-      "auto_status": "AUTO STATUS VIEW",
-      "auto_reject": "AUTO REJECT CALL",
-      "always_online": "ALWAYS ONLINE",
-      "anti_delete": "ANTI DELETE MSG",
-      "auto_update": "AUTO UPDATE BOT"
+      "sudo": "🛡️ SUDO",
+      "auto_read": "📖 AUTO READ MSG",
+      "auto_status": "👀 AUTO STATUS VIEW",
+      "auto_reject": "🚫 AUTO REJECT CALL",
+      "always_online": "🔋 ALWAYS ONLINE",
+      "anti_delete": "🛡️ ANTI DELETE MSG",
+      "auto_update": "🔄 AUTO UPDATE BOT"
     },
-    "promoted": "promoted",
-    "demoted": "demoted",
-    "file_size_error": "Size is {0}\n\n{1}",
-    "missing_jid": "missing jids",
-    "no_contacts": "not found contacts, please add contacts",
-    "reaction_not_enabled": "Reaction not enabled",
-    "reaction_not_allowed": "this reaction not allowed",
-    "metadata_fetch_failed": "failed to fetch metadata",
-    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
-    "screenshot_error": "an error occured",
-    "id_missing": "id missing",
-    "not_on_whatsapp": "{0} is not on whatsapp.",
-    "yt_auth_required": "Gagal mengunduh: YouTube memerlukan autentikasi.\n\n*Solusi:*\n1. *Google Auth (Direkomendasikan):* Gunakan `.gauth auth` untuk menautkan akun Google Anda.\n2. *YT_COOKIE:* Atur variabel lingkungan `YT_COOKIE`.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "promoted": "mempromosikan",
+    "demoted": "menurunkan",
+    "file_size_error": "Ukuran file terlalu besar! 📂\nUkuran: {0}\n\n{1}",
+    "missing_jid": "JID tidak ada. 🗺️",
+    "no_contacts": "Tidak ada kontak, tambahkan dulu. 👥",
+    "reaction_not_enabled": "Reaksi dinonaktifkan untuk kanal ini.",
+    "reaction_not_allowed": "Reaksi ini tidak diizinkan untuk kanal ini.",
+    "metadata_fetch_failed": "Gagal mengambil metadata. 🧩",
+    "lang_not_supported": "Bahasa ' {0} ' belum didukung, beralih ke bahasa default. 🌐",
+    "screenshot_error": "Error saat mengambil screenshot. 📸❌",
+    "id_missing": "ID tidak ada. 🕵️",
+    "not_on_whatsapp": "{0} tidak ada di WhatsApp. 👻",
+    "yt_auth_required": "Gagal mengunduh: YouTube memerlukan autentikasi. 🗝️\n\n*Solusi:*\n1. *Google Auth:* Gunakan `.gauth auth` untuk menautkan akun Google-mu.\n2. *YT_COOKIE:* Atur variabel lingkungan `YT_COOKIE`.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -50,7 +51,36 @@
       "reply_to_message": "Balas pesan",
       "not_admin": "Saya bukan admin.",
       "not_found": "Tidak ditemukan.",
-      "update": "_Pengaturan berhasil diperbarui! Preferensi Anda telah disimpan dan sekarang aktif._"
+      "update": "_Pengaturan berhasil diperbarui! Preferensi Anda telah disimpan dan sekarang aktif._",
+      "spotify_download_failed": "gagal mengunduh track Spotify",
+      "spotify_playlist_failed": "gagal mengambil playlist Spotify",
+      "truecaller_login_prompt": "Kamu belum login.\n\nKirim nomormu untuk login ke Truecaller.\n\nContoh : truecaller your_number",
+      "truecaller_sent": "Kode sudah dikirim ke nomormu\n\nContoh : truecaller 653084",
+      "truecaller_invalid_number": "nomor tidak valid",
+      "truecaller_invalid_code": "kode tidak valid",
+      "truecaller_invalid_mobile": "nomor ponsel tidak valid",
+      "group_not_found": "{0} tidak ada di grup. 3 anggota pertama: {1}",
+      "import_contacts_first": "impor kontak terlebih dahulu",
+      "video_not_supported": "Music engine tidak mendukung unduhan video di bot ini.",
+      "audio_disabled": "Unduhan music engine gagal dan audio YouTube dinonaktifkan.",
+      "gemini_missing_api_key": "GEMINI_API_KEY tidak ada",
+      "gemini_error": "error",
+      "upscale_upload_failed": "Gagal mengunggah gambar",
+      "upscale_invalid_response": "Respons tidak valid dari layanan upscale",
+      "upscale_failed": "Gagal meng-upscale gambar. Coba lagi nanti.",
+      "invalid_file_type": "Error: file {0} tidak dapat diproses",
+      "upload_failed": "Error mengunggah file: {0}",
+      "yt_login_prompt": "Silakan login ke akun YouTube-mu atau atur YT_COOKIE.\n\nLogin di sini => https://levanter-plugins.vercel.app/yt\n",
+      "yt_cookie_needed": "Atur YT Cookie\nhttps://t.me/c/2479057503/378/2550",
+      "yt_not_found": "{0} tidak ditemukan",
+      "time_day": " hari ",
+      "time_days": " hari ",
+      "time_hour": " jam ",
+      "time_hours": " jam ",
+      "time_minute": " menit ",
+      "time_minutes": " menit ",
+      "time_second": " detik",
+      "time_seconds": " detik"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ Pengguna : {1}\n│ Waktu : {2}\n│ Hari : {3}\n│ Tanggal : {4}\n│ Versi : {5}\n│ Plugin : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
@@ -709,7 +739,7 @@
       "invalid_input": "Input tidak valid. Silakan berikan lawan yang valid atau gunakan 'end' atau 'restart' dengan benar.",
       "players": "Pemain",
       "already_occupied": "_Sudah Terisi_",
-      "current_player": "pemainSaatIni",
+      "current_player": "Pemain saat ini",
       "game_finish": "Game Selesai 🏁",
       "winner": "Pemenang",
       "restart": "Restart Game",
@@ -791,7 +821,7 @@
       "desc": "Game Rantai Kata: Berpartisipasi dengan memberikan kata yang melanjutkan rantai. Gunakan 'wcg start' untuk memulai game baru atau 'wcg end' untuk menghentikan game saat ini.",
       "game_ends": "Game Ends",
       "already_used": "_Already Used this Word!_",
-      "not_starting_with": "_Not Starting with {0}_",
+      "not_starting_with": "_{0} tidak dimulai dengan_ {1}",
       "length_limit": "_This word length is less than {0}_",
       "not_in_list": "_This word is not in my words list_",
       "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Your word must start with *{2}* and include at least *{3}* letters\n🏆Players remaining : {4}/{5}\n⏳You have *{6}s* to answer\n📝Total words : {7}",
@@ -810,17 +840,28 @@
     },
     "yts": {
       "usage": "Contoh: yts baymax",
-      "desc": "Cari video YouTube berdasarkan kueri atau URL. Jika URL YouTube yang valid diberikan, informasi detail untuk video pertama akan dikembalikan."
+      "desc": "Cari video YouTube berdasarkan kueri atau URL. Jika URL YouTube yang valid diberikan, informasi detail untuk video pertama akan dikembalikan.",
+      "title": "*Judul :* ",
+      "time": "*Durasi :* ",
+      "views": "*Ditonton :* ",
+      "publish": "*Terbit :* ",
+      "desc_label": "*Desk :* ",
+      "author": "*Kanal :* ",
+      "url": "*Url :* "
     },
     "song": {
       "usage": "Contoh: song indila love story ATAU song <URL YouTube> (balas ke pesan juga didukung)",
       "desc": "Unduh lagu dari YouTube. Jika URL diberikan, lagu akan diunduh langsung; jika tidak, pencarian akan dilakukan dan daftar hasil akan dibuat untuk dipilih.",
-      "not_found": "Tidak ada lagu yang ditemukan untuk kueri atau URL yang diberikan."
+      "not_found": "Tidak ada lagu yang ditemukan untuk kueri atau URL yang diberikan.",
+      "no_result": "_Tidak ada hasil untuk_ *{0}*",
+      "id_label": "🆔&id\n",
+      "list_header": "Mencari {0} dan menemukan {1} hasil\nkirim 🆔 untuk mengunduh lagu.\n"
     },
     "video": {
       "usage": "Contoh: video <URL YouTube> (atau balas ke pesan dengan URL)",
       "desc": "Unduh video YouTube. Jika URL langsung diberikan, video akan diunduh; jika kueri pencarian diberikan, daftar hasil akan dibuat untuk dipilih.",
-      "not_found": "Tidak ada video yang ditemukan untuk kueri atau URL yang diberikan."
+      "not_found": "Tidak ada video yang ditemukan untuk kueri atau URL yang diberikan.",
+      "list_header": "Mencari {0}\nMenemukan {1} hasil"
     },
     "update": {
       "usage": "Contoh: update",
@@ -840,12 +881,14 @@
       "action": "Tindakan diperbarui: sebutan grup sekarang akan menghasilkan *{0}*.",
       "filter": "JID yang diabaikan diperbarui untuk anti-sebutan grup.",
       "enabled": "Anti-sebutan grup telah diaktifkan.",
-      "disabled": "Anti-sebutan grup telah dinonaktifkan."
+      "disabled": "Anti-sebutan grup telah dinonaktifkan.",
+      "desc": "Kelola pengaturan anti mention grup 🛡️",
+      "ignore_prompt": "*Bos, berikan JID untuk diabaikan.* 🕵️‍♂️"
     },
     "reminder": {
       "desc": "Kelola pengingat Google Calendar.",
       "usage": "> *Penggunaan Pengingat:*\n- `reminder <teks>` - Setel pengingat baru (mis. 'rapat besok jam 10 pagi')\n- `reminder list` - Daftar semua pengingat\n- `reminder del <id>` - Hapus pengingat",
-      "success": "✅ Pengingat disetel: *{0}* pada {1}",
+      "success": "*Pengingat Ditambahkan!*\n\n*Acara:* {0}\n*Waktu:* {1}\n*Tautan:* {2}",
       "list": "*Pengingat Anda:*\n\n{0}",
       "list_empty": "Tidak ada pengingat ditemukan.",
       "deleted": "Pengingat berhasil dihapus!",
@@ -892,6 +935,132 @@
       "auth_required": "Harap autentikasi menggunakan *.gauth auth* dan aktifkan izin Google Tasks.",
       "list_lists": "📝 *Daftar Tugas*:\n",
       "switched": "Beralih daftar tugas default ke *{0}*."
+    },
+    "antiedit": {
+      "desc": "Anti-edit: melacak pesan yang diedit dan menampilkan riwayatnya",
+      "example": "> *Contoh Penggunaan:*\n- antiedit p - Kirim riwayat edit ke chat/sudo-mu\n- antiedit g - Kirim riwayat edit di grup yang sama\n- antiedit off - Nonaktifkan anti-edit\n- antiedit <jid> - Kirim riwayat edit ke JID tertentu",
+      "invalid_jid": "*Error:* _JID tidak valid_",
+      "edit_msg_jid": " _Riwayat edit akan dikirim ke: {0}_",
+      "edit_msg_disable": "Anti-edit telah dinonaktifkan.",
+      "edit_msg_sudo": "_Riwayat edit akan dikirim ke chat-mu atau sudo._",
+      "edit_msg_chat": "_Riwayat edit akan dikirim ke chat itu sendiri._"
+    },
+    "screenshot": {
+      "usage": "Contoh: screenshot levanter.site",
+      "desc": "Ambil screenshot dari website apa pun! 📸"
+    },
+    "lyrics": {
+      "usage": "Contoh: lyrics heat waves",
+      "desc": "Temukan lirik lagu favoritmu! 🎤",
+      "not_found": "Tidak menemukan lirik itu. Salah ketik? 🧐"
+    },
+    "google": {
+      "usage": "Contoh: google how to make coffee",
+      "desc": "Cari apa saja di Google! 🌐"
+    },
+    "lofi": {
+      "desc": "Unduh audio lofi dari Tidal",
+      "usage": "_Berikan nama lagu_",
+      "no_result": "_Tidak ada hasil untuk_ *{0}*",
+      "error_download": "_Error mengunduh audio lofi: {0}_",
+      "error_search": "_Error mencari lofi: {0}_",
+      "list_header": "Mencari {0} dan menemukan {1} hasil\nkirim 🆔 untuk mengunduh lofi.\n"
+    },
+    "spotify": {
+      "desc": "Unduh track atau playlist favoritmu 🎧",
+      "example": "*Contoh :* spotify <url>",
+      "downloading": "_Mengunduh {0} track untuk kalian! Siap-siap vibing!_ 🎧🎶"
+    },
+    "audio": {
+      "desc": "mod audio",
+      "reply_to_audio": "*Balas ke pesan audio*"
+    },
+    "img": {
+      "desc": "Pencarian gambar Pinterest",
+      "example": "*Contoh :  img cats*\n*img 10 cats*",
+      "no_result": "_Tidak ditemukan gambar Pinterest untuk {0}_",
+      "downloading": "_Mengunduh {0} gambar Pinterest dari {1}_"
+    },
+    "react": {
+      "desc": "Reaksi ke pesan",
+      "example": "_Contoh : react ❣_",
+      "channel_desc": "Reaksi ke kanal",
+      "channel_example": "_Contoh : creact https://whatsapp.com/channel/xxx/xxx, ❣_",
+      "info_desc": "Dapatkan info kanal",
+      "info_example": "_Contoh : cinfo https://whatsapp.com/channel/xxx",
+      "invalid_url": "_URL kanal tidak valid_",
+      "metadata_failed": "_Tidak dapat mengambil metadata kanal_",
+      "name": "*Nama :* ",
+      "jid": "*Jid :* ",
+      "subscribers": "*Pelanggan :* ",
+      "verification": "*Verifikasi :* ",
+      "creation": "*Dibuat :* ",
+      "description": "*Deskripsi :* "
+    },
+    "budget": {
+      "income_desc": "untuk mengatur pemasukan",
+      "income_example": "*Tipe tidak ada*\n*Contoh : income type,amount,remark*\n*income salary, 500*\n\n*remark opsional*",
+      "income_success": "*Pemasukan bulan ini adalah {0}*",
+      "expense_desc": "untuk mengatur pengeluaran",
+      "expense_example": "*Tipe tidak ada*\n*Contoh : expense type,amount,remark*\n*expense movie, 200, movie_name*\n\n*remark opsional*",
+      "expense_success": "*Pengeluaran bulan ini adalah {0}*",
+      "del_desc": "untuk menghapus pemasukan | pengeluaran",
+      "del_example": "*Contoh : delbudget id*\n\n*Id dari ringkasan*\n*Untuk mengupdate jumlah masukkan lagi alih-alih menghapus*",
+      "del_not_found": "_{0} tidak ada dalam daftar._",
+      "del_success": "_{0} dihapus dari daftar._",
+      "summary_desc": "untuk mendapatkan ringkasan budget",
+      "summary_example": "*Contoh : summary 1 May 2023, 3 May 2023*"
+    },
+    "exif": {
+      "desc": "Ekstrak metadata Exif dari sticker",
+      "reply_to_sticker": "*Balas ke sticker.*",
+      "failed": "*Gagal mengunduh sticker.*",
+      "not_found": "*Tidak ada metadata Exif di sticker ini.*",
+      "pack_id": "*Pack ID:* ",
+      "pack_name": "*Nama Pack:* ",
+      "author": "*Penulis:* ",
+      "emojis": "*Emoji:* "
+    },
+    "bing": {
+      "desc": "bing ai",
+      "example": "*Contoh : bing Hi*",
+      "dale_desc": "pembuat gambar bing",
+      "dale_cookie_prompt": "Atur bing cookie, login ke https://bing.com/images/create, gunakan bing Image Creator sekali, lalu salin cookie-nya.",
+      "dale_example": "*Contoh :* dale Create a 3D illusion for a WhatsApp profile picture where a boy in a white shirt sits casually on a royal Sofa. Wearing White sneakers,a black T-shirt, and sunglasses, he looks ahead. The background features \"Arjun \" in big and capital Yellow fonts on the black wall."
+    },
+    "backup": {
+      "desc": "Kelola operasi backup: autentikasi, validasi, atau lakukan backup.",
+      "usage": "*Penggunaan Perintah Backup:*\n\n- .gauth auth — Autentikasi akunmu untuk akses Google Drive.\n- backup now — Lakukan backup sekarang.",
+      "success": "backup berhasil!",
+      "auth_prompt": "Gunakan `.gauth auth` untuk memulai autentikasi.",
+      "code_prompt": "Gunakan `.gauth code <url_or_code>` untuk memvalidasi kodemu.",
+      "downloading": "_Mengunduh file..._"
+    },
+    "poll": {
+      "desc": "Buat polling dengan beberapa pilihan.",
+      "example": "*Contoh : question,option1,option2,...*"
+    },
+    "cmd": {
+      "desc_set": "untuk mengatur cmd",
+      "desc_get": "untuk mendapatkan cmd",
+      "desc_del": "untuk menghapus cmd",
+      "reply_to_sticker": "*Balas ke sticker*",
+      "example_set": "*Contoh : setcmd ping*",
+      "not_set": "*Tidak ada cmd yang diatur*",
+      "example_del": "*Contoh :*\ndelcmd cmdName\nBalas ke sticker",
+      "success": "_Berhasil_",
+      "failed": "_Gagal_"
+    },
+    "heroku": {
+      "restart_desc": "Restart Dyno",
+      "restart_msg": "_Memulai ulang..._",
+      "shutdown_desc": "Matikan Dyno",
+      "shutdown_msg": "_Mematikan..._",
+      "quota_desc": "Tampilkan info Quota",
+      "quota_total": "Total Quota :",
+      "quota_used": "Quota Terpakai :",
+      "remaining": "Sisa :",
+      "error_prefix": "HEROKU : {0}"
     }
   }
 }
