@@ -161,12 +161,16 @@
     },
     "delete": {
       "desc": "Антиудаление: Восстановить удаленные сообщения",
-      "example": "> *Примеры использования:*\n- delete p - Отправить удаленные сообщения в ваш чат/суперпользователю\n- delete g - Отправить удаленные сообщения в ту же группу\n- delete off - Отключить антиудаление\n- delete <jid> - Отправить удаленные сообщения на определенный JID",
+      "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Ошибка:* _Недействительный JID_",
-      "dlt_msg_jid": " _Удаленные сообщения будут отправлены на: {0}_",
       "dlt_msg_disable": "Антиудаление отключено.",
-      "dlt_msg_sudo": "_Удаленные сообщения будут отправлены в ваш чат или суперпользователю._",
-      "dlt_msg_chat": "_Удаленные сообщения будут отправлены в сам чат._"
+      "dlt_dest_jid": "_Удаленные сообщения будут отправлены на: {0}_",
+      "dlt_dest_sudo": "_Удаленные сообщения будут отправлены в ваш чат или суперпользователю._",
+      "dlt_dest_chat": "_Удаленные сообщения будут отправлены в сам чат._",
+      "dlt_scope_pm": "📌 _Only for personal chats_",
+      "dlt_scope_gm": "📌 _Only for group chats_",
+      "dlt_scope_no_pm": "📌 _Excluding personal chats_",
+      "dlt_scope_no_gm": "📌 _Excluding group chats_"
     },
     "dlt": {
       "desc": "Удалить отвеченные сообщения"
@@ -938,12 +942,16 @@
     },
     "antiedit": {
       "desc": "Anti-edit: отслеживание отредактированных сообщений и показ истории",
-      "example": "> *Примеры использования:*\n- antiedit p - Отправлять историю правок в ваш чат/sudo\n- antiedit g - Отправлять историю правок в той же группе\n- antiedit off - Отключить anti-edit\n- antiedit <jid> - Отправлять историю правок на конкретный JID",
+      "example": "> *Usage Examples:*\n- antiedit g - Send edit history in same chat\n- antiedit p - Send edit history to sudo\n- antiedit g pm - Same chat, PMs only\n- antiedit g gm - Same chat, groups only\n- antiedit p no-gm - To sudo, exclude groups\n- antiedit p no-pm - To sudo, exclude PMs\n- antiedit <jid> - Send to specific JID\n- antiedit off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Ошибка:* _Неверный JID_",
-      "edit_msg_jid": " _История правок будет отправлена на: {0}_",
       "edit_msg_disable": "Anti-edit отключён.",
-      "edit_msg_sudo": "_История правок будет отправлена в ваш чат или sudo._",
-      "edit_msg_chat": "_История правок будет отправлена в тот же чат._"
+      "edit_dest_jid": "_История правок будет отправлена на: {0}_",
+      "edit_dest_sudo": "_История правок будет отправлена в ваш чат или sudo._",
+      "edit_dest_chat": "_История правок будет отправлена в тот же чат._",
+      "edit_scope_pm": "📌 _Only for personal chats_",
+      "edit_scope_gm": "📌 _Only for group chats_",
+      "edit_scope_no_pm": "📌 _Excluding personal chats_",
+      "edit_scope_no_gm": "📌 _Excluding group chats_"
     },
     "screenshot": {
       "usage": "Пример: screenshot levanter.site",

@@ -161,12 +161,16 @@
     },
     "delete": {
       "desc": "مكافحة الحذف: استعادة الرسائل المحذوفة",
-      "example": "> *أمثلة الاستخدام:*\n- delete p - إرسال الرسائل المحذوفة إلى دردشتك/المشرف\n- delete g - إرسال الرسائل المحذوفة في نفس المجموعة\n- delete off - تعطيل مكافحة الحذف\n- delete <jid> - إرسال الرسائل المحذوفة إلى JID محدد",
+      "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*خطأ:* _معرف JID غير صالح_",
-      "dlt_msg_jid": " _سيتم إرسال الرسائل المحذوفة إلى: {0}_",
       "dlt_msg_disable": "تم تعطيل مكافحة الحذف.",
-      "dlt_msg_sudo": "_سيتم إرسال الرسائل المحذوفة إلى دردشتك أو المشرف._",
-      "dlt_msg_chat": "_سيتم إرسال الرسائل المحذوفة إلى الدردشة نفسها._"
+      "dlt_dest_jid": "_سيتم إرسال الرسائل المحذوفة إلى: {0}_",
+      "dlt_dest_sudo": "_سيتم إرسال الرسائل المحذوفة إلى دردشتك أو المشرف._",
+      "dlt_dest_chat": "_سيتم إرسال الرسائل المحذوفة إلى الدردشة نفسها._",
+      "dlt_scope_pm": "📌 _Only for personal chats_",
+      "dlt_scope_gm": "📌 _Only for group chats_",
+      "dlt_scope_no_pm": "📌 _Excluding personal chats_",
+      "dlt_scope_no_gm": "📌 _Excluding group chats_"
     },
     "dlt": {
       "desc": "حذف الرسائل التي تم الرد عليها"
@@ -938,12 +942,16 @@
     },
     "antiedit": {
       "desc": "Anti-edit: تتبع الرسايل اللي اتعدلت وعرض تاريخها",
-      "example": "> *أمثلة الاستخدام:*\n- antiedit p - ابعت سجل التعديلات للشات/sudo بتاعك\n- antiedit g - ابعت سجل التعديلات في نفس الجروب\n- antiedit off - تعطيل anti-edit\n- antiedit <jid> - ابعت سجل التعديلات لـ JID معين",
+      "example": "> *Usage Examples:*\n- antiedit g - Send edit history in same chat\n- antiedit p - Send edit history to sudo\n- antiedit g pm - Same chat, PMs only\n- antiedit g gm - Same chat, groups only\n- antiedit p no-gm - To sudo, exclude groups\n- antiedit p no-pm - To sudo, exclude PMs\n- antiedit <jid> - Send to specific JID\n- antiedit off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*خطأ:* _JID غير صالح_",
-      "edit_msg_jid": " _سجل التعديلات هيتبعت لـ: {0}_",
       "edit_msg_disable": "اتعطل anti-edit.",
-      "edit_msg_sudo": "_سجل التعديلات هيتبعت للشات بتاعك أو لـ sudo._",
-      "edit_msg_chat": "_سجل التعديلات هيتبعت في الشات نفسه._"
+      "edit_dest_jid": "_سجل التعديلات هيتبعت لـ: {0}_",
+      "edit_dest_sudo": "_سجل التعديلات هيتبعت للشات بتاعك أو لـ sudo._",
+      "edit_dest_chat": "_سجل التعديلات هيتبعت في الشات نفسه._",
+      "edit_scope_pm": "📌 _Only for personal chats_",
+      "edit_scope_gm": "📌 _Only for group chats_",
+      "edit_scope_no_pm": "📌 _Excluding personal chats_",
+      "edit_scope_no_gm": "📌 _Excluding group chats_"
     },
     "screenshot": {
       "usage": "مثال: screenshot levanter.site",

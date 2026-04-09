@@ -161,12 +161,16 @@
     },
     "delete": {
       "desc": "Anti-silme: Silinen mesajları kurtar",
-      "example": "> *Kullanım Örnekleri:*\n- delete p - Silinen mesajları sohbetinize/sudo'ya gönder\n- delete g - Silinen mesajları aynı gruba gönder\n- delete off - Anti-silmeyi devre dışı bırak\n- delete <jid> - Silinen mesajları belirli bir JID'e gönder",
+      "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Hata:* _Geçersiz JID_",
-      "dlt_msg_jid": " _Silinen mesajlar şuraya gönderilecek: {0}_",
       "dlt_msg_disable": "Anti-silme devre dışı bırakıldı.",
-      "dlt_msg_sudo": "_Silinen mesajlar sohbetinize veya sudo'ya gönderilecek._",
-      "dlt_msg_chat": "_Silinen mesajlar sohbete kendisi gönderilecek._"
+      "dlt_dest_jid": "_Silinen mesajlar şuraya gönderilecek: {0}_",
+      "dlt_dest_sudo": "_Silinen mesajlar sohbetinize veya sudo'ya gönderilecek._",
+      "dlt_dest_chat": "_Silinen mesajlar sohbete kendisi gönderilecek._",
+      "dlt_scope_pm": "📌 _Only for personal chats_",
+      "dlt_scope_gm": "📌 _Only for group chats_",
+      "dlt_scope_no_pm": "📌 _Excluding personal chats_",
+      "dlt_scope_no_gm": "📌 _Excluding group chats_"
     },
     "dlt": {
       "desc": "yanıtlanan mesajları sil"
@@ -938,12 +942,16 @@
     },
     "antiedit": {
       "desc": "Anti-edit: düzenlenen mesajları takip eder ve geçmişini gösterir",
-      "example": "> *Kullanım Örnekleri:*\n- antiedit p - Düzenleme geçmişini sohbetine/sudo gönder\n- antiedit g - Düzenleme geçmişini aynı grupta gönder\n- antiedit off - Anti-edit özelliğini kapat\n- antiedit <jid> - Düzenleme geçmişini belirli bir JID'e gönder",
+      "example": "> *Usage Examples:*\n- antiedit g - Send edit history in same chat\n- antiedit p - Send edit history to sudo\n- antiedit g pm - Same chat, PMs only\n- antiedit g gm - Same chat, groups only\n- antiedit p no-gm - To sudo, exclude groups\n- antiedit p no-pm - To sudo, exclude PMs\n- antiedit <jid> - Send to specific JID\n- antiedit off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Hata:* _Geçersiz JID_",
-      "edit_msg_jid": " _Düzenleme geçmişi şuraya gönderilecek: {0}_",
       "edit_msg_disable": "Anti-edit devre dışı bırakıldı.",
-      "edit_msg_sudo": "_Düzenleme geçmişi sohbetine veya sudo'ya gönderilecek._",
-      "edit_msg_chat": "_Düzenleme geçmişi sohbetin kendisine gönderilecek._"
+      "edit_dest_jid": "_Düzenleme geçmişi şuraya gönderilecek: {0}_",
+      "edit_dest_sudo": "_Düzenleme geçmişi sohbetine veya sudo'ya gönderilecek._",
+      "edit_dest_chat": "_Düzenleme geçmişi sohbetin kendisine gönderilecek._",
+      "edit_scope_pm": "📌 _Only for personal chats_",
+      "edit_scope_gm": "📌 _Only for group chats_",
+      "edit_scope_no_pm": "📌 _Excluding personal chats_",
+      "edit_scope_no_gm": "📌 _Excluding group chats_"
     },
     "screenshot": {
       "usage": "Örnek: screenshot levanter.site",

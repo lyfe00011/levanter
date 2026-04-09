@@ -161,12 +161,16 @@
     },
     "delete": {
       "desc": "Anti-delete: *_Deleted messages recover karain_*",
-      "example": "> *istamal Examples:*\n- delete p - Deleted messages ko aapki chat mein bhejo/sudo\n- delete g - Deleted messages ko aapky usy group main aayenge\n- delete off - Disable anti-delete\n- delete <jid> - Deleted messages apky diye how JID pe aayenge",
+      "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Error:* _Invalid JID_",
-      "dlt_msg_jid": " *_Deleted messages bheje jayenge: {0}_*",
       "dlt_msg_disable": "*_Anti-delete disable kar diya gaya hai._*",
-      "dlt_msg_sudo": "*_Deleted messages aapki chat ya sudo mein bheje jayenge._*",
-      "dlt_msg_chat": "*_Deleted messages chat mein hi bheje jayenge_*"
+      "dlt_dest_jid": "*_Deleted messages bheje jayenge: {0}_*",
+      "dlt_dest_sudo": "*_Deleted messages aapki chat ya sudo mein bheje jayenge._*",
+      "dlt_dest_chat": "*_Deleted messages chat mein hi bheje jayenge_*",
+      "dlt_scope_pm": "📌 _Only for personal chats_",
+      "dlt_scope_gm": "📌 _Only for group chats_",
+      "dlt_scope_no_pm": "📌 _Excluding personal chats_",
+      "dlt_scope_no_gm": "📌 _Excluding group chats_"
     },
     "dlt": {
       "desc": "_Replied messages delete kar diye gaye!_"
@@ -938,12 +942,16 @@
     },
     "antiedit": {
       "desc": "Anti-edit: edit kiye gaye messages track karke unki history dikhata hai",
-      "example": "> *Usage Examples:*\n- antiedit p - Edit history ko aapke chat/sudo par bhejein\n- antiedit g - Edit history same group mein bhejein\n- antiedit off - Anti-edit disable karein\n- antiedit <jid> - Edit history specific JID par bhejein",
+      "example": "> *Usage Examples:*\n- antiedit g - Send edit history in same chat\n- antiedit p - Send edit history to sudo\n- antiedit g pm - Same chat, PMs only\n- antiedit g gm - Same chat, groups only\n- antiedit p no-gm - To sudo, exclude groups\n- antiedit p no-pm - To sudo, exclude PMs\n- antiedit <jid> - Send to specific JID\n- antiedit off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Error:* _Invalid JID_",
-      "edit_msg_jid": " _Edit history yahan bheji jaegi: {0}_",
       "edit_msg_disable": "Anti-edit disable kar diya gaya hai.",
-      "edit_msg_sudo": "_Edit history aapke chat ya sudo par bheji jaegi._",
-      "edit_msg_chat": "_Edit history isi chat mein bheji jaegi._"
+      "edit_dest_jid": "_Edit history yahan bheji jaegi: {0}_",
+      "edit_dest_sudo": "_Edit history aapke chat ya sudo par bheji jaegi._",
+      "edit_dest_chat": "_Edit history isi chat mein bheji jaegi._",
+      "edit_scope_pm": "📌 _Only for personal chats_",
+      "edit_scope_gm": "📌 _Only for group chats_",
+      "edit_scope_no_pm": "📌 _Excluding personal chats_",
+      "edit_scope_no_gm": "📌 _Excluding group chats_"
     },
     "screenshot": {
       "usage": "Example: screenshot levanter.site",

@@ -161,12 +161,16 @@
     },
     "delete": {
       "desc": "Anti-delete: Delete cheytha message-ukkal thirichu pidikkaan",
-      "example": "> *Upayogikkunna reethi:*\n- delete p - Delete aaya message ninte chat/sudo-ilekk ayaykkum\n- delete g - Same group-il thanne delete aaya message ayaykkum\n- delete off - Anti-delete off aakkaan\n- delete <jid> - Chila target jid-ilekk ayaykkum",
+      "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Error:* _Aa JID pattiilla_",
-      "dlt_msg_jid": " _Delete aaya message-ukkal ivide ayaykkum: {0}_",
       "dlt_msg_disable": "Anti-delete off aayi.",
-      "dlt_msg_sudo": "_Delete aaya message-ukkal ninte chat-ilekk athallengil sudo-ilekk ayaykkum._",
-      "dlt_msg_chat": "_Delete aaya message-ukkal aa group-il thanne ayaykkum._"
+      "dlt_dest_jid": "_Delete aaya message-ukkal ivide ayaykkum: {0}_",
+      "dlt_dest_sudo": "_Delete aaya message-ukkal ninte chat-ilekk athallengil sudo-ilekk ayaykkum._",
+      "dlt_dest_chat": "_Delete aaya message-ukkal aa group-il thanne ayaykkum._",
+      "dlt_scope_pm": "📌 _Only for personal chats_",
+      "dlt_scope_gm": "📌 _Only for group chats_",
+      "dlt_scope_no_pm": "📌 _Excluding personal chats_",
+      "dlt_scope_no_gm": "📌 _Excluding group chats_"
     },
     "dlt": {
       "desc": "Nee reply koduthallo, aa message delete aakkaan"
@@ -938,12 +942,16 @@
     },
     "antiedit": {
       "desc": "Anti-edit: Edit cheytha messages track cheythu history kaanikkaan",
-      "example": "> *Usage Examples:*\n- antiedit p - Edit history ninte chat/sudo-ilekku ayaykkaan\n- antiedit g - Edit history aa group-il thanne ayaykkaan\n- antiedit off - Anti-edit off aakkaan\n- antiedit <jid> - Specific JID-ilekk ayaykkaan",
+      "example": "> *Usage Examples:*\n- antiedit g - Send edit history in same chat\n- antiedit p - Send edit history to sudo\n- antiedit g pm - Same chat, PMs only\n- antiedit g gm - Same chat, groups only\n- antiedit p no-gm - To sudo, exclude groups\n- antiedit p no-pm - To sudo, exclude PMs\n- antiedit <jid> - Send to specific JID\n- antiedit off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Error:* _JID thettaanu_",
-      "edit_msg_jid": " _Edit history ivide ayaykkum: {0}_",
       "edit_msg_disable": "Anti-edit off aayi.",
-      "edit_msg_sudo": "_Edit history ninte chat allenkil sudo-ilekk ayaykkum._",
-      "edit_msg_chat": "_Edit history aa chat-il thanne ayaykkum._"
+      "edit_dest_jid": "_Edit history ivide ayaykkum: {0}_",
+      "edit_dest_sudo": "_Edit history ninte chat allenkil sudo-ilekk ayaykkum._",
+      "edit_dest_chat": "_Edit history aa chat-il thanne ayaykkum._",
+      "edit_scope_pm": "📌 _Only for personal chats_",
+      "edit_scope_gm": "📌 _Only for group chats_",
+      "edit_scope_no_pm": "📌 _Excluding personal chats_",
+      "edit_scope_no_gm": "📌 _Excluding group chats_"
     },
     "screenshot": {
       "usage": "Example: screenshot levanter.site",

@@ -161,12 +161,16 @@
     },
     "delete": {
       "desc": "এন্টি-ডিলিট: ডিলিট করা মেসেজ পুনরুদ্ধার করুন",
-      "example": "> ব্যবহারের উদাহরণ:\n- delete p - ডিলিট করা মেসেজ আপনার চ্যাট/সুডোতে পাঠান\n- delete g - ডিলিট করা মেসেজ একই গ্রুপে পাঠান\n- delete off - এন্টি-ডিলিট বন্ধ করুন\n- delete <jid> - ডিলিট করা মেসেজ নির্দিষ্ট JID-এ পাঠান",
+      "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "এরর: অবৈধ JID",
-      "dlt_msg_jid": " ডিলিট করা মেসেজ পাঠানো হবে: {0}",
       "dlt_msg_disable": "এন্টি-ডিলিট বন্ধ করা হয়েছে।",
-      "dlt_msg_sudo": "ডিলিট করা মেসেজ আপনার চ্যাট বা সুডোতে পাঠানো হবে।",
-      "dlt_msg_chat": "ডিলিট করা মেসেজ চ্যাটেই পাঠানো হবে।"
+      "dlt_dest_jid": "ডিলিট করা মেসেজ পাঠানো হবে: {0}",
+      "dlt_dest_sudo": "ডিলিট করা মেসেজ আপনার চ্যাট বা সুডোতে পাঠানো হবে।",
+      "dlt_dest_chat": "ডিলিট করা মেসেজ চ্যাটেই পাঠানো হবে।",
+      "dlt_scope_pm": "📌 _Only for personal chats_",
+      "dlt_scope_gm": "📌 _Only for group chats_",
+      "dlt_scope_no_pm": "📌 _Excluding personal chats_",
+      "dlt_scope_no_gm": "📌 _Excluding group chats_"
     },
     "dlt": {
       "desc": "রিপ্লাই করা মেসেজ ডিলিট করুন"
@@ -938,12 +942,16 @@
     },
     "antiedit": {
       "desc": "Anti-edit: এডিট হওয়া মেসেজ ট্র্যাক করে হিস্টরি দেখাবে",
-      "example": "> *ব্যবহারের উদাহরণ:*\n- antiedit p - এডিট হিস্টরি আপনার chat/sudo-তে পাঠান\n- antiedit g - একই গ্রুপে এডিট হিস্টরি পাঠান\n- antiedit off - anti-edit বন্ধ করুন\n- antiedit <jid> - নির্দিষ্ট JID-তে এডিট হিস্টরি পাঠান",
+      "example": "> *Usage Examples:*\n- antiedit g - Send edit history in same chat\n- antiedit p - Send edit history to sudo\n- antiedit g pm - Same chat, PMs only\n- antiedit g gm - Same chat, groups only\n- antiedit p no-gm - To sudo, exclude groups\n- antiedit p no-pm - To sudo, exclude PMs\n- antiedit <jid> - Send to specific JID\n- antiedit off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*এরর:* _ভুল JID_",
-      "edit_msg_jid": " _এডিট হিস্টরি পাঠানো হবে: {0}_",
       "edit_msg_disable": "Anti-edit বন্ধ করা হয়েছে।",
-      "edit_msg_sudo": "_এডিট হিস্টরি আপনার chat বা sudo-তে পাঠানো হবে।_",
-      "edit_msg_chat": "_এডিট হিস্টরি একই chat-এ পাঠানো হবে।_"
+      "edit_dest_jid": "_এডিট হিস্টরি পাঠানো হবে: {0}_",
+      "edit_dest_sudo": "_এডিট হিস্টরি আপনার chat বা sudo-তে পাঠানো হবে।_",
+      "edit_dest_chat": "_এডিট হিস্টরি একই chat-এ পাঠানো হবে।_",
+      "edit_scope_pm": "📌 _Only for personal chats_",
+      "edit_scope_gm": "📌 _Only for group chats_",
+      "edit_scope_no_pm": "📌 _Excluding personal chats_",
+      "edit_scope_no_gm": "📌 _Excluding group chats_"
     },
     "screenshot": {
       "usage": "উদাহরণ: screenshot levanter.site",

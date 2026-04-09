@@ -161,12 +161,16 @@
     },
     "delete": {
       "desc": "Anti-hapus: Pulihkan pesan yang dihapus",
-      "example": "> *Contoh Penggunaan:*\n- delete p - Kirim pesan yang dihapus ke chat/sudo Anda\n- delete g - Kirim pesan yang dihapus di grup yang sama\n- delete off - Nonaktifkan anti-hapus\n- delete <jid> - Kirim pesan yang dihapus ke JID tertentu",
+      "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Error:* _JID tidak valid_",
-      "dlt_msg_jid": " _Pesan yang dihapus akan dikirim ke: {0}_",
       "dlt_msg_disable": "Anti-hapus telah dinonaktifkan.",
-      "dlt_msg_sudo": "_Pesan yang dihapus akan dikirim ke chat atau sudo Anda._",
-      "dlt_msg_chat": "_Pesan yang dihapus akan dikirim ke chat itu sendiri._"
+      "dlt_dest_jid": "_Pesan yang dihapus akan dikirim ke: {0}_",
+      "dlt_dest_sudo": "_Pesan yang dihapus akan dikirim ke chat atau sudo Anda._",
+      "dlt_dest_chat": "_Pesan yang dihapus akan dikirim ke chat itu sendiri._",
+      "dlt_scope_pm": "📌 _Only for personal chats_",
+      "dlt_scope_gm": "📌 _Only for group chats_",
+      "dlt_scope_no_pm": "📌 _Excluding personal chats_",
+      "dlt_scope_no_gm": "📌 _Excluding group chats_"
     },
     "dlt": {
       "desc": "hapus pesan yang dibalas"
@@ -938,12 +942,16 @@
     },
     "antiedit": {
       "desc": "Anti-edit: melacak pesan yang diedit dan menampilkan riwayatnya",
-      "example": "> *Contoh Penggunaan:*\n- antiedit p - Kirim riwayat edit ke chat/sudo-mu\n- antiedit g - Kirim riwayat edit di grup yang sama\n- antiedit off - Nonaktifkan anti-edit\n- antiedit <jid> - Kirim riwayat edit ke JID tertentu",
+      "example": "> *Usage Examples:*\n- antiedit g - Send edit history in same chat\n- antiedit p - Send edit history to sudo\n- antiedit g pm - Same chat, PMs only\n- antiedit g gm - Same chat, groups only\n- antiedit p no-gm - To sudo, exclude groups\n- antiedit p no-pm - To sudo, exclude PMs\n- antiedit <jid> - Send to specific JID\n- antiedit off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Error:* _JID tidak valid_",
-      "edit_msg_jid": " _Riwayat edit akan dikirim ke: {0}_",
       "edit_msg_disable": "Anti-edit telah dinonaktifkan.",
-      "edit_msg_sudo": "_Riwayat edit akan dikirim ke chat-mu atau sudo._",
-      "edit_msg_chat": "_Riwayat edit akan dikirim ke chat itu sendiri._"
+      "edit_dest_jid": "_Riwayat edit akan dikirim ke: {0}_",
+      "edit_dest_sudo": "_Riwayat edit akan dikirim ke chat-mu atau sudo._",
+      "edit_dest_chat": "_Riwayat edit akan dikirim ke chat itu sendiri._",
+      "edit_scope_pm": "📌 _Only for personal chats_",
+      "edit_scope_gm": "📌 _Only for group chats_",
+      "edit_scope_no_pm": "📌 _Excluding personal chats_",
+      "edit_scope_no_gm": "📌 _Excluding group chats_"
     },
     "screenshot": {
       "usage": "Contoh: screenshot levanter.site",

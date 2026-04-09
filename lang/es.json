@@ -161,12 +161,16 @@
     },
     "delete": {
       "desc": "AntiBorrado: Recupera Mensajes Borrados ",
-      "example": "> *Ejemplo de Uso:*\n- delete p - Enviar mensajes borrados a /sudo\n- delete g - Envia mensajes borrados a Grupo\n- delete off - Desactivar AntiBorrado\n- delete <jid> - Enviar los Mensajes borrados al JID Especificado",
+      "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Error:* _El JID no es Valido_",
-      "dlt_msg_jid": " _Los mensajes borrados seran Reenviados a: {0}_",
       "dlt_msg_disable": "AntiBorrar ha sido desactivado.",
-      "dlt_msg_sudo": "_Los mensajes eliminados se enviaran a tu chat o sudo._",
-      "dlt_msg_chat": "_Los mensajes eliminados se enviaran al mismo Chat._"
+      "dlt_dest_jid": "_Los mensajes borrados seran Reenviados a: {0}_",
+      "dlt_dest_sudo": "_Los mensajes eliminados se enviaran a tu chat o sudo._",
+      "dlt_dest_chat": "_Los mensajes eliminados se enviaran al mismo Chat._",
+      "dlt_scope_pm": "📌 _Only for personal chats_",
+      "dlt_scope_gm": "📌 _Only for group chats_",
+      "dlt_scope_no_pm": "📌 _Excluding personal chats_",
+      "dlt_scope_no_gm": "📌 _Excluding group chats_"
     },
     "dlt": {
       "desc": "Borra mensajes Citados"
@@ -938,12 +942,16 @@
     },
     "antiedit": {
       "desc": "Anti-edit: rastrea los mensajes editados y muestra su historial",
-      "example": "> *Ejemplos de uso:*\n- antiedit p - Enviar historial de ediciones a tu chat/sudo\n- antiedit g - Enviar historial de ediciones en el mismo grupo\n- antiedit off - Desactivar anti-edit\n- antiedit <jid> - Enviar historial de ediciones a un JID específico",
+      "example": "> *Usage Examples:*\n- antiedit g - Send edit history in same chat\n- antiedit p - Send edit history to sudo\n- antiedit g pm - Same chat, PMs only\n- antiedit g gm - Same chat, groups only\n- antiedit p no-gm - To sudo, exclude groups\n- antiedit p no-pm - To sudo, exclude PMs\n- antiedit <jid> - Send to specific JID\n- antiedit off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
       "invalid_jid": "*Error:* _JID inválido_",
-      "edit_msg_jid": " _El historial de ediciones se enviará a: {0}_",
       "edit_msg_disable": "Anti-edit ha sido desactivado.",
-      "edit_msg_sudo": "_El historial de ediciones se enviará a tu chat o sudo._",
-      "edit_msg_chat": "_El historial de ediciones se enviará al mismo chat._"
+      "edit_dest_jid": "_El historial de ediciones se enviará a: {0}_",
+      "edit_dest_sudo": "_El historial de ediciones se enviará a tu chat o sudo._",
+      "edit_dest_chat": "_El historial de ediciones se enviará al mismo chat._",
+      "edit_scope_pm": "📌 _Only for personal chats_",
+      "edit_scope_gm": "📌 _Only for group chats_",
+      "edit_scope_no_pm": "📌 _Excluding personal chats_",
+      "edit_scope_no_gm": "📌 _Excluding group chats_"
     },
     "screenshot": {
       "usage": "Ejemplo: screenshot levanter.site",
