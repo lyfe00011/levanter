@@ -1,7 +1,7 @@
 {
-  "name": "levanter",
+  "name": "Alucard MD",
   "version": "5.4.6",
-  "description": "",
+  "description": "I AM THE DEATH OF THE WORLD",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start . --attach --name levanter",
@@ -9,7 +9,7 @@
     "stop": "pm2 stop levanter",
     "postinstall": "node -e \"try { require('sharp') } catch (e) { process.exit(1); }\" || yarn add --ignore-engines sharp@0.34.5"
   },
-  "author": "",
+  "author": "✞╋ ꙰᷈ⷮ ΛŁЦCΛЯD✕乃LØØD ⷮ᷈꙰ ╋✞",
   "license": "MIT",
   "dependencies": {
     "audio-decode": "^2.2.2",
