@@ -1017,7 +1017,11 @@
       "del_not_found": "_{0} list-il illa._",
       "del_success": "_{0} list-il ninnu maatti._",
       "summary_desc": "Budget-inte summary edukkaan",
-      "summary_example": "*Example : summary 1 May 2023, 3 May 2023*"
+      "summary_example": "*Example : summary 1 May 2023, 3 May 2023*",
+      "budget_desc": "AI budget entry - ningalude transaction vivarikku",
+      "budget_example": "*Ningalude transaction naturally vivarikku*\n\n*Examples:*\n_budget coffee-kku 50 chelavaayi_\n_budget salary kitti 3000_\n_budget rent koduthu 200_\n_budget taxi 15_",
+      "budget_failed": "*Transaction manasilaayilla. Veendum try cheyyu.*\n\n_Example: budget coffee-kku 50 chelavaayi_",
+      "budget_success": "*{0} record aayi*\n_Amount: {1}_\n_Category: {2}_\n_Remark: {3}_\n\n*Ee maasam {0} total: {4}*"
     },
     "exif": {
       "desc": "Sticker-il ninnu Exif metadata extract cheyyaan",

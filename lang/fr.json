@@ -1017,7 +1017,11 @@
       "del_not_found": "_{0} n'est pas dans la liste._",
       "del_success": "_{0} supprimé de la liste._",
       "summary_desc": "pour obtenir le résumé du budget",
-      "summary_example": "*Exemple : summary 1 May 2023, 3 May 2023*"
+      "summary_example": "*Exemple : summary 1 May 2023, 3 May 2023*",
+      "budget_desc": "Entrée budget par IA - décrivez simplement votre transaction",
+      "budget_example": "*Décrivez votre transaction naturellement*\n\n*Exemples:*\n_budget dépensé 50 pour café_\n_budget reçu salaire 3000_\n_budget payé 200 loyer_\n_budget taxi 15_",
+      "budget_failed": "*Impossible de comprendre la transaction. Réessayez.*\n\n_Exemple: budget dépensé 50 pour café_",
+      "budget_success": "*{0} enregistré*\n_Montant: {1}_\n_Catégorie: {2}_\n_Remarque: {3}_\n\n*Total {0} ce mois: {4}*"
     },
     "exif": {
       "desc": "Extraire les métadonnées Exif d'un sticker",

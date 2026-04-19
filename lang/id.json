@@ -1017,7 +1017,11 @@
       "del_not_found": "_{0} tidak ada dalam daftar._",
       "del_success": "_{0} dihapus dari daftar._",
       "summary_desc": "untuk mendapatkan ringkasan budget",
-      "summary_example": "*Contoh : summary 1 May 2023, 3 May 2023*"
+      "summary_example": "*Contoh : summary 1 May 2023, 3 May 2023*",
+      "budget_desc": "Entri anggaran bertenaga AI - cukup deskripsikan transaksi Anda",
+      "budget_example": "*Deskripsikan transaksi Anda secara alami*\n\n*Contoh:*\n_budget habis 50 untuk kopi_\n_budget dapat gaji 3000_\n_budget bayar sewa 200_\n_budget taksi 15_",
+      "budget_failed": "*Tidak bisa memahami transaksi. Silakan coba lagi.*\n\n_Contoh: budget habis 50 untuk kopi_",
+      "budget_success": "*{0} tercatat*\n_Jumlah: {1}_\n_Kategori: {2}_\n_Catatan: {3}_\n\n*Total {0} bulan ini: {4}*"
     },
     "exif": {
       "desc": "Ekstrak metadata Exif dari sticker",

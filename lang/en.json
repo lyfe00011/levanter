@@ -1017,7 +1017,11 @@
       "del_not_found": "_{0} not in list._",
       "del_success": "_{0} removed from the list._",
       "summary_desc": "to get summary of budget",
-      "summary_example": "*Example : summary 1 May 2023, 3 May 2023*"
+      "summary_example": "*Example : summary 1 May 2023, 3 May 2023*",
+      "budget_desc": "AI-powered budget entry - just describe your transaction",
+      "budget_example": "*Describe your transaction naturally*\n\n*Examples:*\n_budget spent 50 on coffee_\n_budget got salary 3000_\n_budget paid 200 for rent_\n_budget taxi ride 15_",
+      "budget_failed": "*Could not understand the transaction. Please try again.*\n\n_Example: budget spent 50 on coffee_",
+      "budget_success": "*{0} recorded*\n_Amount: {1}_\n_Category: {2}_\n_Remark: {3}_\n\n*{0} total this month: {4}*"
     },
     "exif": {
       "desc": "Extract Exif metadata from a sticker",

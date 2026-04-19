@@ -1017,7 +1017,11 @@
       "del_not_found": "_{0} listede yok._",
       "del_success": "_{0} listeden kaldırıldı._",
       "summary_desc": "bütçenin özetini almak için",
-      "summary_example": "*Örnek : summary 1 May 2023, 3 May 2023*"
+      "summary_example": "*Örnek : summary 1 May 2023, 3 May 2023*",
+      "budget_desc": "AI destekli bütçe girişi - işleminizi doğal dilde tanımlayın",
+      "budget_example": "*İşleminizi doğal olarak tanımlayın*\n\n*Örnekler:*\n_budget kahveye 50 harcadım_\n_budget maaş aldım 3000_\n_budget kira ödedim 200_\n_budget taksi 15_",
+      "budget_failed": "*İşlem anlaşılamadı. Tekrar deneyin.*\n\n_Örnek: budget kahveye 50 harcadım_",
+      "budget_success": "*{0} kaydedildi*\n_Tutar: {1}_\n_Kategori: {2}_\n_Not: {3}_\n\n*Bu ay {0} toplamı: {4}*"
     },
     "exif": {
       "desc": "Bir çıkartmadan Exif meta verisini çıkar",
