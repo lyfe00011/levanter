@@ -77,10 +77,12 @@ bot(
 		if (match && (!isValidDate(from) || !isValidDate(to)))
 			return await message.send(lang.plugins.budget.summary_example)
 		const budget = await summary(message.participant, from, to)
+		const now = new Date()
+		const dateStr = `${now.getDate()}-${now.getMonth() + 1}-${now.getFullYear()}`
 		await message.send(
 			budget,
 			{
-				fileName: 'summary.pdf',
+				fileName: `summary_${dateStr}.pdf`,
 				mimetype: 'application/pdf',
 			},
 			'document'
