@@ -889,6 +889,19 @@
       "desc": "Anti group mention settings manage cheyyaan 🛡️",
       "ignore_prompt": "*Boss, ignore cheyyaanulla oru JID kodukku.* 🕵️‍♂️"
     },
+    "antigstatus": {
+      "usage": "> Usage:\n- antigstatus on | off — Anti group status set cheyyaan\n- antigstatus ignore jid,jid,... — Chila groups skip cheyyaan\n- antigstatus unignore jid,jid,... — Skip list-il ninnu kalayuka\n- antigstatus list — Skip list kanaan\n- antigstatus clear — Skip list clear cheyyuka",
+      "filter": "Anti group status skip list update aayitto.",
+      "enabled": "Anti group status on aayi.",
+      "disabled": "Anti group status off aayi.",
+      "desc": "Anti group status settings manage cheyyaan 🛡️",
+      "ignore_prompt": "*Boss, ignore cheyyaanulla oru JID kodukku.* 🕵️‍♂️",
+      "unignore_prompt": "*Boss, unignore cheyyaanulla oru JID kodukku.* 🕵️‍♂️",
+      "removed": "JID skip list-il ninnu maatti. 🗑️",
+      "list_empty": "*Skip list-il oru group-um illa.*",
+      "list_header": "*Skip cheytha groups:*",
+      "cleared": "*Skip list clear aayi.* 🧹"
+    },
     "reminder": {
       "desc": "Google Calendar-il reminder add cheyyaan.",
       "usage": "*Reminder Command Usage:*\n\n- reminder <text> (event add cheyyaan)\n- reminder list (aduthe events kaanaan)\n- reminder del <id> (event delete cheyyaan)\n- Example: `reminder tomorrow at 10am meeting`",

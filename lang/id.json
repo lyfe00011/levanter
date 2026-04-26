@@ -889,6 +889,19 @@
       "desc": "Kelola pengaturan anti mention grup 🛡️",
       "ignore_prompt": "*Bos, berikan JID untuk diabaikan.* 🕵️‍♂️"
     },
+    "antigstatus": {
+      "usage": "> Penggunaan:\n- antigstatus on | off — Aktifkan atau nonaktifkan anti-status grup\n- antigstatus ignore jid,jid,... — Abaikan anti-status grup dari grup tertentu\n- antigstatus unignore jid,jid,... — Hapus dari daftar abaikan\n- antigstatus list — Lihat daftar yang diabaikan\n- antigstatus clear — Bersihkan daftar abaikan",
+      "filter": "JID yang diabaikan diperbarui untuk anti-status grup.",
+      "enabled": "Anti-status grup telah diaktifkan.",
+      "disabled": "Anti-status grup telah dinonaktifkan.",
+      "desc": "Kelola pengaturan anti status grup 🛡️",
+      "ignore_prompt": "*Bos, berikan JID untuk diabaikan.* 🕵️‍♂️",
+      "unignore_prompt": "*Bos, berikan JID untuk dihapus dari daftar.* 🕵️‍♂️",
+      "removed": "JID dihapus dari daftar abaikan. 🗑️",
+      "list_empty": "*Tidak ada grup di daftar abaikan.*",
+      "list_header": "*Grup yang diabaikan:*",
+      "cleared": "*Daftar abaikan dibersihkan.* 🧹"
+    },
     "reminder": {
       "desc": "Kelola pengingat Google Calendar.",
       "usage": "> *Penggunaan Pengingat:*\n- `reminder <teks>` - Setel pengingat baru (mis. 'rapat besok jam 10 pagi')\n- `reminder list` - Daftar semua pengingat\n- `reminder del <id>` - Hapus pengingat",

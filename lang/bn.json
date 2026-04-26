@@ -889,6 +889,19 @@
       "desc": "Anti group mention settings ম্যানেজ করুন 🛡️",
       "ignore_prompt": "*একটি JID দিন যেটা ignore করতে হবে।* 🕵️‍♂️"
     },
+    "antigstatus": {
+      "usage": "> ব্যবহার:\n- antigstatus on | off — গ্রুপ স্ট্যাটাস বিরোধী চালু বা বন্ধ করুন\n- antigstatus ignore jid,jid,... — নির্দিষ্ট গ্রুপ থেকে গ্রুপ স্ট্যাটাস বিরোধী উপেক্ষা করুন\n- antigstatus unignore jid,jid,... — উপেক্ষা তালিকা থেকে সরান\n- antigstatus list — উপেক্ষা তালিকা দেখুন\n- antigstatus clear — উপেক্ষা তালিকা পরিষ্কার করুন",
+      "filter": "গ্রুপ স্ট্যাটাস বিরোধীর জন্য উপেক্ষা করা JID আপডেট করা হয়েছে।",
+      "enabled": "গ্রুপ স্ট্যাটাস বিরোধী চালু করা হয়েছে।",
+      "disabled": "গ্রুপ স্ট্যাটাস বিরোধী বন্ধ করা হয়েছে।",
+      "desc": "Anti group status settings ম্যানেজ করুন 🛡️",
+      "ignore_prompt": "*একটি JID দিন যেটা ignore করতে হবে।* 🕵️‍♂️",
+      "unignore_prompt": "*একটি JID দিন যেটা unignore করতে হবে।* 🕵️‍♂️",
+      "removed": "JID উপেক্ষা তালিকা থেকে সরানো হয়েছে। 🗑️",
+      "list_empty": "*উপেক্ষা তালিকায় কোনো গ্রুপ নেই।*",
+      "list_header": "*উপেক্ষিত গ্রুপ:*",
+      "cleared": "*উপেক্ষা তালিকা পরিষ্কার করা হয়েছে।* 🧹"
+    },
     "reminder": {
       "desc": "Google ক্যালেন্ডারে একটি অনুস্মারক যোগ করুন (প্রাকৃতিক ভাষা সমর্থিত)।",
       "usage": "*অনুম্মারক কমান্ড ব্যবহার:*\n\n- reminder <text> (ইভেন্ট যোগ করুন)\n- reminder list (আসন্ন ইভেন্ট দেখুন)\n- reminder del <id> (ইভেন্ট ডিলিট করুন)\n- উদাহরণ: `reminder tomorrow at 10am meeting` ",

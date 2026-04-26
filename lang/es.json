@@ -889,6 +889,19 @@
       "desc": "Gestiona los ajustes de anti-mención de grupos 🛡️",
       "ignore_prompt": "*Jefe, por favor proporciona un JID para ignorar.* 🕵️‍♂️"
     },
+    "antigstatus": {
+      "usage": "> Uso:\n- antigstatus <on|off> — Activar o desactivar anti estado de grupo\n- antigstatus ignore <jid,jid,jid,...> — Ignorar anti estado de grupo para grupos específicos\n- antigstatus unignore <jid,jid,...> — Quitar de la lista de ignorados\n- antigstatus list — Ver lista de ignorados\n- antigstatus clear — Limpiar lista de ignorados",
+      "filter": "JIDs ignorados actualizados para anti estado de grupo.",
+      "enabled": "Anti estado de grupo ha sido activado.",
+      "disabled": "Anti estado de grupo ha sido desactivado.",
+      "desc": "Gestiona los ajustes de anti-estado de grupos 🛡️",
+      "ignore_prompt": "*Jefe, por favor proporciona un JID para ignorar.* 🕵️‍♂️",
+      "unignore_prompt": "*Jefe, por favor proporciona un JID para quitar de la lista.* 🕵️‍♂️",
+      "removed": "JIDs eliminados de la lista de ignorados. 🗑️",
+      "list_empty": "*No hay grupos en la lista de ignorados.*",
+      "list_header": "*Grupos ignorados:*",
+      "cleared": "*Lista de ignorados limpiada.* 🧹"
+    },
     "reminder": {
       "desc": "Administrar recordatorios de Google Calendar.",
       "usage": "> *Uso de Recordatorios:*\n- `reminder <texto>` - Establecer un nuevo recordatorio (ej. 'reunión mañana a las 10am')\n- `reminder list` - Listar todos los recordatorios\n- `reminder del <id>` - Eliminar un recordatorio",

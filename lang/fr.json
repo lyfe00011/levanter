@@ -878,6 +878,19 @@
       "desc": "Gérer les paramètres anti-mention de groupe 🛡️",
       "ignore_prompt": "*Boss, fournis un JID à ignorer.* 🕵️‍♂️"
     },
+    "antigstatus": {
+      "usage": "> Utilisation :\n- antigstatus on | off — Activer ou désactiver l'anti statut de groupe\n- antigstatus ignore jid,jid,... — Ignorer l'anti statut de groupe pour des groupes spécifiques\n- antigstatus unignore jid,jid,... — Retirer de la liste des ignorés\n- antigstatus list — Voir la liste des ignorés\n- antigstatus clear — Vider la liste des ignorés",
+      "filter": "JIDs ignorés mis à jour pour l'anti statut de groupe.",
+      "enabled": "L'anti statut de groupe a été activé.",
+      "disabled": "L'anti statut de groupe a été désactivé.",
+      "desc": "Gérer les paramètres anti-statut de groupe 🛡️",
+      "ignore_prompt": "*Boss, fournis un JID à ignorer.* 🕵️‍♂️",
+      "unignore_prompt": "*Boss, fournis un JID à retirer de la liste.* 🕵️‍♂️",
+      "removed": "JIDs retirés de la liste des ignorés. 🗑️",
+      "list_empty": "*Aucun groupe dans la liste des ignorés.*",
+      "list_header": "*Groupes ignorés :*",
+      "cleared": "*Liste des ignorés vidée.* 🧹"
+    },
     "reminder": {
       "desc": "Gérer les rappels Google Calendar.",
       "usage": "> *Utilisation des Rappels :*\n- `reminder <texte>` - Définir un nouveau rappel (ex: 'réunion demain à 10h')\n- `reminder list` - Lister tous les rappels\n- `reminder del <id>` - Supprimer un rappel",

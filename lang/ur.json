@@ -889,6 +889,19 @@
       "desc": "Anti group mention settings manage karein 🛡️",
       "ignore_prompt": "*Boss, ignore karne ke liye ek JID dein.* 🕵️‍♂️"
     },
+    "antigstatus": {
+      "usage": "> Usage:\n- antigstatus on | off — Group status protection ko enable ya disable karein\n- antigstatus ignore jid,jid,... — Khas groups se group status protection ko ignore karein\n- antigstatus unignore jid,jid,... — Ignore list se nikaalein\n- antigstatus list — Ignore list dekhein\n- antigstatus clear — Ignore list clear karein",
+      "filter": "Group status protection ke liye ignore JIDs update kar diye gaye hain.",
+      "enabled": "Group status protection enable kar diya gaya hai.",
+      "disabled": "Group status protection disable kar diya gaya hai.",
+      "desc": "Anti group status settings manage karein 🛡️",
+      "ignore_prompt": "*Boss, ignore karne ke liye ek JID dein.* 🕵️‍♂️",
+      "unignore_prompt": "*Boss, unignore karne ke liye ek JID dein.* 🕵️‍♂️",
+      "removed": "JIDs ignore list se nikaal diye gaye. 🗑️",
+      "list_empty": "*Ignore list mein koi group nahi hai.*",
+      "list_header": "*Ignored groups:*",
+      "cleared": "*Ignore list clear kar di gayi.* 🧹"
+    },
     "reminder": {
       "desc": "Google Calendar reminders ko manage karein.",
       "usage": "> *Reminders ka Istimal:*\n- `reminder <text>` - Naya reminder set karein (maslan: 'meeting kal 10 baje')\n- `reminder list` - Tamam reminders ki list dekhein\n- `reminder del <id>` - Reminder delete karein",

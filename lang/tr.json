@@ -889,6 +889,19 @@
       "desc": "Anti grup mention ayarlarını yönet 🛡️",
       "ignore_prompt": "*Patron, yok sayılacak bir JID gir.* 🕵️‍♂️"
     },
+    "antigstatus": {
+      "usage": "> Kullanım:\n- antigstatus on | off — Grup durum korumasını etkinleştir veya devre dışı bırak\n- antigstatus ignore jid,jid,... — Belirli gruplardan grup durum korumasını yoksay\n- antigstatus unignore jid,jid,... — Yoksayma listesinden çıkar\n- antigstatus list — Yoksayma listesini göster\n- antigstatus clear — Yoksayma listesini temizle",
+      "filter": "Grup durum koruması için yoksayılan JID'ler güncellendi.",
+      "enabled": "Grup durum koruması etkinleştirildi.",
+      "disabled": "Grup durum koruması devre dışı bırakıldı.",
+      "desc": "Anti grup durum ayarlarını yönet 🛡️",
+      "ignore_prompt": "*Patron, yok sayılacak bir JID gir.* 🕵️‍♂️",
+      "unignore_prompt": "*Patron, listeden çıkarılacak bir JID gir.* 🕵️‍♂️",
+      "removed": "JID'ler yoksayma listesinden çıkarıldı. 🗑️",
+      "list_empty": "*Yoksayma listesinde grup yok.*",
+      "list_header": "*Yoksayılan gruplar:*",
+      "cleared": "*Yoksayma listesi temizlendi.* 🧹"
+    },
     "reminder": {
       "desc": "Google Takvim hatırlatıcılarını yönetin.",
       "usage": "> *Hatırlatıcı Kullanımı:*\n- `reminder <metin>` - Yeni hatırlatıcı ekle (örn. 'yarın saat 10'da toplantı')\n- `reminder list` - Tüm hatırlatıcıları listele\n- `reminder del <id>` - Hatırlatıcıyı sil",

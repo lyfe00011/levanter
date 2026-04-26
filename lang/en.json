@@ -923,6 +923,19 @@
       "disabled": "Anti group mention is off. I've stopped monitoring. ❌",
       "ignore_prompt": "*Boss, please provide a JID to ignore.* 🕵️‍♂️"
     },
+    "antigstatus": {
+      "desc": "Manage anti group status settings 🛡️",
+      "usage": "> Hey Boss! Use these to control group statuses:\n- antigstatus on | off\n- antigstatus ignore jid,jid,...\n- antigstatus unignore jid,jid,...\n- antigstatus list\n- antigstatus clear",
+      "filter": "Filtering JIDs updated, Boss! I've got the list. 📝",
+      "enabled": "Anti group status is now active! I'm watching closely. 👀🛡️",
+      "disabled": "Anti group status is off. I've stopped monitoring. ❌",
+      "ignore_prompt": "*Boss, please provide a JID to ignore.* 🕵️‍♂️",
+      "unignore_prompt": "*Boss, please provide a JID to unignore.* 🕵️‍♂️",
+      "removed": "JIDs removed from ignore list, Boss! 🗑️",
+      "list_empty": "*No groups in the ignore list, Boss.*",
+      "list_header": "*Ignored groups:*",
+      "cleared": "*Ignore list cleared, Boss.* 🧹"
+    },
     "reminder": {
       "desc": "Add a reminder to Google Calendar (natural language supported).",
       "usage": "*Reminder Command Usage:*\n\n- reminder <text> (add event)\n- reminder list (view upcoming)\n- reminder del <id> (delete event)\n- Example: `reminder tomorrow at 10am meeting`",
