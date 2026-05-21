@@ -93,10 +93,10 @@ bash <(curl -fsSL http://bit.ly/43JqREw)
    SESSION_ID=your_session_id_here
    PREFIX=.
    STICKER_PACKNAME=LyFE
-   ALWAYS_ONLINE=false
+   ALWAYS_ONLINE=True
    RMBG_KEY=null
-   LANGUAG=en
-   BOT_LANG=en
+   LANGUAG=français 
+   BOT_LANG=français 
    WARN_LIMIT=3
    FORCE_LOGOUT=false
    BRAINSHOP=159501,6pq8dPiYt7PdqHz3
