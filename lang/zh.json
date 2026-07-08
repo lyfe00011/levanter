@@ -1,0 +1,1092 @@
+{
+  "extra": {
+    "init_session": "[{0}] 正在建立新会话... 🚀",
+    "load_session": "[{0}] 正在下载会话数据... 📥",
+    "invalid_session": "[{0}] {1} 哎呀！会话密钥已过期，请重新扫描！ 📸",
+    "success_session": "[{0}] 成功！会话有效且已就绪。 ✅",
+    "connecting": "[{0}] 正在连接 WhatsApp... 📡",
+    "connected": "[{0}] 我在线了！随时为您服务。 ⚡ {1}",
+    "instance_close": "[{0}] 正在下线，再见！ 👋",
+    "instance_restart": "[{0}] 正在重启，马上回来！ 🔄",
+    "reconnect": "[{0}] 连接断开，正在重试... ({1}) 🔄",
+    "reconnect_after": "[{0}] 稍等，休息一分钟后重试... ☕",
+    "another_login": "[{0}] 嘿，好像在其他设备上登录了！ 🤨",
+    "error_message": "```--- ⚠️ 错误报告 ⚠️ ---\n\n版本    : {0}\n消息    : {1}\n错误    : {2}\nJid     : {3}\n命令    : {4}\n平台    : {5}```\n\n```-----``` *由 LyFE 用心制作 ❣* ```-----```",
+    "deleted_message": "🗑️ 已撤回消息",
+    "edited_message": "✏️ 已编辑消息 #{0}",
+    "install_external_plugin": "[{0}] 正在安装外部插件... 📦",
+    "installed_external_plugin": "[{0}] 外部插件安装完成！ 🎒",
+    "plugin_install": "[{0}] 正在加载插件... 📚",
+    "plugin_installed": "[{0}] {1} 安装成功！ ✅",
+    "plugins_installed": "[{0}] 所有插件已加载完毕！ 🎓",
+    "plugin_install_error": "[{0}] {1} 安装失败，正在移除。 🗑️",
+    "plugin_not_found": "[{0}] 插件 {1} 找不到了 (404)，暂时移除。 🔍💨",
+    "group_cmd": "哎呀！此命令仅限群组使用。 👨‍👩‍👧‍👦",
+    "labels": {
+      "sudo": "🛡️ 超级用户",
+      "auto_read": "📖 自动已读",
+      "auto_status": "👀 自动查看状态",
+      "auto_reject": "🚫 自动拒接来电",
+      "always_online": "🔋 始终在线",
+      "anti_delete": "🛡️ 防撤回",
+      "auto_update": "🔄 自动更新"
+    },
+    "promoted": "已提升",
+    "demoted": "已降级",
+    "file_size_error": "哇，这个文件太大了！ 📂 ⚡\n大小：{0}\n\n{1}",
+    "missing_jid": "等一下，我需要一些 JID！ 🗺️",
+    "no_contacts": "我的联系人列表是空的，加点朋友吧！ 👥",
+    "reaction_not_enabled": "此频道已禁用表情回应。",
+    "reaction_not_allowed": "此频道不允许该表情回应。",
+    "metadata_fetch_failed": "获取元数据失败，再试一次？ 🧩",
+    "lang_not_supported": "' {0} ' 对我来说是个谜，使用默认语言。 🌐",
+    "screenshot_error": "糟糕！截图失败。 📸❌",
+    "id_missing": "等等，我缺少一个 ID！ 🕵️",
+    "not_on_whatsapp": "{0} 不在 WhatsApp 上！ 👻",
+    "yt_auth_required": "下载失败！YouTube 需要验证。 🗝️\n\n*解决方案：*\n1. *Google 授权：* 试试 `.gauth auth` 进行关联。\n2. *YT_COOKIE：* 设置 `YT_COOKIE` 环境变量。\n文档：https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*错误：* {0}"
+  },
+  "plugins": {
+    "common": {
+      "reply_to_image": "老大！请回复一张图片让我施展魔法。 📸✨",
+      "reply_to_message": "请给我一条要回复的消息！ 💬🤔",
+      "not_admin": "哎呀！我不是这里的管理员。 😅 请先给我一些权限！",
+      "not_found": "我找遍了，但没找到！ 🔍🤷‍♂️",
+      "update": "完成，老大！一切都已更新好了。 ✅🚀",
+      "spotify_download_failed": "下载 Spotify 曲目失败",
+      "spotify_playlist_failed": "获取 Spotify 播放列表失败",
+      "truecaller_login_prompt": "您尚未登录。\n\n请发送您的号码以登录 Truecaller。\n\n示例：truecaller 您的号码",
+      "truecaller_sent": "验证码已发送到您的号码\n\n示例：truecaller 653084",
+      "truecaller_invalid_number": "无效号码",
+      "truecaller_invalid_code": "无效验证码",
+      "truecaller_invalid_mobile": "无效手机号码",
+      "group_not_found": "{0} 在群组中不存在。前三位参与者：{1}",
+      "import_contacts_first": "请先导入联系人",
+      "video_not_supported": "音乐引擎不支持在此机器人中下载视频。",
+      "audio_disabled": "音乐引擎下载失败，且 YouTube 音频已禁用。",
+      "gemini_missing_api_key": "缺少 GEMINI_API_KEY",
+      "gemini_error": "错误",
+      "upscale_upload_failed": "上传图片失败",
+      "upscale_invalid_response": "放大服务返回无效响应",
+      "upscale_failed": "图片放大失败，请稍后再试。",
+      "invalid_file_type": "错误：无法处理 {0} 格式文件",
+      "upload_failed": "文件上传错误：{0}",
+      "yt_login_prompt": "请登录您的 YouTube 账号或设置 YT_COOKIE 变量。\n\n登录地址 => https://levanter-plugins.vercel.app/yt\n",
+      "yt_cookie_needed": "请设置 YouTube Cookie\nhttps://t.me/c/2479057503/378/2550",
+      "yt_not_found": "未找到 {0}",
+      "time_day": " 天 ",
+      "time_days": " 天 ",
+      "time_hour": " 小时 ",
+      "time_hours": " 小时 ",
+      "time_minute": " 分钟 ",
+      "time_minutes": " 分钟 ",
+      "time_second": " 秒",
+      "time_seconds": " 秒"
+    },
+    "menu": {
+      "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ 前缀 : {0}\n│ 用户 : {1}\n│ 时间 : {2}\n│ 星期 : {3}\n│ 日期 : {4}\n│ 版本 : {5}\n│ 插件 : {6}\n│ 内存 : {7}\n│ 运行时间 : {8}\n│ 平台 : {9}\n╰────────────────```",
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ 前缀 : {0}\n┃❃│ 用户 : {1}\n┃❃│ 时间 : {2}\n┃❃│ 星期 : {3}\n┃❃│ 日期 : {4}\n┃❃│ 版本 : {5}\n┃❃│ 插件 : {6}\n┃❃│ 内存 : {7}\n┃❃│ 运行时间 : {8}\n┃❃│ 平台 : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
+      "disabled": "已禁用"
+    },
+    "afk": {
+      "example": "> *AFK 使用说明：*\n- 设置 AFK：*afk [原因]*\n- 示例：*afk 我很忙* 最后上线 #lastseen 前\n- 发送消息会自动取消 AFK 状态\n- 禁用 AFK：*afk off*",
+      "not_afk": "欢迎回来！您已不再处于 AFK 状态。 👋",
+      "desc": "设置您的 AFK 状态"
+    },
+    "alive": {
+      "default": "我在这里，随时待命！ 🚀\n运行时间：#uptime",
+      "desc": "检查机器人是否活跃。"
+    },
+    "antifake": {
+      "example": "*防假号状态：* {0}\n\n> *命令使用说明：*\n- *antifake list* - 查看当前模式和代码\n- *antifake allow 1,91* - 白名单模式：允许这些代码，屏蔽其他所有\n- *antifake disallow 92,93* - 黑名单模式：屏蔽这些代码，允许其他所有\n- *antifake remove 91* - 从列表中删除代码\n- *antifake clear* - 清除所有代码并禁用\n- *antifake on | off* - 启用/禁用\n\n> *注意：* 不能混用白名单和黑名单模式。使用 `clear` 切换模式。",
+      "desc": "启用或配置防假号（白名单或黑名单模式）",
+      "not": "未配置任何国家代码。",
+      "status": "防假号现在已 *{0}*。",
+      "update": "> 防假号已更新\n*允许：* {0}\n*不允许：* {1}",
+      "allow_prompt": "*请提供要允许的国家代码（白名单模式）*\n_示例：antifake allow 1,91_",
+      "disallow_prompt": "*请提供要禁止的国家代码（黑名单模式）*\n_示例：antifake disallow 92,93_",
+      "remove_prompt": "*请提供要删除的国家代码*\n_示例：antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ 不能混用模式！*\n\n_您当前处于黑名单模式。请先使用 `antifake clear` 切换到白名单模式。_",
+      "mode_conflict_blacklist": "*⚠️ 不能混用模式！*\n\n_您当前处于白名单模式。请先使用 `antifake clear` 切换到黑名单模式。_",
+      "whitelist_success": "*✅ 已允许的国家代码（白名单模式）：*\n{0}\n\n_这些代码将被允许，其他所有代码将被屏蔽。_",
+      "blacklist_success": "*🚫 已禁止的国家代码（黑名单模式）：*\n{0}\n\n_这些代码将被屏蔽，其他所有代码将被允许。_",
+      "removed": "*已删除国家代码：*\n{0}",
+      "cleared": "*🗑️ 防假号列表已清除并禁用*",
+      "whitelist_mode": "🟢 白名单模式（仅允许）",
+      "blacklist_mode": "🔴 黑名单模式（仅屏蔽）",
+      "enabled": "已启用",
+      "disabled": "已禁用"
+    },
+    "antilink": {
+      "desc": "启用或配置防链接功能",
+      "disable": "_防链接已禁用。_",
+      "antilink_notset": "防链接已配置为屏蔽所有链接（未设置 URL 列表）。使用 'antilink allow' 或 'antilink disallow' 配置特定 URL。",
+      "status": "防链接现在已 *{0}*。",
+      "info": "> 防链接状态：{0}\n*允许的 URL：* {1}\n *操作：* {2}",
+      "action_invalid": "*指定的操作无效。*",
+      "action_update": "防链接操作已更新为：*{0}*",
+      "update": "> 防链接已更新\n*允许：* {0}\n*不允许：* {1}",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "example": "防链接状态：*{0}*\n\n> 使用示例：\n- antilink list - 查看当前设置\n- antilink allow whatsapp.com - 允许特定 URL\n- antilink disallow facebook.com - 禁止特定 URL\n- antilink clear allow - 清除允许的 URL\n- antilink clear disallow - 清除禁止的 URL\n- antilink on | off - 启用/禁用防链接\n- antilink kick | warn | null - 设置违规操作",
+      "allow_prompt": "*请提供要允许的 URL。*",
+      "no_new_urls": "*没有新 URL 可添加。* 所有 URL 已存在于列表中。",
+      "urls_updated": "*已更新允许的 URL*\n\n已添加：{0}\n总计：{1} 个 URL\n\n_注意：URL 不区分大小写_",
+      "disallow_prompt": "*请提供要禁止的 URL。*",
+      "no_disallowed_urls": "*没有新 URL 可禁止。* 所有 URL 已被禁止。",
+      "disallowed_updated": "*已更新禁止的 URL*\n\n已加入黑名单：{0}\n总计屏蔽：{1} 个 URL\n\n_注意：URL 不区分大小写_",
+      "settings_cleared": "*防链接设置已清除。*",
+      "allowed_cleared": "*已清除允许的 URL。*",
+      "disallowed_cleared": "*已清除禁止的 URL。*"
+    },
+    "antiword": {
+      "desc": "过滤群聊中的特定词汇",
+      "example": "违禁词状态：{0}\n> *使用示例：*\n- antiword kick | warn | null - 设置违规操作\n- antiword on | off - 启用/禁用词汇过滤\n- antiword add 词1,词2 - 添加屏蔽词\n- antiword remove 词1,词2 - 删除屏蔽词\n- antiword list - 查看屏蔽词列表",
+      "action_update": "违禁词操作已更新为：*{0}*",
+      "status": "违禁词过滤现在已 *{0}*。",
+      "add_prompt": "*请提供要添加的词汇。*",
+      "added": "*已添加词汇：*\n{0}",
+      "remove_prompt": "*请提供要删除的词汇。*",
+      "removed": "*已删除词汇：*\n{0}",
+      "activated": "已激活",
+      "deactivated": "已停用",
+      "no_words": "*未设置任何词汇。*",
+      "info": "*违禁词状态：* {0}\n*操作：* {1}\n\n*词汇：* {2}",
+      "cleared": "*违禁词列表已清除。*"
+    },
+    "apk": {
+      "desc": "从 APKMirror 获取 APK。 📱",
+      "example": "> *示例：*\n- apk Mixplorer\n- apk whatsapp,apkm",
+      "no_result": "找不到该应用。 🔍",
+      "apps_list": "匹配的应用 ({0}) 📱"
+    },
+    "delete": {
+      "desc": "防撤回：恢复被撤回的消息",
+      "example": "> *使用示例：*\n- delete g - 在同一聊天中发送撤回消息\n- delete p - 发送撤回消息到您的聊天/超级用户\n- delete g pm - 同一聊天，仅个人消息\n- delete g gm - 同一聊天，仅群组消息\n- delete p no-gm - 发送到超级用户，排除群组\n- delete p no-pm - 发送到超级用户，排除个人聊天\n- delete <jid> - 发送到指定 JID\n- delete <jid> gm - 发送到 JID，仅群组\n- delete off - 禁用防撤回\n\n*范围：* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*错误：* _无效的 JID_",
+      "dlt_dest_jid": "_撤回消息将发送至：{0}_",
+      "dlt_dest_sudo": "_撤回消息将发送至您的聊天或超级用户。_",
+      "dlt_dest_chat": "_撤回消息将发送至聊天本身。_",
+      "dlt_scope_pm": "📌 _仅限个人聊天_",
+      "dlt_scope_gm": "📌 _仅限群组聊天_",
+      "dlt_scope_no_pm": "📌 _排除个人聊天_",
+      "dlt_scope_no_gm": "📌 _排除群组聊天_",
+      "dlt_msg_disable": "防撤回已禁用。"
+    },
+    "antiedit": {
+      "desc": "防编辑：跟踪已编辑消息并显示历史记录",
+      "example": "> *使用示例：*\n- antiedit g - 在同一聊天中发送编辑历史\n- antiedit p - 发送编辑历史到您的聊天/超级用户\n- antiedit g pm - 同一聊天，仅个人消息\n- antiedit g gm - 同一聊天，仅群组消息\n- antiedit p no-gm - 发送到超级用户，排除群组\n- antiedit p no-pm - 发送到超级用户，排除个人聊天\n- antiedit <jid> - 发送到指定 JID\n- antiedit <jid> gm - 发送到 JID，仅群组\n- antiedit off - 禁用防编辑\n\n*范围：* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*错误：* _无效的 JID_",
+      "edit_dest_jid": "_编辑历史将发送至：{0}_",
+      "edit_dest_sudo": "_编辑历史将发送至您的聊天或超级用户。_",
+      "edit_dest_chat": "_编辑历史将发送至聊天本身。_",
+      "edit_scope_pm": "📌 _仅限个人聊天_",
+      "edit_scope_gm": "📌 _仅限群组聊天_",
+      "edit_scope_no_pm": "📌 _排除个人聊天_",
+      "edit_scope_no_gm": "📌 _排除群组聊天_",
+      "edit_msg_disable": "防编辑已禁用。"
+    },
+    "dlt": {
+      "desc": "删除您正在回复的消息。 🗑️"
+    },
+    "fb": {
+      "desc": "下载 Facebook 视频。 🎬",
+      "example": "*示例：* fb https://www.facebook.com/...",
+      "quality": "您想要哪个画质？ 🎬",
+      "invalid": "我在那里找不到任何视频。 ❌"
+    },
+    "fancy": {
+      "desc": "为您的消息创建花式文字！ ✨",
+      "example": "> *使用方法：*\nfancy <文字>\nfancy <字体编号>（回复一条消息）\n\n*示例：*\n- fancy 你好世界 🌟\n- fancy 7（回复时使用）",
+      "invalid": "*哎呀！无效的字体编号。* ❌\n请选择 *1-47* 之间的数字。"
+    },
+    "stop": {
+      "desc": "停止此聊天中的过滤器。 ⏹️",
+      "example": "> *使用方法：*\n- stop <过滤器名称>\n- stop hi",
+      "delete": "好的！过滤器 *{0}* 已停止。 🗑️",
+      "not_found": "_{0} 不在此聊天的过滤器列表中。_ 😅"
+    },
+    "filter": {
+      "desc": "为该群组设置自定义关键词过滤器。 🛠️",
+      "example": "> *示例：*\n- filter hi（回复一条消息）\n- filter list（查看所有活跃过滤器） 👀",
+      "list": "> *此聊天的活跃过滤器：* 👀\n{0}",
+      "filter_add": "✅ 过滤器 *{0}* 现已激活！"
+    },
+    "forward": {
+      "desc": "将消息转发给其他人！ 📩",
+      "foward": "消息已发送至：{0} ✅",
+      "example": "*错误：无效的 JID！* ❌\n> *使用方法：*\n- forward <jid>\n- forward 1234567890@s.whatsapp.net"
+    },
+    "save": {
+      "desc": "将消息保存到您自己的聊天中。 💾",
+      "save": "消息已保存到您的个人收藏！ 🔒"
+    },
+    "gemini": {
+      "desc": "与 Google Gemini AI 聊天！ 🤖",
+      "example": "> *示例：*\n- gemini 你好\n- gemini 图片里有什么？（回复一张图片） 📷",
+      "Key": "> *等等！* 我缺少 Gemini API 密钥！ 🔑\n在此获取：https://aistudio.google.com/app/apikey\n\n*设置方法：*\nsetvar GEMINI_API_KEY = 您的api密钥"
+    },
+    "gstop": {
+      "desc": "停止所有群组中的全局过滤器。 🛑",
+      "example": "> *使用方法：*\n- gstop <过滤器名称>\n- gstop hi",
+      "delete": "全局过滤器 *{0}* 已成为历史！ 🗑️",
+      "not_found": "_{0} 不在全局过滤器列表中。_ 😅"
+    },
+    "pstop": {
+      "desc": "停止个人过滤器。 ⏹️",
+      "example": "> *使用方法：*\n- pstop <过滤器名称>\n- pstop hi",
+      "delete": "个人过滤器 *{0}* 已删除。 🗑️",
+      "not_found": "_{0} 不在您的个人过滤器中。_ 😅"
+    },
+    "gfilter": {
+      "desc": "管理在所有群组中生效的过滤器。 🌍",
+      "example": "> *示例：*\n- gfilter hi（回复一条消息）\n- gfilter list（查看所有全局过滤器） 👀",
+      "add": "🌍 全局过滤器 *{0}* 现已在所有地方激活！"
+    },
+    "pfilter": {
+      "desc": "管理仅在您个人聊天中生效的过滤器。 👤",
+      "example": "> *示例：*\n- pfilter hi（回复文字消息时使用）\n- pfilter list（显示当前个人过滤器）",
+      "add": "*{0}* 个人过滤器已添加"
+    },
+    "gpp": {
+      "desc": "更改群组头像",
+      "update": "_群组头像已更新_"
+    },
+    "greet": {
+      "setdesc": "设置个性化问候消息",
+      "setexample": "> *示例：* setgreet 你好，这是机器人，我的主人稍后回复。",
+      "setupdate": "_问候消息已更新。_",
+      "getdesc": "获取个性化问候消息",
+      "notsetgreet": "> 尚未设置问候消息。",
+      "deldesc": "删除个性化问候消息",
+      "delupdate": "问候消息已删除。"
+    },
+    "greetings": {
+      "welcome_desc": "向新成员发送欢迎消息",
+      "welcome_example": "欢迎消息当前状态：*{0}*\n\n> *使用示例：*\n- welcome 嗨 &mention！欢迎来到 &name - 设置欢迎消息\n- welcome on | off - 启用/禁用\n- welcome delete - 删除消息\n\n> *占位符：*\n- &mention - 提及新成员\n- &name - 群组名称\n- &desc - 群组描述\n- &size - 成员数量\n- &pp - 成员头像\n\n> *媒体：* 回复图片/视频或在消息中包含 URL\n\n更多详情：https://levanter.site/",
+      "welcome_enable": "_欢迎消息已启用_",
+      "welcome_disable": "_欢迎消息已禁用_",
+      "welcome_delete": "_欢迎消息已删除_",
+      "welcome_not_set": "_请先设置欢迎消息！_\n\n> *示例：*\nwelcome 嗨 &mention！欢迎来到 &name\n\n然后使用：welcome on",
+      "goodbye_desc": "向离开的成员发送告别消息",
+      "goodbye_example": "告别消息当前状态：*{0}*\n\n> *使用示例：*\n- goodbye 再见 &mention！下次见 - 设置告别消息\n- goodbye on | off - 启用/禁用\n- goodbye delete - 删除消息\n\n> *占位符：*\n- &mention - 提及离开的成员\n- &name - 群组名称\n- &desc - 群组描述\n- &size - 成员数量\n- &pp - 成员头像\n\n> *媒体：* 回复图片/视频或在消息中包含 URL\n\n更多详情：https://levanter.site/",
+      "goodbye_enable": "_告别消息已启用_",
+      "goodbye_disable": "_告别消息已禁用_",
+      "goodbye_delete": "_告别消息已删除_",
+      "goodbye_not_set": "_请先设置告别消息！_\n\n> *示例：*\ngoodbye 再见 &mention！感谢您的陪伴\n\n然后使用：goodbye on"
+    },
+    "groq": {
+      "example": "*示例：* groq 你好\n\n您可以选择设置以下环境变量：\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\n更多详情请访问：https://console.groq.com/keys",
+      "desc": "与 GROQ AI 互动"
+    },
+    "kick": {
+      "desc": "将某人踢出群组。 🚪",
+      "not_admin": "我需要管理员权限才能踢人！ 😅",
+      "mention_user": "目标是谁？@他们或回复他们的消息。 🎯",
+      "admin": "动不了！他们是管理员。 🛡️",
+      "kicking_all": "清理群组！正在踢出所有非管理员...（{0} 名成员）。重启机器人以停止。 🧹"
+    },
+    "add": {
+      "desc": "将新成员添加到群组。 ➕",
+      "warning": "> 注意：添加未知号码可能导致机器人被封禁，请谨慎操作！",
+      "not_admin": "我不是管理员，无法添加任何人！ 😅",
+      "invalid_number": "这个号码看起来不对。示例：add 86123456789",
+      "failed": "无法直接添加，已发送邀请链接。 📩"
+    },
+    "promote": {
+      "desc": "给某人王冠（管理员）。 👑",
+      "not_admin": "我不是管理员，无法提升任何人。 😅",
+      "mention_user": "谁要升职？@他们或回复消息。 👑",
+      "already_admin": "他们已经是管理员了！ ✨"
+    },
+    "demote": {
+      "desc": "摘掉王冠（管理员）。 📉",
+      "not_admin": "我不是管理员，无法降级任何人。 😅",
+      "mention_user": "谁要失去王冠？@他们或回复消息。 📉",
+      "not_admin_user": "等等，他们根本不是管理员！ 😂"
+    },
+    "invite": {
+      "desc": "获取群组邀请链接。 🔗",
+      "not_admin": "我不是管理员，无法生成邀请链接。 😅",
+      "success": "这是群组邀请链接：🔗\n{0}"
+    },
+    "mute": {
+      "desc": "仅管理员可发送消息。 🤐",
+      "not_admin": "我不是管理员，无法更改群组设置。 😅",
+      "mute": "群组已禁言 {0} 分钟。 🤫"
+    },
+    "unmute": {
+      "desc": "所有人都可以再次发送消息。 🔓",
+      "not_admin": "我不是管理员，无法更改群组设置。 😅"
+    },
+    "join": {
+      "desc": "通过邀请链接加入群组",
+      "invalid_link": "请提供有效的 WhatsApp 群组邀请链接。",
+      "group_full": "该群组已满，无法接受新成员。",
+      "success": "成功加入群组。",
+      "request_sent": "加入请求已发送。"
+    },
+    "revoke": {
+      "desc": "重置群组邀请链接。 🔄",
+      "not_admin": "我不是管理员，无法撤销邀请链接。 😅"
+    },
+    "group_info": {
+      "desc": "显示群组邀请链接信息",
+      "ginfo_usage": "*使用方法：* ginfo <群组链接>",
+      "invalid_link": "请提供有效的 WhatsApp 邀请链接。",
+      "details": "*名称：* {0}\n*群组 ID：* {1}@g.us\n*群主：* {2}\n*成员数：* {3}\n*创建时间：* {4}\n*描述：* {5}"
+    },
+    "common_members": {
+      "desc": "显示或踢出两个或多个群组中的共同成员",
+      "found": "找到 0 个共同成员。",
+      "common_usage": "*示例*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - 仅从您命令的群组中移除\nkickall - 从所有 jid 中移除\nany - 包含两个或多个群组的共同成员\nskip - 避免从所有群组移除",
+      "ginfo_usage": "*示例：info 群组邀请链接*"
+    },
+    "insta": {
+      "usage": "示例：insta <Instagram URL>",
+      "not_found": "找不到。 🔍",
+      "desc": "获取 Instagram 帖子、Reels 和视频。 📸"
+    },
+    "ison": {
+      "usage": "示例：ison <手机号码>",
+      "not_exist": "`*不在 WhatsApp 上* ({0})\n`",
+      "exist": "\n*在 WhatsApp 上* ({0})\n",
+      "privacy": "*隐私设置已开启* ({0})\n",
+      "desc": "检查手机号码是否已注册 WhatsApp。"
+    },
+    "lydia": {
+      "usage": "使用方法：lydia on | off\n回复或@我开始聊天！ ✨",
+      "activated": "Lydia 现已激活！开始聊天吧。 🤖",
+      "deactivated": "Lydia 暂时休息。已停用。 💤",
+      "note": "嘿！您需要先回复一条消息。 💬",
+      "desc": "和我聊天！启用或禁用 AI 聊天机器人。 🤖"
+    },
+    "rotate": {
+      "usage": "示例：rotate right|left|flip（回复一个视频）。",
+      "not_found": "哎呀！回复一个视频并选择：right、left 或 flip。 🔄",
+      "desc": "轻松翻转或旋转您的视频！ 🔄",
+      "convert": "处理中... 🔄"
+    },
+    "mp3": {
+      "usage": "回复视频或音频以将其转换为 MP3。",
+      "not_found": "请回复视频或音频消息。",
+      "desc": "将视频转换为音频或将音频片段转换为语音消息。"
+    },
+    "photo": {
+      "usage": "回复贴纸图片以将其转换为图像。",
+      "desc": "将贴纸转换为图像。"
+    },
+    "reverse": {
+      "usage": "回复视频或音频以反向播放。",
+      "not_found": "请回复视频或音频消息。",
+      "desc": "反向播放视频或音频片段。"
+    },
+    "cut": {
+      "usage": "示例：cut 0;30（开始;时长）（回复视频或音频）。",
+      "not_found": "请回复视频或音频，并提供有效的开始和时长值（例如：10;30）。",
+      "desc": "从音频或视频文件中剪切片段。"
+    },
+    "trim": {
+      "usage": "示例：trim 10;30（回复视频）。",
+      "not_found": "请回复视频，并提供有效的开始和时长值（例如：60;30）。",
+      "desc": "在指定的开始和时长之间修剪视频。"
+    },
+    "page": {
+      "usage": "示例：page 1（回复图片）。",
+      "not_found": "请回复带有页码数字说明的图片。",
+      "desc": "将图片作为页面添加到 PDF 文档中。",
+      "add": "第 {0} 页已添加！"
+    },
+    "pdf": {
+      "usage": "示例：pdf 标题（为 PDF 提供标题）。",
+      "not_found": "请为 PDF 文档提供标题。",
+      "desc": "将图片转换为 PDF 文档。"
+    },
+    "merge": {
+      "usage": "示例：merge 1（回复视频时带顺序编号）。",
+      "not_found": "请回复带有有效顺序编号的视频。",
+      "desc": "将多个视频合并为一个。",
+      "merge": "_正在合并 {0} 个视频_",
+      "add": "_视频 {0} 已添加_"
+    },
+    "compress": {
+      "usage": "回复视频以压缩它。",
+      "desc": "压缩视频文件以减小大小。"
+    },
+    "bass": {
+      "usage": "示例：bass 10（回复音频或视频）。",
+      "desc": "调整音频文件的低音级别。"
+    },
+    "treble": {
+      "usage": "示例：treble 10（回复音频或视频）。",
+      "desc": "调整音频文件的高音级别。"
+    },
+    "histo": {
+      "usage": "回复音频或视频以生成波形视频。",
+      "desc": "将音频转换为可视波形视频。"
+    },
+    "vector": {
+      "usage": "回复音频或视频以创建矢量可视化视频。",
+      "desc": "将音频转换为矢量可视化视频。"
+    },
+    "crop": {
+      "usage": "示例：crop 512,512,0,512（回复视频）。",
+      "not_found": "请回复视频，并以 out_w,out_h,x,y 格式提供有效的裁剪尺寸。",
+      "desc": "将视频裁剪到指定尺寸。",
+      "xcrop": "视频宽度：*{0}*，高度：*{1}*\n请在此范围内选择输出大小。"
+    },
+    "low": {
+      "usage": "回复音频或视频以降低音调。",
+      "desc": "将音频音调调低。"
+    },
+    "pitch": {
+      "usage": "回复音频或视频以调整音调。",
+      "not_found": "请回复音频或视频消息。",
+      "desc": "调整音频文件的音调。"
+    },
+    "avec": {
+      "usage": "回复音频或视频以将其转换为视频格式。",
+      "not_found": "请回复音频或视频消息。",
+      "desc": "将音频片段转换为视频。"
+    },
+    "avm": {
+      "usage": "同时回复音频和视频以合并它们。",
+      "desc": "将音频和视频文件合并为一个。",
+      "audio_add": "_音频已添加！_",
+      "video_add": "_视频已添加！_"
+    },
+    "black": {
+      "usage": "回复音频或视频以生成黑色背景视频。",
+      "desc": "将音频片段转换为带黑色背景的视频。"
+    },
+    "mediafire": {
+      "usage": "示例：mediafire <Mediafire URL>",
+      "not_found": "文件未找到，请再次检查链接！ 🔍",
+      "desc": "从 Mediafire 下载文件。 📂"
+    },
+    "mention": {
+      "usage": "示例：mention on | off | get\n（回复消息以针对特定用户。）",
+      "desc": "配置和管理自动回复的提及功能。",
+      "not_activated": "回复提及未激活。",
+      "current_status": "提及功能已{0}。详情请访问：https://levanter.site/",
+      "activated": "回复提及已激活。",
+      "deactivated": "回复提及已停用。",
+      "updated": "提及设置已更新。"
+    },
+    "status": {
+      "usage": "使用方法：status on | off | no-dl | except-view <jid,...> | only-view <jid,...>",
+      "desc": "自动管理 WhatsApp 状态的查看。"
+    },
+    "call": {
+      "usage": "使用方法：call on | off",
+      "desc": "自动拒接来电。"
+    },
+    "read": {
+      "usage": "使用方法：read on | off",
+      "desc": "启用或禁用自动已读消息。"
+    },
+    "online": {
+      "usage": "使用方法：online on | off",
+      "desc": "保持账号状态始终在线。"
+    },
+    "movie": {
+      "usage": "示例：movie <电影标题>",
+      "not_found": "未找到该电影，请确认标题后重试。",
+      "desc": "从 OMDB API 获取详细的电影信息，包括完整剧情。"
+    },
+    "msgs": {
+      "desc": "显示群组每个成员的消息数量，包括个人总数和最后活跃时间。",
+      "msg_init": "\n*号码：* {0}\n*名称：* {1}\n*总消息数：* {2}\n",
+      "msg_last": "*最后上线：* {0} 前\n",
+      "no_activity": "尚未记录任何活动。"
+    },
+    "reset": {
+      "usage": "示例：reset all 或 reset <回复/提及>",
+      "desc": "重置整个群组或特定成员的消息计数。",
+      "reset_all": "所有人的消息计数已删除",
+      "reset_one": "_@{0} 的消息计数已删除。_"
+    },
+    "inactive": {
+      "usage": "> 示例：\n- inactive day 10\n- inactive day 10 kick\n- inactive total 100\n- inactive total 100 kick\n- inactive day 7 total 150\n- inactive day 7 total 150 kick\n\n不加 kick 则只列出",
+      "desc": "根据消息数量或不活跃时长识别或移除不活跃成员。添加 'kick' 以移除成员。",
+      "inactives": "_不活跃成员总数：{0}_",
+      "removing": "_将在 7 秒内移除 {0} 名不活跃成员_"
+    },
+    "weather": {
+      "desc": "天气信息",
+      "usage": "*示例：weather 北京*",
+      "not_found": "_{0} 未找到_",
+      "report": "*名称：* {0}\n*国家：* {1}\n*天气：* {2}\n*温度：* {3}°\n*体感温度：* {4}°\n*湿度：* {5}%\n*能见度：* {6}m\n*风速：* {7}m/s {8}\n*日出：* {9}\n*日落：* {10}"
+    },
+    "y2mate": {
+      "ytv_desc": "下载 YouTube 视频",
+      "ytv_usage": "_示例：ytv 链接_",
+      "yta_desc": "下载 YouTube 音频",
+      "yta_usage": "_示例：yta 歌曲名/YouTube链接_",
+      "invalid_link": "*请提供有效的 YouTube 链接！*",
+      "no_video": "*未找到视频*",
+      "no_audio": "_未找到音频。_"
+    },
+    "amute": {
+      "usage": "使用方法：amute <时> <分>\n- amute on | off\n- amute info\n\n回复文字以设置禁言消息",
+      "desc": "在指定时间自动禁言群组，可设置自定义消息。",
+      "not_found": "未找到自动禁言设置。",
+      "already_disabled": "自动禁言已禁用。",
+      "enabled": "自动禁言已启用。",
+      "disabled": "自动禁言已禁用。",
+      "invalid_format": "> 示例：\n- amute 6 0\n- amute on | off\n- amute info\n\n回复文字以设置禁言消息。",
+      "scheduled": "群组将在 {0} 禁言\n*消息：* {1}",
+      "info": "小时：{0}\n分钟：{1}\n时间：{2}\n禁言：{3}\n消息：{4}"
+    },
+    "aunmute": {
+      "usage": "使用方法：aunmute <时> <分>\n- aunmute on | off\n- aunmute info\n回复文字以设置解禁消息",
+      "desc": "在指定时间自动解除群组禁言，可设置自定义消息。",
+      "not_found": "未找到自动解禁设置。",
+      "already_disabled": "自动解禁已禁用。",
+      "enabled": "自动解禁已启用。",
+      "disabled": "自动解禁已禁用。",
+      "invalid_format": "> 示例：\n- aunmute 16 30\n- aunmute on | off\n- aunmute info\n\n回复文字以设置解禁消息。",
+      "scheduled": "群组将在 {0} 解禁\n*消息：* {1}",
+      "info": "小时：{0}\n分钟：{1}\n时间：{2}\n禁言：{3}\n消息：{4}"
+    },
+    "zushi": {
+      "usage": "> 示例：\n- zushi ping, sticker\n- 要设置所有命令，输入 'list' 然后回复复制的消息（例如：zushi 复制的消息）。",
+      "desc": "允许您启用特定命令供聊天中的其他人使用。",
+      "already_set": "{0} 已配置。",
+      "allowed": "*@{0} 允许的命令*\n{1}",
+      "no_input": "⚠️ 请提供命令名称\n\n📝 示例：\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 用空格分隔多个命令",
+      "duplicates": "❌ 命令已允许：{0}\n\n📋 当前允许的命令（共 {1} 个）：\n{2}\n\n💡 使用 .yami 查看所有允许的命令\n💡 使用 .ope 删除命令",
+      "invalid": "⚠️ 未找到有效命令\n\n跳过无效命令：{0}\n\n💡 使用 .help 查看可用命令",
+      "error": "❌ 错误：{0}",
+      "success": "✅ 成功添加 {0} 个命令{1}：\n{2}\n\n📊 @{3} 的允许命令总计：{0} 个\n\n💡 用户现在可以使用这些命令"
+    },
+    "yami": {
+      "usage": "直接使用：yami",
+      "desc": "显示此聊天中当前允许的命令列表。",
+      "not_set": "尚未设置任何允许的命令。",
+      "no_commands": "📋 未找到允许的命令\n\n💡 使用 .zushi 添加命令\n📝 示例：.zushi song video sticker",
+      "list": "📋 @{0} 允许的命令：\n\n{1}\n\n📊 总计：{2} 个命令{3}\n\n💡 使用 .ope <命令名> 删除\n💡 使用 .ope all 全部删除"
+    },
+    "ope": {
+      "usage": "示例：ope ping, sticker 或 ope all",
+      "desc": "删除或取消指定的允许命令。",
+      "not_found": "未找到 {0} 的允许命令。",
+      "all_removed": "所有允许的命令已删除。",
+      "removed": "*已删除 @{0} 的命令*\n{1}",
+      "no_input": "⚠️ 请提供要删除的命令名称\n\n📝 示例：\n  • .ope song video\n  • .ope all（删除所有）\n\n💡 使用 .yami 查看允许的命令",
+      "not_found_list": "❌ 未找到命令{0}：{1}{2}\n\n💡 使用 .yami 查看所有允许的命令\n📝 示例：.ope song video",
+      "error": "❌ 错误：{0}",
+      "no_commands": "⚠️ 未找到该用户/群组的命令\n\n💡 请先使用 .zushi 添加命令",
+      "all_success": "✅ 所有命令已删除\n\n💡 使用 .zushi 添加新命令",
+      "success": "✅ 已删除 {0} 个命令{1}：\n{2}\n\n📊 对象：@{3}\n\n💡 使用 .yami 查看剩余命令\n💡 使用 .ope all 删除所有命令"
+    },
+    "pdm": {
+      "usage": "使用方法：pdm on | off",
+      "desc": "启用或禁用群组提升/降级事件的自动通知。",
+      "not_found": "请指定 'on' 或 'off'。例如：pdm on",
+      "activated": "提升/降级通知已激活。",
+      "deactivated": "提升/降级通知已停用。"
+    },
+    "ping": {
+      "desc": "检查机器人的响应时间（延迟）。",
+      "ping_sent": "Ping！",
+      "pong": "Pong！响应时间：{0} 毫秒"
+    },
+    "pinterest": {
+      "usage": "示例：pinterest <Pinterest URL>",
+      "not_found": "未找到媒体，检查链接！ 🔍",
+      "desc": "下载 Pinterest 视频或图片。 📌"
+    },
+    "plugin": {
+      "usage": "> 示例：\n- plugin <Gist URL>\n- plugin list",
+      "desc": "通过提供包含插件代码的 Gist URL 安装外部插件，或列出所有已安装的插件。",
+      "invalid": "请提供有效的插件 URL 或插件名称。",
+      "not_installed": "当前没有已安装的插件。",
+      "installed": "新安装的插件：{0}"
+    },
+    "remove": {
+      "usage": "> 示例：\n- remove <插件名>\n- remove all",
+      "desc": "通过指定插件名删除外部插件，或删除所有已安装的插件。",
+      "not_found": "未找到插件 *{0}*。",
+      "removed": "插件已成功删除。"
+    },
+    "reboot": {
+      "desc": "使用 PM2 重启机器人实例。",
+      "starting": "正在重启..."
+    },
+    "fullpp": {
+      "usage": "示例：fullpp（回复图片）",
+      "desc": "设置全尺寸头像。",
+      "updated": "头像已更新。"
+    },
+    "jid": {
+      "desc": "返回用户或聊天的 JID。检查被提及的用户、回复消息或默认为当前聊天的 JID。"
+    },
+    "left": {
+      "desc": "离开当前群组。如果提供了额外文字，将在离开前发送。"
+    },
+    "block": {
+      "usage": "示例：block（回复或提及用户）",
+      "desc": "屏蔽指定用户。",
+      "status": "已屏蔽"
+    },
+    "unblock": {
+      "usage": "示例：unblock（回复或提及用户）",
+      "desc": "解除屏蔽指定用户。",
+      "status": "_已解除屏蔽_"
+    },
+    "pp": {
+      "usage": "示例：pp（回复图片）",
+      "desc": "使用回复消息中的图片更新您的头像。"
+    },
+    "whois": {
+      "number": "*号码：* {0}",
+      "name": "*名称：* {0}",
+      "about": "*简介：* {0}",
+      "setAt": "*设置时间：* {0}",
+      "owner": "*群主：* {0}",
+      "members": "*成员数：* {0}",
+      "description": "*描述：* {0}",
+      "created": "*创建时间：* {0}",
+      "usage": "示例：whois <jid 或用户标识符>",
+      "desc": "显示用户或群组的头像和附加信息（如简介、状态）。"
+    },
+    "gjid": {
+      "desc": "列出所有群组 JID 及其群组名称。",
+      "item": "*{0}. {1}*\n{2}\n"
+    },
+    "qr": {
+      "usage": "示例：qr 文字 或回复二维码图片并输入 qr",
+      "desc": "从文字创建二维码或从图片读取二维码！ 📲"
+    },
+    "screenshot": {
+      "usage": "示例：screenshot levanter.site",
+      "desc": "截取任何网站的截图！ 📸"
+    },
+    "reddit": {
+      "usage": "示例：reddit <URL>",
+      "desc": "使用提供的 URL 从指定 Reddit 帖子下载视频。",
+      "error": "未找到给定 URL 的视频。"
+    },
+    "rmbg": {
+      "usage": "示例：rmbg（回复图片）",
+      "desc": "使用 remove.bg API 删除回复图片的背景",
+      "key": "要使用此命令，请确保您已在 remove.bg 注册，验证账户，复制 API 密钥，并使用 .setvar RMBG_KEY:您的api密钥 进行设置。注册：https://accounts.kaleido.ai/users/sign_up | API 密钥：https://www.remove.bg/dashboard#api-key",
+      "error": "缺少 API 密钥或图片，请设置 API 密钥并回复图片。"
+    },
+    "setschedule": {
+      "usage": "> *示例：*\n- setschedule jid,分-时-日-月（24小时格式，日和月可选）\n- setschedule 明天上午10点（自然语言支持）\n- setschedule 每天上午10点（重复）\n- setschedule 0-10（默认为当前聊天的'一次性'）",
+      "desc": "使用自然语言（如『明天上午10点』）或类似 cron 的格式安排消息。默认为当前聊天的'一次性'。",
+      "invalid": "无效的计划格式或时间，请按照示例操作。",
+      "no_reply": "请回复您要计划发送的消息。",
+      "scheduled": "_已成功计划在_ *{0}* _发送至_ @{1}。"
+    },
+    "getschedule": {
+      "desc": "获取指定聊天的所有计划消息。",
+      "not_found": "没有计划消息。",
+      "time": "时间：{0}"
+    },
+    "delschedule": {
+      "usage": "> 示例：\n- delschedule 9198765431@s.whatsapp.net, 8-8-10-10\n- delschedule 9198765431@s.whatsapp.net\n- delschedule all",
+      "desc": "通过指定目标 JID 和时间删除计划消息，或删除所有计划消息。",
+      "invalid": "无效格式，请按照示例操作。",
+      "not_found": "未找到计划。",
+      "deleted": "_计划已删除。_"
+    },
+    "setstatus": {
+      "usage": "示例：setstatus jid,jid,jid,... 或 setstatus contact",
+      "desc": "为特定联系人或导入的联系人设置 WhatsApp 状态。回复消息（文字、图片或视频）以设置状态。",
+      "reply_required": "请回复消息以设置状态。",
+      "sent": "_状态已发送给 {0} 位联系人。_"
+    },
+    "scstatus": {
+      "usage": "示例：\n- scstatus jid,jid,jid,...|分-时-日-月（日和月可选）\n- scstatus contact|分-时-日-月\n- scstatus delete all|分-时-日-月\n- scstatus list",
+      "desc": "安排 WhatsApp 状态在指定时间发送。使用 'contact' 导入联系人或提供特定 JID。",
+      "reply_required": "请回复消息以计划状态。",
+      "invalid": "无效格式，请按照示例操作。",
+      "scheduled": "_已成功计划在_ {0} _发送。_",
+      "list": "计划状态列表：",
+      "deleted": "计划已删除。"
+    },
+    "antispam": {
+      "desc": "管理可配置级别的防垃圾消息保护",
+      "usage": "使用：antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *防垃圾状态*\n\n🔴 已禁用\n\n使用 `antispam on` 启用保护",
+      "info_status": "📊 *防垃圾状态*\n\n{status}\n级别：{level}\n操作：{action}",
+      "deactivated": "⚠️ *防垃圾保护已禁用*\n\n垃圾检测已关闭",
+      "activated": "✅ *防垃圾保护已启用*\n\n级别：{level}（{description}）\n操作：{action}",
+      "level_set": "✅ *级别已更改*\n\n新级别：{level}",
+      "action_set": "✅ *操作已更改*\n\n垃圾发送者将被：{action_desc}",
+      "invalid_level": "❌ 无效级别，请使用：low、medium、high",
+      "help": "📖 *防垃圾帮助*\n\n*命令：*\n• `antispam on` - 启用（默认：medium）\n• `antispam off` - 禁用\n• `antispam <low/medium/high>` - 更改灵敏度\n• `antispam <warn/delete/kick>` - 更改操作\n• `antispam info` - 查看当前设置\n\n*级别：*\n• Low - 宽松（活跃群组）\n• Medium - 平衡（推荐）\n• High - 严格（问题群组）",
+      "spam_warning": "⚠️ @{mention} 请停止刷屏！",
+      "action_warn": "已警告（未踢出）",
+      "action_delete": "仅删除消息",
+      "action_kick": "已踢出群组"
+    },
+    "sticker": {
+      "desc": "将任何图片或视频转换为酷炫贴纸！ ✨",
+      "reply_required": "嘿！您需要先回复图片或视频。 📸"
+    },
+    "circle": {
+      "desc": "将图片转换为圆形贴纸。",
+      "reply_required": "请回复图片。"
+    },
+    "take": {
+      "usage": "示例：take <标题,作者,URL>（回复贴纸或音频）。音频需要标题；作者和 URL 可选。",
+      "desc": "通过更新元数据更改贴纸包。如果回复贴纸，更新其包元数据；如果回复音频，添加元数据（标题、作者、URL）。",
+      "reply_required": "请回复贴纸或音频消息。",
+      "additional_info": "对于音频元数据，作者或 URL 是可选的。"
+    },
+    "mp4": {
+      "desc": "将动态贴纸（WebP）转换为 MP4 视频。",
+      "reply_required": "请回复动态贴纸。"
+    },
+    "story": {
+      "usage": "示例：story <用户名>（或回复包含用户名的消息）",
+      "desc": "下载指定用户名的 Instagram 快拍。如果有多个快拍，将提供列表供选择。",
+      "not_found": "未找到该用户名的快拍。",
+      "list": "共有 {0} 个快拍可供选择。请选择一个下载。\n"
+    },
+    "tag": {
+      "usage": "示例：tag all | tag admin | tag notadmin | tag <自定义消息>（或回复消息后输入 'tag'）",
+      "desc": "根据您的选择在群组中标记成员。使用 'all' 提及所有人，'admin' 仅提及管理员，'notadmin' 提及非管理员，或提供自定义消息随提及一起发送。"
+    },
+    "tictactoe": {
+      "usage": "示例：tictactoe <对手JID> 或 tictactoe normal <对手JID> 或 tictactoe restart <对手JID> 或 tictactoe end\n默认模式为无限，使用 'tictactoe normal' 进入普通模式。",
+      "desc": "与对手玩井字棋游戏。通过提及、回复消息或指定 JID 挑战用户。使用 'tictactoe end' 结束游戏，'tictactoe restart <对手JID>' 重新开始。",
+      "choose_opponent": "请通过回复消息或提及用户选择对手，不能与自己对战。",
+      "game_ended": "游戏已结束。",
+      "game_restarted": "游戏已与新对手重新开始。",
+      "invalid_input": "无效输入，请提供有效对手或适当使用 'end' 或 'restart'。",
+      "players": "玩家",
+      "already_occupied": "_已被占用_",
+      "current_player": "当前玩家",
+      "game_finish": "游戏结束 🏁",
+      "winner": "获胜者",
+      "restart": "重新开始",
+      "header": "---井字棋---"
+    },
+    "tiktok": {
+      "usage": "使用方法：tiktok <URL>（或回复链接）",
+      "desc": "下载无水印的 TikTok 视频！ 🎬",
+      "not_found": "找不到该视频，链接正确吗？ 🧐"
+    },
+    "tog": {
+      "usage": "示例：tog ping off",
+      "desc": "启用或禁用机器人命令。",
+      "invalid": "无效输入，请使用：tog <命令> on|off（例如：tog ping off）",
+      "self_reference": "您真的想关掉我吗？",
+      "enabled": "{0} 已启用。",
+      "disabled": "{0} 已禁用。"
+    },
+    "trt": {
+      "usage": "示例：trt 你好（回复消息）",
+      "desc": "用 Google 翻译即时翻译任何文字！ 🌍"
+    },
+    "twitter": {
+      "usage": "示例：twitter <URL>（或回复链接）",
+      "desc": "快速从 Twitter（X）获取视频！ 🐦",
+      "not_found": "那里没有视频，检查 URL！ 🔍",
+      "choose_quality": "> 选择画质：\n"
+    },
+    "upload": {
+      "usage": "示例：upload <URL>（或回复包含 URL 的消息）",
+      "desc": "从提供的 URL 下载媒体。对于缩短的 Google 图片 URL，会自动获取直接图片 URL。"
+    },
+    "url": {
+      "usage": "示例：url（回复图片/视频）",
+      "desc": "上传您的媒体并获取直接链接！ 🔗"
+    },
+    "getvar": {
+      "usage": "示例：getvar sudo",
+      "desc": "显示变量的值。提供变量键（不区分大小写）以获取其值。",
+      "not_found": "变量 {0} 未找到。"
+    },
+    "lyrics": {
+      "usage": "示例：lyrics 演员",
+      "desc": "查找您最喜欢歌曲的歌词！ 🎤",
+      "not_found": "找不到那些歌词，拼写有误？ 🧐"
+    },
+    "delvar": {
+      "usage": "示例：delvar sudo",
+      "desc": "通过指定键删除变量。",
+      "not_found": "变量 {0} 未找到。",
+      "deleted": "{0} 已删除。"
+    },
+    "setvar": {
+      "usage": "示例：setvar key = value",
+      "desc": "设置带有特定键和值的变量。使用 '=' 分隔键和值。",
+      "success": "新变量 {0} 已设置为 {1}。"
+    },
+    "allvar": {
+      "desc": "按排序顺序显示所有存储的变量。"
+    },
+    "vote": {
+      "usage": "> 示例：\nvote q|您最喜欢的颜色是什么？\no|😀|蓝色\no|😊|红色",
+      "desc": "在 WhatsApp 群组中发起投票。",
+      "notes": "如果未指定收件人，投票消息将发送到当前群组。",
+      "no_vote": "没有可用的投票！",
+      "total_vote": "总票数：*{0}*",
+      "delete_vote": "请删除当前投票以创建新投票。",
+      "option_required": "需要两个或更多选项",
+      "question_required": "需要问题",
+      "vote": "回应或回复选项进行投票。",
+      "vote_deleted": "_投票已删除。_",
+      "voted": "@{0} 投票给了 {1}\n\n${2}"
+    },
+    "warn": {
+      "usage": "示例：warn @用户 或 warn reset @用户。您也可以回复用户消息后输入 'warn' 或 'warn reset'。",
+      "desc": "警告群组中的用户。此命令增加用户的警告次数。如果次数超过限制，该用户将被踢出群组。使用 'warn reset' 清除用户的警告。",
+      "reset_usage": "示例：warn reset @用户（或回复用户消息后输入 'warn reset'）。",
+      "cannot_remove_admin": "我无法移除管理员。",
+      "kick_default": "{0} 因超过警告限制已被踢出。",
+      "warn_default": "⚠️ 警告 {0}！已有 {1}/{2} 次警告。"
+    },
+    "wcg": {
+      "usage": "示例：\n- wcg start（强制开始接龙游戏）\n- wcg end（结束当前游戏）\n默认模式为简单。",
+      "desc": "文字接龙游戏：提交单词继续接龙。使用 'wcg start' 强制开始，'wcg end' 停止。",
+      "game_ends": "游戏结束",
+      "already_used": "_这个词已经用过了！_",
+      "not_starting_with": "_{0} 不以 {1} 开头_",
+      "length_limit": "_这个词少于 {0} 个字母_",
+      "not_in_list": "_这个词不在我的列表中_",
+      "turn_info": "🎲轮到：@{0}\n🙌下一位：@{1}\n🆎以 {2} 开头（至少 {3} 个字母）\n🏆剩余玩家：{4}/{5}\n⏳您有 *{6}* 秒回复\n📝总单词数：{7}",
+      "timeout": "超时 @{0}！您已出局！ 🚫",
+      "winner": "@{0} 赢得了游戏 🏆\n单词数：*{1}*\n最长单词：*{2}（{3}）* 由 @{4} 📚\n时间：*{5}* ⏱️",
+      "joined": "@{0} 已加入 👏",
+      "starting": "🎮 游戏即将开始...\n👥 需要 2 名或更多玩家\n⏳ 您有 60 秒加入 ⏳\n🧩 模式 {0}",
+      "starts_in": "🎮 游戏将在 {0} 秒后开始 ⏳\n输入 *join* 参与 🙋‍♂️🙋‍♀️\n🧩 模式 {1}{2}",
+      "players_count": "\n\n👥 {0} 名玩家已加入。",
+      "terminated": "_玩家不足，游戏已终止。_",
+      "mode_update": "_WCG 模式已更新为 {0}_"
+    },
+    "wrg": {
+      "usage": "示例：\n- wrg start（强制开始随机单词游戏）\n- wrg hard（以困难模式开始）\n- wrg easy（以简单模式开始）\n- wrg end（结束当前游戏）",
+      "desc": "随机单词游戏：参与游戏，根据随机提示提交单词。使用 'wrg start' 开始新游戏，'wrg end' 结束游戏。"
+    },
+    "google": {
+      "usage": "示例：google 如何泡茶",
+      "desc": "用 Google 搜索任何内容！ 🌐"
+    },
+    "yts": {
+      "usage": "示例：yts 周杰伦",
+      "desc": "在 YouTube 上搜索任何视频！ 🔍",
+      "title": "*标题：* ",
+      "time": "*时长：* ",
+      "views": "*观看量：* ",
+      "publish": "*发布时间：* ",
+      "desc_label": "*描述：* ",
+      "author": "*作者：* ",
+      "url": "*链接：* "
+    },
+    "song": {
+      "usage": "示例：song 稻香 或 <YouTube URL>",
+      "desc": "从 YouTube 下载任何歌曲！ 🎵",
+      "not_found": "找不到那首歌，换个名字试试！ 🎧",
+      "no_result": "_未找到_ *{0}* _的结果_",
+      "id_label": "🆔&id\n",
+      "list_header": "搜索了 {0}，找到 {1} 个结果\n发送 🆔 下载歌曲。\n"
+    },
+    "video": {
+      "usage": "示例：video 稻香 或 <YouTube URL>",
+      "desc": "高质量下载 YouTube 视频！ 🎥",
+      "not_found": "未找到视频，检查名称或链接！ 📺",
+      "list_header": "搜索了 {0}\n找到 {1} 个结果"
+    },
+    "lofi": {
+      "desc": "从 Tidal 下载 lo-fi 音频",
+      "usage": "_请提供歌曲名称_",
+      "no_result": "_未找到_ *{0}* _的结果_",
+      "error_download": "_下载 lo-fi 音频出错：{0}_",
+      "error_search": "_搜索 lo-fi 出错：{0}_",
+      "list_header": "搜索了 {0}，找到 {1} 个结果\n发送 🆔 下载 lo-fi。\n"
+    },
+    "update": {
+      "usage": "示例：update",
+      "desc": "检查新更新。显示可用更新或确认机器人已是最新版本。",
+      "up_to_date": "机器人已是最新版本。",
+      "available": "有 {0} 个新更新：\n{1}"
+    },
+    "update_now": {
+      "usage": "示例：update now",
+      "desc": "将机器人更新到最新版本。",
+      "up_to_date": "机器人已是最新版本，无需更新。",
+      "updating": "正在更新机器人...",
+      "updated": "机器人已成功更新！"
+    },
+    "antigm": {
+      "desc": "管理防群组提及设置 🛡️",
+      "usage": "> 老大！使用这些命令控制群组提及：\n- antigm on | off\n- antigm delete | warn | kick\n- antigm ignore jid,jid,...",
+      "action": "操作已更新，老大！群组提及现在将导致 *{0}*。 🛡️",
+      "filter": "过滤 JID 已更新，老大！我已记录列表。 📝",
+      "enabled": "防群组提及现已激活！我正在密切关注。 👀🛡️",
+      "disabled": "防群组提及已关闭，我已停止监控。 ❌",
+      "ignore_prompt": "*老大，请提供要忽略的 JID。* 🕵️‍♂️"
+    },
+    "antigstatus": {
+      "desc": "管理防群组状态设置 🛡️",
+      "usage": "> 老大！使用这些命令控制群组状态：\n- antigstatus on | off\n- antigstatus ignore jid,jid,...\n- antigstatus unignore jid,jid,...\n- antigstatus list\n- antigstatus clear",
+      "filter": "过滤 JID 已更新，老大！ 📝",
+      "enabled": "防群组状态现已激活！我正在密切关注。 👀🛡️",
+      "disabled": "防群组状态已关闭，我已停止监控。 ❌",
+      "status": "*防群组状态：* `{0}`\n*忽略的群组：* `{1}`",
+      "ignore_prompt": "*老大，请提供要忽略的 JID。* 🕵️‍♂️",
+      "unignore_prompt": "*老大，请提供要取消忽略的 JID。* 🕵️‍♂️",
+      "removed": "JID 已从忽略列表中删除，老大！ 🗑️",
+      "list_empty": "*忽略列表为空，老大。*",
+      "list_header": "*忽略的群组：*",
+      "cleared": "*忽略列表已清除，老大。* 🧹"
+    },
+    "reminder": {
+      "desc": "添加 Google 日历提醒（支持自然语言）。",
+      "usage": "*提醒命令使用说明：*\n\n- reminder <文字>（添加事件）\n- reminder list（查看即将到来的提醒）\n- reminder del <id>（删除事件）\n- 示例：`reminder 明天上午10点开会`",
+      "success": "*提醒已添加！*\n\n*事件：* {0}\n*时间：* {1}\n*链接：* {2}",
+      "list": "*即将到来的提醒：*\n\n{0}",
+      "list_empty": "未找到即将到来的提醒。",
+      "deleted": "提醒删除成功！",
+      "invalid_id": "无效的提醒 ID。",
+      "auth_required": "*需要身份验证：*\n\n请使用 \"gauth\" 授权机器人。",
+      "time": "时间",
+      "id": "ID",
+      "short_id_info": "\n\n*注意：* 删除命令只需输入 ID 的前 2-4 个字符。"
+    },
+    "gauth": {
+      "desc": "管理 Google 身份验证（验证、导入、登出、状态）。YouTube 可选，高级功能必需。",
+      "usage": "*Google 授权命令：*\n\n- `.gauth auth` — 开始身份验证流程。\n- `.gauth code <url_or_code>` — 验证授权码。\n- `.gauth import` — 导入 `credentials.json`（回复文件）。\n- `.gauth status` — 检查当前身份验证状态。\n- `.gauth logout` — 清除此会话的凭据和令牌。\n\n*注意：* Google 授权对一般 YouTube 功能可选，但年龄限制视频和 Google Drive/日历/任务集成必需。",
+      "prompt": "*Google 身份验证设置指南：*\n\n1. *创建项目：* 访问 https://console.cloud.google.com/，点击『选择项目『>『新建项目『，命名为『Levanter『后点击『创建『。\n2. *启用 API：* 进入『API 和服务『>『库『，搜索并启用『Google Drive API『、『Google Calendar API『和『Google Tasks API『。\n3. *OAuth 同意：* 进入『API 和服务『>『OAuth 同意屏幕『，选择『外部『，填写必填字段，在『受众群体『部分将您的电子邮件添加到『测试用户『（必须）。\n4. *凭据：* 进入『API 和服务『>『凭据『，点击『创建凭据『>『OAuth 客户端 ID『，选择『桌面应用程序『，命名后点击『创建『。\n5. *下载：* 在新客户端 ID 旁边点击下载（JSON）图标，保存并通过回复文件使用 `.gauth import`。\n6. *授权：* 点击下方链接进行授权：\n{0}\n\n7. *完成：* 登录，接受『未验证应用『警告（点击『高级『>『转到 Levanter『），从重定向后的地址栏复制完整 URL，然后发送：\n`.gauth code <复制的URL>`",
+      "success": "身份验证成功！",
+      "import_success": "`credentials.json` 导入成功！现在使用 `.gauth auth` 进行授权。",
+      "import_reply": "请回复 `credentials.json` 文件。",
+      "status_auth": "*状态：* 已为此会话验证。",
+      "status_not_auth": "*状态：* 此会话未验证。请使用 `.gauth auth`。",
+      "logout": "已登出并清除此会话的 Google 授权数据。",
+      "failed": "*失败：* {0}"
+    },
+    "gdrive": {
+      "desc": "Google Drive 操作（上传、列出、删除）。",
+      "upload_success": "上传完成！",
+      "uploading": "正在将媒体上传到 Drive...",
+      "not_authorized": "未授权，请使用 \"backup auth\"。",
+      "list": "*Google Drive 文件：*\n\n{0}",
+      "list_empty": "Levanter 文件夹中未找到文件。",
+      "deleted": "文件删除成功！",
+      "invalid_id": "请提供有效的文件 ID。",
+      "error": "*错误：* {0}",
+      "url_prompt": "请提供有效的 URL，标记媒体消息，或使用子命令：list、del <id>、dl <id>。\n示例：`gupload list`",
+      "short_id_info": "\n\n*注意：* 下载或删除命令只需输入 ID 的前 2-4 个字符。"
+    },
+    "task": {
+      "desc": "管理您的 Google 任务",
+      "usage": "使用方法：task <list | list-lists | list-switch <名称> | add <文字> | del <id> | done <id> | update <id> <文字> | <文字>>",
+      "added": "任务已添加：*{0}*\n截止日期：{1}",
+      "deleted": "任务已删除。",
+      "updated": "任务 *{0}* 已标记为 *{1}*",
+      "list_empty": "未找到任务。",
+      "list_header": "📝 *任务（{0}）：*\n",
+      "not_found": "未找到任务。",
+      "auth_required": "请使用 *.gauth auth* 进行身份验证并启用 Google Tasks 权限。",
+      "list_lists": "📝 *任务列表：*\n",
+      "switched": "默认任务列表已切换为 *{0}*。"
+    },
+    "spotify": {
+      "desc": "下载您最喜欢的曲目或播放列表 🎧",
+      "example": "*示例：* spotify <url>",
+      "downloading": "_正在为您下载 {0} 首曲目，准备好享受音乐吧！_ 🎧🎶"
+    },
+    "audio": {
+      "desc": "音频调制",
+      "reply_to_audio": "*请回复音频消息*"
+    },
+    "img": {
+      "desc": "Pinterest 图片搜索",
+      "example": "*示例：img 猫咪*\n*img 10 猫咪*",
+      "no_result": "_未找到 {0} 的 Pinterest 图片_",
+      "downloading": "_正在下载 {1} 的 {0} 张 Pinterest 图片_"
+    },
+    "react": {
+      "desc": "回应消息",
+      "example": "_示例：react ❣_",
+      "channel_desc": "回应频道",
+      "channel_example": "_示例：creact https://whatsapp.com/channel/xxx/xxx, ❣_",
+      "info_desc": "获取频道信息",
+      "info_example": "_示例：cinfo https://whatsapp.com/channel/xxx",
+      "invalid_url": "_无效的频道 URL_",
+      "metadata_failed": "_无法获取频道元数据_",
+      "name": "*名称：* ",
+      "jid": "*Jid：* ",
+      "subscribers": "*订阅者：* ",
+      "verification": "*认证：* ",
+      "creation": "*创建时间：* ",
+      "description": "*描述：* "
+    },
+    "budget": {
+      "income_desc": "设置收入",
+      "income_example": "*缺少类型*\n*示例：income 类型,金额,备注*\n*income 工资, 500*\n\n*备注为可选*",
+      "income_success": "*本月收入为 {0}*",
+      "expense_desc": "设置支出",
+      "expense_example": "*缺少类型*\n*示例：expense 类型,金额,备注*\n*expense 电影, 200, 电影名称*\n\n*备注为可选*",
+      "expense_success": "*本月支出为 {0}*",
+      "del_desc": "删除收入 | 支出",
+      "del_example": "*示例：delbudget id*\n\n*来自摘要的 ID*\n*如需更新金额，请重新输入而非删除*",
+      "del_not_found": "_{0} 不在列表中。_",
+      "del_success": "_{0} 已从列表中删除。_",
+      "summary_desc": "获取预算摘要",
+      "summary_example": "*示例：summary 2023年5月1日, 2023年5月3日*",
+      "budget_desc": "AI 智能记账 - 用自然语言描述您的交易",
+      "budget_example": "*自然描述您的交易*\n\n*示例：*\n_budget 喝咖啡花了50_\n_budget 收到工资3000_\n_budget 付了200块房租_\n_budget 打车15块_",
+      "budget_failed": "*无法理解该交易，请再试一次。*\n\n_示例：budget 喝咖啡花了50_",
+      "budget_success": "*{0} 已记录*\n_金额：{1}_\n_类别：{2}_\n_备注：{3}_\n\n*本月 {0} 总计：{4}*"
+    },
+    "exif": {
+      "desc": "从贴纸中提取 Exif 元数据",
+      "reply_to_sticker": "*请回复贴纸。*",
+      "failed": "*下载贴纸失败。*",
+      "not_found": "*此贴纸中未找到 Exif 元数据。*",
+      "pack_id": "*包 ID：* ",
+      "pack_name": "*包名称：* ",
+      "author": "*作者：* ",
+      "emojis": "*表情：* "
+    },
+    "bing": {
+      "desc": "Bing AI",
+      "example": "*示例：bing 你好*",
+      "dale_desc": "Bing 图像创建器",
+      "dale_cookie_prompt": "请设置 Bing Cookie，登录 https://bing.com/images/create，使用一次 Bing Image Creator，然后复制 Cookie。",
+      "dale_example": "*示例：* dale 创建一个 WhatsApp 头像的 3D 错觉图，一个穿白衬衫的男孩随意坐在豪华沙发上。穿着白色运动鞋、黑色T恤和墨镜，向前看。背景是黑色墙上大写黄色字体的『Arjun『。"
+    },
+    "backup": {
+      "desc": "管理备份操作：验证、校验或执行备份。",
+      "usage": "*备份命令使用说明：*\n\n- .gauth auth — 验证您的账户以访问 Google Drive。\n- backup now — 立即执行备份。",
+      "success": "备份成功完成！",
+      "auth_prompt": "请使用 `.gauth auth` 启动身份验证。",
+      "code_prompt": "请使用 `.gauth code <url_or_code>` 验证您的代码。",
+      "downloading": "_正在下载文件..._"
+    },
+    "poll": {
+      "desc": "创建多选投票。",
+      "example": "*示例：问题,选项1,选项2,...*"
+    },
+    "cmd": {
+      "desc_set": "设置命令",
+      "desc_get": "获取命令",
+      "desc_del": "删除命令",
+      "reply_to_sticker": "*请回复贴纸*",
+      "example_set": "*示例：setcmd ping*",
+      "not_set": "*未设置任何命令*",
+      "example_del": "*示例：*\ndelcmd 命令名\n回复贴纸",
+      "success": "_成功_",
+      "failed": "_失败_"
+    },
+    "heroku": {
+      "restart_desc": "重启 Dyno",
+      "restart_msg": "_正在重启..._",
+      "shutdown_desc": "关闭 Dyno",
+      "shutdown_msg": "_正在关闭..._",
+      "quota_desc": "显示配额信息",
+      "quota_total": "总配额：",
+      "quota_used": "已用配额：",
+      "remaining": "剩余：",
+      "error_prefix": "HEROKU：{0}"
+    }
+  }
+}
