@@ -11,7 +11,7 @@ bot(
       return await message.send(lang.plugins.gemini.Key)
     }
 
-    if (!match) {
+    if (!match && !(message.reply_message && message.reply_message.image)) {
       return await message.send(lang.plugins.gemini.example)
     }
 
