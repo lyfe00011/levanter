@@ -67,6 +67,7 @@
       "video_not_supported": "Is bot mein music engine video downloads support nahi karta.",
       "audio_disabled": "Music engine download fail ho gaya aur YouTube audio disabled hai.",
       "gemini_missing_api_key": "GEMINI_API_KEY nahi hai",
+      "openrouter_missing_api_key": "OPENROUTER_API_KEY nahi hai",
       "gemini_error": "error",
       "upscale_upload_failed": "Image upload nahi ho saki",
       "upscale_invalid_response": "Upscale service se invalid response",
@@ -263,6 +264,10 @@
       "goodbye_disable": "_Goodbye बंद हो गया_",
       "goodbye_delete": "_Goodbye संदेश हटा दिया गया_",
       "goodbye_not_set": "_पहले goodbye संदेश सेट करें!_\n\n> *उदाहरण:*\ngoodbye अलविदा &mention! हमारे साथ रहने के लिए धन्यवाद\n\nफिर उपयोग करें: goodbye on"
+    },
+    "openrouter": {
+      "example": "*Example:* or Hi\n\nOPENROUTER_API_KEY chahiye (free, bina card). Optional variables:\n- OPENROUTER_MODEL (default: openai/gpt-oss-20b:free)\n- OPENROUTER_SYSTEM_MSG\n\nFree key lein: https://openrouter.ai/keys\nFree models: https://openrouter.ai/models?max_price=0",
+      "desc": "OpenRouter AI ke saath interact karo (free models)"
     },
     "groq": {
       "example": "*Example:* groq Hi\n\nAap optionally ye environment variables set kar sakte hain:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nZyada details ke liye, yahan jayein: https://console.groq.com/keys",

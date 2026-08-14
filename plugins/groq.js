@@ -11,7 +11,7 @@ bot(
       return await message.send(lang.plugins.groq.example)
     }
 
-    const res = await groqResponse(match)
+    const res = await groqResponse(match, message.id)
     await message.send(res, { quoted: message.data })
   }
 )

@@ -67,6 +67,7 @@
       "video_not_supported": "音乐引擎不支持在此机器人中下载视频。",
       "audio_disabled": "音乐引擎下载失败，且 YouTube 音频已禁用。",
       "gemini_missing_api_key": "缺少 GEMINI_API_KEY",
+      "openrouter_missing_api_key": "缺少 OPENROUTER_API_KEY",
       "gemini_error": "错误",
       "upscale_upload_failed": "上传图片失败",
       "upscale_invalid_response": "放大服务返回无效响应",
@@ -276,6 +277,10 @@
       "goodbye_disable": "_告别消息已禁用_",
       "goodbye_delete": "_告别消息已删除_",
       "goodbye_not_set": "_请先设置告别消息！_\n\n> *示例：*\ngoodbye 再见 &mention！感谢您的陪伴\n\n然后使用：goodbye on"
+    },
+    "openrouter": {
+      "example": "*示例：* or 你好\n\n需要 OPENROUTER_API_KEY（免费，无需银行卡）。可选变量：\n- OPENROUTER_MODEL（默认：openai/gpt-oss-20b:free）\n- OPENROUTER_SYSTEM_MSG\n\n获取免费密钥：https://openrouter.ai/keys\n免费模型：https://openrouter.ai/models?max_price=0",
+      "desc": "与 OpenRouter AI 互动（免费模型）"
     },
     "groq": {
       "example": "*示例：* groq 你好\n\n您可以选择设置以下环境变量：\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\n更多详情请访问：https://console.groq.com/keys",

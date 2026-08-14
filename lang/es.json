@@ -67,6 +67,7 @@
       "video_not_supported": "El motor de música no admite la descarga de vídeos en este bot.",
       "audio_disabled": "La descarga del motor de música falló y el audio de YouTube está desactivado.",
       "gemini_missing_api_key": "falta GEMINI_API_KEY",
+      "openrouter_missing_api_key": "falta OPENROUTER_API_KEY",
       "gemini_error": "error",
       "upscale_upload_failed": "Error al subir la imagen",
       "upscale_invalid_response": "Respuesta inválida del servicio de mejora",
@@ -263,6 +264,10 @@
       "goodbye_disable": "_Despedida desactivada_",
       "goodbye_delete": "_Mensaje de despedida eliminado_",
       "goodbye_not_set": "_¡Por favor establece un mensaje de despedida primero!_\n\n> *Ejemplo:*\ngoodbye ¡Adiós &mention! Gracias por estar con nosotros\n\nLuego usa: goodbye on"
+    },
+    "openrouter": {
+      "example": "*Ejemplo:* or Hola\n\nRequiere OPENROUTER_API_KEY (gratis, sin tarjeta). Variables opcionales:\n- OPENROUTER_MODEL (por defecto: openai/gpt-oss-20b:free)\n- OPENROUTER_SYSTEM_MSG\n\nObtén una clave gratis: https://openrouter.ai/keys\nModelos gratis: https://openrouter.ai/models?max_price=0",
+      "desc": "Pregunta a OpenRouter AI (modelos gratis)"
     },
     "groq": {
       "example": "*Ejemplo:* groq Hola\n\nDebes Agregar ApiKey, Opcionalmente puedes ajustar las demas Variables:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\n Para mas detalles ve a https://console.groq.com/keys",

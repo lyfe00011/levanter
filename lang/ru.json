@@ -67,6 +67,7 @@
       "video_not_supported": "Музыкальный движок не поддерживает загрузку видео в этом боте.",
       "audio_disabled": "Загрузка через музыкальный движок не удалась, а аудио YouTube отключено.",
       "gemini_missing_api_key": "отсутствует GEMINI_API_KEY",
+      "openrouter_missing_api_key": "отсутствует OPENROUTER_API_KEY",
       "gemini_error": "ошибка",
       "upscale_upload_failed": "Не удалось загрузить изображение",
       "upscale_invalid_response": "Неверный ответ от сервиса увеличения",
@@ -263,6 +264,10 @@
       "goodbye_disable": "_Прощание теперь отключено_",
       "goodbye_delete": "_Прощальное сообщение удалено_",
       "goodbye_not_set": "_Пожалуйста, сначала установите прощальное сообщение!_\n\n> *Пример:*\ngoodbye Пока &mention! Спасибо, что были с нами\n\nЗатем используйте: goodbye on"
+    },
+    "openrouter": {
+      "example": "*Пример:* or Привет\n\nТребуется OPENROUTER_API_KEY (бесплатно, без карты). Дополнительные переменные:\n- OPENROUTER_MODEL (по умолчанию: openai/gpt-oss-20b:free)\n- OPENROUTER_SYSTEM_MSG\n\nПолучите бесплатный ключ: https://openrouter.ai/keys\nБесплатные модели: https://openrouter.ai/models?max_price=0",
+      "desc": "Взаимодействовать с OpenRouter AI (бесплатные модели)"
     },
     "groq": {
       "example": "*Пример:* groq Привет\n\nВы можете дополнительно установить следующие переменные окружения:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nДля подробностей посетите: https://console.groq.com/keys",

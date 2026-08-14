@@ -68,6 +68,7 @@
       "audio_disabled": "Music engine download failed and YouTube audio is disabled.",
       "gemini_missing_api_key": "missing GEMINI_API_KEY",
       "gemini_error": "error",
+      "openrouter_missing_api_key": "missing OPENROUTER_API_KEY",
       "upscale_upload_failed": "Failed to upload image",
       "upscale_invalid_response": "Invalid response from upscale service",
       "upscale_failed": "Failed to upscale image. Please try again later.",
@@ -280,6 +281,10 @@
     "groq": {
       "example": "*Example:* groq Hi\n\nYou can optionally set the following environment variables:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nFor more details, visit: https://console.groq.com/keys",
       "desc": "Interact with GROQ AI"
+    },
+    "openrouter": {
+      "example": "*Example:* or Hi\n\nRequires OPENROUTER_API_KEY (free, no card). Optional vars:\n- OPENROUTER_MODEL (default: openai/gpt-oss-20b:free)\n- OPENROUTER_SYSTEM_MSG\n\nGet a free key: https://openrouter.ai/keys\nFree models: https://openrouter.ai/models?max_price=0",
+      "desc": "Interact with OpenRouter AI (free models)"
     },
     "kick": {
       "desc": "Kick someone out of the group. 🚪",

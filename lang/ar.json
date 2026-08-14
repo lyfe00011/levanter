@@ -67,6 +67,7 @@
       "video_not_supported": "محرك الموسيقى مش بيدعم تنزيل الفيديو في البوت ده.",
       "audio_disabled": "تنزيل محرك الموسيقى فشل وصوت يوتيوب متعطل.",
       "gemini_missing_api_key": "ناقص GEMINI_API_KEY",
+      "openrouter_missing_api_key": "ناقص OPENROUTER_API_KEY",
       "gemini_error": "خطأ",
       "upscale_upload_failed": "فشل رفع الصورة",
       "upscale_invalid_response": "رد غير صالح من خدمة الترقية",
@@ -263,6 +264,10 @@
       "goodbye_disable": "_تم تعطيل الوداع_",
       "goodbye_delete": "_تم حذف رسالة الوداع_",
       "goodbye_not_set": "_يرجى تعيين رسالة وداع أولاً!_\n\n> *مثال:*\ngoodbye وداعاً &mention! شكراً لوجودك معنا\n\nثم استخدم: goodbye on"
+    },
+    "openrouter": {
+      "example": "*مثال:* or مرحباً\n\nيتطلب OPENROUTER_API_KEY (مجاني، بدون بطاقة). متغيرات اختيارية:\n- OPENROUTER_MODEL (الافتراضي: openai/gpt-oss-20b:free)\n- OPENROUTER_SYSTEM_MSG\n\nاحصل على مفتاح مجاني: https://openrouter.ai/keys\nالنماذج المجانية: https://openrouter.ai/models?max_price=0",
+      "desc": "التفاعل مع ذكاء OpenRouter الاصطناعي (نماذج مجانية)"
     },
     "groq": {
       "example": "*مثال:* groq مرحباً\n\nيمكنك اختياريًا تعيين متغيرات البيئة التالية:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nلمزيد من التفاصيل، قم بزيارة: https://console.groq.com/keys",

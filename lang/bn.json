@@ -67,6 +67,7 @@
       "video_not_supported": "এই বটে music engine ভিডিও ডাউনলোড সাপোর্ট করে না।",
       "audio_disabled": "Music engine ডাউনলোড ব্যর্থ এবং YouTube audio বন্ধ।",
       "gemini_missing_api_key": "GEMINI_API_KEY নেই",
+      "openrouter_missing_api_key": "OPENROUTER_API_KEY নেই",
       "gemini_error": "এরর",
       "upscale_upload_failed": "ছবি আপলোড করতে পারলাম না",
       "upscale_invalid_response": "Upscale সার্ভিস থেকে ভুল রেসপন্স",
@@ -263,6 +264,10 @@
       "goodbye_disable": "গুডবাই এখন বন্ধ করা হয়েছে",
       "goodbye_delete": "গুডবাই মেসেজ ডিলিট করা হয়েছে",
       "goodbye_not_set": "_প্রথমে গুডবাই মেসেজ সেট করুন!_\n\n> *উদাহরণ:*\ngoodbye বিদায় &mention! আমাদের সাথে থাকার জন্য ধন্যবাদ\n\nতারপর ব্যবহার করুন: goodbye on"
+    },
+    "openrouter": {
+      "example": "উদাহরণ: or হাই\n\nOPENROUTER_API_KEY প্রয়োজন (ফ্রি, কার্ড ছাড়া)। ঐচ্ছিক ভেরিয়েবল:\n- OPENROUTER_MODEL (ডিফল্ট: openai/gpt-oss-20b:free)\n- OPENROUTER_SYSTEM_MSG\n\nফ্রি কী নিন: https://openrouter.ai/keys\nফ্রি মডেল: https://openrouter.ai/models?max_price=0",
+      "desc": "OpenRouter AI-এর সাথে ইন্টারঅ্যাক্ট করুন (ফ্রি মডেল)"
     },
     "groq": {
       "example": "উদাহরণ: groq হাই\n\nআপনি ঐচ্ছিকভাবে নিম্নলিখিত এনভায়রনমেন্ট ভেরিয়েবল সেট করতে পারেন:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://console.groq.com/keys",

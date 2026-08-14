@@ -67,6 +67,7 @@
       "video_not_supported": "Ee bot-il music engine video downloads support cheyyilla.",
       "audio_disabled": "Music engine download fail aayi, YouTube audio off aanu.",
       "gemini_missing_api_key": "GEMINI_API_KEY illa",
+      "openrouter_missing_api_key": "OPENROUTER_API_KEY illa",
       "gemini_error": "error",
       "upscale_upload_failed": "Image upload aayilla",
       "upscale_invalid_response": "Upscale service-il ninnu invalid response",
@@ -263,6 +264,10 @@
       "goodbye_disable": "_Goodbye Off aayitto_",
       "goodbye_delete": "_Goodbye message delete aayi_",
       "goodbye_not_set": "_Adyam goodbye message set cheyyu!_\n\n> *Example:*\ngoodbye Bye &mention! Koode undayithinu nanni\n\nEnnitt use cheyyu: goodbye on"
+    },
+    "openrouter": {
+      "example": "*Example:* or Hi\n\nOPENROUTER_API_KEY venam (free, card illa). Optional variables:\n- OPENROUTER_MODEL (default: openai/gpt-oss-20b:free)\n- OPENROUTER_SYSTEM_MSG\n\nFree key nedukkuka: https://openrouter.ai/keys\nFree models: https://openrouter.ai/models?max_price=0",
+      "desc": "OpenRouter AI-yumaayi samsarikku (free models)"
     },
     "groq": {
       "example": "*Example:* groq Hi\n\nEe environment variables venel set cheyyaam:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nKooduthal kariyangal ivide: https://console.groq.com/keys",

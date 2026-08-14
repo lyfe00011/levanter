@@ -67,6 +67,7 @@
       "video_not_supported": "Müzik motoru bu botta video indirmeyi desteklemiyor.",
       "audio_disabled": "Müzik motoru indirmesi başarısız oldu ve YouTube sesi devre dışı.",
       "gemini_missing_api_key": "GEMINI_API_KEY eksik",
+      "openrouter_missing_api_key": "OPENROUTER_API_KEY eksik",
       "gemini_error": "hata",
       "upscale_upload_failed": "Resim yüklenemedi",
       "upscale_invalid_response": "Upscale servisinden geçersiz yanıt",
@@ -263,6 +264,10 @@
       "goodbye_disable": "_Elveda şimdi devre dışı_",
       "goodbye_delete": "_Elveda mesajı silindi_",
       "goodbye_not_set": "_Önce elveda mesajı ayarlayın!_\n\n> *Örnek:*\ngoodbye Hoşça kal &mention! Bizimle olduğunuz için teşekkürler\n\nSonra kullanın: goodbye on"
+    },
+    "openrouter": {
+      "example": "*Örnek:* or Merhaba\n\nOPENROUTER_API_KEY gerekli (ücretsiz, kart yok). İsteğe bağlı değişkenler:\n- OPENROUTER_MODEL (varsayılan: openai/gpt-oss-20b:free)\n- OPENROUTER_SYSTEM_MSG\n\nÜcretsiz anahtar al: https://openrouter.ai/keys\nÜcretsiz modeller: https://openrouter.ai/models?max_price=0",
+      "desc": "OpenRouter AI ile etkileşim kur (ücretsiz modeller)"
     },
     "groq": {
       "example": "*Örnek:* groq Merhaba\n\nİsteğe bağlı olarak aşağıdaki ortam değişkenlerini ayarlayabilirsiniz:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nDaha fazla detay için: https://console.groq.com/keys",

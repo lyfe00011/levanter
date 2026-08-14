@@ -67,6 +67,7 @@
       "video_not_supported": "Music engine tidak mendukung unduhan video di bot ini.",
       "audio_disabled": "Unduhan music engine gagal dan audio YouTube dinonaktifkan.",
       "gemini_missing_api_key": "GEMINI_API_KEY tidak ada",
+      "openrouter_missing_api_key": "OPENROUTER_API_KEY tidak ada",
       "gemini_error": "error",
       "upscale_upload_failed": "Gagal mengunggah gambar",
       "upscale_invalid_response": "Respons tidak valid dari layanan upscale",
@@ -263,6 +264,10 @@
       "goodbye_disable": "_Selamat tinggal sekarang dinonaktifkan_",
       "goodbye_delete": "_Pesan selamat tinggal dihapus_",
       "goodbye_not_set": "_Silakan atur pesan selamat tinggal terlebih dahulu!_\n\n> *Contoh:*\ngoodbye Sampai jumpa &mention! Terima kasih telah bersama kami\n\nKemudian gunakan: goodbye on"
+    },
+    "openrouter": {
+      "example": "*Contoh:* or Hai\n\nMembutuhkan OPENROUTER_API_KEY (gratis, tanpa kartu). Variabel opsional:\n- OPENROUTER_MODEL (default: openai/gpt-oss-20b:free)\n- OPENROUTER_SYSTEM_MSG\n\nDapatkan kunci gratis: https://openrouter.ai/keys\nModel gratis: https://openrouter.ai/models?max_price=0",
+      "desc": "Berinteraksi dengan OpenRouter AI (model gratis)"
     },
     "groq": {
       "example": "*Contoh:* groq Hai\n\nAnda bisa mengatur variabel lingkungan berikut:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nUntuk detail lebih lanjut, kunjungi: https://console.groq.com/keys",
