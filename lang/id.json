@@ -46,7 +46,7 @@
     "screenshot_error": "Error saat mengambil screenshot. 📸❌",
     "id_missing": "ID tidak ada. 🕵️",
     "not_on_whatsapp": "{0} tidak ada di WhatsApp. 👻",
-    "yt_auth_required": "Gagal mengunduh: YouTube memerlukan autentikasi. 🗝️\n\n*Solusi:*\n1. *Google Auth:* Gunakan `.gauth auth` untuk menautkan akun Google-mu.\n2. *YT_COOKIE:* Atur variabel lingkungan `YT_COOKIE`.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "yt_auth_required": "Gagal mengunduh: YouTube memerlukan autentikasi. 🗝️\n\n*Solusi:*\n1. *Login YouTube:* Kirim `.ytlogin` lalu setujui di akunmu.\n2. *YT_COOKIE:* Atur variabel lingkungan `YT_COOKIE`.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -923,6 +923,15 @@
       "time": "Waktu",
       "id": "ID",
       "short_id_info": "\n\n*Catatan:* Anda hanya perlu memasukkan 2-4 karakter pertama dari ID untuk perintah penghapusan."
+    },
+    "ytlogin": {
+      "desc": "Tautkan akun YouTube agar .song / .video bisa mengunduh (login kode perangkat).\nGunakan `.ytlogin`, `.ytlogin status`, atau `.ytlogin logout`.",
+      "status_in": "*YouTube:* sudah masuk ✅",
+      "status_out": "*YouTube:* belum masuk. Gunakan `.ytlogin`.",
+      "logout": "*YouTube:* sudah keluar.",
+      "prompt": "*Login YouTube*\n\n1. Buka: {0}\n2. Masukkan kode: *{1}*\n3. Setujui akses.\n\nMenunggu persetujuan… akan kukonfirmasi di sini kalau selesai. Kode cepat kedaluwarsa.",
+      "success": "*Login YouTube berhasil ✅*\n.song / .video sekarang memakai akunmu.",
+      "failed": "*Login YouTube gagal:* {0}"
     },
     "gauth": {
       "desc": "Kelola autentikasi Google API untuk fitur-fitur seperti Pembatasan Usia YouTube, Google Drive, Kalender, dan Tugas.",

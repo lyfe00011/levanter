@@ -46,7 +46,7 @@
     "screenshot_error": "Не получилось сделать скриншот. 📸❌",
     "id_missing": "ID отсутствует. 🕵️",
     "not_on_whatsapp": "{0} нет в WhatsApp. 👻",
-    "yt_auth_required": "Ошибка загрузки: YouTube требует аутентификацию. 🗝️\n\n*Решения:*\n1. *Google Auth:* Используй `.gauth auth` чтобы привязать Google-аккаунт.\n2. *YT_COOKIE:* Задай переменную окружения `YT_COOKIE`.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "yt_auth_required": "Ошибка загрузки: YouTube требует аутентификацию. 🗝️\n\n*Решения:*\n1. *Вход в YouTube:* Отправь `.ytlogin` и подтверди в своём аккаунте.\n2. *YT_COOKIE:* Задай переменную окружения `YT_COOKIE`.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -923,6 +923,15 @@
       "time": "Время",
       "id": "ID",
       "short_id_info": "\n\n*Примечание:* вам нужно ввести только первые 2-4 символа ID для удаления."
+    },
+    "ytlogin": {
+      "desc": "Привяжи аккаунт YouTube, чтобы .song / .video могли скачивать (вход по коду устройства).\nИспользуй `.ytlogin`, `.ytlogin status` или `.ytlogin logout`.",
+      "status_in": "*YouTube:* выполнен вход ✅",
+      "status_out": "*YouTube:* вход не выполнен. Используй `.ytlogin`.",
+      "logout": "*YouTube:* выход выполнен.",
+      "prompt": "*Вход в YouTube*\n\n1. Открой: {0}\n2. Введи код: *{1}*\n3. Подтверди доступ.\n\nЖду подтверждения… сообщу здесь, когда будет готово. Код скоро истечёт.",
+      "success": "*Вход в YouTube выполнен ✅*\n.song / .video теперь будут использовать твой аккаунт.",
+      "failed": "*Ошибка входа в YouTube:* {0}"
     },
     "gauth": {
       "desc": "Управление аутентификацией Google API для таких функций, как возрастные ограничения YouTube, Google Drive, Calendar и Tasks.",

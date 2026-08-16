@@ -46,7 +46,7 @@
     "screenshot_error": "Ekran görüntüsü alınırken hata. 📸❌",
     "id_missing": "ID eksik. 🕵️",
     "not_on_whatsapp": "{0} WhatsApp'ta değil. 👻",
-    "yt_auth_required": "İndirme başarısız: YouTube kimlik doğrulama istiyor. 🗝️\n\n*Çözümler:*\n1. *Google Auth:* Google hesabını bağlamak için `.gauth auth` kullan.\n2. *YT_COOKIE:* `YT_COOKIE` ortam değişkenini ayarla.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Hata:* {0}"
+    "yt_auth_required": "İndirme başarısız: YouTube kimlik doğrulama istiyor. 🗝️\n\n*Çözümler:*\n1. *YouTube Girişi:* `.ytlogin` gönder ve hesabında onayla.\n2. *YT_COOKIE:* `YT_COOKIE` ortam değişkenini ayarla.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Hata:* {0}"
   },
   "plugins": {
     "common": {
@@ -923,6 +923,15 @@
       "time": "Saat",
       "id": "ID",
       "short_id_info": "\n\n*Not:* Silme komutu için ID'nin yalnızca ilk 2-4 karakterini girmeniz yeterlidir."
+    },
+    "ytlogin": {
+      "desc": ".song / .video indirebilsin diye bir YouTube hesabı bağla (cihaz kodu ile giriş).\n`.ytlogin`, `.ytlogin status` veya `.ytlogin logout` kullan.",
+      "status_in": "*YouTube:* giriş yapıldı ✅",
+      "status_out": "*YouTube:* giriş yapılmadı. `.ytlogin` kullan.",
+      "logout": "*YouTube:* çıkış yapıldı.",
+      "prompt": "*YouTube Girişi*\n\n1. Aç: {0}\n2. Kodu gir: *{1}*\n3. Erişimi onayla.\n\nOnay bekleniyor… bitince burada haber veririm. Kod yakında sona erer.",
+      "success": "*YouTube girişi başarılı ✅*\n.song / .video artık hesabını kullanacak.",
+      "failed": "*YouTube girişi başarısız:* {0}"
     },
     "gauth": {
       "desc": "YouTube Yaş Kısıtlaması, Google Drive, Takvim ve Görevler gibi özellikler için Google API kimlik doğrulamasını yönetin.",

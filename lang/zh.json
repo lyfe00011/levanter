@@ -46,7 +46,7 @@
     "screenshot_error": "糟糕！截图失败。 📸❌",
     "id_missing": "等等，我缺少一个 ID！ 🕵️",
     "not_on_whatsapp": "{0} 不在 WhatsApp 上！ 👻",
-    "yt_auth_required": "下载失败！YouTube 需要验证。 🗝️\n\n*解决方案：*\n1. *Google 授权：* 试试 `.gauth auth` 进行关联。\n2. *YT_COOKIE：* 设置 `YT_COOKIE` 环境变量。\n文档：https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*错误：* {0}"
+    "yt_auth_required": "下载失败！YouTube 需要验证。 🗝️\n\n*解决方案：*\n1. *YouTube 登录：* 发送 `.ytlogin` 并在你的账号上批准。\n2. *YT_COOKIE：* 设置 `YT_COOKIE` 环境变量。\n文档：https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*错误：* {0}"
   },
   "plugins": {
     "common": {
@@ -957,6 +957,15 @@
       "time": "时间",
       "id": "ID",
       "short_id_info": "\n\n*注意：* 删除命令只需输入 ID 的前 2-4 个字符。"
+    },
+    "ytlogin": {
+      "desc": "关联 YouTube 账号，让 .song / .video 可以下载（设备代码登录）。\n使用 `.ytlogin`、`.ytlogin status` 或 `.ytlogin logout`。",
+      "status_in": "*YouTube：* 已登录 ✅",
+      "status_out": "*YouTube：* 未登录。请使用 `.ytlogin`。",
+      "logout": "*YouTube：* 已退出登录。",
+      "prompt": "*YouTube 登录*\n\n1. 打开：{0}\n2. 输入代码：*{1}*\n3. 批准访问。\n\n等待批准…完成后我会在这里通知你。代码很快过期。",
+      "success": "*YouTube 登录成功 ✅*\n.song / .video 现在将使用你的账号。",
+      "failed": "*YouTube 登录失败：* {0}"
     },
     "gauth": {
       "desc": "管理 Google 身份验证（验证、导入、登出、状态）。YouTube 可选，高级功能必需。",

@@ -46,7 +46,7 @@
     "screenshot_error": "Screenshot edukkaan pattiyilla. 📸❌",
     "id_missing": "ID kittiyilla. 🕵️",
     "not_on_whatsapp": "{0} WhatsApp-il illa. 👻",
-    "yt_auth_required": "Download fail aayi! YouTube authentication venam. 🗝️\n\n*Solutions:*\n1. *Google Auth:* `.gauth auth` use cheyyu.\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set cheyyu.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "yt_auth_required": "Download fail aayi! YouTube authentication venam. 🗝️\n\n*Solutions:*\n1. *YouTube Login:* `.ytlogin` ayakku, account approve cheyyu.\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set cheyyu.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -923,6 +923,15 @@
       "time": "Samayam",
       "id": "ID",
       "short_id_info": "\n\n*Note:* Delete command-u-maayi ID-yude adyam randu moonu aksharam mathram ezhuthiyaal madhi."
+    },
+    "ytlogin": {
+      "desc": ".song / .video download cheyyan YouTube account link cheyyu (device-code login).\n`.ytlogin`, `.ytlogin status`, allengil `.ytlogin logout` upayogikkuka.",
+      "status_in": "*YouTube:* login aayi ✅",
+      "status_out": "*YouTube:* login aayittilla. `.ytlogin` upayogikkuka.",
+      "logout": "*YouTube:* logout aayi.",
+      "prompt": "*YouTube Login*\n\n1. Thurakku: {0}\n2. Code type cheyyu: *{1}*\n3. Access approve cheyyu.\n\nApproval-inayi kaathirikkunnu… kazhinjaal ivide ariyikkam. Code pettennu expire aakum.",
+      "success": "*YouTube login success ✅*\n.song / .video ini ninte account upayogikkum.",
+      "failed": "*YouTube login fail:* {0}"
     },
     "gauth": {
       "desc": "YouTube Age Restriction, Google Drive, Calendar, pinne Tasks settings manage cheyyaan Google Auth upayogikkuka.",

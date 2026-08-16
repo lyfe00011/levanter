@@ -46,7 +46,7 @@
     "screenshot_error": "স্ক্রিনশট নিতে এরর। 📸❌",
     "id_missing": "ID পাওয়া যায়নি। 🕵️",
     "not_on_whatsapp": "{0} হোয়াটসঅ্যাপে নেই। 👻",
-    "yt_auth_required": "ডাউনলোড ব্যর্থ: YouTube-এর জন্য অথেন্টিকেশন লাগবে। 🗝️\n\n*সমাধান:*\n1. *Google Auth:* তোমার Google অ্যাকাউন্ট লিঙ্ক করতে `.gauth auth` ব্যবহার করো।\n2. *YT_COOKIE:* `YT_COOKIE` এনভায়রনমেন্ট ভেরিয়েবল সেট করো।\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "yt_auth_required": "ডাউনলোড ব্যর্থ: YouTube-এর জন্য অথেন্টিকেশন লাগবে। 🗝️\n\n*সমাধান:*\n1. *YouTube লগইন:* `.ytlogin` পাঠাও এবং তোমার অ্যাকাউন্টে অনুমোদন দাও।\n2. *YT_COOKIE:* `YT_COOKIE` এনভায়রনমেন্ট ভেরিয়েবল সেট করো।\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -923,6 +923,15 @@
       "time": "সময়",
       "id": "আইডি",
       "short_id_info": "\n\n*দ্রষ্টব্য:* মুছে ফেলার কমান্ডের জন্য আইডির প্রথম ২-৪ টি অক্ষর প্রবেশ করলেই হবে।"
+    },
+    "ytlogin": {
+      "desc": ".song / .video ডাউনলোডের জন্য YouTube অ্যাকাউন্ট লিঙ্ক করো (ডিভাইস-কোড লগইন)।\n`.ytlogin`, `.ytlogin status`, বা `.ytlogin logout` ব্যবহার করো।",
+      "status_in": "*YouTube:* লগইন করা আছে ✅",
+      "status_out": "*YouTube:* লগইন করা নেই। `.ytlogin` ব্যবহার করো।",
+      "logout": "*YouTube:* লগআউট হয়ে গেছে।",
+      "prompt": "*YouTube লগইন*\n\n১. খোলো: {0}\n২. কোড দাও: *{1}*\n৩. অনুমোদন দাও।\n\nঅনুমোদনের অপেক্ষায়… হয়ে গেলে জানাবো। কোড দ্রুত শেষ হয়ে যায়।",
+      "success": "*YouTube লগইন সফল ✅*\n.song / .video এখন তোমার অ্যাকাউন্ট ব্যবহার করবে।",
+      "failed": "*YouTube লগইন ব্যর্থ:* {0}"
     },
     "gauth": {
       "desc": "YouTube বয়স-নিষেধাজ্ঞা, Google Drive, ক্যালেন্ডার এবং টাস্কের মতো বৈশিষ্ট্যগুলির জন্য Google API প্রমাণীকরণ পরিচালনা করুন।",

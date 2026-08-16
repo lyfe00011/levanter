@@ -46,7 +46,7 @@
     "screenshot_error": "Snap! Couldn't take that screenshot. 📸❌",
     "id_missing": "Wait, I'm missing an ID here! 🕵️",
     "not_on_whatsapp": "{0} is a ghost—not on WhatsApp! 👻",
-    "yt_auth_required": "Failed to download! YouTube needs a key to let me through. 🗝️\n\n*Solutions:*\n1. *Google Auth:* Try `.gauth auth` to link up.\n2. *YT_COOKIE:* Set the `YT_COOKIE` environment variable.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "yt_auth_required": "Failed to download! YouTube needs a key to let me through. 🗝️\n\n*Solutions:*\n1. *YouTube Login:* Send `.ytlogin` and approve on your account.\n2. *YT_COOKIE:* Set the `YT_COOKIE` environment variable.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -957,6 +957,15 @@
       "time": "Time",
       "id": "ID",
       "short_id_info": "\n\n*Note:* You only need to enter the first 2-4 characters of the ID for the delete command."
+    },
+    "ytlogin": {
+      "desc": "Link a YouTube account so .song / .video can download (device-code login).\nUse `.ytlogin`, `.ytlogin status`, or `.ytlogin logout`.",
+      "status_in": "*YouTube:* logged in ✅",
+      "status_out": "*YouTube:* not logged in. Use `.ytlogin`.",
+      "logout": "*YouTube:* logged out.",
+      "prompt": "*YouTube Login*\n\n1. Open: {0}\n2. Enter code: *{1}*\n3. Approve access.\n\nWaiting for approval… I'll confirm here when done. Code expires soon.",
+      "success": "*YouTube login success ✅*\n.song / .video will now use your account.",
+      "failed": "*YouTube login failed:* {0}"
     },
     "gauth": {
       "desc": "Manage Google Authentication (Authenticate, Import, Logout, Status). Optional for YouTube but required for premium features.",

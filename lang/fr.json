@@ -46,7 +46,7 @@
     "screenshot_error": "Erreur lors de la capture d'écran. 📸❌",
     "id_missing": "ID manquant. 🕵️",
     "not_on_whatsapp": "{0} n'est pas sur WhatsApp. 👻",
-    "yt_auth_required": "Échec du téléchargement : YouTube requiert une authentification. 🗝️\n\n*Solutions :*\n1. *Google Auth :* Utilise `.gauth auth` pour lier ton compte Google.\n2. *YT_COOKIE :* Définis la variable d'environnement `YT_COOKIE`.\nWiki : https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Erreur :* {0}"
+    "yt_auth_required": "Échec du téléchargement : YouTube requiert une authentification. 🗝️\n\n*Solutions :*\n1. *Connexion YouTube :* Envoie `.ytlogin` et approuve sur ton compte.\n2. *YT_COOKIE :* Définis la variable d'environnement `YT_COOKIE`.\nWiki : https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Erreur :* {0}"
   },
   "plugins": {
     "common": {
@@ -912,6 +912,15 @@
       "time": "Heure",
       "id": "ID",
       "short_id_info": "\n\n*Note :* Vous n'avez qu'à saisir les 2-4 premiers caractères de l'ID pour le commande de suppression."
+    },
+    "ytlogin": {
+      "desc": "Lie un compte YouTube pour que .song / .video puissent télécharger (connexion par code d'appareil).\nUtilise `.ytlogin`, `.ytlogin status` ou `.ytlogin logout`.",
+      "status_in": "*YouTube :* connecté ✅",
+      "status_out": "*YouTube :* non connecté. Utilise `.ytlogin`.",
+      "logout": "*YouTube :* déconnecté.",
+      "prompt": "*Connexion YouTube*\n\n1. Ouvre : {0}\n2. Entre le code : *{1}*\n3. Approuve l'accès.\n\nEn attente de l'approbation… je confirmerai ici une fois terminé. Le code expire bientôt.",
+      "success": "*Connexion YouTube réussie ✅*\n.song / .video utiliseront maintenant ton compte.",
+      "failed": "*Échec de la connexion YouTube :* {0}"
     },
     "gauth": {
       "desc": "Gérez l'authentification de l'API Google pour des fonctionnalités telles que la restriction d'âge YouTube, Google Drive, Calendar et Tasks.",

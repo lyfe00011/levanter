@@ -46,7 +46,7 @@
     "screenshot_error": "Screenshot lene mein error. 📸❌",
     "id_missing": "ID missing hai. 🕵️",
     "not_on_whatsapp": "{0} WhatsApp par nahi hai. 👻",
-    "yt_auth_required": "Download fail: YouTube authentication maangta hai. 🗝️\n\n*Solutions:*\n1. *Google Auth:* Apna Google account link karne ke liye `.gauth auth` use karo.\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set karo.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
+    "yt_auth_required": "Download fail: YouTube authentication maangta hai. 🗝️\n\n*Solutions:*\n1. *YouTube Login:* `.ytlogin` bhejo aur apne account par approve karo.\n2. *YT_COOKIE:* `YT_COOKIE` environment variable set karo.\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*Error:* {0}"
   },
   "plugins": {
     "common": {
@@ -923,6 +923,15 @@
       "time": "Waqt",
       "id": "ID",
       "short_id_info": "\n\n*नोट:* डिलीट कमांड के लिए आपको आईडी के पहले 2-4 अक्षर ही डालने होंगे।"
+    },
+    "ytlogin": {
+      "desc": ".song / .video download ke liye YouTube account link karo (device-code login).\n`.ytlogin`, `.ytlogin status`, ya `.ytlogin logout` use karo.",
+      "status_in": "*YouTube:* logged in ✅",
+      "status_out": "*YouTube:* logged in nahi. `.ytlogin` use karo.",
+      "logout": "*YouTube:* logout ho gaya.",
+      "prompt": "*YouTube Login*\n\n1. Kholo: {0}\n2. Code daalo: *{1}*\n3. Access approve karo.\n\nApproval ka wait kar raha hoon… ho jaane par yahin bata dunga. Code jaldi expire hota hai.",
+      "success": "*YouTube login success ✅*\n.song / .video ab tumhara account use karenge.",
+      "failed": "*YouTube login fail:* {0}"
     },
     "gauth": {
       "desc": "YouTube आयु-प्रतिबंध, Google Drive, Calendar और Tasks जैसी सुविधाओं के लिए Google API प्रमाणीकरण प्रबंधित करें।",
