@@ -249,28 +249,22 @@ bot(
       fs.mkdirSync(mergeDir, { recursive: true })
     }
 
-    if (!match) return await message.send(lang.plugins.merge.usage)
-    if (isNaN(match)) return await message.send(lang.plugins.merge.not_found)
-
-    if (/[0-9]+/.test(match)) {
-      if (!message.reply_message || !message.reply_message.video) {
-        return await message.send(lang.plugins.merge.usage)
-      }
-
+    if (message.reply_message && message.reply_message.video) {
+      if (!match || isNaN(match)) return await message.send(lang.plugins.merge.not_found)
       await message.reply_message.downloadAndSaveMediaMessage(`merge/${match}`)
       return await message.send(lang.plugins.merge.add.format(match))
-    } else {
-      const files = fs.readdirSync(mergeDir)
-      if (files.length === 0) return await message.send(lang.plugins.merge.usage)
-
-      await message.send(lang.plugins.merge.format(files.length))
-
-      return await message.send(
-        await mergeVideo(files.length),
-        { mimetype: 'video/mp4', quoted: message.data },
-        'video'
-      )
     }
+
+    const files = fs.readdirSync(mergeDir)
+    if (files.length === 0) return await message.send(lang.plugins.merge.usage)
+
+    await message.send(lang.plugins.merge.merge.format(files.length))
+
+    return await message.send(
+      await mergeVideo(),
+      { mimetype: 'video/mp4', quoted: message.data },
+      'video'
+    )
   }
 )
 
