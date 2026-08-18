@@ -64,7 +64,7 @@
     "qrcode-terminal": "^0.12.0",
     "sequelize": "^6.21.4",
     "sharp": "^0.34.5",
-    "simple-git": "^3.16.1",
+    "simple-git": "3.36.0",
     "sqlite3": "^5.0.11",
     "translate-google-api": "^1.0.4",
     "youtubei.js": "^17.2.0"
