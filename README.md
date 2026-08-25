@@ -1,4 +1,4 @@
-# WhatsApp MD User Bot (Levanter)
+#WhatsApp MD User Bot (Levanter)
 
 A powerful, feature-rich WhatsApp bot with multi-session support, plugin
 system, group moderation, media tools, and an optional **API** for
