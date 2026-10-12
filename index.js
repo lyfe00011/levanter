@@ -1,13 +1,12 @@
-const { Client, logger } = require('./lib/client')
 const { DATABASE, VERSION } = require('./config')
-const { stopInstance } = require('./lib/pm2')
+const { applyStoredSudosToEnv } = require('./lib/sudoStore')
 
 const start = async () => {
-  logger.info(`levanter ${VERSION}`)
-
   try {
     await DATABASE.authenticate({ retry: { max: 3 } })
   } catch (error) {
+    const { logger } = require('./lib/client')
+    const { stopInstance } = require('./lib/pm2')
     logger.error({
       msg: 'Database connection failed',
       error: error.message,
@@ -15,6 +14,12 @@ const start = async () => {
     })
     return stopInstance()
   }
+
+  // The client copies process.env (including SUDO) into per-session config when
+  // it connects, so stored sudo numbers are merged in before that happens.
+  await applyStoredSudosToEnv()
+  const { Client, logger } = require('./lib/client')
+  logger.info(`levanter ${VERSION}`)
 
   const bot = new Client()
 
@@ -28,6 +33,7 @@ const start = async () => {
 }
 
 const shutdown = async (bot) => {
+  const { logger } = require('./lib/client')
   try {
     if (bot) await bot.close()
     await DATABASE.close()

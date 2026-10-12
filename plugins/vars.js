@@ -1,5 +1,6 @@
 const { bot, setVar, getVars, delVar, sortObject, lang } = require('../lib')
-const { assertOwner, withConfigOwners } = require('../lib/owner')
+const { assertOwner, getConfigOwners, isConfigOwnerNumber, mergeNumbers, splitNums } = require('../lib/owner')
+const { getStoredSudos, saveStoredSudos } = require('../lib/sudoStore')
 
 bot(
   {
@@ -49,7 +50,12 @@ bot(
     if (!match || values.length === 0) return await message.send(lang.plugins.setvar.usage)
     const value = values.join('=').trim()
     const keyValue = key.trim().toUpperCase()
-    const nextValue = keyValue === 'SUDO' ? withConfigOwners(value) : value
+    let nextValue = value
+    if (keyValue === 'SUDO') {
+      const merged = mergeNumbers(getConfigOwners(), await getStoredSudos(message.id), splitNums(value))
+      await saveStoredSudos(message.id, merged.filter((num) => !isConfigOwnerNumber(num)))
+      nextValue = merged.join(',')
+    }
     await setVar({ [keyValue]: nextValue }, message.id)
     await message.send(lang.plugins.setvar.success.format(keyValue, nextValue))
   }
