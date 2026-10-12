@@ -1043,8 +1043,8 @@ axios@^1.3.3:
     proxy-from-env "^1.1.0"
 
 "baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git":
-  version "7.0.0-rc.9"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#fee26345c71ab538718828f23712c2d90f116d93"
+  version "7.1.0"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#9f6b738fa37444ca7669be2e208303529dc46d42"
   dependencies:
     "@cacheable/node-cache" "^1.4.0"
     "@hapi/boom" "^9.1.3"
@@ -2847,10 +2847,10 @@ media-typer@^1.1.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-1.1.0.tgz#6ab74b8f2d3320f2064b2a87a38e7931ff3a5561"
   integrity sha512-aisnrDP4GNe06UcKFnV5bfMNPBUw4jsLGaWwWfnH3v02GnBuXX2MCVn5RbrWo0j3pczUilYblq7fQ7Nw2t5XKw==
 
-meriyah@^6.1.4:
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/meriyah/-/meriyah-6.1.4.tgz#2d49a8934fbcd9205c20564579c3560d9b1e077b"
-  integrity sha512-Sz8FzjzI0kN13GK/6MVEsVzMZEPvOhnmmI1lU5+/1cGOiK3QUahntrNNtdVeihrO7t9JpoH75iMNXg6R6uWflQ==
+meriyah@^7.3.1:
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/meriyah/-/meriyah-7.3.3.tgz#00470443e2fbbcc6835796174388c5a1ae000fde"
+  integrity sha512-uE5cnoNj+UYhoMdZDuymCzr5TzEuE3ZF2C4kn6Z76rLhkwnvZ/+6dUZnM41T3fifyuhW0+n8vK7eq6DKJxUfPA==
 
 mime-db@1.52.0:
   version "1.52.0"
@@ -4721,11 +4721,11 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-youtubei.js@^17.2.0:
-  version "17.2.0"
-  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-17.2.0.tgz#a9fe7834dcc94f833717d7327be5bf0bf008cf0a"
-  integrity sha512-XLNsgRKO1h7t4i9tIMWSQSeWdD7Ujkk5v1m5YCaumaHMhu/xuLqtO3M0Hq7CXNup9HlJ1NGrT1Y+HLIHnL6Ujg==
+youtubei.js@^18.0.0:
+  version "18.1.0"
+  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-18.1.0.tgz#f2019de7a9c33fcf964490d3c780c42d028511a5"
+  integrity sha512-4Goo3ZeO6/kE8Mq67eC8Z9K1rijeqRwyKxf/YM4lqf8bB4r/s8JC0V3YFx7+l/AJR3LnAsulTsiIj+AFe0cduA==
   dependencies:
     "@bufbuild/protobuf" "^2.0.0"
     fflate "^0.8.2"
-    meriyah "^6.1.4"
+    meriyah "^7.3.1"
