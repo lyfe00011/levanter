@@ -224,7 +224,13 @@ message** (its own and other bots' messages are skipped):
 
 [Deploy Now](https://levanter.site/) to set up on Render.
 
-### 3️⃣ VPS or PC (Ubuntu)
+### 3️⃣ Railway
+
+Deploy the repository as a service and set the variables from `config.env` in the service settings. Railway is detected automatically, so `VPS` does not need to be set.
+
+Container filesystems are ephemeral, so variables changed at runtime (for example `setsudo` or `setvar`) are stored in the database from `DATABASE_URL` and restored on the next deploy. Without `DATABASE_URL` the bot falls back to a local SQLite file, which is lost when the container is replaced.
+
+### 4️⃣ VPS or PC (Ubuntu)
 
 **Quick install:**
 
