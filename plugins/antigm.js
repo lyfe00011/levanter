@@ -15,19 +15,19 @@ bot(
     const args = match.slice(cmd.length).trim()
 
     if (['delete', 'warn', 'kick'].includes(cmd)) {
-      await setGroupMention({ action: cmd })
+      await setGroupMention({ action: cmd }, message.id)
       return await message.send(lang.plugins.antigm.action.format(cmd))
     }
 
     if (cmd === 'on' || cmd === 'off') {
       const enabled = cmd === 'on'
-      await setGroupMention({ enabled })
+      await setGroupMention({ enabled }, message.id)
       return await message.send(enabled ? lang.plugins.antigm.enabled : lang.plugins.antigm.disabled)
     }
 
     if (cmd === 'ignore') {
       if (!args) return await message.send(lang.plugins.antigm.ignore_prompt)
-      await setGroupMention({ filter: args })
+      await setGroupMention({ filter: args }, message.id)
       return await message.send(lang.plugins.antigm.filter)
     }
 

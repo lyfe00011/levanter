@@ -15,7 +15,7 @@ bot(
   },
   async (message, match) => {
     const statusLine = async () => {
-      const cur = await getAntiGstatus()
+      const cur = await getAntiGstatus(message.id)
       return {
         jids: cur.jids,
         line: lang.plugins.antigstatus.status.format(cur.enabled ? 'on' : 'off', cur.jids.length),
@@ -32,21 +32,21 @@ bot(
 
     if (cmd === 'on' || cmd === 'off') {
       const enabled = cmd === 'on'
-      await setAntiGstatus({ enabled })
+      await setAntiGstatus({ enabled }, message.id)
       return await message.send(enabled ? lang.plugins.antigstatus.enabled : lang.plugins.antigstatus.disabled)
     }
 
     if (cmd === 'ignore') {
       const target = args || (message.isGroup ? message.jid : '')
       if (!target) return await message.send(lang.plugins.antigstatus.ignore_prompt)
-      await addAntiGstatusFilter(target)
+      await addAntiGstatusFilter(target, message.id)
       return await message.send(lang.plugins.antigstatus.filter)
     }
 
     if (cmd === 'unignore') {
       const target = args || (message.isGroup ? message.jid : '')
       if (!target) return await message.send(lang.plugins.antigstatus.unignore_prompt)
-      await removeAntiGstatusFilter(target)
+      await removeAntiGstatusFilter(target, message.id)
       return await message.send(lang.plugins.antigstatus.removed)
     }
 
@@ -60,7 +60,7 @@ bot(
     }
 
     if (cmd === 'clear') {
-      await setAntiGstatus({ filter: '' })
+      await setAntiGstatus({ filter: '' }, message.id)
       return await message.send(lang.plugins.antigstatus.cleared)
     }
 
