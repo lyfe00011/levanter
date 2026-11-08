@@ -995,7 +995,7 @@ axios@^1.3.3:
 
 "baileys@git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git":
   version "7.1.0"
-  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#724a0fff0f33071264e11df40181a123355939e5"
+  resolved "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git#9ef6bfeaf63700166016f389c4158afa0816df39"
   dependencies:
     "@cacheable/node-cache" "^1.4.0"
     "@hapi/boom" "^9.1.3"
@@ -1024,10 +1024,10 @@ base64-js@^1.1.2, base64-js@^1.3.0, base64-js@^1.3.1:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-bgutils-js@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/bgutils-js/-/bgutils-js-3.2.0.tgz#bfc892b2a39db737827dd204bf7868214a6283f0"
-  integrity sha512-CacO15JvxbclbLeCAAm9DETGlLuisRGWpPigoRvNsccSCPEC4pwYwA2g2x/pv7Om/sk79d4ib35V5HHmxPBpDg==
+bgutils-js@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/bgutils-js/-/bgutils-js-4.0.3.tgz#9ec1b275056d571d12fe6e203742220a71e75ecd"
+  integrity sha512-nvhrzqRYqFcC3AJbf1fENc/jzyMk95wH9UC9ruQzTZCq+itYWuHi2a9leK/bC1lLfi+R4a28wJZxpD5KiTFf+w==
 
 bidi-js@^1.0.3:
   version "1.0.3"
