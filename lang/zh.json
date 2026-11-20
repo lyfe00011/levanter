@@ -1,82 +1,82 @@
 {
   "extra": {
-    "init_session": "[{0}] 正在开启新会话... 🚀",
-    "load_session": "[{0}] 正在下载会话数据... 📥",
-    "invalid_session": "[{0}] {1} 哎呀！会话过期了，麻烦重新扫个码！ 📸",
-    "success_session": "[{0}] 搞定！会话有效，准备就绪。 ✅",
-    "connecting": "[{0}] 正在连接 WhatsApp... 📡",
-    "connected": "[{0}] 我已经上线啦！随时待命。 ⚡ {1}",
-    "instance_close": "[{0}] 正在下线，拜拜！ 👋",
-    "instance_restart": "[{0}] 正在重启，马上回来！ 🔄",
-    "reconnect": "[{0}] 连接断开了，正在尝试重连... ({1}) 🔄",
-    "reconnect_after": "[{0}] 等会儿，先喝杯茶，一分钟后重试... ☕",
-    "waiting_internet": "[{0}] 没网了 — 正在等网络恢复... 🌐",
-    "waiting_internet_still": "[{0}] 还是没连上网，稍等一会儿... 🌐",
-    "internet_restored": "[{0}] 网络回来了！正在重新连接... ✅",
-    "another_login": "[{0}] 嘿，你是不是在别的设备上登录了？ 🤨",
+    "init_session": "[{0}] 新会话搭建中，马上就好～ 🚀",
+    "load_session": "[{0}] 正在把会话数据搬过来... 📥",
+    "invalid_session": "[{0}] {1} 哎呀，会话钥匙过期啦！重新扫个码吧～ 📸",
+    "success_session": "[{0}] 搞定！会话有效，随时开工 ✅",
+    "connecting": "[{0}] 正在接通 WhatsApp... 📡",
+    "connected": "[{0}] 我上线啦！有事尽管吩咐 ⚡ {1}",
+    "instance_close": "[{0}] 我先下线咯，回头见！ 👋",
+    "instance_restart": "[{0}] 重启一下，马上回来～ 🔄",
+    "reconnect": "[{0}] 连接掉了，再试一次... ({1}) 🔄",
+    "reconnect_after": "[{0}] 先喝口茶歇一分钟，等下再连 ☕",
+    "waiting_internet": "[{0}] 网断了～我在这儿等它回来... 🌐",
+    "waiting_internet_still": "[{0}] 还是没网，再耐心等等哈... 🌐",
+    "internet_restored": "[{0}] 网回来啦！正在重新连接... ✅",
+    "another_login": "[{0}] 咦？我好像在别的设备上登录了 🤨",
     "error_message": "```--- ⚠️ 错误报告 ⚠️ ---\n\n版本    : {0}\n消息    : {1}\n错误    : {2}\nJid     : {3}\n命令    : {4}\n平台    : {5}```\n\n```-----``` *由 LyFE 用心制作 ❣* ```-----```",
-    "deleted_message": "🗑️ 撤回了一条消息",
-    "edited_message": "✏️ 编辑了消息 #{0}",
-    "install_external_plugin": "[{0}] 正在安装外部插件... 📦",
-    "installed_external_plugin": "[{0}] 外部插件安装完成！ 🎒",
-    "plugin_install": "[{0}] 正在加载插件... 📚",
-    "plugin_installed": "[{0}] {1} 安装成功！ ✅",
-    "plugins_installed": "[{0}] 所有插件都已加载！ 🎓",
-    "plugin_install_error": "[{0}] {1} 安装失败，已经把它删了。 🗑️",
-    "plugin_not_found": "[{0}] 找不到插件 {1} (404)，先把它移除了。 🔍💨",
-    "group_cmd": "哎呀，这个命令只能在群组里用哦。 👨‍👩‍👧‍👦",
+    "deleted_message": "🗑️ 有人撤回了消息",
+    "edited_message": "✏️ 消息被改过 #{0}",
+    "install_external_plugin": "[{0}] 正在装外部插件... 📦",
+    "installed_external_plugin": "[{0}] 外部插件都装好啦！ 🎒",
+    "plugin_install": "[{0}] 插件加载中... 📚",
+    "plugin_installed": "[{0}] {1} 装好啦！ ✅",
+    "plugins_installed": "[{0}] 所有插件全部就位！ 🎓",
+    "plugin_install_error": "[{0}] {1} 装不上，先把它移走 🗑️",
+    "plugin_not_found": "[{0}] 插件 {1} 失踪了 (404)，暂时先移除 🔍💨",
+    "group_cmd": "哎呀，这个命令只能在群里用哦 👨‍👩‍👧‍👦",
     "labels": {
       "sudo": "🛡️ 超级用户",
       "auto_read": "📖 自动已读",
-      "auto_status": "👀 自动看状态",
+      "auto_status": "👀 自动查看状态",
       "auto_reject": "🚫 自动拒接来电",
       "always_online": "🔋 始终在线",
       "anti_delete": "🛡️ 防撤回",
       "auto_update": "🔄 自动更新"
     },
-    "promoted": "升职了",
-    "demoted": "降职了",
-    "file_size_error": "哇，这文件也太大了吧！ 📂 ⚡\n大小：{0}\n\n{1}",
-    "missing_jid": "等一下，你得先给我个 JID！ 🗺️",
-    "no_contacts": "我的通讯录空空如也，去加几个朋友吧！ 👥",
-    "reaction_not_enabled": "这个频道没开表情回应。",
-    "reaction_not_allowed": "这个频道不让用这个表情。",
-    "metadata_fetch_failed": "没拿到元数据，再试一次？ 🧩",
-    "lang_not_supported": "' {0} ' 是什么语言？我查查字典...还是用默认的好了。 🌐",
-    "screenshot_error": "糟糕！截图失败了。 📸❌",
-    "id_missing": "等等，我少了个 ID！ 🕵️",
-    "not_on_whatsapp": "{0} 根本不在 WhatsApp 上呀！ 👻",
-    "yt_auth_required": "下载失败！YouTube 要求身份验证。 🗝️\n\n*解决办法：*\n1. *YouTube 登录：* 发送 `.ytlogin` 并在你的账号上批准。\n2. *YT_COOKIE：* 设置 `YT_COOKIE` 环境变量。\n文档：https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*报错：* {0}"
+    "promoted": "已提升",
+    "demoted": "已降级",
+    "file_size_error": "哇，这文件也太大了吧！ 📂⚡\n大小：{0}\n\n{1}",
+    "missing_jid": "等等，先给我几个 JID 嘛！ 🗺️",
+    "no_contacts": "我的通讯录空空的，先加几个朋友呗！ 👥",
+    "reaction_not_enabled": "这个频道关掉了表情回应哦。",
+    "reaction_not_allowed": "这个频道不让用这个表情～",
+    "metadata_fetch_failed": "元数据没拿到，要不再试一次？ 🧩",
+    "lang_not_supported": "' {0} ' 这门语言我不会耶，先用默认语言啦 🌐",
+    "screenshot_error": "咔嚓失败！截图没截成 📸❌",
+    "id_missing": "等一下，这里少了个 ID！ 🕵️",
+    "not_on_whatsapp": "{0} 是个隐形人，没用 WhatsApp！ 👻",
+    "yt_auth_required": "下载失败！YouTube 要先验个身份才放我进去 🗝️\n\n*解决办法：*\n1. *YouTube 登录：* 发送 `.ytlogin`，然后在你的账号上点同意。\n2. *YT_COOKIE：* 设置 `YT_COOKIE` 环境变量。\n文档：https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\n\n*错误：* {0}"
   },
   "plugins": {
     "common": {
-      "reply_to_image": "老大！快回我一张图片，让我给你秀个操作。 📸✨",
-      "reply_to_message": "你要我回复哪条消息呀？ 💬🤔",
-      "not_admin": "哎呀，我在这里不是管理员！ 😅 先给我开点权限吧~",
-      "not_found": "我翻遍了，真的没找到！ 🔍🤷‍♂️",
-      "update": "搞定，老大！一切都更新好了。 ✅🚀",
-      "spotify_download_failed": "下载 Spotify 歌曲失败了",
-      "spotify_playlist_failed": "获取 Spotify 歌单失败了",
-      "truecaller_login_prompt": "你还没登录哦。\n\n发一下你的号码，我来帮你登 Truecaller。\n\n示例：truecaller 你的号码",
-      "truecaller_sent": "验证码已经发到你手机上了\n\n示例：truecaller 653084",
-      "truecaller_invalid_number": "号码不对哦",
+      "reply_to_image": "老大，回复一张图片，看我变个魔法！ 📸✨",
+      "reply_to_message": "得先给我一条消息让我回复呀！ 💬🤔",
+      "not_admin": "哎呀，我在这儿还不是管理员 😅 先给我点权限嘛！",
+      "not_found": "翻遍了所有角落，还是没找到 🔍🤷‍♂️",
+      "update": "搞定啦老大！全部更新完毕，随时出发 ✅🚀",
+      "spotify_download_failed": "Spotify 这首歌没下下来",
+      "spotify_playlist_failed": "Spotify 歌单没拿到",
+      "truecaller_login_prompt": "你还没登录哦。\n\n把你的号码发给我，帮你登录 Truecaller。\n\n示例：truecaller 你的号码",
+      "truecaller_sent": "验证码已经发到你手机上啦\n\n示例：truecaller 653084",
+      "truecaller_invalid_number": "这个号码不太对哦",
       "truecaller_invalid_code": "验证码不对哦",
-      "truecaller_invalid_mobile": "手机号无效",
-      "group_not_found": "{0} 不在群里。前三名成员：{1}",
-      "import_contacts_first": "请先导入联系人",
-      "video_not_supported": "我的音乐引擎不支持下载视频哦。",
-      "audio_disabled": "音乐引擎下载失败，而且 YouTube 音频功能被禁用了。",
+      "truecaller_invalid_mobile": "这个手机号不太对哦",
+      "group_not_found": "群里没有 {0} 这个人哦。前三位成员：{1}",
+      "import_contacts_first": "先导入联系人吧",
+      "video_not_supported": "这个机器人的音乐引擎不能下载视频哦。",
+      "audio_disabled": "音乐引擎没下载成功，YouTube 音频又被关掉了。",
       "gemini_missing_api_key": "缺少 GEMINI_API_KEY",
       "openrouter_missing_api_key": "缺少 OPENROUTER_API_KEY",
-      "gemini_error": "出错了",
-      "upscale_upload_failed": "图片上传失败",
-      "upscale_invalid_response": "放大服务返回了一堆看不懂的数据",
-      "upscale_failed": "图片放大了，但好像没成功，待会儿再试吧。",
-      "invalid_file_type": "错误：我不认识 {0} 这种格式的文件",
+      "gemini_error": "错误",
+      "upscale_upload_failed": "图片没传上去",
+      "upscale_invalid_response": "放大服务回了个看不懂的结果",
+      "upscale_failed": "图片没放大成功，等会儿再试试吧。",
+      "invalid_file_type": "哎呀，{0} 格式的文件我处理不了",
       "upload_failed": "文件上传出错了：{0}",
-      "yt_login_prompt": "请登录你的 YouTube 账号，或者设置 YT_COOKIE 变量。\n\n登录地址 => https://levanter-plugins.vercel.app/yt\n",
+      "yt_login_prompt": "请先登录你的 YouTube 账号，或者设置 YT_COOKIE 变量。\n\n登录地址 => https://levanter-plugins.vercel.app/yt\n",
       "yt_cookie_needed": "请设置 YouTube Cookie\nhttps://t.me/c/2479057503/378/2550",
-      "yt_not_found": "找不到 {0} 呀",
+      "yt_not_found": "没找到 {0}",
       "time_day": " 天 ",
       "time_days": " 天 ",
       "time_hour": " 小时 ",
@@ -89,562 +89,562 @@
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ 前缀 : {0}\n│ 用户 : {1}\n│ 时间 : {2}\n│ 星期 : {3}\n│ 日期 : {4}\n│ 版本 : {5}\n│ 插件 : {6}\n│ 内存 : {7}\n│ 运行时间 : {8}\n│ 平台 : {9}\n╰────────────────```",
       "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ 前缀 : {0}\n┃❃│ 用户 : {1}\n┃❃│ 时间 : {2}\n┃❃│ 星期 : {3}\n┃❃│ 日期 : {4}\n┃❃│ 版本 : {5}\n┃❃│ 插件 : {6}\n┃❃│ 内存 : {7}\n┃❃│ 运行时间 : {8}\n┃❃│ 平台 : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
-      "disabled": "已关闭"
+      "disabled": "已禁用"
     },
     "afk": {
-      "example": "> *AFK 使用说明：*\n- 挂机：*afk [原因]*\n- 示例：*afk 吃饭去* 最后在线 #lastseen 前\n- 发消息会自动解除挂机状态\n- 取消挂机：*afk off*",
-      "not_afk": "欢迎回来！已经帮你取消 AFK 状态啦。 👋",
-      "desc": "设置你的 AFK（挂机）状态"
+      "example": "> *AFK 使用说明：*\n- 设置 AFK：*afk [原因]*\n- 示例：*afk 我很忙* 最后上线 #lastseen 前\n- 发送消息会自动取消 AFK 状态\n- 禁用 AFK：*afk off*",
+      "not_afk": "欢迎回来！已经帮你取消离开状态啦 👋",
+      "desc": "设置你的离开（AFK）状态"
     },
     "alive": {
-      "default": "我还活着，随时待命！ 🚀\n运行时间：#uptime",
-      "desc": "看看机器人还在不在"
+      "default": "我在呢，随时待命！ 🚀\n已运行：#uptime",
+      "desc": "看看机器人还醒着没。"
     },
     "antifake": {
-      "example": "*防假号状态：* {0}\n\n> *怎么用：*\n- *antifake list* - 查看当前模式和代码\n- *antifake allow 1,91* - 白名单：只允许这些区号，屏蔽其他\n- *antifake disallow 92,93* - 黑名单：屏蔽这些区号，允许其他\n- *antifake remove 91* - 从列表里删掉某个区号\n- *antifake clear* - 清空列表并关闭\n- *antifake on | off* - 开启/关闭\n\n> *注意：* 白名单和黑名单不能混用哦。用 `clear` 可以切换模式。",
-      "desc": "开启或配置防假号（白名单/黑名单模式）",
-      "not": "还没设置任何区号。",
-      "status": "防假号现在是 *{0}* 状态。",
+      "example": "*防假号状态：* {0}\n\n> *命令使用说明：*\n- *antifake list* - 查看当前模式和代码\n- *antifake allow 1,91* - 白名单模式：允许这些代码，屏蔽其他所有\n- *antifake disallow 92,93* - 黑名单模式：屏蔽这些代码，允许其他所有\n- *antifake remove 91* - 从列表中删除代码\n- *antifake clear* - 清除所有代码并禁用\n- *antifake on | off* - 启用/禁用\n\n> *注意：* 不能混用白名单和黑名单模式。使用 `clear` 切换模式。",
+      "desc": "启用或配置防假号（白名单或黑名单模式）",
+      "not": "还没设置任何国家代码哦。",
+      "status": "防假号现在 *{0}* 啦。",
       "update": "> 防假号已更新\n*允许：* {0}\n*不允许：* {1}",
-      "allow_prompt": "*发一下要允许的区号（白名单模式）*\n_示例：antifake allow 1,91_",
-      "disallow_prompt": "*发一下要禁止的区号（黑名单模式）*\n_示例：antifake disallow 92,93_",
-      "remove_prompt": "*发一下要删除的区号*\n_示例：antifake remove 91_",
-      "mode_conflict_whitelist": "*⚠️ 模式不能混着用！*\n\n_你现在在黑名单模式，先用 `antifake clear` 切换到白名单模式吧。_",
-      "mode_conflict_blacklist": "*⚠️ 模式不能混着用！*\n\n_你现在在白名单模式，先用 `antifake clear` 切换到黑名单模式吧。_",
-      "whitelist_success": "*✅ 已允许的区号（白名单）：*\n{0}\n\n_只允许这些区号，其他的都会被我踢掉。_",
-      "blacklist_success": "*🚫 已屏蔽的区号（黑名单）：*\n{0}\n\n_这些区号会被踢掉，其他的随便进。_",
-      "removed": "*已删掉区号：*\n{0}",
-      "cleared": "*🗑️ 防假号列表清空，功能已关闭*",
-      "whitelist_mode": "🟢 白名单模式（只允许）",
-      "blacklist_mode": "🔴 黑名单模式（只屏蔽）",
-      "enabled": "已开启",
-      "disabled": "已关闭"
+      "allow_prompt": "*请提供要允许的国家代码（白名单模式）*\n_示例：antifake allow 1,91_",
+      "disallow_prompt": "*请提供要禁止的国家代码（黑名单模式）*\n_示例：antifake disallow 92,93_",
+      "remove_prompt": "*请提供要删除的国家代码*\n_示例：antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ 两种模式不能混着用哦！*\n\n_你现在是黑名单模式，先用 `antifake clear` 清空，再切换到白名单模式。_",
+      "mode_conflict_blacklist": "*⚠️ 两种模式不能混着用哦！*\n\n_你现在是白名单模式，先用 `antifake clear` 清空，再切换到黑名单模式。_",
+      "whitelist_success": "*✅ 放行的国家代码（白名单模式）：*\n{0}\n\n_只有这些代码能进，其他的统统挡在门外。_",
+      "blacklist_success": "*🚫 拦截的国家代码（黑名单模式）：*\n{0}\n\n_这些代码会被挡住，其他的都放行。_",
+      "removed": "*已移除这些国家代码：*\n{0}",
+      "cleared": "*🗑️ 防假号列表清空啦，功能也关掉了*",
+      "whitelist_mode": "🟢 白名单模式（仅允许）",
+      "blacklist_mode": "🔴 黑名单模式（仅屏蔽）",
+      "enabled": "已启用",
+      "disabled": "已禁用"
     },
     "antilink": {
-      "desc": "开启或设置防链接功能",
-      "disable": "_防链接已关闭。_",
-      "antilink_notset": "防链接现在是屏蔽所有链接（还没设白名单）。用 'antilink allow' 或 'antilink disallow' 来设置。",
-      "status": "防链接现在是 *{0}* 状态。",
-      "info": "> 防链接状态：{0}\n*允许的链接：* {1}\n *操作：* {2}",
-      "action_invalid": "*操作无效。*",
-      "action_update": "防链接操作更新为：*{0}*",
+      "desc": "启用或配置防链接功能",
+      "disable": "_防链接本来就是关着的哦。_",
+      "antilink_notset": "防链接现在会拦下所有链接（还没设置网址名单）。用 'antilink allow' 或 'antilink disallow' 来指定网址吧。",
+      "status": "防链接现在 *{0}* 啦。",
+      "info": "> 防链接状态：{0}\n*允许的 URL：* {1}\n *操作：* {2}",
+      "action_invalid": "*这个操作我看不懂哦。*",
+      "action_update": "防链接的处理方式改成了：*{0}*",
       "update": "> 防链接已更新\n*允许：* {0}\n*不允许：* {1}",
-      "enabled": "已开启",
-      "disabled": "已关闭",
-      "example": "防链接状态：*{0}*\n\n> 怎么用：\n- antilink list - 看看现在的设置\n- antilink allow whatsapp.com - 允许某个链接\n- antilink disallow facebook.com - 屏蔽某个链接\n- antilink clear allow - 清空允许的链接\n- antilink clear disallow - 清空屏蔽的链接\n- antilink on | off - 开启/关闭防链接\n- antilink kick | warn | null - 设置违规后的动作",
-      "allow_prompt": "*发一下要允许的链接。*",
-      "no_new_urls": "*没有新链接可加了。* 都已经在列表里了。",
-      "urls_updated": "*允许的链接已更新*\n\n已添加：{0}\n总共：{1} 个\n\n_注意：链接不区分大小写哦_",
-      "disallow_prompt": "*发一下要禁止的链接。*",
-      "no_disallowed_urls": "*没有新链接要屏蔽。* 都已经拉黑了。",
-      "disallowed_updated": "*已更新的屏蔽链接*\n\n已拉黑：{0}\n总共屏蔽：{1} 个\n\n_注意：链接不区分大小写哦_",
-      "settings_cleared": "*防链接设置清空。*",
-      "allowed_cleared": "*允许的链接清空了。*",
-      "disallowed_cleared": "*屏蔽的链接清空了。*"
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "example": "防链接状态：*{0}*\n\n> 使用示例：\n- antilink list - 查看当前设置\n- antilink allow whatsapp.com - 允许特定 URL\n- antilink disallow facebook.com - 禁止特定 URL\n- antilink clear allow - 清除允许的 URL\n- antilink clear disallow - 清除禁止的 URL\n- antilink on | off - 启用/禁用防链接\n- antilink kick | warn | null - 设置违规操作",
+      "allow_prompt": "*告诉我要放行哪个网址吧。*",
+      "no_new_urls": "*没有新网址要加哦*，名单里都已经有了。",
+      "urls_updated": "*放行名单更新啦*\n\n新增：{0}\n总共：{1} 个网址\n\n_小提示：网址不分大小写_",
+      "disallow_prompt": "*告诉我要拦截哪个网址吧。*",
+      "no_disallowed_urls": "*没有新网址要拦哦*，它们早就被拦住了。",
+      "disallowed_updated": "*拦截名单更新啦*\n\n新拉黑：{0}\n一共拦截：{1} 个网址\n\n_小提示：网址不分大小写_",
+      "settings_cleared": "*防链接设置清空啦。*",
+      "allowed_cleared": "*放行名单清空啦。*",
+      "disallowed_cleared": "*拦截名单清空啦。*"
     },
     "antiword": {
-      "desc": "过滤群里的违禁词",
-      "example": "违禁词状态：{0}\n> *怎么用：*\n- antiword kick | warn | null - 设置违规后的动作\n- antiword on | off - 开启/关闭过滤\n- antiword add 词1,词2 - 添加违禁词\n- antiword remove 词1,词2 - 删掉违禁词\n- antiword list - 看看都有哪些词",
-      "action_update": "违禁词操作更新为：*{0}*",
-      "status": "违禁词过滤现在是 *{0}* 状态。",
-      "add_prompt": "*发一下要加的违禁词。*",
-      "added": "*加了这些词：*\n{0}",
-      "remove_prompt": "*发一下要删的词。*",
-      "removed": "*删了这些词：*\n{0}",
+      "desc": "过滤群聊中的特定词汇",
+      "example": "违禁词状态：{0}\n> *使用示例：*\n- antiword kick | warn | null - 设置违规操作\n- antiword on | off - 启用/禁用词汇过滤\n- antiword add 词1,词2 - 添加屏蔽词\n- antiword remove 词1,词2 - 删除屏蔽词\n- antiword list - 查看屏蔽词列表",
+      "action_update": "违禁词的处理方式改成了：*{0}*",
+      "status": "违禁词过滤现在 *{0}* 啦。",
+      "add_prompt": "*要屏蔽哪些词？告诉我吧。*",
+      "added": "*这些词已经拉黑：*\n{0}",
+      "remove_prompt": "*要放出哪些词？告诉我吧。*",
+      "removed": "*这些词已经放出来了：*\n{0}",
       "activated": "已激活",
       "deactivated": "已停用",
-      "no_words": "*还没设置违禁词。*",
+      "no_words": "*还没设置任何违禁词哦。*",
       "info": "*违禁词状态：* {0}\n*操作：* {1}\n\n*词汇：* {2}",
-      "cleared": "*违禁词列表清空。*"
+      "cleared": "*违禁词列表清空啦。*"
     },
     "apk": {
-      "desc": "从 APKMirror 下载 APK 安装包。 📱",
+      "desc": "从 APKMirror 帮你找 APK 📱",
       "example": "> *示例：*\n- apk Mixplorer\n- apk whatsapp,apkm",
-      "no_result": "没找到这个软件。 🔍",
-      "apps_list": "找到这些软件 ({0}) 📱"
+      "no_result": "没找到这个应用耶 🔍",
+      "apps_list": "找到这些应用 ({0}) 📱"
     },
     "delete": {
-      "desc": "防撤回：把撤回的消息捞回来",
-      "example": "> *怎么用：*\n- delete g - 在当前聊天里发送撤回的消息\n- delete p - 私聊发给你或超管\n- delete g pm - 只捞私聊\n- delete g gm - 只捞群聊\n- delete p no-gm - 发超管，不包含群聊\n- delete p no-pm - 发超管，不包含私聊\n- delete <jid> - 发给指定的 JID\n- delete <jid> gm - 发给指定 JID，只限群聊\n- delete off - 关闭防撤回\n\n*范围：* pm（私聊）, gm（群聊）, no-pm（不含私聊）, no-gm（不含群聊）",
-      "invalid_jid": "*错误：* _JID 不对哦_",
+      "desc": "防撤回：撤回的消息我都帮你捞回来",
+      "example": "> *使用示例：*\n- delete g - 在同一聊天中发送撤回消息\n- delete p - 发送撤回消息到您的聊天/超级用户\n- delete g pm - 同一聊天，仅个人消息\n- delete g gm - 同一聊天，仅群组消息\n- delete p no-gm - 发送到超级用户，排除群组\n- delete p no-pm - 发送到超级用户，排除个人聊天\n- delete <jid> - 发送到指定 JID\n- delete <jid> gm - 发送到 JID，仅群组\n- delete off - 禁用防撤回\n\n*范围：* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*出错啦：* _这个 JID 不对哦_",
       "dlt_dest_jid": "_撤回的消息会发到：{0}_",
-      "dlt_dest_sudo": "_撤回的消息会发给你或超管。_",
-      "dlt_dest_chat": "_撤回的消息会直接发在当前聊天。_",
-      "dlt_scope_pm": "📌 _只限私聊_",
-      "dlt_scope_gm": "📌 _只限群聊_",
-      "dlt_scope_no_pm": "📌 _不包含私聊_",
-      "dlt_scope_no_gm": "📌 _不包含群聊_",
-      "dlt_msg_disable": "防撤回已关闭。"
+      "dlt_dest_sudo": "_撤回的消息会发到你自己的聊天或超级用户那里。_",
+      "dlt_dest_chat": "_撤回的消息会直接发回原聊天。_",
+      "dlt_scope_pm": "📌 _仅限个人聊天_",
+      "dlt_scope_gm": "📌 _仅限群组聊天_",
+      "dlt_scope_no_pm": "📌 _排除个人聊天_",
+      "dlt_scope_no_gm": "📌 _排除群组聊天_",
+      "dlt_msg_disable": "防撤回已经关掉啦。"
     },
     "antiedit": {
-      "desc": "防编辑：追踪改过的消息并留下证据",
-      "example": "> *怎么用：*\n- antiedit g - 在当前聊天发编辑历史\n- antiedit p - 私聊发给你或超管\n- antiedit g pm - 只限私聊\n- antiedit g gm - 只限群聊\n- antiedit p no-gm - 发超管，不含群聊\n- antiedit p no-pm - 发超管，不含私聊\n- antiedit <jid> - 发给指定 JID\n- antiedit <jid> gm - 发给指定 JID，只限群聊\n- antiedit off - 关闭防编辑\n\n*范围：* pm（私聊）, gm（群聊）, no-pm（不含私聊）, no-gm（不含群聊）",
-      "invalid_jid": "*错误：* _JID 不对哦_",
-      "edit_dest_jid": "_编辑历史会发到：{0}_",
-      "edit_dest_sudo": "_编辑历史会发给你或超管。_",
-      "edit_dest_chat": "_编辑历史会直接发在当前聊天。_",
-      "edit_scope_pm": "📌 _只限私聊_",
-      "edit_scope_gm": "📌 _只限群聊_",
-      "edit_scope_no_pm": "📌 _不包含私聊_",
-      "edit_scope_no_gm": "📌 _不包含群聊_",
-      "edit_msg_disable": "防编辑已关闭。"
+      "desc": "防编辑：谁改了消息，改了什么，我都记着",
+      "example": "> *使用示例：*\n- antiedit g - 在同一聊天中发送编辑历史\n- antiedit p - 发送编辑历史到您的聊天/超级用户\n- antiedit g pm - 同一聊天，仅个人消息\n- antiedit g gm - 同一聊天，仅群组消息\n- antiedit p no-gm - 发送到超级用户，排除群组\n- antiedit p no-pm - 发送到超级用户，排除个人聊天\n- antiedit <jid> - 发送到指定 JID\n- antiedit <jid> gm - 发送到 JID，仅群组\n- antiedit off - 禁用防编辑\n\n*范围：* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*出错啦：* _这个 JID 不对哦_",
+      "edit_dest_jid": "_编辑记录会发到：{0}_",
+      "edit_dest_sudo": "_编辑记录会发到你自己的聊天或超级用户那里。_",
+      "edit_dest_chat": "_编辑记录会直接发回原聊天。_",
+      "edit_scope_pm": "📌 _仅限个人聊天_",
+      "edit_scope_gm": "📌 _仅限群组聊天_",
+      "edit_scope_no_pm": "📌 _排除个人聊天_",
+      "edit_scope_no_gm": "📌 _排除群组聊天_",
+      "edit_msg_disable": "防编辑已经关掉啦。"
     },
     "dlt": {
-      "desc": "删掉你回复的那条消息。 🗑️"
+      "desc": "删掉你回复的那条消息 🗑️"
     },
     "fb": {
-      "desc": "下载 Facebook 视频。 🎬",
+      "desc": "下载 Facebook 视频 🎬",
       "example": "*示例：* fb https://www.facebook.com/...",
-      "quality": "你要哪个清晰度的？ 🎬",
-      "invalid": "里面没找到视频呀。 ❌"
+      "quality": "想要哪种画质呀？ 🎬",
+      "invalid": "这个链接里我没找到视频耶 ❌"
     },
     "fancy": {
-      "desc": "把文字变成花里胡哨的字体！ ✨",
-      "example": "> *怎么用：*\nfancy <文字>\nfancy <字体编号>（回复一条消息）\n\n*示例：*\n- fancy 你好世界 🌟\n- fancy 7（回复时用）",
-      "invalid": "*哎呀！字体编号不对。* ❌\n请选 *1-47* 之间的数字。"
+      "desc": "给你的消息换个花样字体！ ✨",
+      "example": "> *使用方法：*\nfancy <文字>\nfancy <字体编号>（回复一条消息）\n\n*示例：*\n- fancy 你好世界 🌟\n- fancy 7（回复时使用）",
+      "invalid": "*哎呀，没有这个字体编号哦* ❌\n在 *1-47* 之间挑一个吧。"
     },
     "stop": {
-      "desc": "停掉这个聊天的过滤器。 ⏹️",
-      "example": "> *怎么用：*\n- stop <过滤器名>\n- stop hi",
-      "delete": "好嘞！过滤器 *{0}* 已经停了。 🗑️",
-      "not_found": "_{0} 不在这个聊天的过滤器列表里哦。_ 😅"
+      "desc": "关掉这个聊天里的某个过滤器 ⏹️",
+      "example": "> *使用方法：*\n- stop <过滤器名称>\n- stop hi",
+      "delete": "收到！过滤器 *{0}* 已经停掉啦 🗑️",
+      "not_found": "_这个聊天的过滤器里没有 {0} 哦_ 😅"
     },
     "filter": {
-      "desc": "给这个群设置自定义关键词回复。 🛠️",
-      "example": "> *示例：*\n- filter hi（回复一条消息）\n- filter list（看看都有哪些过滤器） 👀",
-      "list": "> *当前聊天的过滤器：* 👀\n{0}",
-      "filter_add": "✅ 过滤器 *{0}* 开始生效啦！"
+      "desc": "给这个群设置关键词自动回复 🛠️",
+      "example": "> *示例：*\n- filter hi（回复一条消息）\n- filter list（查看所有活跃过滤器） 👀",
+      "list": "> *此聊天的活跃过滤器：* 👀\n{0}",
+      "filter_add": "✅ 过滤器 *{0}* 上岗啦！"
     },
     "forward": {
-      "desc": "把消息转发给别人！ 📩",
-      "foward": "消息发过去了：{0} ✅",
-      "example": "*错误：JID 无效！* ❌\n> *怎么用：*\n- forward <jid>\n- forward 1234567890@s.whatsapp.net"
+      "desc": "把消息转给别人！ 📩",
+      "foward": "消息已经送到：{0} ✅",
+      "example": "*错误：无效的 JID！* ❌\n> *使用方法：*\n- forward <jid>\n- forward 1234567890@s.whatsapp.net"
     },
     "save": {
-      "desc": "把消息存到你自己的聊天里。 💾",
-      "save": "消息已经存进你的私人收藏啦！ 🔒"
+      "desc": "把消息存到你自己的聊天里 💾",
+      "save": "消息已经收进你的小金库啦！ 🔒"
     },
     "gemini": {
-      "desc": "和 Google Gemini AI 聊天！ 🤖",
-      "example": "> *示例：*\n- gemini 你好\n- gemini 图里有什么？（回复一张图片） 📷",
-      "Key": "> *等一下！* 我没找到 Gemini API 密钥！ 🔑\n去这里弄一个：https://aistudio.google.com/app/apikey\n\n*怎么设置：*\nsetvar GEMINI_API_KEY = 你的密钥"
+      "desc": "和 Google Gemini AI 聊聊天！ 🤖",
+      "example": "> *示例：*\n- gemini 你好\n- gemini 图片里有什么？（回复一张图片） 📷",
+      "Key": "> *等一下！* 我还没有 Gemini API 密钥呢 🔑\n在这里领一个：https://aistudio.google.com/app/apikey\n\n*这样设置就行：*\nsetvar GEMINI_API_KEY = 你的api密钥"
     },
     "gstop": {
-      "desc": "停掉所有群里的全局过滤器。 🛑",
-      "example": "> *怎么用：*\n- gstop <过滤器名>\n- gstop hi",
-      "delete": "全局过滤器 *{0}* 已经变成历史了！ 🗑️",
-      "not_found": "_{0} 不在全局过滤器列表里。_ 😅"
+      "desc": "在所有群里停掉某个全局过滤器 🛑",
+      "example": "> *使用方法：*\n- gstop <过滤器名称>\n- gstop hi",
+      "delete": "全局过滤器 *{0}* 已经退休啦！ 🗑️",
+      "not_found": "_全局过滤器里没有 {0} 哦_ 😅"
     },
     "pstop": {
-      "desc": "停掉私人过滤器。 ⏹️",
-      "example": "> *怎么用：*\n- pstop <过滤器名>\n- pstop hi",
-      "delete": "私人过滤器 *{0}* 删掉了。 🗑️",
-      "not_found": "_{0} 不在你的私人过滤器里。_ 😅"
+      "desc": "停掉一个私人过滤器 ⏹️",
+      "example": "> *使用方法：*\n- pstop <过滤器名称>\n- pstop hi",
+      "delete": "私人过滤器 *{0}* 已经删掉啦 🗑️",
+      "not_found": "_你的私人过滤器里没有 {0} 哦_ 😅"
     },
     "gfilter": {
-      "desc": "管理在所有群里都生效的过滤器。 🌍",
-      "example": "> *示例：*\n- gfilter hi（回复一条消息）\n- gfilter list（看看有哪些全局过滤器） 👀",
-      "add": "🌍 全局过滤器 *{0}* 在所有地方生效啦！"
+      "desc": "管理在所有群里都生效的过滤器 🌍",
+      "example": "> *示例：*\n- gfilter hi（回复一条消息）\n- gfilter list（查看所有全局过滤器） 👀",
+      "add": "🌍 全局过滤器 *{0}* 已经全面上岗！"
     },
     "pfilter": {
-      "desc": "管理只在你私聊里生效的过滤器。 👤",
-      "example": "> *示例：*\n- pfilter hi（回复文字消息时用）\n- pfilter list（看看现在的私人过滤器）",
-      "add": "*{0}* 私人过滤器加好了"
+      "desc": "管理只在你私聊里生效的过滤器 👤",
+      "example": "> *示例：*\n- pfilter hi（回复文字消息时使用）\n- pfilter list（显示当前个人过滤器）",
+      "add": "私人过滤器 *{0}* 加好啦"
     },
     "gpp": {
-      "desc": "改群头像",
-      "update": "_群头像更新啦_"
+      "desc": "换个群头像",
+      "update": "_群头像换好啦_"
     },
     "greet": {
-      "setdesc": "设置个性化打招呼消息",
-      "setexample": "> *示例：* setgreet 你好呀，我是机器人，主人一会儿回你。",
-      "setupdate": "_打招呼消息更新了。_",
-      "getdesc": "看看现在的打招呼消息",
-      "notsetgreet": "> 还没设置打招呼消息呢。",
-      "deldesc": "删掉打招呼消息",
-      "delupdate": "打招呼消息删掉了。"
+      "setdesc": "设置一条专属问候语",
+      "setexample": "> *示例：* setgreet 你好，这是机器人，我的主人稍后回复。",
+      "setupdate": "_问候语更新好啦。_",
+      "getdesc": "看看现在的问候语",
+      "notsetgreet": "> 还没设置问候语哦。",
+      "deldesc": "删掉专属问候语",
+      "delupdate": "问候语已经删掉啦。"
     },
     "greetings": {
-      "welcome_desc": "给新进群的人发欢迎消息",
-      "welcome_example": "欢迎消息状态：*{0}*\n\n> *怎么用：*\n- welcome 嗨 &mention！欢迎来到 &name - 设置欢迎语\n- welcome on | off - 开启/关闭\n- welcome delete - 删掉消息\n\n> *占位符：*\n- &mention - @新成员\n- &name - 群名\n- &desc - 群介绍\n- &size - 成员数\n- &pp - 成员头像\n\n> *媒体：* 回复图片/视频，或者带上链接\n\n更多帮助：https://levanter.site/",
-      "welcome_enable": "_欢迎消息已开启_",
-      "welcome_disable": "_欢迎消息已关闭_",
-      "welcome_delete": "_欢迎消息已删除_",
-      "welcome_not_set": "_你还没设置欢迎消息呢！_\n\n> *示例：*\nwelcome 嗨 &mention！欢迎来到 &name\n\n设置好后发：welcome on",
-      "goodbye_desc": "给退群的人发告别消息",
-      "goodbye_example": "告别消息状态：*{0}*\n\n> *怎么用：*\n- goodbye 拜拜 &mention！下次见 - 设置告别语\n- goodbye on | off - 开启/关闭\n- goodbye delete - 删掉消息\n\n> *占位符：*\n- &mention - @退群的人\n- &name - 群名\n- &desc - 群介绍\n- &size - 成员数\n- &pp - 成员头像\n\n> *媒体：* 回复图片/视频，或者带上链接\n\n更多帮助：https://levanter.site/",
-      "goodbye_enable": "_告别消息已开启_",
-      "goodbye_disable": "_告别消息已关闭_",
-      "goodbye_delete": "_告别消息已删除_",
-      "goodbye_not_set": "_你还没设置告别消息呢！_\n\n> *示例：*\ngoodbye 拜拜 &mention！感谢陪伴\n\n设置好后发：goodbye on"
+      "welcome_desc": "新人进群时自动欢迎",
+      "welcome_example": "欢迎消息当前状态：*{0}*\n\n> *使用示例：*\n- welcome 嗨 &mention！欢迎来到 &name - 设置欢迎消息\n- welcome on | off - 启用/禁用\n- welcome delete - 删除消息\n\n> *占位符：*\n- &mention - 提及新成员\n- &name - 群组名称\n- &desc - 群组描述\n- &size - 成员数量\n- &pp - 成员头像\n\n> *媒体：* 回复图片/视频或在消息中包含 URL\n\n更多详情：https://levanter.site/",
+      "welcome_enable": "_欢迎消息开起来啦_",
+      "welcome_disable": "_欢迎消息关掉了_",
+      "welcome_delete": "_欢迎消息删掉啦_",
+      "welcome_not_set": "_先设置一条欢迎消息吧！_\n\n> *示例：*\nwelcome 嗨 &mention！欢迎来到 &name\n\n然后用：welcome on",
+      "goodbye_desc": "有人退群时说声再见",
+      "goodbye_example": "告别消息当前状态：*{0}*\n\n> *使用示例：*\n- goodbye 再见 &mention！下次见 - 设置告别消息\n- goodbye on | off - 启用/禁用\n- goodbye delete - 删除消息\n\n> *占位符：*\n- &mention - 提及离开的成员\n- &name - 群组名称\n- &desc - 群组描述\n- &size - 成员数量\n- &pp - 成员头像\n\n> *媒体：* 回复图片/视频或在消息中包含 URL\n\n更多详情：https://levanter.site/",
+      "goodbye_enable": "_告别消息开起来啦_",
+      "goodbye_disable": "_告别消息关掉了_",
+      "goodbye_delete": "_告别消息删掉啦_",
+      "goodbye_not_set": "_先设置一条告别消息吧！_\n\n> *示例：*\ngoodbye 再见 &mention！谢谢你一路陪伴\n\n然后用：goodbye on"
     },
     "openrouter": {
-      "example": "*示例：* or 你好\n\n需要 OPENROUTER_API_KEY（免费，不用绑卡）。可选：\n- OPENROUTER_MODEL（默认：openai/gpt-oss-20b:free）\n- OPENROUTER_SYSTEM_MSG\n\n白嫖密钥：https://openrouter.ai/keys\n免费模型：https://openrouter.ai/models?max_price=0",
-      "desc": "和 OpenRouter AI 互动（免费模型）"
+      "example": "*示例：* or 你好\n\n需要 OPENROUTER_API_KEY（免费，无需银行卡）。可选变量：\n- OPENROUTER_MODEL（默认：openai/gpt-oss-20b:free）\n- OPENROUTER_SYSTEM_MSG\n\n获取免费密钥：https://openrouter.ai/keys\n免费模型：https://openrouter.ai/models?max_price=0",
+      "desc": "和 OpenRouter AI 聊天（免费模型）"
     },
     "groq": {
-      "example": "*示例：* groq 你好\n\n你可以设置这些环境变量：\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\n获取详情：https://console.groq.com/keys",
-      "desc": "和 GROQ AI 互动"
+      "example": "*示例：* groq 你好\n\n您可以选择设置以下环境变量：\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\n更多详情请访问：https://console.groq.com/keys",
+      "desc": "和 GROQ AI 聊天"
     },
     "kick": {
-      "desc": "把某人踢出群。 🚪",
-      "not_admin": "我得是个管理员才能踢人呀！ 😅",
-      "mention_user": "踢谁？@他或者回复他的消息。 🎯",
-      "admin": "踢不动！人家是管理员。 🛡️",
-      "kicking_all": "大扫除开始！正在踢出所有非管理员...（{0} 名成员）。想停下来就重启我。 🧹"
+      "desc": "把人请出群 🚪",
+      "not_admin": "我得先当上管理员才能踢人呀！ 😅",
+      "mention_user": "要踢谁？@他或者回复他的消息 🎯",
+      "admin": "动不了！人家是管理员 🛡️",
+      "kicking_all": "大扫除开始！正在请走所有非管理员...（{0} 人）。想停下就重启机器人 🧹"
     },
     "add": {
-      "desc": "拉新成员进群。 ➕",
-      "warning": "> 注意：拉不认识的号码可能会导致机器人被封，悠着点哦！",
-      "not_admin": "我不是管理员，拉不了人！ 😅",
-      "invalid_number": "这号码看着不对劲。示例：add 86123456789",
-      "failed": "拉人失败了，我把邀请链接发给你了。 📩"
+      "desc": "拉新朋友进群 ➕",
+      "warning": "> 小心：乱加陌生号码可能会让机器人被封，悠着点哦！",
+      "not_admin": "我不是管理员，拉不了人呀！ 😅",
+      "invalid_number": "这个号码看着不太对。示例：add 86123456789",
+      "failed": "没法直接拉进来，我改发了一个邀请链接 📩"
     },
     "promote": {
-      "desc": "给某人戴上王冠（设为管理员）。 👑",
-      "not_admin": "我不是管理员，没法给人升职。 😅",
-      "mention_user": "给谁升职？@他或者回复消息。 👑",
-      "already_admin": "人家已经是管理员啦！ ✨"
+      "desc": "给某人戴上皇冠（设为管理员） 👑",
+      "not_admin": "我自己都不是管理员，没法给别人升职呀 😅",
+      "mention_user": "谁要升职？@他或者回复他的消息 👑",
+      "already_admin": "人家早就戴着皇冠啦！ ✨"
     },
     "demote": {
-      "desc": "摘掉王冠（取消管理员）。 📉",
-      "not_admin": "我不是管理员，没法给人降职。 😅",
-      "mention_user": "谁要失去王冠？@他或者回复消息。 📉",
-      "not_admin_user": "等等，人家本来就不是管理员呀！ 😂"
+      "desc": "摘下皇冠（取消管理员） 📉",
+      "not_admin": "我自己都不是管理员，没法给别人降职呀 😅",
+      "mention_user": "谁要摘皇冠？@他或者回复他的消息 📉",
+      "not_admin_user": "等等，人家本来就不是管理员啊！ 😂"
     },
     "invite": {
-      "desc": "拿一个群邀请链接。 🔗",
-      "not_admin": "我不是管理员，拿不到邀请链接。 😅",
-      "success": "这是群邀请链接：🔗\n{0}"
+      "desc": "拿到群邀请链接 🔗",
+      "not_admin": "我不是管理员，生成不了邀请链接 😅",
+      "success": "群邀请链接来啦：🔗\n{0}"
     },
     "mute": {
-      "desc": "只有管理员能说话。 🤐",
-      "not_admin": "我不是管理员，改不了群设置。 😅",
-      "mute": "群已禁言 {0} 分钟。 🤫"
+      "desc": "全员闭麦，只有管理员能说话 🤐",
+      "not_admin": "我不是管理员，改不了群设置 😅",
+      "mute": "全群安静 {0} 分钟～ 🤫"
     },
     "unmute": {
-      "desc": "所有人都可以继续发消息了。 🔓",
-      "not_admin": "我不是管理员，改不了群设置。 😅"
+      "desc": "解除禁言，大家可以畅聊啦 🔓",
+      "not_admin": "我不是管理员，改不了群设置 😅"
     },
     "join": {
-      "desc": "通过邀请链接进群",
-      "invalid_link": "发一个有效的 WhatsApp 群邀请链接给我。",
-      "group_full": "群满了，进不去了。",
-      "success": "进群成功！",
-      "request_sent": "进群请求已发送。"
+      "desc": "通过邀请链接加入群聊",
+      "invalid_link": "给我一个有效的 WhatsApp 群邀请链接吧。",
+      "group_full": "这个群已经满员啦，进不去了。",
+      "success": "成功进群啦！",
+      "request_sent": "入群申请已经发出去啦。"
     },
     "revoke": {
-      "desc": "重置群邀请链接。 🔄",
-      "not_admin": "我不是管理员，重置不了链接。 😅"
+      "desc": "重置群邀请链接 🔄",
+      "not_admin": "我不是管理员，没法重置邀请链接 😅"
     },
     "group_info": {
-      "desc": "看看群邀请链接的信息",
-      "ginfo_usage": "*怎么用：* ginfo <群链接>",
-      "invalid_link": "发一个有效的 WhatsApp 邀请链接。",
-      "details": "*名称：* {0}\n*群 ID：* {1}@g.us\n*群主：* {2}\n*成员数：* {3}\n*创建时间：* {4}\n*描述：* {5}"
+      "desc": "查看群邀请链接的信息",
+      "ginfo_usage": "*使用方法：* ginfo <群组链接>",
+      "invalid_link": "给我一个有效的 WhatsApp 邀请链接吧。",
+      "details": "*名称：* {0}\n*群组 ID：* {1}@g.us\n*群主：* {2}\n*成员数：* {3}\n*创建时间：* {4}\n*描述：* {5}"
     },
     "common_members": {
-      "desc": "看看（或踢掉）两个及以上群里的共同成员",
-      "found": "没找到共同成员。",
-      "common_usage": "*示例*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - 只从你发命令的这个群里踢\nkickall - 从所有群里踢\nany - 任意两个或多个群的共同成员\nskip - 避开所有群",
-      "ginfo_usage": "*示例：info 群链接*"
+      "desc": "找出（或踢出）同时在两个以上群里的成员",
+      "found": "一个共同成员都没找到。",
+      "common_usage": "*示例*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - 仅从您命令的群组中移除\nkickall - 从所有 jid 中移除\nany - 包含两个或多个群组的共同成员\nskip - 避免从所有群组移除",
+      "ginfo_usage": "*示例：info 群组邀请链接*"
     },
     "insta": {
-      "usage": "示例：insta <Instagram 链接>",
-      "not_found": "没找到。 🔍",
-      "desc": "获取 Instagram 帖子、Reels 和视频。 📸"
+      "usage": "示例：insta <Instagram URL>",
+      "not_found": "没找到耶 🔍",
+      "desc": "下载 Instagram 帖子、Reels 和视频 📸"
     },
     "ison": {
-      "usage": "示例：ison <手机号>",
+      "usage": "示例：ison <手机号码>",
       "not_exist": "`*不在 WhatsApp 上* ({0})\n`",
       "exist": "\n*在 WhatsApp 上* ({0})\n",
       "privacy": "*隐私设置已开启* ({0})\n",
-      "desc": "查查这个号码有没有注册 WhatsApp。"
+      "desc": "查查某个号码有没有注册 WhatsApp。"
     },
     "lydia": {
-      "usage": "怎么用：lydia on | off\n回复或@我开始聊天！ ✨",
-      "activated": "Lydia 上线啦！来找我聊天吧。 🤖",
-      "deactivated": "Lydia 去休息啦。已停用。 💤",
-      "note": "嘿！你得先回复一条消息呀。 💬",
-      "desc": "和我聊天！开启或关闭 AI 聊天机器人。 🤖"
+      "usage": "用法：lydia on | off\n回复我或者@我，就能开聊啦！ ✨",
+      "activated": "Lydia 上线啦！来聊天吧～ 🤖",
+      "deactivated": "Lydia 去休息了，已关闭 💤",
+      "note": "嘿！得先回复一条消息哦 💬",
+      "desc": "和我聊天！开启或关闭 AI 聊天机器人 🤖"
     },
     "rotate": {
       "usage": "示例：rotate right|left|flip（回复一个视频）。",
-      "not_found": "哎呀！回复一个视频然后选：right、left 或 flip。 🔄",
-      "desc": "随便翻转或旋转你的视频！ 🔄",
-      "convert": "处理中... 🔄"
+      "not_found": "哎呀！回复一个视频，再选 right、left 或 flip 🔄",
+      "desc": "轻轻松松翻转、旋转你的视频！ 🔄",
+      "convert": "处理中，稍等一下下... 🔄"
     },
     "mp3": {
-      "usage": "回复一个视频或音频，我帮你转成 MP3。",
-      "not_found": "请回复视频或音频消息。",
-      "desc": "把视频转成音频，或者把音频转成语音消息。"
+      "usage": "回复视频或音频以将其转换为 MP3。",
+      "not_found": "要回复一个视频或音频哦。",
+      "desc": "将视频转换为音频或将音频片段转换为语音消息。"
     },
     "photo": {
-      "usage": "回复贴纸，我帮你转成图片。",
-      "desc": "把贴纸转成图片。"
+      "usage": "回复贴纸图片以将其转换为图像。",
+      "desc": "将贴纸转换为图像。"
     },
     "reverse": {
-      "usage": "回复视频或音频，我帮你倒放。",
-      "not_found": "请回复视频或音频消息。",
-      "desc": "倒放视频或音频。"
+      "usage": "回复视频或音频以反向播放。",
+      "not_found": "要回复一个视频或音频哦。",
+      "desc": "反向播放视频或音频片段。"
     },
     "cut": {
       "usage": "示例：cut 0;30（开始;时长）（回复视频或音频）。",
-      "not_found": "请回复视频或音频，并给出有效的开始和时长（比如：10;30）。",
-      "desc": "剪一段音频或视频。"
+      "not_found": "请回复视频或音频，并提供有效的开始和时长值（例如：10;30）。",
+      "desc": "从音频或视频文件中剪切片段。"
     },
     "trim": {
       "usage": "示例：trim 10;30（回复视频）。",
-      "not_found": "请回复视频，并给出有效的开始和时长（比如：60;30）。",
-      "desc": "修剪视频的指定部分。"
+      "not_found": "请回复视频，并提供有效的开始和时长值（例如：60;30）。",
+      "desc": "在指定的开始和时长之间修剪视频。"
     },
     "page": {
       "usage": "示例：page 1（回复图片）。",
-      "not_found": "请回复图片，并告诉我加在第几页。",
-      "desc": "把图片当成一页加进 PDF 里。",
-      "add": "第 {0} 页加好了！"
+      "not_found": "请回复带有页码数字说明的图片。",
+      "desc": "将图片作为页面添加到 PDF 文档中。",
+      "add": "第 {0} 页加好啦！"
     },
     "pdf": {
-      "usage": "示例：pdf 标题（给 PDF 取个名字）。",
-      "not_found": "请给 PDF 取个名字。",
-      "desc": "把图片转成 PDF。"
+      "usage": "示例：pdf 标题（为 PDF 提供标题）。",
+      "not_found": "请为 PDF 文档提供标题。",
+      "desc": "将图片转换为 PDF 文档。"
     },
     "merge": {
-      "usage": "示例：merge 1（按顺序回复视频）。",
-      "not_found": "请按顺序回复视频，并给个有效编号。",
-      "desc": "把多个视频合并成一个。",
-      "merge": "_正在合并 {0} 个视频_",
-      "add": "_视频 {0} 已添加_"
+      "usage": "示例：merge 1（回复视频时带顺序编号）。",
+      "not_found": "请回复带有有效顺序编号的视频。",
+      "desc": "将多个视频合并为一个。",
+      "merge": "_正在把 {0} 个视频拼在一起_",
+      "add": "_第 {0} 个视频加好啦_"
     },
     "compress": {
-      "usage": "回复视频，我帮你压一下大小。",
-      "desc": "压缩视频，变小一点。"
+      "usage": "回复视频以压缩它。",
+      "desc": "压缩视频文件以减小大小。"
     },
     "bass": {
       "usage": "示例：bass 10（回复音频或视频）。",
-      "desc": "调一下音频的低音。"
+      "desc": "调整音频文件的低音级别。"
     },
     "treble": {
       "usage": "示例：treble 10（回复音频或视频）。",
-      "desc": "调一下音频的高音。"
+      "desc": "调整音频文件的高音级别。"
     },
     "histo": {
-      "usage": "回复音频或视频，生成频谱视频。",
-      "desc": "把音频变成看得见的声音（频谱视频）。"
+      "usage": "回复音频或视频以生成波形视频。",
+      "desc": "将音频转换为可视波形视频。"
     },
     "vector": {
-      "usage": "回复音频或视频，生成矢量特效视频。",
-      "desc": "把音频变成矢量特效视频。"
+      "usage": "回复音频或视频以创建矢量可视化视频。",
+      "desc": "将音频转换为矢量可视化视频。"
     },
     "crop": {
       "usage": "示例：crop 512,512,0,512（回复视频）。",
-      "not_found": "请回复视频，并给出有效的裁剪尺寸（格式：宽,高,x,y）。",
-      "desc": "裁剪视频到指定大小。",
-      "xcrop": "视频宽度：*{0}*，高度：*{1}*\n请在这个范围里选输出大小。"
+      "not_found": "请回复视频，并以 out_w,out_h,x,y 格式提供有效的裁剪尺寸。",
+      "desc": "将视频裁剪到指定尺寸。",
+      "xcrop": "视频宽度：*{0}*，高度：*{1}*\n请在此范围内选择输出大小。"
     },
     "low": {
-      "usage": "回复音频或视频，我帮你把声音压沉。",
-      "desc": "把音调降下来。"
+      "usage": "回复音频或视频以降低音调。",
+      "desc": "将音频音调调低。"
     },
     "pitch": {
-      "usage": "回复音频或视频，我帮你调音调。",
-      "not_found": "请回复音频或视频消息。",
-      "desc": "调整音频的音调。"
+      "usage": "回复音频或视频以调整音调。",
+      "not_found": "要回复一个音频或视频哦。",
+      "desc": "调整音频文件的音调。"
     },
     "avec": {
-      "usage": "回复音频或视频，我帮你转成视频格式。",
-      "not_found": "请回复音频或视频消息。",
-      "desc": "把音频转成视频。"
+      "usage": "回复音频或视频以将其转换为视频格式。",
+      "not_found": "要回复一个音频或视频哦。",
+      "desc": "将音频片段转换为视频。"
     },
     "avm": {
-      "usage": "同时回复音频和视频，我帮你合在一起。",
-      "desc": "把音频和视频合成一个文件。",
-      "audio_add": "_音频加进去了！_",
-      "video_add": "_视频加进去了！_"
+      "usage": "同时回复音频和视频以合并它们。",
+      "desc": "将音频和视频文件合并为一个。",
+      "audio_add": "_音频收到啦！_",
+      "video_add": "_视频收到啦！_"
     },
     "black": {
-      "usage": "回复音频或视频，生成黑底背景视频。",
-      "desc": "把音频转成黑底视频。"
+      "usage": "回复音频或视频以生成黑色背景视频。",
+      "desc": "将音频片段转换为带黑色背景的视频。"
     },
     "mediafire": {
-      "usage": "示例：mediafire <Mediafire 链接>",
-      "not_found": "文件没找到，再检查一下链接吧！ 🔍",
-      "desc": "从 Mediafire 下载文件。 📂"
+      "usage": "示例：mediafire <Mediafire URL>",
+      "not_found": "没找到文件，再检查一下链接吧！ 🔍",
+      "desc": "从 Mediafire 下载文件 📂"
     },
     "mention": {
-      "usage": "示例：mention on | off | get\n（回复消息来针对特定用户。）",
-      "desc": "设置和管理自动回复里的 @ 提及。",
-      "not_activated": "回复提及还没激活。",
-      "current_status": "提及功能已{0}。详情请看：https://levanter.site/",
-      "activated": "回复提及已激活。",
-      "deactivated": "回复提及已停用。",
-      "updated": "提及设置更新了。"
+      "usage": "示例：mention on | off | get\n（回复消息以针对特定用户。）",
+      "desc": "配置和管理自动回复的提及功能。",
+      "not_activated": "回复提及还没开启哦。",
+      "current_status": "提及功能已{0}。详情请访问：https://levanter.site/",
+      "activated": "回复提及开启啦。",
+      "deactivated": "回复提及关掉了。",
+      "updated": "提及设置更新好啦。"
     },
     "status": {
-      "usage": "怎么用：status on | off | no-dl | except-view <jid,...> | only-view <jid,...>",
+      "usage": "使用方法：status on | off | no-dl | except-view <jid,...> | only-view <jid,...>",
       "desc": "自动管理 WhatsApp 状态的查看。"
     },
     "call": {
-      "usage": "怎么用：call on | off",
+      "usage": "使用方法：call on | off",
       "desc": "自动拒接来电。"
     },
     "read": {
-      "usage": "怎么用：read on | off | p | g | jid,jid | ignore jid,jid\np = 仅私聊，g = 仅群聊\n可以组合：read p 123@g.us（私聊 + 这个群）\nread g ignore 123@g.us（除这个群外的所有群）",
-      "desc": "自动已读：全部、仅私聊（p）、仅群聊（g）、指定 JID，或者忽略某几个 JID。"
+      "usage": "使用方法：read on | off | p | g | jid,jid | ignore jid,jid\np = 仅私聊，g = 仅群组\n可组合：read p 123@g.us（私聊 + 该群组）\nread g ignore 123@g.us（除该群外的所有群组）",
+      "desc": "自动已读消息：全部、仅私聊（p）、仅群组（g）、指定 JID，或除忽略的 JID 外的全部。"
     },
     "online": {
-      "usage": "怎么用：online on | off",
-      "desc": "让账号一直显示在线。"
+      "usage": "使用方法：online on | off",
+      "desc": "保持账号状态始终在线。"
     },
     "movie": {
-      "usage": "示例：movie <电影名>",
-      "not_found": "没找到这部电影，检查一下名字再试吧。",
-      "desc": "从 OMDB API 获取电影详细信息，包括完整剧情。"
+      "usage": "示例：movie <电影标题>",
+      "not_found": "没找到这部电影，核对一下片名再试试吧。",
+      "desc": "从 OMDB API 获取详细的电影信息，包括完整剧情。"
     },
     "msgs": {
-      "desc": "看看群成员发了多少消息，包括个人总数和最后活跃时间。",
+      "desc": "显示群组每个成员的消息数量，包括个人总数和最后活跃时间。",
       "msg_init": "\n*号码：* {0}\n*名称：* {1}\n*总消息数：* {2}\n",
       "msg_last": "*最后上线：* {0} 前\n",
-      "no_activity": "还没记录到任何活动。"
+      "no_activity": "还没有任何活跃记录哦。"
     },
     "reset": {
       "usage": "示例：reset all 或 reset <回复/提及>",
-      "desc": "重置整个群或特定成员的消息计数。",
-      "reset_all": "所有人的消息计数都清空了",
-      "reset_one": "_@{0} 的消息计数清空了。_"
+      "desc": "重置整个群组或特定成员的消息计数。",
+      "reset_all": "所有人的消息计数都清零啦",
+      "reset_one": "_@{0} 的消息计数清零啦。_"
     },
     "inactive": {
-      "usage": "> 示例：\n- inactive day 10\n- inactive day 10 kick\n- inactive total 100\n- inactive total 100 kick\n- inactive day 7 total 150\n- inactive day 7 total 150 kick\n\n不加 kick 就只列出名单",
-      "desc": "找出或踢掉不活跃的成员。加上 'kick' 就会踢人。",
-      "inactives": "_不活跃成员总数：{0}_",
-      "removing": "_将在 7 秒内踢掉 {0} 名不活跃成员_"
+      "usage": "> 示例：\n- inactive day 10\n- inactive day 10 kick\n- inactive total 100\n- inactive total 100 kick\n- inactive day 7 total 150\n- inactive day 7 total 150 kick\n\n不加 kick 则只列出",
+      "desc": "根据消息数量或不活跃时长识别或移除不活跃成员。添加 'kick' 以移除成员。",
+      "inactives": "_潜水成员一共：{0} 人_",
+      "removing": "_7 秒后请走 {0} 位潜水成员_"
     },
     "weather": {
       "desc": "查天气",
       "usage": "*示例：weather 北京*",
-      "not_found": "_没找到 {0} 的天气_",
+      "not_found": "_没找到 {0}_",
       "report": "*名称：* {0}\n*国家：* {1}\n*天气：* {2}\n*温度：* {3}°\n*体感温度：* {4}°\n*湿度：* {5}%\n*能见度：* {6}m\n*风速：* {7}m/s {8}\n*日出：* {9}\n*日落：* {10}"
     },
     "y2mate": {
       "ytv_desc": "下载 YouTube 视频",
       "ytv_usage": "_示例：ytv 链接_",
       "yta_desc": "下载 YouTube 音频",
-      "yta_usage": "_示例：yta 歌名/YouTube链接_",
-      "invalid_link": "*请给一个有效的 YouTube 链接！*",
+      "yta_usage": "_示例：yta 歌曲名/YouTube链接_",
+      "invalid_link": "*给我一个有效的 YouTube 链接吧！*",
       "no_video": "*没找到视频*",
       "no_audio": "_没找到音频。_"
     },
     "amute": {
-      "usage": "怎么用：amute <时> <分>\n- amute on | off\n- amute info\n\n回复文字来设置禁言消息",
-      "desc": "在指定时间自动禁言，可以设置自定义消息。",
-      "not_found": "没找到自动禁言设置。",
-      "already_disabled": "自动禁言已关闭。",
-      "enabled": "自动禁言已开启。",
-      "disabled": "自动禁言已关闭。",
-      "invalid_format": "> 示例：\n- amute 6 0\n- amute on | off\n- amute info\n\n回复文字来设置禁言消息。",
-      "scheduled": "群将在 {0} 禁言\n*消息：* {1}",
+      "usage": "使用方法：amute <时> <分>\n- amute on | off\n- amute info\n\n回复文字以设置禁言消息",
+      "desc": "在指定时间自动禁言群组，可设置自定义消息。",
+      "not_found": "还没有自动禁言的设置哦。",
+      "already_disabled": "自动禁言本来就关着呢。",
+      "enabled": "自动禁言开启啦。",
+      "disabled": "自动禁言关掉了。",
+      "invalid_format": "> 示例：\n- amute 6 0\n- amute on | off\n- amute info\n\n回复文字以设置禁言消息。",
+      "scheduled": "群会在 {0} 自动安静下来\n*附带消息：* {1}",
       "info": "小时：{0}\n分钟：{1}\n时间：{2}\n禁言：{3}\n消息：{4}"
     },
     "aunmute": {
-      "usage": "怎么用：aunmute <时> <分>\n- aunmute on | off\n- aunmute info\n回复文字来设置解禁消息",
-      "desc": "在指定时间自动解除禁言，可以设置自定义消息。",
-      "not_found": "没找到自动解禁设置。",
-      "already_disabled": "自动解禁已关闭。",
-      "enabled": "自动解禁已开启。",
-      "disabled": "自动解禁已关闭。",
-      "invalid_format": "> 示例：\n- aunmute 16 30\n- aunmute on | off\n- aunmute info\n\n回复文字来设置解禁消息。",
-      "scheduled": "群将在 {0} 解禁\n*消息：* {1}",
+      "usage": "使用方法：aunmute <时> <分>\n- aunmute on | off\n- aunmute info\n回复文字以设置解禁消息",
+      "desc": "在指定时间自动解除群组禁言，可设置自定义消息。",
+      "not_found": "还没有自动解禁的设置哦。",
+      "already_disabled": "自动解禁本来就关着呢。",
+      "enabled": "自动解禁开启啦。",
+      "disabled": "自动解禁关掉了。",
+      "invalid_format": "> 示例：\n- aunmute 16 30\n- aunmute on | off\n- aunmute info\n\n回复文字以设置解禁消息。",
+      "scheduled": "群会在 {0} 自动解禁\n*附带消息：* {1}",
       "info": "小时：{0}\n分钟：{1}\n时间：{2}\n禁言：{3}\n消息：{4}"
     },
     "zushi": {
       "usage": "> 示例：\n- zushi ping, sticker\n- 要设置所有命令，输入 'list' 然后回复复制的消息（例如：zushi 复制的消息）。",
-      "desc": "让你能给聊天里的其他人开放特定命令。",
-      "already_set": "{0} 已经配置好了。",
+      "desc": "允许您启用特定命令供聊天中的其他人使用。",
+      "already_set": "{0} 早就设置好啦。",
       "allowed": "*@{0} 允许的命令*\n{1}",
-      "no_input": "⚠️ 请给我命令的名字\n\n📝 示例：\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 多个命令用空格隔开",
-      "duplicates": "❌ 这些命令已经允许过了：{0}\n\n📋 当前允许的命令（共 {1} 个）：\n{2}\n\n💡 用 .yami 看看所有允许的命令\n💡 用 .ope 删掉命令",
-      "invalid": "⚠️ 没找到有效命令\n\n跳过了无效命令：{0}\n\n💡 用 .help 看看有哪些可用命令",
+      "no_input": "⚠️ 请提供命令名称\n\n📝 示例：\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 用空格分隔多个命令",
+      "duplicates": "❌ 命令已允许：{0}\n\n📋 当前允许的命令（共 {1} 个）：\n{2}\n\n💡 使用 .yami 查看所有允许的命令\n💡 使用 .ope 删除命令",
+      "invalid": "⚠️ 未找到有效命令\n\n跳过无效命令：{0}\n\n💡 使用 .help 查看可用命令",
       "error": "❌ 错误：{0}",
-      "success": "✅ 成功添加了 {0} 个命令{1}：\n{2}\n\n📊 @{3} 允许的命令总计：{0} 个\n\n💡 用户现在可以使用这些命令了"
+      "success": "✅ 成功添加 {0} 个命令{1}：\n{2}\n\n📊 @{3} 的允许命令总计：{0} 个\n\n💡 用户现在可以使用这些命令"
     },
     "yami": {
-      "usage": "直接用：yami",
-      "desc": "看看当前聊天允许使用哪些命令。",
-      "not_set": "还没设置任何允许的命令。",
-      "no_commands": "📋 没找到允许的命令\n\n💡 用 .zushi 加点命令吧\n📝 示例：.zushi song video sticker",
-      "list": "📋 @{0} 允许的命令：\n\n{1}\n\n📊 总计：{2} 个命令{3}\n\n💡 用 .ope <命令名> 删掉\n💡 用 .ope all 全删了"
+      "usage": "直接使用：yami",
+      "desc": "显示此聊天中当前允许的命令列表。",
+      "not_set": "还没设置任何允许的命令哦。",
+      "no_commands": "📋 未找到允许的命令\n\n💡 使用 .zushi 添加命令\n📝 示例：.zushi song video sticker",
+      "list": "📋 @{0} 允许的命令：\n\n{1}\n\n📊 总计：{2} 个命令{3}\n\n💡 使用 .ope <命令名> 删除\n💡 使用 .ope all 全部删除"
     },
     "ope": {
       "usage": "示例：ope ping, sticker 或 ope all",
-      "desc": "删掉或取消指定的允许命令。",
-      "not_found": "没找到 {0} 的允许命令。",
-      "all_removed": "所有允许的命令都删了。",
+      "desc": "删除或取消指定的允许命令。",
+      "not_found": "{0} 还没有允许的命令哦。",
+      "all_removed": "允许的命令全部清空啦。",
       "removed": "*已删除 @{0} 的命令*\n{1}",
-      "no_input": "⚠️ 请给我要删的命令名字\n\n📝 示例：\n  • .ope song video\n  • .ope all（全删了）\n\n💡 用 .yami 看看允许的命令",
-      "not_found_list": "❌ 没找到命令{0}：{1}{2}\n\n💡 用 .yami 看看所有允许的命令\n📝 示例：.ope song video",
+      "no_input": "⚠️ 请提供要删除的命令名称\n\n📝 示例：\n  • .ope song video\n  • .ope all（删除所有）\n\n💡 使用 .yami 查看允许的命令",
+      "not_found_list": "❌ 未找到命令{0}：{1}{2}\n\n💡 使用 .yami 查看所有允许的命令\n📝 示例：.ope song video",
       "error": "❌ 错误：{0}",
-      "no_commands": "⚠️ 没找到这个用户/群的命令\n\n💡 先用 .zushi 加点命令吧",
-      "all_success": "✅ 所有命令都删了\n\n💡 用 .zushi 加点新的吧",
-      "success": "✅ 删掉了 {0} 个命令{1}：\n{2}\n\n📊 对象：@{3}\n\n💡 用 .yami 看看剩了啥\n💡 用 .ope all 全删了"
+      "no_commands": "⚠️ 未找到该用户/群组的命令\n\n💡 请先使用 .zushi 添加命令",
+      "all_success": "✅ 所有命令已删除\n\n💡 使用 .zushi 添加新命令",
+      "success": "✅ 已删除 {0} 个命令{1}：\n{2}\n\n📊 对象：@{3}\n\n💡 使用 .yami 查看剩余命令\n💡 使用 .ope all 删除所有命令"
     },
     "pdm": {
-      "usage": "怎么用：pdm on | off",
-      "desc": "开启或关闭群成员升职/降职的自动通知。",
-      "not_found": "请告诉我 'on' 或 'off'。比如：pdm on",
-      "activated": "升职/降职通知已开启。",
-      "deactivated": "升职/降职通知已关闭。"
+      "usage": "使用方法：pdm on | off",
+      "desc": "启用或禁用群组提升/降级事件的自动通知。",
+      "not_found": "要说 'on' 还是 'off' 哦。比如：pdm on",
+      "activated": "升降职通知开启啦。",
+      "deactivated": "升降职通知关掉了。"
     },
     "ping": {
-      "desc": "看看我有多快（延迟）。",
-      "ping_sent": "Ping！",
-      "pong": "Pong！响应时间：{0} 毫秒"
+      "desc": "测测机器人反应有多快（延迟）。",
+      "ping_sent": "Ping！🏓",
+      "pong": "Pong！🏓 响应时间：{0} 毫秒"
     },
     "pinterest": {
-      "usage": "示例：pinterest <Pinterest 链接>",
-      "not_found": "没找到东西，检查一下链接！ 🔍",
-      "desc": "下载 Pinterest 的视频或图片。 📌"
+      "usage": "示例：pinterest <Pinterest URL>",
+      "not_found": "没找到图片或视频，检查下链接吧！ 🔍",
+      "desc": "下载 Pinterest 视频或图片 📌"
     },
     "plugin": {
-      "usage": "> 示例：\n- plugin <Gist 链接>\n- plugin list",
-      "desc": "通过包含插件代码的 Gist 链接安装外部插件，或者列出所有已安装的插件。",
-      "invalid": "请给个有效的插件链接或名字。",
-      "not_installed": "目前没有装任何插件。",
-      "installed": "新安装的插件：{0}"
+      "usage": "> 示例：\n- plugin <Gist URL>\n- plugin list",
+      "desc": "通过提供包含插件代码的 Gist URL 安装外部插件，或列出所有已安装的插件。",
+      "invalid": "给我一个有效的插件链接或插件名吧。",
+      "not_installed": "现在还没装任何插件哦。",
+      "installed": "新装好的插件：{0}"
     },
     "remove": {
       "usage": "> 示例：\n- remove <插件名>\n- remove all",
-      "desc": "通过名字删掉外部插件，或者把装了的全删了。",
+      "desc": "通过指定插件名删除外部插件，或删除所有已安装的插件。",
       "not_found": "没找到插件 *{0}*。",
-      "removed": "插件删掉了。"
+      "removed": "插件已经卸载干净啦。"
     },
     "reboot": {
       "desc": "用 PM2 重启机器人。",
-      "starting": "正在重启..."
+      "starting": "重启中，马上回来～"
     },
     "fullpp": {
       "usage": "示例：fullpp（回复图片）",
-      "desc": "设置全尺寸头像。",
-      "updated": "头像更新了。"
+      "desc": "设置完整尺寸的头像。",
+      "updated": "头像换好啦。"
     },
     "jid": {
-      "desc": "看看用户或聊天的 JID。可以 @ 人、回复消息，或者默认看当前聊天。"
+      "desc": "返回用户或聊天的 JID。检查被提及的用户、回复消息或默认为当前聊天的 JID。"
     },
     "left": {
-      "desc": "退出当前群。如果后面加了字，会在退群前发出来。"
+      "desc": "离开当前群组。如果提供了额外文字，将在离开前发送。"
     },
     "block": {
-      "usage": "示例：block（回复或 @ 用户）",
-      "desc": "拉黑指定用户。",
+      "usage": "示例：block（回复或提及用户）",
+      "desc": "屏蔽指定用户。",
       "status": "已拉黑"
     },
     "unblock": {
-      "usage": "示例：unblock（回复或 @ 用户）",
-      "desc": "把指定用户从黑名单里放出来。",
+      "usage": "示例：unblock（回复或提及用户）",
+      "desc": "解除屏蔽指定用户。",
       "status": "_已解除拉黑_"
     },
     "pp": {
       "usage": "示例：pp（回复图片）",
-      "desc": "把你回复的图片设成你的头像。"
+      "desc": "使用回复消息中的图片更新您的头像。"
     },
     "whois": {
       "number": "*号码：* {0}",
@@ -656,229 +656,229 @@
       "description": "*描述：* {0}",
       "created": "*创建时间：* {0}",
       "usage": "示例：whois <jid 或用户标识符>",
-      "desc": "看看用户或群组的头像和附加信息（比如简介、状态）。"
+      "desc": "显示用户或群组的头像和附加信息（如简介、状态）。"
     },
     "gjid": {
-      "desc": "列出所有群的 JID 和群名。",
+      "desc": "列出所有群组 JID 及其群组名称。",
       "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
-      "usage": "示例：qr 文字 或 回复二维码图片并输入 qr",
-      "desc": "把文字变成二维码，或者扫图片里的二维码！ 📲"
+      "usage": "示例：qr 文字 或回复二维码图片并输入 qr",
+      "desc": "把文字变成二维码，或者把二维码图片读出来！ 📲"
     },
     "screenshot": {
       "usage": "示例：screenshot levanter.site",
-      "desc": "给任何网站截个图！ 📸"
+      "desc": "给任何网站拍张截图！ 📸"
     },
     "reddit": {
-      "usage": "示例：reddit <链接>",
-      "desc": "用提供的链接下载 Reddit 帖子里的视频。",
-      "error": "在这个链接里没找到视频。"
+      "usage": "示例：reddit <URL>",
+      "desc": "使用提供的 URL 从指定 Reddit 帖子下载视频。",
+      "error": "这个链接里没找到视频耶。"
     },
     "rmbg": {
       "usage": "示例：rmbg（回复图片）",
-      "desc": "用 remove.bg API 把回复图片的背景扣掉",
-      "key": "要用这个命令，请先去 remove.bg 注册，验证账号，复制 API 密钥，然后用 .setvar RMBG_KEY:你的密钥 设置一下。注册：https://accounts.kaleido.ai/users/sign_up | API 密钥：https://www.remove.bg/dashboard#api-key",
-      "error": "缺少 API 密钥或图片，先设置密钥再回复图片吧。"
+      "desc": "使用 remove.bg API 删除回复图片的背景",
+      "key": "要使用此命令，请确保您已在 remove.bg 注册，验证账户，复制 API 密钥，并使用 .setvar RMBG_KEY:您的api密钥 进行设置。注册：https://accounts.kaleido.ai/users/sign_up | API 密钥：https://www.remove.bg/dashboard#api-key",
+      "error": "缺少 API 密钥或者图片哦。先设置好密钥，再回复一张图片。"
     },
     "setschedule": {
-      "usage": "> *示例：*\n- setschedule jid,分-时-日-月（24小时格式，日和月可选）\n- setschedule 明天上午10点（支持说人话）\n- setschedule 每天上午10点（重复）\n- setschedule 0-10（默认在当前聊天发'一次性'）",
-      "desc": "用大白话（比如『明天上午10点』）或者类似 cron 的格式来定时发消息。默认在当前聊天发'一次性'。",
-      "invalid": "时间或计划格式不对，请照着示例来。",
-      "no_reply": "请回复你想定时发送的消息。",
-      "scheduled": "_已成功安排_ *{0}* _发给_ @{1}。"
+      "usage": "> *示例：*\n- setschedule jid,分-时-日-月（24小时格式，日和月可选）\n- setschedule 明天上午10点（自然语言支持）\n- setschedule 每天上午10点（重复）\n- setschedule 0-10（默认为当前聊天的'一次性'）",
+      "desc": "使用自然语言（如『明天上午10点』）或类似 cron 的格式安排消息。默认为当前聊天的'一次性'。",
+      "invalid": "时间格式看不懂哦，照着示例写就好。",
+      "no_reply": "先回复你想定时发送的那条消息吧。",
+      "scheduled": "_定好啦，会在_ *{0}* _发到_ @{1}。"
     },
     "getschedule": {
-      "desc": "看看指定聊天里所有的定时消息。",
-      "not_found": "没有定时消息。",
+      "desc": "获取指定聊天的所有计划消息。",
+      "not_found": "现在没有定时消息哦。",
       "time": "时间：{0}"
     },
     "delschedule": {
       "usage": "> 示例：\n- delschedule 9198765431@s.whatsapp.net, 8-8-10-10\n- delschedule 9198765431@s.whatsapp.net\n- delschedule all",
-      "desc": "按目标 JID 和时间删掉定时消息，或者全删了。",
-      "invalid": "格式不对，请照着示例来。",
-      "not_found": "没找到计划。",
-      "deleted": "_计划删掉了。_"
+      "desc": "通过指定目标 JID 和时间删除计划消息，或删除所有计划消息。",
+      "invalid": "格式不对哦，照着示例写就好。",
+      "not_found": "没找到这个定时任务。",
+      "deleted": "_定时任务删掉啦。_"
     },
     "setstatus": {
       "usage": "示例：setstatus jid,jid,jid,... 或 setstatus contact",
-      "desc": "给特定联系人或导入的联系人发 WhatsApp 状态。回复消息（文字、图片或视频）来发状态。",
-      "reply_required": "请回复一条消息来发状态。",
-      "sent": "_状态发给 {0} 个联系人了。_"
+      "desc": "为特定联系人或导入的联系人设置 WhatsApp 状态。回复消息（文字、图片或视频）以设置状态。",
+      "reply_required": "先回复一条消息，我才能拿它发状态哦。",
+      "sent": "_状态已经发给 {0} 位联系人啦。_"
     },
     "scstatus": {
       "usage": "示例：\n- scstatus jid,jid,jid,...|分-时-日-月（日和月可选）\n- scstatus contact|分-时-日-月\n- scstatus delete all|分-时-日-月\n- scstatus list",
-      "desc": "定时发 WhatsApp 状态。用 'contact' 导入联系人或给指定的 JID。",
-      "reply_required": "请回复一条消息来定时发状态。",
-      "invalid": "格式不对，请照着示例来。",
-      "scheduled": "_已成功安排在_ {0} _发送。_",
+      "desc": "安排 WhatsApp 状态在指定时间发送。使用 'contact' 导入联系人或提供特定 JID。",
+      "reply_required": "先回复一条消息，我才能定时发状态哦。",
+      "invalid": "格式不对哦，照着示例写就好。",
+      "scheduled": "_定好啦，会在_ {0} _发出。_",
       "list": "定时状态列表：",
-      "deleted": "计划删掉了。"
+      "deleted": "定时任务删掉啦。"
     },
     "antispam": {
-      "desc": "管理可配置的防垃圾消息保护",
-      "usage": "怎么用：antispam <on/off/low/medium/high/warn/delete/kick/info>",
-      "disabled_status": "📊 *防垃圾状态*\n\n🔴 已关闭\n\n发 `antispam on` 开启保护",
+      "desc": "管理可配置级别的防垃圾消息保护",
+      "usage": "使用：antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *防垃圾状态*\n\n🔴 已禁用\n\n使用 `antispam on` 启用保护",
       "info_status": "📊 *防垃圾状态*\n\n{status}\n级别：{level}\n操作：{action}",
-      "deactivated": "⚠️ *防垃圾保护已关闭*\n\n垃圾检测关掉了",
-      "activated": "✅ *防垃圾保护已开启*\n\n级别：{level}（{description}）\n操作：{action}",
-      "level_set": "✅ *级别改了*\n\n新级别：{level}",
-      "action_set": "✅ *操作改了*\n\n发垃圾消息的人会被：{action_desc}",
-      "invalid_level": "❌ 级别不对，请用：low、medium、high",
-      "help": "📖 *防垃圾帮助*\n\n*命令：*\n• `antispam on` - 开启（默认：medium）\n• `antispam off` - 关闭\n• `antispam <low/medium/high>` - 改灵敏度\n• `antispam <warn/delete/kick>` - 改操作\n• `antispam info` - 看看现在的设置\n\n*级别：*\n• Low - 宽松（活跃群）\n• Medium - 平衡（推荐）\n• High - 严格（问题群）",
-      "spam_warning": "⚠️ @{mention} 别刷屏了！",
-      "action_warn": "已警告（没踢）",
-      "action_delete": "仅删除消息",
-      "action_kick": "已踢出群聊"
+      "deactivated": "⚠️ *防刷屏已关闭*\n\n刷屏检测先歇着了",
+      "activated": "✅ *防刷屏已开启*\n\n级别：{level}（{description}）\n操作：{action}",
+      "level_set": "✅ *级别改好啦*\n\n新级别：{level}",
+      "action_set": "✅ *处理方式改好啦*\n\n刷屏的人会被：{action_desc}",
+      "invalid_level": "❌ 没有这个级别哦，可选：low、medium、high",
+      "help": "📖 *防垃圾帮助*\n\n*命令：*\n• `antispam on` - 启用（默认：medium）\n• `antispam off` - 禁用\n• `antispam <low/medium/high>` - 更改灵敏度\n• `antispam <warn/delete/kick>` - 更改操作\n• `antispam info` - 查看当前设置\n\n*级别：*\n• Low - 宽松（活跃群组）\n• Medium - 平衡（推荐）\n• High - 严格（问题群组）",
+      "spam_warning": "⚠️ @{mention} 别刷屏啦，歇一歇～",
+      "action_warn": "警告一下（不踢人）",
+      "action_delete": "只删消息",
+      "action_kick": "请出群"
     },
     "sticker": {
-      "desc": "把任何图片或视频变成贴纸！ ✨",
-      "reply_required": "嘿！你得先回复一张图片或视频呀。 📸"
+      "desc": "把任何图片或视频变成酷酷的贴纸！ ✨",
+      "reply_required": "嘿！先回复一张图片或一段视频哦 📸"
     },
     "circle": {
-      "desc": "把图片变成圆形的贴纸。",
-      "reply_required": "请回复图片。"
+      "desc": "把图片变成圆圆的贴纸。",
+      "reply_required": "回复一张图片吧。"
     },
     "take": {
-      "usage": "示例：take <标题,作者,链接>（回复贴纸或音频）。音频需要标题；作者和链接可选。",
-      "desc": "改贴纸的元数据。回复贴纸就改它的包信息，回复音频就加点信息（标题、作者、链接）。",
-      "reply_required": "请回复贴纸或音频消息。",
-      "additional_info": "音频的元数据里，作者或链接是可选的。"
+      "usage": "示例：take <标题,作者,URL>（回复贴纸或音频）。音频需要标题；作者和 URL 可选。",
+      "desc": "通过更新元数据更改贴纸包。如果回复贴纸，更新其包元数据；如果回复音频，添加元数据（标题、作者、URL）。",
+      "reply_required": "回复一个贴纸或一段音频吧。",
+      "additional_info": "对于音频元数据，作者或 URL 是可选的。"
     },
     "mp4": {
-      "desc": "把动态贴纸（WebP）转成 MP4 视频。",
-      "reply_required": "请回复动态贴纸。"
+      "desc": "将动态贴纸（WebP）转换为 MP4 视频。",
+      "reply_required": "回复一个动态贴纸吧。"
     },
     "story": {
-      "usage": "示例：story <用户名>（或者回复带用户名的消息）",
-      "desc": "下载指定用户的 Instagram 快拍。如果有多个快拍，会列出来让你选。",
-      "not_found": "没找到这个用户的快拍。",
-      "list": "一共 {0} 个快拍可以选。选一个下载吧。\n"
+      "usage": "示例：story <用户名>（或回复包含用户名的消息）",
+      "desc": "下载指定用户名的 Instagram 快拍。如果有多个快拍，将提供列表供选择。",
+      "not_found": "这个用户名下没找到快拍耶。",
+      "list": "一共有 {0} 个快拍，挑一个下载吧～\n"
     },
     "tag": {
-      "usage": "示例：tag all | tag admin | tag notadmin | tag <自定义消息>（或者回复消息后输入 'tag'）",
-      "desc": "在群里 @ 成员。用 'all' @所有人，'admin' 只 @管理员，'notadmin' @非管理员，也可以带点自定义消息。"
+      "usage": "示例：tag all | tag admin | tag notadmin | tag <自定义消息>（或回复消息后输入 'tag'）",
+      "desc": "根据您的选择在群组中标记成员。使用 'all' 提及所有人，'admin' 仅提及管理员，'notadmin' 提及非管理员，或提供自定义消息随提及一起发送。"
     },
     "tictactoe": {
-      "usage": "示例：tictactoe <对手JID> 或 tictactoe normal <对手JID> 或 tictactoe restart <对手JID> 或 tictactoe end\n默认是无尽模式，用 'tictactoe normal' 进普通模式。",
-      "desc": "和别人玩井字棋。通过 @、回复消息或指定 JID 来发起挑战。用 'tictactoe end' 结束，'tictactoe restart <对手JID>' 重开。",
-      "choose_opponent": "请通过回复消息或 @ 用户选个对手，不能和自己玩哦。",
-      "game_ended": "游戏结束了。",
-      "game_restarted": "和新对手重新开始了。",
-      "invalid_input": "输入不对，给个有效的对手，或者正常用 'end' 或 'restart'。",
+      "usage": "示例：tictactoe <对手JID> 或 tictactoe normal <对手JID> 或 tictactoe restart <对手JID> 或 tictactoe end\n默认模式为无限，使用 'tictactoe normal' 进入普通模式。",
+      "desc": "与对手玩井字棋游戏。通过提及、回复消息或指定 JID 挑战用户。使用 'tictactoe end' 结束游戏，'tictactoe restart <对手JID>' 重新开始。",
+      "choose_opponent": "回复一条消息或者@一个人来选对手吧，可不能自己跟自己下哦。",
+      "game_ended": "游戏结束啦。",
+      "game_restarted": "换了新对手，重新开局！",
+      "invalid_input": "看不懂哦，请选一个有效的对手，或者用 'end'、'restart'。",
       "players": "玩家",
-      "already_occupied": "_已经有人了_",
+      "already_occupied": "_这格已经有人啦_",
       "current_player": "当前玩家",
       "game_finish": "游戏结束 🏁",
       "winner": "赢家",
-      "restart": "重新开始",
+      "restart": "再来一局",
       "header": "---井字棋---"
     },
     "tiktok": {
-      "usage": "怎么用：tiktok <链接>（或者回复链接）",
-      "desc": "下载无水印的 TikTok 视频！ 🎬",
-      "not_found": "找不到这个视频，链接对吗？ 🧐"
+      "usage": "使用方法：tiktok <URL>（或回复链接）",
+      "desc": "下载 TikTok 视频，烦人的水印统统去掉！ 🎬",
+      "not_found": "没找到这个视频，链接对吗？ 🧐"
     },
     "tog": {
       "usage": "示例：tog ping off",
-      "desc": "开启或关闭机器人命令。",
-      "invalid": "输入不对，请用：tog <命令> on|off（比如：tog ping off）",
-      "self_reference": "你...真的舍得关掉我吗？🥺",
-      "enabled": "{0} 已开启。",
-      "disabled": "{0} 已关闭。"
+      "desc": "启用或禁用机器人命令。",
+      "invalid": "看不懂哦，用法：tog <命令> on|off（比如：tog ping off）",
+      "self_reference": "你真的要把我关掉吗？😢",
+      "enabled": "{0} 开起来啦。",
+      "disabled": "{0} 关掉了。"
     },
     "trt": {
       "usage": "示例：trt 你好（回复消息）",
-      "desc": "用 Google 翻译即时翻译任何文字！ 🌍"
+      "desc": "用 Google 翻译，啥都能秒翻！ 🌍"
     },
     "twitter": {
-      "usage": "示例：twitter <链接>（或者回复链接）",
-      "desc": "快速从 Twitter（X）抓视频！ 🐦",
-      "not_found": "里面没有视频，检查一下链接！ 🔍",
-      "choose_quality": "> 选个清晰度：\n"
+      "usage": "示例：twitter <URL>（或回复链接）",
+      "desc": "一眨眼就从 Twitter（X）抓下视频！ 🐦",
+      "not_found": "这里没视频哦，检查下链接吧！ 🔍",
+      "choose_quality": "> 挑个画质吧：\n"
     },
     "upload": {
-      "usage": "示例：upload <链接>（或者回复带链接的消息）",
-      "desc": "从链接下载媒体文件。如果是 Google 图片的短链接，会自动抓真实图片链接。"
+      "usage": "示例：upload <URL>（或回复包含 URL 的消息）",
+      "desc": "从提供的 URL 下载媒体。对于缩短的 Google 图片 URL，会自动获取直接图片 URL。"
     },
     "url": {
       "usage": "示例：url（回复图片/视频）",
-      "desc": "把媒体上传，拿个直链！ 🔗"
+      "desc": "上传你的媒体，拿到直链！ 🔗"
     },
     "getvar": {
       "usage": "示例：getvar sudo",
-      "desc": "看看变量的值。给个变量名（不区分大小写）就行。",
-      "not_found": "没找到变量 {0}。"
+      "desc": "显示变量的值。提供变量键（不区分大小写）以获取其值。",
+      "not_found": "变量里没有 {0} 哦。"
     },
     "lyrics": {
       "usage": "示例：lyrics 演员",
-      "desc": "找找你最喜欢的歌的歌词！ 🎤",
-      "not_found": "找不到歌词，是不是拼错了？ 🧐"
+      "desc": "找找你最爱的歌的歌词！ 🎤",
+      "not_found": "没找到这首歌词，是不是打错字啦？ 🧐"
     },
     "delvar": {
       "usage": "示例：delvar sudo",
-      "desc": "通过变量名删掉变量。",
-      "not_found": "没找到变量 {0}。",
-      "deleted": "{0} 删掉了。"
+      "desc": "通过指定键删除变量。",
+      "not_found": "变量里没有 {0} 哦。",
+      "deleted": "{0} 删掉啦。"
     },
     "setvar": {
-      "usage": "示例：setvar 键 = 值",
-      "desc": "设置变量。用 '=' 隔开键和值。",
-      "success": "新变量 {0} 已设置为 {1}。"
+      "usage": "示例：setvar key = value",
+      "desc": "设置带有特定键和值的变量。使用 '=' 分隔键和值。",
+      "success": "新变量 {0} 设好啦，值是 {1}。"
     },
     "allvar": {
-      "desc": "按排序显示所有存着的变量。"
+      "desc": "按排序顺序显示所有存储的变量。"
     },
     "vote": {
-      "usage": "> 示例：\nvote q|你最喜欢什么颜色？\no|😀|蓝色\no|😊|红色",
-      "desc": "在 WhatsApp 群里发起投票。",
-      "notes": "如果不指定发给谁，投票会发在当前群里。",
-      "no_vote": "没有可以投的票！",
+      "usage": "> 示例：\nvote q|您最喜欢的颜色是什么？\no|😀|蓝色\no|😊|红色",
+      "desc": "在 WhatsApp 群组中发起投票。",
+      "notes": "如果未指定收件人，投票消息将发送到当前群组。",
+      "no_vote": "现在还没有投票哦！",
       "total_vote": "总票数：*{0}*",
-      "delete_vote": "把现在的投票删了再建新的吧。",
-      "option_required": "至少要两个选项",
-      "question_required": "还没写问题呢",
-      "vote": "选一个或者回复选项来投票。",
-      "vote_deleted": "_投票删掉了。_",
-      "voted": "@{0} 投给了 {1}\n\n${2}"
+      "delete_vote": "先删掉现在的投票，才能发新的哦。",
+      "option_required": "至少要两个选项哦",
+      "question_required": "还缺个问题呢",
+      "vote": "点个表情或回复选项就能投票啦。",
+      "vote_deleted": "_投票删掉啦。_",
+      "voted": "@{0} 投票给了 {1}\n\n${2}"
     },
     "warn": {
-      "usage": "示例：warn @用户 或 warn reset @用户。也可以回复用户的消息然后输入 'warn' 或 'warn reset'。",
-      "desc": "警告群里的用户。警告次数超了，这人就会被踢出群。用 'warn reset' 清空警告。",
-      "reset_usage": "示例：warn reset @用户（或者回复用户消息后输入 'warn reset'）。",
-      "cannot_remove_admin": "管理员我可踢不动。",
-      "kick_default": "{0} 警告次数超标，被踢出去了。",
-      "warn_default": "⚠️ 警告 {0}！已有 {1}/{2} 次警告。"
+      "usage": "示例：warn @用户 或 warn reset @用户。您也可以回复用户消息后输入 'warn' 或 'warn reset'。",
+      "desc": "警告群组中的用户。此命令增加用户的警告次数。如果次数超过限制，该用户将被踢出群组。使用 'warn reset' 清除用户的警告。",
+      "reset_usage": "示例：warn reset @用户（或回复用户消息后输入 'warn reset'）。",
+      "cannot_remove_admin": "管理员我可请不走哦。",
+      "kick_default": "{0} 警告次数超标，已被请出群。",
+      "warn_default": "⚠️ 警告 {0}！已经 {1}/{2} 次啦，悠着点～"
     },
     "wcg": {
-      "usage": "示例：\n- wcg start（强制开始接龙）\n- wcg end（结束现在的游戏）\n默认是简单模式。",
-      "desc": "文字接龙游戏：发单词接着往下接。'wcg start' 强制开始，'wcg end' 停下。",
-      "game_ends": "游戏结束",
-      "already_used": "_这个词已经用过了！_",
-      "not_starting_with": "_{0} 不是以 {1} 开头的_",
-      "length_limit": "_这个词不到 {0} 个字母_",
-      "not_in_list": "_我的词库里没这个词_",
-      "turn_info": "🎲轮到：@{0}\n🙌下一位：@{1}\n🆎以 {2} 开头（至少 {3} 个字母）\n🏆剩余玩家：{4}/{5}\n⏳你有 *{6}* 秒时间回复\n📝总单词数：{7}",
-      "timeout": "超时了 @{0}！你出局了！ 🚫",
-      "winner": "@{0} 赢得了游戏 🏆\n单词数：*{1}*\n最长单词：*{2}（{3}）* 由 @{4} 📚\n时间：*{5}* ⏱️",
-      "joined": "@{0} 加入了 👏",
-      "starting": "🎮 游戏马上开始...\n👥 至少还要再来 1 个人哦\n⏳ 你有 60 秒时间加入 ⏳\n🧩 模式 {0}",
-      "starts_in": "🎮 游戏将在 {0} 秒后开始 ⏳\n输入 *join* 加入 🙋‍♂️🙋‍♀️\n🧩 模式 {1}{2}",
-      "players_count": "\n\n👥 {0} 名玩家加入了。",
-      "terminated": "_玩家不够，游戏取消了。_",
-      "mode_update": "_WCG 模式更新为 {0}_"
+      "usage": "示例：\n- wcg start（强制开始接龙游戏）\n- wcg end（结束当前游戏）\n默认模式为简单。",
+      "desc": "文字接龙游戏：提交单词继续接龙。使用 'wcg start' 强制开始，'wcg end' 停止。",
+      "game_ends": "游戏结束啦",
+      "already_used": "_这个词已经有人用过啦！_",
+      "not_starting_with": "_{0} 不是以 {1} 开头的哦_",
+      "length_limit": "_这个词太短啦，至少要 {0} 个字母_",
+      "not_in_list": "_这个词不在我的词库里耶_",
+      "turn_info": "🎲轮到：@{0}\n🙌下一位：@{1}\n🆎以 {2} 开头（至少 {3} 个字母）\n🏆剩余玩家：{4}/{5}\n⏳您有 *{6}* 秒回复\n📝总单词数：{7}",
+      "timeout": "@{0} 超时啦！你出局了～ 🚫",
+      "winner": "@{0} 赢得了比赛 🏆\n单词数：*{1}*\n最长单词：*{2}（{3}）*，来自 @{4} 📚\n用时：*{5}* ⏱️",
+      "joined": "@{0} 加入战局 👏",
+      "starting": "🎮 游戏即将开始...\n👥 需要 2 名或更多玩家\n⏳ 您有 60 秒加入 ⏳\n🧩 模式 {0}",
+      "starts_in": "🎮 游戏将在 {0} 秒后开始 ⏳\n输入 *join* 参与 🙋‍♂️🙋‍♀️\n🧩 模式 {1}{2}",
+      "players_count": "\n\n👥 {0} 名玩家已加入。",
+      "terminated": "_人不够，这局先取消啦。_",
+      "mode_update": "_WCG 模式切换成 {0} 啦_"
     },
     "wrg": {
-      "usage": "示例：\n- wrg start（强制开始随机词语游戏）\n- wrg hard（困难模式）\n- wrg easy（简单模式）\n- wrg end（结束现在的游戏）",
-      "desc": "随机词语游戏：根据提示发词。用 'wrg start' 开新局，'wrg end' 结束。"
+      "usage": "示例：\n- wrg start（强制开始随机单词游戏）\n- wrg hard（以困难模式开始）\n- wrg easy（以简单模式开始）\n- wrg end（结束当前游戏）",
+      "desc": "随机单词游戏：参与游戏，根据随机提示提交单词。使用 'wrg start' 开始新游戏，'wrg end' 结束游戏。"
     },
     "google": {
-      "usage": "示例：google 怎么泡茶",
-      "desc": "用 Google 搜任何东西！ 🌐"
+      "usage": "示例：google 如何泡茶",
+      "desc": "啥都能帮你 Google 一下！ 🌐"
     },
     "yts": {
       "usage": "示例：yts 周杰伦",
-      "desc": "在 YouTube 上搜视频！ 🔍",
+      "desc": "在 YouTube 上帮你找视频！ 🔍",
       "title": "*标题：* ",
       "time": "*时长：* ",
       "views": "*观看量：* ",
@@ -888,177 +888,177 @@
       "url": "*链接：* "
     },
     "song": {
-      "usage": "示例：song 稻香 或 <YouTube链接>",
-      "desc": "从 YouTube 下载歌曲！ 🎵",
-      "not_found": "没找到那首歌，换个名字试试！ 🎧",
-      "no_result": "_没找到_ *{0}* _的结果_",
+      "usage": "示例：song 稻香 或 <YouTube URL>",
+      "desc": "从 YouTube 下载任何歌曲！ 🎵",
+      "not_found": "没找到这首歌，换个名字试试？ 🎧",
+      "no_result": "_没找到_ *{0}* _的相关结果_",
       "id_label": "🆔&id\n",
-      "list_header": "搜了 {0}，找到了 {1} 个结果\n发 🆔 下载歌曲。\n"
+      "list_header": "搜了 {0}，找到 {1} 个结果\n发送 🆔 就能下载歌曲啦。\n"
     },
     "video": {
-      "usage": "示例：video 稻香 或 <YouTube链接>",
+      "usage": "示例：video 稻香 或 <YouTube URL>",
       "desc": "高清下载 YouTube 视频！ 🎥",
-      "not_found": "没找到视频，检查一下名字或链接！ 📺",
-      "list_header": "搜了 {0}\n找到了 {1} 个结果"
+      "not_found": "没找到视频，检查下名字或链接吧！ 📺",
+      "list_header": "搜了 {0}\n找到 {1} 个结果"
     },
     "lofi": {
       "desc": "从 Tidal 下载 lo-fi 音频",
-      "usage": "_请给个歌名_",
-      "no_result": "_没找到_ *{0}* _的结果_",
-      "error_download": "_下载 lo-fi 音频出错了：{0}_",
-      "error_search": "_搜 lo-fi 出错了：{0}_",
-      "list_header": "搜了 {0}，找到了 {1} 个结果\n发 🆔 下载 lo-fi。\n"
+      "usage": "_告诉我歌名吧_",
+      "no_result": "_没找到_ *{0}* _的相关结果_",
+      "error_download": "_下载 lo-fi 音频出错：{0}_",
+      "error_search": "_搜索 lo-fi 出错：{0}_",
+      "list_header": "搜了 {0}，找到 {1} 个结果\n发送 🆔 就能下载 lo-fi 啦。\n"
     },
     "update": {
       "usage": "示例：update",
-      "desc": "检查有没有更新。有的话告诉你，没有的话说明已经是最新的了。",
-      "up_to_date": "已经是最新版啦。",
+      "desc": "检查新更新。显示可用更新或确认机器人已是最新版本。",
+      "up_to_date": "机器人已经是最新版啦。",
       "available": "有 {0} 个新更新：\n{1}"
     },
     "update_now": {
       "usage": "示例：update now",
-      "desc": "把机器人更新到最新版。",
-      "up_to_date": "已经是最新版了，不用更新。",
+      "desc": "将机器人更新到最新版本。",
+      "up_to_date": "已经是最新版啦，不用更新。",
       "updating": "正在更新机器人...",
-      "updated": "机器人更新成功！"
+      "updated": "机器人更新好啦！"
     },
     "antigm": {
       "desc": "管理防群组提及设置 🛡️",
-      "usage": "> 老大！用这些命令控制群组提及：\n- antigm on | off\n- antigm delete | warn | kick\n- antigm ignore jid,jid,...",
-      "action": "操作更新了，老大！现在群组提及会被 *{0}*。 🛡️",
-      "filter": "过滤 JID 更新了，老大！我记下来了。 📝",
-      "enabled": "防群组提及开启！我盯着呢。 👀🛡️",
-      "disabled": "防群组提及关了，我不盯了。 ❌",
-      "ignore_prompt": "*老大，给个要忽略的 JID。* 🕵️‍♂️"
+      "usage": "> 老大！使用这些命令控制群组提及：\n- antigm on | off\n- antigm delete | warn | kick\n- antigm ignore jid,jid,...",
+      "action": "收到老大！以后有人群提及，就会 *{0}* 🛡️",
+      "filter": "过滤名单更新好啦，老大！我都记下了 📝",
+      "enabled": "防群提及开启！我会盯紧的 👀🛡️",
+      "disabled": "防群提及关掉了，我先不盯了 ❌",
+      "ignore_prompt": "*老大，告诉我要忽略哪个 JID 吧* 🕵️‍♂️"
     },
     "antigstatus": {
       "desc": "管理防群组状态设置 🛡️",
-      "usage": "> 老大！用这些命令控制群组状态：\n- antigstatus on | off\n- antigstatus ignore jid,jid,...\n- antigstatus unignore jid,jid,...\n- antigstatus list\n- antigstatus clear",
-      "filter": "过滤 JID 更新了，老大！ 📝",
-      "enabled": "防群组状态开启！我盯着呢。 👀🛡️",
-      "disabled": "防群组状态关了，我不盯了。 ❌",
-      "status": "*防群组状态：* `{0}`\n*忽略的群：* `{1}`",
-      "ignore_prompt": "*老大，给个要忽略的 JID。* 🕵️‍♂️",
-      "unignore_prompt": "*老大，给个要取消忽略的 JID。* 🕵️‍♂️",
-      "removed": "JID 从忽略列表删掉了，老大！ 🗑️",
-      "list_empty": "*忽略列表是空的，老大。*",
-      "list_header": "*忽略的群：*",
-      "cleared": "*忽略列表清空了，老大。* 🧹"
+      "usage": "> 老大！使用这些命令控制群组状态：\n- antigstatus on | off\n- antigstatus ignore jid,jid,...\n- antigstatus unignore jid,jid,...\n- antigstatus list\n- antigstatus clear",
+      "filter": "过滤名单更新好啦，老大！ 📝",
+      "enabled": "防群状态开启！我会盯紧的 👀🛡️",
+      "disabled": "防群状态关掉了，我先不盯了 ❌",
+      "status": "*防群组状态：* `{0}`\n*忽略的群组：* `{1}`",
+      "ignore_prompt": "*老大，告诉我要忽略哪个 JID 吧* 🕵️‍♂️",
+      "unignore_prompt": "*老大，告诉我要取消忽略哪个 JID 吧* 🕵️‍♂️",
+      "removed": "这些 JID 已经从忽略名单里拿掉啦，老大！ 🗑️",
+      "list_empty": "*忽略名单里空空的，老大。*",
+      "list_header": "*忽略的群组：*",
+      "cleared": "*忽略名单清空啦，老大* 🧹"
     },
     "reminder": {
-      "desc": "加一个 Google 日历提醒（支持大白话）。",
-      "usage": "*提醒命令怎么用：*\n\n- reminder <文字>（加事件）\n- reminder list（看看接下来的提醒）\n- reminder del <id>（删事件）\n- 示例：`reminder 明天上午10点开会`",
-      "success": "*提醒加好了！*\n\n*事件：* {0}\n*时间：* {1}\n*链接：* {2}",
+      "desc": "添加 Google 日历提醒（支持自然语言）。",
+      "usage": "*提醒命令使用说明：*\n\n- reminder <文字>（添加事件）\n- reminder list（查看即将到来的提醒）\n- reminder del <id>（删除事件）\n- 示例：`reminder 明天上午10点开会`",
+      "success": "*提醒加好啦！*\n\n*事件：* {0}\n*时间：* {1}\n*链接：* {2}",
       "list": "*接下来的提醒：*\n\n{0}",
-      "list_empty": "没找到接下来的提醒。",
-      "deleted": "提醒删掉了！",
-      "invalid_id": "提醒 ID 不对。",
-      "auth_required": "*需要验证：*\n\n请用 \"gauth\" 给机器人授权。",
+      "list_empty": "接下来没有提醒哦。",
+      "deleted": "提醒删掉啦！",
+      "invalid_id": "这个提醒 ID 不对哦。",
+      "auth_required": "*需要身份验证：*\n\n请使用 \"gauth\" 授权机器人。",
       "time": "时间",
       "id": "ID",
-      "short_id_info": "\n\n*注意：* 删除的时候只需要输入 ID 的前 2-4 个字符就行。"
+      "short_id_info": "\n\n*注意：* 删除命令只需输入 ID 的前 2-4 个字符。"
     },
     "ytlogin": {
-      "desc": "关联 YouTube 账号，让 .song / .video 可以下载（设备代码登录）。\n用 `.ytlogin`、`.ytlogin status` 或 `.ytlogin logout`。",
+      "desc": "关联 YouTube 账号，让 .song / .video 可以下载（设备代码登录）。\n使用 `.ytlogin`、`.ytlogin status` 或 `.ytlogin logout`。",
       "status_in": "*YouTube：* 已登录 ✅",
-      "status_out": "*YouTube：* 没登录。请用 `.ytlogin`。",
-      "logout": "*YouTube：* 退出了。",
-      "prompt": "*YouTube 登录*\n\n1. 打开：{0}\n2. 输入代码：*{1}*\n3. 批准访问。\n\n等你批准... 好了我在这儿告诉你。代码很快就会过期哦。",
-      "success": "*YouTube 登录成功 ✅*\n.song / .video 现在会用你的账号了。",
+      "status_out": "*YouTube：* 还没登录哦，用 `.ytlogin` 登录吧。",
+      "logout": "*YouTube：* 已经退出登录啦。",
+      "prompt": "*YouTube 登录*\n\n1. 打开：{0}\n2. 输入代码：*{1}*\n3. 批准访问。\n\n等待批准…完成后我会在这里通知你。代码很快过期。",
+      "success": "*YouTube 登录成功 ✅*\n以后 .song / .video 都用你的账号啦。",
       "failed": "*YouTube 登录失败：* {0}"
     },
     "gauth": {
       "desc": "管理 Google 身份验证（验证、导入、登出、状态）。YouTube 可选，高级功能必需。",
-      "usage": "*Google 授权命令：*\n\n- `.gauth auth` — 开始验证。\n- `.gauth code <链接或代码>` — 验证授权码。\n- `.gauth import` — 导入 `credentials.json`（回复文件）。\n- `.gauth status` — 看看现在验证没。\n- `.gauth logout` — 清掉这个会话的凭据和令牌。\n\n*注意：* 普通的 YouTube 功能不需要 Google 授权，但年龄限制视频和 Google Drive/日历/任务集成必须要。",
-      "prompt": "*Google 身份验证设置指南：*\n\n1. *建项目：* 访问 https://console.cloud.google.com/，点『选择项目『>『新建项目『，起名叫『Levanter『然后点『创建『。\n2. *开 API：* 去『API 和服务『>『库『，搜并开启『Google Drive API『、『Google Calendar API『和『Google Tasks API『。\n3. *OAuth 同意：* 去『API 和服务『>『OAuth 同意屏幕『，选『外部『，填好必填的，在『受众群体『那里把你的邮箱加进『测试用户『（必须）。\n4. * 凭据：* 去『API 和服务『>『凭据『，点『创建凭据『>『OAuth 客户端 ID『，选『桌面应用程序『，起个名点『创建『。\n5. *下载：* 在新建的客户端 ID 旁边点下载（JSON）图标，保存好，然后通过回复文件用 `.gauth import`。\n6. *授权：* 点下面的链接去授权：\n{0}\n\n7. *完成：* 登录，接受『未验证应用『警告（点『高级『>『转到 Levanter『），从跳转后的地址栏复制完整链接，然后发给我：\n`.gauth code <复制的链接>`",
-      "success": "验证成功！",
-      "import_success": "`credentials.json` 导入成功！现在用 `.gauth auth` 去授权吧。",
-      "import_reply": "请回复 `credentials.json` 文件。",
-      "status_auth": "*状态：* 这个会话已经验证过了。",
-      "status_not_auth": "*状态：* 这个会话还没验证。请用 `.gauth auth`。",
-      "logout": "退出了，这个会话的 Google 授权数据清空。",
+      "usage": "*Google 授权命令：*\n\n- `.gauth auth` — 开始身份验证流程。\n- `.gauth code <url_or_code>` — 验证授权码。\n- `.gauth import` — 导入 `credentials.json`（回复文件）。\n- `.gauth status` — 检查当前身份验证状态。\n- `.gauth logout` — 清除此会话的凭据和令牌。\n\n*注意：* Google 授权对一般 YouTube 功能可选，但年龄限制视频和 Google Drive/日历/任务集成必需。",
+      "prompt": "*Google 身份验证设置指南：*\n\n1. *创建项目：* 打开 https://console.cloud.google.com/，点「选择项目」>「新建项目」，取名「Levanter」后点「创建」。\n2. *启用 API：* 进入「API 和服务」>「库」，搜索并启用「Google Drive API」、「Google Calendar API」和「Google Tasks API」。\n3. *OAuth 同意屏幕：* 进入「API 和服务」>「OAuth 同意屏幕」，选「外部」，填好必填项，并在「受众群体」里把你的邮箱加进「测试用户」（必须）。\n4. *凭据：* 进入「API 和服务」>「凭据」，点「创建凭据」>「OAuth 客户端 ID」，类型选「桌面应用」，取个名字后点「创建」。\n5. *下载：* 在新的客户端 ID 旁边点下载（JSON）图标，保存后回复这个文件并使用 `.gauth import`。\n6. *授权：* 点下面的链接授权：\n{0}\n\n7. *完成：* 登录后，遇到「未经验证的应用」警告就点「高级」>「转到 Levanter」，然后复制跳转后地址栏里的完整网址，发送：\n`.gauth code <复制的网址>`",
+      "success": "验证成功啦！",
+      "import_success": "`credentials.json` 导入成功！接下来用 `.gauth auth` 授权吧。",
+      "import_reply": "回复 `credentials.json` 这个文件哦。",
+      "status_auth": "*状态：* 本会话已经验证好啦。",
+      "status_not_auth": "*状态：* 本会话还没验证，用 `.gauth auth` 吧。",
+      "logout": "已经登出，本会话的 Google 授权数据也清掉啦。",
       "failed": "*失败：* {0}"
     },
     "gdrive": {
-      "desc": "Google Drive 操作（上传、列表、删除）。",
-      "upload_success": "上传成功！",
+      "desc": "Google Drive 操作（上传、列出、删除）。",
+      "upload_success": "上传完成啦！",
       "uploading": "正在把媒体传到 Drive...",
-      "not_authorized": "没授权，请用 \"backup auth\"。",
+      "not_authorized": "还没授权哦，用 \"backup auth\" 授权吧。",
       "list": "*Google Drive 文件：*\n\n{0}",
-      "list_empty": "Levanter 文件夹里没找到文件。",
-      "deleted": "文件删掉了！",
-      "invalid_id": "请给个有效的文件 ID。",
+      "list_empty": "Levanter 文件夹里还没有文件哦。",
+      "deleted": "文件删掉啦！",
+      "invalid_id": "给我一个有效的文件 ID 吧。",
       "error": "*错误：* {0}",
-      "url_prompt": "请给个有效的链接，标记媒体消息，或者用子命令：list、del <id>、dl <id>。\n示例：`gupload list`",
-      "short_id_info": "\n\n*注意：* 下载或删除的时候，只用输 ID 的前 2-4 个字符就行。"
+      "url_prompt": "请提供有效的 URL，标记媒体消息，或使用子命令：list、del <id>、dl <id>。\n示例：`gupload list`",
+      "short_id_info": "\n\n*注意：* 下载或删除命令只需输入 ID 的前 2-4 个字符。"
     },
     "task": {
-      "desc": "管理你的 Google 任务",
-      "usage": "怎么用：task <list | list-lists | list-switch <名称> | add <文字> | del <id> | done <id> | update <id> <文字> | <文字>>",
-      "added": "任务加好了：*{0}*\n截止：{1}",
-      "deleted": "任务删掉了。",
-      "updated": "任务 *{0}* 标记为 *{1}*",
-      "list_empty": "没找到任务。",
+      "desc": "管理您的 Google 任务",
+      "usage": "使用方法：task <list | list-lists | list-switch <名称> | add <文字> | del <id> | done <id> | update <id> <文字> | <文字>>",
+      "added": "任务已添加：*{0}*\n截止日期：{1}",
+      "deleted": "任务删掉啦。",
+      "updated": "任务 *{0}* 已标记为 *{1}*",
+      "list_empty": "一个任务都没有，好清闲～",
       "list_header": "📝 *任务（{0}）：*\n",
-      "not_found": "没找到任务。",
-      "auth_required": "请用 *.gauth auth* 验证并开启 Google Tasks 权限。",
+      "not_found": "没找到这个任务。",
+      "auth_required": "请使用 *.gauth auth* 进行身份验证并启用 Google Tasks 权限。",
       "list_lists": "📝 *任务列表：*\n",
-      "switched": "默认任务列表换成 *{0}* 了。"
+      "switched": "默认任务列表切换成 *{0}* 啦。"
     },
     "spotify": {
-      "desc": "下载你喜欢的歌或歌单 🎧",
-      "example": "*示例：* spotify <链接>",
-      "downloading": "_正在给你下 {0} 首歌，准备听歌吧！_ 🎧🎶"
+      "desc": "下载你最爱的歌曲或歌单 🎧",
+      "example": "*示例：* spotify <url>",
+      "downloading": "_正在给你下载 {0} 首歌，准备好嗨起来吧！_ 🎧🎶"
     },
     "audio": {
       "desc": "音频调制",
-      "reply_to_audio": "*请回复音频消息*"
+      "reply_to_audio": "*回复一段音频吧*"
     },
     "img": {
       "desc": "Pinterest 图片搜索",
       "example": "*示例：img 猫咪*\n*img 10 猫咪*",
-      "no_result": "_没找到 {0} 的 Pinterest 图片_",
-      "downloading": "_正在下载 {1} 的 {0} 张 Pinterest 图片_"
+      "no_result": "_没找到 {0} 的 Pinterest 图片耶_",
+      "downloading": "_正在下载 {0} 张关于 {1} 的 Pinterest 图片_"
     },
     "react": {
-      "desc": "给消息加表情回应",
+      "desc": "回应消息",
       "example": "_示例：react ❣_",
-      "channel_desc": "给频道加回应",
+      "channel_desc": "回应频道",
       "channel_example": "_示例：creact https://whatsapp.com/channel/xxx/xxx, ❣_",
-      "info_desc": "看看频道信息",
+      "info_desc": "获取频道信息",
       "info_example": "_示例：cinfo https://whatsapp.com/channel/xxx",
-      "invalid_url": "_无效的频道链接_",
-      "metadata_failed": "_拿不到频道元数据_",
+      "invalid_url": "_这个频道链接不对哦_",
+      "metadata_failed": "_没拿到频道信息_",
       "name": "*名称：* ",
       "jid": "*Jid：* ",
-      "subscribers": "*订阅数：* ",
+      "subscribers": "*订阅者：* ",
       "verification": "*认证：* ",
       "creation": "*创建时间：* ",
       "description": "*描述：* "
     },
     "budget": {
-      "income_desc": "记一笔收入",
-      "income_example": "*缺类型呀*\n*示例：income 类型,金额,备注*\n*income 工资, 500*\n\n*备注可选*",
-      "income_success": "*这个月的收入是 {0}*",
-      "expense_desc": "记一笔支出",
-      "expense_example": "*缺类型呀*\n*示例：expense 类型,金额,备注*\n*expense 电影, 200, 看电影*\n\n*备注可选*",
-      "expense_success": "*这个月的支出是 {0}*",
-      "del_desc": "删掉收入 | 支出",
-      "del_example": "*示例：delbudget id*\n\n*ID 在摘要里*\n*想改金额的话，重新记一次，别删*",
-      "del_not_found": "_{0} 不在列表里。_",
-      "del_success": "_{0} 从列表里删掉了。_",
-      "summary_desc": "看看账本摘要",
+      "income_desc": "设置收入",
+      "income_example": "*缺少类型*\n*示例：income 类型,金额,备注*\n*income 工资, 500*\n\n*备注为可选*",
+      "income_success": "*本月收入为 {0}*",
+      "expense_desc": "设置支出",
+      "expense_example": "*缺少类型*\n*示例：expense 类型,金额,备注*\n*expense 电影, 200, 电影名称*\n\n*备注为可选*",
+      "expense_success": "*本月支出为 {0}*",
+      "del_desc": "删除收入 | 支出",
+      "del_example": "*示例：delbudget id*\n\n*来自摘要的 ID*\n*如需更新金额，请重新输入而非删除*",
+      "del_not_found": "_{0} 不在列表中。_",
+      "del_success": "_{0} 已从列表中删除。_",
+      "summary_desc": "获取预算摘要",
       "summary_example": "*示例：summary 2023年5月1日, 2023年5月3日*",
-      "budget_desc": "AI 智能记账 - 像聊天一样记账",
-      "budget_example": "*像聊天一样记账*\n\n*示例：*\n_budget 喝咖啡花了50_\n_budget 收到工资3000_\n_budget 付了200块房租_\n_budget 打车15块_",
-      "budget_failed": "*我没看懂这笔账，再试一次吧。*\n\n_示例：budget 喝咖啡花了50_",
-      "budget_success": "*{0} 记下来了*\n_金额：{1}_\n_分类：{2}_\n_备注：{3}_\n\n*本月 {0} 总计：{4}*"
+      "budget_desc": "AI 智能记账 - 用自然语言描述您的交易",
+      "budget_example": "*自然描述您的交易*\n\n*示例：*\n_budget 喝咖啡花了50_\n_budget 收到工资3000_\n_budget 付了200块房租_\n_budget 打车15块_",
+      "budget_failed": "*这笔账我没看懂，再说一遍？*\n\n_示例：budget 喝咖啡花了50_",
+      "budget_success": "*{0} 记下啦*\n_金额：{1}_\n_类别：{2}_\n_备注：{3}_\n\n*本月 {0} 合计：{4}*"
     },
     "exif": {
-      "desc": "提取贴纸的 Exif 元数据",
-      "reply_to_sticker": "*请回复贴纸。*",
-      "failed": "*贴纸下载失败。*",
-      "not_found": "*这个贴纸里没有 Exif 元数据。*",
+      "desc": "从贴纸中提取 Exif 元数据",
+      "reply_to_sticker": "*回复一个贴纸吧。*",
+      "failed": "*贴纸没下下来。*",
+      "not_found": "*这个贴纸里没有 Exif 信息哦。*",
       "pack_id": "*包 ID：* ",
       "pack_name": "*包名称：* ",
       "author": "*作者：* ",
@@ -1068,15 +1068,15 @@
       "desc": "Bing AI",
       "example": "*示例：bing 你好*",
       "dale_desc": "Bing 图像创建器",
-      "dale_cookie_prompt": "请设置 Bing Cookie。去 https://bing.com/images/create 登录，用一次 Bing Image Creator，然后把 Cookie 复制过来。",
-      "dale_example": "*示例：* dale 创建一张 3D 错觉图，一个穿白衬衫的男孩悠闲地坐在豪华沙发上，穿白运动鞋、黑T恤、戴墨镜，看向前方。背景是黑墙，上面用黄色大写字母写着 'Arjun'。"
+      "dale_cookie_prompt": "请设置 Bing Cookie，登录 https://bing.com/images/create，使用一次 Bing Image Creator，然后复制 Cookie。",
+      "dale_example": "*示例：* dale 做一张 WhatsApp 头像用的 3D 错觉图：一个穿白衬衫的男孩随意地坐在豪华沙发上，脚穿白色运动鞋，黑色T恤，戴着墨镜，目视前方。背景的黑墙上用大号黄色大写字母写着「Arjun」。"
     },
     "backup": {
-      "desc": "备份操作：验证、检查或执行备份。",
-      "usage": "*备份命令怎么用：*\n\n- .gauth auth — 验证账号，为了能访问 Google Drive。\n- backup now — 马上备份。",
-      "success": "备份搞定了！",
-      "auth_prompt": "请用 `.gauth auth` 开始验证。",
-      "code_prompt": "请用 `.gauth code <链接或代码>` 验证一下。",
+      "desc": "管理备份操作：验证、校验或执行备份。",
+      "usage": "*备份命令使用说明：*\n\n- .gauth auth — 验证您的账户以访问 Google Drive。\n- backup now — 立即执行备份。",
+      "success": "备份完成啦！",
+      "auth_prompt": "请使用 `.gauth auth` 启动身份验证。",
+      "code_prompt": "请使用 `.gauth code <url_or_code>` 验证您的代码。",
       "downloading": "_正在下载文件..._"
     },
     "poll": {
@@ -1087,19 +1087,19 @@
       "desc_set": "设置命令",
       "desc_get": "获取命令",
       "desc_del": "删除命令",
-      "reply_to_sticker": "*请回复贴纸*",
+      "reply_to_sticker": "*回复一个贴纸吧*",
       "example_set": "*示例：setcmd ping*",
-      "not_set": "*还没设置命令*",
+      "not_set": "*还没设置任何命令哦*",
       "example_del": "*示例：*\ndelcmd 命令名\n回复贴纸",
-      "success": "_成功了_",
-      "failed": "_失败了_"
+      "success": "_搞定_",
+      "failed": "_没成功_"
     },
     "heroku": {
       "restart_desc": "重启 Dyno",
-      "restart_msg": "_正在重启..._",
+      "restart_msg": "_重启中..._",
       "shutdown_desc": "关闭 Dyno",
-      "shutdown_msg": "_正在关闭..._",
-      "quota_desc": "看看配额",
+      "shutdown_msg": "_正在关机..._",
+      "quota_desc": "显示配额信息",
       "quota_total": "总配额：",
       "quota_used": "已用配额：",
       "remaining": "剩余：",
@@ -1107,10 +1107,11 @@
     }
   },
   "api": {
-    "title": "⚡ API 模式 — 快速上手",
-    "send": "发文本消息：",
+    "title": "⚡ API 模式 — 快速开始",
+    "send": "发送文本消息：",
     "endpoints": "接口：",
-    "note": "⚠️ 没设置 API_PUBLIC_URL — 媒体和 webhook 下载链接会解析失败。请设置成你的公网地址。",
-    "locked": "⚠️ 没设置 API_KEY — API 锁上了"
+    "note": "⚠️ 未设置 API_PUBLIC_URL — 媒体/webhook 下载链接将无法解析。请将其设置为你的公开基础网址。",
+    "locked": "⚠️ 未设置 API_KEY — api 已锁定"
   }
 }
+
