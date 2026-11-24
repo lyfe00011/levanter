@@ -1,5 +1,12 @@
-const { Client, logger } = require('./lib/client')
 const { DATABASE, VERSION } = require('./config')
+const railway = require('./lib/railway')
+
+// lib/vars.js picks its backend when it is first loaded and only the "vps"
+// backend is backed by a file, so the Railway config.env has to exist before
+// the client below is required.
+railway.bootstrap()
+
+const { Client, logger } = require('./lib/client')
 const { stopInstance } = require('./lib/pm2')
 
 const start = async () => {
@@ -15,6 +22,11 @@ const start = async () => {
     })
     return stopInstance()
   }
+
+  // The client reads the session variables on connect, so the stored ones are
+  // put back before it starts and any later change is written back to the db.
+  await railway.restore()
+  railway.watch()
 
   const bot = new Client()
 

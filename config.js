@@ -16,7 +16,14 @@ const normalizeMode = (raw) => {
   return 'bot'
 }
 const MODE = normalizeMode(process.env.API_MODE)
+// Railway sets these on every service, and its containers have no persistent
+// config.env, so it needs to be treated as a VPS host that stores its variables
+// in the database. See lib/railway.js.
+const RAILWAY = ['RAILWAY_PROJECT_ID', 'RAILWAY_ENVIRONMENT_ID', 'RAILWAY_SERVICE_ID'].some((key) =>
+  Boolean(process.env[key])
+)
 module.exports = {
+  RAILWAY,
   VERSION: require('./package.json').version,
   SESSION_ID: (process.env.SESSION_ID || '').trim(),
   DATABASE:
@@ -83,7 +90,7 @@ module.exports = {
   MENTION: process.env.MENTION || '',
   MAX_UPLOAD: process.env.MAX_UPLOAD || 230,
   REJECT_CALL: process.env.REJECT_CALL,
-  VPS: toBool(process.env.VPS),
+  VPS: toBool(process.env.VPS) || RAILWAY,
   AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'false').trim(),
   SEND_READ: process.env.SEND_READ,
   KOYEB: toBool(process.env.KOYEB),
