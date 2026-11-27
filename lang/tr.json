@@ -715,7 +715,7 @@
       "action_kick": "kicked from group"
     },
     "sticker": {
-      "desc": "Bir resmi veya videoyu çıkartmaya dönüştür. Bir resme veya video mesajına cevap vererek çıkartma oluşturun.",
+      "desc": "Bir resmi veya videoyu çıkartmaya dönüştür. Bir resme veya video mesajına cevap vererek çıkartma oluşturun. Sesli videolar sesli çıkartmaya dönüşür; sessiz çıkartma için sticker mute kullanın.",
       "reply_required": "Lütfen bir resme veya videoya cevap verin."
     },
     "circle": {

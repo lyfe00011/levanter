@@ -715,7 +715,7 @@
       "action_kick": "Group-il ninnu purathaakki"
     },
     "sticker": {
-      "desc": "Photo-ye athallengil video-ye sticker aakkan. Reply kodukku.",
+      "desc": "Photo-ye athallengil video-ye sticker aakkan. Reply kodukku. Sound ulla video audio sticker aakum; sound venda-engil sticker mute kodukku.",
       "reply_required": "Photo-kko video-kko reply kodukku."
     },
     "circle": {

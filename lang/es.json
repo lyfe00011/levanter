@@ -715,7 +715,7 @@
       "action_kick": "expulsado del grupo"
     },
     "sticker": {
-      "desc": "Convierte una Imagen, GIF o Video Citado en Sticker.",
+      "desc": "Convierte una Imagen, GIF o Video Citado en Sticker. Los Videos con Sonido crean un Sticker con Audio; usa sticker mute para uno sin Sonido.",
       "reply_required": "Cita una Imagen o video."
     },
     "circle": {

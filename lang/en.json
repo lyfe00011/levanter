@@ -732,7 +732,7 @@
       "action_kick": "kicked from group"
     },
     "sticker": {
-      "desc": "Turn any image or video into a cool sticker! ✨",
+      "desc": "Turn any image or video into a cool sticker! Videos with sound become audio stickers; use sticker mute for a silent one.",
       "reply_required": "Hey! You need to reply to an image or video first. 📸"
     },
     "circle": {

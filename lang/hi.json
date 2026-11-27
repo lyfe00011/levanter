@@ -715,7 +715,7 @@
       "action_kick": "kicked from group"
     },
     "sticker": {
-      "desc": "Image ya video ko sticker mein convert karein. Sticker banane ke liye kisi image ya video message par reply karein.",
+      "desc": "Image ya video ko sticker mein convert karein. Sticker banane ke liye kisi image ya video message par reply karein. Awaaz wale video audio sticker bante hain; bina awaaz ke sticker ke liye sticker mute use karein.",
       "reply_required": "Kisi image ya video par reply karein."
     },
     "circle": {

@@ -715,7 +715,7 @@
       "action_kick": "kicked from group"
     },
     "sticker": {
-      "desc": "Convertir une image ou une vidéo en autocollant. Répondez à un message image ou vidéo pour générer un autocollant.",
+      "desc": "Convertir une image ou une vidéo en autocollant. Répondez à un message image ou vidéo pour générer un autocollant. Les vidéos avec du son deviennent des autocollants audio ; utilisez sticker mute pour un autocollant sans son.",
       "reply_required": "Veuillez répondre à une image ou une vidéo."
     },
     "circle": {

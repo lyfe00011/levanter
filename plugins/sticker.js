@@ -5,22 +5,35 @@ const {
   bot,
   addAudioMetaData,
   circleSticker,
+  hasAudioStream,
+  addAudioToVideo,
   lang,
 } = require('../lib/')
 
 bot(
   {
-    pattern: 'sticker',
+    pattern: 'sticker ?(.*)',
     desc: lang.plugins.sticker.desc,
     type: 'sticker',
   },
-  async (message) => {
+  async (message, match) => {
     if (!message.reply_message || (!message.reply_message.video && !message.reply_message.image)) {
       return await message.send(lang.plugins.sticker.reply_required)
     }
 
     const mediaPath = await message.reply_message.downloadAndSaveMediaMessage('sticker')
     const type = message.reply_message.image ? 1 : 2
+
+    if (message.reply_message.video && match !== 'mute' && (await hasAudioStream(mediaPath))) {
+      const audio = await message.uploadVoice(mediaPath, 15)
+      const stickerData = await sticker('str', mediaPath, type, message.id)
+      return await message.send(
+        { sticker: stickerData, audio },
+        { isAnimated: true, quoted: message.quoted },
+        'audio_sticker'
+      )
+    }
+
     const stickerData = await sticker('str', mediaPath, type, message.id)
 
     return await message.send(
@@ -65,6 +78,14 @@ bot(
 
     if (message.reply_message.sticker) {
       const media = await message.reply_message.downloadMediaMessage('mp4')
+      const { audioMessage } = message.reply_message.message.message.stickerMessage
+      if (audioMessage) {
+        return await message.send(
+          { sticker: await addExif(media, match, message.id), audio: audioMessage },
+          { isAnimated: !!message.reply_message.animated, quoted: message.quoted },
+          'audio_sticker'
+        )
+      }
       return await message.send(
         await addExif(media, match, message.id),
         { quoted: message.quoted },
@@ -110,6 +131,15 @@ bot(
 
     const mediaPath = await message.reply_message.downloadAndSaveMediaMessage('sticker')
     const videoUrl = await webpToMp4(mediaPath)
+
+    if (message.reply_message.message.message.stickerMessage.audioMessage) {
+      const audio = await message.reply_message.downloadStickerAudio()
+      return await message.send(
+        await addAudioToVideo(videoUrl, audio),
+        { quoted: message.quoted },
+        'video'
+      )
+    }
 
     return await message.sendFromUrl(videoUrl)
   }

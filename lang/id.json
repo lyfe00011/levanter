@@ -715,7 +715,7 @@
       "action_kick": "kicked from group"
     },
     "sticker": {
-      "desc": "Konversi gambar atau video ke stiker. Balas ke pesan gambar atau video untuk membuat stiker.",
+      "desc": "Konversi gambar atau video ke stiker. Balas ke pesan gambar atau video untuk membuat stiker. Video yang bersuara akan menjadi stiker audio; gunakan sticker mute untuk stiker tanpa suara.",
       "reply_required": "Silakan balas ke gambar atau video."
     },
     "circle": {
