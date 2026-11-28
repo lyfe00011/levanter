@@ -163,6 +163,33 @@
       "no_result": "_Aapke query ke liye koi result nahi mila._",
       "apps_list": "Matching Apps ({0})"
     },
+    "vv": {
+      "desc": "View-once image, video, audio ya text ko recover karo",
+      "usage": "*Example:*\n- vv (kisi view-once image, video, audio ya text par reply karo)\n- vv <jid> (optional, us chat mein bhejne ke liye)",
+      "unavailable": "_Ye view-once save nahi hua, aur WhatsApp ne reply mein uska content nahi diya._",
+      "enable_hint": "_vv ke liye view-once messages save karne ke liye *antivv vv* on karo._"
+    },
+    "antivv": {
+      "desc": "Anti view-once: View-once messages ko automatically dobara bhejo",
+      "example": "> *Usage Examples:*\n- antivv vv - Save view-once msgs for vv only\n- antivv g - Send view-once msgs in same chat\n- antivv p - Send view-once msgs to sudo\n- antivv g pm - Same chat, PMs only\n- antivv g gm - Same chat, groups only\n- antivv p no-gm - To sudo, exclude groups\n- antivv <jid> - Send to specific JID\n- antivv only <jid,...> - Forward only from these\n- antivv ignore <jid,...> - Never forward from these\n- antivv remove <jid,...> - Remove from lists\n- antivv clear - Clear lists\n- antivv list - Show settings\n- antivv off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*Invalid scope:* {0}\n*Valid scopes:* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*Error:* _Galat JID_",
+      "vv_dest_jid": "_View-once messages is JID pe bheji jayengi: {0}_",
+      "vv_dest_sudo": "_View-once messages apne chat ya sudo pe bheji jayengi._",
+      "vv_dest_chat": "_View-once messages usi chat mein bheji jayengi._",
+      "vv_scope_pm": "📌 _Only for personal chats_",
+      "vv_scope_gm": "📌 _Only for group chats_",
+      "vv_scope_no_pm": "📌 _Excluding personal chats_",
+      "vv_scope_no_gm": "📌 _Excluding group chats_",
+      "vv_msg_save": "_View-once messages sirf vv command ke liye save hongi, auto-forward nahi hongi._",
+      "vv_msg_disable": "Anti view-once band ho gaya.",
+      "only_added": "_View-once messages sirf in chats se forward hongi._",
+      "ignore_added": "_In chats ki view-once messages forward nahi hongi._",
+      "removed": "_Dono lists se hata diya gaya._",
+      "cleared": "_Dono lists khaali kar di gayi._",
+      "status": "*Anti view-once:* {0}\n*Sirf inse:* {1}\n*Ignored:* {2}",
+      "restart_note": "_Login change lagu karne ke liye bot restart karo._"
+    },
     "delete": {
       "desc": "Anti-delete: Deleted messages ko recover karo",
       "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",

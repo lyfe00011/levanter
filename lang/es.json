@@ -163,6 +163,33 @@
       "no_result": "_No hay Resultados para tu Busqueda._",
       "apps_list": "Apps Encontradas ({0})"
     },
+    "vv": {
+      "desc": "Recupera una Imagen, Video, Audio o Texto de Ver Una Vez",
+      "usage": "*Ejemplo:*\n- vv (Cita una Imagen, Video, Audio o Texto de ver una vez)\n- vv <jid> (opcional, para enviarlo a ese Chat)",
+      "unavailable": "_Este mensaje de ver una vez no se guardó y WhatsApp no incluyó su contenido en la respuesta._",
+      "enable_hint": "_Activa *antivv vv* para guardar los mensajes de ver una vez para vv._"
+    },
+    "antivv": {
+      "desc": "AntiVerUnaVez: Recupera Mensajes de Ver Una Vez",
+      "example": "> *Usage Examples:*\n- antivv vv - Save view-once msgs for vv only\n- antivv g - Send view-once msgs in same chat\n- antivv p - Send view-once msgs to sudo\n- antivv g pm - Same chat, PMs only\n- antivv g gm - Same chat, groups only\n- antivv p no-gm - To sudo, exclude groups\n- antivv <jid> - Send to specific JID\n- antivv only <jid,...> - Forward only from these\n- antivv ignore <jid,...> - Never forward from these\n- antivv remove <jid,...> - Remove from lists\n- antivv clear - Clear lists\n- antivv list - Show settings\n- antivv off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*Invalid scope:* {0}\n*Valid scopes:* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*Error:* _El JID no es Valido_",
+      "vv_dest_jid": "_Los mensajes de ver una vez seran Reenviados a: {0}_",
+      "vv_dest_sudo": "_Los mensajes de ver una vez se enviaran a tu chat o sudo._",
+      "vv_dest_chat": "_Los mensajes de ver una vez se enviaran al mismo Chat._",
+      "vv_scope_pm": "📌 _Only for personal chats_",
+      "vv_scope_gm": "📌 _Only for group chats_",
+      "vv_scope_no_pm": "📌 _Excluding personal chats_",
+      "vv_scope_no_gm": "📌 _Excluding group chats_",
+      "vv_msg_save": "_Los mensajes de ver una vez se guardaran para el comando vv, sin Reenviarlos._",
+      "vv_msg_disable": "AntiVerUnaVez ha sido desactivado.",
+      "only_added": "_Los mensajes de ver una vez solo se Reenviaran desde estos Chats._",
+      "ignore_added": "_Los mensajes de ver una vez de estos Chats no se Reenviaran._",
+      "removed": "_Eliminado de ambas listas._",
+      "cleared": "_Ambas listas han sido vaciadas._",
+      "status": "*AntiVerUnaVez:* {0}\n*Solo desde:* {1}\n*Ignorados:* {2}",
+      "restart_note": "_Reinicia el bot para aplicar el cambio de inicio de sesión._"
+    },
     "delete": {
       "desc": "AntiBorrado: Recupera Mensajes Borrados ",
       "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",

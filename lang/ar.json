@@ -163,6 +163,33 @@
       "no_result": "_لم يتم العثور على نتائج لاستفسارك._",
       "apps_list": "التطبيقات المطابقة ({0})"
     },
+    "vv": {
+      "desc": "استعادة صورة أو فيديو أو صوت أو نص للعرض لمرة واحدة",
+      "usage": "*مثال:*\n- vv (بالرد على صورة أو فيديو أو صوت أو نص للعرض لمرة واحدة)\n- vv <jid> (اختياري، للإرسال إلى تلك الدردشة)",
+      "unavailable": "_لم يتم حفظ رسالة العرض لمرة واحدة هذه، ولم يُرفق واتساب محتواها في الرد._",
+      "enable_hint": "_فعّل *antivv vv* ليتم حفظ رسائل العرض لمرة واحدة لأمر vv._"
+    },
+    "antivv": {
+      "desc": "مكافحة العرض لمرة واحدة: إعادة إرسال رسائل العرض لمرة واحدة تلقائيًا",
+      "example": "> *Usage Examples:*\n- antivv vv - Save view-once msgs for vv only\n- antivv g - Send view-once msgs in same chat\n- antivv p - Send view-once msgs to sudo\n- antivv g pm - Same chat, PMs only\n- antivv g gm - Same chat, groups only\n- antivv p no-gm - To sudo, exclude groups\n- antivv <jid> - Send to specific JID\n- antivv only <jid,...> - Forward only from these\n- antivv ignore <jid,...> - Never forward from these\n- antivv remove <jid,...> - Remove from lists\n- antivv clear - Clear lists\n- antivv list - Show settings\n- antivv off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*Invalid scope:* {0}\n*Valid scopes:* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*خطأ:* _معرف JID غير صالح_",
+      "vv_dest_jid": "_سيتم إرسال رسائل العرض لمرة واحدة إلى: {0}_",
+      "vv_dest_sudo": "_سيتم إرسال رسائل العرض لمرة واحدة إلى دردشتك أو المشرف._",
+      "vv_dest_chat": "_سيتم إرسال رسائل العرض لمرة واحدة إلى الدردشة نفسها._",
+      "vv_scope_pm": "📌 _Only for personal chats_",
+      "vv_scope_gm": "📌 _Only for group chats_",
+      "vv_scope_no_pm": "📌 _Excluding personal chats_",
+      "vv_scope_no_gm": "📌 _Excluding group chats_",
+      "vv_msg_save": "_سيتم حفظ رسائل العرض لمرة واحدة لأمر vv دون إعادة توجيه تلقائية._",
+      "vv_msg_disable": "تم تعطيل مكافحة العرض لمرة واحدة.",
+      "only_added": "_سيتم إعادة توجيه رسائل العرض لمرة واحدة من هذه الدردشات فقط._",
+      "ignore_added": "_لن تتم إعادة توجيه رسائل العرض لمرة واحدة من هذه الدردشات._",
+      "removed": "_تمت الإزالة من القائمتين._",
+      "cleared": "_تم مسح القائمتين._",
+      "status": "*مكافحة العرض لمرة واحدة:* {0}\n*فقط من:* {1}\n*المتجاهَلة:* {2}",
+      "restart_note": "_أعد تشغيل البوت لتطبيق تغيير تسجيل الدخول._"
+    },
     "delete": {
       "desc": "مكافحة الحذف: استعادة الرسائل المحذوفة",
       "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",

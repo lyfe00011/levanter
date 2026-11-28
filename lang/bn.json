@@ -163,6 +163,33 @@
       "no_result": "আপনার ক্যোয়ারির জন্য কোন ফলাফল পাওয়া যায়নি।",
       "apps_list": "ম্যাচিং অ্যাপস ({0})"
     },
+    "vv": {
+      "desc": "ভিউ-ওয়ান্স ছবি, ভিডিও, অডিও বা টেক্সট পুনরুদ্ধার করুন",
+      "usage": "*উদাহরণ:*\n- vv (একটি ভিউ-ওয়ান্স ছবি, ভিডিও, অডিও বা টেক্সট রিপ্লাই করুন)\n- vv <jid> (ঐচ্ছিক, সেই চ্যাটে পাঠাতে)",
+      "unavailable": "এই ভিউ-ওয়ান্স মেসেজটি সংরক্ষিত হয়নি, আর হোয়াটসঅ্যাপ রিপ্লাইতে এর কনটেন্ট দেয়নি।",
+      "enable_hint": "vv-এর জন্য ভিউ-ওয়ান্স মেসেজ সংরক্ষণ করতে *antivv vv* চালু করুন।"
+    },
+    "antivv": {
+      "desc": "এন্টি-ভিউ-ওয়ান্স: ভিউ-ওয়ান্স মেসেজ স্বয়ংক্রিয়ভাবে আবার পাঠান",
+      "example": "> *Usage Examples:*\n- antivv vv - Save view-once msgs for vv only\n- antivv g - Send view-once msgs in same chat\n- antivv p - Send view-once msgs to sudo\n- antivv g pm - Same chat, PMs only\n- antivv g gm - Same chat, groups only\n- antivv p no-gm - To sudo, exclude groups\n- antivv <jid> - Send to specific JID\n- antivv only <jid,...> - Forward only from these\n- antivv ignore <jid,...> - Never forward from these\n- antivv remove <jid,...> - Remove from lists\n- antivv clear - Clear lists\n- antivv list - Show settings\n- antivv off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*Invalid scope:* {0}\n*Valid scopes:* pm, gm, no-pm, no-gm",
+      "invalid_jid": "এরর: অবৈধ JID",
+      "vv_dest_jid": "ভিউ-ওয়ান্স মেসেজ পাঠানো হবে: {0}",
+      "vv_dest_sudo": "ভিউ-ওয়ান্স মেসেজ আপনার চ্যাট বা সুডোতে পাঠানো হবে।",
+      "vv_dest_chat": "ভিউ-ওয়ান্স মেসেজ চ্যাটেই পাঠানো হবে।",
+      "vv_scope_pm": "📌 _Only for personal chats_",
+      "vv_scope_gm": "📌 _Only for group chats_",
+      "vv_scope_no_pm": "📌 _Excluding personal chats_",
+      "vv_scope_no_gm": "📌 _Excluding group chats_",
+      "vv_msg_save": "ভিউ-ওয়ান্স মেসেজ শুধু vv কমান্ডের জন্য সংরক্ষণ করা হবে, স্বয়ংক্রিয়ভাবে পাঠানো হবে না।",
+      "vv_msg_disable": "এন্টি-ভিউ-ওয়ান্স বন্ধ করা হয়েছে।",
+      "only_added": "শুধু এই চ্যাটগুলো থেকে ভিউ-ওয়ান্স মেসেজ পাঠানো হবে।",
+      "ignore_added": "এই চ্যাটগুলো থেকে ভিউ-ওয়ান্স মেসেজ পাঠানো হবে না।",
+      "removed": "দুই তালিকা থেকেই সরানো হয়েছে।",
+      "cleared": "দুই তালিকাই খালি করা হয়েছে।",
+      "status": "*এন্টি-ভিউ-ওয়ান্স:* {0}\n*শুধু যেখান থেকে:* {1}\n*উপেক্ষিত:* {2}",
+      "restart_note": "লগইন পরিবর্তন কার্যকর করতে বট রিস্টার্ট করুন।"
+    },
     "delete": {
       "desc": "এন্টি-ডিলিট: ডিলিট করা মেসেজ পুনরুদ্ধার করুন",
       "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",

@@ -163,6 +163,33 @@
       "no_result": "_Tidak ada hasil yang ditemukan untuk pencarian Anda._",
       "apps_list": "Aplikasi yang Cocok ({0})"
     },
+    "vv": {
+      "desc": "Pulihkan gambar, video, audio, atau teks sekali lihat",
+      "usage": "*Contoh:*\n- vv (balas ke gambar, video, audio, atau teks sekali lihat)\n- vv <jid> (opsional, untuk mengirim ke chat itu)",
+      "unavailable": "_Pesan sekali lihat ini tidak tersimpan, dan WhatsApp tidak menyertakan isinya di balasan._",
+      "enable_hint": "_Aktifkan *antivv vv* agar pesan sekali lihat disimpan untuk vv._"
+    },
+    "antivv": {
+      "desc": "Anti-sekali-lihat: Kirim ulang pesan sekali lihat secara otomatis",
+      "example": "> *Usage Examples:*\n- antivv vv - Save view-once msgs for vv only\n- antivv g - Send view-once msgs in same chat\n- antivv p - Send view-once msgs to sudo\n- antivv g pm - Same chat, PMs only\n- antivv g gm - Same chat, groups only\n- antivv p no-gm - To sudo, exclude groups\n- antivv <jid> - Send to specific JID\n- antivv only <jid,...> - Forward only from these\n- antivv ignore <jid,...> - Never forward from these\n- antivv remove <jid,...> - Remove from lists\n- antivv clear - Clear lists\n- antivv list - Show settings\n- antivv off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*Invalid scope:* {0}\n*Valid scopes:* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*Error:* _JID tidak valid_",
+      "vv_dest_jid": "_Pesan sekali lihat akan dikirim ke: {0}_",
+      "vv_dest_sudo": "_Pesan sekali lihat akan dikirim ke chat atau sudo Anda._",
+      "vv_dest_chat": "_Pesan sekali lihat akan dikirim ke chat itu sendiri._",
+      "vv_scope_pm": "📌 _Only for personal chats_",
+      "vv_scope_gm": "📌 _Only for group chats_",
+      "vv_scope_no_pm": "📌 _Excluding personal chats_",
+      "vv_scope_no_gm": "📌 _Excluding group chats_",
+      "vv_msg_save": "_Pesan sekali lihat akan disimpan untuk perintah vv, tanpa diteruskan otomatis._",
+      "vv_msg_disable": "Anti-sekali-lihat telah dinonaktifkan.",
+      "only_added": "_Pesan sekali lihat hanya akan diteruskan dari chat ini._",
+      "ignore_added": "_Pesan sekali lihat dari chat ini tidak akan diteruskan._",
+      "removed": "_Dihapus dari kedua daftar._",
+      "cleared": "_Kedua daftar telah dikosongkan._",
+      "status": "*Anti-sekali-lihat:* {0}\n*Hanya dari:* {1}\n*Diabaikan:* {2}",
+      "restart_note": "_Mulai ulang bot untuk menerapkan perubahan login._"
+    },
     "delete": {
       "desc": "Anti-hapus: Pulihkan pesan yang dihapus",
       "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",

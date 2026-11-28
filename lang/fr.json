@@ -163,6 +163,33 @@
       "no_result": "_Aucun résultat trouvé pour votre requête._",
       "apps_list": "Applications correspondantes ({0})"
     },
+    "vv": {
+      "desc": "Récupérer une image, vidéo, audio ou texte à vue unique",
+      "usage": "*Exemple :*\n- vv (répondez à une image, vidéo, audio ou texte à vue unique)\n- vv <jid> (facultatif, pour l'envoyer dans ce chat)",
+      "unavailable": "_Ce message à vue unique n'a pas été enregistré, et WhatsApp n'a pas inclus son contenu dans la réponse._",
+      "enable_hint": "_Activez *antivv vv* pour que les messages à vue unique soient enregistrés pour vv._"
+    },
+    "antivv": {
+      "desc": "Anti-vue unique : Renvoyer automatiquement les messages à vue unique",
+      "example": "> *Usage Examples:*\n- antivv vv - Save view-once msgs for vv only\n- antivv g - Send view-once msgs in same chat\n- antivv p - Send view-once msgs to sudo\n- antivv g pm - Same chat, PMs only\n- antivv g gm - Same chat, groups only\n- antivv p no-gm - To sudo, exclude groups\n- antivv <jid> - Send to specific JID\n- antivv only <jid,...> - Forward only from these\n- antivv ignore <jid,...> - Never forward from these\n- antivv remove <jid,...> - Remove from lists\n- antivv clear - Clear lists\n- antivv list - Show settings\n- antivv off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*Invalid scope:* {0}\n*Valid scopes:* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*Erreur :* _JID invalide_",
+      "vv_dest_jid": "_Les messages à vue unique seront envoyés à : {0}_",
+      "vv_dest_sudo": "_Les messages à vue unique seront envoyés à votre chat ou sudo._",
+      "vv_dest_chat": "_Les messages à vue unique seront envoyés dans le chat lui-même._",
+      "vv_scope_pm": "📌 _Only for personal chats_",
+      "vv_scope_gm": "📌 _Only for group chats_",
+      "vv_scope_no_pm": "📌 _Excluding personal chats_",
+      "vv_scope_no_gm": "📌 _Excluding group chats_",
+      "vv_msg_save": "_Les messages à vue unique seront enregistrés pour la commande vv, sans transfert automatique._",
+      "vv_msg_disable": "L'anti-vue unique a été désactivé.",
+      "only_added": "_Les messages à vue unique ne seront transférés que depuis ces chats._",
+      "ignore_added": "_Les messages à vue unique de ces chats ne seront pas transférés._",
+      "removed": "_Retiré des deux listes._",
+      "cleared": "_Les deux listes ont été vidées._",
+      "status": "*Anti-vue unique :* {0}\n*Uniquement depuis :* {1}\n*Ignorés :* {2}",
+      "restart_note": "_Redémarrez le bot pour appliquer le changement de connexion._"
+    },
     "delete": {
       "desc": "Anti-suppression : Récupérer les messages supprimés",
       "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",

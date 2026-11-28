@@ -163,6 +163,33 @@
       "no_result": "_Sorgunuz için sonuç bulunamadı._",
       "apps_list": "Eşleşen Uygulamalar ({0})"
     },
+    "vv": {
+      "desc": "Tek görüntülemelik resim, video, ses veya metni kurtar",
+      "usage": "*Örnek:*\n- vv (tek görüntülemelik bir resme, videoya, sese veya metne cevap verin)\n- vv <jid> (isteğe bağlı, o sohbete göndermek için)",
+      "unavailable": "_Bu tek görüntülemelik mesaj kaydedilmedi ve WhatsApp yanıtta içeriğini göndermedi._",
+      "enable_hint": "_Tek görüntülemelik mesajların vv için kaydedilmesi için *antivv vv*'yi açın._"
+    },
+    "antivv": {
+      "desc": "Anti-tek-görüntüleme: Tek görüntülemelik mesajları otomatik olarak yeniden gönder",
+      "example": "> *Usage Examples:*\n- antivv vv - Save view-once msgs for vv only\n- antivv g - Send view-once msgs in same chat\n- antivv p - Send view-once msgs to sudo\n- antivv g pm - Same chat, PMs only\n- antivv g gm - Same chat, groups only\n- antivv p no-gm - To sudo, exclude groups\n- antivv <jid> - Send to specific JID\n- antivv only <jid,...> - Forward only from these\n- antivv ignore <jid,...> - Never forward from these\n- antivv remove <jid,...> - Remove from lists\n- antivv clear - Clear lists\n- antivv list - Show settings\n- antivv off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*Invalid scope:* {0}\n*Valid scopes:* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*Hata:* _Geçersiz JID_",
+      "vv_dest_jid": "_Tek görüntülemelik mesajlar şuraya gönderilecek: {0}_",
+      "vv_dest_sudo": "_Tek görüntülemelik mesajlar sohbetinize veya sudo'ya gönderilecek._",
+      "vv_dest_chat": "_Tek görüntülemelik mesajlar sohbetin kendisine gönderilecek._",
+      "vv_scope_pm": "📌 _Only for personal chats_",
+      "vv_scope_gm": "📌 _Only for group chats_",
+      "vv_scope_no_pm": "📌 _Excluding personal chats_",
+      "vv_scope_no_gm": "📌 _Excluding group chats_",
+      "vv_msg_save": "_Tek görüntülemelik mesajlar vv komutu için kaydedilecek, otomatik iletilmeyecek._",
+      "vv_msg_disable": "Anti-tek-görüntüleme devre dışı bırakıldı.",
+      "only_added": "_Tek görüntülemelik mesajlar yalnızca bu sohbetlerden iletilecek._",
+      "ignore_added": "_Bu sohbetlerden gelen tek görüntülemelik mesajlar iletilmeyecek._",
+      "removed": "_Her iki listeden de kaldırıldı._",
+      "cleared": "_Her iki liste de temizlendi._",
+      "status": "*Anti-tek-görüntüleme:* {0}\n*Yalnızca şunlardan:* {1}\n*Yok sayılanlar:* {2}",
+      "restart_note": "_Giriş değişikliğinin uygulanması için botu yeniden başlatın._"
+    },
     "delete": {
       "desc": "Anti-silme: Silinen mesajları kurtar",
       "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",

@@ -78,7 +78,7 @@ bot(
 
     if (message.reply_message.sticker) {
       const media = await message.reply_message.downloadMediaMessage('mp4')
-      const { audioMessage } = message.reply_message.message.message.stickerMessage
+      const audioMessage = await message.reply_message.getStickerAudio()
       if (audioMessage) {
         return await message.send(
           { sticker: await addExif(media, match, message.id), audio: audioMessage },
@@ -131,9 +131,8 @@ bot(
 
     const mediaPath = await message.reply_message.downloadAndSaveMediaMessage('sticker')
     const videoUrl = await webpToMp4(mediaPath)
-
-    if (message.reply_message.message.message.stickerMessage.audioMessage) {
-      const audio = await message.reply_message.downloadStickerAudio()
+    const audio = await message.reply_message.downloadStickerAudio()
+    if (audio) {
       return await message.send(
         await addAudioToVideo(videoUrl, audio),
         { quoted: message.quoted },

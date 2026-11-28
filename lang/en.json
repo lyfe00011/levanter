@@ -163,6 +163,33 @@
       "no_result": "Couldn't find that app. 🔍",
       "apps_list": "Matching Apps ({0}) 📱"
     },
+    "vv": {
+      "desc": "Recover a view-once image, video, audio or text",
+      "usage": "*Example:*\n- vv (reply to a view-once image, video, audio or text)\n- vv <jid> (optional, send it to that chat)",
+      "unavailable": "_This view-once wasn't saved, and WhatsApp didn't include its content in the reply._",
+      "enable_hint": "_Turn on *antivv vv* so view-once messages get saved for vv._"
+    },
+    "antivv": {
+      "desc": "Anti view-once: Resend view-once messages automatically",
+      "example": "> *Usage Examples:*\n- antivv vv - Save view-once messages for the vv command only\n- antivv g - Send view-once messages in the same chat\n- antivv p - Send view-once messages to your chat/sudo\n- antivv g pm - Same chat, only personal messages\n- antivv g gm - Same chat, only group messages\n- antivv p no-gm - To sudo, exclude groups\n- antivv <jid> - Send to a specific JID\n- antivv only <jid,...> - Forward only from these chats\n- antivv ignore <jid,...> - Never forward from these chats\n- antivv remove <jid,...> - Take chats off both lists\n- antivv clear - Empty both lists\n- antivv list - Show the current settings\n- antivv off - Disable anti view-once\n\n*Scopes:* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*Invalid scope:* {0}\n*Valid scopes:* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*Error:* _Invalid JID_",
+      "vv_dest_jid": "_View-once messages will be sent to: {0}_",
+      "vv_dest_sudo": "_View-once messages will be sent to your chat or sudo._",
+      "vv_dest_chat": "_View-once messages will be sent to the chat itself._",
+      "vv_scope_pm": "📌 _Only for personal chats_",
+      "vv_scope_gm": "📌 _Only for group chats_",
+      "vv_scope_no_pm": "📌 _Excluding personal chats_",
+      "vv_scope_no_gm": "📌 _Excluding group chats_",
+      "vv_msg_save": "_View-once messages will be saved for the vv command, without auto-forwarding._",
+      "vv_msg_disable": "Anti view-once has been disabled.",
+      "only_added": "_View-once messages will only be forwarded from these chats._",
+      "ignore_added": "_View-once messages from these chats won't be forwarded._",
+      "removed": "_Removed from the only and ignore lists._",
+      "cleared": "_Only and ignore lists cleared._",
+      "status": "*Anti view-once:* {0}\n*Only from:* {1}\n*Ignored:* {2}",
+      "restart_note": "_Restart the bot for the login change to take effect._"
+    },
     "delete": {
       "desc": "Anti-delete: Recover deleted messages",
       "example": "> *Usage Examples:*\n- delete g - Send deleted messages in the same chat\n- delete p - Send deleted messages to your chat/sudo\n- delete g pm - Same chat, only personal messages\n- delete g gm - Same chat, only group messages\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude personal chats\n- delete <jid> - Send to a specific JID\n- delete <jid> gm - To JID, only groups\n- delete off - Disable anti-delete\n\n*Scopes:* pm, gm, no-pm, no-gm",

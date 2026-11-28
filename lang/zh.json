@@ -163,6 +163,33 @@
       "no_result": "找不到该应用。 🔍",
       "apps_list": "匹配的应用 ({0}) 📱"
     },
+    "vv": {
+      "desc": "恢复一次性查看的图片、视频、音频或文字",
+      "usage": "*示例：*\n- vv（回复一次性查看的图片、视频、音频或文字）\n- vv <jid>（可选，发送到该聊天）",
+      "unavailable": "_这条一次性查看消息未被保存，且 WhatsApp 未在回复中附带其内容。_",
+      "enable_hint": "_开启 *antivv vv* 以便为 vv 保存一次性查看消息。_"
+    },
+    "antivv": {
+      "desc": "防一次性查看：自动重发一次性查看消息",
+      "example": "> *使用示例：*\n- antivv vv - 仅为 vv 命令保存一次性查看消息\n- antivv g - 在同一聊天中发送一次性查看消息\n- antivv p - 发送一次性查看消息到您的聊天/超级用户\n- antivv g pm - 同一聊天，仅个人消息\n- antivv g gm - 同一聊天，仅群组消息\n- antivv p no-gm - 发送到超级用户，排除群组\n- antivv <jid> - 发送到指定 JID\n- antivv only <jid,...> - 仅转发这些聊天\n- antivv ignore <jid,...> - 永不转发这些聊天\n- antivv remove <jid,...> - 从两个列表中移除\n- antivv clear - 清空两个列表\n- antivv list - 显示当前设置\n- antivv off - 禁用防一次性查看\n\n*范围：* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*无效范围：* {0}\n*有效范围：* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*错误：* _无效的 JID_",
+      "vv_dest_jid": "_一次性查看消息将发送至：{0}_",
+      "vv_dest_sudo": "_一次性查看消息将发送至您的聊天或超级用户。_",
+      "vv_dest_chat": "_一次性查看消息将发送至聊天本身。_",
+      "vv_scope_pm": "📌 _仅限个人聊天_",
+      "vv_scope_gm": "📌 _仅限群组聊天_",
+      "vv_scope_no_pm": "📌 _排除个人聊天_",
+      "vv_scope_no_gm": "📌 _排除群组聊天_",
+      "vv_msg_save": "_一次性查看消息将为 vv 命令保存，不会自动转发。_",
+      "vv_msg_disable": "防一次性查看已禁用。",
+      "only_added": "_一次性查看消息将仅从这些聊天转发。_",
+      "ignore_added": "_这些聊天的一次性查看消息将不会被转发。_",
+      "removed": "_已从两个列表中移除。_",
+      "cleared": "_两个列表已清空。_",
+      "status": "*防一次性查看：* {0}\n*仅来自：* {1}\n*已忽略：* {2}",
+      "restart_note": "_重启机器人以应用登录更改。_"
+    },
     "delete": {
       "desc": "防撤回：恢复被撤回的消息",
       "example": "> *使用示例：*\n- delete g - 在同一聊天中发送撤回消息\n- delete p - 发送撤回消息到您的聊天/超级用户\n- delete g pm - 同一聊天，仅个人消息\n- delete g gm - 同一聊天，仅群组消息\n- delete p no-gm - 发送到超级用户，排除群组\n- delete p no-pm - 发送到超级用户，排除个人聊天\n- delete <jid> - 发送到指定 JID\n- delete <jid> gm - 发送到 JID，仅群组\n- delete off - 禁用防撤回\n\n*范围：* pm, gm, no-pm, no-gm",

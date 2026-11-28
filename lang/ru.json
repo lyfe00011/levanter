@@ -163,6 +163,33 @@
       "no_result": "_Результатов по вашему запросу не найдено._",
       "apps_list": "Соответствующие приложения ({0})"
     },
+    "vv": {
+      "desc": "Восстановить одноразовое фото, видео, аудио или текст",
+      "usage": "*Пример:*\n- vv (ответьте на одноразовое фото, видео, аудио или текст)\n- vv <jid> (необязательно, отправить в этот чат)",
+      "unavailable": "_Это одноразовое сообщение не было сохранено, и WhatsApp не передал его содержимое в ответе._",
+      "enable_hint": "_Включите *antivv vv*, чтобы одноразовые сообщения сохранялись для vv._"
+    },
+    "antivv": {
+      "desc": "Анти-одноразовый просмотр: Автоматически пересылать одноразовые сообщения",
+      "example": "> *Usage Examples:*\n- antivv vv - Save view-once msgs for vv only\n- antivv g - Send view-once msgs in same chat\n- antivv p - Send view-once msgs to sudo\n- antivv g pm - Same chat, PMs only\n- antivv g gm - Same chat, groups only\n- antivv p no-gm - To sudo, exclude groups\n- antivv <jid> - Send to specific JID\n- antivv only <jid,...> - Forward only from these\n- antivv ignore <jid,...> - Never forward from these\n- antivv remove <jid,...> - Remove from lists\n- antivv clear - Clear lists\n- antivv list - Show settings\n- antivv off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
+      "invalid_scope": "*Invalid scope:* {0}\n*Valid scopes:* pm, gm, no-pm, no-gm",
+      "invalid_jid": "*Ошибка:* _Недействительный JID_",
+      "vv_dest_jid": "_Одноразовые сообщения будут отправлены на: {0}_",
+      "vv_dest_sudo": "_Одноразовые сообщения будут отправлены в ваш чат или суперпользователю._",
+      "vv_dest_chat": "_Одноразовые сообщения будут отправлены в сам чат._",
+      "vv_scope_pm": "📌 _Only for personal chats_",
+      "vv_scope_gm": "📌 _Only for group chats_",
+      "vv_scope_no_pm": "📌 _Excluding personal chats_",
+      "vv_scope_no_gm": "📌 _Excluding group chats_",
+      "vv_msg_save": "_Одноразовые сообщения будут сохраняться для команды vv, без автоматической пересылки._",
+      "vv_msg_disable": "Анти-одноразовый просмотр отключен.",
+      "only_added": "_Одноразовые сообщения будут пересылаться только из этих чатов._",
+      "ignore_added": "_Одноразовые сообщения из этих чатов не будут пересылаться._",
+      "removed": "_Удалено из обоих списков._",
+      "cleared": "_Оба списка очищены._",
+      "status": "*Анти-одноразовый просмотр:* {0}\n*Только из:* {1}\n*Игнорируются:* {2}",
+      "restart_note": "_Перезапустите бота, чтобы применить смену входа._"
+    },
     "delete": {
       "desc": "Антиудаление: Восстановить удаленные сообщения",
       "example": "> *Usage Examples:*\n- delete g - Send deleted msgs in same chat\n- delete p - Send deleted msgs to sudo\n- delete g pm - Same chat, PMs only\n- delete g gm - Same chat, groups only\n- delete p no-gm - To sudo, exclude groups\n- delete p no-pm - To sudo, exclude PMs\n- delete <jid> - Send to specific JID\n- delete off - Disable\n\n*Scopes:* pm, gm, no-pm, no-gm",
